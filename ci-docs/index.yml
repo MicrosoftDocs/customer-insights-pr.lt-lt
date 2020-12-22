@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Pagalbos centras „Dynamics 365 Customer Insights“
+  author: m-hartmann
+  description: Laukelis atitinkantis straipsnius skirtus pradėti su pagalbos turiniu.
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: lt-LT
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406430"
+title: „Dynamics 365 Customer Insights“ dokumentacija
+summary: Suraskite naudingus išteklius pradžiai ir tam, kad sužinotumėte apie „Customer Insights“ funkcijas ir pajėgumus.
+landingContent:
+- title: „Customer Insights“ atitiktis
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: „Customer Insights“ apžvalga
+      url: overview.md
+    - text: Išleidimo planai
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Prieiga prie jūsų aplinkos
+      url: https://home.ci.ai.dynamics.com/
+- title: Pradėkite su publikos įžvalgomis
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Prisiregistruokite nemokamai bandomajai versijai gauti
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: Kas nauja
+      url: audience-insights/whats-new-audience-insights.md
+    - text: Publikos įžvalgų dokumentacija
+      url: audience-insights/index.yml
+- title: Palaikykite ryšį
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Prisijunkite prie „Dynamics 365“ bendruomenės
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Bendrinkite savo idėjas
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Pranešti apie problemą
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: Publikos įžvalgų mokymo medžiaga
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Kurti naują aplinką
+      url: audience-insights/home.md
+    - text: Sujungto kliento profilio kūrimas
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Darbas su programa
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: Eksportuokite publikos įžvalgų duomenis
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Nurodykite eksportavimo paskirties vietas
+      url: audience-insights/export-destinations.md
+    - text: Klientų kortelės „Dynamics 365“ programose
+      url: audience-insights/customer-card-add-in.md
+    - text: „Power BI“ jungtis
+      url: audience-insights/export-power-bi.md
+- title: Administruokite publikos įžvalgas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sukonfigūruokite sistemą
+      url: audience-insights/system.md
+    - text: Nurodykite vartotojo teises
+      url: audience-insights/permissions.md
+    - text: Valdykite kelias aplinkas
+      url: audience-insights/manage-environments.md
+- title: Apie įsipareigojimų įžvalgas (peržiūra)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Galimybių apžvalga
+      url: engagement-insights/overview.md
+    - text: Sąlygos ir sąvokos
+      url: engagement-insights/glossary.md
+    - text: Pradėti
+      url: engagement-insights/get-started.md
+- title: Ataskaitos įsipareigojimų įžvalgos (peržiūra)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Peržiūrėti ataskaitas
+      url: engagement-insights/view-reports.md
+    - text: Sukurkite tinkintas ataskaitas
+      url: engagement-insights/custom-reports.md
+    - text: Peržiūrėti suvienodintą profilių ataskaitą
+      url: engagement-insights/profile-reports.md
+- title: Įvykiai įsipareigojimų įžvalgoms (peržiūra)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sukurkite išdirbtus įvykius
+      url: engagement-insights/refined-events.md
+    - text: Eksportuoti įvykius
+      url: engagement-insights/export-events.md
+    - text: Panaikinti ir eksportuoti asmenis duomenis
+      url: engagement-insights/delete-export-personal-data.md
