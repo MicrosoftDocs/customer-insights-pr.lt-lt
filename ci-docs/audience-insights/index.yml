@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Publikos įžvalgų pajėgumas Dynamics 365 Customer Insights
+summary: Įtraukite, sujunkite ir tvarkykite klientų duomenis iš kelių šaltinių. Kurkite ir valdykite klientų profilius ir realaus laiko segmentaciją. Integruokite klientų duomenis į kitas sistemas, kad gautumėte dar daugiau naudos.
+metadata:
+  title: Publikos įžvalgų dokumentacija
+  description: Padėkite centrui su pagrindinėmis nuorodmis publikos įžvalgoms.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: lt-LT
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406413"
+landingContent:
+- title: Apie publikos įžvalgas
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Produkto apžvalga
+      url: overview.md
+    - text: Naujos ir atnaujintos funkcijos
+      url: whats-new-audience-insights.md
+    - text: Bendruomenės svetainė
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Įtraukti duomenų šaltinius
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Duomenų šaltinių įtraukimas
+      url: data-sources.md
+    - text: Papildantysis naujinimas
+      url: incremental-refresh-data-sources.md
+    - text: Suprasti objektus
+      url: entities.md
+- title: Sujungti duomenis
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Schema
+      url: map-entities.md
+    - text: Sugretinti
+      url: match-entities.md
+    - text: Sulieti
+      url: merge-entities.md
+- title: Tikslinti klientų profilius
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigūruoti ryšius
+      url: relationships.md
+    - text: Peržiūrėkite kliento veiklas
+      url: activities.md
+    - text: Atsineškite savo mašininio mokymo modelius
+      url: custom-models.md
+- title: Perkelti kliento duomenis
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Nurodykite eksportavimo paskirties vietas
+      url: export-destinations.md
+    - text: Klientų kortelės „Dynamics 365“ programose
+      url: customer-card-add-in.md
+    - text: „Power BI“ jungtis
+      url: export-power-bi.md
+- title: Programos administravimas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sukonfigūruokite sistemą
+      url: system.md
+    - text: Nurodykite vartotojo teises
+      url: permissions.md
+    - text: Valdykite kelias aplinkas
+      url: manage-environments.md
