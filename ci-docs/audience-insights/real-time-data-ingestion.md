@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689185"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270290"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Duomenų įtraukimas realiuoju laiku (peržiūra)
 
@@ -83,6 +83,7 @@ Veiklą galite skelbti savo šaltinio sistemos arba „UnifiedActivity“ format
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Telemetrijos naudojimo realiuoju laiku supratimas
 
-Gaukite užklausų apimties apžvalgą realaus laiko API ir informacijai apie problemas, su kuriomis gali susidurti sistema. Galite [pasiekti realiojo laiko telemetriją](system.md#api-usage-tab) nuėję į **Administratorius** > **Sistema** > **API naudojimas**. **Operacijų** lentelėje, eilutės API veiksmams, kurios naudoja realaus laiko metodus turi mygtuką skirtą peržiūrėti realaus laiko API naudojimą.  Mygtukas yra rodomas su žiūronų simboliu. Pasirinkite mygtuką siekiant atidaryti šoninę juostą turinčią suvartojimo informaciją realaus laiko API naudojimui ir esamai aplinkai.
+Gaukite užklausų apimties apžvalgą realaus laiko API ir informacijai apie problemas, su kuriomis gali susidurti sistema. Galite [prieiti prie telemetrijos realiuoju laiku](system.md#api-usage-tab). 
 
-Naudokite išrinkiklį **Grupuoti pagal**, norėdami pasirinkti, kaip geriausia pristatyti realiojo laiko sąveikas laiko planavimo juostoje, kurios intervalas yra nuo paskutinių 24 valandų iki paskutinių 30 dienų. Duomenis galite grupuoti pagal API būdą, objekto apibrėžtą pavadinimą (įtrauktas objektas), kūrėją (įvykio šaltinis), rezultatą (sėkmė arba nesėkmė) arba klaidų kodus. Duomenys prieinami kaip retrospektyvos diagrama ir kaip lentelė.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

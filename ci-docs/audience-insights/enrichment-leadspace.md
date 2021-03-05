@@ -5,16 +5,16 @@ ms.date: 11/24/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 12eed91a7ca4ef7fde0d53cca4a1dfd398b4634f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668733"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269432"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Įmonių profilių papildymas su „Leadspace“ (peržiūra)
 
@@ -38,7 +38,11 @@ Norint konfigūruoti „Leadspace“, turi būti tenkinamos šios būtinosios s�
 
 1. Pasirinkite **Pradėti** ir tada įveskite aktyvią **„Leadspace“ žymą** (nuolatinį raktą). Peržiūrėkite ir pateikite sutikimą dėl **Duomenų privatumo ir atitikties** pažymėdami žymės langelį **Sutinku**. Patvirtinkite abi įvestis pasirinkdami **Sujungti su „Leadspace“**.
 
-1. Pasirinkite **Sukurti duomenų žemėlapį** ir nustatykite, kurie laukeliai iš jūsų suvienodintų profilių turi būti naudojami ieškoti atitinkančių bendrovės duomenų iš „Leadspace“. **Bendrovės pavadinimo** laukelis yra būtinas. Didesniam atitikties tikslumui, gali būti įtraukti ne daugiau du laukeliai **Bendrovės interneto svetainė** ir **Bendrovės vieta**.
+1. Pasirinkite **Įtraukti duomenis** ir pasirinkite kliento duomenų rinkinį, kurį norite papildyti demografiniais duomenimis iš „Leadspace“. Galite pažymėti objektą *Klientas*, kad pagerintumėte visus jūsų klientų profilius, arba pasirinkti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.
+
+   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Pasirinkite tarp kliento profilio ir segmento papildymo.":::
+
+1. Spustelėkite **Kitas** ir apibrėžkite, kurie laukai iš jūsų vieningų profilių turi būti naudojami norint ieškoti sutampančių įmonės duomenų iš "LeadSpace". **Bendrovės pavadinimo** laukelis yra būtinas. Didesniam atitikties tikslumui, gali būti įtraukti ne daugiau du laukeliai **Bendrovės interneto svetainė** ir **Bendrovės vieta**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="„Leadspace“ laukelio žemėlapio sukūrimo juosta.":::
    
@@ -62,3 +66,6 @@ Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [segmentus](segmen
 
 Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Leadspace“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Leadspace“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įpareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

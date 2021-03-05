@@ -1,26 +1,26 @@
 ---
 title: Praturinkite klientų profilius su „Microsoft Graph“
 description: Naudodami „Microsoft Graph“ patentuotus duomenis papildykite kliento duomenis informacija apie susidomėjimą prekių ženklais ir pomėgiais.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406389"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269340"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Klientų profilių papildymas informacija apie susidomėjimą prekių ženklais ir pomėgiais (peržiūra)
 
 Naudodami „Microsoft Graph“ patentuotus duomenis papildykite kliento duomenis informacija apie susidomėjimą prekių ženklais ir pomėgiais. Šis susidomėjimas nustatomas pagal žmonių, kurių demografiniai rodikliai yra panašūs į jūsų klientų rodiklius, duomenis. Ši informacija padeda geriau suprasti ir skirstyti klientus pagal jų susidomėjimą tam tikrais prekių ženklais ir pomėgiais.
 
-Publikos įžvalgose eikite į **Duomenys** > **Praturtinimas** tam, kad [konfigūruotumėte ir peržiūrėtumėte praturtinimus](enrichment-hub.md).
+Auditorijos įžvalgose eikite į **Duomenys** > **Papildymas** ir [konfigūruokite bei peržiūrėkite papildymus](enrichment-hub.md).
 
 Norėdami konfigūruoti prekės ženklo panašumo papildymą, eikite į skirtuką **Atrasti** ir pasirinkite **Praturtinti mano duomenis** plytelėje **Prekių ženklai**.
 
@@ -35,16 +35,21 @@ Naudojame „Microsoft Graph“ paieškos internete duomenis, kad rastumėme inf
 
 [Sužinokite daugiau apie „Microsoft Graph“](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Susidomėjimo vertinimas ir pasikliovimas
+## <a name="affinity-level-and-score"></a>Priskyrimo lygis ir balas
 
-**Susidomėjimo vertinimas** apskaičiuojamas pagal 100 taškų skalę, kur 100 reiškia segmentą, kuriame susidomėjimas prekės ženklu arba pomėgiu yra aukščiausias.
+Kiekviename praturtintame kliento profilyje teikiame dvi susijusias reikšmes – priskyrimo lygį ir balą. Šios reikšmės padeda nustatyti, koks yra šio profilio demografinio segmento susidomėjimas tam tikrą prekės ženklą ar susidomėjimą, palyginti su kitais demografiniais segmentais.
 
-**Pasikliovimas susidomėjimu** taip pat apskaičiuojamas pagal 100 taškų skalę. Jis nurodo sistemos pasikliovimo, kad segmentas yra susidomėjęs prekių ženklu ar pomėgiu, lygį. Pasikliovimo lygis pagrįstas segmento dydžiu ir segmento detalumu. Segmento dydis nustatomas pagal turimų duomenų apie tą segmentą kiekį. Segmento detalumą lemia tai, kiek atributų (amžius, lytis, vieta) pasiekiama profilyje.
+*Priskyrimo lygį* sudaro keturi lygiai, o *priskyrimo balas* apskaičiuojamas 100 balų skalėje, kuri susieta su priskyrimo lygiais.
 
-Nenormalizuojame jūsų duomenų rinkinio rezultatų. Todėl galite matyti ne visas galimas duomenų rinkinio susidomėjimo rezultatų reikšmes. Pavyzdžiui, tarp jūsų duomenų gali nebūti jokio papildyto kliento profilio, kurio susidomėjimo vertinimas būtų 100. Tai įmanoma, jei demografiniame segmente nėra klientų, kurių susidomėjimo atitinkamu prekių ženklu ar pomėgiu vertinimas būtų 100.
 
-> [!TIP]
-> [Kurdami segmentus](segments.md) pagal susidomėjimo rezultatus, prieš nuspręsdami dėl atitinkamų rezultatų ribinių verčių, peržiūrėkite duomenų rinkinio susidomėjimo rezultatų paskirstymą. Pavyzdžiui, susidomėjimo rezultatas 10 gali būti laikomas reikšmingu duomenų rinkinyje, kurio didžiausias susidomėjimo tam tikru prekės ženklu arba pomėgiu rezultatas yra tik 25.
+|Priskyrimo lygis |Patrauklumo balas  |
+|---------|---------|
+|Labai aukštą     | 85-100       |
+|Aukštas     | 70-84        |
+|Vidutinį     | 35-69        |
+|Žemą     | 1-34        |
+
+Priklausomai nuo to, kaip norite matuoti priskyrimą, galite naudoti arba priskyrimo lygį, arba balą. "Priskyrimo" balas suteikia tikslesnį valdymą.
 
 ## <a name="supported-countriesregions"></a>Palaikomos šalys ir (arba) regionai
 
@@ -54,17 +59,13 @@ Norėdami pasirinkti šalį, atidarykite **Prekių ženklų papildymas** arba **
 
 ### <a name="implications-related-to-country-selection"></a>Padariniai, susiję su šalies pasirinkimu
 
-- Kai [renkatės savo prekių ženklus](#define-your-brands-or-interests), pateiksime pasiūlymus pagal pasirinktą šalį ir (arba) regioną.
+- Kai [pasirenkate savo prekių ženklus, ](#define-your-brands-or-interests), sistema teikia pasiūlymus pagal pasirinktą šalį arba regioną.
 
-- [Renkantis veiklos sritį](#define-your-brands-or-interests), identifikuosime svarbiausius prekės ženklus arba interesus pagal pasirinktą šalį / regioną.
+- Pasirinkę [pramonės šaką](#define-your-brands-or-interests), gausite svarbiausius prekės ženklus arba susiesite pagal pasirinktą šalį arba regioną.
 
-- Kai [siejate laukus](#map-your-fields), jei šalies ir (arba) regiono laukas nesusietas, jūsų kliento profiliai bus papildyti naudojant pasirinktos šalies ir (arba) regiono „Microsoft Graph“ duomenis. Naudodami tą pasirinkimą taip pat papildysime klientų profilius, kurie neturi šalies ir (arba) regiono duomenų.
-
-- [Papildant profilius](#refresh-enrichment) bus papildyti visi klientų profiliai, dėl kurių yra pasirinktų prekių ženklų ir pomėgių „Microsoft Graph“ duomenų, įskaitant profilius, kurie nėra pasirinktoje šalyje ir (arba) regione. Pavyzdžiui, jei pasirinkote Vokietiją, papildysime profilius, esančius Jungtinėse Valstijose, jei turėsime pasirinktų prekių ženklų ir pomėgių JAV „Microsoft Graph“ duomenų.
+- [Praturtindami profilius](#refresh-enrichment), praturtinsime visus klientų profilius, pagal kuriuos gauname duomenis apie pasirinktus prekių ženklus ir susies klientus. Įtraukti profilius, kurių nėra parinktoje šalyje ar regione. Pavyzdžiui, jei pasirinkote Vokietiją, papildysime profilius, esančius Jungtinėse Valstijose, jei turėsime pasirinktų prekių ženklų ir pomėgių JAV „Microsoft Graph“ duomenų.
 
 ## <a name="configure-enrichment"></a>Papildymo konfigūravimas
-
-Prekių ženklų arba pomėgių papildymo konfigūravimas susideda iš dviejų veiksmų:
 
 ### <a name="define-your-brands-or-interests"></a>Prekių ženklų arba pomėgių apibrėžimas
 
@@ -75,9 +76,19 @@ Pažymėkite vieną iš šių parinkčių:
 
 Norėdami įtraukti prekių ženklą arba pomėgį, įveskite jį įvesties srityje, kad būtų rodomi pasiūlymai pagal sutampančias sąvokas. Jei jūsų ieškomo prekių ženklo ar pomėgio nėra, atsiųskite mums atsiliepimą naudodami nuorodą **Pasiūlyti**.
 
+### <a name="review-enrichment-preferences"></a>Papildymo nuostatos
+
+Peržiūrėkite numatytąsias pratinimo nuostatas ir prireikus atnaujinkite jas.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Pratinimo nuostatų lango papildymas.":::
+
+### <a name="select-entity-to-enrich"></a>Pasirinkti objektą susiejimui
+
+Pasirinkite **Įtraukti duomenis** ir pasirinkite kliento duomenų rinkinį, kurį norite papildyti demografiniais duomenimis iš „Microsoft Graph“. Galite pažymėti objektą Klientas, kad pagerintumėte visus jūsų klientų profilius, arba pasirinkti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.
+
 ### <a name="map-your-fields"></a>Susiekite savo laukus
 
-Susiekite sujungto kliento objekto laukus su bent dviem atributais, kad apibrėžtumėte demografinį segmentą, kurį norite naudoti kliento duomenims papildyti. Pasirinkite **Redaguoti**, norėdami apibrėžti laukų susiejimą, ir baigę pasirinkite **Taikyti**. Spustelėkite **Įrašyti**, kad baigtumėte susieti laukus.
+Susiekite laukus iš vieningojo kliento objekto ir apibrėžkite demografinį segmentą, kurį sistema turėtų naudoti savo klientų duomenims papildyti. Susiekite šalį / regioną ir bent gimimo datą arba lyties atributus. Turite susieti šalį / regioną. Taip pat turite susieti bent vieną miestą (ir rajoną / apskritį) arba pašto indeksą. Pasirinkite **Redaguoti**, norėdami apibrėžti laukų susiejimą, ir baigę pasirinkite **Taikyti**. Spustelėkite **Įrašyti**, kad baigtumėte susieti laukus.
 
 Palaikomi toliau nurodyti formatai ir reikšmės; reikšmėse didžiosios ir mažosios raidės neskiriamos.
 
@@ -120,3 +131,6 @@ Susidomėjimą prekių ženklais ir pomėgiais taip pat galima peržiūrėti ats
 ## <a name="next-steps"></a>Kiti veiksmai
 
 Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [Segmentai](segments.md), [Matavimai](measures.md) ir net [eksportuokite duomenis](export-destinations.md), kad užtikrintumėte klientų poreikiams pritaikytą aptarnavimą.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

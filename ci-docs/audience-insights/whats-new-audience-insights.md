@@ -1,7 +1,7 @@
 ---
 title: Naujos ir būsimos funkcijos
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4650014"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270442"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
 
@@ -31,6 +31,77 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="january-2021-updates"></a>2021 m. sausio mėn. naujinimai
+
+2021 m. sausio naujinimuose yra kelios funkcijos, efektyvumo naujiniai ir klaidų taisymai.
+
+#### <a name="extensibility"></a>Išplėtimas
+
+- **Išplėstinės funkcijos ir didesnis SFPP eksportavimo efektyvumas** Dabar galite eksportuoti visus išvesties objektus iš „Customer Insights" į SFPP pagrindinį kompiuterį. Anksčiau buvo eksportuojama tik į segmento objektus. Be to, SFTP eksportavimo efektyvumas leidžia daugiau duomenų apimties per mažiau laiko, tai priklauso nuo jūsų SFTP pagrindinio kompiuterio efektyvumo.    
+  Daugiau informacijos žr. [SFTP jungtis (peržiūra)](export-sftp.md).  
+
+#### <a name="segments"></a>Segmentai
+
+- **Mašininis mokymas siūlomus segmentus metrikos tobulinui** – naujas būdas atrasti ir kurti segmentus. Sistema naudoja AI modelį, kad galėtų pasiūlyti segmentų, kurie gali padėti tobulinti KPI (priemonę), kurią jau stebite. Rodome atributų, kuriuos pažymite priemonei ar kitam pirminiui atributui, įtaką. Ši informacija padeda rasti potencialių segmentų, kurie pateikia galimybes.    
+  Daugiau informacijos žr. [Siūlomi segmentai (peržiūra)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Duomenų susijungimas
+
+- **Patobulintas gretinimas duomenų** suvienodinimo srityje gretinimas buvo atnaujintas. Ji leidžia konfigūruoti ir peržiūrėti gretinimo taisykles, įskaitant išsamią statistiką, kurioje išsamiau paaiškinta, kaip veikia gretinimas. Yra parinkčių, kaip išjungti atitikties taisyklę, kad išsamus konfigūraciją ji nebeaktyvūs, nuvilktumėte ir numestumėte atitikties taisykles bei kt.
+  Dėl daugiau informacijos, žr. [Atitikti objektus](match-entities.md).
+
+- **Gretinimo proceso deduplikacijos išvestį galima naudoti kaip objekto** deduplikavimo proceso išvestį iš gretinimo proceso, kad būtų galima tolesnei analizei atlikti. Šį objektą sudaro papildomo dublikavimo procese naudojami laukai ir laimėtojui skirtas įrašas bei atitinkami pakaitiniai įrašai, kurie suliejami su laimėto asmens įrašu.
+  Dėl daugiau informacijos žr. [Papildomo dublikavimo išvestį kaip objektą](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Sistemos administravimas
+
+- **Sklandžiai bendrinkite duomenis su „Microsoft Dataverse“** „Customer Insights" rezultatais su programomis „Microsoft Dataverse“ naudodami „Microsoft Dataverse“ sutvarkyto „Data Lake‟ funkciją. Susieję aplinką „Dataverse“ su „Customer Insights", galėsite įjungti duomenų bendrinimą.
+  Daugiau informacijos žr. [Aplinkų valdymas](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>2020 m. gruodžio mėn. naujinimai
+
+2020 m. gruodžio naujinimuose yra kelios funkcijos, efektyvumo naujiniai ir klaidų taisymai.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Naujos ir atnaujintos funkcijos 2020 m. gruodžio mėn.
+
+#### <a name="data-enrichment"></a>Duomenų papildymas
+
+- **Patobulintas prekės ženklo ir susidomėjimo įtraukimas**
+  
+  Supaprastinome savo bendrų klientų balus, kad jie būtų lengviau suprantami ir naudojami. Dabar galite greitai identifikuoti klientus pagal jų turimą tam tikrą prekės ženklą ar susidomėjimą.
+
+  Be to, įtraukėme naujų konfigūravimo parinkčių, kurios geriau kontroliuoja, kaip norite papildyti klientų profilius. 
+
+  Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft-graph.md).
+
+- **Valdykite, kuriuos profilius reikia papildyti**
+
+  Dabar galima papildyti tik savo klientų profilių antrinį rinkinį su parinktimi pasirinkti segmento objektą, o ne numatytąjį kliento objektą. Sukurkite segmentą su klientų profiliais, kuriuos norite praturtinti ir pažymėti savo klientų duomenų rinkinio praturtinimo konfigūracijoje.
+  Šią funkciją šiuo metu galima naudoti tik „Experian" ir „HERE Technologies" praturtinimus. Greitai leisime šiam pajėgumui labiau papildyti.
+
+  Daugiau informacijos rasite [Klientų profilių papildymas demografais iš „Experian“](enrichment-experian.md)[klientų profilio turtinimai su „HERE Technologies“](enrichment-here.md).
+
+#### <a name="extensibility"></a>Išplėtimas
+
+- **Suaktyvinkite segmentus naudodami automatinį pilotą**
+
+  Eksportuokite segmentus į autopilotą ir naudokite juos rinkodaros tikslais. Daugiau informacijos žr. [Jungtis autopilotui (peržiūra)](export-autopilot.md).
+
+- **Suaktyvinkite segmentus naudodami „SendGrid“**
+
+  Eksportuokite segmentus į „SendGrid“ ir naudokite juos rinkodaros tikslais. Daugiau informacijos žr. [Jungtis „SendGrid“](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Sistemos administravimas
+
+- **Atnaujintos aplinkos valdymo funkcijos**
+  
+  Dabar galite kurti, redaguoti, panaikinti ir iš naujo nustatyti aplinkas tiesiai iš programos antraštės aplinkos parinkiklio. 
+  
+  Be to, aplinka, kurią naudojate, bus prisegta prie aplinkos skydo viršuje, kad jums nebereikės jo ieškoti.
+
+  Daugiau informacijos žr. [Aplinkų valdymas](manage-environments.md).
+
 ## <a name="november-2020-updates"></a>2020 m. lapkričio mėn. naujinimai
 
 2020 m. lapkričio mėn. naujinimai apima keletą funkcijų, vykdymo pagerinimus ir klaidų ištaisymus.
@@ -41,7 +112,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 - **Talpinkite jūsų turimus praturtintus duomenis per „Secure File Transfer Protocol“ (SFTP) tinkintą importavimą**
   
-  SFTP tinkintas importavimas leidžia jums importuoti praturtintus duomenis, kurie neturi pereiti pro duomenų suvienodinimo procesą. Sužinokite daugiau apie SFTP tinkintą importavimą.
+  SFTP tinkinimas leidžia jums importuoti praturtintus duomenis, kurie neturi vykti duomenų suvienodinimo procese. Sužinokite daugiau apie SFTP tinkintą importavimą.
 
   Dėl išsamesnės informacijos, žr. [Praturtinti tinkinti profiliai su tinkintais duomenimis (peržiūra)](enrichment-SFTP-custom-import.md).
  
@@ -165,7 +236,7 @@ Daugiau informacijos žr. [Klientų profilių papildymas demografiniais duomenim
 Užduoties išsamios informacijos sritis leidžia peržiūrėti išsamią informaciją apie sistemos vykdomas užduotis. Tai patogus būdas nustatyti su konfigūracijomis susijusias klaidas ir rasti sprendimus.
 Klaidų pranešimų peržiūra siekiant pamatyti, kaip sprendžiate galimas problemas.
  
-- **Į papildomus puslapius įtrauktos informacijos apdorojimas**
+- **Į daugiau puslapių įtrauktos informacijos tvarkymas**
 
 Šiuo patobulinimu įtraukiama informacija apie objektų būseną puslapiuose **Objektai** ir **Klientai**.
  
@@ -202,9 +273,9 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 
 #### <a name="enrichment"></a>Papildymas
 
-- **Pomėgių papildymas, pasiekiamas papildomose rinkose**
+- **Susidomėjimo panašumų pratinimas daugiau rinkoms**
 
-  Plečiame pomėgių papildymo galimybes į už Jungtinių Amerikos Valstijų ribų esančias penkias papildomas rinkas: Kanadą, Australiją, Jungtinę Karalystę, Prancūziją ir Vokietiją. Pasinaudodami šiuo plėtimu, galite papildyti savo klientų duomenis papildomais pomėgiais, taikytinais šioms rinkoms. Taip pat papildysime jūsų klientų profilius, esančius šiose rinkose, naudodami vietinius nuosavus duomenis iš „Microsoft Graph“.
+  Išplečiame pasiekiamumą nuo susidomėjimo galimybių papildymo ne tik Jungtinėse Valstijose, bet ir penkiose kitose rinkose: Kanados, Australijos, Didžiosios Britanijos, Prancūzijos ir Vokietijos. Naudodami šį plėtinį galite papildyti savo klientų duomenis taip, kad jie labiau domina šias rinkas. Taip pat papildysime jūsų klientų profilius, esančius šiose rinkose, naudodami vietinius nuosavus duomenis iš „Microsoft Graph“.
   Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft-graph.md)
 
 
@@ -223,9 +294,9 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 
 #### <a name="enrichment"></a>Papildymas
 
-- **Prekių ženklų panašumų papildymas pasiekiamas papildomose rinkose**
+- **Prekės ženklo panašumų pratinimas daugiau rinkoms**
 
-  Išplėtėme prekių ženklų panašumų papildymo pasiekiamumą už Jungtinių Valstijų ribų į penkias papildomas rinkas: Kanadą, Australiją, Jungtinę Karalystę, Prancūziją ir Vokietiją. Naudodami šį plėtinį klientų duomenis galėsite papildyti šių rinkų vietiniais prekių ženklais. Taip pat papildysime jūsų klientų profilius, esančius šiose rinkose, naudodami vietinius nuosavus duomenis iš „Microsoft Graph“.
+  Išplečiame pasiekiamumą nuo prekės ženklo galimybių papildymo ne tik Jungtinėse Valstijose, bet ir penkiose kitose rinkose: Kanados, Australijos, Didžiosios Britanijos, Prancūzijos ir Vokietijos. Naudodami šį plėtinį klientų duomenis galėsite papildyti šių rinkų vietiniais prekių ženklais. Taip pat papildysime jūsų klientų profilius, esančius šiose rinkose, naudodami vietinius nuosavus duomenis iš „Microsoft Graph“.
   Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft-graph.md)
 
 ## <a name="june-2020-updates"></a>2020 m. birželio mėn. naujinimai
@@ -238,7 +309,7 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 
 - **Papildymas įmonės duomenimis iš „Leadspace“**
   
-  Nustatykite laukus sujungtuose klientų profiliuose, kurie naudojami norint ieškoti susijusių įmonės duomenų iš „Leadspace“. Vykdant papildymo procesą B2B profiliai papildomi papildomais atributais, įskaitant įmonės dydį, vietą, pramonės sritį ir kt.    
+  Nustatykite laukus sujungtuose klientų profiliuose, kurie naudojami norint ieškoti susijusių įmonės duomenų iš „Leadspace“. Atlikus pratinimo procesą, B2B profiliai praturtinti daugiau atributų, įskaitant įmonės dydį, vietą, pramonės šaką ir kt.    
   Šis bendradarbiavimas suteikia galimybę pagerinti jūsų duomenų kokybę naudojant trečiųjų šalių paslaugų duomenis. Norint naudoti šį papildymą reikės „Leadspace“ licencijos, kad galėtumėte naudotis jo B2B įmonių duomenimis. Sistema naudoti šią licenciją tam, kad palaikytų jūsų duomenis nuolat praturtintus.    
   Daugiau informacijos žr. [Įmonių profilių papildymas su „Leadspace“](enrichment-leadspace.md).
 
@@ -264,7 +335,7 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
   Naujas „Dynamics 365“ kliento kortelės papildinio valdiklis leidžia rodyti prekių ženklų ir pomėgių papildymus kontaktuose klientų įtraukimo programose „Dynamics 365“.    
   Norėdami gauti daugiau informacijos, žr. [klientų kortelės priedą](customer-card-add-in.md).
 
-- **Papildomi „Power Automate“ paleidikliai**
+- **Daugiau „Power Automate“ paleidklių**
 
   Išplėtėme „Power Automate“ paleidiklius ir įtraukėme toliau nurodytus paleidiklius.
   - Gauti pranešimą arba atlikti veiksmą, kai baigiamas automatinis visiškas atnaujinimas (duomenų šaltiniai, sujungimas, segmentai, priemonės, eksportas)
@@ -295,12 +366,12 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
   
   Raskite panašių klientų savo klientų bazėje naudodami dirbtinį intelektą. Dvejetainio klasifikavimo mašininio mokymo modelis priskiria panašumo balą klientams išplėstame segmente. Įvertis grindžiamas panašumu į klientus šaltinio segmente. Atsižvelgiant į panašumo balą klientų profiliai įtraukiami į naujai sukurtą segmentą.
 
-  Ši funkcija, skaitmeninėje rinkodaroje kartais vadinama panašių klientų modeliavimu, naudoja DI modelį, kad padėtų rasti klientus, kurie yra panašūs į kitą klientų segmentą, atsižvelgdama į papildomus atributus. Ji ne tik leidžia pasirinkti atributus, bet ir leidžia nurodyti maksimalų klientų, kurie turėtų būti šiame naujame segmente, skaičių. Tada DI modelis apskaičiuos kiekvieno kliento panašumo balus pagal pasirinktus atributus ir suras klientus su didesniu vidutiniu panašumo balu. Gautas segmentas apims klientus, panašius į klientus, esančius pradiniame segmente.    
+  Kartais tai yra panašus į išvaizdą modeliavimas naudojant skaitmeninę rinkodarą, jis naudoja AI modelį, kad padėtų rasti klientų, kurie yra panašūs į kitą jūsų klientų segmentą, sudėdamas daugiau atributų. Ji ne tik leidžia pasirinkti atributus, bet ir leidžia nurodyti maksimalų klientų, kurie turėtų būti šiame naujame segmente, skaičių. Tada DI modelis apskaičiuos kiekvieno kliento panašumo balus pagal pasirinktus atributus ir suras klientus su didesniu vidutiniu panašumo balu. Gautas segmentas apims klientus, panašius į klientus, esančius pradiniame segmente.    
   Daugiau informacijos žr. [Panašūs klientai](find-similar-customer-segments.md).
 
 - **Segmentų persidengimas ir diferenciatoriai**
 
-  Segmentų persidengimas leidžia matyti, kiek ir kurie klientai yra bendri dviejuose ar daugiau segmentų. Pvz., kaip daug išleidžiančių klientų segmentas persidengia su didelio pasitenkinimo klientų segmentų arba kaip prarandamų klientų segmentas persidengia su mažo pasitenkinimo klientų segmentu. Be to, galite analizuoti, kaip persidengimas keičiasi pagal papildomą jūsų pasirinktą atributą.
+  Segmentų persidengimas leidžia matyti, kiek ir kurie klientai yra bendri dviejuose ar daugiau segmentų. Pvz., kaip daug išleidžiančių klientų segmentas persidengia su didelio pasitenkinimo klientų segmentų arba kaip prarandamų klientų segmentas persidengia su mažo pasitenkinimo klientų segmentu. Be to, galite analizuoti, kaip persidengia pokyčiai pagal papildomą jūsų pasirinkimą atributą.
 
   Segmentų diferenciatoriai nurodo, kuo vienas segmentas skiriasi nuo likusių klientų arba nuo kito segmento. Viskas, ką jums reikia padaryti – nustatyti segmentą, o sistema nustatys profilio atributus ir priemones, kurios išskiria segmentus pagal klasifikuotą diferenciatorių sąrašą – nuo stipriausio iki silpniausio.    
   Daugiau informacijos žr. [Segmentų įžvalgos (peržiūros versija)](segment-insights.md)
@@ -333,7 +404,7 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 
 - **Atnaujinta laiko planavimo juosta kliento kortelės priede**
 
-  Kliento koretelės priedų sprendimas atitinka aktyvumo laiko juostos juostą. Laiko planavimo juostos numeracija pagerinta, rodoma iki 50 veiklos vienu metu. Ji taip pat leidžia įkelti papildomas veiklas laiko planavimo juostoje.    
+  Kliento koretelės priedų sprendimas atitinka aktyvumo laiko juostos juostą. Laiko planavimo juostos numeracija pagerinta, rodoma iki 50 veiklos vienu metu. Ji taip pat leidžia į laiko planavimo juostą įkelti daugiau veiklų.    
   Norėdami gauti daugiau informacijos, žr. [klientų kortelės priedą](customer-card-add-in.md).
 
 - **„Power Automate“ segmento pakeitimų paleidiklis**
@@ -412,7 +483,7 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 
 - **Eksportuoti į „LiveRamp“**
 
-  Aktyvinkite savo duomenis „LiveRamp®“, kad prisijungtumėte prie daugiau nei 500 platformų skaitmeninėse, socialinėse ir TV ekosistemose. Išnaudokite savo duomenis „LiveRamp“ taikydami, valdydami ir personalizuodami reklamos kampanijas.    
+  Aktyvinkite savo duomenis „LiveRamp®“, kad prisijungtumėte prie daugiau nei 500 platformų skaitmeninėse, socialinėse ir TV ekosistemose. „LiveRamp" duomenis naudokite norėdami taikyti, suslėgti ir asmeniniams poreikiams pritaikyti reklamos kampanijas.    
   Daugiau informacijos žr. [„LiveRamp“&reg; jungtyje](export-liveramp.md).
 
 - **„Customer Insights Teams“ priedas**
@@ -433,7 +504,7 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 
 #### <a name="segments"></a>Segmentai
 
-- **Papildomas operatorius**
+- **Kitas operatorius**
   
   Rinkinio operatorius leidžia klientų segmentaciją pagal kelias galimas eilučių reikšmes. Prieš pridedant šį operatorių, reikėjo pastatyti tokius segmentus su keliomis OR sąlygomis. Rinkinio operatorius leidžia tai atlikti su vieną iš šių sąlygų.    
   Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).
@@ -444,3 +515,6 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
   
   Nukopijuokite jūsų konfigūravimą iš vienos aplinkos į kitą. Kurdami naują aplinką galite pasirinkti esamą aplinką, iš kurios norite kopijuoti konfigūraciją. Šiuo metu palaikome duomenų šaltinių, duomenų sujungimo, ryšių, priemonių ir segmentų kopijavimą. Duomenų šaltinio kredencialai ir faktiniai duomenys nėra kopijuojami.    
   Daugiau informacijos žr. [Aplinkų valdymas](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

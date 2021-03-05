@@ -4,16 +4,16 @@ description: Darbas su pasirinktiniais modeliais iš „Azure“ mašininio moky
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668913"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267244"
 ---
 # <a name="custom-machine-learning-models"></a>Pasirinktiniai mašininio mokymo modeliai
 
@@ -46,15 +46,15 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
 1. Pasirinkite mašininio mokymosi studijos (įprastos versijos) žiniatinklio paslaugas arba „Azure“ mašininio mokymosi vamzdyną **Žiniatinklio paslaugos, turinčios jūsų modelio** iškrentantį meniu. Tada pasirinkite **Toliau**.
    - Sužinokite apie [žiniatinklio paslaugų publikavimą mašininio mokymosi studijoje (įprastoje versijoje)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Sužinokite apie [„Azure“ mašininio mokymosi vamzdyno publikavimą naudojant kūrimo įrankį](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ar [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Jūsų vamzdynas turi būti publikuojamas skyriuje [vamzdyno galutinis taškas](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Sužinokite apie [„Azure“ mašininio mokymosi vamzdyno publikavimą naudojant kūrimo įrankį](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ar [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsų vamzdynas turi būti publikuojamas skyriuje [vamzdyno galutinis taškas](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Kiekvienai **Žiniatinklio paslaugos įvesčiai**, pasirinkite atitinkantį **Objektą** iš publikos įžvalgų ir pasirinkite **Kitas**.
+   > [!NOTE]
+   > Pasirinktinio modelio darbo eiga taisys atributus, kuriuos naudojant žiniatinklio tarnybos įvesties laukai bus susieti su objekto atributais pagal lauko pavadinimą ir duomenų tipą. Matysite klaidą, jei žiniatinklio tarnybos lauko negalima susieti su objektu.
 
    > [!div class="mx-imgBorder"]
    > ![Darbo eigos konfigūravimas](media/intelligence-screen2-updated.png "Darbo eigos konfigūravimas")
-
+   
 1. **Modelio išvesties parametrų** žingsnyje nustatykite tolesnes ypatybes:
    - Mašininio mokymosi studija (įprasta versija)
       1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti žiniatinklio išvesties rezultatus.
@@ -112,3 +112,6 @@ Jūsų darbo eiga taip pat vykdoma automatiškai kartu su visais suplanuotais at
 1. Pasirinkite **Naikinti** ir patvirtinkite naikinimo veiksmą.
 
 Jūsų darbo eiga bus panaikinta. [Objektas](entities.md), sukurtas kuriant darbo eigą, išliks ir gali būti peržiūrimas puslapyje **Objektai**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667239"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267442"
 ---
 # <a name="customer-activities"></a>Kliento veiklos
 
@@ -44,13 +44,13 @@ Jūsų duomenų šaltiniuose yra objektų su operacijų ir veiklos duomenimis i�
 
 1. Skyriuje **Nustatyti ryšį** konfigūruokite išsamią informaciją, kad savo veiklos duomenis prijungtumėte prie atitinkamo kliento.
 
-   > [!div class="mx-imgBorder"]
-   > ![Objekto ryšio apibrėžimas](media/activities-entities-define.png "Objekto ryšio apibrėžimas")
-
     - **Veiklos objekto laukas**: pasirinkite veiklos objekto lauką, kuris bus naudojamas ryšiui su kitu objektu nustatyti.
     - **Kliento objektas**: pasirinkite atitinkamą šaltinio kliento objektą, su kuriuo bus nustatytas jūsų veiklos objekto ryšys. Galite susieti tik su tais šaltinio kliento objektais, kurie naudojami duomenų sujungimo procese.
     - **Kliento objekto laukas**: šiame lauke rodomas šaltinio kliento objekto, pasirinkto susiejimo procese, pagrindinis raktas. Šis šaltinio kliento objekto pagrindinio rakto laukas naudojamas ryšiui su veiklos objektu nustatyti.
     - **Pavadinimas**: jei ryšys tarp šio veiklos objekto ir pasirinkto šaltinio kliento objekto jau yra, ryšio pavadinimas bus rodomas skaitymo režimu. Jei tokio ryšio nėra, bus sukurtas naujas ryšys su pateiktu pavadinimu.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Objekto ryšio apibrėžimas](media/activities-entities-define.png "Objekto ryšio apibrėžimas")
 
 1. Pasirinkite **Įrašyti**, kad pritaikytumėte keitimus.
 
@@ -82,3 +82,6 @@ Jūsų duomenų šaltiniuose yra objektų su operacijų ir veiklos duomenimis i�
 3. Spustelėkite piktogramą **Naikinti**.
 
 4. Patvirtinkite šį naikinimą.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

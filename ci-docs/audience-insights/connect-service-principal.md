@@ -1,20 +1,20 @@
 ---
 title: Prisijunkite prie „Azure Data Lake Storage Gen2“ paskyros su pagrindinėmis paslaugomis
 description: Naudokite „Azure“ pagrindines paslaugas publikos įžvalgoms, kurios prisijungia prie jūsų turimo „Data Lake“ pridedant jį prie publikos įžvalgų.
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644098"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267732"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Prijunkite „Azure Data Lake Storage Gen2“ paskyrą prie „Azure“ pagrindinių paslaugų publikos įžvalgoms
 
@@ -22,7 +22,9 @@ Automatizuoti įrankiai, naudojantys „Azure“ paslaugas visada turėtų turė
 
 Galite naudoti pagrindinias paslaugas tam, kad saugiai [įtrauktumėte ar redaguotumėte „Common Data Model“ katalogą kaip duomenų šaltinį](connect-common-data-model.md) ar [sukurtumėte naują ar atnaujintumėte esamą aplinką](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Jums reikia administratoriaus leidimų jūsų „Azure“ prenumeratai siekiant sukurti pagrindines paslaugas.
+> [!IMPORTANT]
+> - "Azure Data lake Gen2", dėl kurios pagrindinės tarnyba naudojamo, turi būti įjungta hierarchinė vardų sritis [ (SSS). ](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Jums reikia administratoriaus leidimų jūsų „Azure“ prenumeratai siekiant sukurti pagrindines paslaugas.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Sukurti „Azure“ pagrindines paslaugos publikos įžvalgoms
 
@@ -83,7 +85,7 @@ Pridėkite „Azure Data Lake“ talpinimo paskyrą publikos įžvalgose prie [t
 
 Atlikite tolesnius žingsnius tam, kad gautumėte reikiamą informaciją apie pasirinktą prieigą.
 
-### <a name="resounce-based-storage-account-connection"></a>Ištekliais pagrįstos talpinimo paskyros jungtis
+### <a name="resource-based-storage-account-connection"></a>Saugyklo išteklių paskyros ryšys
 
 1. Eikite į [„Azure“ administratoriaus portalą](https://portal.azure.com) ir prisijunkite prie savo prenumeratos ir atverkite talpinimo paskyrą.
 
@@ -108,7 +110,8 @@ Atlikite tolesnius žingsnius tam, kad gautumėte reikiamą informaciją apie pa
 1. Peržiūrėkite **Prenumerata**, **Išteklių grupė** ir talpinimo paskyros **Pavadinimas** siekiant užsitikrinti, kad pasirinkote tinkamas vertes publikos įžvalgose.
 
 1. Publikos įžvalgose pasirinkite vertes arba atitinkamus laukelius pridedant talpinimo paskyrą.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Įveskite talpinimo paskyros išteklių ID informaciją.":::
    
 1. Tęskite likusius žingsnius publikos įžvalgose tam, kad pridėtumėte talpinimo paskyrą.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

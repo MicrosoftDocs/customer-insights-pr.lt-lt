@@ -4,17 +4,17 @@ description: Dirbkite su „Common Data Model“ duomenimis naudodami „Azure D
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643468"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267870"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Jungimasis prie „Common Data Model” aplanko naudojant „Azure Data Lake” klientą
 
@@ -38,17 +38,25 @@ ms.locfileid: "4643468"
 
 1. Pasirinkite **Įtraukti duomenų šaltinį**.
 
-1. Pasirinkite **Sujungti su „Common Data Model“ katalogu**, pasirinkite **Pavadinimas** duomenų šaltiniui ir rinkitės **Toliau**.
+1. Pasirinkite **Sujungti su „Common Data Model“ katalogu**, pasirinkite **Pavadinimas** duomenų šaltiniui ir rinkitės **Toliau**. Pavadinimų rekomendacijos: 
+   - Pradėti nuo raidės.
+   - Naudokite tik raides ir skaičius. Specialiųjų simbolių ir tarpų neleidžiama įvesti.
+   - Naudokite nuo 3 iki 64 simbolių.
 
 1. Galite pasirinkti tarp naudojimo resursais pagrįstos parinkties ir prenumeravimu pagrįstos parinkties autentifikavimui. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Įveskite **Talpyklos** informaciją ir pasirinkite **Toliau**.
    > [!div class="mx-imgBorder"]
-   > ![Dialogo lango lauke įveskite prisijungimo prie „Azure Data Lake“ informaciją](media/enter-new-storage-details.png)
-
-1. **Pasirinkite „Common Data Model“ katalogą** teksto laukelyje pasirinkite model.json failą, iš kurio importuosite duomenis ir rinkitės **Kitas**.
+   > ![Dialogo langas, skirtas naujai „Azure Data Lake“](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Bet kuris model.json failas susietas su kitu duomenų šaltiniu aplinkoje nebus rodoma sąraše.
+   > Kad galėtumėte prisijungti ir kurti abonementą, jums reikalingas vienas iš šių vaidmenų : konteinerio arba anksčiau nurodytas saugyklos duomenų šaltinis:
+   >  - „Storage Blob Data“ skaitytojas
+   >  - „Storage Blob Data“ savininkas
+   >  - „Storage Blob Data“ pildytojas
 
-1. Gausite esamų objektų sąrašą pasirinktame model.json faile. Galite peržiūrėti ir pasirinkti objektus iš galimų objektų sąrašo, o tada pasirinkti **Įrašyti**. Visi pasirinkti objektai bus vartojami iš naujo duomenų šaltinio.
+1. Dialogo lange Pasirinkite aplanką **„Įprastas duomenų modelis“**, pasirinkite failą model.json arba manifest.json, iš kurio norite importuoti duomenis, ir pasirinkite **Kitas**.
+   > [!NOTE]
+   > Sąraše nebus rodomas bet koks failas model.json arba jison duomenų šaltinis su kitu aplinkos sąrašu.
+
+1. Gausite galimų objektų sąrašą pasirinktame model.json arba sertifikato.json faile. Galite peržiūrėti ir pasirinkti objektus iš galimų objektų sąrašo, o tada pasirinkti **Įrašyti**. Visi pasirinkti objektai bus vartojami iš naujo duomenų šaltinio.
    > [!div class="mx-imgBorder"]
    > ![Dialogo langas, kuriame pateikiamas sąrašas su objektais iš model.json failo](media/review-entities.png)
 
@@ -59,11 +67,11 @@ ms.locfileid: "4643468"
 9. Įrašius pasirinkimus, atidaromas puslapis **Duomenų šaltiniai**. Dabar turėtumėte matyti „Common Data Model“ aplanko ryšį kaip duomenų šaltinį.
 
 > [!NOTE]
-> Model.josn failas gali būti susietas su vienu duomenų šaltiniu vienoje aplinkoje. Nepaisant to, tas pats model.json failas gali būti naudojamas duomenų šaltiniams keliose aplinkose.
+> Model.json failas arba anonsas.json gali būti susiejantis tik su vienu duomenų šaltinis toje pačioje aplinkoje. Tačiau tą patį failą model.json arba manifest.json galima naudoti duomenų šaltiniams keliose aplinkose.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Bendrojo duomenų modelio aplanko duomenų šaltinio redagavimas
 
-Galite naujinti prieigos raktą paskyros talpinimui, kurioje yra „Common Data Model“ katalogas. Taip pat galite keisti model.json failą. Jei norite prisijungti prie kito konteinerio iš saugyklos kliento arba keisti saugyklos pavadinimą, [sukurkite naują duomenų šaltinio ryšį](#connect-to-a-common-data-model-folder).
+Galite naujinti prieigos raktą paskyros talpinimui, kurioje yra „Common Data Model“ katalogas. Taip pat galite pakeisti failą model.json arba manifest.jison. Jei norite prisijungti prie kito konteinerio iš saugyklos kliento arba keisti saugyklos pavadinimą, [sukurkite naują duomenų šaltinio ryšį](#connect-to-a-common-data-model-folder).
 
 1. Publikos įžvalgose, eikite į **Duomenys** > **Duomenų šaltiniai**.
 
@@ -77,13 +85,24 @@ Galite naujinti prieigos raktą paskyros talpinimui, kurioje yra „Common Data 
 
 5. Pasirinktinai galite naujinti iš paskyros pagrindinių pagrįstų jungčių į resursu pagrįstą ar prenumeravimu pagrįstą jungtį. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Negalite keisti **Talpyklos** informacijos naujinant jungtį.
    > [!div class="mx-imgBorder"]
-   > ![Dialogo lango lauke įveskite prisijungimo prie „Azure Data Lake“ informaciją](media/enter-existing-storage-details.png)
 
-6. Taip pat galite pasirinkti kitą model.json failą su kitu objektų rinkiniu iš konteinerio.
+   > ![Dialogo langas, skirtas "Azure Data Lake" duomenų telkinio ryšiui su esamu saugyklos abonementu įvesti](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Kad galėtumėte prisijungti ir kurti abonementą, jums reikalingas vienas iš šių vaidmenų : konteinerio arba anksčiau nurodytas saugyklos duomenų šaltinis:
+   >  - „Storage Blob Data“ skaitytojas
+   >  - „Storage Blob Data“ savininkas
+   >  - „Storage Blob Data“ pildytojas
+
+
+6. Galite pasirinkti kitą model.json arba atskirai.json failą su skirtingu objektų iš konteinerio objektų rinkiniu.
 
 7. Pasirinktinai, galite pasirinkti papildomus vartojamus objektus. Jei nėra priklausomybių, taip pat galite pašalinti jau pažymėtus objektus.
 
    > [!IMPORTANT]
-   > Jei esamame model.json faile yra priklausomybių ir objektų rinkinys, pasirodys klaidos pranešimas ir jūs negalėsite pasirinkti kito model.json failo. Prieš keisdami model.json failą pašalinkite priklausomybes arba sukurkite naują duomenų šaltinį su model.json failu, kurį norite naudoti, kad nereikėtų šalinti priklausomybių.
+   > Jei yra esamo modelio.json arba manifest.json failo ir objektų rinkinio priklausomybių, bus rodomas klaidos pranešimas, kuriame negalite pažymėti kito modelio.json arba manifest.json failo. Pašalinkite šias priklausomybes prieš keisdami failą model.json arba manifest.json arba sukurkite naują duomenų šaltinį naudodami failą model.json arba manifest.json, kad išvengtumėte priklausomybių pašalinimo.
 
 8. Pasirinktinai, galite pasirinkti papildomus atributus ar objektus, kuriems bus įjungtas duomenų profiliavimas ar išjungti jau pasirinktus.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

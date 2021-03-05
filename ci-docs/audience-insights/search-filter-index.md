@@ -1,7 +1,7 @@
 ---
 title: Ieškokite ir filtruokite kliento profilius
 description: Greitai raskite vieningų klientų profilių informaciją ir filtruokite nurodytus atributus.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406424"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270076"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Klientų profiliai: ieškos ir filtro rodyklė
 
@@ -28,14 +28,6 @@ Kliento duomenų suvienodinimo rezultatas yra kliento profilio objektas, kuris j
 Jei pirmą kartą nustatote ieškomus atributus kaip administratorius, pirmiausia turite apibrėžti indeksuotus laukus. Patariame pasirinkti visus atributus, pagal kuriuos naudotojai gali ieškoti ir filtruoti klientus **klientų** puslapyje. Galite nurodyti tik per duomenų suvienijimo procesą sukurtus, klientų profilio objekte esančius atributus.
 
 1. Atidarykite puslapį **Klientai** ir pasirinkite **Ieškos ir filtro rodyklė**.
-
-> [!NOTE]
-> Iš šių semantikos tipų, kaip apibrėžta struktūros puslapyje, sukursime numatytąją ieškos rodyklės konfigūraciją.
-> - Asmens vardas, pavardė, vidurinis vardas, pilnas vardas
-> - Organizacijos pavadinimas
-> - El. pašto adresas
-> - Telefono numeris
-> - Vietos informacija
 
 2. Pasirinkite **+ Įtraukti**, kad nurodytumėte indeksuotus laukus.
 
@@ -65,3 +57,10 @@ Jei pirmą kartą nustatote ieškomus atributus kaip administratorius, pirmiausi
 2. Pasirinkite **Įrašyti**, kad pritaikytumėte keitimus.
 
 3. Kai būsite pasirengę taikyti savo parametrus, pasirinkite **vykdyti**.
+
+## <a name="next-steps"></a>Paskesni veiksmai
+
+Eikite į **klientų** puslapį norėdami peržiūrėti visų klientų profilių antrinį ir ieškokite klientų profilių arba naudodami indeksuoti laukus rinkinį.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

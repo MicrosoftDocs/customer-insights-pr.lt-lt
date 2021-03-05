@@ -1,20 +1,20 @@
 ---
 title: Bendrovės profilių praturtinimas su trečiosios šalies papildymo „Experian“
 description: Bendra informacija apie „Experian“ trečiosios šalies praturtinimą.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668822"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269570"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klientų profilių papildymas demografiniais duomenimis iš „Experian” (peržiūros versija)
 
@@ -41,7 +41,9 @@ Norint sukonfigūruoti „Experian“, reikia atitikti toliau nurodytas būtiną
 
 ## <a name="map-your-fields"></a>Susiekite savo laukus
 
-1. Pasirinkite **Įtraukti duomenis** ir pasirinkite savo pagrindinius identifikatorius laukų **Vardas ir adresas**, **El. pašto adresas** arba **Telefono numeris**, kad jie būtų siunčiami „Experian“ tapatybei patvirtinti.
+1.  Pasirinkite **Įtraukti duomenis** ir pasirinkite **kliento duomenų rinkinį,** kurį norite papildyti demografiniais duomenimis iš „Experian“. Galite pažymėti objektą **Klientas**, kad pagerintumėte visus jūsų klientų profilius, arba pasirinkti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.
+
+1. Pasirinkite raktų identifikatorius iš **Vardo ir adreso**, **El. pašto** arba **Telefono**, kad būtų galima siųsti į  „Experian“ tapatybės tikrinimui.
 
    > [!TIP]
    > Daugiau pagrindinių identifikatorių atributų siunčiant „Experian“, tikėtina, kad atitikimo rodiklis bus aukštesnis.
@@ -52,8 +54,8 @@ Norint sukonfigūruoti „Experian“, reikia atitikti toliau nurodytas būtiną
 
 1.  Spustelėkite **Įrašyti**, kad baigtumėte susieti laukus.
 
-   > [!div class="mx-imgBorder"]
-   > ![„Experian“ laukų susiejimas](media/experian-field-mapping.png "„Experian“ laukų susiejimas")
+    > [!div class="mx-imgBorder"]
+    > ![„Experian“ laukų susiejimas](media/experian-field-mapping.png "„Experian“ laukų susiejimas")
 
 ## <a name="enrichment-results"></a>Papildymo rezultatai
 
@@ -71,3 +73,6 @@ Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [segmentus](segmen
 
 Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Experian“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Experian“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įpareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

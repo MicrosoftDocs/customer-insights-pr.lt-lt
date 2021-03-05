@@ -5,16 +5,16 @@ ms.date: 11/14/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ed6bd40e8575fc90258f79f60abffe54f136d274
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 573a22e24f84c65fc4d21faf823cace801cc7ea3
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644458"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269110"
 ---
 # <a name="connector-for-dotdigital-preview"></a>Jungtis „DotDigital“ (peržiūra)
 
@@ -72,3 +72,6 @@ Galite [eksportuoti duomenis pareikalavus](export-destinations.md). Eksportavima
 
 Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „DotDigital“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „DotDigital“ reklamos atitinka visus jūsų galimai prisiimtus privatumo ir saugos įpareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

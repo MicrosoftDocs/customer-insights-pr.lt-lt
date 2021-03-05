@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653990"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269846"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Prenumeravimo atsisakymo prognozės (peržiūros) pavyzdžio vedlys
 
@@ -29,7 +29,7 @@ Praieisime kartu pro prenumeravimo nutraukimo prognozės pavyzdį nuo pradžios 
 - Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.
 - Rekomenduojame jums atlikti šiuos žingsnius [naujojoe aplinkoje](manage-environments.md).
 
-## <a name="task-1---ingest-data"></a>Užduotis 1 - Duomenų suvartojimas
+## <a name="task-1---ingest-data"></a>Užduotis 1 - Duomenų vartojimas
 
 Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [importuoti duomenų šaltinius naudojant „Power Query“ jungtis](connect-power-query.md) konkrečiai. Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės. 
 
@@ -46,10 +46,9 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
    - **Gimimo data**: Data
    - **Sukurta**: Data/Laikas/Zona
 
-   [!div class="mx-imgBorder"]
-   ![Keisti gimimo dieną į datą](media/ecommerce-dob-date.PNG "transformuoti gimimo datą į datą")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformuoti gimimo datą į datą":::
 
-1. „Pavadinimas“ laukelyje dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
+1. Laukleyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
 
 1. Įrašykite duomenų šaltinį.
 
@@ -67,7 +66,7 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
    - **Uždirbtitaškai**: Visas skaičius
    - **Sukurta**: Data/Laikas
 
-1. „Pavadinimas“ laukelyje dešinėje juostoje pervardykite savo duomenų šaltinį iš **Query** į **loyKlientai**.
+1. Laukelyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **lojalūs klientai**.
 
 1. Įrašykite duomenų šaltinį.
 
@@ -90,7 +89,7 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
    - **Yra_automatiškai_atnaujinama**: Tiesa/Netiesa
    - **Atnaujinimo dažnis mėnesiai**: Visas numeris
 
-1. „Pavadinimas“ laukelyje dešinėje juostoje, pervardyktie savo duomenų šaltinį iš **Laukiama** į **Prenumeravimo istorija**.
+1. Laukelyje **Pavadinimas** dešinėje juostoje, pervardyktie savo duomenų šaltinį iš **Laukiama** į **Prenumeravimo istorija**.
 
 1. Įrašykite duomenų šaltinį.
 
@@ -230,3 +229,6 @@ Galite sukurti naują segmentą pagal modelio sukurtą objektą.
 Gala turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.
 
 Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

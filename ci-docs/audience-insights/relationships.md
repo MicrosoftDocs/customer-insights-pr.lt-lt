@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406423"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269891"
 ---
 # <a name="relationships-between-entities"></a>Objektų ryšiai
 
@@ -28,8 +28,8 @@ Atliekant sutapdinimo ir suliejimo procesus, sistemos ryšiai sukuriami be varto
 > ![Ryšių sukūrimas](media/relationships-entities-merge.png "Ryšio sukūrimas")
 
 - ***CustomerToContact* ryšys** buvo sukurtas tarp kliento objekto ir kontakto objekto. Kliento objekto rakto laukas **Contact_contactId** susiejamas su kliento objekto rakto lauku **contactId**.
-- **_CustomerToAccount_ ryšys** buvo sukurtas tarp kliento objekto ir abonemento objekto. Kliento objekto rakto laukas **Account_accountId** susiejamas su abonemento objekto rakto lauku **accountId**.
-- **_CustomerToWebAccount_ ryšys** buvo sukurtas tarp kliento objekto ir „WebAccount“ objekto. Kliento objekto rakto laukas **WebAccount_webaccountId** susiejamas su „WebAccount“ objekto rakto lauku **webaccountId**.
+- ***CustomerToAccount* ryšys** buvo sukurtas tarp kliento objekto ir abonemento objekto. Kliento objekto rakto laukas **Account_accountId** susiejamas su abonemento objekto rakto lauku **accountId**.
+- ***CustomerToWebAccount* ryšys** buvo sukurtas tarp kliento objekto ir „WebAccount“ objekto. Kliento objekto rakto laukas **WebAccount_webaccountId** susiejamas su „WebAccount“ objekto rakto lauku **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Ryšio kūrimas
 
@@ -69,3 +69,6 @@ Puslapyje **Ryšiai** apibrėžkite pasirinktinius ryšius. Kiekvieną ryšį su
 ## <a name="next-step"></a>Kitas veiksmas
 
 Sistema ir pasirinktiniai ryšiai naudojami segmentams kurti, remiantis keliais duomenų šaltiniais, kurie nebėra izoliuoti. Daugiau informacijos galite rasti čia [segmentas](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

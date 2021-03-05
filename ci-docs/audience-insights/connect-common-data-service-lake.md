@@ -4,17 +4,17 @@ description: Duomenų importavimas iš „Common Data Service“ valdomo „Data
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643408"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267824"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Prisijungimas prie „Common Data Service“ valdomo „Data Lake“ duomenų
 
@@ -34,7 +34,10 @@ Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Stor
 
 3. Pasirinkite **Prisijungti prie „Common Data Service”** ir pasirinkite **Pirmyn**.
 
-4. Įveskite duomenų šaltinio **Pavadinimą** ir pasirinkite **Pirmyn**.
+4. Įveskite duomenų šaltinio **Pavadinimą** ir pasirinkite **Pirmyn**. Pavadinimų rekomendacijos: 
+   - Pradėti nuo raidės.
+   - Naudokite tik raides ir skaičius. Specialiųjų simbolių ir tarpų neleidžiama įvesti.
+   - Naudokite nuo 3 iki 64 simbolių.
 
 5. Nurodykite **Serverio adresas**, skirtą jūsų „Common Data Service” organizacijai, ir pasirinkite **Prisijungti**.
 
@@ -65,3 +68,6 @@ Norėdami prisijungti prie kitos „Common Data Service” tarnybos, [sukurkite 
 3. Sąraše pasirinkite **Redaguoti**.
 
 4. Pažymėkite papildomus objektus iš galimų objektų sąrašo ir pasirinkite **Įrašyti**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

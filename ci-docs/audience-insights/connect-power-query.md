@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406401"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267781"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Prisijungimas prie „Power Query“ duomenų šaltinio
 
@@ -28,7 +28,10 @@ ms.locfileid: "4406401"
 
 1. Pasirinkite metodą **Importuoti duomenis** ir pasirinkite **Toliau**.
 
-1. Nurodykite duomenų šaltinio **Pavadinimas** ir pasirinkite **Toliau**, kad sukurtumėte duomenų šaltinį.
+1. Nurodykite duomenų šaltinio **Pavadinimas** ir pasirinkite **Toliau**, kad sukurtumėte duomenų šaltinį. Pavadinimų rekomendacijos: 
+   - Pradėti nuo raidės.
+   - Naudokite tik raides ir skaičius. Specialiųjų simbolių ir tarpų neleidžiama įvesti.
+   - Naudokite nuo 3 iki 64 simbolių.
 
 1. Pasirinkite vieną iš [galimų jungčių](#available-power-query-data-sources). Šiame pavyzdyje pasirinksime jungtį **Tekstas/CSV**.
 
@@ -77,3 +80,6 @@ Jungtys su varnele stulpelyje **„Customer Insights“ (duomenų srautai)** gal
 3. Pritaikykite savo pakeitimus ir transformavimus dialogo lange **„Power Query“ – redaguoti užklausas**, remdamiesi skyriumi [Naujo duomenų šaltinio kūrimas](#create-a-new-data-source).
 
 4. Baigę redaguoti, pasirinkite **Įrašyti** dalyje „Power Query“, kad įrašytumėte pakeitimus.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

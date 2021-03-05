@@ -4,17 +4,17 @@ description: Naudokite Mašininio mokymo studiją (įprastos programos) modelius
 ms.date: 12/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: ameetj
 manager: shellyha
-ms.openlocfilehash: 556b6810db0ed2733a3f086291757bd85b77e371
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4669028"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270214"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Naudokite modelius pagrįstus „Azure“ Mašininio mokymo studija (įprasta programa)
 
@@ -171,3 +171,6 @@ Visas [produkto rekomendacijos eksperimentas gali būti prieinamas „Azure“ A
 Siekiant naudoti šias prognozes „Customer Insights“, jums reikia **eksportuoti** prognozes kartu su kliento ID. [Eksportuokite juos į tą pačią „Azure Blob“ talpinimo vietą](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs), į kurią eksportavote išteklių duomenis. Prognozuojama žiniatinklio tarnyba gali būti suplanuota veikti reguliariai ir naujinti balus.
 
 Tinkinto modelio sugeneruoti duomenys gali būti naudojami tolesniam jūsų kliento duomenų praturtinimui. Daugiau informacijos rasite [Pasirinktiniai mašininio mokymo modeliai](custom-models.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

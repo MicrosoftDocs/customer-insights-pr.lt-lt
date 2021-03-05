@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406382"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477098"
 ---
 # <a name="connector-for-power-bi-preview"></a>„Power BI“ jungtis (peržiūra)
 
@@ -31,7 +31,7 @@ Sukurkite vizualizacija jūsų duomenims su „Power BI Desktop“. Generuokite 
 
 1. Pasirinkite **Rodyti daugiau** ir ieškokite **„Dynamics 365 Customer Insights“**
 
-1. Pasirinkite rezultatą ir spustelėkite **Prisijungti**.
+1. Pasirinkite **Prisijungti**.
 
 1. **Prisijunkite** naudodami tą patį organizacijos klientą, kurį naudojate „Customer Insights“, ir pasirinkite **Prisijungti**.
    > [!NOTE]
@@ -52,3 +52,22 @@ Sukurkite vizualizacija jūsų duomenims su „Power BI Desktop“. Generuokite 
 ### <a name="work-with-a-subset-of-data"></a>Darbas su antriniu duomenų rinkiniu
 
 Apgalvokite darbą su jūsų duomenų papildomu rinkiniu. Pavyzdžiui, galite sukurti [segmentus](segments.md) vietoje visų kliento įrašų eksportavimo į „Power BI“.
+
+## <a name="troubleshooting"></a>Trikčių šalinimas
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>"Customer Insights" aplinka, kuri nerodoma Power BI
+
+Aplinkos, kurios turi daugiau nei vieną ryšį, nustatytą tarp dviejų identiškų objektų auditorijos [įžvalgose](relationships.md), pasiekti Power BI nepavyks.
+
+Galite identifikuoti ir pašalinti dubliuotas ryšius.
+
+1. Auditorijos įžvalgose eikite **Duomenys** > **Ryšiai** aplinkoje, kurios trūksta Power BI.
+2. Identifikuoti dubliuotus ryšius:
+   - Patikrinkite, ar tarp tų pačių dviejų objektų yra daugiau nei vienas ryšys.
+   - Patikrinkite, ar yra ryšys, sukurtas tarp dviejų objektų, kurie abu įtraukti į suvienodinimo procesą. Tarp visų į suvienodinimo procesą įtrauktų objektų nustatomas numanomas ryšys.
+3. Pašalinti visus nustatytus dublikatų ryšius.
+
+Pašalę dubliuotų ryšių bandykite dar kartą Power BI programoje sukonfigūruoti jungtį. Aplinka turėtų būti prieinama dabar.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

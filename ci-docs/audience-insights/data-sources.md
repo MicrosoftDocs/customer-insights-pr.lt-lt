@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643963"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269708"
 ---
-# <a name="overview-about-data-sources"></a>Duomenų šaltinių apžvalga
+# <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Matysite kiekvieno įtraukto duomenų šaltinio pavadinimą, jo būseną ir vėl
 |Atnaujinama    |Vyksta duomenų apdorojimas. Galite atšaukti šią operaciją, stulpelyje **Veiksmai** pasirinkdami **Sustabdyti naujinimą**. Sustabdžius duomenų šaltinio naujinimą, jis bus grąžintas į paskutinio naujinimo būseną.       |
 |Atlikta nesėkmingai     |Apdorojant duomenis įvyko klaidų.         |
 
-Pasirinkite **Naujinimo būsena** tam, kad peržiūrėtumėte daugiau išsamios informacijos apie atnaujinimo būseną, įskaitant išsamią informaciją apie klaidas ir proceso pasroviui naujinimus.
+Pasirinkite **Statusas**, kad sužinotumėte bet kurios būsenos duomenų šaltinio reikšmę. Išsamios informacijos **apie eigą** srityje išplėskite  **Duomenų šaltiniai**. Pasirinkite **Gauti daugiau informacijos** apie naujinimo būseną, įskaitant klaidų informaciją ir tolesnius procesų naujinimus.
 
 Duomenų įkėlimas gali šiek tiek užtrukti. Sėkmingai atnaujinus, galima peržiūrėti apdorotus duomenis puslapyje **Objektai**. Norėdami gauti daugiau informacijos, žr. [Objektai](entities.md).
 
@@ -76,3 +76,6 @@ Norėdami paleisti iš naujo duomenų šaltinį pagal poreikį, atlikite šiuos 
 2. Pažymėkite vertikalią elipsę, esančią šalia duomenų šaltinio, kurį norite pašalinti, ir išplečiamajame meniu pasirinkite **Naikinti**.
 
 3. Patvirtinkite šį naikinimą.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

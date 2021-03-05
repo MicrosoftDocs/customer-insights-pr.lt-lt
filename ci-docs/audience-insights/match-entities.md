@@ -4,17 +4,17 @@ description: Suderinkite objektus tam, kad sukurtumėte suvienytus kliento profi
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406418"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267488"
 ---
 # <a name="match-entities"></a>Susiekite objektus
 
@@ -22,7 +22,7 @@ Užbaigę susiejimo etapą, būsite pasirengę susieti savo objektus. Atitikimo 
 
 ## <a name="specify-the-match-order"></a>Nurodykite atitikties eiliškumą
 
-Eikite į **suvienodinti** > **atitikti** ir norėdami pradėti atitikties etapą, pasirinkite **nustatyti eiliškumą**.
+Eikite į **Duomenys** > **Duomenų suvienodinimas** > **Derinimas** ir pasirinkite **Nustatyti tvarką**, kad būtų pradedamas atitikties etapas.
 
 Kiekvienas atitikmuo sujungia du ar daugiau objektų į vieną objektą išlaikant kiekvieną unikalų kliento įrašą. Toliau pateiktame pavyzdyje, išrinkome tris objektus: **ContactCSV: Testdata** kaip **pirminį** objektą, **WebAccountCSV: TestData** kaip **2 objektą** ir **CallRecordSmall: TestData** kaip **3 objektą**. Diagrama, esanti virš parinkčių pavaizduoja, kaip bus vykdomas atitikties eiliškumas.
 
@@ -136,7 +136,7 @@ Po to, kai nustatomas papildomo dublikavimo įrašas, jis bus naudojamas kryžmi
 
 1. Suderinimo proceso vykdymas dabar grupuoja įrašus pagal sąlygas nustatytas papildomo dublikavimo taisyklėse. Po įrašų grupavimo, suliejimo politika yra taikoma siekiant nustatyti laimėjusį įrašą.
 
-1. Laimėjęs įrašas tuomet yra praleidžiamas pro kryžminio objekto suderinamumą.
+1. Tada šis pagrindinis įrašas perduodamas kelių objektų atitikmeniui ir ne laimėtojus (pvz., alternatyvius ID), kad pagerėtų atitikimo kokybę.
 
 1. Bet kuri tinkinta suderinimo taisyklė visada nustato atitiktį ir niekuomet neatitinka viršijančių papildomo dublikavimo taisyklių. Jei papildomo dublikavimo taisyklė nustato atitikties įrašus ir tinkinta atitikties taisyklė yra nustatyta taip, kad niekada neatitiktų tų įrašų, tuomet šie du įrašai nebebus suderinti.
 
@@ -157,6 +157,17 @@ Pirmasis atitikties procesas sukuria vieningą pagrindinį objektą. Visi tolesn
 
 > [!TIP]
 > Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
+
+## <a name="deduplication-output-as-an-entity"></a>Deduplikacijos išvestis kaip objektas
+Be vieningo pagrindinio objekto, sukurto kaip kelių objektų gretinimo dalis, deduplikavimo procesas taip pat kuria naują kiekvieno objekto objektą iš atitikties užsakymo, kad būtų galima identifikuoti deduplikuotus įrašus. Šiuos objektus galima rasti kartu su **ConflationMatchPairs:CustomerInsights** **Sistema** skyriuje, **Objektai**, **Deduplication_Datasource_Entity**.
+
+Deduplikacijos išvesties objektas turi šią informaciją:
+- ID / raktai
+  - Pirminio rakto laukas ir jo alternatyvus ID laukas. Alternatyvų ID lauką sudaro visi nustatyti įrašo alternatyvūs ID.
+  - Deduplication_GroupId lauke rodoma grupė arba grupė, nustatyta objektu, grupuojanti visus panašius įrašus pagal nurodytus deduplojimo laukus. Tai naudojama sistemos apdorojimo tikslais. Jei nėra nurodytų neautomatiniu būdu nurodomų deduplojimo taisyklių ir taikomos sistemos apibrėžtos deduplikavimo taisyklės, šio lauko gali būti nerandama deduplikacijos išvesties objektui.
+  - Deduplication_WinnerId: šiame lauke yra nustatytų grupių arba grupių laimėtojo ID. Jei Deduplication_WinnerId reikšmė yra tokia pati kaip įrašo pirminio rakto reikšmė, tai reiškia, kad įrašas yra pagrindinis.
+- Laukai, naudojami deduplikacijos taisyklėms apibrėžti.
+- Taisyklių ir balų laukelius galima pažymėti, kurios iš deduplikacijos taisyklių buvo taikomos, ir taškų, kuriuos grąžino atitikimas.
 
 ## <a name="review-and-validate-your-matches"></a>Peržiūrėkite ir patvirtinkite savo atitiktis
 
@@ -200,6 +211,11 @@ Pagerinkite kokybę iš naujo konfigūruodami kelis atitikties parametrus:
   > [!div class="mx-imgBorder"]
   > ![Kopijuoti taisyklę](media/configure-data-duplicate-rule.png "Kopijuoti taisyklę")
 
+- **Išjunkite taisyklę**, kad būtų išlaikyta atitikties taisyklė, bet neįtraukite jos į gretinimo procesą.
+
+  > [!div class="mx-imgBorder"]
+  > ![Išjungti taisyklę](media/configure-data-deactivate-rule.png "Išjungti taisyklę")
+
 - **Redaguokite savo taisykles** pažymėdami **redagavimo** simbolį. Galite taikyti šiuos pakeitimus:
 
   - Keisti sąlygos atributus: pažymėkite naujus atributus konkrečioje būsenos eilutėje.
@@ -229,10 +245,12 @@ Galite nurodyti sąlygas, pagal kurias tam tikri įrašai turi visada atitikti a
     - Objekto2kodas: 34567
 
    Tas pats šablono failas gali nurodyti pasirinktinius atitikties įrašus iš kelių objektų.
+   
+   Jei norite nurodyti objekto deduplikavimo pasirinktinį gretinimą, pateikite tą patį objektą kaip ir Objektą1, ir Objektą2 ir nustatykite skirtingas pirminio rakto reikšmes.
 
 5. Įtraukę visus pageidaujamus perrašymus, išsaugokite šablono failą.
 
-6.Eikite į **Duomenys** > **Duomenų šaltiniai** ir vartokite šablono failus kaip naujus objektus. Kai failai paversti, galite juos naudoti atitikties konfigūracijai.
+6. Eikite **Duomenys** > **Duomenų šaltiniai** ir permeskite šablonų failus kaip naujus objektus. Kai failai paversti, galite juos naudoti atitikties konfigūracijai.
 
 7. Kai galite įkelti failus ir objektus, pasirinkite **pasirinktinės atitikties** parinktį dar kartą, Matysite parametrus, nurodančius objektus, kuriuos norite įtraukti. Iš išskleidžiamojo meniu pasirinkite būtinus objektus.
 
@@ -250,3 +268,6 @@ Galite nurodyti sąlygas, pagal kurias tam tikri įrašai turi visada atitikti a
 ## <a name="next-step"></a>Kitas veiksmas
 
 Kai užbaigsite bent vienos atitinkančios poros atitikties procesą, galėsite išspręsti galimus duomenų prieštaravimus [**suliejimo**](merge-entities.md) temoje.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

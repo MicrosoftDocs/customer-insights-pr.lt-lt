@@ -1,7 +1,7 @@
 ---
 title: Pagrindinis puslapis publikos įžvalgose
 description: Pradėkite naršyti programoje pagrindiniame puslapyje.
-ms.date: 09/30/2020
+ms.date: 01/07/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: bd16966eabb126d9c9945ededc53273df02c3369
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 7cc767f5d80b213a4c1bb5b2e8062bd44c15279b
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406407"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477051"
 ---
 # <a name="create-a-new-environment"></a>Kurti naują aplinką
 
@@ -29,6 +29,8 @@ Galite prisiregistruoti naudoti bandomąją versiją [bandomosios versijos regis
 
 1. Pateikite savo darbo ar mokymosi įstaigos el. pašto adresą, papasakokite apie save ir pasirinkite **Toliau**.
 
+   :::image type="content" source="media/trial-signup-dialog.png" alt-text="Susisiekite užsiregistruoti nemokamai bandomajai versijai gauti.":::
+
 1. Įveskite naujos aplinkos **pavadinimą**. 
 
 1. Pasirinkite bandomosios versijos tipą.
@@ -41,34 +43,34 @@ Galite prisiregistruoti naudoti bandomąją versiją [bandomosios versijos regis
 
 Sukūrę aplinką matysite **demonstracinę** aplinką, kurioje galėsite susipažinti su programa ir išgalvotais duomenimis. Galite keisti duomenų pavyzdį, kad jis atitiktų jūsų pramonės šaką. Pasirinkite piktogramą **Parametrai** ir pasirinkite **Demonstraciniai parametrai**. Be to, galite keisti vaizdinę temą. 
 
-Galite [perjungti į aplinką](#change-between-environments), sukurtą registracijos proceso metu, ir apdoroti savo duomenis.
+Galite [perjungti į aplinką](#switch-environments), sukurtą registracijos proceso metu, ir apdoroti savo duomenis.
 
 ## <a name="create-a-new-production-or-sandbox-environment"></a>Naujos gamybos ir smėlio dėžės aplinkos kūrimas
 
-Savo aplinkos antraštėje pasirinkite piktogramą **Parametrai** ir pasirinkite **Nauja aplinka**.
+Savo aplinkoje programos antraštėje pasirinkite parinktį **Aplinkos** ir spauskite **Naujas**.
 
-Atlikite veiksmus, kuriuos vykdote [kurdami bandomąją aplinką](#create-a-trial-environment). Rodoma papildoma parinktis, kai pasirenkate **Išplėstiniai parametrai**, kad duomenys būtų saugomi jūsų „Azure Date Lake“. Nurodykite kliento pavadinimą ir kliento raktą, kad užmegztumėte ryšį su savo „Azure Data Lake“. Pagal numatytuosius parametrus duomenys saugomi „Customer Insights“ valdomame „Data Lake“.
+Atlikite veiksmus, kuriuos vykdote [kurdami bandomąją aplinką](#create-a-trial-environment). Pagal numatytuosius parametrus duomenys saugomi „Customer Insights“ valdomame „Data Lake“. Rodoma papildoma parinktis, kai pasirenkate **Išplėstiniai parametrai**, kad duomenys būtų saugomi jūsų „Azure Date Lake“. Nurodykite kliento pavadinimą ir kliento raktą, kad užmegztumėte ryšį su savo „Azure Data Lake“. 
 
 > [!IMPORTANT]
 > Įrašydami duomenis „Azure Data Lake Storage“ sutinkate, kad duomenys bus perduoti ir saugomi atitinkamoje geografinėje vietoje, numatytoje konkrečiai „Azure“ saugyklos paskyrai, kuri gali skirtis nuo „Dynamics 365 Customer Insights“ duomenų saugojimo vietos. [Sužinokite daugiau „Microsoft“ patikimumo centre.](https://www.microsoft.com/trust-center)
 
 ## <a name="explore-the-home-page"></a>Pagrindinio puslapio tyrinėjimas
 
-Galite [prieiti prie savo „Customer Insights“ aplinkos](https://home.ci.ai.dynamics.com/) tolesniame URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
-**Pagrindiniame** puslapyje pateikiama klientų bazės apžvalga ir pagrindinė metrika, skirta verslo būklei sekti.
+Galite pasiekti [auditorijos įžvalgas Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/)pagal šį URL:[https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+**Pagrindiniame puslapyje** rodoma segmentų, priemonių ir papildymo duomenų apžvalga (jei sukonfigūruota) atlikus [išdėstymo](map-entities.md), [gretinimo](match-entities.md) ir [suliejimo](merge-entities.md) etapus.
 
 > [!div class="mx-imgBorder"] 
 > ![Pagrindiniame puslapyje rodomos įžvalgos](media/home-page-insights.png "Pagrindiniame puslapyje rodomos įžvalgos")
 
-Dalyje **Naujausi segmentai** matysite klientų grupes pagal demografinius, elgsenos arba operacijų atributus, kuriuos nustatėte. [Segmentų kūrimas](segments.md) padeda geriau nukreipti verslo veiklas.
+Dalyje **Naujausi segmentai** matysite klientų grupes pagal demografinius, elgsenos arba operacijų atributus, kuriuos nustatėte. [Kuriant segmentus ](segments.md)galima grupuoti klientų bazę ir geriau nukreipti į verslo veiklas.
 
-Dalyje **Naujausi matai** rodomos plytelės su [matais](measures.md). Matai yra pagrindiniai efektyvumo indikatoriai (KPI), kuriuos nustatėte. Pavyzdžiui, vidutinė klientų praradimo tikimybė arba vidutinis kliento laiko leidimas internete.
+**Naujausiose priemonėse** rodoma [plytelė su jūsų apibrėžtais ](measures.md) pagrindiniais efektyvumo indikatoriais (KPI). Pvz.: vidutinė tikimybė, kad prarasite klientą, arba vidutinės internetinės išlaidos vienam klientui.
 
-Skyriuje **Naujausi papildymai** išvardyti neseniai baigto papildymo rezultatai. Papildymais įtrauktiama informacijos apie klientų bazę. Pavyzdžiui, sužinant jų pomėgius ir mėgstamus prekių ženklus. Šią informaciją galima atblokuoti naudojant [papildymo](enrichment-microsoft-graph.md)galimybes, užbaigus [susiejimo](map-entities.md), [atitikties](match-entities.md) ir [suliejimo](merge-entities.md) etapus.
+Skyriuje **Naujausi papildymai** išvardyti neseniai baigto papildymo rezultatai. [Papildymais](enrichment-hub.md) įtrauktiama informacijos apie klientų bazę. Pavyzdžiui, sužinant jų pomėgius ir mėgstamus prekių ženklus.
 
-## <a name="change-between-environments"></a>Aplinkų keitimas
+## <a name="switch-environments"></a>Perjungti aplinką
 
-Nustatę ir sukonfigūravę [duomenų šaltinius](data-sources.md), norėsite pereiti iš demonstracinės aplinkos į tiesioginę aplinką. Naudodami gamybos aplinką, galite dirbti su savo klientų duomenimis. Norėdami keisti aplinkas, viršutiniame dešiniajame puslapio kampe pasirinkite valdiklį **Aplinka**.
+Norėdami keisti aplinkas, viršutiniame dešiniajame puslapio kampe pasirinkite valdiklį **Aplinka**.
 
 > [!div class="mx-imgBorder"] 
 > ![Perjungti aplinką](media/home-page-environment-switcher.png "Perjungti aplinką")
@@ -78,3 +80,6 @@ Administratoriai gali kurti ir valdyti [kelias aplinkas](manage-environments.md)
 ## <a name="next-step"></a>Kitas veiksmas
 
 Norėdami matyti savo įžvalgas pagrindiniame puslapyje, pirmiausia turite [įtraukti duomenų šaltinius](data-sources.md) ir [suvienodinti](data-unification.md) duomenis, kad sukurtumėte klientų profilius.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

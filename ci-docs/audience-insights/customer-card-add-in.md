@@ -1,7 +1,7 @@
 ---
 title: Įdiegti ir konfigūruoti kliento kortelės papildinį
 description: „Dynamics 365 Customer Insights“ kliento kortelės papildinio diegimas ir konfigūravimas.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644053"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268054"
 ---
 # <a name="customer-card-add-in-preview"></a>Papildinys Kliento kortelė (peržiūra)
 
@@ -92,10 +92,26 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 
 1. Dialogo lange **Lauko ypatybės** išvalykite žymės langelį **Rodyti žymą formoje**.
 
-1. Pasirinkite valdiklio ypatybę **Žiniatinklis**. Naudodami papildymo valdiklį, pasirinkite norimą rodyti papildymo tipą, sukonfigūravę lauką **„enrichmentType“**. Kiekvienam papildymo tipui turite įtraukti atskirą papildymo valdiklį.
+1. Pasirinkite valdiklio ypatybę **Žiniatinklis**. Naudodami papildymo valdiklį, pasirinkite norimą rodyti papildymo tipą, sukonfigūravę lauką **„enrichmentType“**. Įtraukite atskirą kiekvieno papildymo tipo gerinimo valdiklį.
 
 1. Norėdami publikuoti atnaujintą kontakto formą, pasirinkite **Įrašyti** ir **Publikuoti**.
 
 1. Eikite į publikuotą kontakto formą. Matysite naujai įtrauktą valdiklį. Naudojant jį pirmą kartą, jums gali reikėti prisijungti.
 
 1. Norėdami tinkinti pasirinktiname valdiklyje rodomus duomenis, pasirinkite viršutiniame dešiniajame kampe esantį redagavimo mygtuką.
+
+## <a name="upgrade-customer-card-add-in"></a>Atnaujinti kliento kortelės papildinį
+Kliento kortelės papildymas automatiškai neatsijungia. Norėdami atnaujinti į naujausią versiją, atlikite šią procedūrą "Dynamics 365" programoje, kuri turi įdiegtą priedą.
+
+1. Programoje "Dynamics 365" eikite į **Parametrai** > **Tinkinimas** ir pasirinkite **Sprendimai**.
+
+1. Priedų lentelėje ieškokite **"CustomerInsightsCustomerCard"** ir pažymėkite eilutę.
+
+1. Veiksmų juostroje pasirinkite **Taikyti sprendimo naujinimą**.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atnaujinkite sprendimą "Dynamics 365" programų tinkinimo srityje":::
+
+1. Pradėjus naujinimo procesą, matysite įkėlimo indikatorių, kol naujinimas bus baigtas. Jei nėra naujesnės versijos, atnaujinus bus rodomas klaidos pranešimas.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

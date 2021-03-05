@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643693"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269984"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>„Facebook“ reklamos tvarkytuvo jungtis (peržiūros versija)
 
@@ -62,7 +62,16 @@ Eksportuokite sujungtų klientų profilių segmentus į „Facebook“ reklamos 
 
 Galite [eksportuoti duomenis pareikalavus](export-destinations.md). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md#schedule-tab).
 
+## <a name="known-limitations"></a>Žinomi apribojimai
+
+- Iki 10 mln. klientų profilio vienam eksportavimui į Facebook "Ads Manager" 
+- Eksportavimas Facebook Ads Manager ribojamas segmentais
+- Norint eksportuoti segmentus, kurių bendra suma yra 10 mln. profilių, gali trukti iki 90 minučių
+
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
 Jums įjungus „Dynamics 365 Customer Insights“ tuomenų perdavimui į „Facebook“ reklamos tvarkytuvą, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights“, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Facebook“ reklamos atitinka visus jūsų galimai prisiimtus privatumo ir saugos įpareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

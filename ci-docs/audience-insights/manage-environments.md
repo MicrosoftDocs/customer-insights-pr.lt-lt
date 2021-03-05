@@ -1,20 +1,20 @@
 ---
 title: Aplinkų kūrimas ir valdymas
 description: Sužinokite, kaip prisijungti prie paslaugų ir kaip valdyti aplinkas.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644143"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270122"
 ---
 # <a name="manage-environments"></a>Aplinkų valdymas
 
@@ -46,9 +46,9 @@ Yra du naujos aplinkos kūrimo būdai. Galite nurodyti visiškai naują konfigū
 
 Norėdami sukurti aplinką:
 
-1. Pasirinkite simbolį **Parametrai** programėlės antraštėje.
+1. Programos antraštėje pasirinkite **Aplinkos** parinkėją.
 
-1. Pasirinkite **Nauja aplinka**.
+1. Pasirinkite **Naujas**.
 
    > [!div class="mx-imgBorder"]
    > ![Aplinkų parametrai](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Norėdami sukurti aplinką:
 
    - „Azure Data Lake Storage Gen2“ parinkčiai galite pasirinkti tarp resursais pagrįstos parinkties ir prenumeravimu pagrįstos parinkties autentifikavimui. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). **Talpykla** pavadinimas negali būti keičiamas ir bus „klientoįžvalgos“.
    
-   - Jei norite naudoti [prognozes](predictions.md), įvesktie „Common Data Service“ elemento URL **Serverio adreso** laukelyje skyriuje **Naudoti prognozes**.
+   - Jei norite naudoti [prognozes](predictions.md) arba konfigūruoti duomenų bendrinimą su programomis ir sprendimais, pagrįstais Microsoft Dataverse, Microsoft Dataverse dalyje **Konfigūruoti duomenų bendrinimą su papildomomis galimybėmis Microsoft Dataverse** pateikite aplinkos URL. Pasirinkite Įjungti **duomenų bendrinimą** ir bendrinkite Customer Insights išvedimo duomenis su Microsoft Dataverse valdomu Data Lake.
+
+     > [!NOTE]
+     > - Duomenų bendrinimas Microsoft Dataverse su valdomasis duomenų telkiniais šiuo metu nepalaikomas, kai įrašote visus duomenis savo Azure Data Lake Storage.
+     > - [Prognozės šiuo metu nepalaikomos](predictions.md) trūkstamų objekto reikšmių reikšmės, kai leidžiate bendrinti duomenis su Microsoft Dataverse valdomojo Data Lake duomenimis.
+
+     > [!div class="mx-imgBorder"]
+     > ![Konfigūravimo parinktys norint įjungti duomenų bendrinimą naudojant Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Jums vykdant procesus, tokius kaip duomenų suvartojimas ar segmento sukūrimas, atitinkantys katalogai bus sukuriami talpinimo paskyroje, kurią nurodėte prieš tai. Duomenų failai ir model.json failai bus sukurti ir įtraukti į atitinkamus poaplankius pagal jūsų vykdytą procesą.
 
@@ -86,7 +93,7 @@ Norėdami sukurti aplinką:
 Kopijuojami šie konfigūracijos parametrai:
 
 - Funkcijų konfigūracijos
-- Gauti / importuoti duomenų šaltiniai
+- Įtrauktas / importuotas duomenų šaltinis
 - Duomenų sujungimo (susiejimo, atitikimo, suliejimo) konfigūracija
 - Segmentai
 - Matavimai
@@ -120,11 +127,11 @@ Kai duomenų sujungimas baigtas, eikite į **Priemonės** ir **Segmentai**, kad 
 
 Galite redaguoti kai kurią esamos aplinkos informaciją.
 
-1. Pasirinkite **Administravimas** > **Sistema** > **Apie**.
+1.  Programos antraštėje pasirinkite **Aplinkos** parinkėją.
 
-2. Pasirinkite **Redaguoti**.
+2.  Pasirinkite **Redagavimo** piktogramą.
 
-3. Galite atnaujinti aplinkos **Rodomą pavadinimą**, tačiau negalite keisti **Regiono** arba **Tipo**.
+3. Lauke **Redaguoti aplinką** galite atnaujinti aplinkos rodomą **Pavadinimą**, tačiau negalite keisti  **Regiono** arba **Tipo**.
 
 4. Jei aplinka sukonfigūruojama saugoti duomenis „Azure Data Lake Storage Gen2“, galite atnaujinti **Paskyros raktą**. Tačiau negalite keisti **Paskyros pavadinimo** arba **Konteinerio** pavadinimo.
 
@@ -132,19 +139,27 @@ Galite redaguoti kai kurią esamos aplinkos informaciją.
 
 ## <a name="reset-an-existing-environment"></a>Paleiskite iš naujo esamą aplinką
 
-Galite paleisti iš naujo aplinką į tuščią būklę, jei norite panaikinti visus konfigūravimus ir pašalinti suvartotus duomenis.
+Kaip administratorius galite iš naujo nustatyti aplinką į tuščią būseną, jei norite panaikinti visas konfigūracijas ir pašalinti prarytus duomenis.
 
-1.  Pasirinkite **Administravimas** > **Sistema** > **Apie**.
+1.  Programos antraštėje pasirinkite **Aplinkos** parinkėją. 
 
-2.  Pasirinkite **Paleisti iš naujo**. 
+2.  Pažymėkite aplinką, kurią norite nustatyti iš naujo, ir pažymėkite daugtaškį **...**. 
 
-3.  Šio panaikinimo patvirtinimui, įveskite aplinkos pavadinimą ir pasirinkite **Paleisti iš naujo**.
+3. Pasirinkite parinktį **Nustatyti iš naujo**. 
+
+4.  Šio panaikinimo patvirtinimui, įveskite aplinkos pavadinimą ir pasirinkite **Paleisti iš naujo**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Esamos aplinkos naikinimas (galima tik administratoriams)
+
+Kaip administratorius galite panaikinti jūsų administruojamą aplinką.
+
+1.  Programos antraštėje pasirinkite **Aplinkos** parinkėją.
+
+2.  Pažymėkite aplinką, kurią norite nustatyti iš naujo, ir pažymėkite daugtaškį **...**. 
+
+3. Pasirinkite parinktį **Naikinti**. 
+
+4.  Norėdami patvirtinti panaikinimą, įveskite aplinkos pavadinimą ir pasirinkite **Naikinti**.
 
 
-## <a name="delete-an-existing-environment"></a>Esamos aplinkos naikinimas
-
-1. Pasirinkite **Administravimas** > **Sistema** > **Apie**.
-
-1. Pasirinkite **Naikinti**.
-
-1. Norėdami patvirtinti panaikinimą, įveskite aplinkos pavadinimą ir pasirinkite **Naikinti**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

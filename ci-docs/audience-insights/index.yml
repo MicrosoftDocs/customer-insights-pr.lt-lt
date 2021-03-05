@@ -6,16 +6,16 @@ metadata:
   description: Padėkite centrui su pagrindinėmis nuorodmis publikos įžvalgoms.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: lt-LT
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4406413"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745731"
 landingContent:
 - title: Apie publikos įžvalgas
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Bendruomenės svetainė
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Įtraukti duomenų šaltinius
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Duomenų šaltinių įtraukimas
-      url: data-sources.md
-    - text: Papildantysis naujinimas
-      url: incremental-refresh-data-sources.md
-    - text: Suprasti objektus
-      url: entities.md
 - title: Sujungti duomenis
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Schema
-      url: map-entities.md
-    - text: Sugretinti
-      url: match-entities.md
-    - text: Sulieti
-      url: merge-entities.md
-- title: Tikslinti klientų profilius
+    - text: Duomenų šaltinių apžvalga
+      url: data-sources.md
+    - text: Sujungimo apžvalga
+      url: data-unification.md
+    - text: Suprasti objektus
+      url: entities.md
+- title: Praturtinti ir tobulinti duomenis
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Papildyti klientų profilius
+      url: enrichment-hub.md
     - text: Konfigūruoti ryšius
       url: relationships.md
     - text: Peržiūrėkite kliento veiklas
       url: activities.md
-    - text: Atsineškite savo mašininio mokymo modelius
-      url: custom-models.md
+- title: Gauti įžvalgų
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kurti segmentus
+      url: segments.md
+    - text: Kurti priemones
+      url: measures.md
+    - text: Išsamūs duomenys naudojant prognozes
+      url: predictions.md
 - title: Perkelti kliento duomenis
   linkLists:
   - linkListType: how-to-guide

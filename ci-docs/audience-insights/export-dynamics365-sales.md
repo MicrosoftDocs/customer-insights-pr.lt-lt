@@ -1,20 +1,20 @@
 ---
 title: Eksportuoti „Customer Insights“ duomenis į „Dynamics 365 Sales“
 description: Sužinokite, kaip sukonfigūruoti ryšį su „Dynamics 365 Sales“.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643828"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269018"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>„Dynamics 365 for Sales“ jungtis (peržiūra)
 
@@ -24,7 +24,10 @@ Naudokite savo klientų duomenis kurdami rinkodaros sąrašus, vykdydami darbo e
 
 ## <a name="prerequisite"></a>Būtinoji sąlyga
 
-Kontaktiniai įrašai [iš „Dynamics 365 Sales“ suvartotos naudojant „Common Data Service“](connect-power-query.md).
+1. Kontaktų įrašai turi būti "Dynamics 365 Sales", kad segmentą būtų galima eksportuoti iš "Customer Insights" į "Marketing". Sužinokite daugiau, kaip pasiekti ["Dynamics 365 Sales" kontaktus naudojant Common Data Services](connect-power-query.md).
+
+   > [!NOTE]
+   > Eksportuojant segmentus iš auditorijos įžvalgų į "Sales" nebus sukurta naujų kontaktų įrašų pardavimo egzemplioriuose. Kontaktų įrašai iš "Sales" turi būti įtraukti į auditorijos įžvalgas ir naudojami duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.
 
 ## <a name="configure-the-connector-for-sales"></a>„Sales“ jungties konfigūravimas
 
@@ -49,3 +52,6 @@ Kontaktiniai įrašai [iš „Dynamics 365 Sales“ suvartotos naudojant „Comm
 ## <a name="export-the-data"></a>Duomenų eksportavimas
 
 Galite [eksportuoti duomenis pareikalavus](export-destinations.md). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

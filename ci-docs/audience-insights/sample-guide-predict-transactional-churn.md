@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643603"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269800"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Perlaidos nutraukimo prognozės (peržiūra) pavyzdžio vedlys
 
@@ -44,12 +44,12 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
 1. Naujinti duomenų tipą toliau išvardytiems stulpeliams:
 
    - **Gimimo data**: Data
-   - **Sukurta dieną**: Data/Laikas/Zona
+   - **Sukurta**: Data/Laikas/Zona
 
    [!div class="mx-imgBorder"]
    ![Keisti gimimo dieną į datą](media/ecommerce-dob-date.PNG "transformuoti gimimo datą į datą")
 
-1. „Pavadinimas“ laukelyje dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
+1. Laukleyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
 
 1. Įrašykite duomenų šaltinį.
 
@@ -66,7 +66,7 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
    - **Įsigyta**: Data/Laikas
    - **Bendra kaina**: Valiuta
    
-1. „Pavadinimas“ laukelyje dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos įsigijimai**.
+1. Laukelyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos įsigijimai**.
 
 1. Įrašykite duomenų šaltinį.
 
@@ -82,9 +82,9 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
 
    - **Gimimo data**: Data
    - **Uždirbtitaškai**: Visas skaičius
-   - **Sukurta dieną**: Data/Laikas
+   - **Sukurta**: Data/Laikas
 
-1. „Pavadinimas“ laukelyje dešinėje juostoje pervardykite savo duomenų šaltinį iš **Query** į **loyKlientai**.
+1. Laukelyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **lojalūs klientai**.
 
 1. Įrašykite duomenų šaltinį.
 
@@ -166,7 +166,7 @@ Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravi
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Pasirinkite modelio išlyginimo prognozės langą ir nutraukimo sąvoką.":::
 
-1. Pasirinkite **Įsigijimo istorija (būtinas)** ir rinkitės  **Įtraukti duomenis** prenumeravimo istorijai.
+1. Pasirinkite **Pirkimo retrospektyva (būtina)** ir pasirinkite **Įtraukti duomenis** pirkimo retrospektyvai.
 
 1. Įtraukite **e-komercijos įsigijimai : e-komerciją** objektą ir nustatykite laukelių žemėlapį iš e-komercijos į atitinkamus laukelius būtinus modeliui.
 
@@ -195,7 +195,7 @@ Galite sukurti naują segmentą pagal modelio sukurtą objektą.
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Sukurkite segmentą su modelio išvestimi.":::
 
 1. Pasirinkite **„OOBSubscriptionChurnPrediction“** galutinį tašką ir nustatykite segmentą: 
-   - Laukelis: atsisakymo balas
+   - Laukelis: Nutraukimos balas
    - Operatorius: didesnis nei
    - Vertė: 0,6
    
@@ -204,3 +204,6 @@ Galite sukurti naują segmentą pagal modelio sukurtą objektą.
 Gala turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.
 
 Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

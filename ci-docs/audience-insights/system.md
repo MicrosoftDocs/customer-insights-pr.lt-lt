@@ -1,7 +1,7 @@
 ---
 title: Sistemos konfigūravimas publikos įžvalgose
 description: Sužinokite apie sistemos nustatymus „Dynamics 365 Customer Insights“ publikos įžvalgų pajėgumuose.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406421"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267350"
 ---
 # <a name="system-configuration"></a>Sistemos konfigūracija
 
-**Sistemos** puslapis apima keturis skirtukus: **Būsena**, **Tvarkaraštis**, **Apie** ir **Bendri**.
+**Sistemos** puslapyje yra šie skirtukai:
+- [Būsena](#status-tab)
+- [Tvarkaraštis](#schedule-tab)
+- [API naudojimas](#api-usage-tab)
+- [Apie](#about-tab)
+- [Bendroji informacija](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Sistemos puslapis](media/system-tabs.png "Sistemos puslapis")
 
 ## <a name="status-tab"></a>Būsenos skirtukas
 
-**Būsenos skirtukas** leidžia sekti duomenų įtraukimo eigą, duomenų eksportavimą ir kelis svarbius produktų procesus. Peržiūrėkite informaciją šiame skirtuke tam, kad užtikrintumėte aktyvių procesų pilnavertiškumą.
+Skirtukas **Būsena leidžia sekti duomenų** prarijimo, duomenų eksporto eigą ir kelis kitus svarbius produktų procesus. Peržiūrėkite informaciją šiame skirtuke tam, kad užtikrintumėte aktyvių procesų pilnavertiškumą.
 
-Šiame skirtuke pateikiamos **Duomenų šaltiniai**, **Sistemos procesai** ir **Duomenų puošimas** būsenos lentelės. Kiekvienoje lentelėje sekamas užduoties **Pavadinimas** ir atitinkamas objektas, naujausio vykdymo **Būsena** ir kada ji buvo **Paskutinį kartą atnaujinta**.
+Šiame skirtuke yra lentelių su įvairių procesų būsena ir apdorojimo informacija. Kiekvienoje lentelėje sekamas užduoties **Pavadinimas** ir atitinkamas objektas, naujausio vykdymo **Būsena** ir kada ji buvo **Paskutinį kartą atnaujinta**.
 
 Peržiūrėkite paskutinių kelių užduočių vykdymų informaciją pasirinkdami užduoties pavadinimą.
 
@@ -40,7 +45,7 @@ Esama šešių būsenų tipų užduotims. Toliau nurodyti būsenos tipai taip pa
 - **Praleistas:**: užduotis praleista. Vienas ar daugiau procesų, nuo kurių priklauso ši užduotis, nesėkmingi arba buvo praleisti.
 - **Nepavyko įvykdyti:** užduoties apdoroti nepavyko.
 - **Atšaukta:** vartotojas atšaukė apdorojimą, kol jis nebuvo baigtas.
-- **Įtraukta į eilę:** apdorojimas yra įtrauktas į eilę ir bus pradėtas užbaigus visas proceso pabaigos užduotis. Daugiau informacijos žr. [Atnaujinimo strategijos](#refresh-policies)
+- **Eilė:** apdorojama į eilę ir pradedama, kai bus užbaigtos visos srauto užduotys. Daugiau informacijos žr. [Atnaujinimo strategijos](#refresh-policies)
 
 ### <a name="refresh-policies"></a>Atnaujinimo strategijos
 
@@ -89,4 +94,17 @@ Pasirinkite **išsaugoti**, norėdami patvirtinti savo pasirinkimus.
 
 ## <a name="api-usage-tab"></a>API naudojimo skirtukas
 
-Sužinokite informaciją apie realaus laiko API naudojimą ir kokie įvykiai įvyko nurodytu laikotarpiu. Daugiau informacijos žr. [Duomenų įtraukimas realiuoju laiku](real-time-data-ingestion.md).
+Raskite informacijos apie realiojo laiko API naudojimą ir sužinokite, kurie įvykiai įvyko per nurodytą laiką. Išskleidžiamajame meniu **Pažymėkite laiko tarpą** pasirinkite laiko tarpą. 
+
+**API naudojimas** apima tris skyrius: 
+- **API skambučiai** – diagrama, vaizduojama per pažymėtą laiko tarpą vizualizuojamas į API ėjusių skambučių agreguotas skaičius.
+
+- **Duomenų perdavimas** – diagrama, kurioje rodomas per API per pasirinktą laiko tarpą perduotų duomenų kiekis.
+
+-  **Operacijos** – lentelė su kiekvienos galimos API operacijos eilutėmis ir išsami informacija apie operacijų naudojimą. Galite pažymėti operacijos pavadinimą, kurį [į norite eiti API ](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operacijose, kuriose pateikiami [realiuoju laiku naudojami duomenys](real-time-data-ingestion.md) yra mygtukas su bino vaizdu ir peržiūrėti API naudojimą realiuoju laiku. Pasirinkite mygtuką siekiant atidaryti šoninę juostą turinčią suvartojimo informaciją realaus laiko API naudojimui ir esamai aplinkai.   
+   Naudokite lauką **Grupuoti** pagal **pateikiamą realiuoju** laiku naudojant API, ir pasirinkite, kaip geriausiai pateikti bendravimą realiuoju laiku. Duomenis galite grupuoti pagal API būdą, objekto apibrėžtą pavadinimą (įtrauktas objektas), kūrėją (įvykio šaltinis), rezultatą (sėkmė arba nesėkmė) arba klaidų kodus. Duomenys prieinami kaip retrospektyvos diagrama ir kaip lentelė.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

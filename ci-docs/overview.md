@@ -1,28 +1,36 @@
 ---
 title: Produkto apžvalga
 author: m-hartmann
-description: Gaukite „Dynamics 365 Customer Insights“ ir jos pajėgumų apžvalgą.
+description: Susipažinkite su „Dynamics 365 Customer Insights“ ir jos galimybėmis.
 ms.author: mhart
-ms.date: 10/16/2020
+ms.date: 02/16/2021
 ms.service: customer-insights
-ms.topic: conceptual
-ms.openlocfilehash: e0b46652a087f9d16d9f2f5c6e955761be8da208
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.topic: overview
+ms.manager: shellyha
+ms.openlocfilehash: 815220b7dd2fcd4df31c0cff8f6b55eb3a055669
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406431"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476959"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Produkto apžvalga „Dynamics 365 Customer Insights“
 
-„Dynamics 365 Customer Insights“ yra „Microsoft“ kliento duomenų platformos (CDP) dalis, kuris padeda pristatyti suasmenintas kliento patirtis. Suvienodinkite kliento duomenis per visą šaltinių intervalą tam, kad gautumėte vieną klientų rodinį. 
+„Dynamics 365 Customer Insights“ yra „Microsoft“ kliento duomenų platformos (CDP) dalis, kuris padeda pristatyti suasmenintas kliento patirtis. Platformos galimybės teikia įžvalgų, kas yra jūsų klientai ir kaip jie bendradarbiauja su jūsų platforma. „Unify“ klientų duomenis keliuose šaltiniuose, kad gautumėte vieną klientų rodinį.
 
-Transformuokite į kliento centrinę organizaciją, kurioje reklamos, pardavimų ir paslaugų profesionalai turi įžvalgas, kurių jiems reikia patirčių asmeninimui. Sukurkite gilesnį savo klientų supratimą. Prijunkite duomenis iš įvairių operacijų, elgsenos ir stebėjimo šaltinių, kad sukurtumėte 360 laipsnių kliento rodinį. Žr. rezultatus greičiau su CDP sukūrimu, skirtu pateikti įžvalgas, kurių pagrindu galima atlikti veiksmus. 
 
-Kurkite nestandartines įžvalgas su greitos pradžios šablonais. Greitai kurkite, bandykite ir talpinkite tinkintus AI/ML modelius naudodami analitinius sprendimus intervale. Įjunkite realaus laiko įžvalgas veiksmų atlikimui. Išlaikykite visą jūsų tinkintų duomenų kontrolę siekiant užtikrinti aukštesnį duomenų valdymo ir atitikties lygį. 
+- [Publikos įžvalgos](audience-insights/overview.md) padeda pertvarkyti savo verslą į klientą orientuotas organizacijas. Rinkodaros, pardavimo ir aptarnavimo profesionalai turi įžvalgų, kurių reikia norint asmeniniams poreikiams pritaikyti funkcijas. Prijunkite duomenis iš transaktyviųjų, elgsenos ir sąjunginių šaltinių, kad sukurtumėte 360 laipsnių klientų rodinį. Žr. rezultatus greičiau su CDP sukūrimu, skirtu pateikti įžvalgas, kurių pagrindu galima atlikti veiksmus. 
 
-Esama dviejų pagrindinių pajėgumų: 
-
-- [„Audience Insights“](audience-insights/overview.md)
-- [Įspareigojimo įžvalgos (peržiūra)](engagement-insights/index.yml)
+- [Naudodami įsitraukimo įžvalgas (peržiūrą)](engagement-insights/index.yml) galite interaktyviai suprasti, kaip klientai naudoja jūsų paslaugas ir produktus (atskirai ir nuosekliai) apie prisidėdami, mobiliųjų įrenginių programas ir prijungtus produktus. Suderinkite elgsenos analizę su transakcijų, demografijos, apklausų ir kitų tipų duomenimis iš „Microsoft Dynamics 365 Customer Insights". Išlaikykite visą jūsų tinkintų duomenų kontrolę siekiant užtikrinti aukštesnį duomenų valdymo ir atitikties lygį.
  
+## <a name="choose-a-capability"></a>Pasirinkite pajėgumą
+
+:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="„Customer insights“ puslapis, kuriame galima pereiti prie auditorijos įžvalgų arba įtraukimo įžvalgų.":::
+
+Norėdami pasirinkti pajėgumą
+
+1. Naršymo juostoje rinkitės **Visos programos,** kad atvertumėte **Rinktis savo sutelkimą** langą.
+1. Pasirinkite **Eiti dabar** tam, kad pereitumėte prie jūsų pasirinktų galimybių.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
