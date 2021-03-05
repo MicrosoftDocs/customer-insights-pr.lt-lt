@@ -5,202 +5,205 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643603"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269800"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a><span data-ttu-id="04118-103">Perlaidos nutraukimo prognozės (peržiūra) pavyzdžio vedlys</span><span class="sxs-lookup"><span data-stu-id="04118-103">Transactional churn prediction (preview) sample guide</span></span>
+# <a name="transactional-churn-prediction-preview-sample-guide"></a><span data-ttu-id="f9f09-103">Perlaidos nutraukimo prognozės (peržiūra) pavyzdžio vedlys</span><span class="sxs-lookup"><span data-stu-id="f9f09-103">Transactional churn prediction (preview) sample guide</span></span>
 
-<span data-ttu-id="04118-104">Šis vedlys jus supažindins nuo pradžios iki galo su perlaidos nutraukimo prognozės pavyzdžiu tinkintose „Customer Insights“ naudojant toliau pateiktus duomenis.</span><span class="sxs-lookup"><span data-stu-id="04118-104">This guide will walk you through an end to end example of Transactional Churn prediction in Customer Insights using the data provided below.</span></span> <span data-ttu-id="04118-105">Visi šiame vedlyje naudojiami duomenys nėra realūs kliento duomenys ir yra „Contoso“ duomenų rinkinio, esančio *Demonstracinėje* aplinkoje jūsų „Customer Insights“ prenumeratoje, dalis.</span><span class="sxs-lookup"><span data-stu-id="04118-105">All data used in this guide is not real customer data and is part of the Contoso dataset found in the *Demo* environment within your Customer Insights Subscription.</span></span>
+<span data-ttu-id="f9f09-104">Šis vedlys jus supažindins nuo pradžios iki galo su perlaidos nutraukimo prognozės pavyzdžiu tinkintose „Customer Insights“ naudojant toliau pateiktus duomenis.</span><span class="sxs-lookup"><span data-stu-id="f9f09-104">This guide will walk you through an end to end example of Transactional Churn prediction in Customer Insights using the data provided below.</span></span> <span data-ttu-id="f9f09-105">Visi šiame vedlyje naudojiami duomenys nėra realūs kliento duomenys ir yra „Contoso“ duomenų rinkinio, esančio *Demonstracinėje* aplinkoje jūsų „Customer Insights“ prenumeratoje, dalis.</span><span class="sxs-lookup"><span data-stu-id="f9f09-105">All data used in this guide is not real customer data and is part of the Contoso dataset found in the *Demo* environment within your Customer Insights Subscription.</span></span>
 
-## <a name="scenario"></a><span data-ttu-id="04118-106">Scenarijus</span><span class="sxs-lookup"><span data-stu-id="04118-106">Scenario</span></span>
+## <a name="scenario"></a><span data-ttu-id="f9f09-106">Scenarijus</span><span class="sxs-lookup"><span data-stu-id="f9f09-106">Scenario</span></span>
 
-<span data-ttu-id="04118-107">„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę.</span><span class="sxs-lookup"><span data-stu-id="04118-107">Contoso is a company that produces high-quality coffee and coffee machines, which they sell through their Contoso Coffee website.</span></span> <span data-ttu-id="04118-108">Jų tikslas yra sužinoti, kurie klientai dažniausiai įsigija produktus reguliariai ir nustos būti aktyviais klientais per artimiausias 60 dienų.</span><span class="sxs-lookup"><span data-stu-id="04118-108">Their goal is to know which customers who typically purchase their products on a regular basis, will stop being active customers in the next 60 days.</span></span> <span data-ttu-id="04118-109">Žinomijas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.</span><span class="sxs-lookup"><span data-stu-id="04118-109">Knowing which of their customers is **likely to churn**, can help them save marketing efforts by focusing on keeping them.</span></span>
+<span data-ttu-id="f9f09-107">„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę.</span><span class="sxs-lookup"><span data-stu-id="f9f09-107">Contoso is a company that produces high-quality coffee and coffee machines, which they sell through their Contoso Coffee website.</span></span> <span data-ttu-id="f9f09-108">Jų tikslas yra sužinoti, kurie klientai dažniausiai įsigija produktus reguliariai ir nustos būti aktyviais klientais per artimiausias 60 dienų.</span><span class="sxs-lookup"><span data-stu-id="f9f09-108">Their goal is to know which customers who typically purchase their products on a regular basis, will stop being active customers in the next 60 days.</span></span> <span data-ttu-id="f9f09-109">Žinomijas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.</span><span class="sxs-lookup"><span data-stu-id="f9f09-109">Knowing which of their customers is **likely to churn**, can help them save marketing efforts by focusing on keeping them.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="04118-110">Būtinosios sąlygos</span><span class="sxs-lookup"><span data-stu-id="04118-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f9f09-110">Būtinosios sąlygos</span><span class="sxs-lookup"><span data-stu-id="f9f09-110">Prerequisites</span></span>
 
-- <span data-ttu-id="04118-111">Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.</span><span class="sxs-lookup"><span data-stu-id="04118-111">At least [Contributor permissions](permissions.md) in Customer Insights.</span></span>
-- <span data-ttu-id="04118-112">Rekomenduojame jums atlikti šiuos žingsnius [naujojoe aplinkoje](manage-environments.md).</span><span class="sxs-lookup"><span data-stu-id="04118-112">We recommend that you implement the following steps [in a new environment](manage-environments.md).</span></span>
+- <span data-ttu-id="f9f09-111">Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.</span><span class="sxs-lookup"><span data-stu-id="f9f09-111">At least [Contributor permissions](permissions.md) in Customer Insights.</span></span>
+- <span data-ttu-id="f9f09-112">Rekomenduojame jums atlikti šiuos žingsnius [naujojoe aplinkoje](manage-environments.md).</span><span class="sxs-lookup"><span data-stu-id="f9f09-112">We recommend that you implement the following steps [in a new environment](manage-environments.md).</span></span>
 
-## <a name="task-1---ingest-data"></a><span data-ttu-id="04118-113">Užduotis 1 - Duomenų vartojimas</span><span class="sxs-lookup"><span data-stu-id="04118-113">Task 1 - Ingest data</span></span>
+## <a name="task-1---ingest-data"></a><span data-ttu-id="f9f09-113">Užduotis 1 - Duomenų vartojimas</span><span class="sxs-lookup"><span data-stu-id="f9f09-113">Task 1 - Ingest data</span></span>
 
-<span data-ttu-id="04118-114">Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [importuoti duomenų šaltinius naudojant „Power Query“ jungtis](connect-power-query.md) konkrečiai.</span><span class="sxs-lookup"><span data-stu-id="04118-114">Review the articles [about data ingestion](data-sources.md) and [importing data sources using Power Query connectors](connect-power-query.md) specifically.</span></span> <span data-ttu-id="04118-115">Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės.</span><span class="sxs-lookup"><span data-stu-id="04118-115">The following information assumes you familiarized with ingesting data in general.</span></span> 
+<span data-ttu-id="f9f09-114">Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [importuoti duomenų šaltinius naudojant „Power Query“ jungtis](connect-power-query.md) konkrečiai.</span><span class="sxs-lookup"><span data-stu-id="f9f09-114">Review the articles [about data ingestion](data-sources.md) and [importing data sources using Power Query connectors](connect-power-query.md) specifically.</span></span> <span data-ttu-id="f9f09-115">Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės.</span><span class="sxs-lookup"><span data-stu-id="f9f09-115">The following information assumes you familiarized with ingesting data in general.</span></span> 
 
-### <a name="ingest-customer-data-from-ecommerce-platform"></a><span data-ttu-id="04118-116">Kliento duomenų naudojimas iš e-komercijos platformos</span><span class="sxs-lookup"><span data-stu-id="04118-116">Ingest customer data from eCommerce platform</span></span>
+### <a name="ingest-customer-data-from-ecommerce-platform"></a><span data-ttu-id="f9f09-116">Kliento duomenų naudojimas iš e-komercijos platformos</span><span class="sxs-lookup"><span data-stu-id="f9f09-116">Ingest customer data from eCommerce platform</span></span>
 
-1. <span data-ttu-id="04118-117">Sukurkite duomenų šaltinį pavadinimu **e-komercija**, pasirinkite importavimo parinktį ir pasirinkite **Tekstas/CSV** jungtį.</span><span class="sxs-lookup"><span data-stu-id="04118-117">Create a data source named **eCommerce**, choose the import option, and select the **Text/CSV** connector.</span></span>
+1. <span data-ttu-id="f9f09-117">Sukurkite duomenų šaltinį pavadinimu **e-komercija**, pasirinkite importavimo parinktį ir pasirinkite **Tekstas/CSV** jungtį.</span><span class="sxs-lookup"><span data-stu-id="f9f09-117">Create a data source named **eCommerce**, choose the import option, and select the **Text/CSV** connector.</span></span>
 
-1. <span data-ttu-id="04118-118">Įveskite URL e-komercijos kontaktams https://aka.ms/ciadclasscontacts.</span><span class="sxs-lookup"><span data-stu-id="04118-118">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscontacts.</span></span>
+1. <span data-ttu-id="f9f09-118">Įveskite URL e-komercijos kontaktams https://aka.ms/ciadclasscontacts.</span><span class="sxs-lookup"><span data-stu-id="f9f09-118">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscontacts.</span></span>
 
-1. <span data-ttu-id="04118-119">Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.</span><span class="sxs-lookup"><span data-stu-id="04118-119">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="f9f09-119">Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-119">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="04118-120">Naujinti duomenų tipą toliau išvardytiems stulpeliams:</span><span class="sxs-lookup"><span data-stu-id="04118-120">Update the datatype for the columns listed below:</span></span>
+1. <span data-ttu-id="f9f09-120">Naujinti duomenų tipą toliau išvardytiems stulpeliams:</span><span class="sxs-lookup"><span data-stu-id="f9f09-120">Update the datatype for the columns listed below:</span></span>
 
-   - <span data-ttu-id="04118-121">**Gimimo data**: Data</span><span class="sxs-lookup"><span data-stu-id="04118-121">**DateOfBirth**: Date</span></span>
-   - <span data-ttu-id="04118-122">**Sukurta dieną**: Data/Laikas/Zona</span><span class="sxs-lookup"><span data-stu-id="04118-122">**CreatedOn**: Date/Time/Zone</span></span>
+   - <span data-ttu-id="f9f09-121">**Gimimo data**: Data</span><span class="sxs-lookup"><span data-stu-id="f9f09-121">**DateOfBirth**: Date</span></span>
+   - <span data-ttu-id="f9f09-122">**Sukurta**: Data/Laikas/Zona</span><span class="sxs-lookup"><span data-stu-id="f9f09-122">**CreatedOn**: Date/Time/Zone</span></span>
 
    [!div class="mx-imgBorder"]
-   <span data-ttu-id="04118-123">![Keisti gimimo dieną į datą](media/ecommerce-dob-date.PNG "transformuoti gimimo datą į datą")</span><span class="sxs-lookup"><span data-stu-id="04118-123">![Transform DoB to Date](media/ecommerce-dob-date.PNG "transform date of birth to date")</span></span>
+   <span data-ttu-id="f9f09-123">![Keisti gimimo dieną į datą](media/ecommerce-dob-date.PNG "transformuoti gimimo datą į datą")</span><span class="sxs-lookup"><span data-stu-id="f9f09-123">![Transform DoB to Date](media/ecommerce-dob-date.PNG "transform date of birth to date")</span></span>
 
-1. <span data-ttu-id="04118-124">„Pavadinimas“ laukelyje dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**</span><span class="sxs-lookup"><span data-stu-id="04118-124">In the 'Name' field on the right-hand pane, rename your data source from **Query** to **eCommerceContacts**</span></span>
+1. <span data-ttu-id="f9f09-124">Laukleyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**</span><span class="sxs-lookup"><span data-stu-id="f9f09-124">In the **Name** field on the right-hand pane, rename your data source from **Query** to **eCommerceContacts**</span></span>
 
-1. <span data-ttu-id="04118-125">Įrašykite duomenų šaltinį.</span><span class="sxs-lookup"><span data-stu-id="04118-125">Save the data source.</span></span>
+1. <span data-ttu-id="f9f09-125">Įrašykite duomenų šaltinį.</span><span class="sxs-lookup"><span data-stu-id="f9f09-125">Save the data source.</span></span>
 
-### <a name="ingest-online-purchase-data"></a><span data-ttu-id="04118-126">Vartokite internete įsigytus duomenis</span><span class="sxs-lookup"><span data-stu-id="04118-126">Ingest online purchase data</span></span>
+### <a name="ingest-online-purchase-data"></a><span data-ttu-id="f9f09-126">Vartokite internete įsigytus duomenis</span><span class="sxs-lookup"><span data-stu-id="f9f09-126">Ingest online purchase data</span></span>
 
-1. <span data-ttu-id="04118-127">Įtraukite kitą duomenų rinkinį į **e-komercijos** duomenų šaltinį.</span><span class="sxs-lookup"><span data-stu-id="04118-127">Add another data set to the same **eCommerce** data source.</span></span> <span data-ttu-id="04118-128">Pasirinkite **Tekstas/CSV** jungtis dar kartą.</span><span class="sxs-lookup"><span data-stu-id="04118-128">Choose the **Text/CSV** connector again.</span></span>
+1. <span data-ttu-id="f9f09-127">Įtraukite kitą duomenų rinkinį į **e-komercijos** duomenų šaltinį.</span><span class="sxs-lookup"><span data-stu-id="f9f09-127">Add another data set to the same **eCommerce** data source.</span></span> <span data-ttu-id="f9f09-128">Pasirinkite **Tekstas/CSV** jungtis dar kartą.</span><span class="sxs-lookup"><span data-stu-id="f9f09-128">Choose the **Text/CSV** connector again.</span></span>
 
-1. <span data-ttu-id="04118-129">Įveskite URL **Interneto įsigijimų** duomenis https://aka.ms/ciadclassonline.</span><span class="sxs-lookup"><span data-stu-id="04118-129">Enter the URL for **Online Purchases** data https://aka.ms/ciadclassonline.</span></span>
+1. <span data-ttu-id="f9f09-129">Įveskite URL **Interneto įsigijimų** duomenis https://aka.ms/ciadclassonline.</span><span class="sxs-lookup"><span data-stu-id="f9f09-129">Enter the URL for **Online Purchases** data https://aka.ms/ciadclassonline.</span></span>
 
-1. <span data-ttu-id="04118-130">Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.</span><span class="sxs-lookup"><span data-stu-id="04118-130">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="f9f09-130">Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-130">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="04118-131">Naujinti duomenų tipą toliau išvardytiems stulpeliams:</span><span class="sxs-lookup"><span data-stu-id="04118-131">Update the datatype for the columns listed below:</span></span>
+1. <span data-ttu-id="f9f09-131">Naujinti duomenų tipą toliau išvardytiems stulpeliams:</span><span class="sxs-lookup"><span data-stu-id="f9f09-131">Update the datatype for the columns listed below:</span></span>
 
-   - <span data-ttu-id="04118-132">**Įsigyta**: Data/Laikas</span><span class="sxs-lookup"><span data-stu-id="04118-132">**PurchasedOn**: Date/Time</span></span>
-   - <span data-ttu-id="04118-133">**Bendra kaina**: Valiuta</span><span class="sxs-lookup"><span data-stu-id="04118-133">**TotalPrice**: Currency</span></span>
+   - <span data-ttu-id="f9f09-132">**Įsigyta**: Data/Laikas</span><span class="sxs-lookup"><span data-stu-id="f9f09-132">**PurchasedOn**: Date/Time</span></span>
+   - <span data-ttu-id="f9f09-133">**Bendra kaina**: Valiuta</span><span class="sxs-lookup"><span data-stu-id="f9f09-133">**TotalPrice**: Currency</span></span>
    
-1. <span data-ttu-id="04118-134">„Pavadinimas“ laukelyje dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos įsigijimai**.</span><span class="sxs-lookup"><span data-stu-id="04118-134">In the 'Name' field on the right-hand pane, rename your data source from **Query** to **eCommercePurchases**.</span></span>
+1. <span data-ttu-id="f9f09-134">Laukelyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos įsigijimai**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-134">In the **Name** field on the right-hand pane, rename your data source from **Query** to **eCommercePurchases**.</span></span>
 
-1. <span data-ttu-id="04118-135">Įrašykite duomenų šaltinį.</span><span class="sxs-lookup"><span data-stu-id="04118-135">Save the data source.</span></span>
+1. <span data-ttu-id="f9f09-135">Įrašykite duomenų šaltinį.</span><span class="sxs-lookup"><span data-stu-id="f9f09-135">Save the data source.</span></span>
 
-### <a name="ingest-customer-data-from-loyalty-schema"></a><span data-ttu-id="04118-136">Kliento duomenų naudojimas iš lojalumo schemos</span><span class="sxs-lookup"><span data-stu-id="04118-136">Ingest customer data from loyalty schema</span></span>
+### <a name="ingest-customer-data-from-loyalty-schema"></a><span data-ttu-id="f9f09-136">Kliento duomenų naudojimas iš lojalumo schemos</span><span class="sxs-lookup"><span data-stu-id="f9f09-136">Ingest customer data from loyalty schema</span></span>
 
-1. <span data-ttu-id="04118-137">Sukurkite duomenų šaltinį pavadinimu **Lojalumo schema**, pasirinkite importavimo parinktį ir pasirinkite **Tekstas/CSV** jungtį.</span><span class="sxs-lookup"><span data-stu-id="04118-137">Create a data source named **LoyaltyScheme**, choose the import option, and select the **Text/CSV** connector.</span></span>
+1. <span data-ttu-id="f9f09-137">Sukurkite duomenų šaltinį pavadinimu **Lojalumo schema**, pasirinkite importavimo parinktį ir pasirinkite **Tekstas/CSV** jungtį.</span><span class="sxs-lookup"><span data-stu-id="f9f09-137">Create a data source named **LoyaltyScheme**, choose the import option, and select the **Text/CSV** connector.</span></span>
 
-1. <span data-ttu-id="04118-138">Įveskite URL e-komercijos kontaktams https://aka.ms/ciadclasscustomerloyalty.</span><span class="sxs-lookup"><span data-stu-id="04118-138">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscustomerloyalty.</span></span>
+1. <span data-ttu-id="f9f09-138">Įveskite URL e-komercijos kontaktams https://aka.ms/ciadclasscustomerloyalty.</span><span class="sxs-lookup"><span data-stu-id="f9f09-138">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscustomerloyalty.</span></span>
 
-1. <span data-ttu-id="04118-139">Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.</span><span class="sxs-lookup"><span data-stu-id="04118-139">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="f9f09-139">Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-139">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="04118-140">Naujinti duomenų tipą toliau išvardytiems stulpeliams:</span><span class="sxs-lookup"><span data-stu-id="04118-140">Update the datatype for the columns listed below:</span></span>
+1. <span data-ttu-id="f9f09-140">Naujinti duomenų tipą toliau išvardytiems stulpeliams:</span><span class="sxs-lookup"><span data-stu-id="f9f09-140">Update the datatype for the columns listed below:</span></span>
 
-   - <span data-ttu-id="04118-141">**Gimimo data**: Data</span><span class="sxs-lookup"><span data-stu-id="04118-141">**DateOfBirth**: Date</span></span>
-   - <span data-ttu-id="04118-142">**Uždirbtitaškai**: Visas skaičius</span><span class="sxs-lookup"><span data-stu-id="04118-142">**RewardsPoints**: Whole Number</span></span>
-   - <span data-ttu-id="04118-143">**Sukurta dieną**: Data/Laikas</span><span class="sxs-lookup"><span data-stu-id="04118-143">**CreatedOn**: Date/Time</span></span>
+   - <span data-ttu-id="f9f09-141">**Gimimo data**: Data</span><span class="sxs-lookup"><span data-stu-id="f9f09-141">**DateOfBirth**: Date</span></span>
+   - <span data-ttu-id="f9f09-142">**Uždirbtitaškai**: Visas skaičius</span><span class="sxs-lookup"><span data-stu-id="f9f09-142">**RewardsPoints**: Whole Number</span></span>
+   - <span data-ttu-id="f9f09-143">**Sukurta**: Data/Laikas</span><span class="sxs-lookup"><span data-stu-id="f9f09-143">**CreatedOn**: Date/Time</span></span>
 
-1. <span data-ttu-id="04118-144">„Pavadinimas“ laukelyje dešinėje juostoje pervardykite savo duomenų šaltinį iš **Query** į **loyKlientai**.</span><span class="sxs-lookup"><span data-stu-id="04118-144">In the 'Name' field on the right-hand pane, rename your data source from **Query** to **loyCustomers**.</span></span>
+1. <span data-ttu-id="f9f09-144">Laukelyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **lojalūs klientai**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-144">In the **Name** field on the right-hand pane, rename your data source from **Query** to **loyCustomers**.</span></span>
 
-1. <span data-ttu-id="04118-145">Įrašykite duomenų šaltinį.</span><span class="sxs-lookup"><span data-stu-id="04118-145">Save the data source.</span></span>
+1. <span data-ttu-id="f9f09-145">Įrašykite duomenų šaltinį.</span><span class="sxs-lookup"><span data-stu-id="f9f09-145">Save the data source.</span></span>
 
 
-## <a name="task-2---data-unification"></a><span data-ttu-id="04118-146">Užduotis 2 - Duomenų suvienodinimas</span><span class="sxs-lookup"><span data-stu-id="04118-146">Task 2 - Data unification</span></span>
+## <a name="task-2---data-unification"></a><span data-ttu-id="f9f09-146">Užduotis 2 - Duomenų suvienodinimas</span><span class="sxs-lookup"><span data-stu-id="f9f09-146">Task 2 - Data unification</span></span>
 
-<span data-ttu-id="04118-147">Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** procesą siekiant sukurti suvienodintą kliento profilį.</span><span class="sxs-lookup"><span data-stu-id="04118-147">After ingesting the data we now begin the **Map, Match, Merge** process to create a unified customer profile.</span></span> <span data-ttu-id="04118-148">Dėl daugiau informacijos, žr. [Duomenų suvienodinimas](data-unification.md).</span><span class="sxs-lookup"><span data-stu-id="04118-148">For more information, see [Data unification](data-unification.md).</span></span>
+<span data-ttu-id="f9f09-147">Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** procesą siekiant sukurti suvienodintą kliento profilį.</span><span class="sxs-lookup"><span data-stu-id="f9f09-147">After ingesting the data we now begin the **Map, Match, Merge** process to create a unified customer profile.</span></span> <span data-ttu-id="f9f09-148">Dėl daugiau informacijos, žr. [Duomenų suvienodinimas](data-unification.md).</span><span class="sxs-lookup"><span data-stu-id="f9f09-148">For more information, see [Data unification](data-unification.md).</span></span>
 
-### <a name="map"></a><span data-ttu-id="04118-149">Schema</span><span class="sxs-lookup"><span data-stu-id="04118-149">Map</span></span>
+### <a name="map"></a><span data-ttu-id="f9f09-149">Schema</span><span class="sxs-lookup"><span data-stu-id="f9f09-149">Map</span></span>
 
-1. <span data-ttu-id="04118-150">Suvartojus duomenis, sudarykite kontaktų žemėlapį iš e-komercijos ir lojalumo duomenų į bendrus duomenų tipus.</span><span class="sxs-lookup"><span data-stu-id="04118-150">After ingesting the data, map contacts from eCommerce and Loyalty data to common data types.</span></span> <span data-ttu-id="04118-151">Eikite į **Duomenys** > **Suvienodinti** > **Žemėlapis**.</span><span class="sxs-lookup"><span data-stu-id="04118-151">Go to **Data** > **Unify** > **Map**.</span></span>
+1. <span data-ttu-id="f9f09-150">Suvartojus duomenis, sudarykite kontaktų žemėlapį iš e-komercijos ir lojalumo duomenų į bendrus duomenų tipus.</span><span class="sxs-lookup"><span data-stu-id="f9f09-150">After ingesting the data, map contacts from eCommerce and Loyalty data to common data types.</span></span> <span data-ttu-id="f9f09-151">Eikite į **Duomenys** > **Suvienodinti** > **Žemėlapis**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-151">Go to **Data** > **Unify** > **Map**.</span></span>
 
-1. <span data-ttu-id="04118-152">Pasirinkite objektus, kurie rodo kliento profilį – **e-komercijoskontaktai** ir **lojalumoklientai**.</span><span class="sxs-lookup"><span data-stu-id="04118-152">Select the entities that represent the customer profile – **eCommerceContacts** and **loyCustomers**.</span></span> 
+1. <span data-ttu-id="f9f09-152">Pasirinkite objektus, kurie rodo kliento profilį – **e-komercijoskontaktai** ir **lojalumoklientai**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-152">Select the entities that represent the customer profile – **eCommerceContacts** and **loyCustomers**.</span></span> 
 
    :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="suvienodinti e-komercijos ir lojalumo duomenų šaltinius.":::
 
-1. <span data-ttu-id="04118-154">Pasirinkite **Kontakto ID** kaip pagrindinį raktą **e-komercijos kontaktus** ir **Lojalumo ID** kaip pirminį raktą **lojalumo klientams**.</span><span class="sxs-lookup"><span data-stu-id="04118-154">Select **ContactId** as the primary key for **eCommerceContacts** and **LoyaltyID** as the primary key for **loyCustomers**.</span></span>
+1. <span data-ttu-id="f9f09-154">Pasirinkite **Kontakto ID** kaip pagrindinį raktą **e-komercijos kontaktus** ir **Lojalumo ID** kaip pirminį raktą **lojalumo klientams**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-154">Select **ContactId** as the primary key for **eCommerceContacts** and **LoyaltyID** as the primary key for **loyCustomers**.</span></span>
 
    :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Suvienodinkite lojalumo ID kaip pagrindinį raktą.":::
 
-### <a name="match"></a><span data-ttu-id="04118-156">Sugretinti</span><span class="sxs-lookup"><span data-stu-id="04118-156">Match</span></span>
+### <a name="match"></a><span data-ttu-id="f9f09-156">Sugretinti</span><span class="sxs-lookup"><span data-stu-id="f9f09-156">Match</span></span>
 
-1. <span data-ttu-id="04118-157">Eikite į **Atitikties** skirtuką ir pasirinkite **Nustatyti užsakymą**.</span><span class="sxs-lookup"><span data-stu-id="04118-157">Go to the **Match** tab and select **Set Order**.</span></span>
+1. <span data-ttu-id="f9f09-157">Eikite į **Atitikties** skirtuką ir pasirinkite **Nustatyti užsakymą**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-157">Go to the **Match** tab and select **Set Order**.</span></span>
 
-1. <span data-ttu-id="04118-158">**Pagrindiniame** iškrentančiame meniu sąraše pasirinkite **e-komercijos kontaktai : e-komercija** kaip pagrindinį šaltinį ir įtraukite visus įrašus.</span><span class="sxs-lookup"><span data-stu-id="04118-158">In the **Primary** drop-down list, choose **eCommerceContacts : eCommerce** as the primary source and include all records.</span></span>
+1. <span data-ttu-id="f9f09-158">**Pagrindiniame** iškrentančiame meniu sąraše pasirinkite **e-komercijos kontaktai : e-komercija** kaip pagrindinį šaltinį ir įtraukite visus įrašus.</span><span class="sxs-lookup"><span data-stu-id="f9f09-158">In the **Primary** drop-down list, choose **eCommerceContacts : eCommerce** as the primary source and include all records.</span></span>
 
-1. <span data-ttu-id="04118-159">**Objektas 2** iškrentančiame sąraše pasirinkite **lojalūs klientai : lojalumo schemą** ir įtraukite visus įrašus.</span><span class="sxs-lookup"><span data-stu-id="04118-159">In the **Entity 2** drop-down list, choose **loyCustomers : LoyaltyScheme** and include all records.</span></span>
+1. <span data-ttu-id="f9f09-159">**Objektas 2** iškrentančiame sąraše pasirinkite **lojalūs klientai : lojalumo schemą** ir įtraukite visus įrašus.</span><span class="sxs-lookup"><span data-stu-id="f9f09-159">In the **Entity 2** drop-down list, choose **loyCustomers : LoyaltyScheme** and include all records.</span></span>
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Suvienodinti e-komercijos atitiktį ir lojalumą.":::
 
-1. <span data-ttu-id="04118-161">Pasirinkite **Sukurkite naują taisyklę**</span><span class="sxs-lookup"><span data-stu-id="04118-161">Select **Create a new rule**</span></span>
+1. <span data-ttu-id="f9f09-161">Pasirinkite **Sukurkite naują taisyklę**</span><span class="sxs-lookup"><span data-stu-id="f9f09-161">Select **Create a new rule**</span></span>
 
-1. <span data-ttu-id="04118-162">Įtraukite savo pirmąją sąlygą naudodami visą pavadinimą.</span><span class="sxs-lookup"><span data-stu-id="04118-162">Add your first condition using FullName.</span></span>
+1. <span data-ttu-id="f9f09-162">Įtraukite savo pirmąją sąlygą naudodami visą pavadinimą.</span><span class="sxs-lookup"><span data-stu-id="f9f09-162">Add your first condition using FullName.</span></span>
 
-   * <span data-ttu-id="04118-163">E-komercijos kontaktams pasirinkite **Visas pavadinimas** iškrentančiame meniu.</span><span class="sxs-lookup"><span data-stu-id="04118-163">For eCommerceContacts select **FullName** in the drop-down.</span></span>
-   * <span data-ttu-id="04118-164">Lojalumo klientams pasirinkite **Visas pavadinimas** iškrentančiame meniu.</span><span class="sxs-lookup"><span data-stu-id="04118-164">For loyCustomers select **FullName** in the drop-down.</span></span>
-   * <span data-ttu-id="04118-165">Pasirinkite **Normalizuoti** iškrentantį meniu ir pasirinkite **Tipas (Telefonas, Pavadinimas, Adresas, ...)**.</span><span class="sxs-lookup"><span data-stu-id="04118-165">Select the **Normalize** drop down and choose **Type (Phone, Name, Address, ...)**.</span></span>
-   * <span data-ttu-id="04118-166">Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.</span><span class="sxs-lookup"><span data-stu-id="04118-166">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
+   * <span data-ttu-id="f9f09-163">E-komercijos kontaktams pasirinkite **Visas pavadinimas** iškrentančiame meniu.</span><span class="sxs-lookup"><span data-stu-id="f9f09-163">For eCommerceContacts select **FullName** in the drop-down.</span></span>
+   * <span data-ttu-id="f9f09-164">Lojalumo klientams pasirinkite **Visas pavadinimas** iškrentančiame meniu.</span><span class="sxs-lookup"><span data-stu-id="f9f09-164">For loyCustomers select **FullName** in the drop-down.</span></span>
+   * <span data-ttu-id="f9f09-165">Pasirinkite **Normalizuoti** iškrentantį meniu ir pasirinkite **Tipas (Telefonas, Pavadinimas, Adresas, ...)**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-165">Select the **Normalize** drop down and choose **Type (Phone, Name, Address, ...)**.</span></span>
+   * <span data-ttu-id="f9f09-166">Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-166">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
 
-1. <span data-ttu-id="04118-167">Įveskite pavadinimą **Visas pavadinimas, El. paštas** naujai taisyklei.</span><span class="sxs-lookup"><span data-stu-id="04118-167">Enter the name **FullName, Email** for the new rule.</span></span>
+1. <span data-ttu-id="f9f09-167">Įveskite pavadinimą **Visas pavadinimas, El. paštas** naujai taisyklei.</span><span class="sxs-lookup"><span data-stu-id="f9f09-167">Enter the name **FullName, Email** for the new rule.</span></span>
 
-   * <span data-ttu-id="04118-168">Įtraukite antrąją sąlygą el. pašto adresui pasirinkdami **Įtraukite sąlygą**</span><span class="sxs-lookup"><span data-stu-id="04118-168">Add a second condition for email address by selecting **Add Condition**</span></span>
-   * <span data-ttu-id="04118-169">Objekto e-komercijos kontaktams, pasirinkite **El. paštas** iškrentančiame meniu.</span><span class="sxs-lookup"><span data-stu-id="04118-169">For entity eCommerceContacts, choose **EMail** in drop-down.</span></span>
-   * <span data-ttu-id="04118-170">Lojalių klientų objektui pasirinkite **El. paštas** iškrentančiame meniu.</span><span class="sxs-lookup"><span data-stu-id="04118-170">For entity loyCustomers, choose **EMail** in the drop-down.</span></span> 
-   * <span data-ttu-id="04118-171">Palikite normalizavimą tuščią.</span><span class="sxs-lookup"><span data-stu-id="04118-171">Leave Normalize blank.</span></span> 
-   * <span data-ttu-id="04118-172">Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.</span><span class="sxs-lookup"><span data-stu-id="04118-172">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
+   * <span data-ttu-id="f9f09-168">Įtraukite antrąją sąlygą el. pašto adresui pasirinkdami **Įtraukite sąlygą**</span><span class="sxs-lookup"><span data-stu-id="f9f09-168">Add a second condition for email address by selecting **Add Condition**</span></span>
+   * <span data-ttu-id="f9f09-169">Objekto e-komercijos kontaktams, pasirinkite **El. paštas** iškrentančiame meniu.</span><span class="sxs-lookup"><span data-stu-id="f9f09-169">For entity eCommerceContacts, choose **EMail** in drop-down.</span></span>
+   * <span data-ttu-id="f9f09-170">Lojalių klientų objektui pasirinkite **El. paštas** iškrentančiame meniu.</span><span class="sxs-lookup"><span data-stu-id="f9f09-170">For entity loyCustomers, choose **EMail** in the drop-down.</span></span> 
+   * <span data-ttu-id="f9f09-171">Palikite normalizavimą tuščią.</span><span class="sxs-lookup"><span data-stu-id="f9f09-171">Leave Normalize blank.</span></span> 
+   * <span data-ttu-id="f9f09-172">Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-172">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
 
    :::image type="content" source="media/unify-match-rule.PNG" alt-text="Suvienodinkite atitikties taisyklę pavadinimui ir el. paštui.":::
 
-7. <span data-ttu-id="04118-174">Pasirinkite **Įrašyti** ir **Vykdyti**.</span><span class="sxs-lookup"><span data-stu-id="04118-174">Select **Save** and **Run**.</span></span>
+7. <span data-ttu-id="f9f09-174">Pasirinkite **Įrašyti** ir **Vykdyti**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-174">Select **Save** and **Run**.</span></span>
 
-### <a name="merge"></a><span data-ttu-id="04118-175">Sulieti</span><span class="sxs-lookup"><span data-stu-id="04118-175">Merge</span></span>
+### <a name="merge"></a><span data-ttu-id="f9f09-175">Sulieti</span><span class="sxs-lookup"><span data-stu-id="f9f09-175">Merge</span></span>
 
-1. <span data-ttu-id="04118-176">Eikite į **Sulieti** skirtuką.</span><span class="sxs-lookup"><span data-stu-id="04118-176">Go to the **Merge** tab.</span></span>
+1. <span data-ttu-id="f9f09-176">Eikite į **Sulieti** skirtuką.</span><span class="sxs-lookup"><span data-stu-id="f9f09-176">Go to the **Merge** tab.</span></span>
 
-1. <span data-ttu-id="04118-177">**Kontakto ID** skirtą **lojalių klientų** objekte, keiskite rodomą pavadinimą į **KontaktoIDlojalumas** tam, kad jis skirtųsi nuo kitų vartotų ID.</span><span class="sxs-lookup"><span data-stu-id="04118-177">On the **ContactId** for **loyCustomers** entity, change the display name to **ContactIdLOYALTY** to differentiate it from the other IDs ingested.</span></span>
+1. <span data-ttu-id="f9f09-177">**Kontakto ID** skirtą **lojalių klientų** objekte, keiskite rodomą pavadinimą į **KontaktoIDlojalumas** tam, kad jis skirtųsi nuo kitų vartotų ID.</span><span class="sxs-lookup"><span data-stu-id="f9f09-177">On the **ContactId** for **loyCustomers** entity, change the display name to **ContactIdLOYALTY** to differentiate it from the other IDs ingested.</span></span>
 
    :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="pervardykite kontakto ID iš lojalumo ID.":::
 
-1. <span data-ttu-id="04118-179">Pasirinkite **Įrašyti** ir **Vykdyti** tam, kad pradėtumėte suliejimo procesą.</span><span class="sxs-lookup"><span data-stu-id="04118-179">Select **Save** and **Run** to start the Merge Process.</span></span>
+1. <span data-ttu-id="f9f09-179">Pasirinkite **Įrašyti** ir **Vykdyti** tam, kad pradėtumėte suliejimo procesą.</span><span class="sxs-lookup"><span data-stu-id="f9f09-179">Select **Save** and **Run** to start the Merge Process.</span></span>
 
 
 
-## <a name="task-3---configure-transaction-churn-prediction"></a><span data-ttu-id="04118-180">Užduotis 3 - Konfigūruoti perlaidos nutraukimo prognozę</span><span class="sxs-lookup"><span data-stu-id="04118-180">Task 3 - Configure transaction churn prediction</span></span>
+## <a name="task-3---configure-transaction-churn-prediction"></a><span data-ttu-id="f9f09-180">Užduotis 3 - Konfigūruoti perlaidos nutraukimo prognozę</span><span class="sxs-lookup"><span data-stu-id="f9f09-180">Task 3 - Configure transaction churn prediction</span></span>
 
-<span data-ttu-id="04118-181">Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravimo nutraukimo prognozę.</span><span class="sxs-lookup"><span data-stu-id="04118-181">With the unified customer profiles in place, we can now run the subscription churn prediction.</span></span> <span data-ttu-id="04118-182">Išsamiems žingsniams, žr. [Prenumeravimo nutraukimo prognozė (peržiūra)](predict-subscription-churn.md) straipsnį.</span><span class="sxs-lookup"><span data-stu-id="04118-182">For detailed steps, see the [Subscription churn prediction (preview)](predict-subscription-churn.md) article.</span></span> 
+<span data-ttu-id="f9f09-181">Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravimo nutraukimo prognozę.</span><span class="sxs-lookup"><span data-stu-id="f9f09-181">With the unified customer profiles in place, we can now run the subscription churn prediction.</span></span> <span data-ttu-id="f9f09-182">Išsamiems žingsniams, žr. [Prenumeravimo nutraukimo prognozė (peržiūra)](predict-subscription-churn.md) straipsnį.</span><span class="sxs-lookup"><span data-stu-id="f9f09-182">For detailed steps, see the [Subscription churn prediction (preview)](predict-subscription-churn.md) article.</span></span> 
 
-1. <span data-ttu-id="04118-183">Eikite į **Įžvalga** > **Atrasti** ir pasirinkite norėdami naudoti **Kliento nutraukimo modelį**.</span><span class="sxs-lookup"><span data-stu-id="04118-183">Go to **Intelligence** > **Discover** and select to use the **Customer churn model**.</span></span>
+1. <span data-ttu-id="f9f09-183">Eikite į **Įžvalga** > **Atrasti** ir pasirinkite norėdami naudoti **Kliento nutraukimo modelį**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-183">Go to **Intelligence** > **Discover** and select to use the **Customer churn model**.</span></span>
 
-1. <span data-ttu-id="04118-184">Pasirinkite **Perlaidos** parinktį ir rinkitės **Pradėti**.</span><span class="sxs-lookup"><span data-stu-id="04118-184">Select the **Transactional** option and select **Get started**.</span></span>
+1. <span data-ttu-id="f9f09-184">Pasirinkite **Perlaidos** parinktį ir rinkitės **Pradėti**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-184">Select the **Transactional** option and select **Get started**.</span></span>
 
-1. <span data-ttu-id="04118-185">Įvardykite modelį **OOB e-komercijos perlaidos nutraukimo prognozė** ir išvesties objektą **„OOBeCommerceChurnPrediction“**.</span><span class="sxs-lookup"><span data-stu-id="04118-185">Name the model **OOB eCommerce Transaction Churn Prediction** and the output entity **OOBeCommerceChurnPrediction**.</span></span>
+1. <span data-ttu-id="f9f09-185">Įvardykite modelį **OOB e-komercijos perlaidos nutraukimo prognozė** ir išvesties objektą **„OOBeCommerceChurnPrediction“**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-185">Name the model **OOB eCommerce Transaction Churn Prediction** and the output entity **OOBeCommerceChurnPrediction**.</span></span>
 
-1. <span data-ttu-id="04118-186">Nustatykite dvi sąlygas nutraukimo modeliui:</span><span class="sxs-lookup"><span data-stu-id="04118-186">Define two conditions for the churn model:</span></span>
+1. <span data-ttu-id="f9f09-186">Nustatykite dvi sąlygas nutraukimo modeliui:</span><span class="sxs-lookup"><span data-stu-id="f9f09-186">Define two conditions for the churn model:</span></span>
 
-   * <span data-ttu-id="04118-187">**Prognozės langas**: **mažiausiai 60** dienų.</span><span class="sxs-lookup"><span data-stu-id="04118-187">**Prediction window**: **at least 60** days.</span></span> <span data-ttu-id="04118-188">Šis nustatymas nustato, kaip toli į ateitį norime prognozuoti kliento nutraukimą.</span><span class="sxs-lookup"><span data-stu-id="04118-188">This setting defines how far into the future do we want to predict customer churn.</span></span>
+   * <span data-ttu-id="f9f09-187">**Prognozės langas**: **mažiausiai 60** dienų.</span><span class="sxs-lookup"><span data-stu-id="f9f09-187">**Prediction window**: **at least 60** days.</span></span> <span data-ttu-id="f9f09-188">Šis nustatymas nustato, kaip toli į ateitį norime prognozuoti kliento nutraukimą.</span><span class="sxs-lookup"><span data-stu-id="f9f09-188">This setting defines how far into the future do we want to predict customer churn.</span></span>
 
-   * <span data-ttu-id="04118-189">**Nutraukimo sąvoka**: **mažiausiai 60** dienų.</span><span class="sxs-lookup"><span data-stu-id="04118-189">**Churn definition**: **at least 60** days.</span></span> <span data-ttu-id="04118-190">Trukmė be įsigijimo, po kuriso klientas laikomas nutraukusiu paslaugas.</span><span class="sxs-lookup"><span data-stu-id="04118-190">The duration without purchase after which a customer is considered churned.</span></span>
+   * <span data-ttu-id="f9f09-189">**Nutraukimo sąvoka**: **mažiausiai 60** dienų.</span><span class="sxs-lookup"><span data-stu-id="f9f09-189">**Churn definition**: **at least 60** days.</span></span> <span data-ttu-id="f9f09-190">Trukmė be įsigijimo, po kuriso klientas laikomas nutraukusiu paslaugas.</span><span class="sxs-lookup"><span data-stu-id="f9f09-190">The duration without purchase after which a customer is considered churned.</span></span>
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Pasirinkite modelio išlyginimo prognozės langą ir nutraukimo sąvoką.":::
 
-1. <span data-ttu-id="04118-192">Pasirinkite **Įsigijimo istorija (būtinas)** ir rinkitės  **Įtraukti duomenis** prenumeravimo istorijai.</span><span class="sxs-lookup"><span data-stu-id="04118-192">Select **Purchase History (required)** and select **Add data** for subscription history.</span></span>
+1. <span data-ttu-id="f9f09-192">Pasirinkite **Pirkimo retrospektyva (būtina)** ir pasirinkite **Įtraukti duomenis** pirkimo retrospektyvai.</span><span class="sxs-lookup"><span data-stu-id="f9f09-192">Select **Purchase History (required)** and select **Add data** for purchase history.</span></span>
 
-1. <span data-ttu-id="04118-193">Įtraukite **e-komercijos įsigijimai : e-komerciją** objektą ir nustatykite laukelių žemėlapį iš e-komercijos į atitinkamus laukelius būtinus modeliui.</span><span class="sxs-lookup"><span data-stu-id="04118-193">Add the **eCommercePurchases : eCommerce** entity and map the fields from eCommerce to the corresponding fields required by the model.</span></span>
+1. <span data-ttu-id="f9f09-193">Įtraukite **e-komercijos įsigijimai : e-komerciją** objektą ir nustatykite laukelių žemėlapį iš e-komercijos į atitinkamus laukelius būtinus modeliui.</span><span class="sxs-lookup"><span data-stu-id="f9f09-193">Add the **eCommercePurchases : eCommerce** entity and map the fields from eCommerce to the corresponding fields required by the model.</span></span>
 
-1. <span data-ttu-id="04118-194">Prisijunkite prie **e-komercijos įsigijimų : e-komercijos** objekto su **e-komercijos kontaktais : e-komercija**.</span><span class="sxs-lookup"><span data-stu-id="04118-194">Join the **eCommercePurchases : eCommerce** entity with **eCommerceContacts : eCommerce**.</span></span>
+1. <span data-ttu-id="f9f09-194">Prisijunkite prie **e-komercijos įsigijimų : e-komercijos** objekto su **e-komercijos kontaktais : e-komercija**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-194">Join the **eCommercePurchases : eCommerce** entity with **eCommerceContacts : eCommerce**.</span></span>
 
    :::image type="content" source="media/model-purchase-join.PNG" alt-text="Prijunkite e-komercijos objektus.":::
 
-1. <span data-ttu-id="04118-196">Pasirinkite **Kitas** tam, kad nustatytumėte modelio grafiką.</span><span class="sxs-lookup"><span data-stu-id="04118-196">Select **Next** to set the model schedule.</span></span>
+1. <span data-ttu-id="f9f09-196">Pasirinkite **Kitas** tam, kad nustatytumėte modelio grafiką.</span><span class="sxs-lookup"><span data-stu-id="f9f09-196">Select **Next** to set the model schedule.</span></span>
 
-   <span data-ttu-id="04118-197">Modelis turi būti reguliariai bandomas siekiant išmokti naujas iškarpas, kai esama naujų vartojamų duomenų.</span><span class="sxs-lookup"><span data-stu-id="04118-197">The model needs to train regularly to learn new patterns when there is new data ingested.</span></span> <span data-ttu-id="04118-198">Šiam pavyzdžiui, rinkitės **Kas mėnesį**.</span><span class="sxs-lookup"><span data-stu-id="04118-198">For this example, select **Monthly**.</span></span>
+   <span data-ttu-id="f9f09-197">Modelis turi būti reguliariai bandomas siekiant išmokti naujas iškarpas, kai esama naujų vartojamų duomenų.</span><span class="sxs-lookup"><span data-stu-id="f9f09-197">The model needs to train regularly to learn new patterns when there is new data ingested.</span></span> <span data-ttu-id="f9f09-198">Šiam pavyzdžiui, rinkitės **Kas mėnesį**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-198">For this example, select **Monthly**.</span></span>
 
-1. <span data-ttu-id="04118-199">Peržiūrėją visą išsamią informaciją, rinkitės **Įrašyti ir vykdyti**.</span><span class="sxs-lookup"><span data-stu-id="04118-199">After reviewing all the details, select **Save and Run**.</span></span>
+1. <span data-ttu-id="f9f09-199">Peržiūrėją visą išsamią informaciją, rinkitės **Įrašyti ir vykdyti**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-199">After reviewing all the details, select **Save and Run**.</span></span>
 
-## <a name="task-4---review-model-results-and-explanations"></a><span data-ttu-id="04118-200">Užduotis 4 - Peržiūrėti modelio rezultatus ir paaiškinimus</span><span class="sxs-lookup"><span data-stu-id="04118-200">Task 4 - Review model results and explanations</span></span>
+## <a name="task-4---review-model-results-and-explanations"></a><span data-ttu-id="f9f09-200">Užduotis 4 - Peržiūrėti modelio rezultatus ir paaiškinimus</span><span class="sxs-lookup"><span data-stu-id="f9f09-200">Task 4 - Review model results and explanations</span></span>
 
-<span data-ttu-id="04118-201">Leisti modeliui užbaigti mokymąsi ir duomenų vertinimą.</span><span class="sxs-lookup"><span data-stu-id="04118-201">Let the model complete the training and scoring of the data.</span></span> <span data-ttu-id="04118-202">Galite dabar peržiūrėti prenumeravimo atsisakymo modelio paaiškinimus.</span><span class="sxs-lookup"><span data-stu-id="04118-202">You can now review the subscription churn model explanations.</span></span> <span data-ttu-id="04118-203">Dėl išsamesnės informacijos, žr. [Peržiūrėti prognozės būseną ir rezultatus](predict-subscription-churn.md#review-a-prediction-status-and-results).</span><span class="sxs-lookup"><span data-stu-id="04118-203">For more information, see [Review a prediction status and results](predict-subscription-churn.md#review-a-prediction-status-and-results).</span></span>
+<span data-ttu-id="f9f09-201">Leisti modeliui užbaigti mokymąsi ir duomenų vertinimą.</span><span class="sxs-lookup"><span data-stu-id="f9f09-201">Let the model complete the training and scoring of the data.</span></span> <span data-ttu-id="f9f09-202">Galite dabar peržiūrėti prenumeravimo atsisakymo modelio paaiškinimus.</span><span class="sxs-lookup"><span data-stu-id="f9f09-202">You can now review the subscription churn model explanations.</span></span> <span data-ttu-id="f9f09-203">Dėl išsamesnės informacijos, žr. [Peržiūrėti prognozės būseną ir rezultatus](predict-subscription-churn.md#review-a-prediction-status-and-results).</span><span class="sxs-lookup"><span data-stu-id="f9f09-203">For more information, see [Review a prediction status and results](predict-subscription-churn.md#review-a-prediction-status-and-results).</span></span>
 
-## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a><span data-ttu-id="04118-204">Užduotis 5 - Sukurti didelės atsisakymo rizikos klientų segmentą</span><span class="sxs-lookup"><span data-stu-id="04118-204">Task 5 - Create a segment of high churn-risk customers</span></span>
+## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a><span data-ttu-id="f9f09-204">Užduotis 5 - Sukurti didelės atsisakymo rizikos klientų segmentą</span><span class="sxs-lookup"><span data-stu-id="f9f09-204">Task 5 - Create a segment of high churn-risk customers</span></span>
 
-<span data-ttu-id="04118-205">Gamybos modelio vykdymas sukurią naują objektą, kurį galite matyti **Duomenys** > **Objektai**.</span><span class="sxs-lookup"><span data-stu-id="04118-205">Running the production model creates a new entity that you can see in **Data** > **Entities**.</span></span>   
+<span data-ttu-id="f9f09-205">Gamybos modelio vykdymas sukurią naują objektą, kurį galite matyti **Duomenys** > **Objektai**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-205">Running the production model creates a new entity that you can see in **Data** > **Entities**.</span></span>   
 
-<span data-ttu-id="04118-206">Galite sukurti naują segmentą pagal modelio sukurtą objektą.</span><span class="sxs-lookup"><span data-stu-id="04118-206">You can create a new segment based on the entity created by the model.</span></span>
+<span data-ttu-id="f9f09-206">Galite sukurti naują segmentą pagal modelio sukurtą objektą.</span><span class="sxs-lookup"><span data-stu-id="f9f09-206">You can create a new segment based on the entity created by the model.</span></span>
 
-1.  <span data-ttu-id="04118-207">Eikite į **Segmentai**.</span><span class="sxs-lookup"><span data-stu-id="04118-207">Go to **Segments**.</span></span> <span data-ttu-id="04118-208">Pasirinkite **Naujas** ir rinkitės **Sukurtas iš** > **Įžvalgos**.</span><span class="sxs-lookup"><span data-stu-id="04118-208">Select **New** and choose **Create from** > **Intelligence**.</span></span> 
+1.  <span data-ttu-id="f9f09-207">Eikite į **Segmentai**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-207">Go to **Segments**.</span></span> <span data-ttu-id="f9f09-208">Pasirinkite **Naujas** ir rinkitės **Sukurtas iš** > **Įžvalgos**.</span><span class="sxs-lookup"><span data-stu-id="f9f09-208">Select **New** and choose **Create from** > **Intelligence**.</span></span> 
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Sukurkite segmentą su modelio išvestimi.":::
 
-1. <span data-ttu-id="04118-210">Pasirinkite **„OOBSubscriptionChurnPrediction“** galutinį tašką ir nustatykite segmentą:</span><span class="sxs-lookup"><span data-stu-id="04118-210">Select the **OOBSubscriptionChurnPrediction** endpoint and define the segment:</span></span> 
-   - <span data-ttu-id="04118-211">Laukelis: atsisakymo balas</span><span class="sxs-lookup"><span data-stu-id="04118-211">Field: ChurnScore</span></span>
-   - <span data-ttu-id="04118-212">Operatorius: didesnis nei</span><span class="sxs-lookup"><span data-stu-id="04118-212">Operator: greater than</span></span>
-   - <span data-ttu-id="04118-213">Vertė: 0,6</span><span class="sxs-lookup"><span data-stu-id="04118-213">Value: 0.6</span></span>
+1. <span data-ttu-id="f9f09-210">Pasirinkite **„OOBSubscriptionChurnPrediction“** galutinį tašką ir nustatykite segmentą:</span><span class="sxs-lookup"><span data-stu-id="f9f09-210">Select the **OOBSubscriptionChurnPrediction** endpoint and define the segment:</span></span> 
+   - <span data-ttu-id="f9f09-211">Laukelis: Nutraukimos balas</span><span class="sxs-lookup"><span data-stu-id="f9f09-211">Field: ChurnScore</span></span>
+   - <span data-ttu-id="f9f09-212">Operatorius: didesnis nei</span><span class="sxs-lookup"><span data-stu-id="f9f09-212">Operator: greater than</span></span>
+   - <span data-ttu-id="f9f09-213">Vertė: 0,6</span><span class="sxs-lookup"><span data-stu-id="f9f09-213">Value: 0.6</span></span>
    
    :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Nustatykite prenumeravimo atsisakymo segmentą.":::
 
-<span data-ttu-id="04118-215">Gala turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.</span><span class="sxs-lookup"><span data-stu-id="04118-215">You now have a segment that is dynamically updated which identifies high churn-risk customers for this subscription business.</span></span>
+<span data-ttu-id="f9f09-215">Gala turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.</span><span class="sxs-lookup"><span data-stu-id="f9f09-215">You now have a segment that is dynamically updated which identifies high churn-risk customers for this subscription business.</span></span>
 
-<span data-ttu-id="04118-216">Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).</span><span class="sxs-lookup"><span data-stu-id="04118-216">For more information, see [Create and manage segments](segments.md).</span></span>
+<span data-ttu-id="f9f09-216">Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).</span><span class="sxs-lookup"><span data-stu-id="f9f09-216">For more information, see [Create and manage segments](segments.md).</span></span>
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
