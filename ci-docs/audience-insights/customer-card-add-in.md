@@ -109,7 +109,7 @@ Kliento kortelės papildymas automatiškai neatsijungia. Norėdami atnaujinti į
 
 1. Veiksmų juostroje pasirinkite **Taikyti sprendimo naujinimą**.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atnaujinkite sprendimą "Dynamics 365" programų tinkinimo srityje":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atnaujinkite sprendimą „Dynamics 365“ programų tinkinimo srityje":::
 
 1. Pradėjus naujinimo procesą, matysite įkėlimo indikatorių, kol naujinimas bus baigtas. Jei nėra naujesnės versijos, atnaujinus bus rodomas klaidos pranešimas.
 
