@@ -1,7 +1,7 @@
 ---
 title: Naujos ir būsimos funkcijos
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270442"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598451"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Džiaugiamės galėdami pranešti apie mūsų naujausius atnaujinimus! Šiame straipsnyje apibendrinamos viešos peržiūros versijos funkcijos, bendro pasiekiamumo patobulinimai ir funkcijų atnaujinimai. Norėdami peržiūrėti ilgalaikius funkcijų planus, peržiūrėkite [„Dynamics 365“ ir „Power Platform“ išleidimo planai](https://docs.microsoft.com/dynamics365/release-plans/).
+Džiaugiamės galėdami pranešti apie mūsų naujausius atnaujinimus! Šiame straipsnyje apibendrinamos viešos peržiūros versijos funkcijos, bendro pasiekiamumo patobulinimai ir funkcijų atnaujinimai. Norėdami peržiūrėti ilgalaikius funkcijų planus, peržiūrėkite [„Dynamics 365“ ir „Power Platform“ išleidimo planai](/dynamics365/release-plans/).
 
 Taip pat galite peržiūrėti tolesnį vaizdo įrašą, kad sužinotumėte daugiau apie pajėgumus suplanuotus paskutiniems šešiems mėnesiams.
 
@@ -31,18 +31,52 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="february-2021-updates"></a>2021 m. vasario atnaujinimai
+
+2021 m. vasario naujinimuose yra kelios funkcijos, efektyvumo plėtotės ir klaidų taisymai.
+
+#### <a name="extensibility"></a>Išplėtimas
+
+- **Eksportuoti segmentus į „AdRoll”**
+
+  Mes išplėtėme eksportavimo paskirties vietas įtraukdami „AdRoll”. Dabar galite eksportuoti segmentus iš „Customer Insights” į „AdRoll” auditorijas ir naudoti juos kaip reklamos bazinę liniją. Daugiau informacijos rasite [Jungtis, skirta „AdRoll“](export-adroll.md).
+
+#### <a name="segments"></a>Segmentai
+ 
+- **Dubliuoti segmentą**
+  
+  Norėdami sukurti naują segmentą remiantis esamu, dabar galite dubliuoti segmentą ir redaguoti dubliuojamą segmentą jo tolesniam patobulinimui. 
+
+- **Įtraukti papildomus atributus į segmentą**
+
+  Dabar galite įtraukti atributus į jūsų segmento išvestį, net jei šie atributai nėra kliento profilio dalis. Pavyzdžiui, įtraukite prenumeratos ID į segmentą, net jei jis yra dalis prenumeratos objekto, turinčio M:1 ryšį su kliento objektu. Tol, kol atributas priklauso su kliento objektu susijusiam objektui, galite įtraukti šiuos atributus.  
+
+#### <a name="predictions"></a>Prognozės
+
+- **Kurkite numatomas produkto rekomendacijas**
+
+  Supratimas, ką klientai domisi pirkti, yra vienas iš pirmųjų žingsnių, reikalingų didinti verslo pajamoms didinti ir skatinti klientų lojalumui didinti naudojant personalizavimą ir įtraukimą. Pateikiant jūsų kliento interesų neatitinkančių produktų rekomendacijas gali atsirasti atotrūkio tarp kliento ir jūsų verslo jausmas ir dėl to galiausiai bus apribotos potencialios pajamos ir kliento patirtis. 
+
+  Naudodami savo duomenis, dabar galite kurti prognozes, kokius produktus klientai, tikėtina, įsigys ateityje. Daugiau informacijos rasite [Produkto rekomendacijos prognozė](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Sistemos administravimas
+
+- **Aplinkos kopijavimas palaiko daugiau duomenų šaltinių tipų**
+
+  Administratoriai gali kopijuoti aplinkos konfigūracijas į naują aplinką toje pačioje organizacijoje. Ši funkcija išplečia aplinkos kopijavimo funkcijas tais atvejais, kai naudojami duomenų šaltiniai, pagrįsti „Common Data Service” duomenų telkiniu arba „Common Data Model” aplanku.
+
 ## <a name="january-2021-updates"></a>2021 m. sausio mėn. naujinimai
 
 2021 m. sausio naujinimuose yra kelios funkcijos, efektyvumo naujiniai ir klaidų taisymai.
 
 #### <a name="extensibility"></a>Išplėtimas
 
-- **Išplėstinės funkcijos ir didesnis SFPP eksportavimo efektyvumas** Dabar galite eksportuoti visus išvesties objektus iš „Customer Insights" į SFPP pagrindinį kompiuterį. Anksčiau buvo eksportuojama tik į segmento objektus. Be to, SFTP eksportavimo efektyvumas leidžia daugiau duomenų apimties per mažiau laiko, tai priklauso nuo jūsų SFTP pagrindinio kompiuterio efektyvumo.    
+- **Išplėstinės funkcijos ir didesnis SFPP eksportavimo efektyvumas** Dabar galite eksportuoti visus išvesties objektus iš „Customer Insights” į SFPP pagrindinį kompiuterį. Anksčiau buvo eksportuojama tik į segmento objektus. Be to, SFTP eksportavimo efektyvumas leidžia daugiau duomenų apimties per mažiau laiko, tai priklauso nuo jūsų SFTP pagrindinio kompiuterio efektyvumo.    
   Daugiau informacijos žr. [SFTP jungtis (peržiūra)](export-sftp.md).  
 
 #### <a name="segments"></a>Segmentai
 
-- **Mašininis mokymas siūlomus segmentus metrikos tobulinui** – naujas būdas atrasti ir kurti segmentus. Sistema naudoja AI modelį, kad galėtų pasiūlyti segmentų, kurie gali padėti tobulinti KPI (priemonę), kurią jau stebite. Rodome atributų, kuriuos pažymite priemonei ar kitam pirminiui atributui, įtaką. Ši informacija padeda rasti potencialių segmentų, kurie pateikia galimybes.    
+- **Mašininis mokymas siūlomus segmentus metrikos tobulinimui** – naujas būdas atrasti ir kurti segmentus. Sistema naudoja AI modelį, kad galėtų pasiūlyti segmentų, kurie gali padėti tobulinti KPI (priemonę), kurią jau stebite. Rodome atributų, kuriuos pažymite priemonei ar kitam pirminiam atributui, įtaką. Ši informacija padeda rasti potencialių segmentų, kurie pateikia galimybes.    
   Daugiau informacijos žr. [Siūlomi segmentai (peržiūra)](suggested-segments.md).
 
 #### <a name="data-unification"></a>Duomenų susijungimas
@@ -50,12 +84,12 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 - **Patobulintas gretinimas duomenų** suvienodinimo srityje gretinimas buvo atnaujintas. Ji leidžia konfigūruoti ir peržiūrėti gretinimo taisykles, įskaitant išsamią statistiką, kurioje išsamiau paaiškinta, kaip veikia gretinimas. Yra parinkčių, kaip išjungti atitikties taisyklę, kad išsamus konfigūraciją ji nebeaktyvūs, nuvilktumėte ir numestumėte atitikties taisykles bei kt.
   Dėl daugiau informacijos, žr. [Atitikti objektus](match-entities.md).
 
-- **Gretinimo proceso deduplikacijos išvestį galima naudoti kaip objekto** deduplikavimo proceso išvestį iš gretinimo proceso, kad būtų galima tolesnei analizei atlikti. Šį objektą sudaro papildomo dublikavimo procese naudojami laukai ir laimėtojui skirtas įrašas bei atitinkami pakaitiniai įrašai, kurie suliejami su laimėto asmens įrašu.
+- **Gretinimo proceso dublikatų naikinimo išvestį galima naudoti kaip objekto** dublikatų naikinimo proceso išvestį iš gretinimo proceso, kad būtų galima tolesnei analizei atlikti. Šį objektą sudaro papildomo dublikavimo procese naudojami laukai ir laimėtojui skirtas įrašas bei atitinkami pakaitiniai įrašai, kurie suliejami su laimėto asmens įrašu.
   Dėl daugiau informacijos žr. [Papildomo dublikavimo išvestį kaip objektą](match-entities.md#deduplication-output-as-an-entity).
 
 #### <a name="system-administration"></a>Sistemos administravimas
 
-- **Sklandžiai bendrinkite duomenis su „Microsoft Dataverse“** „Customer Insights" rezultatais su programomis „Microsoft Dataverse“ naudodami „Microsoft Dataverse“ sutvarkyto „Data Lake‟ funkciją. Susieję aplinką „Dataverse“ su „Customer Insights", galėsite įjungti duomenų bendrinimą.
+- **Sklandžiai bendrinkite duomenis su „Microsoft Dataverse“** „Customer Insights” rezultatais su programomis „Microsoft Dataverse“ naudodami „Microsoft Dataverse“ sutvarkyto „Data Lake” funkciją. Susieję aplinką „Dataverse“ su „Customer Insights”, galėsite įjungti duomenų bendrinimą.
   Daugiau informacijos žr. [Aplinkų valdymas](manage-environments.md).
 
 
@@ -78,7 +112,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 - **Valdykite, kuriuos profilius reikia papildyti**
 
   Dabar galima papildyti tik savo klientų profilių antrinį rinkinį su parinktimi pasirinkti segmento objektą, o ne numatytąjį kliento objektą. Sukurkite segmentą su klientų profiliais, kuriuos norite praturtinti ir pažymėti savo klientų duomenų rinkinio praturtinimo konfigūracijoje.
-  Šią funkciją šiuo metu galima naudoti tik „Experian" ir „HERE Technologies" praturtinimus. Greitai leisime šiam pajėgumui labiau papildyti.
+  Šią funkciją šiuo metu galima naudoti tik „Experian” ir „HERE Technologies” praturtinimus. Greitai leisime šiam pajėgumui labiau papildyti.
 
   Daugiau informacijos rasite [Klientų profilių papildymas demografais iš „Experian“](enrichment-experian.md)[klientų profilio turtinimai su „HERE Technologies“](enrichment-here.md).
 
@@ -126,7 +160,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 - **Lankstumas skirtas įjungti duomenų profiliavimą pasirinktuose objektuose ir laukeliuose iš jūsų talpinimo paskyros**
 
-  Galite nurotydit, kuriie duomenų objektai ir laukeliai bus įjungti iš „Common Data Model“ kataologo jūsų „Azure Data Lake“ talpinimo paskyrą siekiant įjungti duomenų profiliavimą kaip duomenų suvartojimo proceso dalį.
+  Galite nurodyti, kurie duomenų objektai ir laukeliai bus įjungti iš „Common Data Model“ katalogo jūsų „Azure Data Lake Storage“ paskyrą siekiant įjungti duomenų profiliavimą kaip duomenų suvartojimo proceso dalį.
 
   Dėl išsamesnės informacijos, žr. [Sujungti su „Common Data Model“ katalogu](connect-common-data-model.md#connect-to-a-common-data-model-folder).
 
@@ -156,7 +190,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
   Perdavimo nutraukimo nuspėjimo funkcija jus įjungia be duomenų mokslininko pagalbos tam, kad nuspėtumėte, kada klientas tikėtinai nebepirks produktų ir paslaugų.  Naudodami nuspėjimo balą galite suderinti kitą informaciją apie savo klientus, tokią kaip kliento vertė tam, kad sukurtumėte didelio nutraukimo rizikos ir didelės vertės klientų segmentus. Naudokite šį segmentą tam, kad tiesiogiai dirbtumėte su klientais per publikavimo veiklas, klientų pagalbai ir kitų scenarijų metu sumažinant nutraukimo riziką.
  
-  Konfigūruokite nutraukimo sąvoką kaip laiku pagrįstą langą būdingą jūsų verslui ir nustatykite, kada klientai yra laikomi prarastais. Pavyzdžiui, produktų parduotuvė gali galvoti apie nebeperkantį klientą, jei jis nieko nepirko paskutinias 30 dienų.
+  Konfigūruokite nutraukimo sąvoką kaip laiku pagrįstą langą būdingą jūsų verslui ir nustatykite, kada klientai yra laikomi prarastais. Pavyzdžiui, produktų parduotuvė gali galvoti apie nebeperkantį klientą, jei jis nieko nepirko paskutines 30 dienų.
  
   Jums tęsiant nuspėjimo sukūrimą, mes jus instruktuosime, kokių duomenų reikia ir jus įgalinsime sukurti duomenų žemėlapį apie jūsų verslą būtiniems laukeliams tam, kad nuspėtumėte nutrauksiančius klientus. Galite taip pat nustatyti tvarkaraštį tam, kad talpintumėte modeliu pagrįstą naują informaciją savo sistemoje ir pritaikytumėte ją prie besikeičiančių verslo aplinkybių.
  
@@ -171,9 +205,9 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
   Dėl išsamesnės informacijos, žr. [Esančios aplinkos paleidimas iš naujo](manage-environments.md#reset-an-existing-environment).
 
 
-- **Prisijunkite prie savo „Azure Data Lake“ talpinimo paskyros naudodami paslaugų pagrindinį elementą**
+- **Prisijunkite prie savo „Azure Data Lake Storage“ paskyros naudodami paslaugų pagrindinį elementą**
 
-  Įrašyti duomenų išverstį ir perskaityti duomenis iš jūsų talpinimo paskyros naudojant „Azure“ pagrindines paslaugas. Esamos paskyros talpinimo jungtys gali ir toliau naudoti paskyros raktą. Jos taip pat siūlo pagerinimo parinktį tam, kad naudotų pagrindines paslaugas einant toliau. Naujos jungtys bus pagrįstos pagrindinio autentifikavimo metodo paslaugomis jūsų talpinimo paskyrai.
+  Įrašyti duomenų išvestį ir perskaityti duomenis iš jūsų talpinimo paskyros naudojant „Azure“ pagrindines paslaugas. Esamos paskyros talpinimo jungtys gali ir toliau naudoti paskyros raktą. Jos taip pat siūlo pagerinimo parinktį tam, kad naudotų pagrindines paslaugas einant toliau. Naujos jungtys bus pagrįstos pagrindinio autentifikavimo metodo paslaugomis jūsų talpinimo paskyrai.
 
   Dėl daugiau informacijos, žr. [Sujungti su „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md).
 
@@ -201,7 +235,7 @@ Dėl daugiau informacijos, žr. [Nustatyti dublikavimo panaikinimą atitikties o
 
 #### <a name="system-administration"></a>Sistemos administravimas
 
-- **Orkestravimas: Nauja atnaujinimo parinktis Suliejime**
+- **Organizavimas: Nauja atnaujinimo parinktis Suliejime**
 
 Iki šiandien jums vykdant suliejimo procesą sistema vykdė visą procesą pasroviui, kuris priklausė nuo suliejimo ir tolesnių procesų. Dabar galite patikrinti suliejimo proceso išvestį (suvienodintą kliento objektą) prieš naudodami jį procese pasroviui, tokiame kaip segmentai ar priemonės.
 Suliejimo puslapyje dabar galite pasirinkti vykdyti tik suliejimo žingsnį ir vykdyti tik šį procesą. Norėdami atnaujinti procesus pasroviui, galite pasirinkti vykdyti suliejimą ir procesus pasroviui. 
@@ -335,7 +369,7 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
   Naujas „Dynamics 365“ kliento kortelės papildinio valdiklis leidžia rodyti prekių ženklų ir pomėgių papildymus kontaktuose klientų įtraukimo programose „Dynamics 365“.    
   Norėdami gauti daugiau informacijos, žr. [klientų kortelės priedą](customer-card-add-in.md).
 
-- **Daugiau „Power Automate“ paleidklių**
+- **Daugiau „Power Automate“ paleidiklių**
 
   Išplėtėme „Power Automate“ paleidiklius ir įtraukėme toliau nurodytus paleidiklius.
   - Gauti pranešimą arba atlikti veiksmą, kai baigiamas automatinis visiškas atnaujinimas (duomenų šaltiniai, sujungimas, segmentai, priemonės, eksportas)
@@ -404,7 +438,7 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 
 - **Atnaujinta laiko planavimo juosta kliento kortelės priede**
 
-  Kliento koretelės priedų sprendimas atitinka aktyvumo laiko juostos juostą. Laiko planavimo juostos numeracija pagerinta, rodoma iki 50 veiklos vienu metu. Ji taip pat leidžia į laiko planavimo juostą įkelti daugiau veiklų.    
+  Kliento kortelės priedų sprendimas atitinka aktyvumo laiko juostos juostą. Laiko planavimo juostos numeracija pagerinta, rodoma iki 50 veiklos vienu metu. Ji taip pat leidžia į laiko planavimo juostą įkelti daugiau veiklų.    
   Norėdami gauti daugiau informacijos, žr. [klientų kortelės priedą](customer-card-add-in.md).
 
 - **„Power Automate“ segmento pakeitimų paleidiklis**
@@ -447,7 +481,7 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 - **„Customer Insights“ prieinamas programoje „Microsoft Dynamics 365 Online Government“**
 
   Atsirandant vis daugiau kanalų, skirtų sąveikoms, piliečių duomenys yra visoje „myriad“ sistemoje, o tai sukuria vienos paskirties duomenis ir suskaidytą informacijos apie piliečių sąveikas rodinį. Be išsamaus kiekvieno piliečio sąveikos kanaluose rodinio, vyriausybės negali modernizuoti tiek, kiek reikia. „Microsoft“ siekia remti vyriausybės technologijų reikmes, kad patenkintų piliečių lūkesčius dėl nuoseklių ir interaktyviųjų patirčių.    
-  Su 2020 m. 1-ąja leidimų banga, „Dynamics 365 Customer Insights“ bus prieinami „Government Community Cloud“ (GCC), aplinka, sukurta siekiant patenkinti didesnės atitikties Jungtinių Valstijų valstybinių institucijų agentūrų poreikius. Agentūros gauna vieningąjį piliečių rodinį ir naudoja iš anksto sukurtą AI, kad gautų įžvalgų, kurios pagerintų sąveikas, įgalintų darbuotojus ir pakeistų bendruomenes, tuo pat metu mažintų IT sudėtingumą ir patenktintų Jungtinių Valstijų atitiktį ir saugumo standartus. „Dynamics 365 Government“ atitinka griežtus JAV federalinės rizikos ir autorizacijos valdymo programos (FedRAMP) reikalavimus, leidžiančius Jungtinių Valstijų federalinėms agentūroms pasinaudoti išlaidų taupymu ir griežta „Microsoft Cloud“ sauga.
+  Su 2020 m. 1-ąja leidimų banga, „Dynamics 365 Customer Insights“ bus prieinami „Government Community Cloud“ (GCC), aplinka, sukurta siekiant patenkinti didesnės atitikties Jungtinių Valstijų valstybinių institucijų agentūrų poreikius. Agentūros gauna vieningąjį piliečių rodinį ir naudoja iš anksto sukurtą AI, kad gautų įžvalgų, kurios pagerintų sąveikas, įgalintų darbuotojus ir pakeistų bendruomenes, tuo pat metu mažintų IT sudėtingumą ir patenkintų Jungtinių Valstijų atitiktį ir saugumo standartus. „Dynamics 365 Government“ atitinka griežtus JAV federalinės rizikos ir autorizacijos valdymo programos (FedRAMP) reikalavimus, leidžiančius Jungtinių Valstijų federalinėms agentūroms pasinaudoti išlaidų taupymu ir griežta „Microsoft Cloud“ sauga.
 
 ## <a name="april-2020-updates"></a>2020 m. balandžio mėn. naujinimai
 
@@ -483,13 +517,13 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 
 - **Eksportuoti į „LiveRamp“**
 
-  Aktyvinkite savo duomenis „LiveRamp®“, kad prisijungtumėte prie daugiau nei 500 platformų skaitmeninėse, socialinėse ir TV ekosistemose. „LiveRamp" duomenis naudokite norėdami taikyti, suslėgti ir asmeniniams poreikiams pritaikyti reklamos kampanijas.    
+  Aktyvinkite savo duomenis „LiveRamp®“, kad prisijungtumėte prie daugiau nei 500 platformų skaitmeninėse, socialinėse ir TV ekosistemose. „LiveRamp” duomenis naudokite norėdami taikyti, suslėgti ir asmeniniams poreikiams pritaikyti reklamos kampanijas.    
   Daugiau informacijos žr. [„LiveRamp“&reg; jungtyje](export-liveramp.md).
 
 - **„Customer Insights Teams“ priedas**
   
   Robotas teikia sujungtų klientų profilių peržvalgos galimybes. Iš gauto kliento profilio pasirodys kortelė su iki 15 laukų. Esant keliems atitikmenims pateikiamas rezultatų sąrašas, kuriame galite pasirinktį profilį.    
-  Norėdami gauti daugiau informacijos, žr, [Komandos robotai, skirti „Customer Insights“ ](export-teams-bot.md).
+  Daugiau informacijos rasite [Komandos robotai, skirti „Customer Insights“ ](export-teams-bot.md).
 
 #### <a name="measures"></a>Matavimai
 

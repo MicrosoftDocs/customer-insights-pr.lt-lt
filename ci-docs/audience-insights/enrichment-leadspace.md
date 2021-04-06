@@ -2,19 +2,19 @@
 title: Bendrovės profilių praturtinimas su trečiosios šalies praturtinimo „Leadspace“
 description: Bendra informacija apie „Leadspace“ trečiosios šalies praturtinimą.
 ms.date: 11/24/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 12eed91a7ca4ef7fde0d53cca4a1dfd398b4634f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269432"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597659"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Įmonių profilių papildymas su „Leadspace“ (peržiūra)
 
@@ -34,7 +34,7 @@ Norint konfigūruoti „Leadspace“, turi būti tenkinamos šios būtinosios s�
 
 1. Pažymėkite **Papildyti mano duomenis** plytelėje „Leadspace“.
 
-   :::image type="content" source="media/leadspace-tile.png" alt-text="„Leadspace“ plytos momentinė ekrano nuotrauka.":::
+   :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace plytos momentinė ekrano nuotrauka.":::
 
 1. Pasirinkite **Pradėti** ir tada įveskite aktyvią **„Leadspace“ žymą** (nuolatinį raktą). Peržiūrėkite ir pateikite sutikimą dėl **Duomenų privatumo ir atitikties** pažymėdami žymės langelį **Sutinku**. Patvirtinkite abi įvestis pasirinkdami **Sujungti su „Leadspace“**.
 
@@ -42,9 +42,9 @@ Norint konfigūruoti „Leadspace“, turi būti tenkinamos šios būtinosios s�
 
    :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Pasirinkite tarp kliento profilio ir segmento papildymo.":::
 
-1. Spustelėkite **Kitas** ir apibrėžkite, kurie laukai iš jūsų vieningų profilių turi būti naudojami norint ieškoti sutampančių įmonės duomenų iš "LeadSpace". **Bendrovės pavadinimo** laukelis yra būtinas. Didesniam atitikties tikslumui, gali būti įtraukti ne daugiau du laukeliai **Bendrovės interneto svetainė** ir **Bendrovės vieta**.
+1. Spustelėkite **Kitas** ir apibrėžkite, kurie laukai iš jūsų vieningų profilių turi būti naudojami norint ieškoti sutampančių įmonės duomenų iš „LeadSpace”. **Bendrovės pavadinimo** laukelis yra būtinas. Didesniam atitikties tikslumui, gali būti įtraukti ne daugiau du laukeliai **Bendrovės interneto svetainė** ir **Bendrovės vieta**.
 
-   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="„Leadspace“ laukelio žemėlapio sukūrimo juosta.":::
+   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace laukelio žemėlapio sukūrimo juosta.":::
    
 1. Pasirinkite **Taikyti** tam, kad užbaigtumėte laukelio žemėlapio kūrimą.
 
@@ -64,7 +64,7 @@ Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [segmentus](segmen
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
-Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Leadspace“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Leadspace“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įpareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
+Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Leadspace“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Leadspace“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 

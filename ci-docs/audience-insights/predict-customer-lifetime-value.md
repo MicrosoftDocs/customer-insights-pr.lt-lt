@@ -2,19 +2,19 @@
 title: Kliento gyvavimo ciklo (CLV) vertės prognozė
 description: Prognozuojamas aktyvių klientų pajamų potencialas ateityje.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268604"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595818"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Kliento gyvavimo ciklo vertės (CLV) prognozė (Apžvalga)
 
@@ -60,7 +60,7 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kurti kliento gyvavimo ciklo vertės prognozę
 
-1. Publikos įžvalgose, eikite į **Žvalgyma** > **Prognozės**.
+1. Publikos įžvalgose, eikite į **Intelektas** > **Prognozės**.
 
 1. Rinkitės **Kliento gyvavimo ciklo vertės** plytelę ir rinkitės **Naudoti modelį**. 
 
@@ -79,7 +79,7 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
    > Norint tiksliai prognozuoti jūsų nustatytą laikotarpį CLV, reikalingas palyginamasis istorinių duomenų laikotarpis. Pavyzdžiui, jei norite numatyti kitus 12 mėnesių, rekomenduojama turėti mažiausiai 18–24 istorinių duomenų mėnesius.
 
 1. Nurodykite, ką **Aktyvūs klientai** reiškia jūsų įmonei. Nustatykite laiką, per kurį klientas turi turėti bent vieną operaciją, kuri bus laikoma aktyvia. Modelis nuspės tik aktyvių klientų CLV. 
-   - **Leiskite modeliui apskaičiuoti pirkimo intervalą (rekomenduojama)**: modelis analizuoja jūsų duomenis ir nustatolaikotarpį, pagrįstą istoriniais pirkiniais.
+   - **Leiskite modeliui apskaičiuoti pirkimo intervalą (rekomenduojama)**: modelis analizuoja jūsų duomenis ir nustato laikotarpį, pagrįstą istoriniais pirkiniais.
    - **Intervalą nustatykite rankiniu būdu**: jei turite konkretų aktyvaus kliento verslo aprašą, pasirinkite šią parinktį ir atitinkamai nustatykite laikotarpį.
 
 1. Apibrėžkite didelės **vertės kliento procentus,** kad modelis pateiktų jūsų verslo aprašą atitinkantį rezultatą.
@@ -161,7 +161,7 @@ Pagrindiniai duomenų sąveikos su klientais veiksmai (pvz., žiniatinklis, klie
     - **Eilė**: prognozė laukia, kol bus užbaigti kiti procesai.
     - **Atnaujinimas**: prognozė vykdomas, kad būtų kuriami rezultatai, kurie bus įtraukti į išvesties objektą.
     - **Nepavyko** : Prognozės vykdymas nepavyko. [Peržiūrėkite įrašus](#troubleshoot-a-failed-prediction) dėl išsamesnės informacijos.
-    - **Pavyko**: Prognozė pavyko. Pasirinkite **Peržiūrėti** po vertikaliais eliksais ir prognozė rezultatus.
+    - **Pavyko**: Prognozė pavyko. Pasirinkite **Peržiūrėti** po vertikaliomis elipsėmis prognozavimo rezultatų peržiūrai.
 - **Redaguota**: data, kai buvo pakeista prognozės konfigūracija.
 - **Paskutinį kartą atnaujinta** : data, kai prognozė atnaujino rezultatus išvesties objekte.
 
@@ -176,7 +176,7 @@ Rezultatų puslapyje yra trys pagrindinės duomenų dalys.
 
 - **Mokymo modelio** efektyvumas: A, B ar C yra galimos kategorijos. Šis įvertinimas nurodo objekto prognozė ir gali padėti jums priimti sprendimą naudoti rezultatus, saugomus išvesties objektu. Pasirinkite **Sužinokite apie šį įvertinimą** , kad geriau suprastumėte pagrindines modelio efektyvumo metrikas ir kaip buvo išvesta galutinė modelio efektyvumo klasė.
   
-  :::image type="content" source="media/clv-model-score.png" alt-text="Modelio balo informacijos lauko vaizdas su A laipsniu.":::
+  :::image type="content" source="media/clv-model-score.png" alt-text="Modelio balo informacijos lauko vaizdas su A laipsniu":::
 
   Naudojant didelės vertės klientų apibrėžimą, pateiktą konfigūruojant prognozė, sistema nustato, kaip AI modelis atliktas prognozuojamų didelės vertės klientų lyginant su pradiniu modeliu.    
 
@@ -194,11 +194,11 @@ Rezultatų puslapyje yra trys pagrindinės duomenų dalys.
   
   - **Sėkmės koeficientas prognozuojant labai vertingus klientus**
 
-  Žr. skirtumą tarp prognozuojamų didelės vertės klientų, kurie naudoja AI modelį, palyginti su pradiniu modeliu. Pavyzdžiui, 84 % sėkmingų klientų skaičius reiškia, kad iš visų vertingų klientų mokymo duomenyse AI modelis galėjo tiksliai užfiksuoti 84 %. Tada palyginsime šį sėkmės koeficientą su pradinio modelio sėkmingų duomenų koeficientu ir pranešame apie santykinį pakeitimą. Ši reikšmė naudojama modeliui priskirti.
+    Žr. skirtumą tarp prognozuojamų didelės vertės klientų, kurie naudoja AI modelį, palyginti su pradiniu modeliu. Pavyzdžiui, 84 % sėkmingų klientų skaičius reiškia, kad iš visų vertingų klientų mokymo duomenyse AI modelis galėjo tiksliai užfiksuoti 84 %. Tada palyginsime šį sėkmės koeficientą su pradinio modelio sėkmingų duomenų koeficientu ir pranešame apie santykinį pakeitimą. Ši reikšmė naudojama modeliui priskirti.
 
   - **Klaidų metrika**
     
-  Naudodami kitą metriką galite peržiūrėti bendrą modelio našumą, atsižvelgiant į klaidas ir prognozuoti būsimas reikšmes. Šią klaidą įvertinti naudojame bendrą šakninio vidurkio kvadratinės klaidos (RMSE) metriką. RMSE yra standartinis būdas įvertinti modelio klaidą prognozuojant suslėgtinius duomenis. AI modelio RMSE lyginamas su pradinės linijos modelio RMSE ir pranešama apie santykinį skirtumą.
+    Naudodami kitą metriką galite peržiūrėti bendrą modelio našumą, atsižvelgiant į klaidas ir prognozuoti būsimas reikšmes. Šią klaidą įvertinti naudojame bendrą šakninio vidurkio kvadratinės klaidos (RMSE) metriką. RMSE yra standartinis būdas įvertinti modelio klaidą prognozuojant kiekybinius duomenis. AI modelio RMSE lyginamas su pradinės linijos modelio RMSE ir pranešama apie santykinį skirtumą.
 
   AI modelis pagal prioritetus suteikia tikslaus klientų rango pagal vertę, kuri juos suteikia jūsų verslui. Todėl galutinis modelio įvertinimas susekimas naudojamas tik prognozuojamų didelės vertės klientų sėkmės koeficientui. RMSE metrika yra opi prie išorinių objektų. Scenarijų, kai klientų, kurių pirkimo vertės yra itin didelės, procentinė dalis, bendra RMSE metrika gali ne visiškai pavaizduoti modelio efektyvumą.   
 

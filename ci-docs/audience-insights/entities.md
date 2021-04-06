@@ -2,19 +2,19 @@
 title: Objektai ir duomenų rinkiniai
 description: Peržiūrėkite duomenis objektų puslapyje.
 ms.date: 04/16/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e71c69a6207147d8cd65363d51a5fa6bbf896151
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269386"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596417"
 ---
 # <a name="entities-in-audience-insights"></a>Objektai publikos įžvalgose
 
@@ -56,7 +56,7 @@ Norėdami peržiūrėti duomenų suvestinę, pažymėkite diagramos piktogramą.
 
 ### <a name="next-step"></a>Kitas veiksmas
 
-Norėdami sužinoti kaip *susieti*, *sutapdinti* ir *sulieti* apdorotus duomenis, žr. temą [Sujungimas](data-unification.md).
+Norėdami sužinoti kaip *susieti*, *sutapdinti* ir *sulieti* apdorotus duomenis, žr. temą [Suvienodinti](data-unification.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

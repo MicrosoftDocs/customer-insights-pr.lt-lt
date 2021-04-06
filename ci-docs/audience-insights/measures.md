@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269938"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654742"
 ---
 # <a name="define-and-manage-measures"></a>Matų apibrėžimas ir valdymas
 
@@ -34,7 +34,7 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
 
 1. Pasirinkite **Redaguoti pavadinimą** ir įveskite priemonės **pavadinimą**. 
    > [!NOTE]
-   > Jei jūsų naujo matavimo konfigūracijoje yra tik du laukai: iškvietai, "CustomerID" ir vienam skaičiavimui rezultatai bus įtraukti kaip naujas stulpelis į sistemos sugeneruotą objektą, kurio pavadinimas Customer_Measure. O priemonės vertę galėsite matyti unifikuotame kliento profilyje. Kitos priemonės sugeneruos nuosavus objektus.
+   > Jei jūsų naujo matavimo konfigūracijoje yra tik du laukai, pavyzdžiui, Kliento ID ir vienas skaičiavimas, rezultatai bus įtraukti kaip naujas stulpelis į sistemos sugeneruotą objektą, kurio pavadinimas„ Customer_Measure”. O priemonės vertę galėsite matyti unifikuotame kliento profilyje. Kitos priemonės sugeneruos nuosavus objektus.
 
 1. Konfigūracijos srityje pasirinkite agregavimo funkciją **Pažymėti funkciją** išplečiamajame meniu. Agregavimo funkcijos yra šios: 
    - **Sum**
@@ -44,7 +44,7 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
    - **Didžiausia**
    - **Min**
    - **Pirma:** perima pirmą duomenų įrašo reikšmę
-   - **Paskutin:** perima paskutinę į duomenų įrašą pridėtą reikšmę
+   - **Paskutinė:** perima paskutinę į duomenų įrašą pridėtą reikšmę
 
    :::image type="content" source="media/measure-operators.png" alt-text="Apibrėžkite mato skaičiavimus.":::
 
@@ -69,12 +69,12 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
    1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
 
 1. Norėdami įtraukti dimensijas, konfigūracijos srityje pažymėkite **Dimensijos**. Dimensijų rezultatai bus rodomi kaip stulpeliai.
-   1. Pasirinkite **Redaguoti dimensijas** reikšmę ir įtraukite duomenų atributų, pagal kuriuos norite grupuoti matavimo reikšmes. Pvz.: miestą arba lytį. Pagal numatytuosius nustatymus, siekiant kurti *kliento lygio matus*, pasirenkama *"CustomerID"*. Jei norite kurti verslo lygio priemones, galite pašalinti *numatytąją dimensiją*.
+   1. Pasirinkite **Redaguoti dimensijas** reikšmę ir įtraukite duomenų atributų, pagal kuriuos norite grupuoti matavimo reikšmes. Pvz.: miestą arba lytį. Pagal numatytuosius nustatymus, siekiant kurti *kliento lygio matus*, pasirenkama *Kliento ID*. Jei norite kurti verslo lygio priemones, galite pašalinti *numatytąją dimensiją*.
    1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
 
-1. Jei tarp jūsų susietų duomenų objektų ir kliento objekto yra keli keliai, turite pasirinkti vieną iš nustatytų [objekto ryšio kelių](relationships.md). Matavimo rezultatai gali skirtis atsižvelgiant į pasirinktą kelią.
-   1. Pažymėkite **Duomenų nuostatas** ir pasirinkite kelią, kurį reikėtų naudoti jūsų priemonei identifikuoti.
-   1. Pasirinkite **Atlikta**, kad pritaikyumėte savo pasirinkimą. 
+1. Jei tarp jūsų susietų duomenų objektų ir *Kliento* objekto yra keli keliai, turite pasirinkti vieną iš nustatytų [objekto ryšio kelių](relationships.md). Matavimo rezultatai gali skirtis atsižvelgiant į pasirinktą kelią. 
+   1. Pažymėkite **Duomenų nuostatas** ir pasirinkite kelią, kurį reikėtų naudoti jūsų priemonei identifikuoti. Jei yra tik vienas kelias į *Kliento* objektą, šis valdiklis nebus rodomas.
+   1. Pasirinkite **Atlikta**, kad pritaikytumėte savo pasirinkimą. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Pasirinkite diagramos objektą.":::
 

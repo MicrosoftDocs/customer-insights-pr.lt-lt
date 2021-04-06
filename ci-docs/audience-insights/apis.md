@@ -1,20 +1,20 @@
 ---
 title: Dirbkite su API
 description: Naudokite API ir supraskite apribojimus.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267534"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710470"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbas su „Customer Insights“ API
 
@@ -36,7 +36,7 @@ ms.locfileid: "5267534"
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Įjungti „Customer Insights“ API":::
 
-1. Pasirinkite **Naršyti mūsų API** siekiant išbandyti API.
+1. Pasirinkite **Naršyti mūsų API** norėdami [išbandyti API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
 1. Pasirinkite API operaciją ir rinkitės **Išbandyti**.
 
@@ -47,6 +47,9 @@ ms.locfileid: "5267534"
 1. Eikite iki šoninės juostos apačios ir pasirinkite **Siųsti**.
 
 HTTP atsakas greitai pasirodys apačioje.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="Animacinis GIF, iš kurio matyti, kaip pasirinkti API tikrinimą.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Sukurkite naują programos registravimą „Azure“ portale
 
@@ -61,19 +64,23 @@ HTTP atsakas greitai pasirodys apačioje.
 
 1. Jūsų naujos programos registracijoje eikite į **API teisės**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Animacinis GIF, skirtas nustatyti API teisę programos registracijoje.":::
+
 1. Rinkitės **Įtraukti teisę** ir pasirinkite **„Customer Insights“** šoninėje juostoje.
 
 1. **Leidimo tipui**, pasirinkite **Suteikti leidimai** ir pasirinkite **vartotojo_suasmeninimas** leidimą.
 
-1. Pasirinkite **Įtraukti teisių**. Jei jums reikia prieigos prie API neprisijungiant vartototjui, peržiūrėkite [Serveris su serveriu programos leidimus](#server-to-server-application-permissions) skyrių.
+1. Pasirinkite **Įtraukti teisių**. Jei jums reikia prieigos prie API neprisijungiant vartotojui, peržiūrėkite [Serveris su serveriu programos leidimus](#server-to-server-application-permissions) skyrių.
 
 1. Pasirinkite **Suteikite administratoriaus leidimą...** tam, kad užbaigtumėte programos registraciją.
 
 Galite naudoti programos/kliento ID šios programos registracijai su „Microsoft“ autentifikavimo biblioteka (MSAL) tam, kad gautumėte būdingą žymą ir siųstumėte ją su savo prašymu į API.
 
-Dėl išsamesnės informacijos apie MSAL, žr [„Microsoft“ autentifikavimo bibliotekos (MSAL) apžvalga](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Animacinis GIF, skirtas administratoriaus sutikimo suteikimui.":::
 
-Dėl išsamesnės informacijos apie programos registravimą „Azure“, žr. [Nauja „Azure“ portalo programos registracijos patirtis](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Daugiau informacijos apie MSAL, rasite [„Microsoft“ autentifikavimo bibliotekos (MSAL) apžvalga](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
+
+Dėl išsamesnės informacijos apie programos registravimą „Azure“, žr. [Nauja „Azure“ portalo programos registracijos patirtis](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Dėl informacijos apie API mūsų kliento bibliotekų naudojimą, žr. [„Customer Insights“ kliento bibliotekos](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ Dėl informacijos apie API mūsų kliento bibliotekų naudojimą, žr. [„Custo
 
 1. Pasirinkite **Suteikite administratoriaus leidimą...** tam, kad užbaigtumėte programos registraciją.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Animacinis GIF, skirtas administratoriaus sutikimo suteikimui.":::
+
 1. Siekiant užbaigti, įtraukėme programos registracijos pavadinimą kaip vartotoją į „Customer Insights“.    
    Atverkite „Customer Insights“, eikite į **Administratorius** > **Leidimai** ir pasirinkite **Įtraukti vartotoją**.
 
@@ -108,7 +117,7 @@ Dėl informacijos apie API mūsų kliento bibliotekų naudojimą, žr. [„Custo
 
 ## <a name="customer-insights-client-libraries"></a>„Customer Insights“ kliento bibliotekos
 
-Šis skyrius jums padeda pradėti naudoti kliento bibliotekas esančias „Customer Insights“ API.
+Šis skyrius jums padeda pradėti naudoti kliento bibliotekas esančias „Customer Insights“ API. Visus bibliotekos šaltinio kodus ir taikomųjų programų pavyzdžius galima rasti [„Customer Insights GitHub” puslapyje](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,19 +136,26 @@ Sužinokite, kaip pradėti naudojant C# kliento bibliotekas iš NuGet.org. Dėl 
 
 #### <a name="use-the-c-client-library"></a>Naudokite C# kliento biblioteką
 
-1. Naudokite [„Microsoft“ autentifikavimo biblioteką (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) tam, kad gautumėte `AccessToken` naudodami esančią savo [„Azure“ programos registraciją](#create-a-new-app-registration-in-the-azure-portal).
+1. Naudokite [„Microsoft“ autentifikavimo biblioteką (MSAL)](/azure/active-directory/develop/msal-overview) tam, kad gautumėte `AccessToken` naudodami esančią savo [„Azure“ programos registraciją](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Po sėkmingo autentifikavimo ir žymos gavimo, sukurkite naują ar naudokite esančią `HttpClient` su papildomu **DefaultRequestHeaders "leidimu"** nustatytu į **Būdingas <access token>** ir **Ocp-Apim-Prenumeravimo-raktu** nustatytu į [**prenumeravimo raktas** iš jūsų „Customer Insights“ aplinkos](#get-started-trying-the-customer-insights-apis).    
+1. Po sėkmingo autentifikavimo ir žymos gavimo, sukurkite naują ar naudokite esančią `HttpClient` su papildomu **„DefaultRequestHeaders” leidimu** nustatytu į **Būdingas <access token>** ir **Ocp-Apim-Prenumeravimo-raktu** nustatytu į [**prenumeravimo raktas** iš jūsų „Customer Insights“ aplinkos](#get-started-trying-the-customer-insights-apis).    
    Paleiskite iš naujo **autorizavimo** antraštę, kai būtina. Pavyzdžiui, kai žyma baigė galioti.
 
 1. Praleiskite šį `HttpClient` į `CustomerInsights` kliento sukūrimą.
 
    :::image type="content" source="media/httpclient-sample.png" alt-text="Http kliento pavyzdys":::
 
-1. Atlieka skambučius su klientu „plėtinio metodams“, pavyzdžiui `GetAllInstancesAsync`. Jei norite prieiti prie po juo esančiu `Microsoft.Rest.HttpOperationResponse`, naudokite „http žinutės metodai", pavyzdžiui `GetAllInstancesWithHttpMessagesAsync`.
+1. Atlieka skambučius su klientu „plėtinio metodams“, pavyzdžiui `GetAllInstancesAsync`. Jei norite prieiti prie po juo esančiu `Microsoft.Rest.HttpOperationResponse`, naudokite „http žinutės metodai”, pavyzdžiui `GetAllInstancesWithHttpMessagesAsync`.
 
 1. Atsakymas greičiausiai bus `object` objekto tipo, nes metodas gali grįžti į keletą tipų (pavyzdžiui, `IList<InstanceInfo>` ir `ApiErrorResult`). Norėdami patikrinti grįžimo tipą, galite saugiai sudėlioti objektus į atsakymų tipus nurodytus [API išsamios informacijos puslapis](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) veikimui.    
    Jei reikia daugiau informacijos, naudokite **http pranešimo metodus** tam, kad prieitumėte prie neapdoroto atsakymo objekto.
 
+### <a name="nodejs-package"></a>„NodeJS” paketas
+
+Naudokite „NodeJS” klientų bibliotekas, pasiekiamas per NPM: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>„Python” paketas
+
+Naudokite „Python” klientų bibliotekas, pasiekiamas per PyPi: https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

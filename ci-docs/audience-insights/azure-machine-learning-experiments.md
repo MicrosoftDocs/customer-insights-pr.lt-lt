@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267916"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597429"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Naudokite „Azure Machine Learning“ pagrįstus modelius
 
@@ -27,11 +27,11 @@ Suvienodinti duomenys „Dynamics 365 Customer Insights“ yra šaltinis skirtas
 - [Sujungti klientų profiliai](data-unification.md)
 - [Objekto eksportavimas į „Azure Blob“ talpinimą](export-azure-blob-storage.md) sukonfigūruotas
 
-## <a name="set-up-azure-machine-learning-workspace"></a>Nustatyktie „Azure Machine Learning“ darbo aplinką
+## <a name="set-up-azure-machine-learning-workspace"></a>Nustatykite „Azure Machine Learning“ darbo aplinką
 
-1. Žr. [sukurti „Azure Machine Learning“ darbo aplinką](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) skirtingoms parinktims siekiant sukurti darbo aplinką. Geriausiam vykdymui, sukurkite darbo aplinką „Azure“ regione, kuris yra geografiškai artimiausias jūsų „Customer Insights“ aplinkai.
+1. Žr. [sukurti „Azure Machine Learning“ darbo aplinką](/azure/machine-learning/concept-workspace#-create-a-workspace) skirtingoms parinktims siekiant sukurti darbo aplinką. Geriausiam vykdymui, sukurkite darbo aplinką „Azure“ regione, kuris yra geografiškai artimiausias jūsų „Customer Insights“ aplinkai.
 
-1. Prieikite prie savo darbo aplinkos per [„Azure Machine Learning Studio“](https://ml.azure.com/). Yra keletas būdų [būdų sąveikauti](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) su jūsų darbo aplinka.
+1. Prieikite prie savo darbo aplinkos per [„Azure Machine Learning Studio“](https://ml.azure.com/). Yra keletas būdų [būdų sąveikauti](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) su jūsų darbo aplinka.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Dirbkite su „Azure Machine Learning“ kūrėju
 
@@ -39,13 +39,13 @@ Suvienodinti duomenys „Dynamics 365 Customer Insights“ yra šaltinis skirtas
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Darbas su „Azure Machine Learning“ SDK
 
-Duomenų mokslininkai ir AI kūrėjai naudoja [„Azure Machine Learning“ SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) ttam, kad sukurtų mašininio mokymosi darbo eigas. Šiuo metu modeliai ištreniruoti naudoti SDK negali būti integruoti tiesiogiai su „Customer Insights“. Bendros išvesties vamzdynas vartoja modelį, kuris turi būti integruotas su „Customer Insights“.
+Duomenų mokslininkai ir AI kūrėjai naudoja [„Azure Machine Learning“ SDK](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) tam, kad sukurtų mašininio mokymosi darbo eigas. Šiuo metu modeliai ištreniruoti naudoti SDK negali būti integruoti tiesiogiai su „Customer Insights“. Bendros išvesties vamzdynas vartoja modelį, kuris turi būti integruotas su „Customer Insights“.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Bendri vamzdyno reikalavimai integravimui su „Customer Insights“
 
 ### <a name="dataset-configuration"></a>Duomenų rinkinio konfigūravimas
 
-Jums reikia kurti duomenų rinkinius tam, kad naudotumėte objekto duomenis iš „Customer Insights“ į savo bendrą išvesties vamzdyną. Šie duomenų rinkiniai turi būti registruoti darbo aplinkoje. Šiuo metu palaikome tik [lentelės duomenų rinkinius](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) .csv formatu. Duomenų rinkiniai atitinka objekto duomenis turi būti su nustatytais parametrais kaip vamzdyno parametrai.
+Jums reikia kurti duomenų rinkinius tam, kad naudotumėte objekto duomenis iš „Customer Insights“ į savo bendrą išvesties vamzdyną. Šie duomenų rinkiniai turi būti registruoti darbo aplinkoje. Šiuo metu palaikome tik [lentelės duomenų rinkinius](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) .csv formatu. Duomenų rinkiniai atitinka objekto duomenis turi būti su nustatytais parametrais kaip vamzdyno parametrai.
    
 * Duomenų rinkinio parametrai kūrimo įrankyje
    
@@ -76,7 +76,7 @@ Jums reikia kurti duomenų rinkinius tam, kad naudotumėte objekto duomenis iš 
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importuokite vamzdyno duomenis į „Customer Insights“
 
-* Kūrimo įrankis pateikia [Duomenų eksportavimo modulį](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) leidžiantį vamzdyno išvesčiai būti eksportuotai į „Azure“ talpinimą. Šiuo metu modulis turi naudoti duomenų talpinimo tipą **„Azure Blob Storage“** ir nustatyti parametrus **Duomenų talpinime** ir atitinkamą **Kelią**. „Customer Insights“ viršyja abu šiuos parametrus vamzdyno vykdymo metu su duomenų talpinimu ir keliu, kuris prieinamas produktui.
+* Kūrimo įrankis pateikia [Duomenų eksportavimo modulį](/azure/machine-learning/algorithm-module-reference/export-data) leidžiantį vamzdyno išvesčiai būti eksportuotai į „Azure“ talpinimą. Šiuo metu modulis turi naudoti duomenų talpinimo tipą **„Azure Blob Storage“** ir nustatyti parametrus **Duomenų talpinime** ir atitinkamą **Kelią**. „Customer Insights“ perrašo abu šiuos parametrus vamzdyno vykdymo metu su duomenų talpinimu ir keliu, kuris prieinamas produktui.
    > [!div class="mx-imgBorder"]
    > ![Eksportuoti duomenų modulio konfigūravimą](media/intelligence-designer-importdata.png "Eksportuoti duomenų modulio konfigūravimą")
    

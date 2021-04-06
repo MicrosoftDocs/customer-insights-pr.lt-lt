@@ -1,20 +1,20 @@
 ---
-title: Praturinkite klientų profilius su „Microsoft Graph“
+title: Praturtinkite klientų profilius su „Microsoft Graph“
 description: Naudodami „Microsoft Graph“ patentuotus duomenis papildykite kliento duomenis informacija apie susidomėjimą prekių ženklais ir pomėgiais.
 ms.date: 12/10/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: aa46dac4f9c0d27881371877b14a92a6725710da
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269340"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596463"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Klientų profilių papildymas informacija apie susidomėjimą prekių ženklais ir pomėgiais (peržiūra)
 
@@ -33,7 +33,7 @@ Norėdami konfigūruoti pomėgio panašumo papildymą, eikite į skirtuką **Atr
 
 Naudojame „Microsoft Graph“ paieškos internete duomenis, kad rastumėme informaciją apie susidomėjimą prekių ženklais ir pomėgiais įvairiuose demografiniuose segmentuose (nustatytuose pagal amžių, lytį ar vietą). Pagal prekių ženklo ar pomėgio paieškos internete apimtį nustatoma, koks yra demografinio segmento susidomėjimas tuo prekių ženklu ar pomėgiu, palyginti su kitais segmentais.
 
-[Sužinokite daugiau apie „Microsoft Graph“](https://docs.microsoft.com/graph/overview).
+[Sužinokite daugiau apie „Microsoft Graph“](/graph/overview).
 
 ## <a name="affinity-level-and-score"></a>Priskyrimo lygis ir balas
 
@@ -49,7 +49,7 @@ Kiekviename praturtintame kliento profilyje teikiame dvi susijusias reikšmes �
 |Vidutinį     | 35-69        |
 |Žemą     | 1-34        |
 
-Priklausomai nuo to, kaip norite matuoti priskyrimą, galite naudoti arba priskyrimo lygį, arba balą. "Priskyrimo" balas suteikia tikslesnį valdymą.
+Priklausomai nuo to, kaip norite matuoti priskyrimą, galite naudoti arba priskyrimo lygį, arba balą. Priskyrimo balas suteikia tikslesnį valdymą.
 
 ## <a name="supported-countriesregions"></a>Palaikomos šalys ir (arba) regionai
 

@@ -2,23 +2,23 @@
 title: Produkto rekomendacijos prognozė
 description: Prognozuojami produktai, kuriuos klientas gali įsigyti arba su jais bendrauti.
 ms.date: 02/15/2021
-ms.reviewer: zacook
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 5a2eb2b4697e51a0abb933b654a9b0b150dfa6a3
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 5ae78b6bbc51fd8a25bc408050a23479698a1414
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270515"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598073"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produkto rekomendacijos prognozė (apžvalga)
 
-Produktų rekomendacijų modelis sukuria prognozuojamų produktų rekomendacijų rinkinius. Rekomendacijos pagrįstos ankstesniu pirkimo elgsena ir klientais, kurie turi panašius pirkimo modelius. Puslapyje prognozės galite kurti naujas prognozes **Įžvalgos** > **Prognozių** puslapyje. Norėdami pamatyti, ką sukūrėte, pasirinkite **Nano prognozės**.
+Produktų rekomendacijų modelis sukuria prognozuojamų produktų rekomendacijų rinkinius. Rekomendacijos pagrįstos ankstesniu pirkimo elgsena ir klientais, kurie turi panašius pirkimo modelius. Puslapyje prognozės galite kurti naujas prognozes **Įžvalgos** > **Prognozių** puslapyje. Norėdami pamatyti kitas jūsų sukurtas prognozes pasirinkite **Mano prognozės**.
 
 Produkto rekomendacijos gali būti taikomos pagal vietinius įstatymus ir sprendimus bei klientų lūkesčius, į kuriuos modelis nėra sukurtas tam, kad būtų galima specialiai atsižvelgti.  Kaip šios prognozuojamos galimybės, **vartotojas, prieš pristatant jas klientams, turite peržiūrėti rekomendacijas,** kad užtikrintumėte, jog laikote visų taikytinų įstatymų ir nuostatų dėl klientų lūkesčius, kurių galite tikėtis. 
 
@@ -33,15 +33,15 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 - Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.
 - Verslo žinių, kad būtų galima suprasti įvairius jūsų įmonės produktų tipus ir klientų bendravimą su jais. Palaikome produktų, kuriuos anksčiau įsigijo jūsų klientai, rekomendavimas arba naujų produktų rekomendacijos.
 - Duomenys apie operacijas, pirkinius ir jų retrospektyvą:
-    - Transakcijos identifikatoriai, skirti pirkti ar transakkcijos.
-    - Klientų identifikatoriai, siejantys transakcijas su klientais.
-    - Transakcijos įvykio datos, nurodanti datas, kada įvyko operacija.
+    - Operacijų identifikatoriai, skirti pirkimams arba operacijoms.
+    - Klientų identifikatoriai, siejantys operacijas su klientais.
+    - Operacijos įvykio datos, nurodančios operacijos atlikimo datas.
     - (Pasirinktinis) Operacijos produkto ID informacija.
-    - (Pasirinktinis) Jei operacija yra grąža, ar ne.
+    - (Pasirinktinis) Jei operacija yra grįžtamoji, ar ne.
     - Semantinė duomenų schema reikalauja šios informacijos:
-        - **Perlaidos ID:** Unikalus įsigijmo ar perlaidos identifikatorius.
-        - Lauke **Transakcijos data** nurodoma operacijos ar įsigijimo data.
-        - **Operacijos reikšmė:** pirkimo arba transakcijos skaitinė reikšmė.
+        - **Perlaidos ID:** Unikalusis pirkimo arba perkėlimo identifikatorius.
+        - Lauke **Operacijos data** nurodoma operacijos ar įsigijimo data.
+        - **Operacijos reikšmė:** pirkimo arba operacijos skaitinė reikšmė.
         - **Unikalus produkto ID:** įsigyto produkto arba aptarnavimo ID, jei duomenys yra eilutės elemento lygyje.
         - (pasirinktinis) **Pirkimas arba grąžinimas:** teisingas / klaidingas laukas, nurodantis, ar operacija buvo grąža, ar ne. Jei **Perlaidos vertė** yra neigiama, mes taip pat naudosime šią informaciją grįžimo numatymui.
 
@@ -131,20 +131,20 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 1. Rezultatų puslapyje yra trys pagrindinės duomenų dalys:
     1. **Mokymo modelio efektyvumas:** galimi balai yra A, B arba C. Šis rezultatas nurodo prognozės efektyvumą ir gali padėti apsispręsti naudoti išvesties objekte saugomus rezultatus.
         - Balai nustatomi pagal šias taisykles:
-            - **Modelis** bus laikomas **kokybišku, jei** „Sėkmės @ K" metrika bus bent 10 % daugiau nei pradinė. 
-            - **B** bus laikomas kokybišku, jei **B** „Sėkmės @ K" metrika bus nuo 0 iki 10 % didesnė nei pradinė.
-            - **C** bus laikomas kokybišku, jei **C** „Sėkmės @ K" metrika bus mažesnė nei pradinė.
+            - **Modelis** bus laikomas **kokybišku, jei** „Sėkmės @ K” metrika bus bent 10 % daugiau nei pradinė. 
+            - **B** bus laikomas kokybišku, jei **B** „Sėkmės @ K” metrika bus nuo 0 iki 10 % didesnė nei pradinė.
+            - **C** bus laikomas kokybišku, jei **C** „Sėkmės @ K” metrika bus mažesnė nei pradinė.
                
                > [!div class="mx-imgBorder"]
                > ![Modelio efektyvumo rezultato rodinys](media/product-recommendation-modelperformance.PNG "Modelio efektyvumo rezultato rodinys")
-            - **Pradinis**: modelis atsižvelgia į svarbiausius rekomenduojamus produktus, kai perkant naudojami visi klientai ir, naudojant modelio nustatytas išmokintas taisykles, klientams nustatomas rekomendacijų rinkinys. Tada prognozės lyginamos su geriausiais produktais ir apskaičiuojamos pagal klientų, kurie įsigijo produktą, skaičių. Jei klientas savo rekomenduojamuose produktuose turi bent vieną produktą, kuris taip pat buvo matomas geriausiai įsigytuose produktuose, jis laikomas pradinės linijos dalimi. Jei 10 iš šių klientų būtų įsigę rekomenduojamą produktą iš 100 bendro klientų, pradinis atskaitos skaičius būtų 10%.
-            - **Sėkmė @ K**: naudojant operacijų laikotarpio tikrinimo rinkinį, visiems klientams kuriamos rekomendacijos ir jos lyginamos su operacijų tikrinimo rinkinys. Pavyzdžiui, 12 mėnesių laikotarpiu 12 mėnesį galima atidėti kaip duomenų tikrinimo rinkinį. Jei modelis numato bent vieną dalyką, kurį galėtumėte įsigyti 12 mėnesį pagal tai, ką jis išmoko iš ankstesnių 11 mėnesių, klientas padidins metriką „Sėkmė @ K".
+            - **Pradinis**: modelis atsižvelgia į svarbiausius rekomenduojamus produktus, kai perkant naudojami visi klientai ir, naudojant modelio nustatytas išmokintas taisykles, klientams nustatomas rekomendacijų rinkinys. Tada prognozės lyginamos su geriausiais produktais ir apskaičiuojamos pagal klientų, kurie įsigijo produktą, skaičių. Jei klientas savo rekomenduojamuose produktuose turi bent vieną produktą, kuris taip pat buvo matomas geriausiai įsigytuose produktuose, jis laikomas pradinės linijos dalimi. Jei 10 iš šių klientų būtų įsigiję rekomenduojamą produktą iš 100 bendro klientų, pradinis atskaitos skaičius būtų 10%.
+            - **Sėkmė @ K**: naudojant operacijų laikotarpio tikrinimo rinkinį, visiems klientams kuriamos rekomendacijos ir jos lyginamos su operacijų tikrinimo rinkinys. Pavyzdžiui, 12 mėnesių laikotarpiu 12 mėnesį galima atidėti kaip duomenų tikrinimo rinkinį. Jei modelis numato bent vieną dalyką, kurį galėtumėte įsigyti 12 mėnesį pagal tai, ką jis išmoko iš ankstesnių 11 mėnesių, klientas padidins metriką „Sėkmė @ K”.
     
     1. **Daugelis siūlomų produktų (su sutampa):** 5 populiariausi produktai, kurie buvo prognozuojami klientams.
        > [!div class="mx-imgBorder"]
        > ![Grafikas, kuriame rodomi 5 populiariausi produktai](media/product-recommendation-topproducts.PNG "Grafikas, kuriame rodomi 5 populiariausi produktai")
     
-    1. **Labai susaikdančių produktų rekomendacijos:** jūsų klientams pateiktų rekomendacijų, pagal kurias klientas tikriausiai įsigys modelio išgąsdą, pavyzdys.
+    1. **Didelio pasitikėjimo produktų rekomendacijos:** jūsų klientams pateiktų rekomendacijų, kuris modelis tikėtinai bus nupirktas kliento, pavyzdys.
        > [!div class="mx-imgBorder"]
        > ![Sąrašas, kuriame rodomi aukšti pavienių klientų rinkinio pasiūlymai](media/product-recommendation-highconfidence.PNG "Sąrašas, kuriame rodomi aukšti pavienių klientų rinkinio pasiūlymai")
 

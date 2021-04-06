@@ -5,16 +5,16 @@ ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: nimagen
+author: NimrodMagen
+ms.author: nimagen
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 87bf8d7b9c23633ebdc929e15ac645c55cc21e4a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267350"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595390"
 ---
 # <a name="system-configuration"></a>Sistemos konfigūracija
 
@@ -49,7 +49,7 @@ Esama šešių būsenų tipų užduotims. Toliau nurodyti būsenos tipai taip pa
 
 ### <a name="refresh-policies"></a>Atnaujinimo strategijos
 
-Sąraša rodomos atnaujinimo politikoms kiekvienam iš pagrindinių procesų:
+Sąraše rodomos atnaujinimo strategijos kiekvienam iš pagrindinių procesų:
 
 - **Duomenų šaltiniai:** vykdoma pagal [sukonfigūruotą grafiką](#schedule-tab). Nepriklauso nuo jokio kito proceso. Gretinimas priklauso nuo, ar šis procesas buvo sėkmingai baigtas.
 - **Gretinimas:** vykdoma pagal [sukonfigūruotą grafiką](#schedule-tab). Priklauso nuo duomenų šaltinių, naudojamų gretinimo apraše, apdorojimo. Suliejimas priklauso nuo, ar šis procesas buvo sėkmingai baigtas.
@@ -103,7 +103,7 @@ Raskite informacijos apie realiojo laiko API naudojimą ir sužinokite, kurie į
 
 -  **Operacijos** – lentelė su kiekvienos galimos API operacijos eilutėmis ir išsami informacija apie operacijų naudojimą. Galite pažymėti operacijos pavadinimą, kurį [į norite eiti API ](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Operacijose, kuriose pateikiami [realiuoju laiku naudojami duomenys](real-time-data-ingestion.md) yra mygtukas su bino vaizdu ir peržiūrėti API naudojimą realiuoju laiku. Pasirinkite mygtuką siekiant atidaryti šoninę juostą turinčią suvartojimo informaciją realaus laiko API naudojimui ir esamai aplinkai.   
+   Operacijose, kuriose pateikiami [realiuoju laiku naudojami duomenys](real-time-data-ingestion.md) yra mygtukas su žiūrono simboliu, skirtu peržiūrėti API naudojimą realiuoju laiku. Pasirinkite mygtuką siekiant atidaryti šoninę juostą turinčią suvartojimo informaciją realaus laiko API naudojimui ir esamai aplinkai.   
    Naudokite lauką **Grupuoti** pagal **pateikiamą realiuoju** laiku naudojant API, ir pasirinkite, kaip geriausiai pateikti bendravimą realiuoju laiku. Duomenis galite grupuoti pagal API būdą, objekto apibrėžtą pavadinimą (įtrauktas objektas), kūrėją (įvykio šaltinis), rezultatą (sėkmė arba nesėkmė) arba klaidų kodus. Duomenys prieinami kaip retrospektyvos diagrama ir kaip lentelė.
 
 

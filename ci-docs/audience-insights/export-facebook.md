@@ -2,19 +2,19 @@
 title: Eksportuoti „Customer Insights“ duomenis į „Facebook“ reklamos tvarkytuvą
 description: Sužinokite, kaip sukonfigūruoti ryšį su „Facebook“ reklamos tvarkytuvu.
 ms.date: 06/05/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3e2b52fe743563e4bf61d870cbf1718e6c752a67
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269984"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596693"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>„Facebook“ reklamos tvarkytuvo jungtis (peržiūros versija)
 
@@ -64,13 +64,13 @@ Galite [eksportuoti duomenis pareikalavus](export-destinations.md). Eksportavima
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 10 mln. klientų profilio vienam eksportavimui į Facebook "Ads Manager" 
-- Eksportavimas Facebook Ads Manager ribojamas segmentais
+- Iki 10 mln. klientų profilių vienam eksportavimui į „Facebook" reklamos tvarkytuvas 
+- Eksportavimas į „Facebook” reklamos tvarkytuvą ribojamas segmentais
 - Norint eksportuoti segmentus, kurių bendra suma yra 10 mln. profilių, gali trukti iki 90 minučių
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
-Jums įjungus „Dynamics 365 Customer Insights“ tuomenų perdavimui į „Facebook“ reklamos tvarkytuvą, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights“, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Facebook“ reklamos atitinka visus jūsų galimai prisiimtus privatumo ir saugos įpareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
+Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Facebook“ reklamos tvarkytuvą, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights“, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Facebook“ reklamos atitinka visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 

@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270214"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598349"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Naudokite modelius pagrįstus „Azure“ Mašininio mokymo studija (įprasta programa)
 
@@ -37,7 +37,7 @@ Pirmajame žingsnyje mums reikia sukurti darbo aplinką ir atverti Mašininio mo
 
 1. Ieškokite **Mašininio mokymo studijos darbo sritis** ir pasirinkite **Kurti**.
 
-1. Įveskite būtiną išsamią informaciją, kad [sukurtumėte darbo sritį](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Pasirinkite **Žiniatinklio paslaugos plano kainyno eilė** pagrįsta duomenų, kurių planuojate importuoti, kiekiu. Geriausiam vykdymui pasirinkite **Vietą** geografiškai jums arčiausią.
+1. Įveskite būtiną išsamią informaciją, kad [sukurtumėte darbo sritį](/azure/machine-learning/studio/create-workspace). Pasirinkite **Žiniatinklio paslaugos plano kainyno eilė** pagrįsta duomenų, kurių planuojate importuoti, kiekiu. Geriausiam vykdymui pasirinkite **Vietą** geografiškai jums arčiausią.
 
 1. Sukūrus išteklių bus rodoma mašininio mokymo studijos darbo srities ataskaitų sritis. Pasirinkite **Paleisti mašininio mokymo studiją**.
 
@@ -65,7 +65,7 @@ Dabar galite sukurti naują bandymą arba importuoti esamą bandymo šabloną i�
 
    ![Prognozinės žiniatinklio tarnybos nustatymas](media/predictive-webservice-control.png)
 
-1. Kai prognozinės žiniatinklio tarnybos bandymas yra sėkmingas, galite jį visuotinai diegti automatiniam planavimui. Jei norite, kad žiniatinklio tarnyba veiktų su „Customer Insights”, pasirinkite **Visuotinai diegti žiniatinklio tarnybą** > **Visuotinai diegti žiniatinklio tarnybos [naują] peržiūros versiją**. [Sužinokite daugiau apie žiniatinklio tarnybos visuotinį diegimą](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Kai prognozinės žiniatinklio tarnybos bandymas yra sėkmingas, galite jį visuotinai diegti automatiniam planavimui. Jei norite, kad žiniatinklio tarnyba veiktų su „Customer Insights”, pasirinkite **Visuotinai diegti žiniatinklio tarnybą** > **Visuotinai diegti žiniatinklio tarnybos [naują] peržiūros versiją**. [Sužinokite daugiau apie žiniatinklio tarnybos visuotinį diegimą](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Prognozinės žiniatinklio tarnybos visuotinis diegimas](media/predictive-webservice-deploy.png)
 
@@ -79,7 +79,7 @@ Dabar galite sukurti naują bandymą arba importuoti esamą bandymo šabloną i�
 
 ## <a name="churn-analysis"></a>Klientų praradimo analizė
 
-Klientų praradimo analizė taikoma įvairioms verslo sritims. Šiame pavyzdyje pažvelgsime į paslaugų nutraukimą, konkrečiau, kaip aprašyta prieš tai, į viešbučio paslaugų kontekstą. Jis pateikia galutino modelio vamzdyno darbo pavyzdį, kuris gali būti naudojamas kaip pradinis bet kokio kito nutraukimo modelio taškas.
+Klientų praradimo analizė taikoma įvairioms verslo sritims. Šiame pavyzdyje pažvelgsime į paslaugų nutraukimą, konkrečiau, kaip aprašyta prieš tai, į viešbučio paslaugų kontekstą. Jis pateikia galutinio modelio vamzdyno darbo pavyzdį, kuris gali būti naudojamas kaip pradinis bet kokio kito nutraukimo modelio taškas.
 
 ### <a name="definition-of-churn"></a>Klientų praradimo apibrėžtis
 
@@ -116,7 +116,7 @@ Dabar mums reikia rinktis optimalų naudojamą algoritmą. Šiuo atveju dauguma 
 
 ![„Azure” mašininio mokymo studijos klientų praradimo modelis](media/azure-machine-learning-model.png)
 
-Mes taip pat taikome techniką pavadintą **Derinių funkcijos svarba** yra svarbus modelio optimizavimo aspektas. Įtaisytieji modeliai turi mažai arba jokių įžvalgų apie tai, kokį poveikį turi bet kokia konkreti funkcija galutinei prognozei. Funkcijos svarbos skaičiuoklė naudoja tinkintą algoritmą siekiant apskaičiuoti atskirų funkcijų įtaką konkretaus modelio išvadoms. Funkcijų svarba normalizuojama nuo +1 iki –1. Neigiam įtaka reiškia, kad atitinkama funkcija susidūrė su intuityvia įtaka išvesčiai ir turi būti pašalinta iš modelio. Teigiama įtaka nurodo, kad funkcija labai reikšminga prognozei. Šios reikšmės nėra koreliacijos koeficientai, nes jie atitinka skirtingą metriką. Dėl išsamesnės informacijos, žr. [Derinio funkcijos svarba](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Mes taip pat taikome techniką pavadintą **Derinių funkcijos svarba** yra svarbus modelio optimizavimo aspektas. Įtaisytieji modeliai turi mažai arba jokių įžvalgų apie tai, kokį poveikį turi bet kokia konkreti funkcija galutinei prognozei. Funkcijos svarbos skaičiuoklė naudoja tinkintą algoritmą siekiant apskaičiuoti atskirų funkcijų įtaką konkretaus modelio išvadoms. Funkcijų svarba normalizuojama nuo +1 iki –1. Neigiam įtaka reiškia, kad atitinkama funkcija susidūrė su intuityvia įtaka išvesčiai ir turi būti pašalinta iš modelio. Teigiama įtaka nurodo, kad funkcija labai reikšminga prognozei. Šios reikšmės nėra koreliacijos koeficientai, nes jie atitinka skirtingą metriką. Dėl išsamesnės informacijos, žr. [Derinio funkcijos svarba](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Visas [nutraukimo eksperimentas yra prieinamas „Azure“ AI galerijoje](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -126,7 +126,7 @@ Ilgalaikės kliento vertės (CLTV) apskaičiavimas yra vieneri iš pagrindinių 
 
 ### <a name="definition-of-cltv"></a>CLTV apibrėžtis
 
-Šiame pavyzdyje, nustatėme kliento CLTV kaip bendrą dolerių sumą, kurią klientas tikėtina išleis per kitas 365 dienas. Planuojame naudoti paskutinių trijų metų duomenų vertę visiems klientams, kurie prognizuos šią vertę.
+Šiame pavyzdyje, nustatėme kliento CLTV kaip bendrą dolerių sumą, kurią klientas tikėtina išleis per kitas 365 dienas. Planuojame naudoti paskutinių trijų metų duomenų vertę visiems klientams, kurie prognozuos šią vertę.
 
 ### <a name="featurization"></a>Funkcijų rinkinių nustatymas
 
@@ -134,7 +134,7 @@ Ilgalaikės kliento vertės (CLTV) apskaičiavimas yra vieneri iš pagrindinių 
 
 ### <a name="model-selection"></a>Modelio pasirinkimas
 
- CLTV prognozavimas yra regresijos uždavinys, o prognozuojama vertė yra teigiamos vertės tęstinis kintamasis. Remiantis funkcijų ypatybėmis, pasirenkame **Pagerintų sprendimų medžio regresiją** kaip vieną algoritmą ir **Nervų žiniatinklio regresiją** kaip kitą algoritmą siekiant bandyti modelį.
+CLTV prognozavimas yra regresijos uždavinys, o prognozuojama vertė yra teigiamos vertės tęstinis kintamasis. Remiantis funkcijų ypatybėmis, pasirenkame **Pagerintų sprendimų medžio regresiją** kaip vieną algoritmą ir **Nervų žiniatinklio regresiją** kaip kitą algoritmą siekiant bandyti modelį.
 
 ## <a name="product-recommendation-or-next-best-action"></a>Gaminio rekomendacijos ar kiti gerieji veiksmai
 
@@ -168,7 +168,7 @@ Visas [produkto rekomendacijos eksperimentas gali būti prieinamas „Azure“ A
 
 ## <a name="integrate-custom-models"></a>Integruoti tinkintus modelius
 
-Siekiant naudoti šias prognozes „Customer Insights“, jums reikia **eksportuoti** prognozes kartu su kliento ID. [Eksportuokite juos į tą pačią „Azure Blob“ talpinimo vietą](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs), į kurią eksportavote išteklių duomenis. Prognozuojama žiniatinklio tarnyba gali būti suplanuota veikti reguliariai ir naujinti balus.
+Siekiant naudoti šias prognozes „Customer Insights“, jums reikia **eksportuoti** prognozes kartu su kliento ID. [Eksportuokite juos į tą pačią „Azure Blob“ talpinimo vietą](/azure/storage/common/storage-import-export-data-from-blobs), į kurią eksportavote išteklių duomenis. Prognozuojama žiniatinklio tarnyba gali būti suplanuota veikti reguliariai ir naujinti balus.
 
 Tinkinto modelio sugeneruoti duomenys gali būti naudojami tolesniam jūsų kliento duomenų praturtinimui. Daugiau informacijos rasite [Pasirinktiniai mašininio mokymo modeliai](custom-models.md).
 

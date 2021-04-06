@@ -2,19 +2,19 @@
 title: Įdiegti ir konfigūruoti kliento kortelės papildinį
 description: „Dynamics 365 Customer Insights“ kliento kortelės papildinio diegimas ir konfigūravimas.
 ms.date: 01/20/2021
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268054"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597337"
 ---
 # <a name="customer-card-add-in-preview"></a>Papildinys Kliento kortelė (peržiūra)
 
@@ -36,7 +36,7 @@ Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ prog
 
 ## <a name="install-the-customer-card-add-in"></a>Kliento kortelės papildinio diegimas
 
-Kliento kortelės papildinys yra sprendimas, skirtas „Dynamics 365 Customer Engagement“ programoms. Norėdami įdiegti sprendimą, eikite į „AppSource“ ir ieškokite **„Dynamics“ kliento kortelės**. Pasirinkite [papildinį Kliento kortelė svetainėje „AppSource“](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) ir pasirinkite **Gauti dabar**.
+Kliento kortelės papildinys yra sprendimas, skirtas „Dynamics 365” platformos „Customer Engagement” programoms. Norėdami įdiegti sprendimą, eikite į „AppSource“ ir ieškokite **„Dynamics“ kliento kortelės**. Pasirinkite [papildinį Kliento kortelė svetainėje „AppSource“](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) ir pasirinkite **Gauti dabar**.
 
 Norint įdiegti sprendimą gali reikėti prisijungti naudojant „Dynamics 365“ programos administratoriaus kredencialus.
 
@@ -59,11 +59,11 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 1. Pasirinkite aplinką, iš kurios reikia naudoti duomenis.
 
 1. Nustatykite, kuris laukelių žemėlapis įrašomas į „Dynamics 365“ programą.
-   - Norėdami sudaryti žemėlapį su kontaktu, pasirinkte laukelį kliento objekte, kuris atitinka jūsų kontakto objekto ID.
-   - Norėdami sudaryti žemėlapį su paskyra, pasirinkte laukelį kliento objekte, kuris atitinka jūsų paskyros objekto ID.
+   - Norėdami sudaryti žemėlapį su kontaktu, pasirinkite laukelį kliento objekte, kuris atitinka jūsų kontakto objekto ID.
+   - Norėdami sudaryti žemėlapį su paskyra, pasirinkite laukelį kliento objekte, kuris atitinka jūsų paskyros objekto ID.
 
    > [!div class="mx-imgBorder"]
-   > ![„Kontakto ID laukas](media/contact-id-field.png "Kontakto ID laukas")
+   > ![Kontakto ID laukas](media/contact-id-field.png "Kontakto ID laukas")
 
 1. Pasirinkite **Įrašyti konfigūraciją**, kad įrašytumėte šiuos parametrus.
 
@@ -101,13 +101,13 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 1. Norėdami tinkinti pasirinktiname valdiklyje rodomus duomenis, pasirinkite viršutiniame dešiniajame kampe esantį redagavimo mygtuką.
 
 ## <a name="upgrade-customer-card-add-in"></a>Atnaujinti kliento kortelės papildinį
-Kliento kortelės papildymas automatiškai neatsijungia. Norėdami atnaujinti į naujausią versiją, atlikite šią procedūrą "Dynamics 365" programoje, kuri turi įdiegtą priedą.
+Kliento kortelės papildymas automatiškai neatsijungia. Norėdami atnaujinti į naujausią versiją, atlikite šią procedūrą „Dynamics 365” programoje, kuri turi įdiegtą priedą.
 
-1. Programoje "Dynamics 365" eikite į **Parametrai** > **Tinkinimas** ir pasirinkite **Sprendimai**.
+1. Programoje „Dynamics 365” eikite į **Parametrai** > **Tinkinimas** ir pasirinkite **Sprendimai**.
 
-1. Priedų lentelėje ieškokite **"CustomerInsightsCustomerCard"** ir pažymėkite eilutę.
+1. Priedų lentelėje ieškokite **„CustomerInsightsCustomerCard”** ir pažymėkite eilutę.
 
-1. Veiksmų juostroje pasirinkite **Taikyti sprendimo naujinimą**.
+1. Veiksmų juostoje pasirinkite **Taikyti sprendimo naujinimą**.
 
    :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atnaujinkite sprendimą „Dynamics 365“ programų tinkinimo srityje":::
 

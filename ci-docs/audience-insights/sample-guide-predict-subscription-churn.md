@@ -2,32 +2,32 @@
 title: Prenumeratos atsisakymo prognozės pavyzdžio vedlys
 description: Naudokite šį pavyzdžio vedlį tam, kad bandytumėte nestandartinį prenumeravimo atsisakymo prognozės modelį.
 ms.date: 11/19/2020
-ms.reviewer: digranad
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: diegogranados117
+ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269846"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595528"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Prenumeravimo atsisakymo prognozės (peržiūros) pavyzdžio vedlys
 
-Praieisime kartu pro prenumeravimo nutraukimo prognozės pavyzdį nuo pradžios iki galo naudodami toliau pateiktus pavyzdžio duomenis. 
+Praeisime kartu pro prenumeravimo nutraukimo prognozės pavyzdį nuo pradžios iki galo naudodami toliau pateiktus pavyzdžio duomenis. 
 
 ## <a name="scenario"></a>Scenarijus
 
-„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jie neseniai pradėjo prenumeravimo verslą savo klientams tam, kad jie reguliariai gautų kavos. Jų tiklsas yra suprasti, kurie prenumeruojantys klientai gali atšaukti savo prenumeratą per kelis ateinančius mėnesius. Žinomijas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.
+„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jie neseniai pradėjo prenumeravimo verslą savo klientams tam, kad jie reguliariai gautų kavos. Jų tikslas yra suprasti, kurie prenumeruojantys klientai gali atšaukti savo prenumeratą per kelis ateinančius mėnesius. Žinojimas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.
-- Rekomenduojame jums atlikti šiuos žingsnius [naujojoe aplinkoje](manage-environments.md).
+- Rekomenduojame jums atlikti šiuos žingsnius [naujoje aplinkoje](manage-environments.md).
 
 ## <a name="task-1---ingest-data"></a>Užduotis 1 - Duomenų vartojimas
 
@@ -46,9 +46,9 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
    - **Gimimo data**: Data
    - **Sukurta**: Data/Laikas/Zona
 
-   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformuoti gimimo datą į datą":::
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformuoti gimimo datą į datą.":::
 
-1. Laukleyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
+1. Lauke **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
 
 1. Įrašykite duomenų šaltinį.
 
@@ -70,7 +70,7 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
 
 1. Įrašykite duomenų šaltinį.
 
-### <a name="ingest-subscription-information"></a>Suuvartojama prenumeratos informacija
+### <a name="ingest-subscription-information"></a>Suvartojama prenumeratos informacija
 
 1. Sukurti duomenų šaltinį pavadinimus **Prenumeravimo istorija**, pasirinkite importavimo parinktį ir pasirinkite **Teksto/CSV** jungtis.
 
@@ -89,7 +89,7 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
    - **Yra_automatiškai_atnaujinama**: Tiesa/Netiesa
    - **Atnaujinimo dažnis mėnesiai**: Visas numeris
 
-1. Laukelyje **Pavadinimas** dešinėje juostoje, pervardyktie savo duomenų šaltinį iš **Laukiama** į **Prenumeravimo istorija**.
+1. Laukelyje **Pavadinimas** dešinėje juostoje, pervardykite savo duomenų šaltinį iš **Laukiama** į **Prenumeravimo istorija**.
 
 1. Įrašykite duomenų šaltinį.
 
@@ -106,7 +106,7 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
    - **Peržiūros reitingas**: Visas numeris
    - **Peržiūros data**: Data
 
-1. „Pavadinimas“ laukelyje dešinėje juostoje, pervardyktie savo duomenų šaltinį iš **Laukiama** į **Žiniatinklio peržiūros**.
+1. „Pavadinimas“ laukelyje dešinėje juostoje, pervardykite savo duomenų šaltinį iš **Laukiama** į **Žiniatinklio peržiūros**.
 
 ## <a name="task-2---data-unification"></a>Užduotis 2 - Duomenų suvienodinimas
 
@@ -118,11 +118,11 @@ Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** pro
 
 1. Pasirinkite objektus, kurie rodo kliento profilį – **e-komercijoskontaktai** ir **lojalumoklientai**. 
 
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="suvienodinti e-komercijos ir lojalumo duomenų šaltinius.":::
+   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Suvienodinti e-komercijos ir lojalumo duomenų šaltinius.":::
 
 1. Pasirinkite **Kontakto ID** kaip pagrindinį raktą **e-komercijos kontaktus** ir **Lojalumo ID** kaip pirminį raktą **lojalumo klientams**.
 
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Suvienodinkite lojalumo ID kaip pagrindinį raktą.":::
+   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Suvienodinti lojalumo ID kaip pagrindinį raktą.":::
 
 ### <a name="match"></a>Sugretinti
 
@@ -151,7 +151,7 @@ Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** pro
    * Palikite normalizavimą tuščią. 
    * Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
 
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Suvienodinkite atitikties taisyklę pavadinimui ir el. paštui.":::
+   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Suvienodinti atitikties taisyklę pavadinimui ir el. paštui.":::
 
 7. Pasirinkite **Įrašyti** ir **Vykdyti**.
 
@@ -184,7 +184,7 @@ Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravi
 
      :::image type="content" source="media/model-subs-levers.PNG" alt-text="Pasirinkite modelio išlyginimo prognozės langą ir nutraukimo sąvoką.":::
 
-1. Pasirinkite **Įtrarukti būtinus duomenis** ir pasirinkite **Įtraukite duomenis** prenumeratos istorijai.
+1. Pasirinkite **Įtraukti būtinus duomenis** ir pasirinkite **Įtraukite duomenis** prenumeratos istorijai.
 
 1. Įtraukite **Prenumeratą : prenumeravimo istorija** objektą ir sudarykite laukelių žemėlapį iš e-komercijos pagal atitinkamus modeliui būtinus laukelius.
 
@@ -203,7 +203,7 @@ Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravi
 
    Modelis turi būti reguliariai bandomas siekiant išmokti naujas iškarpas, kai esama naujų vartojamų duomenų. Šiam pavyzdžiui, rinkitės **Kas mėnesį**.
 
-1. Peržiūrėją visą išsamią informaciją, rinkitės **Įrašyti ir vykdyti**.
+1. Peržiūrėję visą išsamią informaciją pasirinkite **Įrašyti ir vykdyti**.
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Užduotis 4 - Peržiūrėti modelio rezultatus ir paaiškinimus
 
@@ -220,13 +220,13 @@ Galite sukurti naują segmentą pagal modelio sukurtą objektą.
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Sukurkite segmentą su modelio išvestimi.":::
 
 1. Pasirinkite **„OOBSubscriptionChurnPrediction“** galutinį tašką ir nustatykite segmentą: 
-   - Laukelis: Nutraukimos balas
+   - Laukelis: Nutraukimo balas
    - Operatorius: didesnis nei
    - Vertė: 0,6
    
    :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Nustatykite prenumeravimo atsisakymo segmentą.":::
 
-Gala turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.
+Dabar turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.
 
 Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).
 

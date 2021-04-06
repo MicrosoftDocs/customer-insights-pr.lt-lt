@@ -2,19 +2,19 @@
 title: Eksportuoti „Customer Insights“ duomenis į „Mailchimp“
 description: Sužinokite, kaip konfigūruoti jungtį su „Mailchimp“.
 ms.date: 10/26/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2b465b32fa956e3f45a23f471dc3a3183def16ef
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 9f86616731c3cc3d26370727103ea9c5d4288c8d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267183"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598211"
 ---
 # <a name="connector-for-mailchimp-preview"></a>Jungtis „Mailchimp“ (peržiūra)
 
@@ -23,7 +23,7 @@ Eksportuoti suvienodintų kliento profilių segmentus į „Mailchimp“ siekian
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 -   Turite [„Mailchimp“ paskyrą](https://mailchimp.com/) ir atitinkančius administratoriaus prisijungimo duomenis.
--   Yra esančių publikų „Mailchimp“ iar atitinkamų ID. Dėl daugiau informacijos, žr. [„Mailchimp“ publikos](https://mailchimp.com/help/create-audience/).
+-   Yra esančių publikų „Mailchimp“ ar atitinkamų ID. Dėl daugiau informacijos, žr. [„Mailchimp“ publikos](https://mailchimp.com/help/create-audience/).
 -   Turite [konfigūruoti segmentus](segments.md)
 -   Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
@@ -68,11 +68,11 @@ Galite [eksportuoti duomenis pareikalavus](export-destinations.md). Eksportavima
 - Iki 1 milijono profilių vieno eksportavimo metu į „Mailchimp“.
 - Eksportavimas į „Mailchimp“ yra apribotas segmentais.
 - Eksportuojant segmentus su bendrai 1 milijonu profilių gali užimti iki trijų valandų dėl apribojimų tiekėjo pusėje. 
-- Profilių skaičius, kurį galite eksportuoti į „Mailchimp“ priklauso ir yra apribojtas jūsų sutartimi su „Mailchimp“.
+- Profilių skaičius, kurį galite eksportuoti į „Mailchimp“ priklauso ir yra apribotas jūsų sutartimi su „Mailchimp“.
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
-Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Mailchimp“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Mailchimp“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įpareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
+Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Mailchimp“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Mailchimp“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 

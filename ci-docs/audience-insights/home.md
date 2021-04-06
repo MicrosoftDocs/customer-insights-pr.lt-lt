@@ -2,19 +2,19 @@
 title: Pagrindinis puslapis publikos įžvalgose
 description: Pradėkite naršyti programoje pagrindiniame puslapyje.
 ms.date: 01/07/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 7cc767f5d80b213a4c1bb5b2e8062bd44c15279b
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: bf9080c564850bca0c239b7317eed2fc0f77d9f3
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477051"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597245"
 ---
 # <a name="create-a-new-environment"></a>Kurti naują aplinką
 
@@ -29,7 +29,7 @@ Galite prisiregistruoti naudoti bandomąją versiją [bandomosios versijos regis
 
 1. Pateikite savo darbo ar mokymosi įstaigos el. pašto adresą, papasakokite apie save ir pasirinkite **Toliau**.
 
-   :::image type="content" source="media/trial-signup-dialog.png" alt-text="Susisiekite užsiregistruoti nemokamai bandomajai versijai gauti.":::
+   :::image type="content" source="media/trial-signup-dialog.png" alt-text="Susisiekite užsiregistruoti nemokamai bandomajai versijai gauti":::
 
 1. Įveskite naujos aplinkos **pavadinimą**. 
 
@@ -49,7 +49,7 @@ Galite [perjungti į aplinką](#switch-environments), sukurtą registracijos pro
 
 Savo aplinkoje programos antraštėje pasirinkite parinktį **Aplinkos** ir spauskite **Naujas**.
 
-Atlikite veiksmus, kuriuos vykdote [kurdami bandomąją aplinką](#create-a-trial-environment). Pagal numatytuosius parametrus duomenys saugomi „Customer Insights“ valdomame „Data Lake“. Rodoma papildoma parinktis, kai pasirenkate **Išplėstiniai parametrai**, kad duomenys būtų saugomi jūsų „Azure Date Lake“. Nurodykite kliento pavadinimą ir kliento raktą, kad užmegztumėte ryšį su savo „Azure Data Lake“. 
+Atlikite veiksmus, kuriuos vykdote [kurdami bandomąją aplinką](#create-a-trial-environment). Pagal numatytuosius parametrus duomenys saugomi „Customer Insights“ valdomame duomenų telkinyje. Rodoma papildoma parinktis, kai pasirenkate **Išplėstiniai parametrai**, kad duomenys būtų saugomi jūsų „Azure Date Lake“. Nurodykite kliento pavadinimą ir kliento raktą, kad užmegztumėte ryšį su savo „Azure Data Lake“. 
 
 > [!IMPORTANT]
 > Įrašydami duomenis „Azure Data Lake Storage“ sutinkate, kad duomenys bus perduoti ir saugomi atitinkamoje geografinėje vietoje, numatytoje konkrečiai „Azure“ saugyklos paskyrai, kuri gali skirtis nuo „Dynamics 365 Customer Insights“ duomenų saugojimo vietos. [Sužinokite daugiau „Microsoft“ patikimumo centre.](https://www.microsoft.com/trust-center)
@@ -66,7 +66,7 @@ Dalyje **Naujausi segmentai** matysite klientų grupes pagal demografinius, elgs
 
 **Naujausiose priemonėse** rodoma [plytelė su jūsų apibrėžtais ](measures.md) pagrindiniais efektyvumo indikatoriais (KPI). Pvz.: vidutinė tikimybė, kad prarasite klientą, arba vidutinės internetinės išlaidos vienam klientui.
 
-Skyriuje **Naujausi papildymai** išvardyti neseniai baigto papildymo rezultatai. [Papildymais](enrichment-hub.md) įtrauktiama informacijos apie klientų bazę. Pavyzdžiui, sužinant jų pomėgius ir mėgstamus prekių ženklus.
+Skyriuje **Naujausi papildymai** išvardyti neseniai baigto papildymo rezultatai. [Papildymai](enrichment-hub.md) prideda informacijos apie jūsų klientų bazę. Pavyzdžiui, sužinant jų pomėgius ir mėgstamus prekių ženklus.
 
 ## <a name="switch-environments"></a>Perjungti aplinką
 

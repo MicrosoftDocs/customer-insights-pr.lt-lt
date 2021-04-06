@@ -2,21 +2,21 @@
 title: Eksportuoti „Customer Insights“ duomenis į „Dynamics 365 Sales“
 description: Sužinokite, kaip sukonfigūruoti ryšį su „Dynamics 365 Sales“.
 ms.date: 02/01/2021
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 39ecdf528c6be4d8fb420a52a6ed998317e43bcd
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269018"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598119"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a>„Dynamics 365 for Sales“ jungtis (peržiūra)
+# <a name="connector-for-dynamics-365-sales-preview"></a>„Dynamics 365 Sales“ jungtis (peržiūra)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -24,10 +24,10 @@ Naudokite savo klientų duomenis kurdami rinkodaros sąrašus, vykdydami darbo e
 
 ## <a name="prerequisite"></a>Būtinoji sąlyga
 
-1. Kontaktų įrašai turi būti "Dynamics 365 Sales", kad segmentą būtų galima eksportuoti iš "Customer Insights" į "Marketing". Sužinokite daugiau, kaip pasiekti ["Dynamics 365 Sales" kontaktus naudojant Common Data Services](connect-power-query.md).
+1. Kontaktų įrašai turi būti „Dynamics 365 Sales”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Sales”. Sužinokite daugiau, kaip pasiekti [„Dynamics 365 Sales” kontaktus naudojant „Common Data Services”](connect-power-query.md).
 
    > [!NOTE]
-   > Eksportuojant segmentus iš auditorijos įžvalgų į "Sales" nebus sukurta naujų kontaktų įrašų pardavimo egzemplioriuose. Kontaktų įrašai iš "Sales" turi būti įtraukti į auditorijos įžvalgas ir naudojami duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.
+   > Eksportuojant segmentus iš auditorijos įžvalgų į „Sales” nebus sukurta naujų kontaktų įrašų pardavimo egzemplioriuose. Kontaktų įrašai iš „Sales” turi būti įtraukti į auditorijos įžvalgas ir naudojami kaip duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.
 
 ## <a name="configure-the-connector-for-sales"></a>„Sales“ jungties konfigūravimas
 

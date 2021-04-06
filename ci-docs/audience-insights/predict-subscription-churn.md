@@ -2,23 +2,23 @@
 title: Prenumeratos praradimo prognozė
 description: Prognozuokite, ar yra rizika, kad klientas nebenaudoti prenumeruojamų jūsų įmonės produktų ar paslaugų.
 ms.date: 08/19/2020
-ms.reviewer: zacook
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c12adab2e4573b1315d74f2111cf13b9f4ee6045
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268374"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595666"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prenumeratos praradimo prognozė (peržiūra)
 
-Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, kad klientas nebenaudoti prenumeruojamų jūsų įmonės produktų ar paslaugų. Puslapyje **Duomenų rinkimas** > **Prognozės** galite kurti naują prenumeratos praradimo prognozę. Norėdami pamatyti, ką sukūrėte, pasirinkite **Nano prognozės**.
+Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, kad klientas nebenaudoti prenumeruojamų jūsų įmonės produktų ar paslaugų. Puslapyje **Duomenų rinkimas** > **Prognozės** galite kurti naują prenumeratos praradimo prognozę. Norėdami pamatyti kitas jūsų sukurtas prognozes pasirinkite **Mano prognozės**.
 
 > [!TIP]
 > Pabandykite mokymus prenumeravimo nutraukimo prognozei naudojant pavyzdžio duomenis: [Prenumeravimo nutraukimo prognozės pavyzdžio gairės](sample-guide-predict-subscription-churn.md).
@@ -54,7 +54,7 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
 
 ## <a name="create-a-subscription-churn-prediction"></a>Prenumeratos praradimo prognozės kūrimas
 
-1. Publikos įžvalgose, eikite į **Žvalgyma** > **Prognozės**.
+1. Publikos įžvalgose, eikite į **Intelektas** > **Prognozės**.
 1. Pasirinkite plytelę **Prenumeratos praradimo prognozė (peržiūra)**, o tada pasirinkite **Naudoti šį modelį**.
    > [!div class="mx-imgBorder"]
    > ![Prenumeratos praradimo modelio plytelė su mygtuku „Naudoti šį modelį“](media/subscription-churn-usethismodel.PNG "Prenumeratos praradimo modelio plytelė su mygtuku „Naudoti šį modelį“")

@@ -2,23 +2,23 @@
 title: Perdavimo nutraukimo prognozė
 description: Prognozuokite, ar klientas yra rizikingas taip, kad daugiau nebepirks jūsų produktų ar paslaugų.
 ms.date: 11/12/2020
-ms.reviewer: zacook
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268328"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597199"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Perdavimo nutraukimo prognozė (peržiūra)
 
-Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepirks jūsų produktų ar paslaugų per tam tikrą laiko langą. Galite sukurti naują nutraukimo prognozę **Įžvalga** > **Prognozės**. Norėdami pamatyti, ką sukūrėte, pasirinkite **Nano prognozės**.
+Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepirks jūsų produktų ar paslaugų per tam tikrą laiko langą. Galite sukurti naują nutraukimo prognozę **Įžvalga** > **Prognozės**. Norėdami pamatyti kitas jūsų sukurtas prognozes pasirinkite **Mano prognozės**.
 
 > [!TIP]
 > Pabandykite mokymus perdavimo nutraukimo prognozei naudojant pavyzdžio duomenis: [Perdavimo nutraukimo prognozės (peržiūros) pavyzdžio vedlys](sample-guide-predict-transactional-churn.md).
@@ -27,12 +27,12 @@ Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepir
 
 - Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.
 - Verslo žinios, kad suprastumėte, ką praradimas reiškia verslui. Palaikome laiku pagrįstas nutraukimo sąvokas reiškiančias, kad klientas nutraukė po tam tikro nepirkimo laikotarpio.
-- Duomenys apie jūsų perdavimus/įsigijimus ir jų istorija:
+- Duomenys apie jūsų operacijas/pirkimus ir jų istorija:
     - Perlaidos identifikatoriai skirti atskirti įsigijimus/perlaidas.
     - Kliento identifikatoriai atitinka perlaidas jūsų klientams.
     - Perlaidos įvykio datos, kurios nustato perlaidos datą.
     - Semantinei duomenų schemai įsigijimui/perlaidoms būtina tolesnė informacija:
-        - **Perlaidos ID:** Unikalus įsigijmo ar perlaidos identifikatorius.
+        - **Perlaidos ID:** Unikalusis įsigijimo ar perlaidos identifikatorius.
         - **Perlaidos data:** Perlaidos ir įsigijimo data.
         - **Perlaidos vertė:** Elemento/perlaidos kiekio skaitmeninė vertė/valiuta.
         - (Pasirenkama) **Unikalus gaminio ID:** Gaminio ID ar paslaugos įsigytos, jei jūsų duomenys yra elemento lygmens linijoje.
@@ -71,7 +71,7 @@ Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepir
    >[!TIP]
    > **Įrašyti ir uždaryti** galite pasirinkti bet kuriuo metu, kad prognozė būtų išsaugota kaip juodraštis. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
 
-1. Įveskite dienų skaičių siekiant nustatyti atsisakymą **Klientas atsisakė, jei jie neatliko jokių pirkimų per:** laukelį. Pavyzdžiui, jei klientas nieko nenupirko per paskutinias 30 dienų, jis gali būti laikomas atsisakęs jūsų verslo paslaugų. 
+1. Įveskite dienų skaičių siekiant nustatyti atsisakymą **Klientas atsisakė, jei jie neatliko jokių pirkimų per:** laukelį. Pavyzdžiui, jei klientas nieko nenupirko per paskutines 30 dienų, jis gali būti laikomas atsisakęs jūsų verslo paslaugų. 
 
 1. Norėdami tęsti, spustelėkite **Pirmyn**
 
@@ -150,9 +150,9 @@ Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepir
             
          - **B** kai prognozės modelio tikslumas yra mažiausiai 50 % visų prognozių ir kai prognozių tikslumo procentas klientams, kurie nutraukė, yra iki 10% didesnis nei slenksčio lygis.
             
-         - **C** kai prognozės modelio tikslumas yra maženis 50% visų prognozių ar kai prognozių tikslumo procentas nutraukusiams klientams yra mažesnis nei slenksčio lygis.
+         - **C** kai prognozės modelio tikslumas yra mažesnis 50% visų prognozių ar kai prognozių tikslumo procentas nutraukusiems klientams yra mažesnis nei slenksčio lygis.
                
-         - **Slenkstis** užima prognozės laiko lango įvestį modeliui (pavyzdžiui, vieneri metai), o modelis sukuria kitus laiko įtrūkimus dalydamas juos iš 2 iki tol, kol pasiekia vieną mėnesį ar mažiau. Jis naudoja šiuos įtrūkimus, kad sukurtų verslo taisykles klientams, kurie neįsigijo jų šiuo laikotarpiu. Šie klientai laikomi atsisakę. Laiko pagrįsta verslo taisyklė su didesniu pajėgumu nuspėti, kas grečiausiai atsisakys yra pasirenkamas kaip slenksčio modelis.
+         - **Slenkstis** užima prognozės laiko lango įvestį modeliui (pavyzdžiui, vieneri metai), o modelis sukuria kitus laiko tarpus dalydamas juos iš 2 iki tol, kol pasiekia vieną mėnesį ar mažiau. Jis naudoja šiuos tarpus, kad sukurtų verslo taisykles klientams, kurie neįsigijo jų šiuo laikotarpiu. Šie klientai laikomi atsisakę. Laiko pagrįsta veiklos taisyklė su didesniu pajėgumu nuspėti, kas greičiausiai atsisakys yra pasirenkamas kaip slenksčio modelis.
             
     1. **Praradimo tikimybė (klientų skaičius):** klientų grupės pagal prognozuojamą praradimo riziką. Šie duomenys gali būti naudingi vėliau, jei norite sukurti klientų segmentą su didele praradimo rizika. Tokie segmentai padeda suprasti, kokios turėtų būti priklausymo segmentui ribinės reikšmės.
        

@@ -2,19 +2,19 @@
 title: Duomenų subjekto teisių (DSR) prašymai pagal BDAR | „Microsoft Docs”
 description: Atsakykite į duomenų subjekto užklausas „Dynamics 365 Customer Insights“ publikos įžvalgų galimybėms.
 ms.date: 05/14/2020
-ms.reviewer: wimohabb
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268696"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597521"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Duomenų subjekto teisių (DSR) prašymai pagal BDAR
 
@@ -66,13 +66,13 @@ Teisė į duomenų perkeliamumą leidžia duomenų subjektui prašyti jų asmens
 
 Nuomotojas administratorius gali vadovautis šiais veiksmais duomenims perkelti:
 
-1. Siųsti el. laišką D365CI@microsoft.com prašyme nurodant kliento el. pašto adresą. „Customer Insights“ komanda nusiųs el. laišką į registruoto nuomotojo adminsitravimo el. laiško adresą prašydama patvirtinti eksportavimo duomenis.
+1. Siųsti el. laišką D365CI@microsoft.com prašyme nurodant kliento el. pašto adresą. „Customer Insights“ komanda nusiųs el. laišką į registruoto nuomotojo administravimo el. laiško adresą prašydama patvirtinti eksportavimo duomenis.
 2. Patvirtins kliento, dėl kurio buvo pateiktas prašymas, duomenų eksportavimo patvirtinimą.
 3. Gaus eksportuotus duomenis, naudodamasis nuomotojo administratoriaus el. pašto adresu.
 
-#### <a name="export-user-data-tenant-admin"></a>Eksportuoti vartotojo duomenis (nuomotojo adminsitravimas)
+#### <a name="export-user-data-tenant-admin"></a>Eksportuoti vartotojo duomenis (nuomotojo administravimas)
 
-1. Siųsti el. laišką D365CI@microsoft.com prašyme nurodant vartotojo el. pašto adresą. „Customer Insights“ komanda nusiųs el. laišką į registruoto nuomotojo adminsitravimo el. laiško adresą prašydama patvirtinti eksportavimo duomenis.
+1. Siųsti el. laišką D365CI@microsoft.com prašyme nurodant vartotojo el. pašto adresą. „Customer Insights“ komanda nusiųs el. laišką į registruoto nuomotojo administravimo el. laiško adresą prašydama patvirtinti eksportavimo duomenis.
 2. Patvirtins vartotojo, dėl kurio buvo pateiktas prašymas, duomenų eksportavimo patvirtinimą.
 3. Gaus eksportuotus duomenis, naudodamasis nuomotojo administratoriaus el. pašto adresu.
 

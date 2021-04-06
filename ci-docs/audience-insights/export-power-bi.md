@@ -1,20 +1,20 @@
 ---
 title: „Power BI“ jungtis
-description: Sužinokite, kaip naudoti „Dynamics 365 Customer Insights“ jungtį programoje „Power BI“.
+description: Sužinokite, kaip naudoti „Dynamics 365 Customer Insights connector“ programoje „Power BI“.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477098"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596049"
 ---
 # <a name="connector-for-power-bi-preview"></a>„Power BI“ jungtis (peržiūra)
 
@@ -23,7 +23,7 @@ Sukurkite vizualizacija jūsų duomenims su „Power BI Desktop“. Generuokite 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Turite suvienodintus kliento profilius.
-- Jūsų kompiuteryje įdiegta naujausia [„Microsoft Power BI Desktop“](https://powerbi.microsoft.com/desktop/) versija. [Sužinokite daugiau apie „Power BI Desktop”](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Naujausia [„Microsoft Power BI Desktop”](https://powerbi.microsoft.com/desktop/) versija yra įdiegta jūsų kompiuteryje. [Sužinokite daugiau apie „Power BI Desktop”](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>„Power BI“ jungties konfigūravimas
 
@@ -35,7 +35,7 @@ Sukurkite vizualizacija jūsų duomenims su „Power BI Desktop“. Generuokite 
 
 1. **Prisijunkite** naudodami tą patį organizacijos klientą, kurį naudojate „Customer Insights“, ir pasirinkite **Prisijungti**.
    > [!NOTE]
-   > Klientas, kurį nurodėte atlikdami šį veiksmą, naudojamas duomenims iš „Customer Insights“ gauti ir jis neturi sutapti su klientu, kurį pasirinkę prisijungėte prie „Power BI“. Norėdami paleisti iš naujo paskyrą naudojamą duomenų naudojimui, atverkite „Power BI“ ir eiktie į **Failai** > **Parinktys** > **Nustatymai** > **Duomenų šaltinio nustatymai**. Duomenų šaltinių sąraše pasirinkite **Dynamics 365 Customer Insights prisijungimas** ir pasirinkite **Aiškios teisės**.  
+   > Klientas, kurį nurodėte atlikdami šį veiksmą, naudojamas duomenims iš „Customer Insights“ gauti ir jis neturi sutapti su klientu, kurį pasirinkę prisijungėte prie „Power BI“. Norėdami paleisti iš naujo paskyrą naudojamą duomenų naudojimui, atverkite „Power BI“ ir eikite į **Failai** > **Parinktys** > **Nustatymai** > **Duomenų šaltinio nustatymai**. Duomenų šaltinių sąraše pasirinkite **Dynamics 365 Customer Insights prisijungimas** ir pasirinkite **Aiškios teisės**.  
 
 1. Dialogo lange **„Navigator“**. matysite aplinkų sąrašą, prie kurio turite prieigą. Išplėskite aplinką ir atverkite bet kurį katalogą (objektų, priemonių, segmentų, praturtinimų). Pavyzdžiui, atidarykite aplanką **Objektai**, kad pamatytumėte visus objektus, kuriuos galite importuoti.
 
@@ -47,7 +47,7 @@ Sukurkite vizualizacija jūsų duomenims su „Power BI Desktop“. Generuokite 
 
 ## <a name="large-data-sets"></a>Dideli duomenų rinkiniai
 
-„Customer Insights“ jungtis, skirta „Power BI“, sukurta veikti su duomenų rinkiniais, kuriuose yra iki 1 milijono klientų profilių. Didesnių duomenų rinkinių importavimas gali pavykti, tačiau reikia daug laiko. Be to, dėl „Power BI“ apribojimų gali baigti procesui skirtas laikas. Norėdami gauti daugiau informacijos, žr. [„Power BI“: rekomendacijos dėl didelių duomenų rinkinių](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+„Customer Insights“ jungtis, skirta „Power BI“, sukurta veikti su duomenų rinkiniais, kuriuose yra iki 1 milijono klientų profilių. Didesnių duomenų rinkinių importavimas gali pavykti, tačiau reikia daug laiko. Be to, dėl „Power BI“ apribojimų gali baigti procesui skirtas laikas. Norėdami gauti daugiau informacijos, žr. [„Power BI“: rekomendacijos dėl didelių duomenų rinkinių](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Darbas su antriniu duomenų rinkiniu
 
@@ -55,7 +55,7 @@ Apgalvokite darbą su jūsų duomenų papildomu rinkiniu. Pavyzdžiui, galite su
 
 ## <a name="troubleshooting"></a>Trikčių šalinimas
 
-### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>"Customer Insights" aplinka, kuri nerodoma Power BI
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>„Customer Insights” aplinka, kuri nerodoma „Power BI”
 
 Aplinkos, kurios turi daugiau nei vieną ryšį, nustatytą tarp dviejų identiškų objektų auditorijos [įžvalgose](relationships.md), pasiekti Power BI nepavyks.
 
@@ -70,4 +70,3 @@ Galite identifikuoti ir pašalinti dubliuotas ryšius.
 Pašalę dubliuotų ryšių bandykite dar kartą Power BI programoje sukonfigūruoti jungtį. Aplinka turėtų būti prieinama dabar.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

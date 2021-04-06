@@ -2,21 +2,21 @@
 title: Papildymas su SFTP kliento importavimu
 description: Bendra informacija apie SFTP tinkinto importavimo papildymą.
 ms.date: 11/18/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269616"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595865"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Praturinkite klientų profilius su tinkintais duomenimis (peržiūra)
+# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Praturtinkite klientų profilius su tinkintais duomenimis (peržiūra)
 
 „Secure File Transfer Protocol“ (SFTP) tinkintas importavimas leidžia jums importuoti praturtintus duomenis, kurie neturi pereiti pro duomenų suvienodinimo procesą. Jis yra lankstus, saugus ir paprastai leidžia apdoroti jūsų duomenis. SFTP tinkintas importavimas gali būti naudojamas kartu su [SFTP eksportavimu](export-sftp.md) ir leidžia jums eksportuoti kliento profilio duomenis, kurie turi būti papildyti. Duomenys gali būti apdorojami, papildyti ir SFTP tinkintas importavimas gali būti naudojamas siekiant sukurti papildytus duomenis atgal į publikos įžvalgų „Dynamics 365 Customer Insights“ galimybę.
 
@@ -39,7 +39,7 @@ Siekiant sukonfigūruoti SFTP tinkintą importavimą, būtina atitikti tolesnes 
    > [!div class="mx-imgBorder"]
    > ![SFTP tinkinto importavimo plyta](media/SFTP_Custom_Import_tile.png "SFTP tinkinto importavimo plyta")
 
-1. Pasirinkite **Pradėti** ir pateikite prisijungumo duoemnis bei adresą SFTP serveriui. Pavyzdžiui, sftp://mysftpserver.com:22.
+1. Pasirinkite **Pradėti** ir pateikite prisijungimo duomenis bei adresą SFTP serveriui. Pavyzdžiui, sftp://mysftpserver.com:22.
 
 1. Įveskite failo pavadinimą, kuris turi duomenis ir kelią failui SFTP serveryje, jei jis nėra šaknies kataloge.
 
@@ -50,7 +50,7 @@ Siekiant sukonfigūruoti SFTP tinkintą importavimą, būtina atitikti tolesnes 
 
 ## <a name="defining-field-mappings"></a>Laukelio žemėlapio nustatymas 
 
-Katalogas turintis importuojamą SFTP serveryje failą taip pat privalo turėti *model.json* failą. Šis failas nustato schemą, kuri bus naudojama duomenų importavimui. Schema turi naudoti [„Common Data Model“](https://docs.microsoft.com/common-data-model/) siekiant nurodyti laukelio žemėlapį. Paprastas model.json failo pavyzdys atrodo taip:
+Katalogas turintis importuojamą SFTP serveryje failą taip pat privalo turėti *model.json* failą. Šis failas nustato schemą, kuri bus naudojama duomenų importavimui. Schema turi naudoti [„Common Data Model“](/common-data-model/) siekiant nurodyti laukelio žemėlapį. Paprastas model.json failo pavyzdys atrodo taip:
 
 ```
 {

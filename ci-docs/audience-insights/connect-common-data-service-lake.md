@@ -1,30 +1,30 @@
 ---
 title: Prisijungti prie objektų „Common Data Service“ valdomame ežere
-description: Duomenų importavimas iš „Common Data Service“ valdomo „Data Lake“.
+description: Duomenų importavimas iš „Common Data Service“ valdomo duomenų telkinio.
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.reviewer: adkuppa
-ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.reviewer: mhart
+ms.openlocfilehash: b1cfab40c1edb32f4a7f359e1195cfb1e879a0d5
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267824"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596969"
 ---
-# <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Prisijungimas prie „Common Data Service“ valdomo „Data Lake“ duomenų
+# <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Prisijungimas prie „Common Data Service“ valdomo duomenų telkinio
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Šiame straipsnyje pateikiama informacija apie tai, kaip esami „Dynamics 365“ klientai gali greitai prisijungti prie analitinių objektų „Common Data Service“ valdomame „Data Lake“. Norėdami tęsti ir peržiūrėti valdomo „Data Lake“ objektų sąrašą, turite būti „Common Data Service“ organizacijos administratorius.
+Šiame straipsnyje pateikiama informacija apie tai, kaip esami „Dynamics 365“ klientai gali greitai prisijungti prie analitinių objektų „Common Data Service“ valdomame duomenų telkinyje. Norėdami tęsti ir peržiūrėti valdomo duomenų telkinio objektų sąrašą, turite būti „Common Data Service“ organizacijos administratorius.
 
 ## <a name="important-considerations"></a>Svarbi informacija
 
-Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Storage“, gali būti saugomi kitoje vietoje, kurioje duomenys yra apdorojami ar saugomi „Dynamics 365 Customer Insights“.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse tarnybose, sutinkate, kad duomenys gali būti perkeliami ir saugomi „Dynamics 365 Customer Insights“.  [Sužinokite daugiau „Microsoft“ patikimumo centre.](https://www.microsoft.com/trust-center)
+Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Storage“, gali būti saugomi kitoje vietoje, kurioje duomenys yra apdorojami ar saugomi „Dynamics 365 Customer Insights“. Importuodami arba prisijungdami prie duomenų, saugomų internetinėse tarnybose, sutinkate, kad duomenys gali būti perkeliami ir saugomi „Dynamics 365 Customer Insights“.  [Sužinokite daugiau „Microsoft“ patikimumo centre.](https://www.microsoft.com/trust-center)
 
 ## <a name="connect-to-a-common-data-service-managed-lake"></a>Prisijungimas prie „Common Data Service” valdomojo telkinio
 

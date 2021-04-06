@@ -2,32 +2,32 @@
 title: Perlaidos nutraukimo prognozės pavyzdžio vedlys
 description: Naudokite šį pavyzdžio vedlį tam, kad pabandytumėte nestandartinį perlaidos nutraukimo prognozės modelį.
 ms.date: 11/19/2020
-ms.reviewer: digranad
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: diegogranados117
+ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269800"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595436"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Perlaidos nutraukimo prognozės (peržiūra) pavyzdžio vedlys
 
-Šis vedlys jus supažindins nuo pradžios iki galo su perlaidos nutraukimo prognozės pavyzdžiu tinkintose „Customer Insights“ naudojant toliau pateiktus duomenis. Visi šiame vedlyje naudojiami duomenys nėra realūs kliento duomenys ir yra „Contoso“ duomenų rinkinio, esančio *Demonstracinėje* aplinkoje jūsų „Customer Insights“ prenumeratoje, dalis.
+Šis vedlys jus supažindins nuo pradžios iki galo su perlaidos nutraukimo prognozės pavyzdžiu tinkintose „Customer Insights“ naudojant toliau pateiktus duomenis. Visi šiame vedlyje naudojami duomenys nėra realūs kliento duomenys ir yra „Contoso“ duomenų rinkinio, esančio *Demonstracinėje* aplinkoje jūsų „Customer Insights“ prenumeratoje, dalis.
 
 ## <a name="scenario"></a>Scenarijus
 
-„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jų tikslas yra sužinoti, kurie klientai dažniausiai įsigija produktus reguliariai ir nustos būti aktyviais klientais per artimiausias 60 dienų. Žinomijas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.
+„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jų tikslas yra sužinoti, kurie klientai dažniausiai įsigiję produktus reguliariai ir nustos būti aktyviais klientais per artimiausias 60 dienų. Žinojimas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.
-- Rekomenduojame jums atlikti šiuos žingsnius [naujojoe aplinkoje](manage-environments.md).
+- Rekomenduojame jums atlikti šiuos žingsnius [naujoje aplinkoje](manage-environments.md).
 
 ## <a name="task-1---ingest-data"></a>Užduotis 1 - Duomenų vartojimas
 
@@ -49,7 +49,7 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
    [!div class="mx-imgBorder"]
    ![Keisti gimimo dieną į datą](media/ecommerce-dob-date.PNG "transformuoti gimimo datą į datą")
 
-1. Laukleyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
+1. Lauke **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
 
 1. Įrašykite duomenų šaltinį.
 
@@ -99,11 +99,11 @@ Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** pro
 
 1. Pasirinkite objektus, kurie rodo kliento profilį – **e-komercijoskontaktai** ir **lojalumoklientai**. 
 
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="suvienodinti e-komercijos ir lojalumo duomenų šaltinius.":::
+   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Suvienodinti e-komercijos ir lojalumo duomenų šaltinius.":::
 
 1. Pasirinkite **Kontakto ID** kaip pagrindinį raktą **e-komercijos kontaktus** ir **Lojalumo ID** kaip pirminį raktą **lojalumo klientams**.
 
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Suvienodinkite lojalumo ID kaip pagrindinį raktą.":::
+   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Suvienodinti lojalumo ID kaip pagrindinį raktą.":::
 
 ### <a name="match"></a>Sugretinti
 
@@ -132,7 +132,7 @@ Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** pro
    * Palikite normalizavimą tuščią. 
    * Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
 
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Suvienodinkite atitikties taisyklę pavadinimui ir el. paštui.":::
+   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Suvienodinti atitikties taisyklę pavadinimui ir el. paštui.":::
 
 7. Pasirinkite **Įrašyti** ir **Vykdyti**.
 
@@ -162,7 +162,7 @@ Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravi
 
    * **Prognozės langas**: **mažiausiai 60** dienų. Šis nustatymas nustato, kaip toli į ateitį norime prognozuoti kliento nutraukimą.
 
-   * **Nutraukimo sąvoka**: **mažiausiai 60** dienų. Trukmė be įsigijimo, po kuriso klientas laikomas nutraukusiu paslaugas.
+   * **Nutraukimo sąvoka**: **mažiausiai 60** dienų. Trukmė be įsigijimo, po kurio klientas laikomas nutraukusiu paslaugas.
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Pasirinkite modelio išlyginimo prognozės langą ir nutraukimo sąvoką.":::
 
@@ -178,7 +178,7 @@ Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravi
 
    Modelis turi būti reguliariai bandomas siekiant išmokti naujas iškarpas, kai esama naujų vartojamų duomenų. Šiam pavyzdžiui, rinkitės **Kas mėnesį**.
 
-1. Peržiūrėją visą išsamią informaciją, rinkitės **Įrašyti ir vykdyti**.
+1. Peržiūrėję visą išsamią informaciją pasirinkite **Įrašyti ir vykdyti**.
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Užduotis 4 - Peržiūrėti modelio rezultatus ir paaiškinimus
 
@@ -195,13 +195,13 @@ Galite sukurti naują segmentą pagal modelio sukurtą objektą.
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Sukurkite segmentą su modelio išvestimi.":::
 
 1. Pasirinkite **„OOBSubscriptionChurnPrediction“** galutinį tašką ir nustatykite segmentą: 
-   - Laukelis: Nutraukimos balas
+   - Laukelis: Nutraukimo balas
    - Operatorius: didesnis nei
    - Vertė: 0,6
    
    :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Nustatykite prenumeravimo atsisakymo segmentą.":::
 
-Gala turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.
+Dabar turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.
 
 Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).
 

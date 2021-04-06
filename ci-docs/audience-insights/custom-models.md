@@ -1,19 +1,20 @@
 ---
 title: Pasirinktiniai mašininio mokymo modeliai | „Microsoft Docs“
 description: Darbas su pasirinktiniais modeliais iš „Azure“ mašininio mokymosi „Dynamics 365 Customer Insights“.
-ms.date: 11/19/2020
-ms.reviewer: zacook
-ms.service: dynamics-365-ai
+ms.date: 03/22/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
+ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267244"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "5700678"
 ---
 # <a name="custom-machine-learning-models"></a>Pasirinktiniai mašininio mokymo modeliai
 
@@ -21,13 +22,18 @@ ms.locfileid: "5267244"
 
 ## <a name="responsible-ai"></a>Atsakingas AI
 
-Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo galimybes ir pelno srautus. Primygtinai rekomenduojame jums subalansuoti jūsų prognozės vertę lyginant su poveikiu, kurį ji turi ir tendencijas, kurios gali būti pristatytos etiniu požiūriu. Sužinokite daugiau apie tai, kaip „Microsoft“ [rekomenduoja atsakingą AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Galite taip pat sužinoti apie [mašininio mokymosi procesų atsakomybę ir technikas](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml) būdingas „Azure“ mašininiam mokymuisi.
+Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo galimybes ir pelno srautus. Primygtinai rekomenduojame jums subalansuoti jūsų prognozės vertę lyginant su poveikiu, kurį ji turi ir tendencijas, kurios gali būti pristatytos etiniu požiūriu. Sužinokite daugiau apie tai, kaip „Microsoft“ [rekomenduoja atsakingą AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Galite taip pat sužinoti apie [mašininio mokymosi procesų atsakomybę ir technikas](/azure/machine-learning/concept-responsible-ml) būdingas „Azure“ mašininiam mokymuisi.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- Šiuo metu ši funkcija palaiko žiniatinklio paslaugas publikuotas per [mašininio mokymosi studiją (įprastą versiją)](https://studio.azureml.net) ir [„Azure“ mašininio mokymosi bendrus vamzdynus](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines).
+- Šiuo metu ši funkcija palaiko žiniatinklio paslaugas publikuotas per [mašininio mokymosi studiją (įprastą versiją)](https://studio.azureml.net) ir [„Azure“ mašininio mokymosi bendrus vamzdynus](/azure/machine-learning/concept-ml-pipelines).
 
-- Jums reikia „Azure Data Lake Gen2“ talpinimo paskyros susietos su „Azure“ studijos elementu siekiant naudoti šią funkciją. Daugiau informacijos žr. [„Azure Data Lake Storage Gen2“ saugyklos kliento kūrimas](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)
+- Jums reikia „Azure Data Lake Gen2“ talpinimo paskyros susietos su „Azure“ studijos elementu siekiant naudoti šią funkciją. Daugiau informacijos rasite [„Azure Data Lake Storage Gen2“ saugyklos abonemento kūrimas](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+
+- Norint naudoti „Azure” mašininio mokymo darbo sritis su srautais, jums reikia savininko arba vartotojo prieigos administratoriaus teisių į „Azure” mašininio mokymo darbo sritį.
+
+   > [!NOTE]
+   > Duomenys perduodami tarp jūsų „Customer Insights” egzempliorių ir pasirinktų „Azure” žiniatinklio paslaugų arba srautų darbo eigoje. Kai perduodate duomenis į „Azure“ tarnybą, įsitikinkite, kad tarnyba sukonfigūruota taip, kad duomenų apdorojimas ir vieta atitiktų visus tokiems jūsų organizacijos duomenims taikomus teisinius arba norminius reikalavimus.
 
 ## <a name="add-a-new-workflow"></a>Naujos darbo eigos įtraukimas
 
@@ -45,8 +51,8 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 1. Pasirinkite **Darbo aplinkas** susietas su jūsų žiniatinklio paslaugomis. Esama dviejų išvardytų skyrių, „Azure“ mašininio mokymosi v1 (mašininio mokymosi studijos (įprastos versijos)) ir „Azure“ mašininio mokymosi v2 („Azure“ mašininio mokymosi). Jei nesate tikras, kuri darbo aplinka tinka jūsų mašininio mokymosi studijai (įprastos) versijos žiniatinklio paslaugoms, pasirinkite **Bet kuris**.
 
 1. Pasirinkite mašininio mokymosi studijos (įprastos versijos) žiniatinklio paslaugas arba „Azure“ mašininio mokymosi vamzdyną **Žiniatinklio paslaugos, turinčios jūsų modelio** iškrentantį meniu. Tada pasirinkite **Toliau**.
-   - Sužinokite apie [žiniatinklio paslaugų publikavimą mašininio mokymosi studijoje (įprastoje versijoje)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Sužinokite apie [„Azure“ mašininio mokymosi vamzdyno publikavimą naudojant kūrimo įrankį](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ar [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsų vamzdynas turi būti publikuojamas skyriuje [vamzdyno galutinis taškas](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Sužinokite apie [žiniatinklio paslaugų publikavimą mašininio mokymosi studijoje (įprastoje versijoje)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
+   - Sužinokite apie [„Azure“ mašininio mokymosi vamzdyno publikavimą naudojant kūrimo įrankį](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ar [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsų vamzdynas turi būti publikuojamas skyriuje [vamzdyno galutinis taškas](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Kiekvienai **Žiniatinklio paslaugos įvesčiai**, pasirinkite atitinkantį **Objektą** iš publikos įžvalgų ir pasirinkite **Kitas**.
    > [!NOTE]
@@ -54,7 +60,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
    > [!div class="mx-imgBorder"]
    > ![Darbo eigos konfigūravimas](media/intelligence-screen2-updated.png "Darbo eigos konfigūravimas")
-   
+
 1. **Modelio išvesties parametrų** žingsnyje nustatykite tolesnes ypatybes:
    - Mašininio mokymosi studija (įprasta versija)
       1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti žiniatinklio išvesties rezultatus.
@@ -62,12 +68,12 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
       1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti vamzdyno išvestį.
       1. Pasirinkite jūsų bendro vamzdyno iš iškrentančio meniu **Išvesties duomenų talpinimo parametro pavadinimas**.
       1. Pasirinkite jūsų bendro vamzdyno iš iškrentančio meniu **Išvesties kelio parametro pavadinimas**.
-      
+
       > [!div class="mx-imgBorder"]
       > ![Modelio išvesties parametro juosta](media/intelligence-screen3-outputparameters.png "Modelio išvesties parametro juosta")
 
 1. Pasirinkite atitikties atributą iš **Kliento ID rezultatuose** iškrentančio meniu, kuris nurodo klientus ir pasirinkite **Įrašyti**.
-   
+
    > [!div class="mx-imgBorder"]
    > ![Susiekite rezultatus su kliento duomenų juosta](media/intelligence-screen4-relatetocustomer.png "Susiekite rezultatus su kliento duomenų juosta")
 
@@ -95,7 +101,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
       1. Pasirinkite **Išvesties kelio parametro pavadinimą** jūsų bandymo vamzdynui.
 
 1. Pasirinkite atitikties atributą iš **Kliento ID rezultatuose** iškrentančio meniu, kuris nurodo klientus ir pasirinkite **Įrašyti**.
-   Jums reikia pasirinkti atributą iš išvados išvesties su vertėmis panašiomis į kliento objekto kliento ID stulpelį. Jei neturite tokio stulpelio savo duomenų rinkinyje, pasirinkite atributą, kuris atskirai atpažįsta eilutę.
+   Pasirinkite atributą iš išvadų išvesties, kurios reikšmės panašios į kliento objekto stulpelį Kliento ID. Jei neturite tokio stulpelio savo duomenų rinkinyje, pasirinkite atributą, kuris atskirai atpažįsta eilutę.
 
 ## <a name="run-a-workflow"></a>Darbo eigos vykdymas
 
@@ -113,5 +119,28 @@ Jūsų darbo eiga taip pat vykdoma automatiškai kartu su visais suplanuotais at
 
 Jūsų darbo eiga bus panaikinta. [Objektas](entities.md), sukurtas kuriant darbo eigą, išliks ir gali būti peržiūrimas puslapyje **Objektai**.
 
+## <a name="results"></a>Rezultatai
+
+Darbo eigos rezultatai saugomi objekte, sukonfigūruotame modelio išvesties parametro etapo metu. Galite pasiekti šiuos duomenis iš [objektų puslapio](entities.md) arba su [API prieiga](apis.md).
+
+### <a name="api-access"></a>API Prieiga
+
+Konkrečiai „OData” užklausai, skirtai gauti duomenims iš pasirinktinio modelio objekto, naudokite šį formatą:
+
+`https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
+
+1. Pakeiskite `<your instance id>` į savo „Customer Insights” aplinkos ID, kurį rasite jūsų naršyklės adreso juostoje, kai pasiekiate „Customer Insights”.
+
+1. Pakeiskite `<custom model output entity>` į objekto pavadinimą, kurį pateikėte pasirinktinio modelio konfigūracijos modelio išvesties parametrų veiksmo metu.
+
+1. Pakeiskite `<guid value>` į kliento, kurio įrašą norite pasiekti, ID. Paprastai šį ID galite rasti [klientų profilių puslapyje](customer-profiles.md), esančiame Kliento ID lauke.
+
+## <a name="frequently-asked-questions"></a>Dažnai užduodami klausimai
+
+- Kodėl negaliu matyti savo srauto, kai nustatau pasirinktinę modelio darbo eigą?    
+  Šią problemą dažnai sukelia srauto konfigūravimo problema. Užtikrinkite, kad [įvesties parametras yra sukonfigūruotas](azure-machine-learning-experiments.md#dataset-configuration) ir [išvesties duomenų saugyklos ir kelio parametrai](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights) taip pat sukonfigūruoti.
+
+- Ką reiškia klaida „Nepavyko įrašyti intelekto darbo eigos”?    
+  Paprastai vartotojai mato šį klaidos pranešimą, jei jie neturi savininko arba vartotojo prieigos administratoriaus teisių darbo sričiai. Vartotojui reikalingos aukštesnio lygio teisės įgalinti „Customer Insights” apdoroti darbo eigą kaip paslaugą, o ne naudoti vartotojo kredencialus tolesniems darbo eigos vykdymams.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

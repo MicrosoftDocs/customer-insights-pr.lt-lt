@@ -1,26 +1,26 @@
 ---
 title: Segmentų kūrimas ir valdymas
 description: Kurkite klientų segmentus, kad jie būtų sugrupuoti pagal įvairius atributus.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270366"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597063"
 ---
 # <a name="create-and-manage-segments"></a>Segmentų kūrimas ir valdymas
 
 Segmentai leidžia jums grupuoti jūsų klientus pagal demografiją, perlaidas ar elgesio savybes. Norėdami pasiekti verslo tikslus, galite naudoti segmentus, kad tikslingai vykdytumėte reklamines kampanijas, pardavimo veiklas ir klientų aptarnavimo veiksmus.
 
-Galite apibrėžti sudėtinius filtrus kliento profilio objektui ir su juo susijusiams objektams. Apdorojus, kiekvienas segmentas sukuria klientų duomenų rinkinį, kurį galite eksportuoti, ir su kuriuo galite atlikti veiksmus. Kai kurie [paslaugų apribojimai](service-limits.md) yra taikomi.
+Galite apibrėžti sudėtinius filtrus kliento profilio objektui ir su juo susijusiems objektams. Apdorojus, kiekvienas segmentas sukuria klientų duomenų rinkinį, kurį galite eksportuoti, ir su kuriuo galite atlikti veiksmus. Kai kurie [paslaugų apribojimai](service-limits.md) yra taikomi.
 
 Nebent nurodyta kitaip, visi segmentai yra **„Dynamic“ segmentai**, kurie yra paleidžiami iš naujo pasikartojančiame grafike.
 
@@ -35,19 +35,19 @@ Segmentai yra valdomi **Segmentų** puslapyje.
 
 1. Publikos įžvalgose, eikite į **Segmentai** puslapį.
 
-2. Pasirinkite **Naujas** > **Tuščias segmentas**.
+1. Pasirinkite **Naujas** > **Tuščias segmentas**.
 
-3. Srityje **Naujas segmentas** pasirinkite segmento tipą ir nurodykite **pavadinimą**.
+1. Srityje **Naujas segmentas** pasirinkite segmento tipą ir nurodykite **pavadinimą**.
 
    Galite pasirinktinai nurodyti rodomą pavadinimą ir aprašą, padedantį identifikuoti segmentą.
 
-4. Norėdami atidaryti **segmentų kūrimo priemonės** puslapį, kuriame apibrėžėte grupė, pasirinkite **Kitas**. Grupė yra klientų rinkinys.
+1. Norėdami atidaryti **segmentų kūrimo priemonės** puslapį, kuriame apibrėžėte grupė, pasirinkite **Kitas**. Grupė yra klientų rinkinys.
 
-5. Pasirinkite objektą, kuriame yra atributas, pagal kurį norite segmentuoti.
+1. Pasirinkite objektą, kuriame yra atributas, pagal kurį norite segmentuoti.
 
-6. Pasirinkite atributą, pagal kurį norite segmentuoti. Šis atributas gali turėti vieną iš keturių reikšmių tipų: skaičiaus, eilutės, datos arba Bulio.
+1. Pasirinkite atributą, pagal kurį norite segmentuoti. Šis atributas gali turėti vieną iš keturių reikšmių tipų: skaičiaus, eilutės, datos arba Bulio.
 
-7. Pasirinkite operatorių ir pasirinkto atributo reikšmę.
+1. Pasirinkite operatorių ir pasirinkto atributo reikšmę.
 
    > [!div class="mx-imgBorder"]
    > ![Pasirinktinis grupės filtras](media/customer-group-numbers.png "Klientų grupės filtras")
@@ -64,9 +64,14 @@ Segmentai yra valdomi **Segmentų** puslapyje.
    > [!div class="mx-imgBorder"]
    > ![Ryšių kelias kuriant segmentą](media/segments-multiple-relationships.png "Ryšių kelias kuriant segmentą")
 
-9. Pasirinkite **Įrašyti**, kad įrašytumėte segmentą. Jūsų segmentas bus įrašytas ir apdorojamas, jei visi reikalavimai bus patvirtinti. Kitu atveju jis bus Išsaugota kaip juodraštis.
+1. Pagal numatytuosius nustatymus, segmentai generuoja išvesties objektą, kuriame yra visi klientų profilių atributai, atitinkantys nustatytus filtrus. Jei segmentas pagrįstas kitais objektais nei *Kliento* objektas, į išvesties objektą galite įtraukti daugiau atributų iš šių objektų. Pažymėkite **Projekto atributai**, kad pasirinktumėte atributus, kurie bus pridėti prie išvesties objekto.  
 
-10. Pasirinkite **Atgal į segmentus**, kad sugrįžtumėte į puslapį **Segmentai**.
+   
+   Pavyzdys: segmentas A yra pagrįstas objektu, kuriame yra kliento veiklos duomenų, susijusių su *Kliento* objektu. Segmentas ieško visų klientų, skambinusių pagalbos tarnybai per pastarąsias 60 dienų. Galite pasirinkti pridėti skambučio trukmę ir skambučių skaičių prie visų sutampančių išvesties objekto kliento įrašų. Ši informacija gali būti naudinga siunčiant el. laišką su naudingomis nuorodomis į internetinius žinyno straipsnius ir DUK dažnai skambinusiems klientams.
+
+1. Pasirinkite **Įrašyti**, kad įrašytumėte segmentą. Jūsų segmentas bus įrašytas ir apdorojamas, jei visi reikalavimai bus patvirtinti. Kitu atveju jis bus Išsaugota kaip juodraštis.
+
+1. Pasirinkite **Atgal į segmentus**, kad sugrįžtumėte į puslapį **Segmentai**.
 
 ## <a name="manage-existing-segments"></a>Esamų segmentų tvarkymas
 
@@ -85,6 +90,7 @@ Pasirinkus segmentą pasiekiami toliau nurodyti veiksmai.
 
 - **Peržiūrėti** segmento išsamią informaciją, įskaitant narių skaičių, tendencijas ir segmento narių peržiūrą.
 - **Redaguoti** segmentą ir pakeisti jo ypatybes.
+- **Kurti dublikatą** segmentui. Galite iš karto pasirinkti redaguoti jo ypatybes arba tiesiog įrašyti dublikatą.
 - **Atnaujinti** segmentą, kad būtų įtraukti naujausi duomenys.
 - **Aktyvinti** arba **Išjungti** segmentą. Segmentai turi dvi galimas būsenas – aktyvią arba neaktyvią. Šios būsenos yra naudingos redaguojant segmentą. Neaktyvių segmentų aprašas yra, bet į jį dar neįtraukta klientų. Suaktyvinus segmentą, jo būsena keičiasi iš neaktyvios į aktyvią, ir jis pradeda ieškoti klientų, atitinkančių segmento aprašą. Jei [suplanuotas atnaujinimas](system.md#schedule-tab) yra sukonfigūruotas, neaktyvių segmentų **Būsena** nurodoma kaip **Praleista** – tai reiškia, kad net nebuvo bandyta atnaujinti. Suaktyvinus neaktyvų segmentą, jis bus atnaujintas ir įtrauktas į suplanuotus atnaujinimus.
   Taip pat galite naudoti funkciją **Planuoti vėliau**, esančią iškleidžiamajame meniu **Aktyvinti / išjungti**, kad nurodytumėte būsimą datą ir laiką, kada reikia aktyvinti ir išjungti tam tikrą segmentą.
@@ -192,26 +198,26 @@ Kartu su segmentų kūrimo įrankiu, yra kitas kelias sukurti segmentus. Naudoda
 1. Puslapyje **Segmentai** pasirinkite **Naujas** > **Greitai kurti naudojant**.
 
    - Pažymėkite parinktį **Profiliai** ir sukurkite segmentą, pagrįstą vieningu kliento objektu.
-   - Pažymėkite parinktį **Priemonės**, kad sukurtumėte segmentą kiekvienam kliento atributo priemonių tipam, kuriuos anksčiau sukūrėte puslapyje **Priemonės**.
+   - Pažymėkite parinktį **Priemonės**, kad sukurtumėte segmentą kiekvienam kliento atributo priemonių tipams, kuriuos anksčiau sukūrėte puslapyje **Priemonės**.
    - Pasirinkite parinktį **Įžvalgos**, norėdami sukurti segmentą naudojant vieną iš išvesties objektų, kuriuos sugeneravote naudodami galimybes **Prognozės** arba **Pasirinktiniai modeliai**.
 
 2. Dialogo lange **Naujas spartusis segmentas** pasirinkite atributą iš išplečiamojo sąrašo **Laukas**.
 
 3. Sistema pateiks keletą papildomų įžvalgų, kurios padės kurti geresnius klientų segmentus.
-   - Pagal kategorinius laukus parodysime 10 geriausių klientų skaičių. Pasirinkite **Reikšmė** ir pažymėkie **Peržiūra**.
+   - Pagal kategorinius laukus parodysime 10 geriausių klientų skaičių. Pasirinkite **Reikšmė** ir pažymėkite **Peržiūra**.
 
-   - Jei yra skaičiaus atributas, sistema parodys, kokią atributo reikšmę turi kiekvienas kliento procentilis. Pasirinkite **operatorių** ir **reikšmę**, tada pažymėkte **Peržiūra**.
+   - Jei yra skaičiaus atributas, sistema parodys, kokią atributo reikšmę turi kiekvienas kliento procentilis. Pasirinkite **operatorių** ir **reikšmę**, tada pažymėktie **Peržiūra**.
 
 4. Sistema parodys **numatomą segmento dydį**. Galite pasirinkti, ar generuoti apibrėžtą segmentą arba iš naujo jį peržiūrėti ir gauti kitą segmento dydį.
 
     > [!div class="mx-imgBorder"]
     > ![Sparčiojo segmento pavadinimas ir įvertinimas](media/quick-segment-name.png "Sparčiojo segmento pavadinimas ir įvertinimas")
 
-5. Įveskite segmento **Pavadinimą**. Pasrinktinai įveskite **rodomą pavadinimą**.
+5. Įveskite segmento **Pavadinimą**. Pasirinktinai įveskite **rodomą pavadinimą**.
 
 6. Pasirinkite **Įrašyti**, kad sukurtumėte savo segmentą.
 
-7. Ka segmento apdorojimas baigtas, jį galite peržiūrėti kaip bet kurį kitą sukurtą segmentą.
+7. Kai segmento apdorojimas baigtas, jį galite peržiūrėti kaip bet kurį kitą sukurtą segmentą.
 
 Toliau nurodytais atvejais patariama naudoti segmentų kūrimo priemonę, o ne rekomenduojamas segmentų galimybes:
 

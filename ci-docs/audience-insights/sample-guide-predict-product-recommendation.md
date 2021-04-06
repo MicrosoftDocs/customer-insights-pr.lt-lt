@@ -2,19 +2,19 @@
 title: Produkto rekomendacijų prognozės pavyzdžio gairės
 description: Šiame pavyzdyje pateiktame vadove išbandykite iš anksto pateiktą produkto prognozė modelį.
 ms.date: 02/10/2021
-ms.reviewer: digranad
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: diegogranados117
+ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 0ee873d9b7caa5f891cb2d5b8c665dec90ad0e59
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270514"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595283"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Produkto rekomendacijų prognozės (peržiūros) pavyzdžio gairės
 
@@ -22,12 +22,12 @@ Paaiškinsime, kad galutinis produkto rekomendacijų pavyzdys pateiktas prognoz�
 
 ## <a name="scenario"></a>Scenarijus
 
-„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jų tikslas yra suprasti, kuriuos produktus jie turėtų rekomenduoja savo pasikartojančiams klientams. Žinodami, kokie klientai **labiau tikėtina,** kad juos įsigys, jie galės sutaupyti rinkodaros pastangų susitelkdami į konkrečius elementus.
+„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jų tikslas yra suprasti, kuriuos produktus jie turėtų rekomenduoja savo pasikartojantiems klientams. Žinodami, kokie klientai **labiau tikėtina,** kad juos įsigys, jie galės sutaupyti rinkodaros pastangų susitelkdami į konkrečius elementus.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.
-- Rekomenduojame jums atlikti šiuos žingsnius [naujojoe aplinkoje](manage-environments.md).
+- Rekomenduojame jums atlikti šiuos žingsnius [naujoje aplinkoje](manage-environments.md).
 
 ## <a name="task-1---ingest-data"></a>Užduotis 1 - Duomenų vartojimas
 
@@ -45,7 +45,7 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
    - **Gimimo data**: Data
    - **Sukurta**: Data/Laikas/Zona
 
-   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformuoti gimimo datą į datą":::
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformuoti gimimo datą į datą.":::
 
 5. „Pavadinimas“ laukelyje dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
 
@@ -174,7 +174,7 @@ Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravi
 
    Modelis turi būti reguliariai bandomas siekiant išmokti naujas iškarpas, kai esama naujų vartojamų duomenų. Šiam pavyzdžiui, rinkitės **Kas mėnesį**.
 
-1. Peržiūrėją visą išsamią informaciją, rinkitės **Įrašyti ir vykdyti**.
+1. Peržiūrėję visą išsamią informaciją pasirinkite **Įrašyti ir vykdyti**.
 
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Užduotis 4 - Peržiūrėti modelio rezultatus ir paaiškinimus
@@ -199,7 +199,7 @@ Galite sukurti naują segmentą pagal modelio sukurtą objektą.
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Kurkite segmentą iš modelio rezultatų.":::
 
-Dabar turite dinamiškai atnaujintą segmentą, kuris nustato klientus, labiau noriusius įsigyti tris labiausiai rekomenduojamus produktus 
+Dabar turite dinamiškai atnaujintą segmentą, kuris nustato klientus, labiau norinčius įsigyti tris labiausiai rekomenduojamus produktus 
 
 Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).
 
