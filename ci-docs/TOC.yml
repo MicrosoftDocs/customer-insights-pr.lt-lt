@@ -19,13 +19,13 @@
     - name: Sužinokite modulius
       items:
         - name: Duomenų suvartojimas
-          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+          href: /learn/modules/ingest-data-customer-insights/
         - name: Sujungto kliento profilio kūrimas
-          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+          href: /learn/modules/unified-customer-profile/
         - name: Darbas su programa
-          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
-        - name: Papildykite duomenis ir nuspėjimus
-          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+          href: /learn/modules/working-with-customer-insights/
+        - name: Papildykite duomenis ir prognozes
+          href: /learn/modules/enrich-data/
     - name: Duomenų šaltiniai
       items:
         - name: Duomenų šaltinių apžvalga
@@ -98,7 +98,7 @@
           href: audience-insights/predict-transactional-churn.md
         - name: Pavyzdžio vedlys perdavimo maišytuvo nuspėjimui
           href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Nuspėkite kliento gyvavimo ciklo certę (CLV)
+        - name: Nuspėkite kliento gyvavimo ciklo reikšmę (CLV)
           href: audience-insights/predict-customer-lifetime-value.md
         - name: Nuspėkite produkto rekomendacijas
           href: audience-insights/predict-product-recommendation.md
@@ -114,9 +114,15 @@
       items:
         - name: Eksportavimo paskirties apžvalgą
           href: audience-insights/export-destinations.md
+        - name: „AdRoll”
+          href: audience-insights/export-adroll.md
+        - name: Adobe Campaign Standard
+          href: audience-insights/export-adobe-campaign-standard.md
+        - name: „Adobe” patirties platforma
+          href: audience-insights/export-adobe-experience-platform.md
         - name: Autopilotas
           href: audience-insights/export-autopilot.md
-        - name: Azure Blob Storage
+        - name: „Azure Blob Storage”
           href: audience-insights/export-azure-blob-storage.md
         - name: „Azure Data Lake Storage Gen2“
           href: audience-insights/export-azure-data-lake-storage-gen2.md
@@ -128,7 +134,7 @@
           href: audience-insights/export-dynamics365-marketing.md
         - name: Dynamics 365 Sales
           href: audience-insights/export-dynamics365-sales.md
-        - name: „Dynamics 365“ pardavimo telkinys (priedas)
+        - name: „Dynamics 365“ Pardavimo telkinys (priedas)
           href: audience-insights/customer-card-add-in.md
         - name: „Facebook“ skelbimų tvarkytuvas
           href: audience-insights/export-facebook.md
@@ -208,7 +214,7 @@
           href: engagement-insights/view-reports.md
         - name: Sukurkite tinkintas ataskaitas
           href: engagement-insights/custom-reports.md
-        - name: Kurit vieningas profilio ataskaitas
+        - name: Kurkite vieningas profilio ataskaitas
           href: engagement-insights/profile-reports.md
     - name: Programų kūrėjo ištekliai
       items:
