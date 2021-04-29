@@ -1,0 +1,142 @@
+---
+title: Klientų profilių papildymas naudojant „Microsoft“ duomenis
+description: Norėdami savo kliento duomenis papildyti prekės ženklo ir pomėgių savybėmis, naudokite bendrovės „Microsoft“ duomenis.
+ms.date: 04/09/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: how-to
+author: kishorem-MS
+ms.author: kishorem
+manager: shellyha
+ms.openlocfilehash: 6f19033236190547f68d2b91ec6b32074bf7912a
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.translationtype: HT
+ms.contentlocale: lt-LT
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896612"
+---
+# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a><span data-ttu-id="e1a78-103">Klientų profilių papildymas informacija apie susidomėjimą prekių ženklais ir pomėgiais (peržiūra)</span><span class="sxs-lookup"><span data-stu-id="e1a78-103">Enrich customer profiles with brand and interest affinities (preview)</span></span>
+
+<span data-ttu-id="e1a78-104">Norėdami savo kliento duomenis papildyti prekės ženklo ir pomėgių savybėmis, naudokite bendrovės „Microsoft“ duomenis.</span><span class="sxs-lookup"><span data-stu-id="e1a78-104">Use Microsoft's proprietary data to enrich your customer data with brand and interest affinities.</span></span> <span data-ttu-id="e1a78-105">Šis susidomėjimas nustatomas pagal žmonių, kurių demografiniai rodikliai yra panašūs į jūsų klientų rodiklius, duomenis.</span><span class="sxs-lookup"><span data-stu-id="e1a78-105">These affinities are determined based on data from people with similar demographics to your customers.</span></span> <span data-ttu-id="e1a78-106">Ši informacija padeda geriau suprasti ir skirstyti klientus pagal jų susidomėjimą tam tikrais prekių ženklais ir pomėgiais.</span><span class="sxs-lookup"><span data-stu-id="e1a78-106">This information helps you to better understand and segment your customers based on their affinities to specific brands and interests.</span></span>
+
+<span data-ttu-id="e1a78-107">Auditorijos įžvalgose eikite į **Duomenys** > **Papildymas** ir [konfigūruokite bei peržiūrėkite papildymus](enrichment-hub.md).</span><span class="sxs-lookup"><span data-stu-id="e1a78-107">In audience insights, go to **Data** > **Enrichment** to [configure and view enrichments](enrichment-hub.md).</span></span>
+
+<span data-ttu-id="e1a78-108">Norėdami konfigūruoti prekės ženklo panašumo papildymą, eikite į skirtuką **Atrasti** ir pasirinkite **Praturtinti mano duomenis** plytelėje **Prekių ženklai**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-108">To configure brand affinities enrichment, go to the **Discover** tab and select **Enrich my data** on the **Brands** tile.</span></span>
+
+<span data-ttu-id="e1a78-109">Norėdami konfigūruoti pomėgio panašumo papildymą, eikite į skirtuką **Atrasti** ir pasirinkite **Praturtinti mano duomenis** plytelėje **Pomėgiai**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-109">To configure interest affinities enrichment, go to the **Discover** tab and select **Enrich my data** on the **Interests** tile.</span></span>
+
+   > [!div class="mx-imgBorder"]
+   > <span data-ttu-id="e1a78-110">![Prekių ženklų ir pomėgių plytelės](media/BrandsInterest-tile-Hub.png "Prekių ženklų ir pomėgių plytelės")</span><span class="sxs-lookup"><span data-stu-id="e1a78-110">![Brands & Interests tiles](media/BrandsInterest-tile-Hub.png "Brands & Interest tiles")</span></span>
+
+## <a name="how-we-determine-affinities"></a><span data-ttu-id="e1a78-111">Kaip apibrėžiame savybes</span><span class="sxs-lookup"><span data-stu-id="e1a78-111">How we determine affinities</span></span>
+
+<span data-ttu-id="e1a78-112">„Microsoft“ internetinės paieškos duomenis naudojame prekės ženklų ir pomėgių savybėms rasti įvairiuose demografiniuose segmentuose (apibrėžiamuose pagal amžių, lytį arba vietą).</span><span class="sxs-lookup"><span data-stu-id="e1a78-112">We use Microsoft’s online search data to find affinities for brands and interests across various demographic segments (defined by age, gender, or location).</span></span> <span data-ttu-id="e1a78-113">Pagal prekių ženklo ar pomėgio paieškos internete apimtį nustatoma, koks yra demografinio segmento susidomėjimas tuo prekių ženklu ar pomėgiu, palyginti su kitais segmentais.</span><span class="sxs-lookup"><span data-stu-id="e1a78-113">The online search volume for a brand or interest determines how much affinity a demographic segment, compared to other segments, has to that brand or interest.</span></span> <span data-ttu-id="e1a78-114">prekės ženklas arba pomėgis.</span><span class="sxs-lookup"><span data-stu-id="e1a78-114">brand or interest.</span></span>
+
+## <a name="affinity-level-and-score"></a><span data-ttu-id="e1a78-115">Priskyrimo lygis ir balas</span><span class="sxs-lookup"><span data-stu-id="e1a78-115">Affinity level and score</span></span>
+
+<span data-ttu-id="e1a78-116">Kiekviename praturtintame kliento profilyje teikiame dvi susijusias reikšmes – priskyrimo lygį ir balą.</span><span class="sxs-lookup"><span data-stu-id="e1a78-116">On every enriched customer profile, we provide two related values – affinity level and affinity score.</span></span> <span data-ttu-id="e1a78-117">Šios reikšmės padeda nustatyti, koks yra šio profilio demografinio segmento susidomėjimas tam tikrą prekės ženklą ar susidomėjimą, palyginti su kitais demografiniais segmentais.</span><span class="sxs-lookup"><span data-stu-id="e1a78-117">These values help you determine how strong the affinity is for that profile’s demographic segment, for a brand or interest, as compared to other demographic segments.</span></span>
+
+<span data-ttu-id="e1a78-118">*Priskyrimo lygį* sudaro keturi lygiai, o *priskyrimo balas* apskaičiuojamas 100 balų skalėje, kuri susieta su priskyrimo lygiais.</span><span class="sxs-lookup"><span data-stu-id="e1a78-118">*Affinity level* consists of four levels and *affinity score* is calculated on a 100-point scale that maps to the affinity levels.</span></span>
+
+
+|<span data-ttu-id="e1a78-119">Priskyrimo lygis</span><span class="sxs-lookup"><span data-stu-id="e1a78-119">Affinity level</span></span> |<span data-ttu-id="e1a78-120">Patrauklumo balas</span><span class="sxs-lookup"><span data-stu-id="e1a78-120">Affinity score</span></span>  |
+|---------|---------|
+|<span data-ttu-id="e1a78-121">Labai aukštą</span><span class="sxs-lookup"><span data-stu-id="e1a78-121">Very high</span></span>     | <span data-ttu-id="e1a78-122">85-100</span><span class="sxs-lookup"><span data-stu-id="e1a78-122">85-100</span></span>       |
+|<span data-ttu-id="e1a78-123">Aukštas</span><span class="sxs-lookup"><span data-stu-id="e1a78-123">High</span></span>     | <span data-ttu-id="e1a78-124">70-84</span><span class="sxs-lookup"><span data-stu-id="e1a78-124">70-84</span></span>        |
+|<span data-ttu-id="e1a78-125">Vidutinį</span><span class="sxs-lookup"><span data-stu-id="e1a78-125">Medium</span></span>     | <span data-ttu-id="e1a78-126">35-69</span><span class="sxs-lookup"><span data-stu-id="e1a78-126">35-69</span></span>        |
+|<span data-ttu-id="e1a78-127">Žemą</span><span class="sxs-lookup"><span data-stu-id="e1a78-127">Low</span></span>     | <span data-ttu-id="e1a78-128">1-34</span><span class="sxs-lookup"><span data-stu-id="e1a78-128">1-34</span></span>        |
+
+<span data-ttu-id="e1a78-129">Priklausomai nuo to, kaip norite matuoti priskyrimą, galite naudoti arba priskyrimo lygį, arba balą.</span><span class="sxs-lookup"><span data-stu-id="e1a78-129">Depending on the granularity you would like for measuring the affinity, you can use either affinity level or score.</span></span> <span data-ttu-id="e1a78-130">Priskyrimo balas suteikia tikslesnį valdymą.</span><span class="sxs-lookup"><span data-stu-id="e1a78-130">Affinity score gives you more precise control.</span></span>
+
+## <a name="supported-countriesregions"></a><span data-ttu-id="e1a78-131">Palaikomos šalys ir (arba) regionai</span><span class="sxs-lookup"><span data-stu-id="e1a78-131">Supported countries/regions</span></span>
+
+<span data-ttu-id="e1a78-132">Šiuo metu palaikomos šių šalių ir (arba) regionų parinktys: Australija, Kanada (anglų k.), Prancūzija, Vokietija, Jungtinė Karalystė arba Jungtinės Amerikos Valstijos (anglų k.).</span><span class="sxs-lookup"><span data-stu-id="e1a78-132">We currently support the following country/region options: Australia, Canada (English), France, Germany, United Kingdom, or United States (English).</span></span>
+
+<span data-ttu-id="e1a78-133">Norėdami pasirinkti šalį, atidarykite **Prekių ženklų papildymas** arba **Pomėgių papildymas** ir pasirinkite **Keisti** šalia **Šalis ir (arba) regionas**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-133">To select a country, open the **Brands enrichment** or **Interest enrichment** and select **Change** next to **Country/Region**.</span></span> <span data-ttu-id="e1a78-134">Srityje **Šalies ir (arba) regiono parametrai** pasirinkite parinktį ir pasirinkite **Taikyti**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-134">In the **Country/Region settings** pane, choose an option and select **Apply**.</span></span>
+
+### <a name="implications-related-to-country-selection"></a><span data-ttu-id="e1a78-135">Padariniai, susiję su šalies pasirinkimu</span><span class="sxs-lookup"><span data-stu-id="e1a78-135">Implications related to country selection</span></span>
+
+- <span data-ttu-id="e1a78-136">Kai [pasirenkate savo prekių ženklus, ](#define-your-brands-or-interests), sistema teikia pasiūlymus pagal pasirinktą šalį arba regioną.</span><span class="sxs-lookup"><span data-stu-id="e1a78-136">When [choosing your own brands](#define-your-brands-or-interests), the system provides suggestions based on the selected country or region.</span></span>
+
+- <span data-ttu-id="e1a78-137">Pasirinkę [pramonės šaką](#define-your-brands-or-interests), gausite svarbiausius prekės ženklus arba susiesite pagal pasirinktą šalį arba regioną.</span><span class="sxs-lookup"><span data-stu-id="e1a78-137">When [choosing an industry](#define-your-brands-or-interests), you'll get the most relevant brands or interests based on the selected country or region.</span></span>
+
+- <span data-ttu-id="e1a78-138">[Praturtindami profilius](#refresh-enrichment), praturtinsime visus klientų profilius, pagal kuriuos gauname duomenis apie pasirinktus prekių ženklus ir susies klientus.</span><span class="sxs-lookup"><span data-stu-id="e1a78-138">When [enriching profiles](#refresh-enrichment), we'll enrich all customer profiles for which we get data for the selected brands and interests.</span></span> <span data-ttu-id="e1a78-139">Įtraukti profilius, kurių nėra parinktoje šalyje ar regione.</span><span class="sxs-lookup"><span data-stu-id="e1a78-139">Including profiles that are not in the selected country or region.</span></span> <span data-ttu-id="e1a78-140">Pvz., jei pasirinkote Vokietiją, papildysime JAV esančius duomenis, jei gausime duomenų apie pasirinktus prekių ženklus ir pomėgius JAV.</span><span class="sxs-lookup"><span data-stu-id="e1a78-140">For example, if you selected Germany, we'll enrich profiles located in the United States if we have data available for the selected brands and interests in the US.</span></span>
+
+## <a name="configure-enrichment"></a><span data-ttu-id="e1a78-141">Papildymo konfigūravimas</span><span class="sxs-lookup"><span data-stu-id="e1a78-141">Configure Enrichment</span></span>
+
+<span data-ttu-id="e1a78-142">Vedama patirtis leidžia peržiūrėti konfigūraciją ir papildymus.</span><span class="sxs-lookup"><span data-stu-id="e1a78-142">A guided experience helps you through the configuration of the enrichments.</span></span> 
+
+### <a name="define-your-brands-or-interests"></a><span data-ttu-id="e1a78-143">Prekių ženklų arba pomėgių apibrėžimas</span><span class="sxs-lookup"><span data-stu-id="e1a78-143">Define your brands or interests</span></span>
+
+<span data-ttu-id="e1a78-144">Pažymėkite vieną iš šių parinkčių:</span><span class="sxs-lookup"><span data-stu-id="e1a78-144">Select one of the following options:</span></span>
+
+- <span data-ttu-id="e1a78-145">**Pramonės šaka**: sistema nustato populiariausius jūsų pramonės šakai aktualius prekių ženklus arba pomėgius ir jais papildo klientų duomenis.</span><span class="sxs-lookup"><span data-stu-id="e1a78-145">**Industry**: The system identifies the top brands or interests relevant to your industry and enriches your customer data with them.</span></span>
+- <span data-ttu-id="e1a78-146">**Pasirinkti savo**: iš prekių ženklų arba pomėgių sąrašo pasirinkite ne daugiau kaip 5 elementus, kurie jūsų organizacijai yra svarbiausi.</span><span class="sxs-lookup"><span data-stu-id="e1a78-146">**Choose your own**: Select up to five items from the list of brands or interests that are most relevant to your organization.</span></span>
+
+<span data-ttu-id="e1a78-147">Norėdami įtraukti prekių ženklą arba pomėgį, įveskite jį įvesties srityje, kad būtų rodomi pasiūlymai pagal sutampančias sąvokas.</span><span class="sxs-lookup"><span data-stu-id="e1a78-147">To add a brand or interest, enter it in the input area to get suggestions based on matching terms.</span></span> <span data-ttu-id="e1a78-148">Jei jūsų ieškomo prekių ženklo ar pomėgio nėra, atsiųskite mums atsiliepimą naudodami nuorodą **Pasiūlyti**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-148">If we don't list a brand or interest you're looking for, send us feedback using the **Suggest** link.</span></span>
+
+### <a name="review-enrichment-preferences"></a><span data-ttu-id="e1a78-149">Papildymo nuostatos</span><span class="sxs-lookup"><span data-stu-id="e1a78-149">Review enrichment preferences</span></span>
+
+<span data-ttu-id="e1a78-150">Peržiūrėkite numatytąsias pratinimo nuostatas ir prireikus atnaujinkite jas.</span><span class="sxs-lookup"><span data-stu-id="e1a78-150">Review your default enrichment preferences and update them as needed.</span></span>
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Pratinimo nuostatų lango papildymas.":::
+
+### <a name="select-entity-to-enrich"></a><span data-ttu-id="e1a78-152">Pasirinkti objektą susiejimui</span><span class="sxs-lookup"><span data-stu-id="e1a78-152">Select entity to enrich</span></span>
+
+<span data-ttu-id="e1a78-153">Pasirinkite **Papildytas objektas** ir pasirinkite duomenų rinkinį, kurį norite papildyti įmonės duomenimis iš „Microsoft“.</span><span class="sxs-lookup"><span data-stu-id="e1a78-153">Select **Enriched entity** and choose the data set you want to enrich with company data from the Microsoft.</span></span> <span data-ttu-id="e1a78-154">Galite pažymėti objektą Klientas, kad pagerintumėte visus jūsų klientų profilius, arba pasirinkti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.</span><span class="sxs-lookup"><span data-stu-id="e1a78-154">You can select the Customer entity to enrich all your customer profiles or select a segment entity to enrich only customer profiles contained in that segment.</span></span>
+
+### <a name="map-your-fields"></a><span data-ttu-id="e1a78-155">Susiekite savo laukus</span><span class="sxs-lookup"><span data-stu-id="e1a78-155">Map your fields</span></span>
+
+<span data-ttu-id="e1a78-156">Susiekite laukus iš vieningojo kliento objekto ir apibrėžkite demografinį segmentą, kurį sistema turėtų naudoti savo klientų duomenims papildyti.</span><span class="sxs-lookup"><span data-stu-id="e1a78-156">Map fields from your unified customer entity to define the demographic segment you want the system to use for enriching your customer data.</span></span> <span data-ttu-id="e1a78-157">Susiekite šalį / regioną ir bent gimimo datą arba lyties atributus.</span><span class="sxs-lookup"><span data-stu-id="e1a78-157">Map Country/Region and at least Date of Birth or Gender attributes.</span></span> <span data-ttu-id="e1a78-158">Turite susieti šalį / regioną. Taip pat turite susieti bent vieną miestą (ir rajoną / apskritį) arba pašto indeksą.</span><span class="sxs-lookup"><span data-stu-id="e1a78-158">Additionally, you must map at least one of City (and State/Province) or Postal code.</span></span> <span data-ttu-id="e1a78-159">Pasirinkite **Redaguoti**, norėdami apibrėžti laukų susiejimą, ir baigę pasirinkite **Taikyti**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-159">Select **Edit** to define the mapping of the fields and select **Apply** when you're done.</span></span> <span data-ttu-id="e1a78-160">Spustelėkite **Įrašyti**, kad baigtumėte susieti laukus.</span><span class="sxs-lookup"><span data-stu-id="e1a78-160">Select **Save** to complete the field mapping.</span></span>
+
+<span data-ttu-id="e1a78-161">Palaikomi toliau nurodyti formatai ir reikšmės; reikšmėse didžiosios ir mažosios raidės neskiriamos.</span><span class="sxs-lookup"><span data-stu-id="e1a78-161">The following formats and values are supported, values are not case-sensitive:</span></span>
+
+- <span data-ttu-id="e1a78-162">**Gimimo data**: rekomenduojama, kad duomenų įtraukimo metu gimimo data būtų konvertuota į „DateTime“ formatą.</span><span class="sxs-lookup"><span data-stu-id="e1a78-162">**Date of Birth**: We recommend that date of birth is converted to DateTime type during data ingestion.</span></span> <span data-ttu-id="e1a78-163">Arba ji gali būti eilutė pagal [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formatu „YYYY-MM-DD“ arba „yyyy-MM-ddTHH:mm:ssZ“.</span><span class="sxs-lookup"><span data-stu-id="e1a78-163">Alternatively, it can be a string in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format "yyyy-MM-dd" or "yyyy-MM-ddTHH:mm:ssZ".</span></span>
+- <span data-ttu-id="e1a78-164">**Lytis**: vyras, moteris, nežinoma</span><span class="sxs-lookup"><span data-stu-id="e1a78-164">**Gender**: Male, Female, Unknown</span></span>
+- <span data-ttu-id="e1a78-165">**Pašto kodas**: penkiaženklis pašto kodas JAV, standartinis pašto kodas visur kitur</span><span class="sxs-lookup"><span data-stu-id="e1a78-165">**Postal code**: Five-digit ZIP Codes for US, standard postal code everywhere else</span></span>
+- <span data-ttu-id="e1a78-166">**Miestas**: miesto pavadinimas anglų k.</span><span class="sxs-lookup"><span data-stu-id="e1a78-166">**City**: City name in English</span></span>
+- <span data-ttu-id="e1a78-167">**Valstija / provincija**: dviejų raidžių santrumpa JAV ir Kanadoje.</span><span class="sxs-lookup"><span data-stu-id="e1a78-167">**State/Province**: Two-letter abbreviation for the US and Canada.</span></span> <span data-ttu-id="e1a78-168">Dviejų ar trijų raidžių santrumpa Australijoje.</span><span class="sxs-lookup"><span data-stu-id="e1a78-168">Two or three letter abbreviation for Australia.</span></span> <span data-ttu-id="e1a78-169">Netaikoma Prancūzijai, Vokietijai ir JK.</span><span class="sxs-lookup"><span data-stu-id="e1a78-169">Not applicable for France, Germany, or the UK.</span></span>
+- <span data-ttu-id="e1a78-170">**Šalis / regionas**:</span><span class="sxs-lookup"><span data-stu-id="e1a78-170">**Country/Region**:</span></span>
+
+  - <span data-ttu-id="e1a78-171">JAV: Jungtinės Amerikos Valstijos, Jungtinės Valstijos, JAV, Amerika</span><span class="sxs-lookup"><span data-stu-id="e1a78-171">US: United States of America, United States, USA, US, America</span></span>
+  - <span data-ttu-id="e1a78-172">CA: Kanada, CA</span><span class="sxs-lookup"><span data-stu-id="e1a78-172">CA: Canada, CA</span></span>
+  - <span data-ttu-id="e1a78-173">GB: Jungtinė Karalystė, JK, Didžioji Britanija, GB, Jungtinė Didžiosios Britanijos ir Šiaurės Airijos Karalystė, Jungtinė Didžiosios Britanijos Karalystė</span><span class="sxs-lookup"><span data-stu-id="e1a78-173">GB: United Kingdom, UK, Great Britain, GB, United Kingdom of Great Britain and Northern Ireland, United Kingdom of Great Britain</span></span>
+  - <span data-ttu-id="e1a78-174">AU: Australija, Australijos Sandrauga</span><span class="sxs-lookup"><span data-stu-id="e1a78-174">AU: Australia, AU, Common Wealth of Australia</span></span>
+  - <span data-ttu-id="e1a78-175">FR: Prancūzija, FR, Prancūzijos Respublika</span><span class="sxs-lookup"><span data-stu-id="e1a78-175">FR: France, FR, French Republic</span></span>
+  - <span data-ttu-id="e1a78-176">DE: Vokietija, vokiečių, Deutschland, DE, Vokietijos Federacinė Respublika, Vokietijos Respublika</span><span class="sxs-lookup"><span data-stu-id="e1a78-176">DE: Germany, German, Deutschland, Allemagne, DE, Federal Republic of Germany, Republic of Germany</span></span>
+
+## <a name="review-and-name-the-enrichment"></a><span data-ttu-id="e1a78-177">Papildymo peržiūra ir pavadinimas</span><span class="sxs-lookup"><span data-stu-id="e1a78-177">Review and name the enrichment</span></span>
+
+<span data-ttu-id="e1a78-178">Galiausiai galite peržiūrėti informaciją ir nurodyti papildymo pavadinimą.</span><span class="sxs-lookup"><span data-stu-id="e1a78-178">Finally, you get to review the information and provide a name for the enrichment.</span></span>
+
+:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Pomėgių peržiūros ir pavadinimo suteikimo puslapis.":::
+
+## <a name="refresh-enrichment"></a><span data-ttu-id="e1a78-180">Papildymo atnaujinimas</span><span class="sxs-lookup"><span data-stu-id="e1a78-180">Refresh enrichment</span></span>
+
+<span data-ttu-id="e1a78-181">Papildymą vykdykite sukonfigūravę prekių ženklus, pomėgius ir demografinių duomenų laukų susiejimą.</span><span class="sxs-lookup"><span data-stu-id="e1a78-181">Run the enrichment after configuring brands, interests, and the field mapping for demographics.</span></span> <span data-ttu-id="e1a78-182">Norėdami pradėti procesą, prekės ženklo arba pomėgio konfigūravimo puslapyje pasirinkite **Vykdyti**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-182">To start the process, select **Run** on the brand or interest configuration page.</span></span> <span data-ttu-id="e1a78-183">Be to, galite leisti sistemai automatiškai vykdyti papildymą, kai vykdomas suplanuotas atnaujinimas.</span><span class="sxs-lookup"><span data-stu-id="e1a78-183">Additionally, you can let the system run the enrichment automatically as part of a scheduled refresh.</span></span>
+<span data-ttu-id="e1a78-184">Priklausomai nuo jūsų klientų duomenų apimties, papildymas gali užtrukti kelias minutes.</span><span class="sxs-lookup"><span data-stu-id="e1a78-184">Depending on the size of your customer data, it may take several minutes for an enrichment run to complete.</span></span>
+
+> [!TIP]
+> <span data-ttu-id="e1a78-185">Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams.</span><span class="sxs-lookup"><span data-stu-id="e1a78-185">There are [six types of status](system.md#status-types) for tasks/processes.</span></span> <span data-ttu-id="e1a78-186">Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies).</span><span class="sxs-lookup"><span data-stu-id="e1a78-186">Additionally, most processes [depend on other downstream processes](system.md#refresh-policies).</span></span> <span data-ttu-id="e1a78-187">Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą.</span><span class="sxs-lookup"><span data-stu-id="e1a78-187">You can select the status of a process to see details on the progress of the entire job.</span></span> <span data-ttu-id="e1a78-188">Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.</span><span class="sxs-lookup"><span data-stu-id="e1a78-188">After selecting **See details** for one of the job's tasks, you find additional information: processing time, the last processing date, and all errors and warnings associated with the task.</span></span>
+
+## <a name="enrichment-results"></a><span data-ttu-id="e1a78-189">Papildymo rezultatai</span><span class="sxs-lookup"><span data-stu-id="e1a78-189">Enrichment results</span></span>
+
+<span data-ttu-id="e1a78-190">Įvykdę papildymo procesą, eikite į **Mano papildymai** ir peržiūrėkite bendrą papildytų klientų skaičių bei prekių ženklų arba pomėgių pasiskirstymą papildytuose klientų profiliuose.</span><span class="sxs-lookup"><span data-stu-id="e1a78-190">After running the enrichment process, go to **My enrichments** to review the total number of enriched customers and a breakdown of brands or interests in the enriched customer profiles.</span></span>
+
+:::image type="content" source="media/my-enrichments.png" alt-text="Rezultatų peržiūra atlikus papildymo procesą":::
+
+<span data-ttu-id="e1a78-192">Peržiūrėkite papildytus duomenis diagramoje spustelėdami **Peržiūrėti papildytus duomenis**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-192">Review the enriched data by selecting **View enriched data** in the chart.</span></span> <span data-ttu-id="e1a78-193">Papildyti prekių ženklų duomenys yra objekte **BrandAffinityFromMicrosoft**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-193">Enriched data for brands goes to the **BrandAffinityFromMicrosoft** entity.</span></span> <span data-ttu-id="e1a78-194">Pomėgių duomenys yra objekte **InterestAffinityFromMicrosoft**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-194">Data for interests is in the **InterestAffinityFromMicrosoft** entity.</span></span> <span data-ttu-id="e1a78-195">Šiuos objektus taip pat rasite grupėje **Papildymas**, esančioje **Duomenys** > **Objektai**.</span><span class="sxs-lookup"><span data-stu-id="e1a78-195">You'll also find these entities listed in the **Enrichment** group in **Data** > **Entities**.</span></span>
+
+## <a name="see-enrichment-data-on-the-customer-card"></a><span data-ttu-id="e1a78-196">Žr. papildymo duomenis kliento kortelėje</span><span class="sxs-lookup"><span data-stu-id="e1a78-196">See enrichment data on the customer card</span></span>
+
+<span data-ttu-id="e1a78-197">Susidomėjimą prekių ženklais ir pomėgiais taip pat galima peržiūrėti atskirose klientų kortelėse.</span><span class="sxs-lookup"><span data-stu-id="e1a78-197">Brand and interest affinities can also be viewed on individual customer cards.</span></span> <span data-ttu-id="e1a78-198">Eikite į **Klientai** ir pasirinkite kliento profilį.</span><span class="sxs-lookup"><span data-stu-id="e1a78-198">Go to **Customers** and select a customer profile.</span></span> <span data-ttu-id="e1a78-199">Kliento kortelėje rasite prekių ženklų arba prekių ženklų, kurie traukia žmones kliento demografiniame profilyje, diagramas.</span><span class="sxs-lookup"><span data-stu-id="e1a78-199">In the customer card, you'll find charts for the brands or interests that people in that customer's demographic profile have affinity for.</span></span>
+
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kliento kortelė su papildytais duomenimis":::
+
+## <a name="next-steps"></a><span data-ttu-id="e1a78-201">Kiti veiksmai</span><span class="sxs-lookup"><span data-stu-id="e1a78-201">Next steps</span></span>
+
+<span data-ttu-id="e1a78-202">Atlikite veiksmus su papildytais klientų duomenimis.</span><span class="sxs-lookup"><span data-stu-id="e1a78-202">Build on top of your enriched customer data.</span></span> <span data-ttu-id="e1a78-203">Kurkite [Segmentai](segments.md), [Matavimai](measures.md) ir net [eksportuokite duomenis](export-destinations.md), kad užtikrintumėte klientų poreikiams pritaikytą aptarnavimą.</span><span class="sxs-lookup"><span data-stu-id="e1a78-203">Create [Segments](segments.md), [Measures](measures.md), and even [export the data](export-destinations.md) to deliver personalized experiences to your customers.</span></span>
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

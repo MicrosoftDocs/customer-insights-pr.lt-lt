@@ -1,7 +1,7 @@
 ---
-title: Eksportavimo paskirties vietos
-description: Eksportuoti duomenis ir tvarkyti eksportavimo paskirties vietas.
-ms.date: 07/21/2020
+title: Duomenų eksportavimas iš „Customer Insights“
+description: 'Tvarkykite duomenų bendrinimo eksportavimus. '
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596095"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896153"
 ---
-# <a name="export-destinations-preview-overview"></a><span data-ttu-id="4d477-103">Eksportavimo paskirties vietos apžvalga (peržiūros versija)</span><span class="sxs-lookup"><span data-stu-id="4d477-103">Export destinations (preview) overview</span></span>
+# <a name="exports-preview-overview"></a><span data-ttu-id="5e390-103">Eksportavimų (peržiūra) apžvalga</span><span class="sxs-lookup"><span data-stu-id="5e390-103">Exports (preview) overview</span></span>
 
-<span data-ttu-id="4d477-104">Puslapyje **Eksportavimo paskirties vietos** rodomos visos vietos, į kurias nustatėte eksportuoti duomenis.</span><span class="sxs-lookup"><span data-stu-id="4d477-104">The **Export destinations** page shows you all locations you've set up to export data to.</span></span> <span data-ttu-id="4d477-105">Taip pat galite įtraukti naujų eksportavimo paskirties vietų.</span><span class="sxs-lookup"><span data-stu-id="4d477-105">You can also add new destinations for export.</span></span> <span data-ttu-id="4d477-106">Taip pat, jis rodo šiuo metu galimas eksportavimo parinktis.</span><span class="sxs-lookup"><span data-stu-id="4d477-106">Additionally, it shows export currently available options.</span></span> <span data-ttu-id="4d477-107">Gaukite trumpą apžvalgą, aprašą ir sužinokite, ką galite daryti su kiekviena išplečiamumo parinktimi.</span><span class="sxs-lookup"><span data-stu-id="4d477-107">Get a quick overview, description, and find out what you can do with each extensibility option.</span></span> <span data-ttu-id="4d477-108">Eksportuokite vieninguosius profilius, priemones ir segmentus į palaikomas programas, tinkamas jūsų verslui.</span><span class="sxs-lookup"><span data-stu-id="4d477-108">Export unified profiles, measures, and segments to supported apps relevant for your business.</span></span>
+<span data-ttu-id="5e390-104">Puslapyje **Eksportavimai** rodomi visi sukonfigūruoti eksportavimai.</span><span class="sxs-lookup"><span data-stu-id="5e390-104">The **Exports** page shows you all configured exports.</span></span> <span data-ttu-id="5e390-105">Eksportavimuose su įvairiomis programomis bendrinami konkretūs duomenys.</span><span class="sxs-lookup"><span data-stu-id="5e390-105">Exports share specific data with various applications.</span></span> <span data-ttu-id="5e390-106">Jie gali apimti klientų profilius arba objektus, schemas ir žymėjimo duomenis.</span><span class="sxs-lookup"><span data-stu-id="5e390-106">They can include customer profiles or entities, schemas, and mapping details.</span></span> <span data-ttu-id="5e390-107">Kiekvienam eksportavimui reikalingas [ryšys, kurį nustato administratorius, kad galėtų tvarkyti įgaliojimą ir prieigą](connections.md).</span><span class="sxs-lookup"><span data-stu-id="5e390-107">Each export requires a [connection, set up by an administrator, to manage authentication and access](connections.md).</span></span>
 
-<span data-ttu-id="4d477-109">Eikite į **Administratorius** > **Eksportuoti paskirties vietas** , kad rastumėte toliau nurodytas išplečiamumo parinktis.</span><span class="sxs-lookup"><span data-stu-id="4d477-109">Go to **Admin** > **Export destinations** to find the following extensibility options:</span></span>
+> [!NOTE]
+> <span data-ttu-id="5e390-108">Iki 2021 m. kovo mėn. eksportavimai automatiškai sukūrė ryšį su atitinkama paslauga.</span><span class="sxs-lookup"><span data-stu-id="5e390-108">Until March 2021, exports created a connection to the corresponding service automatically.</span></span> <span data-ttu-id="5e390-109">Dabar eksportavimams reikia [administratoriaus sukurto ir bendrinamo ryšio](connections.md), kad juos galėtumėte sukurti.</span><span class="sxs-lookup"><span data-stu-id="5e390-109">Exports now require a [connection, created and shared by an administrator](connections.md) before you can create them.</span></span>
 
-- [<span data-ttu-id="4d477-110">Adobe Campaign Standard</span><span class="sxs-lookup"><span data-stu-id="4d477-110">Adobe Campaign Standard</span></span>](export-adobe-campaign-standard.md)
-- [<span data-ttu-id="4d477-111">„Adobe” patirties platforma</span><span class="sxs-lookup"><span data-stu-id="4d477-111">Adobe Experience Platform</span></span>](export-adobe-experience-platform.md)
-- [<span data-ttu-id="4d477-112">„AdRoll”</span><span class="sxs-lookup"><span data-stu-id="4d477-112">AdRoll</span></span>](export-adroll.md)
-- [<span data-ttu-id="4d477-113">Autopilotas</span><span class="sxs-lookup"><span data-stu-id="4d477-113">Autopilot</span></span>](export-autopilot.md)
-- [<span data-ttu-id="4d477-114">„Azure“ didelių dvejetainių objektų saugykla</span><span class="sxs-lookup"><span data-stu-id="4d477-114">Azure Blob Storage</span></span>](export-azure-blob-storage.md)
-- [<span data-ttu-id="4d477-115">Azure Data Lake Storage Gen2</span><span class="sxs-lookup"><span data-stu-id="4d477-115">Azure Data Lake Storage Gen2</span></span>](export-azure-data-lake-storage-gen2.md)
-- [<span data-ttu-id="4d477-116">„Microsoft Teams“ robotas</span><span class="sxs-lookup"><span data-stu-id="4d477-116">Bot for Microsoft Teams</span></span>](export-teams-bot.md)
-- [<span data-ttu-id="4d477-117">„Customer Insights“ API</span><span class="sxs-lookup"><span data-stu-id="4d477-117">Customer Insights API</span></span>](apis.md)
-- [<span data-ttu-id="4d477-118">„DotDigital“</span><span class="sxs-lookup"><span data-stu-id="4d477-118">DotDigital</span></span>](export-dotdigital.md)
-- [<span data-ttu-id="4d477-119">„Dynamics 365 Customer Service“ (Kliento kortelės priedas)</span><span class="sxs-lookup"><span data-stu-id="4d477-119">Dynamics 365 Customer Service (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="4d477-120">„Dynamics 365 Marketing“</span><span class="sxs-lookup"><span data-stu-id="4d477-120">Dynamics 365 Marketing</span></span>](export-dynamics365-marketing.md)
-- [<span data-ttu-id="4d477-121">Dynamics 365 Sales</span><span class="sxs-lookup"><span data-stu-id="4d477-121">Dynamics 365 Sales</span></span>](export-dynamics365-sales.md)
-- [<span data-ttu-id="4d477-122">„Dynamics 365“ Pardavimo telkinys (Kliento kortelės priedas)</span><span class="sxs-lookup"><span data-stu-id="4d477-122">Dynamics 365 Sales Hub (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="4d477-123">„Facebook” reklamos tvarkytuvas</span><span class="sxs-lookup"><span data-stu-id="4d477-123">Facebook Ads Manager</span></span>](export-facebook.md)
-- [<span data-ttu-id="4d477-124">„Google Ads“</span><span class="sxs-lookup"><span data-stu-id="4d477-124">Google Ads</span></span>](export-google-ads.md)
-- [<span data-ttu-id="4d477-125">„LiveRamp“&reg;</span><span class="sxs-lookup"><span data-stu-id="4d477-125">LiveRamp&reg;</span></span>](export-liveramp.md)
-- [<span data-ttu-id="4d477-126">„Mailchimp“</span><span class="sxs-lookup"><span data-stu-id="4d477-126">Mailchimp</span></span>](export-mailchimp.md)
-- [<span data-ttu-id="4d477-127">„Marketo“</span><span class="sxs-lookup"><span data-stu-id="4d477-127">Marketo</span></span>](export-marketo.md)
-- [<span data-ttu-id="4d477-128">„Power Automate”</span><span class="sxs-lookup"><span data-stu-id="4d477-128">Power Automate</span></span>](export-power-automate.md)
-- [<span data-ttu-id="4d477-129">„Power Apps”</span><span class="sxs-lookup"><span data-stu-id="4d477-129">Power Apps</span></span>](export-power-apps.md)
-- [<span data-ttu-id="4d477-130">„Power BI”</span><span class="sxs-lookup"><span data-stu-id="4d477-130">Power BI</span></span>](export-power-bi.md)
-- [<span data-ttu-id="4d477-131">„SendGrid“ (siųsti tinklelį)</span><span class="sxs-lookup"><span data-stu-id="4d477-131">SendGrid</span></span>](export-sendgrid.md)
-- [<span data-ttu-id="4d477-132">„SFTP”</span><span class="sxs-lookup"><span data-stu-id="4d477-132">SFTP</span></span>](export-sftp.md)
+<span data-ttu-id="5e390-110">Eikite į **Duomenys** > **Eksportavimai**, kad peržiūrėtumėte eksportavimų puslapį.</span><span class="sxs-lookup"><span data-stu-id="5e390-110">Go to **Data** > **Exports** to view the exports page.</span></span> <span data-ttu-id="5e390-111">Visi naudotojo vaidmenys turi prieigą sukonfigūruotiems eksportavimams peržiūrėti.</span><span class="sxs-lookup"><span data-stu-id="5e390-111">All user roles have access to view configured exports.</span></span> <span data-ttu-id="5e390-112">Naudokite komandų juostoje esantį paieškos laukelį eksportavimams rasti pagal pavadinimą, ryšio pavadinimą arba ryšio tipą.</span><span class="sxs-lookup"><span data-stu-id="5e390-112">Use of the search field in the command bar to find exports by their name, connection name, or connection type.</span></span>
 
-## <a name="add-a-new-export-destination"></a><span data-ttu-id="4d477-133">Naujos eksportavimo vietos įtraukimas</span><span class="sxs-lookup"><span data-stu-id="4d477-133">Add a new export destination</span></span>
+## <a name="set-up-a-new-export"></a><span data-ttu-id="5e390-113">Naujo eksportavimo sąranka</span><span class="sxs-lookup"><span data-stu-id="5e390-113">Set up a new export</span></span>
 
-<span data-ttu-id="4d477-134">Norėdami įtraukti eksportavimo paskirties vietas, turite [administratoriaus teises](permissions.md).</span><span class="sxs-lookup"><span data-stu-id="4d477-134">To add export destinations, you have [administrator permissions](permissions.md).</span></span> <span data-ttu-id="4d477-135">Jei eksportuojate į „Microsoft“ tarnybas, daroma prielaida, kad abi tarnybos yra toje pačioje organizacijoje.</span><span class="sxs-lookup"><span data-stu-id="4d477-135">If you export to Microsoft services, we assume both services are in the same organization.</span></span>
+<span data-ttu-id="5e390-114">Jei norite nustatyti ar redaguoti eksportavimą, turite turėti prieinamų ryšių.</span><span class="sxs-lookup"><span data-stu-id="5e390-114">To set up or edit an export, you need to have connections available to you.</span></span> <span data-ttu-id="5e390-115">Ryšiai priklauso nuo jūsų [naudotojo vaidmens](permissions.md):</span><span class="sxs-lookup"><span data-stu-id="5e390-115">Connections depend on your [user role](permissions.md):</span></span>
+- <span data-ttu-id="5e390-116">Administratoriai turi prieigą prie visų ryšių.</span><span class="sxs-lookup"><span data-stu-id="5e390-116">Administrators have access to all connections.</span></span> <span data-ttu-id="5e390-117">Jie taip pat gali kurti naujus ryšius nustatydami eksportavimą.</span><span class="sxs-lookup"><span data-stu-id="5e390-117">They can also create new connections when setting up an export.</span></span>
+- <span data-ttu-id="5e390-118">Bendradarbiai gali turėti prieigą prie konkrečių ryšių.</span><span class="sxs-lookup"><span data-stu-id="5e390-118">Contributors can have access to specific connections.</span></span> <span data-ttu-id="5e390-119">Jie priklauso nuo administratorių, kad sukonfigūruotų ir bendrintų ryšius.</span><span class="sxs-lookup"><span data-stu-id="5e390-119">They depend on administrators to configure and share connections.</span></span> <span data-ttu-id="5e390-120">Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="5e390-120">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
+- <span data-ttu-id="5e390-121">Žiūrovai gali tik peržiūrėti esamus eksportavimus, tačiau ne juos kurti.</span><span class="sxs-lookup"><span data-stu-id="5e390-121">Viewers can only view existing exports but not create them.</span></span>
 
-1. <span data-ttu-id="4d477-136">Eikite į **Administratorius** > **Eksportavimo paskirties vietos**.</span><span class="sxs-lookup"><span data-stu-id="4d477-136">Go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="5e390-122">Eikite į **Duomenys** > **Eksportavimas**.</span><span class="sxs-lookup"><span data-stu-id="5e390-122">Go to **Data** > **Exports**.</span></span>
 
-1. <span data-ttu-id="4d477-137">Įjunkite skirtuką **Mano eksportavimo paskirties vietos**.</span><span class="sxs-lookup"><span data-stu-id="4d477-137">Switch to the **My export destinations** tab.</span></span>
+1. <span data-ttu-id="5e390-123">Pasirinkite **Pridėti eksportavimą**, jei norite sukurti naują eksportavimo paskirties vietą.</span><span class="sxs-lookup"><span data-stu-id="5e390-123">Select **Add export** to create a new export destination.</span></span>
 
-1. <span data-ttu-id="4d477-138">Pasirinkite **Įtraukti paskirties vietą**, kad sukurtumėte naują eksportavimo paskirties vietą.</span><span class="sxs-lookup"><span data-stu-id="4d477-138">Select **Add destination** to create a new export destination.</span></span>
+1. <span data-ttu-id="5e390-124">Srityje **Sąrankos eksportavimas** pasirinkite, kurį ryšį naudoti.</span><span class="sxs-lookup"><span data-stu-id="5e390-124">In the **Set up export** pane, select which connection to use.</span></span> <span data-ttu-id="5e390-125">[Ryšius](connections.md) tvarko administratoriai.</span><span class="sxs-lookup"><span data-stu-id="5e390-125">[Connections](connections.md) are managed by administrators.</span></span> 
 
-1. <span data-ttu-id="4d477-139">Srityje **Įtraukti paskirties vietą** išplečiamajame sąraše pasirinkite eksportavimo paskirties vietos **Tipą**.</span><span class="sxs-lookup"><span data-stu-id="4d477-139">In the **Add destination** pane, select the **Type** of export destination in the drop-down.</span></span>
+1. <span data-ttu-id="5e390-126">Jei norite sukurti eksportavimą, pateikite reikiamus duomenis ir pasirinkite **Įrašyti**.</span><span class="sxs-lookup"><span data-stu-id="5e390-126">Provide the required details and select **Save** to create the export.</span></span>
 
-1. <span data-ttu-id="4d477-140">Nurodykite reikiamą informaciją ir pasirinkite **Toliau**, kad sukurtumėte eksportavimo paskirties vietą.</span><span class="sxs-lookup"><span data-stu-id="4d477-140">Provide the required details and select **Next** to create the export destination.</span></span>
+### <a name="edit-an-export"></a><span data-ttu-id="5e390-127">Eksportavimo redagavimas</span><span class="sxs-lookup"><span data-stu-id="5e390-127">Edit an export</span></span>
 
-<span data-ttu-id="4d477-141">Taip pat galite pasirinkti **Nustatyti** plytelėje, esančioje skirtuke **Atrasti**.</span><span class="sxs-lookup"><span data-stu-id="4d477-141">You can also select **Set up** on a tile on the **Discover** tab.</span></span>
+1. <span data-ttu-id="5e390-128">Pažymėkite eksportavimo paskirties vietos, kurią norite redaguoti, vertikalią elipsę.</span><span class="sxs-lookup"><span data-stu-id="5e390-128">Select the vertical ellipsis for the export destination you want to edit.</span></span>
 
-## <a name="view-export-destinations"></a><span data-ttu-id="4d477-142">Eksportavimo paskirties vietos peržiūra</span><span class="sxs-lookup"><span data-stu-id="4d477-142">View Export destinations</span></span>
+1. <span data-ttu-id="5e390-129">Išskleidžiamajame meniu pasirinkite **Redaguoti**.</span><span class="sxs-lookup"><span data-stu-id="5e390-129">Select **Edit** from the drop-down menu.</span></span>
 
-<span data-ttu-id="4d477-143">Sukūręs eksportavimo paskirties vietas jas rasite skirtuke **Mano eksportavimo paskirties vietos** esančioje lentelėje. Šioje lentelėje yra trys stulpeliai:</span><span class="sxs-lookup"><span data-stu-id="4d477-143">After creating export destinations, you'll find them in a table on the **My export destinations** tab. This table has three columns:</span></span>
+1. <span data-ttu-id="5e390-130">Pakeiskite vertes, kurias norite atnaujinti, ir pasirinkite **Įrašyti**.</span><span class="sxs-lookup"><span data-stu-id="5e390-130">Change the values you want to update and select **Save**.</span></span>
 
-- <span data-ttu-id="4d477-144">**Rodomas pavadinimas**: pavadinimas, įvestas kuriant paskirties vietą.</span><span class="sxs-lookup"><span data-stu-id="4d477-144">**Display name**: The name you entered when creating the destination.</span></span>
-- <span data-ttu-id="4d477-145">**Tipas**: eksportavimo paskirties vietos tipas, kurį nustatėte kurdami paskirties vietą.</span><span class="sxs-lookup"><span data-stu-id="4d477-145">**Type**: The export destination type you set when creating the destination.</span></span>
-- <span data-ttu-id="4d477-146">**Sukurta**: data, kada buvo sukurta paskirties vieta.</span><span class="sxs-lookup"><span data-stu-id="4d477-146">**Created**: The date you created the destination.</span></span>
+## <a name="view-exports-and-export-details"></a><span data-ttu-id="5e390-131">Eksportavimo ir eksportavimo duomenų peržiūra</span><span class="sxs-lookup"><span data-stu-id="5e390-131">View Exports and export details</span></span>
 
-## <a name="edit-an-export-destination"></a><span data-ttu-id="4d477-147">Eksportavimo paskirties vietos redagavimas</span><span class="sxs-lookup"><span data-stu-id="4d477-147">Edit an export destination</span></span>
+<span data-ttu-id="5e390-132">Sukūrus eksportavimo paskirties vietas jų sąrašas pateikiamas pasirinkus **Duomenys** > **Eksportavimai**.</span><span class="sxs-lookup"><span data-stu-id="5e390-132">After creating export destinations, they are listed on **Data** > **Exports**.</span></span> <span data-ttu-id="5e390-133">Visi naudotojai mato, kurie duomenys bendrinami ir kokia jų naujausia būsena.</span><span class="sxs-lookup"><span data-stu-id="5e390-133">All users can see which data is shared and its latest status.</span></span>
 
-1. <span data-ttu-id="4d477-148">Pažymėkite eksportavimo paskirties vietos, kurią norite redaguoti, vertikalią elipsę.</span><span class="sxs-lookup"><span data-stu-id="4d477-148">Select the vertical ellipsis for the Export destination you want to edit.</span></span>
+1. <span data-ttu-id="5e390-134">Eikite į **Duomenys** > **Eksportavimas**.</span><span class="sxs-lookup"><span data-stu-id="5e390-134">Go to **Data** > **Exports**.</span></span>
 
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="4d477-149">![Vertikali elipsė](media/export-destinations-page-ellipsis.png "Vertikali elipsė")</span><span class="sxs-lookup"><span data-stu-id="4d477-149">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+1. <span data-ttu-id="5e390-135">Naudotojai, neturintys redagavimo teisių, pasirenka **Peržiūrėti**, o ne **Redaguoti**. Peržiūrėkite eksportavimo duomenis.</span><span class="sxs-lookup"><span data-stu-id="5e390-135">Users without edit permissions select **View** instead of **Edit** see the export details.</span></span>
 
-1. <span data-ttu-id="4d477-150">Išplečiamajame meniu pasirinkite **Redaguoti**.</span><span class="sxs-lookup"><span data-stu-id="4d477-150">Select **Edit** from the dropdown menu.</span></span>
+1. <span data-ttu-id="5e390-136">Šioje šoninėje srityje rodoma šio eksportavimo sąranka.</span><span class="sxs-lookup"><span data-stu-id="5e390-136">This side pane shows the set up of this export.</span></span> <span data-ttu-id="5e390-137">Jei neturite redagavimo teisių, reikšmių keisti negalite.</span><span class="sxs-lookup"><span data-stu-id="5e390-137">Without edit permissions, you can't change values.</span></span> <span data-ttu-id="5e390-138">Jei norite grįžti prie eksportavimų puslapio, pasirinkite **Uždaryti**.</span><span class="sxs-lookup"><span data-stu-id="5e390-138">Select **Close** to return to the exports page.</span></span>
 
-1. <span data-ttu-id="4d477-151">Pakeiskite reikšmes, kurias reikia atnaujinti, ir pasirinkite **Įrašyti**.</span><span class="sxs-lookup"><span data-stu-id="4d477-151">Change the values that require update and select **Save**.</span></span>
+## <a name="run-exports-on-demand"></a><span data-ttu-id="5e390-139">Pageidaujamų eksportavimų paleidimas</span><span class="sxs-lookup"><span data-stu-id="5e390-139">Run exports on demand</span></span>
 
-## <a name="export-data-on-demand"></a><span data-ttu-id="4d477-152">Duomenų eksportavimas pareikalavus</span><span class="sxs-lookup"><span data-stu-id="4d477-152">Export data on demand</span></span>
+<span data-ttu-id="5e390-140">Sukonfigūravus eksportavimą jis bus vykdomas kiekvieno [planinio atnaujinimo metu](system.md#schedule-tab), kol yra veikiantis ryšys.</span><span class="sxs-lookup"><span data-stu-id="5e390-140">After configuring an export, it will run with every [scheduled refresh](system.md#schedule-tab) as long as it has a working connection.</span></span>
 
-<span data-ttu-id="4d477-153">Sukonfigūravus eksporto paskirties vietos jungtį eksportavimas bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="4d477-153">After configuring a connector for an export destination, exports will run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="5e390-141">Jei duomenis norite eksportuoti nelaukdami planuojamo atnaujinimo, eikite į **Duomenys** > **Eksportavimai**.</span><span class="sxs-lookup"><span data-stu-id="5e390-141">To export data without waiting for a scheduled refresh, go to **Data** > **Exports**.</span></span> <span data-ttu-id="5e390-142">Turite du pasirinkimus:</span><span class="sxs-lookup"><span data-stu-id="5e390-142">You have two options:</span></span>
 
-<span data-ttu-id="4d477-154">Jei norite eksportuoti duomenis nelaukdami suplanuoto naujinimo, eikite į skirtuką **Mano eksportavimo paskirties vietos** dalyje **Administratorius** > **Eksportavimo paskirties vietos**.</span><span class="sxs-lookup"><span data-stu-id="4d477-154">To export data without waiting for a scheduled refresh, go the **My export destinations** tab on **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="5e390-143">Jei norite peržiūrėti visus eksportavimus, komandų juostoje pasirinkite **Vykdyti viską**.</span><span class="sxs-lookup"><span data-stu-id="5e390-143">To run all exports, select **Run all** in the command bar.</span></span> 
+- <span data-ttu-id="5e390-144">Jei norite vykdyti vieną eksportavimą, sąrašo elemente pasirinkite elipsę (...) ir pasirinkite **Vykdyti**.</span><span class="sxs-lookup"><span data-stu-id="5e390-144">To run a single export, select the ellipsis (...) on a list item and then choose **Run**.</span></span>
 
-> [!div class="mx-imgBorder"]
-> <span data-ttu-id="4d477-155">![Vertikali elipsė](media/export-destinations-page-ellipsis.png "Vertikali elipsė")</span><span class="sxs-lookup"><span data-stu-id="4d477-155">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+## <a name="remove-an-export"></a><span data-ttu-id="5e390-145">Eksportavimo pašalinimas</span><span class="sxs-lookup"><span data-stu-id="5e390-145">Remove an Export</span></span>
 
-- <span data-ttu-id="4d477-156">Virš sąrašo pasirinkite **Eksportuoti**, kad tuo pačiu metu būtų paleistas eksportavimas į visas eksportavimo paskirties vietas.</span><span class="sxs-lookup"><span data-stu-id="4d477-156">Select **Export** above the list to run the export to all export destinations simultaneously.</span></span>
-- <span data-ttu-id="4d477-157">Pasirinkite elipsę (...) po sąrašo elementu, tada pasirinkite parinktį **Eksportuoti**, kad būtų paleistas eksportavimas į vieną eksportavimo paskirties vietą.</span><span class="sxs-lookup"><span data-stu-id="4d477-157">Select the ellipsis (...) after a list item and then choose the **Export** option to run the export for a single export destination.</span></span>
+1. <span data-ttu-id="5e390-146">Eikite į **Duomenys** > **Eksportavimas**.</span><span class="sxs-lookup"><span data-stu-id="5e390-146">Go to **Data** > **Exports**.</span></span>
 
-## <a name="remove-an-export-destination"></a><span data-ttu-id="4d477-158">Eksportavimo paskirties vietos pašalinimas</span><span class="sxs-lookup"><span data-stu-id="4d477-158">Remove an Export destination</span></span>
+1. <span data-ttu-id="5e390-147">Pažymėkite norimos pašalinti eksportavimo vertikalią elipsę.</span><span class="sxs-lookup"><span data-stu-id="5e390-147">Select the vertical ellipsis for the Export you want to remove.</span></span>
 
-<span data-ttu-id="4d477-159">Norėdami pašalinti eksportavimo paskirties vietą, pradėkite nuo pagrindinio puslapio **Eksportavimo paskirties vietos**.</span><span class="sxs-lookup"><span data-stu-id="4d477-159">To remove an Export destination, start from the main **Export destinations** page.</span></span>
+1. <span data-ttu-id="5e390-148">Išskleidžiamajame meniu pasirinkite **Pašalinti**.</span><span class="sxs-lookup"><span data-stu-id="5e390-148">Select **Remove** from the dropdown menu.</span></span>
 
-1. <span data-ttu-id="4d477-160">Pažymėkite norimos pašalinti eksportavimo paskirties vietos vertikalią elipsę.</span><span class="sxs-lookup"><span data-stu-id="4d477-160">Select the vertical ellipsis for the Export destination you want to remove.</span></span>
-
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="4d477-161">![Vertikali elipsė](media/export-destinations-page-ellipsis.png "Vertikali elipsė")</span><span class="sxs-lookup"><span data-stu-id="4d477-161">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
-
-2. <span data-ttu-id="4d477-162">Išskleidžiamajame meniu pasirinkite **Pašalinti**.</span><span class="sxs-lookup"><span data-stu-id="4d477-162">Select **Remove** from the dropdown menu.</span></span>
-
-3. <span data-ttu-id="4d477-163">Patvirtinkite pašalinimą pasirinkdami **Pašalinti** patvirtinimo ekrane.</span><span class="sxs-lookup"><span data-stu-id="4d477-163">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
+1. <span data-ttu-id="5e390-149">Patvirtinkite pašalinimą pasirinkdami **Pašalinti** patvirtinimo ekrane.</span><span class="sxs-lookup"><span data-stu-id="5e390-149">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

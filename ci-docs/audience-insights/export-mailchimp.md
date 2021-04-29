@@ -1,7 +1,7 @@
 ---
 title: Eksportuoti „Customer Insights“ duomenis į „Mailchimp“
-description: Sužinokite, kaip konfigūruoti jungtį su „Mailchimp“.
-ms.date: 10/26/2020
+description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Mailchimp“.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,71 +9,78 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9f86616731c3cc3d26370727103ea9c5d4288c8d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b94a8e8b6bb867ca04a64007d592b22fbd700618
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598211"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759888"
 ---
-# <a name="connector-for-mailchimp-preview"></a><span data-ttu-id="a4734-103">Jungtis „Mailchimp“ (peržiūra)</span><span class="sxs-lookup"><span data-stu-id="a4734-103">Connector for Mailchimp (preview)</span></span>
+# <a name="export-segment-lists-to-mailchimp-preview"></a><span data-ttu-id="5e936-103">Segmentų sąrašų eksportavimas į „Mailchimp“ (peržiūra)</span><span class="sxs-lookup"><span data-stu-id="5e936-103">Export segment lists to Mailchimp (preview)</span></span>
 
-<span data-ttu-id="a4734-104">Eksportuoti suvienodintų kliento profilių segmentus į „Mailchimp“ siekiant sukurti naujienlaiškius ir el. pašto kampanijas.</span><span class="sxs-lookup"><span data-stu-id="a4734-104">Export segments of unified customer profiles to Mailchimp to create newsletters and email campaigns.</span></span>
+<span data-ttu-id="5e936-104">Eksportuoti suvienodintų kliento profilių segmentus į „Mailchimp“ siekiant sukurti naujienlaiškius ir el. pašto kampanijas.</span><span class="sxs-lookup"><span data-stu-id="5e936-104">Export segments of unified customer profiles to Mailchimp to create newsletters and email campaigns.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="a4734-105">Būtinosios sąlygos</span><span class="sxs-lookup"><span data-stu-id="a4734-105">Prerequisites</span></span>
+## <a name="prerequisites-for-connection"></a><span data-ttu-id="5e936-105">Būtinosios ryšio sąlygos</span><span class="sxs-lookup"><span data-stu-id="5e936-105">Prerequisites for connection</span></span>
 
--   <span data-ttu-id="a4734-106">Turite [„Mailchimp“ paskyrą](https://mailchimp.com/) ir atitinkančius administratoriaus prisijungimo duomenis.</span><span class="sxs-lookup"><span data-stu-id="a4734-106">You have a [Mailchimp account](https://mailchimp.com/) and corresponding administrator credentials.</span></span>
--   <span data-ttu-id="a4734-107">Yra esančių publikų „Mailchimp“ ar atitinkamų ID.</span><span class="sxs-lookup"><span data-stu-id="a4734-107">There are existing audiences in Mailchimp and the corresponding IDs.</span></span> <span data-ttu-id="a4734-108">Dėl daugiau informacijos, žr. [„Mailchimp“ publikos](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="a4734-108">For more information, see [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
--   <span data-ttu-id="a4734-109">Turite [konfigūruoti segmentus](segments.md)</span><span class="sxs-lookup"><span data-stu-id="a4734-109">You have [configured segments](segments.md)</span></span>
--   <span data-ttu-id="a4734-110">Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.</span><span class="sxs-lookup"><span data-stu-id="a4734-110">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
+-   <span data-ttu-id="5e936-106">Turite [„Mailchimp“ paskyrą](https://mailchimp.com/) ir atitinkančius administratoriaus prisijungimo duomenis.</span><span class="sxs-lookup"><span data-stu-id="5e936-106">You have a [Mailchimp account](https://mailchimp.com/) and corresponding administrator credentials.</span></span>
+-   <span data-ttu-id="5e936-107">Yra esančių publikų „Mailchimp“ ar atitinkamų ID.</span><span class="sxs-lookup"><span data-stu-id="5e936-107">There are existing audiences in Mailchimp and the corresponding IDs.</span></span> <span data-ttu-id="5e936-108">Dėl daugiau informacijos, žr. [„Mailchimp“ publikos](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="5e936-108">For more information, see [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
+-   <span data-ttu-id="5e936-109">Turite [konfigūruoti segmentus](segments.md)</span><span class="sxs-lookup"><span data-stu-id="5e936-109">You have [configured segments](segments.md)</span></span>
+-   <span data-ttu-id="5e936-110">Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.</span><span class="sxs-lookup"><span data-stu-id="5e936-110">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
 
-## <a name="connect-to-mailchimp"></a><span data-ttu-id="a4734-111">Prisijungti prie „MailChimp“</span><span class="sxs-lookup"><span data-stu-id="a4734-111">Connect to Mailchimp</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="5e936-111">Žinomi apribojimai</span><span class="sxs-lookup"><span data-stu-id="5e936-111">Known limitations</span></span>
 
-1. <span data-ttu-id="a4734-112">Eikite į **Administratorius** > **Eksportavimo paskirties vietos**.</span><span class="sxs-lookup"><span data-stu-id="a4734-112">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="5e936-112">Iki 1 milijono profilių vieno eksportavimo metu į „Mailchimp“.</span><span class="sxs-lookup"><span data-stu-id="5e936-112">Up to 1 million profiles per export to Mailchimp.</span></span>
+- <span data-ttu-id="5e936-113">Eksportavimas į „Mailchimp“ yra apribotas segmentais.</span><span class="sxs-lookup"><span data-stu-id="5e936-113">Exporting to Mailchimp is limited to segments.</span></span>
+- <span data-ttu-id="5e936-114">1 milijono profilių segmentų eksportavimas gali trukti iki trijų valandų.</span><span class="sxs-lookup"><span data-stu-id="5e936-114">Exporting segments with 1 million profiles can take up to three hours.</span></span> 
+- <span data-ttu-id="5e936-115">Profilių skaičius, kurį galite eksportuoti į „Mailchimp“ priklauso ir yra apribotas jūsų sutartimi su „Mailchimp“.</span><span class="sxs-lookup"><span data-stu-id="5e936-115">The number of profiles that you can export to Mailchimp is dependent and limited on your contract with Mailchimp.</span></span>
 
-1. <span data-ttu-id="a4734-113">Skyriuje **„Mailchimp“** pasirinkite **Nustatyti**.</span><span class="sxs-lookup"><span data-stu-id="a4734-113">Under **Mailchimp**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-mailchimp"></a><span data-ttu-id="5e936-116">Ryšio su „Mailchimp“ nustatymas</span><span class="sxs-lookup"><span data-stu-id="5e936-116">Set up connection to Mailchimp</span></span>
 
-1. <span data-ttu-id="a4734-114">Nurodykite atpažįstamą eksportavimo paskirties vietos pavadinimą lauke **Rodomas pavadinimas**.</span><span class="sxs-lookup"><span data-stu-id="a4734-114">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="5e936-117">Eikite į **Administravimas** > **Ryšiai**.</span><span class="sxs-lookup"><span data-stu-id="5e936-117">Go to **Admin** > **Connections**.</span></span>
 
-1. <span data-ttu-id="a4734-115">Pasirinkę **Sutinku**, patvirtinkite **Duomenų privatumą ir atitiktį**.</span><span class="sxs-lookup"><span data-stu-id="a4734-115">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="5e936-118">Pasirinkite **Pridėti ryšį** ir pasirinkite **„Autopilot“**, kad sukonfigūruotumėte ryšį.</span><span class="sxs-lookup"><span data-stu-id="5e936-118">Select **Add connection** and choose **Autopilot** to configure the connection.</span></span>
 
-1. <span data-ttu-id="a4734-116">Įveskite savo **[„Mailchimp“ publikos ID](https://mailchimp.com/help/find-audience-id/)** ir pasirinkite **Sujungti** tam, kad pradėtumėte sujungimą su „Mailchimp“.</span><span class="sxs-lookup"><span data-stu-id="a4734-116">Enter your **[Mailchimp audience ID](https://mailchimp.com/help/find-audience-id/)** and select **Connect** to initialize the connection to Mailchimp.</span></span>
+1. <span data-ttu-id="5e936-119">Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**.</span><span class="sxs-lookup"><span data-stu-id="5e936-119">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="5e936-120">Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį.</span><span class="sxs-lookup"><span data-stu-id="5e936-120">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="5e936-121">Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.</span><span class="sxs-lookup"><span data-stu-id="5e936-121">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="a4734-117">Pasirinkite **Autentifikuoti su „Mailchimp“** ir pateikti savo „Mailchimp“ prisijungimo duomenis.</span><span class="sxs-lookup"><span data-stu-id="a4734-117">Select **Authenticate with Mailchimp** and provide your Mailchimp credentials.</span></span>
+1. <span data-ttu-id="5e936-122">Pasirinkite, kas gali naudoti šį ryšį.</span><span class="sxs-lookup"><span data-stu-id="5e936-122">Choose who can use this connection.</span></span> <span data-ttu-id="5e936-123">Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai.</span><span class="sxs-lookup"><span data-stu-id="5e936-123">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="5e936-124">Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="5e936-124">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="a4734-118">Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.</span><span class="sxs-lookup"><span data-stu-id="a4734-118">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
+1. <span data-ttu-id="5e936-125">Pasirinkę **Sutinku**, kad patvirtintumėte **Duomenų privatumą ir atitiktį**.</span><span class="sxs-lookup"><span data-stu-id="5e936-125">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
 
-   :::image type="content" source="media/export-connect-mailchimp.png" alt-text="Eksportuoti momentinę nuotrauką „Mailchimp“ jungčiai":::
+1. <span data-ttu-id="5e936-126">Pasirinkite **Prisijungti** ir inicijuokite ryšį su „Mailchimp“.</span><span class="sxs-lookup"><span data-stu-id="5e936-126">Select **Connect** to initialize the connection to Mailchimp.</span></span>
 
-1. <span data-ttu-id="a4734-120">Norėdami konfigūruoti eksportavimą, pasirinkite **Toliau**.</span><span class="sxs-lookup"><span data-stu-id="a4734-120">Select **Next** to configure the export.</span></span>
+1. <span data-ttu-id="5e936-127">Pasirinkite **Autentifikuoti su „Mailchimp“** ir pateikti savo „Mailchimp“ prisijungimo duomenis.</span><span class="sxs-lookup"><span data-stu-id="5e936-127">Select **Authenticate with Mailchimp** and provide your Mailchimp credentials.</span></span>
 
-## <a name="configure-the-connector"></a><span data-ttu-id="a4734-121">Jungties konfigūravimas</span><span class="sxs-lookup"><span data-stu-id="a4734-121">Configure the connector</span></span>
+1. <span data-ttu-id="5e936-128">Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.</span><span class="sxs-lookup"><span data-stu-id="5e936-128">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
 
-1. <span data-ttu-id="a4734-122">**Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą.</span><span class="sxs-lookup"><span data-stu-id="a4734-122">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> 
+1. <span data-ttu-id="5e936-129">Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį.</span><span class="sxs-lookup"><span data-stu-id="5e936-129">Select **Save** to complete the connection.</span></span> 
 
-1. <span data-ttu-id="a4734-123">Pasirinktinai, galite eksportuoti **Vardą** ir **Pavardę** kaip papildomus laukelius norėdami sukurti labiau suasmenintus el. laiškus.</span><span class="sxs-lookup"><span data-stu-id="a4734-123">Optionally, you can export **First name** and **Last name** as additional fields to create more personalized emails.</span></span> <span data-ttu-id="a4734-124">Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.</span><span class="sxs-lookup"><span data-stu-id="a4734-124">Select **Add attribute** to map these fields.</span></span>
+## <a name="configure-the-connector"></a><span data-ttu-id="5e936-130">Jungties konfigūravimas</span><span class="sxs-lookup"><span data-stu-id="5e936-130">Configure the connector</span></span>
 
-1. <span data-ttu-id="a4734-125">Pasirinkite segmentus, kuriuos norite eksportuoti.</span><span class="sxs-lookup"><span data-stu-id="a4734-125">Select the segments you want to export.</span></span> <span data-ttu-id="a4734-126">Galite eksportuoti iki 1 milijono kliento profilių bendrai į „Mailchimp“.</span><span class="sxs-lookup"><span data-stu-id="a4734-126">You can export up to 1 million customer profiles in total to Mailchimp.</span></span>
+<span data-ttu-id="5e936-131">Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio.</span><span class="sxs-lookup"><span data-stu-id="5e936-131">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="5e936-132">Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="5e936-132">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-   :::image type="content" source="media/export-segments-mailchimp.png" alt-text="Pasirinkite laukelius ir segmentus eksportavimui į „Mailchimp“":::
+1. <span data-ttu-id="5e936-133">Eikite į **Duomenys**> **Eksportavimas**.</span><span class="sxs-lookup"><span data-stu-id="5e936-133">Go to **Data**> **Exports**.</span></span>
 
-1. <span data-ttu-id="a4734-128">Pasirinkite **Įrašyti**.</span><span class="sxs-lookup"><span data-stu-id="a4734-128">Select **Save**.</span></span>
+1. <span data-ttu-id="5e936-134">Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.</span><span class="sxs-lookup"><span data-stu-id="5e936-134">To create a new export, select **Add destination**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="a4734-129">Duomenų eksportavimas</span><span class="sxs-lookup"><span data-stu-id="a4734-129">Export the data</span></span>
+1. <span data-ttu-id="5e936-135">Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Mailchimp“.</span><span class="sxs-lookup"><span data-stu-id="5e936-135">In the **Connection for export** field, choose a connection from the Mailchimp section.</span></span> <span data-ttu-id="5e936-136">Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.</span><span class="sxs-lookup"><span data-stu-id="5e936-136">If you don't see this section name, there are no connections of this type available to you.</span></span>
 
-<span data-ttu-id="a4734-130">Galite [eksportuoti duomenis pareikalavus](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="a4734-130">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="a4734-131">Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="a4734-131">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="a4734-132">„Mailchimp“ galite dabar surasti savo segmentus skyriuje [„Mailchimp“ publikos](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="a4734-132">In Mailchimp, you can now find your segments under [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
+1. <span data-ttu-id="5e936-137">Įveskite savo **[„Mailchimp“ auditorijos ID](https://mailchimp.com/help/find-audience-id/)**</span><span class="sxs-lookup"><span data-stu-id="5e936-137">Enter your **[Mailchimp audience ID](https://mailchimp.com/help/find-audience-id/)**</span></span>
 
-## <a name="known-limitations"></a><span data-ttu-id="a4734-133">Žinomi apribojimai</span><span class="sxs-lookup"><span data-stu-id="a4734-133">Known limitations</span></span>
+3. <span data-ttu-id="5e936-138">**Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą.</span><span class="sxs-lookup"><span data-stu-id="5e936-138">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> 
 
-- <span data-ttu-id="a4734-134">Iki 1 milijono profilių vieno eksportavimo metu į „Mailchimp“.</span><span class="sxs-lookup"><span data-stu-id="a4734-134">Up to 1 million profiles per export to Mailchimp.</span></span>
-- <span data-ttu-id="a4734-135">Eksportavimas į „Mailchimp“ yra apribotas segmentais.</span><span class="sxs-lookup"><span data-stu-id="a4734-135">Exporting to Mailchimp is limited to segments.</span></span>
-- <span data-ttu-id="a4734-136">Eksportuojant segmentus su bendrai 1 milijonu profilių gali užimti iki trijų valandų dėl apribojimų tiekėjo pusėje.</span><span class="sxs-lookup"><span data-stu-id="a4734-136">Exporting segments with a total of 1 million profiles can take up to three hours due to limitations on the provider side.</span></span> 
-- <span data-ttu-id="a4734-137">Profilių skaičius, kurį galite eksportuoti į „Mailchimp“ priklauso ir yra apribotas jūsų sutartimi su „Mailchimp“.</span><span class="sxs-lookup"><span data-stu-id="a4734-137">The number of profiles that you can export to Mailchimp is dependent and limited on your contract with Mailchimp.</span></span>
+1. <span data-ttu-id="5e936-139">Taip pat galite eksportuoti **vardą** ir **pavardę**, jei norite sukurti labiau personalizuotus el. laiškus.</span><span class="sxs-lookup"><span data-stu-id="5e936-139">Optionally, you can export **First name** and **Last name** to create more personalized emails.</span></span> <span data-ttu-id="5e936-140">Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.</span><span class="sxs-lookup"><span data-stu-id="5e936-140">Select **Add attribute** to map these fields.</span></span>
 
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="a4734-138">Duomenų privatumas ir atitiktis</span><span class="sxs-lookup"><span data-stu-id="a4734-138">Data privacy and compliance</span></span>
+1. <span data-ttu-id="5e936-141">Pasirinkite segmentus, kuriuos norite eksportuoti.</span><span class="sxs-lookup"><span data-stu-id="5e936-141">Select the segments you want to export.</span></span> <span data-ttu-id="5e936-142">Galite eksportuoti iki 1 milijono kliento profilių bendrai į „Mailchimp“.</span><span class="sxs-lookup"><span data-stu-id="5e936-142">You can export up to 1 million customer profiles in total to Mailchimp.</span></span>
 
-<span data-ttu-id="a4734-139">Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Mailchimp“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys.</span><span class="sxs-lookup"><span data-stu-id="a4734-139">When you enable Dynamics 365 Customer Insights to transmit data to Mailchimp, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="a4734-140">„Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Mailchimp“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus.</span><span class="sxs-lookup"><span data-stu-id="a4734-140">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that Mailchimp meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="a4734-141">Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="a4734-141">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
-<span data-ttu-id="a4734-142">Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.</span><span class="sxs-lookup"><span data-stu-id="a4734-142">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
+1. <span data-ttu-id="5e936-143">Pasirinkite **Įrašyti**.</span><span class="sxs-lookup"><span data-stu-id="5e936-143">Select **Save**.</span></span>
 
+<span data-ttu-id="5e936-144">Eksportavimo įrašymas eksportavimo iš karto nevykdo.</span><span class="sxs-lookup"><span data-stu-id="5e936-144">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="5e936-145">Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="5e936-145">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="5e936-146">Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="5e936-146">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="5e936-147">Duomenų privatumas ir atitiktis</span><span class="sxs-lookup"><span data-stu-id="5e936-147">Data privacy and compliance</span></span>
+
+<span data-ttu-id="5e936-148">Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Mailchimp“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys.</span><span class="sxs-lookup"><span data-stu-id="5e936-148">When you enable Dynamics 365 Customer Insights to transmit data to Mailchimp, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="5e936-149">„Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Mailchimp“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus.</span><span class="sxs-lookup"><span data-stu-id="5e936-149">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that Mailchimp meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="5e936-150">Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="5e936-150">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+<span data-ttu-id="5e936-151">Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.</span><span class="sxs-lookup"><span data-stu-id="5e936-151">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
