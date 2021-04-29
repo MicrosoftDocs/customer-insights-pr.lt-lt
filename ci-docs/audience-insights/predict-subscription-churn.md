@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595666"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906912"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prenumeratos praradimo prognozė (peržiūra)
 
@@ -49,6 +49,12 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
         - **Laiko žymė:** pirminio rakto identifikuoto įvykio data ir laikas.
         - **Įvykis:** įvykio, kurį norite naudoti, pavadinimas. Pavyzdžiui, vaizdo transliavimo paslaugos lauke „UserAction“ galėtų būti reikšmė „Peržiūrėta“.
         - **Informacija:** išsami informacija apie įvykį. Pavyzdžiui, vaizdo transliavimo paslaugos lauke „ShowTitle“ galėtų būti kliento peržiūrėto vaizdo įrašo reikšmė.
+- Siūlomos duomenų charakteristikos:
+    - Pakankami istoriniai duomenys: prenumeratos duomenys bent dvigubam pasirinkto laiko tarpui. Geriausia, nuo dviejų iki trijų duomenų prenumeratos metų.
+    - Prenumeratos būsena: duomenys apima aktyvias ir neaktyvias kiekvieno kliento prenumeratas, kad kiekvienam kliento ID būtų keli įrašai.
+    - Klientų skaičius: bent 10 klientų profilių, geriausia daugiau nei 1 000 klientų. Modelis neveiks su mažiau nei 10 klientų, o istoriniai duomenys bus nepakankami.
+    - Duomenų užbaigtumas: mažiau nei 20 % trūkstamų reikšmių pateiktame objekto duomenų laukelyje.
+   
    > [!NOTE]
    > Reikia turėti bent du veiklos įrašus 50 % klientų, kad galėtumėte apskaičiuoti klientų praradimą.
 
@@ -67,7 +73,7 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
 ### <a name="define-customer-churn"></a>Apibrėžkite kliento praradimą
 
 1. Įveskite **Dienų skaičių nuo prenumeratos pabaigos**, kurį jūsų įmonė taikys prarastam klientui. Šis laikotarpis įprastai skirtas verslo veikloms, pvz., pasiūlymams ar kitoms rinkodaros pastangoms, siekiant išvengti kliento praradimo.
-1. Įveskite **dienų, kiek toli reikia prognozuoti klientų praradimą,** skaičių, kad nustatytumėte laikotarpį, kuriam reikia prognozuoti klientų praradimą. Pavyzdžiui, jei norite prognozuoti klientų praradimo riziką per 90 dienų laikotarpį tam, kad galėtumėte stengtis pritaikyti savo klientų išlaikymo rinkodaros priemones. Prognozuojant klientų praradimo riziką ilgesniems ar trumpesniems laikotarpiams gali būti sunkiau atsižvelgti į klientų praradimo rizikos profilio veiksnius, tačiau tai labai priklauso nuo konkrečių jūsų verslui taikomų reikalavimų. Norėdami tęsti, spustelėkite **Pirmyn**
+1. Įveskite **dienų, kiek toli reikia prognozuoti klientų praradimą,** skaičių, kad nustatytumėte laikotarpį, kuriam reikia prognozuoti klientų praradimą. Pavyzdžiui, jei norite prognozuoti klientų praradimo riziką per 90 dienų laikotarpį tam, kad galėtumėte stengtis pritaikyti savo klientų išlaikymo rinkodaros priemones. Jei prognozuojama, kad ši riziką užtruks ilgiau ar trumpiau, gali būti sunkiau atsižvelgti į jūsų netekimų riziką, atsižvelgiant į konkrečius jūsų įmonės reikalavimus. Norėdami tęsti, spustelėkite **Pirmyn**
    >[!TIP]
    > **Įrašyti ir uždaryti** galite pasirinkti bet kuriuo metu, kad prognozė būtų išsaugota kaip juodraštis. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
 
@@ -113,7 +119,8 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
 1. Pasirinkite prognozę, kurią norite peržiūrėti.
    - **Prognozės pavadinimas:** kūrimo metu nurodytas prognozės pavadinimas.
    - **Prognozės tipas:** prognozei naudojamo modelio tipas
-   - **Išvesties objektas:** objekto, kuriame saugoma prognozės išvestis, pavadinimas. Objektą šiuo pavadinimu galite rasti **Duomenys** > **Objektai**.
+   - **Išvesties objektas:** objekto, kuriame saugoma prognozės išvestis, pavadinimas. Objektą šiuo pavadinimu galite rasti **Duomenys** > **Objektai**.    
+     Resultato objekte *„ChurnScore“* yra prognozuojama netekimo tikimybė, o *„IsChurn“* yra dvejetainė žyma, pagrįsta *„ChurnScore“* su 0,5 ribine verte. Numatytoji ribinė vertė jūsų scenarijui gali neveikti. [Sukurkite naują segmentą](segments.md#create-a-new-segment) su jūsų pageidaujama ribine verte.
    - **Nuspėjamas laukas:** šis laukas užpildomas tik kai kurių tipų prognozėms ir nėra naudojamas prenumeratos praradimo prognozei.
    - **Būsena:** dabartinė prognozės vykdymo būsena.
         - **Eilėje:** prognozė šiuo metu laukia kitų vykdomų procesų.

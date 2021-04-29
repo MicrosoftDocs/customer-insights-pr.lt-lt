@@ -1,7 +1,7 @@
 ---
 title: Matų kūrimas ir valdymas
 description: Apibrėžkite verslo efektyvumo analizės ir peržiūros priemones.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654742"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887950"
 ---
 # <a name="define-and-manage-measures"></a>Matų apibrėžimas ir valdymas
 
-Priemonės padeda jums geriau suprasti klientų elgesį ir verslo našumą nuskaitant atitinkamas reikšmes iš [vieningųjų profilių](data-unification.md). Pavyzdžiui, įmonė nori, kad *bendras vienam klientui skirtas išlaidas* būtų galima pamatyti norint suprasti atskirų klientų pirkimo retrospektyvą. Arba *matuokite visą įmonės* pardavimą, kad suprastumėte agregavimo lygio pajamas visoje įmonėje.  
+Šios priemonės padeda jums geriau suprasti klientų elgesį ir įmonės efektyvumą. Jos peržvelgia atitinkamas vertes iš [vieningųjų profilių](data-unification.md). Pavyzdžiui, įmonė nori peržiūrėti *bendras kiekvieno kliento išlaidas*, kad suprastų kiekvieno kliento pirkimo istoriją arba išmatuotų *bendrus įmonės pardavimus*, kad galėtų suprasti agregavimo lygio pajmas vidoje įmonėje.  
 
 Priemonės kuriamos naudojant priemonę eilės duomenų užklausos platformą su įvairiais operatoriais ir paprastomis susiejimo parinktimis. Ji leidžia filtruoti duomenis, grupuoti rezultatus, aptikti [objekto ryšio maršrutus](relationships.md), ir peržiūrėti išvestį.
 
 Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis ir išskleisti įžvalgas. Pavyzdžiui, sukūrus *bendrą vienam klientui išleidus sumą* ir *bendrą grąžą klientui* galima nustatyti klientų grupę, kurios išlaidos yra didelės, bet didelė ir grąža. Galite  [sukurti segmentą](segments.md)ir imtis kitų geriausių veiksmų. 
 
-## <a name="create-a-measure"></a>Sukurti matą
+## <a name="build-your-own-measure-from-scratch"></a>Savo priemonės kūrimas nuo pradžių
 
 Šiame skyriuje pateikiama informacija apie naujos priemonės sukūrimą nuo pradžių. Galite sukurti priemonę su duomenų atributais iš duomenų objektų, kurių ryšys nustatytas taip, kad būtų galima prisijungti prie kliento objekto. 
 
 1. Publikos įžvalgose, eikite į **Priemonės**.
 
-1. Pasirinkite **Naujas**.
+1. Pasirinkite **Naujas** ir pasirinkite **Kurti savo**.
 
 1. Pasirinkite **Redaguoti pavadinimą** ir įveskite priemonės **pavadinimą**. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
    1. Pasirinkite **Redaguoti dimensijas** reikšmę ir įtraukite duomenų atributų, pagal kuriuos norite grupuoti matavimo reikšmes. Pvz.: miestą arba lytį. Pagal numatytuosius nustatymus, siekiant kurti *kliento lygio matus*, pasirenkama *Kliento ID*. Jei norite kurti verslo lygio priemones, galite pašalinti *numatytąją dimensiją*.
    1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
 
+1. Jei jūsų duomenyse yra verčių, kurias reikia pakeisti, pavyzdžiui, sveikuoju skaičiumi, reikšmę *null* pakeiskite į *0* ir pasirinkite **Taisyklės**. Sukonfigūruokite taisyklę ir įsitikinkite, kad pakeitimui renkatės tik sveikuosius skaičius.
+
 1. Jei tarp jūsų susietų duomenų objektų ir *Kliento* objekto yra keli keliai, turite pasirinkti vieną iš nustatytų [objekto ryšio kelių](relationships.md). Matavimo rezultatai gali skirtis atsižvelgiant į pasirinktą kelią. 
    1. Pažymėkite **Duomenų nuostatas** ir pasirinkite kelią, kurį reikėtų naudoti jūsų priemonei identifikuoti. Jei yra tik vienas kelias į *Kliento* objektą, šis valdiklis nebus rodomas.
    1. Pasirinkite **Atlikta**, kad pritaikytumėte savo pasirinkimą. 
@@ -88,9 +90,57 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
 
 1. Eikite į **Priemonės**, kad peržiūrėtumėte naujai sukurtą priemonę sąraše.
 
+## <a name="use-a-template-to-build-a-measure"></a>Šablono naudojimas priemonei kurti
+
+Jiems kurti galite naudoti iš anksto apibrėžtus dažniausiai naudojamų priemonių šablonus. Išsamūs šablonų aprašymai ir interaktyvioji patirtis padeda efektyviai matuoti kūrimą. Šablonai kuriami pagal žymimys duomenis iš objekto *„Unified Activity“*. Prieš kurdami priemonę pagal šabloną įsitikinkite, kad sukonfigūravote [kleinto veiklą](activities.md).
+
+Galimi priemonių šablonai: 
+- Vidutinė operacijų vertė (ATV)
+- Bendra operacijos vertė
+- Vidutinės dienos pajamos
+- Vidutinės metų pajamos
+- Operacijų skaičius
+- Gauti lojalumo taškai
+- Panaudoti lojalumo taškai
+- Lojalumo taškų balansas
+- Aktyvaus kliento veiklos trukmė
+- Lojalumo narystės trukmė
+- Laikas nuo paskutinio pirkimo
+
+Tolesnė procedūra apžvelgia veiksmus, reikalingus naujai priemonei kurti naudojant šabloną.
+
+1. Publikos įžvalgose, eikite į **Priemonės**.
+
+1. Pasirinkite **Naujas** ir pasirinkite **Rinktis šabloną**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Išskleidžiamojo meniu ekrano nuotrauka kuriant naują priemonę su šablono paryškinimu.":::
+
+1. Raskite jūsų poreikius atitinkantį šabloną ir pasirinkite **Rinktis šabloną**.
+
+1. Peržiūrėkite reikiamus duomenis ir pasirinkite **Darbo pradžia**, jei turite visus duomenis.
+
+1. Srityje **Pavadinimo redagavimas** nustatykite savo priemonės pavadinimą ir išvesties objektą. 
+
+1. Pasirinkite **Atlikta**.
+
+1. Skiltyje **Laikotarpio nustatymas** apibrėžkite naudojamų duomenų laiko tarpą. Pasirinkite, ar norite, kad naujoji priemonė apimtų visus nustatytus duomenis, pasirinkdami **Visą laiką**. Arba, jei norite, kad priemonė būtų nukrepta į **konkretų laikotarpį**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Ekrano nuotrauka, kurioje rodoma laikotarpio skiltis konfigūruojant priemonę iš šablono.":::
+
+1. Kitoje skiltyje pasirinkite **Pridėti duomenis** ir pasirinkite veiklas bei pažymėkite attitinkamus duomenis iš savo objekto *Unified Activity*.
+
+    1. 1 veiksmas iš 2: skiltyje **Veiklos tipas** pasirinkite norimo naudoti objekto tipą. Skiltyje **Veiklos** pasirinkite objektus, kuriuos norite žymėti.
+    1. 2 veiksmas iš 2: pasirinkite formulės reikalaujamo komponento atributą iš objekto *Unified Activity*. Pvz., jei operacijos vertė vidutinė, tai operacijos vertę vaiduojantis atributas. **Veiklos laiko žymai** pasirinkite atributą iš objekto „Unified Activity“, kuriame vaizduojama veiklos data ir laikas.
+   
+1. Sėkmingai pažymėjė duomenis būseną galite matyti kaip **Baigta** kartu su pažymėtų veiklų ir atributų pavadinimu.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Baigtų priemonių šablono konfigūravimo ekrano nuotrauka.":::
+
+1. Dabar galite pasirinkti **Vykdyti** ir apskaičiuoti priemonės rezultatus. Jei paiešką vėliau norėsite susiaurinti, pasirinkite **Išsaugoti juodarštį**.
+
 ## <a name="manage-your-measures"></a>Matų valdymas
 
-Sukūrę [priemonę](#create-a-measure), matų sąrašą matysite puslapyje **Priemonės**.
+Priemonių sąrašą galima rasti puslapyje **Priemonės**.
 
 Rasite informacijos apie matavimo tipą, kūrėją, kūrimo datą, būseną ir būseną. Kai sąraše pažymite priemonę, galite peržiūrėti išvestį ir atsisiųsti .CSV failą.
 

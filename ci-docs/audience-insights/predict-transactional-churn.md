@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597199"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906866"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Perdavimo nutraukimo prognozė (peržiūra)
 
@@ -46,6 +46,14 @@ Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepir
         - **Laiko žymė:** pirminio rakto identifikuoto įvykio data ir laikas.
         - **Įvykis:** įvykio, kurį norite naudoti, pavadinimas. Pavyzdžiui, laukelis pavadintas „Naudotojo veiksmas“ prekių parduotuvėje gali būti kliento naudojamas kuponas.
         - **Informacija:** išsami informacija apie įvykį. Pavyzdžiui, laukelis pavadintas „Kupono vertė“ prekių parduotuvėje gali būti kupono valiutos vertė.
+- Siūlomos duomenų charakteristikos:
+    - Pakankami istoriniai duomenys: sandorio duomenys bent dvigubam pasirinkto laiko tarpui. Geriausia, nuo dviejų iki trijų duomenų prenumeratos metų. 
+    - Keli pirkimai vienam klientui: geriausia bent du sandoriai kiekvienam klientui.
+    - Klientų skaičius: bent 10 klientų profilių, geriausia daugiau nei 1 000 klientų. Modelis neveiks su mažiau nei 10 klientų, o istoriniai duomenys bus nepakankami.
+    - Duomenų užbaigtumas: mažiau nei 20 % trūkstamų reikšmių pateiktame objekto duomenų laukelyje.
+
+> [!NOTE]
+> Įmonėms su didesniu klientų pirkimo dažniu (kas kelias savaites) rekomenduojama rinktis trumpesnį prognozės laikotarpį su perkėlimo apibrėžimu. Esant mažam pirkimo dažniui (kas keletą mėnesių arba kartą per metus) pasirinkite ilgesnį prognozės laikotarpį ir perkėlimo apibrėžimą.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Sukurkite perlaidos nutraukimo prognozę
 
@@ -129,7 +137,9 @@ Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepir
 1. Pasirinkite prognozę, kurią norite peržiūrėti.
    - **Prognozės pavadinimas:** Įvardykite prognozę jos kūrimo metu.
    - **Prognozės tipas:** Prognozei naudojamo modelio tipas
-   - **Išvesties objektas:** objekto, kuriame saugoma prognozės išvestis, pavadinimas. Objektą šiuo pavadinimu galite rasti **Duomenys** > **Objektai**.
+   - **Išvesties objektas:** objekto, kuriame saugoma prognozės išvestis, pavadinimas. Objektą šiuo pavadinimu galite rasti **Duomenys** > **Objektai**.    
+     Resultato objekte *„ChurnScore“* yra prognozuojama netekimo tikimybė, o *„IsChurn“* yra dvejetainė žyma, pagrįsta *„ChurnScore“* su 0,5 ribine verte. Numatytoji ribinė vertė jūsų scenarijui gali neveikti. [Sukurkite naują segmentą](segments.md#create-a-new-segment) su jūsų pageidaujama ribine verte.
+     Ne visi klientai būtinai yra aktyvūs klientai. Kai kurie ilgą laiką gali būti neturėję jokios veiklos ir jau yra laikomi perkeltais pagal perkėlimo apibrėžimą. Jau perkeltų klientų perkėlimo riziką prognozuoti nėra naudinga, nes jie nėra dominanti auditorija.
    - **Prognozuotas laukelis:** Šis laukelis užpildomas keliems prognozių tipams ir nėra naudojamas nutraukimo prognozėje.
    - **Būsena:** Prognozės vykdymo būsena.
         - **Laukiama:** Prognozė laukia kitų procesų vykdymo.

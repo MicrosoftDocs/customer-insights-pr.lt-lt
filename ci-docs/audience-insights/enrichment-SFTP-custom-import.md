@@ -1,7 +1,7 @@
 ---
 title: Papildymas su SFTP kliento importavimu
 description: Bendra informacija apie SFTP tinkinto importavimo papildymą.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,44 +9,63 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595865"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896291"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Praturtinkite klientų profilius su tinkintais duomenimis (peržiūra)
 
-„Secure File Transfer Protocol“ (SFTP) tinkintas importavimas leidžia jums importuoti praturtintus duomenis, kurie neturi pereiti pro duomenų suvienodinimo procesą. Jis yra lankstus, saugus ir paprastai leidžia apdoroti jūsų duomenis. SFTP tinkintas importavimas gali būti naudojamas kartu su [SFTP eksportavimu](export-sftp.md) ir leidžia jums eksportuoti kliento profilio duomenis, kurie turi būti papildyti. Duomenys gali būti apdorojami, papildyti ir SFTP tinkintas importavimas gali būti naudojamas siekiant sukurti papildytus duomenis atgal į publikos įžvalgų „Dynamics 365 Customer Insights“ galimybę.
+Apsaugotas failų perkėlimo protokolas (SFTP) pasirinktinio importavimo funkcija leidžia importuoti duomenis, kurių negalima suvienodinti atliekant duomenų suvienodinimo procedūrą. Jis yra lankstus, saugus ir paprastai leidžia apdoroti jūsų duomenis. SFTP tinkintas importavimas gali būti naudojamas kartu su [SFTP eksportavimu](export-sftp.md) ir leidžia jums eksportuoti kliento profilio duomenis, kurie turi būti papildyti. Duomenys gali būti apdorojami, papildyti ir SFTP tinkintas importavimas gali būti naudojamas siekiant sukurti papildytus duomenis atgal į publikos įžvalgų „Dynamics 365 Customer Insights“ galimybę.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 Siekiant sukonfigūruoti SFTP tinkintą importavimą, būtina atitikti tolesnes būtinąsias sąlygas:
 
-- Turite vartotojo prisijungimo duomenis (vartotojo vardą ir slaptažodį) SFTP vietai, iš kurios duomenys bus importuojami.
-- Turite URL ir prievado numerį (dažniausiai 22) STFP šeimininkui.
-- Turite failo pavadinimą ir failo vietą, kurį importuosite į SFTP šeimininką.
-- Esama *model.json* failo, kuris nurodo schemą importuojamiems duomenims. Šis failas turi būti tame pačiame kataloge kaip ir importuojamas failas.
-- Turite [Administratoriaus](permissions.md#administrator) leidimą.
+- Turite failo, kuris bus importuojamas į pagrindinį SFTP kompiuterį, pavadinimą ir vietą (maršrutą).
+- Yra failas *model.json*, kuris nurodo [bendrą duomenų modelio schemą](/common-data-model/) importuojamiems duomenims. Šis failas turi būti tame pačiame kataloge kaip ir importuojamas failas.
+- SFTP ryšį jau sukonfigūravo administratorius *arba* turite [administratoriaus](permissions.md#administrator) teises. Jums reikės naudotojo kredencialų, URL ir SFTP vietos, iš kurios norėsite importuoti duomenis, prievado numerio.
 
-## <a name="configuration"></a>Konfigūracija
+
+## <a name="configure-the-import"></a>Importavimo konfigūravimas
 
 1. Pasirinkite **Duomenys** > **Papildymas** ir pasirinkite skirtuką **Atrasti**.
 
-1. **SFTP tinkinto importavimo plyta**, pasirinkite **Papildyti mano duomenis**.
+1. **SFTP pasirenkamo importavimo plytelėje** pasirinkite **Papildyti mano duomenis**, o tada pasirinkite **Darbo pradžia**.
 
-   > [!div class="mx-imgBorder"]
-   > ![SFTP tinkinto importavimo plyta](media/SFTP_Custom_Import_tile.png "SFTP tinkinto importavimo plyta")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="SFTP pasirenkamo importavimo plytelė.":::
 
-1. Pasirinkite **Pradėti** ir pateikite prisijungimo duomenis bei adresą SFTP serveriui. Pavyzdžiui, sftp://mysftpserver.com:22.
+1. Išskleidžiamajame sąraše pasirinkite [ryšį](connections.md). Jei ryšio nėra, kreipkitės į administratorių. Jei esate administratorius, ryšį galite sukurti ryšį pasirinkdami **Pridėti ryšį** ir išskleidžiamajame sąraše pasirinkdami **SFTP pasirenkamas importavimas**.
 
-1. Įveskite failo pavadinimą, kuris turi duomenis ir kelią failui SFTP serveryje, jei jis nėra šaknies kataloge.
+1. Norėdami patvirtinti pasirinktą ryšį pasirinkite **Prisijungti prie pasirenkamo importavimo**.
 
-1. Patvirtinkite visas įvestis pasirinkdami **Sujungti su Tinkintu importavimu**.
+1.  Pasirinkite **Toliau** ir įveskite **Failo pavadinimas** ir **Maršrutas** duomenų failui, kurį norite importuoti.
 
-   > [!div class="mx-imgBorder"]
-   > ![SFTP tinkinto importavimo konfigūravimo leidimas](media/SFTP_Custom_Import_Configuration_flyout.png "SFTP tinkinto importavimo konfigūravimo leidimas")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Ekrano nuotrauka įvedant duomenų vietą.":::
+
+1. Pasirinkite **Toliau** ir pateikite papildymo pavadinimą bei išvesties objekto pavadinimą. 
+
+1. Peržiūrėję pasirinkimus pasirinkite **Išsaugoti papildymą**.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>SFTP pasirenkamo importavimo ryšio konfigūravimas 
+
+Jei norite konfigūruoti ryšius, turite būti administratorius. Pasirinkite **Pridėti ryšį**, kai konfigūruosite papildymą *arba* eikite į **Administravimas** > **Ryšiai** ir pasirenkamo importavimo plytelėje pasirinkite **Sąranka**.
+
+1. Laukelyje **Rodomas pavadinimas** įveskite ryšio pavadinimą.
+
+1. Įveskite galiojantį naudotojo vardą, slaptažodį ir SFTP perverio, kuriame yra importuoti skirti duomenys, pagrindinio kompiuterio URL.
+
+1. Peržiūrėkite ir pateikite sutikimą dėl **Duomenų privatumo ir atitikties** pažymėdami žymės langelį **Sutinku**.
+
+1. Pažymėkite **Patvirtinti**, kad patvirtintumėte konfigūraciją.
+
+1. Baigus patikrinimą ryšį galima išsaugoti spustelėjus **Išsaugoti**.
+
+> [!div class="mx-imgBorder"]
+   > ![„Experian“ ryšio konfigūravimo puslapis](media/enrichment-SFTP-connection.png "„Experian“ ryšio konfigūravimo puslapis")
+
 
 ## <a name="defining-field-mappings"></a>Laukelio žemėlapio nustatymas 
 
@@ -105,8 +124,5 @@ Išsamų kiekvieno papildyto profilio rodinį galite pasiekti pasirinkę **Perž
 ## <a name="next-steps"></a>Tolesni veiksmai
 
 Atlikite veiksmus su papildytais klientų duomenimis. Sukurkite [segmentus](segments.md), [priemones](measures.md) ir [eksportuokite duomenis](export-destinations.md) siekiant pristatyti suasmenintas patirtis jūsų klientams.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

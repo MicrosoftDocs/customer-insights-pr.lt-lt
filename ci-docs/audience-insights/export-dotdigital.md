@@ -1,7 +1,7 @@
 ---
 title: Eksportuoti „Customer Insights“ duomenis į „DotDigital“
-description: Sužinokite, kaip konfigūruoti jungtį su „DotDigital“.
-ms.date: 11/14/2020
+description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „DotDigital“.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,40 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 51a28bdf0de34f0555d8ad7e3d13b2ef8911d417
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 235bcdfa4a7c4c1a382778bd4f66c1a9f5b7beb1
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598027"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759969"
 ---
-# <a name="connector-for-dotdigital-preview"></a>Jungtis „DotDigital“ (peržiūra)
+# <a name="export-segment-lists-to-dotdigital-preview"></a>Segmentų sąrašų eksportavimas į „DotDigital“ (peržiūra)
 
 Eksportuokite suvienodintų klientų profilio segmentus į „DotDigital“ adresų knygas ir naudokite juos kampanijos, el. pašto reklamavimui ir siekiant kurti tinkintus segmentus su „DotDigital“. 
 
-## <a name="prerequisites"></a>Būtinosios sąlygos
+## <a name="prerequisites-for-a-connection"></a>Būtinosios ryšio sąlygos
 
 -   Turite [„DotDigital“ paskyrą](https://dotdigital.com/) ir atitinkančius administratoriaus prisijungimo duomenis.
 -   Yra esančių adreso knygų „DotDigital“ ir atitinkamų ID. ID gali būti prieinamas URL, kurį pasirinkote ir atvėrėte adresų knygoje. Dėl daugiau informacijos, žr. [„DotDigital“ adresų knygos](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Turite [sukonfigūruotus segmentus](segments.md) publikos įžvalgose.
 -   Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
-## <a name="connect-to-dotdigital"></a>Prisijunkite prie „DotDigital“
+## <a name="known-limitations"></a>Žinomi apribojimai
 
-1. Eikite į **Administratorius** > **Eksportavimo paskirties vietos**.
+- Iki 1 milijono profilių vieno eksportavimo metu į „DotDigital“.
+- Eksportavimas į „DotDigital“ yra apribotas segmentais.
+- Eksportuojant segmentus su bendrai 1 milijonu profilių gali užimti iki 3 valandų dėl apribojimų tiekėjo pusėje. 
+- Profilių skaičius, kurį galite eksportuoti į „DotDigital“ priklauso ir yra apribotas jūsų sutartimi su „DotDigital“.
 
-1. Skyriuje **„DotDigital“** pasirinkite **Nustatyti**.
+## <a name="set-up-connection-to-dotdigital"></a>„DotDigital“ ryšio sąranka
 
-1. Nurodykite atpažįstamą eksportavimo paskirties vietos pavadinimą lauke **Rodomas pavadinimas**.
+1. Eikite į **Administravimas** > **Ryšiai**.
 
-   :::image type="content" source="media/DotDigital_config.PNG" alt-text="Konfigūravimo juosta „DotDigital“ eksportavimui.":::
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„DotDigital“**, kad sukonfigūruotumėte ryšį.
+
+1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
+
+1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Įveskite savo **„DotDigital“ vartotojo vardą ir slaptažodį**.
 
@@ -47,9 +54,18 @@ Eksportuokite suvienodintų klientų profilio segmentus į „DotDigital“ adre
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
-1. Norėdami konfigūruoti eksportavimą, pasirinkite **Toliau**.
+1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį. 
 
-## <a name="configure-the-connector"></a>Jungties konfigūravimas
+## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
+
+Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+
+1. Eikite į **Duomenys** > **Eksportavimas**.
+
+1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „DotDigital“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
+
 
 1. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. Pakartokite tuos pačius žingsnius kitiems pasirenkamiems laukeliams, tokius kaip **Vardas**, **Pavardė**, **Vardas ir pavardė**, **Lytis** ir **Pašto kodas**.
 
@@ -57,16 +73,12 @@ Eksportuokite suvienodintų klientų profilio segmentus į „DotDigital“ adre
 
 1. Pasirinkite **Įrašyti**.
 
-## <a name="export-the-data"></a>Duomenų eksportavimas
+Eksportavimo įrašymas eksportavimo iš karto nevykdo.
 
-Galite [eksportuoti duomenis pareikalavus](export-destinations.md). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md#schedule-tab). „DotDigital“ galite dabar surasti savo segmentus skyriuje [„DotDigital“ adresų knygose](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
+Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
+ 
+„DotDigital“ galite dabar surasti savo segmentus skyriuje [„DotDigital“ adresų knygose](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
-## <a name="known-limitations"></a>Žinomi apribojimai
-
-- Iki 1 milijono profilių vieno eksportavimo metu į „DotDigital“.
-- Eksportavimas į „DotDigital“ yra apribotas segmentais.
-- Eksportuojant segmentus su bendrai 1 milijonu profilių gali užimti iki 3 valandų dėl apribojimų tiekėjo pusėje. 
-- Profilių skaičius, kurį galite eksportuoti į „DotDigital“ priklauso ir yra apribotas jūsų sutartimi su „DotDigital“.
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 

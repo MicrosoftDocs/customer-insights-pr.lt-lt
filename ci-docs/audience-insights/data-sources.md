@@ -1,7 +1,7 @@
 ---
 title: Naudokite duomenų šaltinius duomenų suvartojimui
 description: Sužinokite, kaip importuoti duomenis iš įvairių šaltinių.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595957"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887904"
 ---
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
@@ -32,8 +32,15 @@ Duomenų šaltinį galite įtraukti trimis pagrindiniais būdais.
 - [Iš „Common Data Model“ aplanko](connect-common-data-model.md)
 - [Iš savo „Common Data Service“ telkinio](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Kol kas duomenų iš vietinių duomenų šaltinių įtraukti negalite.
+## <a name="add-data-from-on-premises-data-sources"></a>Duomenų įtraukimas iš vietinių duomenų šaltinių
+
+Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į Power Platform duomenų srautus. Nustatant aplinką duomenų eigas galima įgalinti „Customer Insights“ [pateikiant Microsoft Dataverse aplinkos URL](manage-environments.md#create-an-environment-in-an-existing-organization).
+
+Numatyta, kad duomenų šaltiniai, sukurti Dataverse aplinką susiejus su „Customer Insights“, naudos [Power Platform duomenų eigas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų eigos palaiko vietos ryšį, naudojant duomenų tinklų sietuvus. Pašalinkite ir iš naujo sukurkite duomenų šaltinius, kurie buvo prieš Dataverse aplinką susiejant su vietinių tinklų sietuvų naudojimu.
+
+Esamos Power BI arba Power Apps aplinkos duomenų tinklų sietuvai bus matomi ir galėsite pakartotinai naudoti „Customer Insights“. Duomenų šaltinių puslapyje rodomos nuorodos perėjimui į Power Platform aplinką, kurioje galima peržiūrėti ir konfigūruoti vietinius duomenų tinklų sietuvus.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Duomenų šaltinių puslapio, kuriame rodomos nuorodos į Power Platform aplinką, ekrano vaizdas.":::
 
 ## <a name="review-ingested-data"></a>Įtrauktų duomenų peržiūra
 
@@ -65,7 +72,7 @@ Norėdami paleisti iš naujo duomenų šaltinį pagal poreikį, atlikite šiuos 
 
 2. Pasirinkite vertikalią elipsę šalia duomenų šaltinio, kurį norite paleisti iš naujo ir pasirinkite **Paleisti iš naujo** iš iškrentančio meniu.
 
-3. Šis duomenų šaltinis dabar yra įjungtas rankiniam paleidimui iš naujo. Duomenų šaltinio paleidimas iš naujo atnaujins tiek objekto schemą, tiek ir duomenis iš visų objektų nurodytų duomenų šaltinyje.
+3. Šis duomenų šaltinis dabar yra įjungtas rankiniam paleidimui iš naujo. Atnaujinus duomenų šaltinį bus atnaujinta ir objekto schema, ir duomenys, skirti visiems duomenų šaltinyje nurodytiems objektams.
 
 4. Pasirinkite **Stabdyti paleidimą iš naujo** jei norite atšaukti esantį paleidimą iš naujo ir duomenų šaltinis grįš į paskutinę paleidimo iš naujo būseną.
 

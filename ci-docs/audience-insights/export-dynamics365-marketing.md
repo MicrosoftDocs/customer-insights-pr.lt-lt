@@ -1,7 +1,7 @@
 ---
 title: Eksportuoti „Customer Insights“ duomenis į „Dynamics 365 Marketing“
-description: Sužinokite, kaip sukonfigūruoti ryšį su „Dynamics 365 Marketing“.
-ms.date: 02/01/2021
+description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Dynamics 365 Marketing“.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,35 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 892aff643872f11307a2c43e5670edab657d7848
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a13f6f81f5e2570d3302d88c02755f1d86321a01
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597613"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759647"
 ---
-# <a name="connector-for-dynamics-365-marketing-preview"></a>„Dynamics 365 Marketing“ jungtis (peržiūra)
+# <a name="use-segments-in-dynamics-365-marketing-preview"></a>„Dynamics 365 Marketing“ segmentų naudojimas (peržiūra)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Naudokite [segmentus](segments.md) tam, kad sukurtumėte kampanijas ir susisiektumėte su konkrečiomis klientų grupėmis su „Dynamics 365 Marketing“. Daugiau informacijos žr. [Segmentų naudojimas iš „Dynamics 365 Customer Insights“ su „Dynamics 365 Marketing“](/dynamics365/marketing/customer-insights-segments)
 
-## <a name="prerequisite"></a>Būtinoji sąlyga
+## <a name="prerequisite-for-a-connection"></a>Būtinoji ryšio sąlygą
 
 - Kontaktų įrašai turi būti „Dynamics 365 Marketing”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Marketing”. Sužinokite daugiau, kaip pasiekti [„Dynamics 365 Marketing ”kontaktus naudojant „Common Data Services”](connect-power-query.md).
 
   > [!NOTE]
   > Eksportuojant segmentus iš auditorijos įžvalgų į „Marketing” nebus sukurta naujų kontaktų įrašų rinkodaros egzemplioriuose. Kontaktų įrašai iš „Marketing” turi būti įtraukti į auditorijos įžvalgas ir naudojami duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.
 
-## <a name="configure-the-connector-for-marketing"></a>„Marketing“ jungties konfigūravimas
+## <a name="set-up-connection-to-marketing"></a>Ryšio su rinkodara sąranka
 
-1. Publikos įžvalgose, eikite į **Administravimas** > **Eksportavimo paskirties vietos**.
+1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Srityje **„Dynamics 365 Marketing“** pasirinkite **Nustatyti**.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„Dynamics 365 Marketing“**, kad sukonfigūruotumėte ryšį.
 
-1. Nurodykite atpažįstamą eksportavimo paskirties vietos pavadinimą lauke **Rodomas pavadinimas**.
+1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
+
+1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Lauke **Serverio adresas** įveskite savo organizacijos „Marketing“ URL.
 
@@ -43,15 +45,24 @@ Naudokite [segmentus](segments.md) tam, kad sukurtumėte kampanijas ir susisiekt
 
 1. Sudarykite kliento ID laukelių žemėlapį į „Dynamics 365 Contact“ ID.
 
-1. Pasirinkite **Toliau**.
+1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį. 
+
+## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
+
+Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+
+1. Eikite į **Duomenys** > **Eksportavimas**.
+
+1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Dynamics 365 Marketing“ talpykla. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
 
 1. Pasirinkite vieną ar daugiau segmentų.
 
 1. Pasirinkite **Įrašyti**.
 
-## <a name="export-the-data"></a>Duomenų eksportavimas
+Eksportavimo įrašymas eksportavimo iš karto nevykdo.
 
-Galite [eksportuoti duomenis pareikalavus](export-destinations.md). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md#schedule-tab).
-
+Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

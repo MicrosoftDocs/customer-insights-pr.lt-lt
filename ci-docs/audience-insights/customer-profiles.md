@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596877"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896337"
 ---
 # <a name="customer-profiles"></a>Klientų profiliai
 
@@ -59,7 +59,7 @@ Kliento išsami informacija apima:
 
 -   **Kliento profilio plyta:** Ši plyta rodo skirtingas vertes lyginant su suvienodintu kliento profilio objektu. Ši išsami informacija gali apimti el. pašto adresą, vardą, miestą ir t.t. 
 
--   **Galimi interesai, galimi prekės ženklai:** Rodo, ar jūs sukonfigūravote pirmosios šalies praturtinimą. Jis rodo galimus interesus ir panašumus su kliento turimais prekių ženklais su profiliu. Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft-graph.md).
+-   **Galimi interesai, galimi prekės ženklai:** Rodo, ar jūs sukonfigūravote pirmosios šalies praturtinimą. Jis rodo galimus interesus ir panašumus su kliento turimais prekių ženklais su profiliu. Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft.md).
 
 -   **Priemonės:** Rodo, ar jūs sukonfigūravote vieną ar keletą priemonių konkrečiam tipui: kliento savybių priemonėms. Jos apima apskaičiuotą KPI pagal jūsų klientus individualiu kliento lygmeniu. Dėl daugiau informacijos, žr. [Nustatyti ir valdyti priemones](measures.md).
 

@@ -1,7 +1,7 @@
 ---
-title: Eksportavimo paskirties vietos
-description: Eksportuoti duomenis ir tvarkyti eksportavimo paskirties vietas.
-ms.date: 07/21/2020
+title: Duomenų eksportavimas iš „Customer Insights“
+description: 'Tvarkykite duomenų bendrinimo eksportavimus. '
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596095"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896153"
 ---
-# <a name="export-destinations-preview-overview"></a>Eksportavimo paskirties vietos apžvalga (peržiūros versija)
+# <a name="exports-preview-overview"></a>Eksportavimų (peržiūra) apžvalga
 
-Puslapyje **Eksportavimo paskirties vietos** rodomos visos vietos, į kurias nustatėte eksportuoti duomenis. Taip pat galite įtraukti naujų eksportavimo paskirties vietų. Taip pat, jis rodo šiuo metu galimas eksportavimo parinktis. Gaukite trumpą apžvalgą, aprašą ir sužinokite, ką galite daryti su kiekviena išplečiamumo parinktimi. Eksportuokite vieninguosius profilius, priemones ir segmentus į palaikomas programas, tinkamas jūsų verslui.
+Puslapyje **Eksportavimai** rodomi visi sukonfigūruoti eksportavimai. Eksportavimuose su įvairiomis programomis bendrinami konkretūs duomenys. Jie gali apimti klientų profilius arba objektus, schemas ir žymėjimo duomenis. Kiekvienam eksportavimui reikalingas [ryšys, kurį nustato administratorius, kad galėtų tvarkyti įgaliojimą ir prieigą](connections.md).
 
-Eikite į **Administratorius** > **Eksportuoti paskirties vietas** , kad rastumėte toliau nurodytas išplečiamumo parinktis.
+> [!NOTE]
+> Iki 2021 m. kovo mėn. eksportavimai automatiškai sukūrė ryšį su atitinkama paslauga. Dabar eksportavimams reikia [administratoriaus sukurto ir bendrinamo ryšio](connections.md), kad juos galėtumėte sukurti.
 
-- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
-- [„Adobe” patirties platforma](export-adobe-experience-platform.md)
-- [„AdRoll”](export-adroll.md)
-- [Autopilotas](export-autopilot.md)
-- [„Azure“ didelių dvejetainių objektų saugykla](export-azure-blob-storage.md)
-- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [„Microsoft Teams“ robotas](export-teams-bot.md)
-- [„Customer Insights“ API](apis.md)
-- [„DotDigital“](export-dotdigital.md)
-- [„Dynamics 365 Customer Service“ (Kliento kortelės priedas)](customer-card-add-in.md)
-- [„Dynamics 365 Marketing“](export-dynamics365-marketing.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [„Dynamics 365“ Pardavimo telkinys (Kliento kortelės priedas)](customer-card-add-in.md)
-- [„Facebook” reklamos tvarkytuvas](export-facebook.md)
-- [„Google Ads“](export-google-ads.md)
-- [„LiveRamp“&reg;](export-liveramp.md)
-- [„Mailchimp“](export-mailchimp.md)
-- [„Marketo“](export-marketo.md)
-- [„Power Automate”](export-power-automate.md)
-- [„Power Apps”](export-power-apps.md)
-- [„Power BI”](export-power-bi.md)
-- [„SendGrid“ (siųsti tinklelį)](export-sendgrid.md)
-- [„SFTP”](export-sftp.md)
+Eikite į **Duomenys** > **Eksportavimai**, kad peržiūrėtumėte eksportavimų puslapį. Visi naudotojo vaidmenys turi prieigą sukonfigūruotiems eksportavimams peržiūrėti. Naudokite komandų juostoje esantį paieškos laukelį eksportavimams rasti pagal pavadinimą, ryšio pavadinimą arba ryšio tipą.
 
-## <a name="add-a-new-export-destination"></a>Naujos eksportavimo vietos įtraukimas
+## <a name="set-up-a-new-export"></a>Naujo eksportavimo sąranka
 
-Norėdami įtraukti eksportavimo paskirties vietas, turite [administratoriaus teises](permissions.md). Jei eksportuojate į „Microsoft“ tarnybas, daroma prielaida, kad abi tarnybos yra toje pačioje organizacijoje.
+Jei norite nustatyti ar redaguoti eksportavimą, turite turėti prieinamų ryšių. Ryšiai priklauso nuo jūsų [naudotojo vaidmens](permissions.md):
+- Administratoriai turi prieigą prie visų ryšių. Jie taip pat gali kurti naujus ryšius nustatydami eksportavimą.
+- Bendradarbiai gali turėti prieigą prie konkrečių ryšių. Jie priklauso nuo administratorių, kad sukonfigūruotų ir bendrintų ryšius. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Žiūrovai gali tik peržiūrėti esamus eksportavimus, tačiau ne juos kurti.
 
-1. Eikite į **Administratorius** > **Eksportavimo paskirties vietos**.
+1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Įjunkite skirtuką **Mano eksportavimo paskirties vietos**.
+1. Pasirinkite **Pridėti eksportavimą**, jei norite sukurti naują eksportavimo paskirties vietą.
 
-1. Pasirinkite **Įtraukti paskirties vietą**, kad sukurtumėte naują eksportavimo paskirties vietą.
+1. Srityje **Sąrankos eksportavimas** pasirinkite, kurį ryšį naudoti. [Ryšius](connections.md) tvarko administratoriai. 
 
-1. Srityje **Įtraukti paskirties vietą** išplečiamajame sąraše pasirinkite eksportavimo paskirties vietos **Tipą**.
+1. Jei norite sukurti eksportavimą, pateikite reikiamus duomenis ir pasirinkite **Įrašyti**.
 
-1. Nurodykite reikiamą informaciją ir pasirinkite **Toliau**, kad sukurtumėte eksportavimo paskirties vietą.
-
-Taip pat galite pasirinkti **Nustatyti** plytelėje, esančioje skirtuke **Atrasti**.
-
-## <a name="view-export-destinations"></a>Eksportavimo paskirties vietos peržiūra
-
-Sukūręs eksportavimo paskirties vietas jas rasite skirtuke **Mano eksportavimo paskirties vietos** esančioje lentelėje. Šioje lentelėje yra trys stulpeliai:
-
-- **Rodomas pavadinimas**: pavadinimas, įvestas kuriant paskirties vietą.
-- **Tipas**: eksportavimo paskirties vietos tipas, kurį nustatėte kurdami paskirties vietą.
-- **Sukurta**: data, kada buvo sukurta paskirties vieta.
-
-## <a name="edit-an-export-destination"></a>Eksportavimo paskirties vietos redagavimas
+### <a name="edit-an-export"></a>Eksportavimo redagavimas
 
 1. Pažymėkite eksportavimo paskirties vietos, kurią norite redaguoti, vertikalią elipsę.
 
-   > [!div class="mx-imgBorder"]
-   > ![Vertikali elipsė](media/export-destinations-page-ellipsis.png "Vertikali elipsė")
+1. Išskleidžiamajame meniu pasirinkite **Redaguoti**.
 
-1. Išplečiamajame meniu pasirinkite **Redaguoti**.
+1. Pakeiskite vertes, kurias norite atnaujinti, ir pasirinkite **Įrašyti**.
 
-1. Pakeiskite reikšmes, kurias reikia atnaujinti, ir pasirinkite **Įrašyti**.
+## <a name="view-exports-and-export-details"></a>Eksportavimo ir eksportavimo duomenų peržiūra
 
-## <a name="export-data-on-demand"></a>Duomenų eksportavimas pareikalavus
+Sukūrus eksportavimo paskirties vietas jų sąrašas pateikiamas pasirinkus **Duomenys** > **Eksportavimai**. Visi naudotojai mato, kurie duomenys bendrinami ir kokia jų naujausia būsena.
 
-Sukonfigūravus eksporto paskirties vietos jungtį eksportavimas bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md#schedule-tab).
+1. Eikite į **Duomenys** > **Eksportavimas**.
 
-Jei norite eksportuoti duomenis nelaukdami suplanuoto naujinimo, eikite į skirtuką **Mano eksportavimo paskirties vietos** dalyje **Administratorius** > **Eksportavimo paskirties vietos**.
+1. Naudotojai, neturintys redagavimo teisių, pasirenka **Peržiūrėti**, o ne **Redaguoti**. Peržiūrėkite eksportavimo duomenis.
 
-> [!div class="mx-imgBorder"]
-> ![Vertikali elipsė](media/export-destinations-page-ellipsis.png "Vertikali elipsė")
+1. Šioje šoninėje srityje rodoma šio eksportavimo sąranka. Jei neturite redagavimo teisių, reikšmių keisti negalite. Jei norite grįžti prie eksportavimų puslapio, pasirinkite **Uždaryti**.
 
-- Virš sąrašo pasirinkite **Eksportuoti**, kad tuo pačiu metu būtų paleistas eksportavimas į visas eksportavimo paskirties vietas.
-- Pasirinkite elipsę (...) po sąrašo elementu, tada pasirinkite parinktį **Eksportuoti**, kad būtų paleistas eksportavimas į vieną eksportavimo paskirties vietą.
+## <a name="run-exports-on-demand"></a>Pageidaujamų eksportavimų paleidimas
 
-## <a name="remove-an-export-destination"></a>Eksportavimo paskirties vietos pašalinimas
+Sukonfigūravus eksportavimą jis bus vykdomas kiekvieno [planinio atnaujinimo metu](system.md#schedule-tab), kol yra veikiantis ryšys.
 
-Norėdami pašalinti eksportavimo paskirties vietą, pradėkite nuo pagrindinio puslapio **Eksportavimo paskirties vietos**.
+Jei duomenis norite eksportuoti nelaukdami planuojamo atnaujinimo, eikite į **Duomenys** > **Eksportavimai**. Turite du pasirinkimus:
 
-1. Pažymėkite norimos pašalinti eksportavimo paskirties vietos vertikalią elipsę.
+- Jei norite peržiūrėti visus eksportavimus, komandų juostoje pasirinkite **Vykdyti viską**. 
+- Jei norite vykdyti vieną eksportavimą, sąrašo elemente pasirinkite elipsę (...) ir pasirinkite **Vykdyti**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Vertikali elipsė](media/export-destinations-page-ellipsis.png "Vertikali elipsė")
+## <a name="remove-an-export"></a>Eksportavimo pašalinimas
 
-2. Išskleidžiamajame meniu pasirinkite **Pašalinti**.
+1. Eikite į **Duomenys** > **Eksportavimas**.
 
-3. Patvirtinkite pašalinimą pasirinkdami **Pašalinti** patvirtinimo ekrane.
+1. Pažymėkite norimos pašalinti eksportavimo vertikalią elipsę.
+
+1. Išskleidžiamajame meniu pasirinkite **Pašalinti**.
+
+1. Patvirtinkite pašalinimą pasirinkdami **Pašalinti** patvirtinimo ekrane.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

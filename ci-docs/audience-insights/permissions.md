@@ -1,7 +1,7 @@
 ---
 title: Valdykite vartotojo leidimus
 description: Sužinokite apie leidimus ir vartotojo vaidmenis.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595712"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760383"
 ---
 # <a name="user-permissions"></a>Vartotojų teisės
 
@@ -31,10 +31,10 @@ Yra trys vaidmenų tipai:
 - Peržiūrėkite ir susipažinkite su puslapiu **Papildymas**.
 - Naršykite ir eksportuokite objektus, naudodami puslapį **Objektai**.
 - Peržiūrėkite sistemos procesų būseną naudodami puslapį **Sistema**.
-- Eksportuokite segmentus iš **Segmentų** puslapio.
+- Eksportavimus peržiūrėkite puslapyje **Eksportavimai**.
 - Diekite ir naudokite **„Power BI“ „Customer Insights“** ataskaitų sritį.
 
-## <a name="contributor"></a>Bendradarbis
+## <a name="contributor"></a>Dalyvis
 
 - Žiūrinčiajam pasiekiamos visos teisės.
 - Įkelkite ir transformuokite duomenis naudodami **Duomenų šaltinių** puslapį.
@@ -43,6 +43,7 @@ Yra trys vaidmenų tipai:
 - Sukurkite segmentus naudodami **Segmentų** puslapį.
 - Kurkite matus naudodami puslapį **Matai**.
 - Valdykite konfigūraciją ir papildykite klientų profilius iš puslapio **Papildymas** (tik pirmosios šalies papildymai).
+- Tvarkykite ir kurkite eksportavimus pagal su bendradarbiais bendrinamus ryšius. [Sužinokite daugiau apie tai, kaip administratoriai leidžia bendradarbiams naudoti ryšį eksportavimui](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administratorius
 
@@ -50,8 +51,9 @@ Yra trys vaidmenų tipai:
 - Pakeiskite nustatymus **Sistemos** puslapyje, įskaitant darbo kalbą ir atnaujinkite grafikus jūsų sistemos procesuose.
 - Peržiūrėkite ir įtraukite leidimus naudodami **Leidimų** puslapį.
 - Nustatykite paieškos ir filtravimo sąvokas klientų puslapiui naudodami **Paieškos ir filtravimo turinio** puslapį (prieinamas per **Klientų** puslapį).
-- Apibrėžkite „Dynamics 365 Sales“ segmento paskirtis, naudodami puslapį **Eksportavimo paskirties vietos**.
+- Tvarkykite ryšius ir leiskite jais naudotis kitiems naudotojų vaidmenims puslapyje **Ryšiai**.
 - Valdykite konfigūraciją ir papildykite klientų profilius iš puslapio **Papildymas** (visi papildymai).
+- Tvarkykite ir kurkite eksportavimus puslapyje **Eksportavimai**.
 - Įdiekite ir naudokite **Kliento kortelės papildinį**.
 - Įtraukite ir naudokite **„Power Apps“ jungtį**.
 - Įjunkite [„Customer Insights“ API naudojimą](apis.md).

@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598640"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896475"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Auditorijos įžvalgų „Dynamics 365 Customer Insights“ apžvalga
 
@@ -27,9 +27,9 @@ Auditorijos įžvalgos padeda jums sukurti gilesnį jūsų klientų supratimą. 
   - Prisijunkite ir lengvai sujunkite duomenis – gaukite operacijų, stebėjimo ir elgsenos duomenis iš populiarių [duomenų šaltinių naudodamiesi iš anksto sukurtomis jungtimis](data-sources.md).
   - Transformuokite klientų duomenų išmanumą – sukurkite vieningus klientų profilius, atitinkančius [Bendrųjų duomenų modelį](/common-data-model/). Išspręskite klientų tapatybes naudodami AI / ML grįstas rekomendacijas.
 
-- **Papildykite žinias auditorijos įžvalgomis, esančiomis „Microsoft Graph“**
+- **Papildyti auditorijos įžvalgomis**
 
-  - Kurkite išsamesnius klientų profilius [įtraukdami auditorijos žvalgybą esančią „Microsoft Graph“](enrichment-microsoft-graph.md).  
+  - Kurkite išsamesnius klientų profilius [įtraukdami papildytus duomenis](enrichment-hub.md).  
 
 - **Įgalinkite savo verslo procesus ir personalizuokite klientų patirtis**
 
@@ -43,7 +43,7 @@ Auditorijos įžvalgos padeda jums sukurti gilesnį jūsų klientų supratimą. 
 
   - Prieiga prie praturtinto jungčių rinkinio siekiant vartoti visus jūsų kliento duomenis.
   - Galimybė sujungti kliento duomenis ir transformuoti juos į [Bendrojo duomenų modelio](/common-data-model/) formatą.
-  - Papildykite klientų informaciją įžvalgomis iš auditorijos įžvalgų, esančių „Microsoft Graph“, pavyzdžiui, prekės ženklų panašumai ir pomėgiai.
+  - Papildykite klientų informaciją įžvalgomis iš auditorijos įžvalgų, pavyzdžiui, prekės ženklų panašumais ir pomėgiais.
   - „Paspaudimai, o ne kodas” konfigūravimas ir klaidų šalinimo patirtis padeda paprastai konfigūruoti auditorijos įžvalgas ir nustatyti galimas problemas.
   - Išvalykite ir standartizuokite klientų duomenis iš skirtingų šaltinių su AI įgalintomis rekomendacijomis.  
 

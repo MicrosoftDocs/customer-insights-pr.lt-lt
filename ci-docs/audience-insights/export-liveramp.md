@@ -1,7 +1,7 @@
 ---
 title: „LiveRamp“ jungtis
-description: Sužinokite kaip eksportuoti duomenis į „LiveRamp“.
-ms.date: 12/02/2020
+description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „LiveRamp“.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597567"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760337"
 ---
-# <a name="liverampreg-connector-preview"></a>„LiveRamp&reg;“ jungtis (peržiūra)
+# <a name="export-segments-to-liverampreg-preview"></a>Segmentų eksportavimas į „LiveRamp&reg;“ (peržiūra)
 
-Aktyvinkite savo duomenis „LiveRamp“, kad prisijungtumėte prie daugiau nei 500 platformų skaitmeninėse, socialinėse ir TV ekosistemose. Nukreipkite, sustabdykite ir asmeniškai pritaikykite skelbimų kampanijas dirbdami su duomenimis „LiveRamp“.
+Suaktyvinkite duomenis naudodami „LiveRamp“, kad prisijungtumėte prie daugiau nei 500 skaitmeninių, socialinių ir TV platformų. Nukreipkite, sustabdykite ir asmeniškai pritaikykite skelbimų kampanijas dirbdami su duomenimis „LiveRamp“.
 
-## <a name="prerequisites"></a>Būtinosios sąlygos
+## <a name="prerequisites-for-a-connection"></a>Būtinosios ryšio sąlygos
 
 - Norint naudoti šią jungtį reikalinga „LiveRamp“ prenumerata.
 - Norėdami gauti prenumeratą, [kreipkitės tiesiogiai į „LiveRamp“](https://liveramp.com/contact/). [Sužinokite daugiau apie „LiveRamp Onboarding“](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Prisijungimas prie „LiveRamp“
+## <a name="set-up-connection-to-liveramp"></a>Ryšio su „LiveRamp“ nustatymas
 
-1. Publikos įžvalgose, eikite į **Administravimas** > **Eksportavimo paskirties vietos**.
+1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. **„LiveRamp“** plytoje pasirinkite **Nustatyti**.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„LiveRamp“**, kad sukonfigūruotumėte ryšį.
 
-1. Nurodykite atpažįstamą pavadinimą lauke **Rodyti pavadinimą**.
+1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
+
+1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Įveskite savo „LiveRamp“ saugaus FTP (SFTP) kliento **vartotojo vardą** ir **slaptažodį**.
 Šie kredencialai gali skirtis nuo jūsų „LiveRamp Onboarding“ kredencialų.
@@ -40,15 +42,25 @@ Aktyvinkite savo duomenis „LiveRamp“, kad prisijungtumėte prie daugiau nei 
 
 1. Sėkmingą patikrinę pateikite sutikimą dėl **Duomenų privatumo ir atitikties** pažymėdami žymės langelį **Sutinku**.
 
-1. Pasirinkite **Toliau**, kad nustatytumėte „LiveRamp“ jungtį.
+1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį.
 
-## <a name="configure-the-connector"></a>Jungties konfigūravimas
+## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
+
+Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+
+1. Eikite į **Duomenys** > **Eksportavimas**.
+
+1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „LiveRamp“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
 
 1. Lauke **Pasirinkite pagrindinį identifikatorių** pasirinkite **El. paštas**, **Vardas, pavardė ir adresas** arba **Telefonas**, kad šie duomenys būtų nusiųsti „LiveRamp“ tapatybei nustatyti.
+   > [!div class="mx-imgBorder"]
+   > ![„LiveRamp“ jungtis su atributų susiejimu](media/export-liveramp-segments.png "„LiveRamp“ jungtis su atributų susiejimu")
 
 1. Susiekite atitinkamus pasirinkto pagrindinio identifikatoriaus atributus iš bendrojo kliento profilio.
 
-1. Pasirinkite **Įtraukti atributą**, kad susietumėte papildomus atributus, kurie bus siunčiami „LiveRamp“.
+1. Pasirinkite **Pridėti atribute**, kad žymėtumėte daugiau atributų siuntimui į „LiveRamp“.
 
    > [!TIP]
    > „LiveRamp“ nusiuntus daugiau pagrindinio identifikatoriaus atributų tikėtina, kad sutapimo dažnis bus aukštesnis.
@@ -57,13 +69,10 @@ Aktyvinkite savo duomenis „LiveRamp“, kad prisijungtumėte prie daugiau nei 
 
 1. Pasirinkite **Įrašyti**.
 
-> [!div class="mx-imgBorder"]
-> ![„LiveRamp“ jungtis su atributų susiejimu](media/export-liveramp-segments.png "„LiveRamp“ jungtis su atributų susiejimu")
+Eksportavimo įrašymas eksportavimo iš karto nevykdo.
 
-## <a name="export-the-data"></a>Duomenų eksportavimas
+Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
 
-Jei įvykdytos visos būtinosios eksportavimo sąlygos, eksportavimas netrukus bus pradėtas. Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md#schedule-tab).
-Kai eksportavimas sėkmingai baigtas, galite prisijungti prie „LiveRamp Onboarding“, kad suaktyvintumėte savo duomenis ir juos paskirstytumėte.
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 

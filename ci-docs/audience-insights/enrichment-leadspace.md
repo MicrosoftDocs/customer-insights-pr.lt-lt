@@ -1,7 +1,7 @@
 ---
 title: Bendrovės profilių praturtinimas su trečiosios šalies praturtinimo „Leadspace“
 description: Bendra informacija apie „Leadspace“ trečiosios šalies praturtinimą.
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,46 +9,67 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597659"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895923"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Įmonių profilių papildymas su „Leadspace“ (peržiūra)
 
-„Leadspace“ yra duomenų mokslo įmonė, teikianti B2B klientų duomenų platformą. Tai leidžia klientams su vieningais įmonių klientų profiliais papildyti savo duomenis. Praturtinimai apima papildomos atributus, tokius kaip bendrovės dydis, vieta, pramonė ir daugiau.
+„Leadspace“ yra duomenų mokslo įmonė, teikianti B2B klientų duomenų platformą. Tai leidžia klientams su vieningais įmonių klientų profiliais papildyti savo duomenis. Papildymai apima daugiau atributų, pvz., įmonės dydį, vietą, pramonės šaką ir daugiau.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 Norint konfigūruoti „Leadspace“, turi būti tenkinamos šios būtinosios sąlygos:
 
-- Turite aktyvią „Leadspace“ licenciją ir „nuolatinį raktą“ (vadinamą **„Leadspace“ žyma**). Susisiekite tiesiogiai su [„Leadspace“](https://www.leadspace.com/products/leadspace-on-demand/), norėdami gauti informacijos apie jų produktą.
-- Turite [Administratoriaus](permissions.md#administrator) teises.
+- Turite aktyvią „Leadspace“ licenciją.
 - Turite įmonių [vieningus klientų profilius](customer-profiles.md).
+- „LeadSpace“ ryšį jau sukonfigūravo administratorius arba turite [administratoriaus](permissions.md#administrator) teises bei „neribotą raktą“ (vadinamą **„LeadSpace“ atpažinimo ženklu**). Norėdami gauti išsamios informacijos apie jų produktą, kreipkitės tiesiogiai į [„Leadspace“](https://www.leadspace.com/products/leadspace-on-demand/).
 
-## <a name="configuration"></a>Konfigūracija
+## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 
 1. Publikos įžvalgose, eikite į **Duomenys** > **Praturtinimas**.
 
-1. Pažymėkite **Papildyti mano duomenis** plytelėje „Leadspace“.
+1. „Leadspace“ plytelėje pasirinkite **Papildyti mano duomenis** ir pasirinkite **Darbo pradžia**.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace plytos momentinė ekrano nuotrauka.":::
 
-1. Pasirinkite **Pradėti** ir tada įveskite aktyvią **„Leadspace“ žymą** (nuolatinį raktą). Peržiūrėkite ir pateikite sutikimą dėl **Duomenų privatumo ir atitikties** pažymėdami žymės langelį **Sutinku**. Patvirtinkite abi įvestis pasirinkdami **Sujungti su „Leadspace“**.
+1. Išskleidžiamajame sąraše pasirinkite [ryšį](connections.md). Jei ryšio nėra, kreipkitės į administratorių. Jei esate administratorius, ryšį galite sukurti pasirinkdami **Pridėti ryšį** ir **„Leadspace“**. 
 
-1. Pasirinkite **Įtraukti duomenis** ir pasirinkite kliento duomenų rinkinį, kurį norite papildyti demografiniais duomenimis iš „Leadspace“. Galite pažymėti objektą *Klientas*, kad pagerintumėte visus jūsų klientų profilius, arba pasirinkti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.
+1. Norėdami patvirtinti ryšį pasirinkite **Prisijungti prie „Leadspace“**.
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Pasirinkite tarp kliento profilio ir segmento papildymo.":::
+1. Pasirinkite **Toliau** ir pasirinkite **Kliento duomenų rinkinys**, kurį norite papildyti įmonės duomenimis iš „Leadspace“. Galite pažymėti objektą **Klientas**, kad pagerintumėte visus jūsų klientų profilius, arba pasirinkti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.
 
-1. Spustelėkite **Kitas** ir apibrėžkite, kurie laukai iš jūsų vieningų profilių turi būti naudojami norint ieškoti sutampančių įmonės duomenų iš „LeadSpace”. **Bendrovės pavadinimo** laukelis yra būtinas. Didesniam atitikties tikslumui, gali būti įtraukti ne daugiau du laukeliai **Bendrovės interneto svetainė** ir **Bendrovės vieta**.
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Klientų duomenų rinkinio pasirinkimo momentas.":::
+
+1. Pažymėkite **Toliau** ir apibrėžkite, kurie laukeliai iš vieningųjų profilių naudojami ieškant sutampančių įmonės duomenų iš „Leadspace“. **Bendrovės pavadinimo** laukelis yra būtinas. Didesniam atitikties tikslumui, gali būti įtraukti ne daugiau du laukeliai **Bendrovės interneto svetainė** ir **Bendrovės vieta**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace laukelio žemėlapio sukūrimo juosta.":::
-   
-1. Pasirinkite **Taikyti** tam, kad užbaigtumėte laukelio žemėlapio kūrimą.
 
-1. Pasirinkite **Vykdyti**, kad papildytumėte įmonės profilius. Kiek praturtinimas užtrunka priklauso nuo suvienodintų kliento profilių skaičiaus.
+1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
+
+1. Nurodykite papildymo pavadinimą ir peržiūrėję pasirinkimus pažymėkite **Išsaugoti papildymą**.
+
+
+## <a name="configure-the-connection-for-leadspace"></a>„Leadspace“ ryšio konfigūravimas 
+
+Jei norite konfigūruoti ryšius, turite būti administratorius. Pasirinkite **Pridėti ryšį**, kai konfigūruosite papildymą *arba* eikite į **Administravimas** > **Ryšiai** ir plytelėje „Leadspace“ pasirinkite **Sąranka**.
+
+1. Pasirinkite **Darbo pradžia** 
+
+1. Laukelyje **Rodomas pavadinimas** įveskite ryšio pavadinimą.
+
+1. Nurodykite galiojantį „Leadspace“ atpažinimo ženklą.
+
+1. Peržiūrėkite ir pateikite sutikimą dėl **Duomenų privatumo ir atitikties** pažymėdami žymės langelį **Sutinku**
+
+1. Pažymėkite **Patvirtinti**, kad patvirtintumėte konfigūraciją.
+
+1. Baigę patikrinimą pasirinkite **Išsaugoti**.
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="„Leadspace“ ryšio konfigūravimo puslapis.":::
 
 ## <a name="enrichment-results"></a>Papildymo rezultatai
 

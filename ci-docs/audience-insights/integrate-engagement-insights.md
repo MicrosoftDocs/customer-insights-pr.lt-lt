@@ -9,12 +9,12 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 14ebff30d3ec7fc52dca6f86136309a3f454fa27
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597475"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896429"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Žiniatinklio duomenų integravimas su įtraukimo įžvalgomis auditorijų apžvalgoje
 
@@ -46,7 +46,7 @@ Aspektai kuriant tobulintinus įvykius:
     - Signal.Action.Name – išsami veiklos informacija
     - Signal.User.Id – naudojama susieti su kliento ID
     - Signal.View.Uri – naudojamas kaip žiniatinklio adresas kaip segmentų arba priemonių pagrindas
-    - Signal.Export.Id – naudojamas kaip pirminis įvykių raktas <!-- system generated, do we need to list?-->
+    - Signal.Export.Id – naudojamas kaip pirminis įvykių raktas
     - Signal.Timestamp – veiklos datai ir laikui nustatyti
 
 Pažymėkite filtrus, sufokusuojamus į įvykius ir puslapius, kurie susiję su jūsų naudojimo atveju. Šiame pavyzdyje naudosime veiksmo pavadinimą „El. pašto reklama”.

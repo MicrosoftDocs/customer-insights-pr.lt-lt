@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights” duomenų eksportavimas į „Adobe Campaign Standard”
 description: Sužinokite, kaip naudoti auditorijos įžvalgų segmentus „Adobe Campaign Standard”.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596325"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760291"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>„Customer Insights” segmentų naudojimas „Adobe Campaign Standard” (peržiūros versija)
 
@@ -48,15 +48,21 @@ Pasiūlymo el. laiške, kurį jūs norite išsiųsti, bus vardas, pavardė ir kl
 
 ## <a name="export-your-target-audience"></a>Eksportuokite savo tikslinę auditoriją
 
+### <a name="configure-a-connection"></a>Ryšio konfigūravimas
+
 Atpažinę mūsų tikslinę auditoriją, galime konfigūruoti eksportavimą iš auditorijos įžvalgų į „Azure“ didelių dvejetainių objektų saugyklos abonementą.
 
-1. Publikos įžvalgose, eikite į **Administravimas** > **Eksportavimo paskirties vietos**.
+1. Auditorijos įžvalgose eikite į **Administravimas** > **Ryšiai**.
 
-1. Plytelėje **„Adobe” kampanija** pasirinkite **Nustatyti**.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„Adobe Campaign“**, jei norite konfigūruoti ryšį arba pasirinkite **Sąranka** plytelėje **„Adobe Campaign“**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Konfigūracijos plytelė, skirta Adobe Campaign Standard.":::
 
-1. Pateikite šios naujos eksportavimo vietos **Rodomą pavadinimą** ir tada įveskite **Abonemento pavadinimą**, **Abonemento raktą** ir **Talpyklę**„Azure“ didelių dvejetainių objektų saugyklai, į kurią norite eksportuoti segmentą.  
+1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
+
+1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+
+1. Įveskite **Paskyros pavadinimas**, **Paskyros raktas** ir **Talpykla** paskyroje „Azure Blob Storage“, į kurią norite eksportuoti segmentą.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Saugyklos abonemento konfigūracijos ekrano kopija."::: 
 
@@ -64,7 +70,17 @@ Atpažinę mūsų tikslinę auditoriją, galime konfigūruoti eksportavimą iš 
 
    - Norėdami sužinoti, kaip sukurti konteinerį, žr. [Konteinerio kūrimas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Pasirinkite **Toliau**.
+1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį.
+
+### <a name="configure-an-export"></a>Eksportavimo konfigūravimas
+
+Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+
+1. Eikite į **Duomenys** > **Eksportavimas**.
+
+1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti eksportavimą**.
+
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Adobe Campaign“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
 
 1. Pasirinkite segmentą, kurį norite eksportuoti. Šiame pavyzdyje tai yra **„ChurnProneCustomers”**.
 
@@ -83,11 +99,9 @@ Atpažinę mūsų tikslinę auditoriją, galime konfigūruoti eksportavimą iš 
 
 1. Pasirinkite **Įrašyti**.
 
-Įrašę eksportavimo paskirties vietą, ją rasite **Administravimas** > **Eksportavimai** > **Mano eksportavimo paskirties vietos**.
+Išsaugoję eksportavimo paskirties vietą ją rasite pasirinkę **Duomenys** > **Eksportavimai**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Ekrano kopija su eksportavimų sąrašu ir paryškintu pavyzdžio segmentu.":::
-
-Dabar galite [eksportuoti segmentą pareikalavus](export-destinations.md#export-data-on-demand). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md).
+Dabar galite [eksportuoti segmentą pareikalavus](export-destinations.md#run-exports-on-demand). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md).
 
 > [!NOTE]
 > Įsitikinkite, kad eksportuoto segmento įrašų skaičius neviršija leistinos „Adobe Campaign Standard” licencijos ribos.

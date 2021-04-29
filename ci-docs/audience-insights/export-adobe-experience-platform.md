@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights” duomenų eksportavimas į „Adobe” patirties platformą
 description: Sužinokite, kaip naudoti auditorijos įžvalgų segmentus „Adobe” patirties platformoje.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596279"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760111"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>„Customer Insights” segmentų naudojimas „Adobe” patirties platformoje (peržiūros versija)
 
@@ -51,21 +51,36 @@ Pasiūlymo el. laiške, kurį jūs norite išsiųsti, bus vardas, pavardė ir kl
 
 Atpažinę mūsų tikslinę auditoriją, galime konfigūruoti eksportavimą iš auditorijos įžvalgų į „Azure“ didelių dvejetainių objektų saugyklos abonementą.
 
-1. Publikos įžvalgose, eikite į **Administravimas** > **Eksportavimo paskirties vietos**.
+### <a name="configure-a-connection"></a>Ryšio konfigūravimas
 
-1. Plytelėje **„Azure“ didelių dvejetainių objektų saugykla** pasirinkite **Nustatyti**.
+1. Eikite į **Administravimas** > **Ryšiai**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Konfigūracijos plytelė, skirta „Azure“ didelių dvejetainių objektų saugyklai.":::
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„Azure Blob Storage“** arba pasirinkite **Sąranka** plytelėje **„Azure Blob Storage“**:
 
-1. Pateikite šios naujos eksportavimo vietos **Rodomą pavadinimą** ir tada įveskite **Abonemento pavadinimą**, **Abonemento raktą** ir **Talpyklę**„Azure“ didelių dvejetainių objektų saugyklai, į kurią norite eksportuoti segmentą.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Konfigūracijos plytelė, skirta „Azure“ didelių dvejetainių objektų saugyklai."::: kad sukonfigūruotumėte ryšį.
+
+1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
+
+1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Įveskite **Paskyros pavadinimas**, **Paskyros raktas** ir **Talpykla** savo „Blob“ laikymo paskyroje, į kurią norite eksportuoti segmentą.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Saugyklos abonemento konfigūracijos ekrano kopija."::: 
+   
+    - Jei norite sužinoti daugiau apie „Blob“ talpyklos paskyros pavadinimą ir paskyros raktą, žr. [Talpyklos paskyros nuostatų valdymas „Azure“ portale](/azure/storage/common/storage-account-manage).
+    - Norėdami sužinoti, kaip sukurti konteinerį, žr. [Konteinerio kūrimas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Jei norite sužinoti daugiau apie tai, kaip rasti „Azure“ didelių dvejetainių objektų saugyklos kliento pavadinimą ir kliento raktą, žr. [Saugyklos kliento parametrų valdymas „Azure“ portale](/azure/storage/common/storage-account-manage).
+1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį. 
 
-   - Norėdami sužinoti, kaip sukurti konteinerį, žr. [Konteinerio kūrimas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-1. Pasirinkite **Toliau**.
+Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+
+1. Eikite į **Duomenys** > **Eksportavimas**.
+
+1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti eksportavimą**.
+
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Azure Blob“ talpykla. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
 
 1. Pasirinkite segmentą, kurį norite eksportuoti. Šiame pavyzdyje tai yra **„ChurnProneCustomers”**.
 
@@ -73,11 +88,9 @@ Atpažinę mūsų tikslinę auditoriją, galime konfigūruoti eksportavimą iš 
 
 1. Pasirinkite **Įrašyti**.
 
-Įrašę eksportavimo paskirties vietą, ją rasite **Administravimas** > **Eksportavimai** > **Mano eksportavimo paskirties vietos**.
+Išsaugoję eksportavimo paskirties vietą ją rasite pasirinkę **Duomenys** > **Eksportavimai**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Ekrano kopija su eksportavimų sąrašu ir paryškintu pavyzdžio segmentu.":::
-
-Dabar galite [eksportuoti segmentą pareikalavus](export-destinations.md#export-data-on-demand). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md).
+Dabar galite [eksportuoti segmentą pareikalavus](export-destinations.md#run-exports-on-demand). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md).
 
 > [!NOTE]
 > Įsitikinkite, kad eksportuoto segmento įrašų skaičius neviršija leistinos „Adobe Campaign Standard” licencijos ribos.

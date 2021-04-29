@@ -1,7 +1,7 @@
 ---
 title: Bendrovės profilių praturtinimas su trečiosios šalies papildymo „Experian“
 description: Bendra informacija apie „Experian“ trečiosios šalies praturtinimą.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597797"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896383"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klientų profilių papildymas demografiniais duomenimis iš „Experian” (peržiūros versija)
 
@@ -25,10 +25,10 @@ ms.locfileid: "5597797"
 Norint sukonfigūruoti „Experian“, reikia atitikti toliau nurodytas būtinąsias sąlygas.
 
 - Turite aktyvią „Experian“ prenumeratą. Jei norite gauti prenumeratą, [susisiekite su „Experian“](https://www.experian.com/marketing-services/contact) tiesiogiai. [Sužinokite daugiau apie „Experian“ duomenų papildymą](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Turite vartotojo ID, partijos ID ir modelio numerį, skirtus jūsų SSH įjungtame „Secure Transport“ (ST) kliente, kurį „Experian“ sukūrė jums.
-- Turite [Administratoriaus](permissions.md#administrator) teises publikos įžvalgose.
 
-## <a name="configuration"></a>Konfigūracija
+- „Experian“ ryšį jau sukonfigūravo administratorius *arba* turite [administratoriaus](permissions.md#administrator) teises. Taip pat jums reikia naudotojo ID, šalies ID ir modelio numerio jūsų saugaus transportavimo (ST) paskyrai su įjungta SSK, kurią „Experian“ jums sukūrė.
+
+## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 
 1. Pasirinkite **Duomenys** > **Papildymas** ir pasirinkite skirtuką **Atrasti**.
 
@@ -36,26 +36,46 @@ Norint sukonfigūruoti „Experian“, reikia atitikti toliau nurodytas būtiną
 
    > [!div class="mx-imgBorder"]
    > ![„Experian“ plytelė](media/experian-tile.png "„Experian“ plytelė")
+   > 
 
-1. Pasirinkite **Pradžia** ir įveskite vartotojo ID, šalies ID ir savo „Experian“ „Secure Transport“ kliento modelio numerį. Peržiūrėkite ir pateikite sutikimą dėl **Duomenų privatumo ir atitikties** pažymėdami žymės langelį **Sutinku**. Patvirtinkite visas įvestis pasirinkdami **Taikyti**.
+1. Išskleidžiamajame sąraše pasirinkite [ryšį](connections.md). Jei ryšio nėra, kreipkitės į administratorių. Jei esate administratorius, ryšį galite sukurti ryšį pasirinkdami **Pridėti ryšį** ir išskleidžiamajame meniu pasirinkite „Experian“. 
 
-## <a name="map-your-fields"></a>Susiekite savo laukus
+1. Norėdami patvirtinti ryšio pasirinkimą pasirinkite **Prisijungti prie „Experian“**.
 
-1.  Pasirinkite **Įtraukti duomenis** ir pasirinkite **kliento duomenų rinkinį,** kurį norite papildyti demografiniais duomenimis iš „Experian“. Galite pažymėti objektą **Klientas**, kad pagerintumėte visus jūsų klientų profilius, arba pasirinkti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.
+1.  Pasirinkite **Toliau** ir pasirinkite **Kliento duomenų rinkinys**, kurį norite papildyti demografiniais duomenimis iš „Experian“. Galite pažymėti objektą **Klientas**, kad pagerintumėte visus jūsų klientų profilius, arba pasirinkti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.
 
-1. Pasirinkite raktų identifikatorius iš **Vardo ir adreso**, **El. pašto** arba **Telefono**, kad būtų galima siųsti į „Experian“ tapatybės tikrinimui.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Klientų duomenų rinkinio pasirinkimo momentas.":::
 
-   > [!TIP]
-   > Daugiau pagrindinių identifikatorių atributų siunčiant „Experian“, tikėtina, kad atitikimo rodiklis bus aukštesnis.
+1. Pažymėkite **Toliau** ir apibrėžkite, kokio tipo laukelius iš vieningųjų profilių reikėtų naudoti, kad būtų ieškoma sutampančių demografinių duomenų iš „Experian“. Būtina užpildyti bent vieną iš šių laukelių: **Vardas, pavardė ir adresas**, **Telefonas** arba **El. paštas**. Kad tikslumas būtų didesnis, galima pridėti iki dviejų kitų laukelių. Šis pasirinkimas turės įtakos žymėjimo laukeliams, prie kurių turite prieigą atlikdami kitą veiksmą.
 
-1. Pasirinkite **Toliau** ir susiekite atitinkamus pasirinktų rakto identifikatoriaus laukų atributus iš savo vieningojo kliento objekto.
+    > [!TIP]
+    > Daugiau pagrindinių identifikatorių atributų siunčiant „Experian“, tikėtina, kad atitikimo rodiklis bus aukštesnis.
 
-1. Pasirinkite **Įtraukti atributą**, kad susietumėte bet kokius papildomus atributus, kuriuos norite siųsti „Experian“.
+1. Norėdami pradėti laukelių žymėjimą, pasirinkite **Toliau**.
 
-1.  Spustelėkite **Įrašyti**, kad baigtumėte susieti laukus.
+1. Apibrėžkite, kuriuos laukelius iš vieningųjų profilių reikėtų naudoti, kad būtų ieškoma sutampančių demografinių duomenų iš „Experian“. Laukeliai, kuriuos būtina užpildyti, pažymėti.
 
-    > [!div class="mx-imgBorder"]
-    > ![„Experian“ laukų susiejimas](media/experian-field-mapping.png "„Experian“ laukų susiejimas")
+1. Pateikite papildymo pavadinimą ir išvesties objekto pavadinimą.
+
+1. Peržiūrėję pasirinkimus pasirinkite **Išsaugoti papildymą**.
+
+## <a name="configure-the-connection-for-experian"></a>„Experian“ ryšio konfigūravimas 
+
+Jei norite konfigūruoti ryšius, turite būti administratorius. Pasirinkite **Pridėti ryšį**, kai konfigūruosite papildymą *arba* eikite į **Administravimas** > **Ryšiai** ir plytelėje „Experian“ pasirinkite **Sąranka**.
+
+1. Pasirinkite **Darbo pradžia**.
+
+1. Laukelyje **Rodomas pavadinimas** įveskite ryšio pavadinimą.
+
+1. Įveskite galiojantį „Experian“ saugaus transportavimo paskyros naudotojo ID, šalies ID ir modelio numerį.
+
+1. Peržiūrėkite ir pateikite sutikimą dėl **Duomenų privatumo ir atitikties** pažymėdami žymės langelį **Sutinku**
+
+1. Pažymėkite **Patvirtinti**, kad patvirtintumėte konfigūraciją.
+
+1. Baigę patikrinimą pasirinkite **Išsaugoti**.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="„Experian“ ryšio konfigūravimo sritis.":::
 
 ## <a name="enrichment-results"></a>Papildymo rezultatai
 

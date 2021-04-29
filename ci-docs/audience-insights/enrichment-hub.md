@@ -1,7 +1,7 @@
 ---
 title: Papildykite suvienodintus kliento profilius
 description: Naudokite savybes siekiant papildyti jūsų kliento duomenis.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597705"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896015"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientų profilių papildymas (peržiūra)
 
@@ -27,8 +27,8 @@ Norėdami kurti arba redaguoti papildymus, turite turėti dalyvio arba administr
 
 Skirtuke **Atrasti** rasite šiuos papildymus:
 
-- [Prekių ženklai](enrichment-microsoft-graph.md), teikia „Microsoft Graph“
-- [Interesai](enrichment-microsoft-graph.md), teikia „Microsoft Graph“
+- [Rūšys](enrichment-microsoft.md), kurias teikia „Microsoft“
+- [Pomėgiai](enrichment-microsoft.md), kuriuos teikia „Microsoft“
 - [Bendrovės duomenys](enrichment-leadspace.md) pateikti „Leadspace“
 - [Demografiniai duomenys](enrichment-experian.md), pateikti „Experian“
 - [Vietos duomenys](enrichment-here.md) pateikti „HERE Technologies“
@@ -40,7 +40,7 @@ Skirtuke **Mano papildymai** galite matyti sukonfigūruotus papildymus ir redagu
 
 Eikite į **Mano papildymai**, kad peržiūrėtumėte visus sukonfigūruotus papildymus. Kiekvienas papildymas atvaizduotas kaip eilutė su papildoma informacija apie papildymą.
 
-Pasirinkite papildymą, kad pamatytumėte galimas parinktis. Taip pat galite pažymėti elipsę (...) prie sąrašo elemento ir peržiūrėti parinktis.
+Pasirinkite papildymą, kad pamatytumėte galimas parinktis. Taip pat galite pažymėti elipsę (...) sąrašo elemente ir peržiūrėti parinktis.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Papildymų tvarkymo parinktys papildymų sąraše":::
 
@@ -52,5 +52,12 @@ Pasirinkite papildymą, kad pamatytumėte galimas parinktis. Taip pat galite pa�
 
 Vienu metu galite vykdyti arba išjungti kelis papildymus pažymėdami juos sąraše. Peržiūros ir redagavimo parinktys nepasiekiamos kaip masiniai veiksmai ir vienu metu veikia tik viename papildyme.
 
+## <a name="enrichments-and-connections"></a>Papildymai ir ryšiai
+
+Trečiosios šalies papildymai konfigūruojami naudojant [ryšius](connections.md), kuriuos administratorius nustato su kredencialais ir pateikia sutikimą duomenims perduoti. Tada administratoriai ir bendradarbiai ryšį gali naudoti papildymams konfigūruoti.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Keli to paties tipo papildymai
+
+Objektas, kurį reikia papildyti, nurodomas papildymo konfigūracijoje, o tai jums leidžia papildyti tik antrinį jūsų profilių rinkinį. Pavyzdžiui, duomenų papildymas tik konkrečiam segmentui. Galite konfigūruoti kelis to paties tipo papildymus ir pakartotinai naudoti tą patį ryšį. Kai kuriems papildymams bus ribojamas to paties tipo sukuriamų papildymų skaičius. Apribojimus ir dabartinį naudojima galima peržiūrėti puslapyje **Papildymas**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

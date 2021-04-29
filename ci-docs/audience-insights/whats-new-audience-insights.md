@@ -1,7 +1,7 @@
 ---
 title: Naujos ir būsimos funkcijos
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598451"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896245"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598451"
 
 Džiaugiamės galėdami pranešti apie mūsų naujausius atnaujinimus! Šiame straipsnyje apibendrinamos viešos peržiūros versijos funkcijos, bendro pasiekiamumo patobulinimai ir funkcijų atnaujinimai. Norėdami peržiūrėti ilgalaikius funkcijų planus, peržiūrėkite [„Dynamics 365“ ir „Power Platform“ išleidimo planai](/dynamics365/release-plans/).
 
-Taip pat galite peržiūrėti tolesnį vaizdo įrašą, kad sužinotumėte daugiau apie pajėgumus suplanuotus paskutiniems šešiems mėnesiams.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkcijas prieš kitus. Jei nenurodyta kitaip, jums nereikia imtis jokių veiksmų ir mes automatiškai atnaujinsime programą be prastovų.
 
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>2021 m. kovo mėn. atnaujinimai
+
+2021 m. kovo mėnesio atnaujinimai apima kelias funkcijas, efektyvumo atnaujinimus bei klaidų taisymus.
+
+### <a name="activities"></a>Veiklos
+
+- **Veiklos vedlys ir semantiniai tipai** Patobulinome ir atnaujinome savo veiklos žymėjimo patirtį, kad padėtume kurti veiklos žymėjimą ir jį supaprastintume. Šiame naujame procese naudotojai gauna interaktyviąją galimybę, kad galėtų atlikti kiekvieną proceso veiksmą. Atliekant veiklos žymėjimo veiksmą, be kelių veiklos tipų pasirinkimo naudotojas gali pasirinkti semantiškai žymėti duomenis *prenumeratai* ir (arba) *„SalesOrderLine“* pagal pramonės standarto schemas, kurias galima naudoti tolesniam vartojimui.    
+  Norėdami gauti daugiau informacijos, žr. [Klientų veiklos](activities.md).
+
+### <a name="data-ingestion"></a>Duomenų įsisavinimas
+
+- **Prisijunkite prie vietinių duomenų šaltinių, naudodami Power Platform duomenų srautus ir tinklų sietuvus** Su malonumu pranešame apie Power Platform duomenų srautų ir vietinio jungiamumo naudojant tinklų sietuvus su „Customer Insights“ peržiūrą su siejama Power Platform arba Dataverse aplinka. Visi nauji duomenų šaltiniai, sukurti „Customer Insights“ su susieta Dataverse aplinka bus numatytieji Power Platform duomenų srautai, užtikrinantys vietinį duomenų ryšį ir išsamų jungčių bei transformavimo galimybių rinkinį.
+
+### <a name="extensibility"></a>Išplėtimas
+
+- **Eksportavimai, tvarkomi ryšiuose ir eksportavimuose** Pakeitėme puslapio **Eksportavimo paskirties vietos** pavadinimą į **Ryšiai** ir pridėjome atskirą puslapį **Eksportavimai**. Kaip šio naujinimo dalį pekelsime esamus eksportavimus į ryšio poras bei į eksportavimą, naudojant tą ryšį. Administratoriai dabar turi daugiau aiškumas dėl siunčiamų duomenų puslapyje **Ryšiai**. Visų vaidmenų naudotojai turi prieigą prie puslapio **Eksportavimai**, tačiau tik administratoriai gali rinktis bendradarbiams leisti redaguoti konkrečius eksportavimus su bendrai naudojamais ryšiais.     
+  Daugiau informacijos žr. [Ryšių apžvalga](connections.md) ir [Eksportavimų apžvalga](export-destinations.md).
+
+- **Segmentų eksportavimas į „Campaign Monitor“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Campaign Monitor“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „Campaign Monitor“ sąrašus ir juos naudoti kaip jūsų rinkodaros kampanijų pagrindą.    
+   Daugiau informacijos žr. [Eksportavimas į „Campaign Monitor“](export-campaign-monitor.md).
+
+- **Segmentų eksportavimas į „Constant Contact“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Constant Contact“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „Constant Contact“ sąrašus ir juos naudoti kaip jūsų rinkodaros kampanijų pagrindą.   
+   Daugiau informacijos žr. [Eksportavimas į „Constant Contact“](export-constant-contact.md).
+
+- **Segmentų eksportavimas į „RollWorks“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „RollWorks“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „RollWorks“ auditorijas ir juos naudoti kaip jūsų B2B reklamą.    
+   Daugiau informacijos žr. [Eksportavimas į „RollWorks“](export-rollworks.md).
+
+- **Segmentų eksportavimas į „Snapchat“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Snapchat“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „Snapchat“ auditorijas ir juos naudoti kaip jūsų reklamą.     
+   Daugiau informacijos žr. [Eksportavimas į „Snapchat“](export-snapchat.md).
+
+### <a name="predictions"></a>Prognozės
+
+- **Produktų filtrų naudojimas prognozuojamose produktų rekomendacijose** Pridėjome galimybę naudoti produktų filtrus mūsų produktų rekomendacijų modelyje. Dabar galite sukurti prognozę, kuri naudoja tik antrinius jūsų produktų rinkinius.    
+   Daugiau informacijos žr. [Produktų filtrų konfigrūavimas](predict-product-recommendation.md#configure-product-filters).
+
+- **Segmentų kūrimas iš modelių prognozių** Pridėjome greitą būdą segmentams kurit, naudojant prognozės modelio rezultatus. Modelio rezultatų puslapyje galima lengvai sukurti naują segmentą, pasirenkant naują parinktį **Kurti segmentą**.    
+  Daugiau informacijos žr. [Segmento kūrimas pagal prognozės modelį](prediction-based-segment.md).
+
+- **Produktų rekomendacijų paaiškinimai** Pridėjome informaciją, aiškinančią pagrindinius veiksnius, kuriuos išmoko AI modelis produktų rekomendacijoms generuoti ir tai, kiek šie faktoriai daro įtakos produktų rekomendacijoms. Ši informacija įtraukiama į modelio rezultatų ekraną.    
+   Dėl išsamesnės informacijos, žr. [Peržiūrėti prognozės būseną ir rezultatus](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>2021 m. vasario atnaujinimai
 
@@ -107,7 +144,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
   Be to, įtraukėme naujų konfigūravimo parinkčių, kurios geriau kontroliuoja, kaip norite papildyti klientų profilius. 
 
-  Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft-graph.md).
+  Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft.md).
 
 - **Valdykite, kuriuos profilius reikia papildyti**
 
@@ -309,8 +346,8 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 
 - **Susidomėjimo panašumų pratinimas daugiau rinkoms**
 
-  Išplečiame pasiekiamumą nuo susidomėjimo galimybių papildymo ne tik Jungtinėse Valstijose, bet ir penkiose kitose rinkose: Kanados, Australijos, Didžiosios Britanijos, Prancūzijos ir Vokietijos. Naudodami šį plėtinį galite papildyti savo klientų duomenis taip, kad jie labiau domina šias rinkas. Taip pat papildysime jūsų klientų profilius, esančius šiose rinkose, naudodami vietinius nuosavus duomenis iš „Microsoft Graph“.
-  Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft-graph.md)
+  Išplečiame pasiekiamumą nuo susidomėjimo galimybių papildymo ne tik Jungtinėse Valstijose, bet ir penkiose kitose rinkose: Kanados, Australijos, Didžiosios Britanijos, Prancūzijos ir Vokietijos. Naudodami šį plėtinį galite papildyti savo klientų duomenis taip, kad jie labiau domina šias rinkas. Taip pat papildysime jūsų kliento profilius, esančius šiose rinkose, naudodami vietos nuosavybės teise saugomus duomenis iš „Microsoft“.
+  Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>2020 m. liepos mėn. naujinimai
@@ -330,8 +367,8 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 
 - **Prekės ženklo panašumų pratinimas daugiau rinkoms**
 
-  Išplečiame pasiekiamumą nuo prekės ženklo galimybių papildymo ne tik Jungtinėse Valstijose, bet ir penkiose kitose rinkose: Kanados, Australijos, Didžiosios Britanijos, Prancūzijos ir Vokietijos. Naudodami šį plėtinį klientų duomenis galėsite papildyti šių rinkų vietiniais prekių ženklais. Taip pat papildysime jūsų klientų profilius, esančius šiose rinkose, naudodami vietinius nuosavus duomenis iš „Microsoft Graph“.
-  Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft-graph.md)
+  Išplečiame pasiekiamumą nuo prekės ženklo galimybių papildymo ne tik Jungtinėse Valstijose, bet ir penkiose kitose rinkose: Kanados, Australijos, Didžiosios Britanijos, Prancūzijos ir Vokietijos. Naudodami šį plėtinį klientų duomenis galėsite papildyti šių rinkų vietiniais prekių ženklais. Taip pat papildysime jūsų kliento profilius, esančius šiose rinkose, naudodami vietos nuosavybės teise saugomus duomenis iš „Microsoft“.
+  Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>2020 m. birželio mėn. naujinimai
 
@@ -355,7 +392,7 @@ Atšaukus užduotį, pvz., gretinimo proceso metu, ji bus grąžinta į savo nau
 - **Atskirų prekių ženklų ir pomėgių panašumų papildymas**
 
   Prekių ženklų ir pomėgių panašumai dabar pasiekiami kaip du nepriklausomi papildymai. Atskiri papildymai leidžia juos atskirai konfigūruoti ir valdyti atsižvelgiant į jūsų verslo reikalavimus ar poreikius.    
-  Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft-graph.md).
+  Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Išplėtimas
 
