@@ -1,27 +1,24 @@
 ---
 title: Duomenų eksportavimas iš „Customer Insights“
-description: 'Tvarkykite duomenų bendrinimo eksportavimus. '
+description: Tvarkykite duomenų bendrinimo eksportavimus.
 ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896153"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016624"
 ---
-# <a name="exports-preview-overview"></a>Eksportavimų (peržiūra) apžvalga
+# <a name="exports-preview-overview"></a>Eksportavimų (peržiūros versija) apžvalga
 
 Puslapyje **Eksportavimai** rodomi visi sukonfigūruoti eksportavimai. Eksportavimuose su įvairiomis programomis bendrinami konkretūs duomenys. Jie gali apimti klientų profilius arba objektus, schemas ir žymėjimo duomenis. Kiekvienam eksportavimui reikalingas [ryšys, kurį nustato administratorius, kad galėtų tvarkyti įgaliojimą ir prieigą](connections.md).
-
-> [!NOTE]
-> Iki 2021 m. kovo mėn. eksportavimai automatiškai sukūrė ryšį su atitinkama paslauga. Dabar eksportavimams reikia [administratoriaus sukurto ir bendrinamo ryšio](connections.md), kad juos galėtumėte sukurti.
 
 Eikite į **Duomenys** > **Eksportavimai**, kad peržiūrėtumėte eksportavimų puslapį. Visi naudotojo vaidmenys turi prieigą sukonfigūruotiems eksportavimams peržiūrėti. Naudokite komandų juostoje esantį paieškos laukelį eksportavimams rasti pagal pavadinimą, ryšio pavadinimą arba ryšio tipą.
 

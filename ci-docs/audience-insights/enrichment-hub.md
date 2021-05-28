@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896015"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954497"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientų profilių papildymas (peržiūra)
 
@@ -29,6 +29,7 @@ Skirtuke **Atrasti** rasite šiuos papildymus:
 
 - [Rūšys](enrichment-microsoft.md), kurias teikia „Microsoft“
 - [Pomėgiai](enrichment-microsoft.md), kuriuos teikia „Microsoft“
+- [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft”
 - [Bendrovės duomenys](enrichment-leadspace.md) pateikti „Leadspace“
 - [Demografiniai duomenys](enrichment-experian.md), pateikti „Experian“
 - [Vietos duomenys](enrichment-here.md) pateikti „HERE Technologies“

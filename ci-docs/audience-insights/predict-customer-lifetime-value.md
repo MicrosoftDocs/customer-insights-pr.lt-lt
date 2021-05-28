@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595818"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954589"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Kliento gyvavimo ciklo vertės (CLV) prognozė (Apžvalga)
 
@@ -38,11 +38,11 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
 - Kliento identifikatorius: unikalusis identifikatorius, kuris gretina operacijas su individualiu klientu
 
 - Operacijų retrospektyva: istoriniai operacijų žurnalai su šia semantinių duomenų schema
-    - Operacijos ID: kiekvienos transakcijos unikalusis identifikatorius
-    - Operacijos data: data, geriau – kiekvienos transakcijos laiko antspaudas
-    - Operacijos suma: kiekvienos transakcijos piniginė reikšmė (pvz., pajamos arba marža)
-    - Žymą, priskirtą pateikti (pasirinktinai): Bulio reikšmė, reiškianti, ar operacija yra grąžinimas 
-    - Produkto ID (pasirinktinis): su operacija susijusių produktų ID
+    - **Operacijos ID**: kiekvienos operacijos unikalusis identifikatorius
+    - **Operacijos data**: kiekvienos operacijos data, pageidautina laiko žyma
+    - **Operacijos suma** kiekvienos operacijos piniginė vertė (pavyzdžiui, pajamos arba pelno marža)
+    - **Prie grąžinimų priskirta žyma** (pasirinktinis): Bulio logikos reikšmė, nurodanti, ar operacija yra grąžinimas 
+    - **Produkto ID** (pasirinktinis): su operacija susijusio produkto ID
 
 - Papildomi duomenys (pasirinktinai), pavyzdžiui
     - Žiniatinklio veiklos: svetainės lankytojų retrospektyva, el. laiškų retrospektyva
@@ -53,10 +53,20 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
     - Klientų identifikatoriai, siejantys veiklas su klientais
     - Veiklos informacija, apimanti veiklos pavadinimą ir datą
     - Semantinė veiklų duomenų schema yra: 
-        - Pirminis raktas: unikalusis veiklos identifikatorius
-        - Laiko žymė: pirminio rakto identifikuoto įvykio data ir laikas
-        - Įvykis (veiklos pavadinimas): norimo naudoti įvykio pavadinimas
-        - Išsami informacija (suma arba reikšmė): išsami informacija apie kliento veiklą
+        - **Pirminis raktas**: unikalusis veiklos identifikatorius
+        - **Laiko žyma**: pirminio rakto identifikuoto įvykio data ir laikas
+        - **Įvykis (veiklos pavadinimas)**: norimo naudoti įvykio pavadinimas
+        - **Išsami informacija (suma arba reikšmė)**: išsami informacija apie kliento veiklą
+
+- Siūlomos duomenų charakteristikos:
+    - Pakankami istoriniai duomenys: mažiausiai vieneri operacijų duomenų metai. Pageidautina nuo dvejų iki trijų metų senumo operacijų duomenų, kad būtų galima prognozuoti CLV vieneriems metams.
+    - Keli pirkiniai vienam klientui: idealiu atveju, bent dvi ar trys operacijos vienam klientui, pageidautina atliktos per skirtingas datas.
+    - Klientų skaičius: bent 100 unikalių klientų, geriausia daugiau nei 10 000 klientų. Modelis neveiks su mažiau nei 100 klientų ir nepakankamais istoriniais duomenimis
+    - Duomenų išbaigtumas: mažiau nei 20 % trūkstamų reikšmių privalomuose įvesties duomenų laukuose   
+
+> [!NOTE]
+> - Modeliui reikia jūsų klientų sandorių istorijos. Vienu metu galima sukonfigūruoti tik vieną sandorio istorijos objektą. Jei yra keli pirkimo/operacijos objektai, galite sujungti juos „Power Query“ modulyje prieš įtraukdami duomenis.
+> - Tačiau papildomiems kliento duomenims (pasirinktiniems) galite įtraukti tiek kliento veiklos objektų, kiek norite, atsižvelgdami į modelį.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kurti kliento gyvavimo ciklo vertės prognozę
 
@@ -76,7 +86,7 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
    Pagal numatytuosius nustatymus vienetas nustatomas kaip mėnesiai. Galite pakeisti jį į metus ir ieškoti toliau ateityje.
 
    > [!TIP]
-   > Norint tiksliai prognozuoti jūsų nustatytą laikotarpį CLV, reikalingas palyginamasis istorinių duomenų laikotarpis. Pavyzdžiui, jei norite numatyti kitus 12 mėnesių, rekomenduojama turėti mažiausiai 18–24 istorinių duomenų mėnesius.
+   > Norint tiksliai prognozuoti jūsų nustatytą laikotarpį CLV, reikalingas palyginamasis istorinių duomenų laikotarpis. Pavyzdžiui, jei norite prognozuoti CLV kitiems 12 mėnesių, rekomenduojama turėti mažiausiai 18-24 mėnesių senumo istorinius duomenis.
 
 1. Nurodykite, ką **Aktyvūs klientai** reiškia jūsų įmonei. Nustatykite laiką, per kurį klientas turi turėti bent vieną operaciją, kuri bus laikoma aktyvia. Modelis nuspės tik aktyvių klientų CLV. 
    - **Leiskite modeliui apskaičiuoti pirkimo intervalą (rekomenduojama)**: modelis analizuoja jūsų duomenis ir nustato laikotarpį, pagrįstą istoriniais pirkiniais.
@@ -181,14 +191,14 @@ Rezultatų puslapyje yra trys pagrindinės duomenų dalys.
   Naudojant didelės vertės klientų apibrėžimą, pateiktą konfigūruojant prognozė, sistema nustato, kaip AI modelis atliktas prognozuojamų didelės vertės klientų lyginant su pradiniu modeliu.    
 
   Laipsniai nustatomi pagal šias taisykles:
-  - Kai modelis tiksliai prognozavo bent 5 % daugiau didelės vertės klientų, palyginti su pradiniu modeliu.
-  - B, kai modelis tiksliai prognozavo nuo 0 iki 5 % daugiau didelės vertės klientų, palyginti su pradiniu modeliu.
-  - C, kai modelis tiksliai prognozavo mažiau didelės vertės klientų, palyginti su pradiniu modeliu.
+  - **„A”**, kai modelis tiksliai prognozavo bent 5 % daugiau labai svarbių klientų, palyginus su pradiniu modeliu.
+  - **„B”**, kai modelis tiksliai prognozavo nuo 0 iki 5 % labai svarbių vertės klientų, palyginus su pradiniu modeliu.
+  - **„C”**, kai modelis tiksliai prognozavo mažiau labai svarbių klientų, palyginus su pradiniu modeliu.
 
   Modelio **įvertinimo** srityje rodoma daugiau informacijos apie AI modelio efektyvumą ir pradinį modelį. Pagal pradinį modelį ne AI pagrįstas metodas klientų pasverti vertei apskaičiuoti, visų pirma remiantis klientų įsigytais istoriniais tikslais.     
   Standartinė formulė, naudojama CLV apskaičiuoti pagal pradinį modelį:    
 
-  *Kiekvieno kliento CLV = vidutinis mėnesinis kliento įsigytas kiekis aktyviame kliento lange* CLV laikotarpio mėnesių skaičiaus prognozė *Bendra visų klientų saugojimo sparta*
+  _**Kiekvieno kliento CLV** = vidutinis mėnesinis kliento pirkimas aktyviame kliento lange *CLV prognozės laikotarpio mėnesių skaičius* Bendra visų klientų saugojimo sparta*_
 
   AI modelis lyginamas su pradiniu modeliu pagal dvi modelio efektyvumo metrikas.
   

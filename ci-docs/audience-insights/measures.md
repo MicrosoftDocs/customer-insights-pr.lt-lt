@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887950"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049260"
 ---
 # <a name="define-and-manage-measures"></a>Matų apibrėžimas ir valdymas
 
@@ -34,7 +34,7 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
 
 1. Pasirinkite **Redaguoti pavadinimą** ir įveskite priemonės **pavadinimą**. 
    > [!NOTE]
-   > Jei jūsų naujo matavimo konfigūracijoje yra tik du laukai, pavyzdžiui, Kliento ID ir vienas skaičiavimas, rezultatai bus įtraukti kaip naujas stulpelis į sistemos sugeneruotą objektą, kurio pavadinimas„ Customer_Measure”. O priemonės vertę galėsite matyti unifikuotame kliento profilyje. Kitos priemonės sugeneruos nuosavus objektus.
+   > Jei jūsų naujo matavimo konfigūracijoje yra tik du laukai, pavyzdžiui, Kliento ID ir vienas skaičiavimas, išeiga bus įtraukta kaip naujas stulpelis į sistemos sugeneruotą objektą, pavadintą Kliento matavimas. O priemonės vertę galėsite matyti unifikuotame kliento profilyje. Kitos priemonės sugeneruos nuosavus objektus.
 
 1. Konfigūracijos srityje pasirinkite agregavimo funkciją **Pažymėti funkciją** išplečiamajame meniu. Agregavimo funkcijos yra šios: 
    - **Sum**

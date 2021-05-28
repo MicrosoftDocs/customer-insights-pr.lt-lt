@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596417"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049404"
 ---
 # <a name="entities-in-audience-insights"></a>Objektai publikos įžvalgose
 
@@ -35,14 +35,14 @@ Puslapyje **Objektai** išvardyti objektai ir yra keletas stulpelių:
 Pažymėkite objektą, kad susipažintumėte su skirtingais laukais ir įrašais, įtrauktais į šį objektą.
 
 > [!div class="mx-imgBorder"]
-> ![Pasirinkite objektą](media/data-manager-entities-data.png "Pasirinkite objektą")
+> ![Pasirinkti objektą](media/data-manager-entities-data.png "Pasirinkite objektą")
 
-- Skirtukas **Duomenys** yra pasirinktas pagal numatytuosius nustatymus ir jame rodoma lentelė, kurioje išvardyta išsami informacija apie atskirus objekto įrašus.
+- Skirtuke **Duomenys** rodoma lentelė su išsamia informacija apie atskirus objekto įrašus.
 
 > [!div class="mx-imgBorder"]
 > ![Laukų lentelė](media/data-manager-entities-fields.PNG "Laukų lentelė")
 
-- Skirtuke **Laukai** pateikiama lentelė, kurioje galima peržiūrėti išsamią pasirinkto objekto informaciją, pvz., laukų pavadinimus, duomenų tipus ir tipus. Stulpelyje **Tipas** pateikiami su „Common Data Model” susiję tipai, kuriuos sistema nustato automatiškai arba [susieja patys](map-entities.md) vartotojai. Šie semantiniai tipai gali skirtis nuo atributų duomenų tipų, pvz., žemiau esančio lauko *El. paštas* duomenų tipas yra *Tekstas*, bet jo (semantinis) „Common Data Model” tipas gali būti *El. paštas* arba *El. pašto adresas*.
+- Skirtukas **Atributai** yra pažymėtas pagal numatytuosius parametrus ir rodo lentelę, skirtą peržiūrėti pasirinkto objekto išsamią informaciją, pavyzdžiui, laukų pavadinimus, duomenų tipus ir tipus. Stulpelyje **Tipas** pateikiami su „Common Data Model” susiję tipai, kuriuos sistema nustato automatiškai arba [susieja patys](map-entities.md) vartotojai. Šie semantiniai tipai gali skirtis nuo atributų duomenų tipų, pvz., žemiau esančio lauko *El. paštas* duomenų tipas yra *Tekstas*, bet jo (semantinis) „Common Data Model” tipas gali būti *El. paštas* arba *El. pašto adresas*.
 
 > [!NOTE]
 > Abiejose lentelėse parodytas tik objekto duomenų pavyzdys. Norėdami peržiūrėti visą duomenų rinkinį, eikite į puslapį **Duomenų šaltiniai**, pasirinkite objektą, pasirinkite **Redaguoti** ir peržiūrėkite šio objekto duomenis, naudodami rengyklę „Power Query”, kaip paaiškinta skyriuje [Duomenų šaltiniai](data-sources.md).

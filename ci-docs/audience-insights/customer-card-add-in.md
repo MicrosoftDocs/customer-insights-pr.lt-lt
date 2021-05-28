@@ -1,7 +1,7 @@
 ---
-title: Įdiegti ir konfigūruoti kliento kortelės papildinį
-description: „Dynamics 365 Customer Insights“ kliento kortelės papildinio diegimas ir konfigūravimas.
-ms.date: 01/20/2021
+title: Kliento kortelės papildinys, skirtas „Dynamics 365” programoms
+description: Šiame papildinyje galite rodyti duomenis iš auditorijos įžvalgų „Dynamics 365” programose.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597337"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059598"
 ---
 # <a name="customer-card-add-in-preview"></a>Papildinys Kliento kortelė (peržiūra)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ programose. Peržiūrėkite demografinius duomenis, įžvalgas ir veiklos laiko planavimo juostas naudodami papildinį Kliento kortelė.
+Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ programose. Įdiegę Kliento kortelės papildinį palaikomoje „Dynamics 365” programoje, galite pasirinkti rodyti demografinius duomenis, įžvalgas ir veiklos laiko planavimo juostas. Papildinyje duomenys bus nuskaityti iš „Customer Insights” nepaveikiant duomenų prijungtoje „Dynamics 365” programoje. 
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- „Dynamics 365“ programa (pvz., pardavimo telkinys arba klientų aptarnavimo telkinys), 9.0 arba naujesnė versija su įjungta vieningąja sąsaja.
-- Kliento profiliai [vartokite iš „Dynamics 365“ programos naudodami „Common Data Service“](connect-power-query.md).
-- Kliento kortelės papildinio naudotojai turi būti [įtraukti kaip vartotojai](permissions.md) publikos įžvalgose.
-- [Konfigūruokite paiešką ir filtruokite pajėgumus](search-filter-index.md).
-- Demografijos valdymas: Demografijos laukeliai, tokie kaip amžius ar lytis yra prieinami suvienodintame kliento profilyje.
-- Papildymo valdiklis: reikalingi aktyvieji [papildymai](enrichment-hub.md), pritaikyti klientų profiliams.
-- Protingumo valdymas: Jam būtini duomenys sukurti su „Azure Machine Learning“ ([Nuspėjimais](predictions.md) ar [Tinkintais modeliais](custom-models.md))
-- Priemonės valdymas: Jam būtinos [konfigūruotos priemonės](measures.md).
-- Laiko juostos valdymas: Jam būtinos [konfigūruotos veiklos](activities.md).
+- Papildinys veikia tik su „Dynamics 365” modeliu pagrįstomis programomis, pavyzdžiui, „Sales” arba „Customer Service” 9.0 arba naujesne versija.
+- Norint, kad jūsų „Dynamics 365” duomenys būtų susieti su auditorijos įžvalgų kliento profiliais, jie turi būti [įtraukti iš „Dynamics 365” programos naudojant „Common Data Service” jungtį](connect-power-query.md).
+- Kad būtų galima matyti duomenis, visi „Dynamics 365” Kliento kortelės papildinio vartotojai turi būti [įtraukti kaip vartotojai](permissions.md) į auditorijos įžvalgas.
+- [Sukonfigūruotos ieškos ir filtravimo galimybės](search-filter-index.md) yra reikalingos auditorijos įžvalgose, kad veiktų duomenų peržvalga.
+- Kiekvienas papildinio valdiklis remiasi tam tikrais auditorijos įžvalgų duomenimis:
+  - Priemonės valdymas: Jam būtinos [konfigūruotos priemonės](measures.md).
+  - Intelekto valdiklis: Jam reikia duomenų, sugeneruotų naudojant [prognozes](predictions.md) arba [pasirinktinius modelius](custom-models.md).
+  - Demografijos valdymas: Demografijos laukeliai, tokie kaip amžius ar lytis yra prieinami suvienodintame kliento profilyje.
+  - Papildymo valdiklis: reikalingi aktyvieji [papildymai](enrichment-hub.md), pritaikyti klientų profiliams.
+  - Laiko juostos valdymas: Jam būtinos [konfigūruotos veiklos](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Kliento kortelės papildinio diegimas
 
@@ -56,9 +57,9 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
    > [!NOTE]
    > Patikrinkite, ar naršyklės iššokančiųjų langų blokavimo programa neblokuoja autentifikavimo lango, kai pasirenkate mygtuką **Prisijungti**.
 
-1. Pasirinkite aplinką, iš kurios reikia naudoti duomenis.
+1. Pasirinkite „Customer Insights“ aplinką, iš kurios norite iškviesti duomenis.
 
-1. Nustatykite, kuris laukelių žemėlapis įrašomas į „Dynamics 365“ programą.
+1. Apibrėžkite laukų susiejimą su įrašais „Dynamics 365” programoje. Atsižvelgdami į jūsų „Customer Insights” duomenis, galite pasirinkti susieti toliau pateiktas parinktis:
    - Norėdami sudaryti žemėlapį su kontaktu, pasirinkite laukelį kliento objekte, kuris atitinka jūsų kontakto objekto ID.
    - Norėdami sudaryti žemėlapį su paskyra, pasirinkite laukelį kliento objekte, kuris atitinka jūsų paskyros objekto ID.
 

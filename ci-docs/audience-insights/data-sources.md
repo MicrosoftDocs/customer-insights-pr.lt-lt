@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887904"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085540"
 ---
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
@@ -36,11 +36,9 @@ Duomenų šaltinį galite įtraukti trimis pagrindiniais būdais.
 
 Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į Power Platform duomenų srautus. Nustatant aplinką duomenų eigas galima įgalinti „Customer Insights“ [pateikiant Microsoft Dataverse aplinkos URL](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Numatyta, kad duomenų šaltiniai, sukurti Dataverse aplinką susiejus su „Customer Insights“, naudos [Power Platform duomenų eigas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų eigos palaiko vietos ryšį, naudojant duomenų tinklų sietuvus. Pašalinkite ir iš naujo sukurkite duomenų šaltinius, kurie buvo prieš Dataverse aplinką susiejant su vietinių tinklų sietuvų naudojimu.
+Numatyta, kad duomenų šaltiniai, sukurti Dataverse aplinką susiejus su „Customer Insights“, naudos [Power Platform duomenų eigas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Pašalinkite ir iš naujo sukurkite duomenų šaltinius, kurie egzistavo prieš tai, kai „Dataverse” aplinka buvo susieta su [vietinių duomenų šliuzų naudojimu](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Esamos Power BI arba Power Apps aplinkos duomenų tinklų sietuvai bus matomi ir galėsite pakartotinai naudoti „Customer Insights“. Duomenų šaltinių puslapyje rodomos nuorodos perėjimui į Power Platform aplinką, kurioje galima peržiūrėti ir konfigūruoti vietinius duomenų tinklų sietuvus.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Duomenų šaltinių puslapio, kuriame rodomos nuorodos į Power Platform aplinką, ekrano vaizdas.":::
 
 ## <a name="review-ingested-data"></a>Įtrauktų duomenų peržiūra
 
