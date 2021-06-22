@@ -90,36 +90,46 @@
           href: audience-insights/segment-insights.md
         - name: Rasti panašių klientų
           href: audience-insights/find-similar-customer-segments.md
-    - name: Matai
+    - name: Matavimai
       items:
         - name: Apibrėžkite matus ir KPI
           href: audience-insights/measures.md
     - name: Prognozės
       items:
-        - name: Užbaigti duomenis naudojant reikšmių prognozavimą
-          href: audience-insights/predictions.md
-        - name: Prenumeratos praradimo prognozavimas
-          href: audience-insights/predict-subscription-churn.md
-        - name: Pavyzdžio vedlys prenumeravimo maišytuvo nuspėjimui
-          href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: Nuspėti perdavimo maišytuvą
-          href: audience-insights/predict-transactional-churn.md
-        - name: Pavyzdžio vedlys perdavimo maišytuvo nuspėjimui
-          href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Nuspėkite kliento gyvavimo ciklo reikšmę (CLV)
-          href: audience-insights/predict-customer-lifetime-value.md
-        - name: Nuspėkite produkto rekomendacijas
-          href: audience-insights/predict-product-recommendation.md
-        - name: Produkto rekomendacijų pavyzdžio prognozė
-          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Prognozuoti duomenis naudojant AI
+          items:
+            - name: Prognozės modelių apžvalga
+              href: audience-insights/predictions-overview.md
+            - name: Nuspėkite kliento gyvavimo ciklo reikšmę (CLV)
+              href: audience-insights/predict-customer-lifetime-value.md
+            - name: Nuspėkite produkto rekomendacijas
+              href: audience-insights/predict-product-recommendation.md
+            - name: Prenumeratos praradimo prognozavimas
+              href: audience-insights/predict-subscription-churn.md
+            - name: Nuspėti perdavimo maišytuvą
+              href: audience-insights/predict-transactional-churn.md
+            - name: Naudoti „Azure“ mašininio mokymo pasirinktinius modelius
+              href: audience-insights/custom-models.md
+            - name: Užbaigti iš dalies trūkstamus duomenis
+              href: audience-insights/predictions.md
+        - name: Pavyzdiniai vedliai
+          items:
+            - name: CLV prognozės pavyzdinis vedlys
+              href: audience-insights/sample-guide-predict-clv.md
+            - name: Pavyzdžio vedlys prenumeravimo maišytuvo nuspėjimui
+              href: audience-insights/sample-guide-predict-subscription-churn.md
+            - name: Pavyzdžio vedlys perdavimo maišytuvo nuspėjimui
+              href: audience-insights/sample-guide-predict-transactional-churn.md
+            - name: Produkto rekomendacijų pavyzdžio prognozė
+              href: audience-insights/sample-guide-predict-product-recommendation.md
+            - name: Eksperimentai naudojant „Azure“ mašininį mokymą
+              href: audience-insights/azure-machine-learning-experiments.md
+            - name: Eksperimentai su „Azure Machine Learning studio“
+              href: audience-insights/machine-learning-studio-experiments.md
+        - name: Prognozių valdymas
+          href: audience-insights/manage-predictions.md
         - name: Segmentų kūrimas prognozių pagrindu
           href: audience-insights/prediction-based-segment.md
-        - name: Realizuokite pritaikytus mašininio mokymo modelius
-          href: audience-insights/custom-models.md
-        - name: Eksperimentai naudojant „Azure“ mašininį mokymą
-          href: audience-insights/azure-machine-learning-experiments.md
-        - name: Eksperimentai su „Azure Machine Learning studio“
-          href: audience-insights/machine-learning-studio-experiments.md
     - name: Eksportuokite parinktis
       items:
         - name: Eksportavimai
@@ -154,12 +164,18 @@
               href: audience-insights/export-facebook.md
             - name: „Google Ads“
               href: audience-insights/export-google-ads.md
+            - name: „LinkedIn“ reklamos
+              href: audience-insights/export-linkedin-ads.md
             - name: „LiveRamp“
               href: audience-insights/export-liveramp.md
             - name: „Mailchimp“
               href: audience-insights/export-mailchimp.md
             - name: „Marketo“
               href: audience-insights/export-marketo.md
+            - name: Microsoft Advertising
+              href: audience-insights/export-microsoft-advertising.md
+            - name: „Omnisend”
+              href: audience-insights/export-omnisend.md
             - name: „RollWorks“
               href: audience-insights/export-rollworks.md
             - name: „SendGrid“ (siųsti tinklelį)
@@ -200,6 +216,8 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Objektų schemų peržiūra „Common Data Model”
           href: audience-insights/entity-schemas.md
+        - name: „Customer Insights“ duomenys „Dataverse” platformoje
+          href: audience-insights/customer-insights-dataverse.md
         - name: Dirbkite su API
           href: audience-insights/apis.md
         - name: API nuorodos
@@ -220,7 +238,7 @@
       items:
         - name: Pradėti
           href: engagement-insights/get-started.md
-        - name: Sukurkite darbo aplinką
+        - name: Kurti darbo sritį
           href: engagement-insights/create-workspace.md
         - name: Savo interneto svetainėje talpinkite instrumentus
           href: engagement-insights/instrument-website.md
@@ -240,6 +258,12 @@
           href: engagement-insights/custom-reports.md
         - name: Kurkite vieningas profilio ataskaitas
           href: engagement-insights/profile-reports.md
+        - name: Peržiūrėti ir kurti dimensijas
+          href: engagement-insights/dimensions.md
+        - name: Peržiūrėti ir kurti metrikas
+          href: engagement-insights/metrics.md
+        - name: Peržiūrėti ir kurti segmentus
+          href: engagement-insights/segments.md
     - name: Veiklos ciklo analizė
       items:
         - name: Piltuvėlio ataskaitų kūrimas ir valdymas
