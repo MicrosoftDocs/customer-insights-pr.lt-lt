@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906866"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095612"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Perdavimo nutraukimo prognozė (peržiūra)
 
@@ -144,7 +144,7 @@ Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepir
    - **Būsena:** Prognozės vykdymo būsena.
         - **Laukiama:** Prognozė laukia kitų procesų vykdymo.
         - **Paleidimas iš naujo:** Prognozė šiuo metu vykdoma siekiant sukurti rezultatus, kurie susilies į išvesties objektą.
-        - **Nepavyko:** Prognozės vykdymas nepavyko. [Peržiūrėkite įrašus](#troubleshoot-a-failed-prediction) dėl išsamesnės informacijos.
+        - **Nepavyko:** Prognozės vykdymas nepavyko. [Peržiūrėkite įrašus](manage-predictions.md#troubleshoot-a-failed-prediction) dėl išsamesnės informacijos.
         - **Pavyko:** Prognozė pavyko. Norėdami peržiūrėti prognozę, po vertikaliu daugtaškiu pasirinkite  **Rodyti**
    - **Redaguota:** data, kai buvo pakeista prognozės konfigūracija.
    - **Paskutinį kartą atnaujinta:** data, kai prognozė atnaujino rezultatus išvesties objekte.
@@ -168,35 +168,9 @@ Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepir
        
     1. **Svarbiausi veiksniai:** kuriant prognozę, atsižvelgiama į daugelį veiksnių. Visi faktoriai turi savo apskaičiuotą svarbą sujungtoms prognozėms, kurias sukuria modelis. Šiuos veiksnius galite naudoti prognozės rezultatams patvirtinti. Arba šią informaciją galite naudoti vėliau [kurdami segmentus](segments.md), kurie gali padėti paveikti klientų praradimo riziką.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Nepavykusios prognozės trikčių šalinimas
+## <a name="manage-predictions"></a>Prognozių valdymas
 
-1. Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
-
-1. Pasirinkite vertikalias elipses šalia prognozės, kuriose norite peržiūrėti klaidų žurnalus.
-
-1. Pasirinkite **Žurnalai**.
-
-1. Peržiūrėkite visas klaidas. Galimos kelių tipų klaidos, kurios aprašo, kokia būsena sukėlė klaidą. Pavyzdžiui, klaida, kuri įvyko, nes nepakanka duomenų tiksliai prognozei, įprastai yra išsprendžiama įkeliant papildomų duomenų į „Customer Insights“.
-
-## <a name="refresh-a-prediction"></a>Prognozės atnaujinimas
-
-Prognozės automatiškai atsinaujins tuo pačiu parametruose sukonfigūruotu [grafiku, kuriuo atnaujinami jūsų duomenys](system.md#schedule-tab). Galite juos paleisti iš naujo ir rankiniu būdu.
-
-1. Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
-
-1. Pasirinkite vertikalius daugtaškius šalia norimos atnaujinti prognozės.
-
-1. Pasirinkite **Atnaujinti**.
-
-## <a name="delete-a-prediction"></a>Prognozės šalinimas
-
-Prognozės panaikinimas taip pat pašalina jos išvesties objektą.
-
-1. Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
-
-1. Pasirinkite vertikalius daugtaškius šalia norimos pašalinti prognozės.
-
-1. Pasirinkite **Naikinti**.
+Prognozes galima optimizuoti, šalinti jų triktis, atnaujinti arba panaikinti. Peržiūrėkite įvesties duomenų naudojimo ataskaitą ir sužinokite, kaip greičiau sukurti patikimesnę prognozę. Daugiau informacijos rasite [Prognozių valdymas](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

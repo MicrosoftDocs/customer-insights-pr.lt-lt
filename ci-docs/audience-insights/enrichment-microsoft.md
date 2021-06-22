@@ -1,7 +1,7 @@
 ---
 title: Klientų profilių papildymas naudojant „Microsoft“ duomenis
 description: Norėdami savo kliento duomenis papildyti prekės ženklo ir pomėgių savybėmis, naudokite bendrovės „Microsoft“ duomenis.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064901"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245717"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Klientų profilių papildymas informacija apie susidomėjimą prekių ženklais ir pomėgiais (peržiūra)
 
@@ -69,12 +69,10 @@ Vedama patirtis leidžia peržiūrėti konfigūraciją ir papildymus.
 
 ### <a name="define-your-brands-or-interests"></a>Prekių ženklų arba pomėgių apibrėžimas
 
-Pažymėkite vieną iš šių parinkčių:
+Pasirinkite ne daugiau kaip penkis prekių ženklus ar pomėgius naudodami vieną iš šių parinkčių arba jas abi:
 
-- **Pramonės šaka**: sistema nustato populiariausius jūsų pramonės šakai aktualius prekių ženklus arba pomėgius ir jais papildo klientų duomenis.
-- **Pasirinkti savo**: iš prekių ženklų arba pomėgių sąrašo pasirinkite ne daugiau kaip 5 elementus, kurie jūsų organizacijai yra svarbiausi.
-
-Norėdami įtraukti prekių ženklą arba pomėgį, įveskite jį įvesties srityje, kad būtų rodomi pasiūlymai pagal sutampančias sąvokas. Jei jūsų ieškomo prekių ženklo ar pomėgio nėra, atsiųskite mums atsiliepimą naudodami nuorodą **Pasiūlyti**.
+- **Sektorius**: Išplečiamajame sąraše pasirinkite sektorių, o tada išsirinkite to sektoriaus geriausius prekės ženklus arba pomėgius.
+- **Pasirinkite savo**: Įveskite jūsų organizacijai aktualų prekės ženklą arba pomėgį, o tada išsirinkite iš atitinkančių pasiūlymų. Jei jūsų ieškomo prekių ženklo ar pomėgio nėra, atsiųskite mums atsiliepimą naudodami nuorodą **Pasiūlyti**.
 
 ### <a name="review-enrichment-preferences"></a>Papildymo nuostatos
 
@@ -134,7 +132,7 @@ Susidomėjimą prekių ženklais ir pomėgiais taip pat galima peržiūrėti ats
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Kliento kortelė su papildytais duomenimis":::
 
-## <a name="next-steps"></a>Kiti veiksmai
+## <a name="next-steps"></a>Tolesni veiksmai
 
 Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [Segmentai](segments.md), [Matavimai](measures.md) ir net [eksportuokite duomenis](export-destinations.md), kad užtikrintumėte klientų poreikiams pritaikytą aptarnavimą.
 

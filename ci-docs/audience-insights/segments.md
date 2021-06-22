@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034022"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111397"
 ---
 # <a name="segments-overview"></a>Segmentų apžvalga
 
@@ -32,22 +32,13 @@ Naują segmentą galima sukurti keliais būdais:
 - Dirbtiniu intelektu pagrįsti pasiūlymai, paremti priemonėmis arba atributais: [Siūlomi segmentai priemonių patobulinimui](suggested-segments.md)
 - Pasiūlymai, pagrįsti veiklomis: [Siūlomi segmentai, pagrįsti kliento veikla](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Gaukite įžvalgas apie esamus segmentus
-
-Atraskite papildomos informacijos apie jūsų esamus segmentus naudodami [Segmentų įžvalgas](segment-insights.md). Sužinokite, kas išskiria du segmentus, ar ką jie turi bendro.
-
-## <a name="find-similar-customers"></a>Rasti panašių klientų
-
-Suraskite klientus, panašius į pasirinkto segmento narius, naudodami dirbtinį intelektą. Daugiau informacijos rasite [panašūs klientai](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Esamų segmentų tvarkymas
 
 Eikite į **Segmentų** puslapį, kad peržiūrėtumėte visus savo įrašytus segmentus ir juos valdytumėte.
 
 Kiekvieną segmentą atitinka eilutė, kurioje pateikta papildoma informacija apie segmentą.
 
-> [!div class="mx-imgBorder"]
-> ![Esamo segmento valdymo parinktys](media/segments-selected-segment.png "Esamo segmento valdymo parinktys")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Pažymėtas segmentas su parinkčių išplečiamuoju sąrašu ir galimomis parinktimis.":::
 
 Pasirinkus segmentą pasiekiami toliau nurodyti veiksmai.
 
@@ -59,7 +50,7 @@ Pasirinkus segmentą pasiekiami toliau nurodyti veiksmai.
   Taip pat galite naudoti funkciją **Planuoti vėliau**, esančią iškleidžiamajame meniu **Aktyvinti / išjungti**, kad nurodytumėte būsimą datą ir laiką, kada reikia aktyvinti ir išjungti tam tikrą segmentą.
 - **Pervardyti** segmentą.
 - **Atsisiųsti** narių sąrašą kaip .CSV failą.
-- Parinktis **Įtraukti į** siunčia klientų ID sąrašą į segmentą apdoroti kitoje programoje.
+- **Valdykite eksportavimus**, kad pamatytumėte susijusius segmentus ir juos valdytumėte. [Sužinokite daugiau apie eksportavimus.](export-destinations.md)
 - **Naikinti** segmentą.
 
 ## <a name="refresh-segments"></a>Segmentų atnaujinimas
@@ -68,6 +59,24 @@ Visus segmentus galite atnaujinti vienu metu pažymėdami **Atnaujinti viską** 
 
 > [!TIP]
 > Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
+
+## <a name="export-segments"></a>Eksportuokite segmentus
+
+Galite eksportuoti segmentą iš segmentų arba [eksportavimo puslapio](export-destinations.md). 
+
+1. Eikite į puslapį **Segmentai**.
+
+1. Pasirinkite **Rodyti daugiau [...]** norimam eksportuoti segmentui.
+
+1. Pasirinkite **Valdyti eksportavimus** iš veiksmų išplečiamojo sąrašo.
+
+1. Atidaromas **Segmento eksportavimai (peržiūra)** puslapis. Galite matyti visus sukonfigūruotus eksportavimus, sugrupuotus pagal tai, ar juose yra dabartinis segmentas, ar jo nėra.
+
+   1. Norėdami įtraukti pasirinktą segmentą į eksportavimą, sąraše pasirinkite eksportavimą ir **Įtraukti segmentą**.
+
+   1. Jei norite sukurti naują eksportavimą su pažymėtu segmentu, pasirinkite **Įtraukti eksportavimą**. Daugiau informacijos apie eksportavimo kūrimą rasite [Naujo eksportavimo nustatymas](export-destinations.md#set-up-a-new-export).
+
+1. Pasirinkite **Atgal**, kad grįžtumėte į pagrindinį segmentų puslapį.
 
 ## <a name="view-processing-history-and-segment-members"></a>Apdorojimo retrospektyvos ir segmento narių peržiūra
 

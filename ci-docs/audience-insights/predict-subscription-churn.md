@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906912"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095658"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prenumeratos praradimo prognozė (peržiūra)
 
@@ -77,7 +77,7 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
    >[!TIP]
    > **Įrašyti ir uždaryti** galite pasirinkti bet kuriuo metu, kad prognozė būtų išsaugota kaip juodraštis. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
 
-### <a name="add-required-data"></a>Įtraukite būtinus duomenis
+### <a name="add-required-data"></a>Įtraukti būtinus duomenis
 
 1. Pažymėkite lauką **Įtraukti duomenis** iš **Prenumeratos istorija** ir pasirinkite objektą, kuris teikia prenumeratos istorijos informaciją, kaip aprašyta [būtinosiose sąlygose](#prerequisites).
 1. Jei toliau pateikti laukai neužpildyti, sukonfigūruokite ryšį perkeldami informaciją iš savo prenumeratos istorijos objekto į kliento objektą.
@@ -147,30 +147,9 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
        > [!div class="mx-imgBorder"]
        > ![Sąrašas, kuriame matomi svarbiausi veiksniai ir jų svarba prognozuojant praradimo rezultatą](media/subscription-churn-influentialfactors.PNG "Sąrašas, kuriame matomi svarbiausi veiksniai ir jų svarba prognozuojant praradimo rezultatą")
 
-## <a name="fix-a-failed-prediction"></a>Nesėkmingos prognozės koregavimas
+## <a name="manage-predictions"></a>Prognozių valdymas
 
-1. Eikite į skirtuką **Mano prognozės** iš **Duomenų rinkimas** > **Prognozės**.
-1. Pasirinkite prognozę, kurios klaidų žurnalus norite peržiūrėti, ir pasirinkite **Žurnalai**.
-   > [!div class="mx-imgBorder"]
-   > ![Rezultatų meniu juostos, įskaitant uždarymo, modelio redagavimo ir žurnalų mygtukus, rodinys](media/subscription-churn-logsbutton.PNG "Rezultatų meniu juostos, įskaitant uždarymo, modelio redagavimo ir žurnalų mygtukus, rodinys")
-1. Peržiūrėkite visas klaidas. Galimos kelių tipų klaidos, kurios aprašo, kokia būsena sukėlė klaidą. Pavyzdžiui, klaida pranešanti, kad nėra pakankamai duomenų tinkamai prognozei dažniausiai išsprendžiama įkeliant papildomus duomenis.
-
-## <a name="refresh-a-prediction"></a>Prognozės atnaujinimas
-
-Prognozės automatiškai atsinaujins tuo pačiu parametruose sukonfigūruotu [grafiku, kuriuo atnaujinami jūsų duomenys](system.md#schedule-tab).
-
-1. Eikite į skirtuką **Mano prognozės** iš **Duomenų rinkimas** > **Prognozės**.
-1. Pasirinkite vertikalius daugtaškius šalia norimos atnaujinti prognozės.
-1. Pasirinkite **Atnaujinti**.
-
-## <a name="delete-a-prediction"></a>Prognozės šalinimas
-
-1. Eikite į skirtuką **Mano prognozės** iš **Duomenų rinkimas** > **Prognozės**.
-1. Pasirinkite vertikalius daugtaškius šalia norimos pašalinti prognozės.
-1. Pasirinkite **Naikinti**.
-
-> [!NOTE]
-> Panaikinus prognozę, pašalinamas jo išvesties objektas.
+Prognozes galima optimizuoti, šalinti jų triktis, atnaujinti arba panaikinti. Peržiūrėkite įvesties duomenų naudojimo ataskaitą ir sužinokite, kaip greičiau sukurti patikimesnę prognozę. Daugiau informacijos rasite [Prognozių valdymas](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

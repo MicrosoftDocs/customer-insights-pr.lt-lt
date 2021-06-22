@@ -1,7 +1,7 @@
 ---
 title: Naujos ir būsimos funkcijos
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988930"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263261"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
 
@@ -26,6 +26,37 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>2021 m. gegužės mėn. naujinimai
+
+2021 m. gegužės mėnesio atnaujinimai apima kelias funkcijas, efektyvumo atnaujinimus bei klaidų taisymus.
+
+### <a name="data-ingestion"></a>Duomenų įsisavinimas
+
+- **Peržiūrėti arba modifikuoti metaduomenų ar objektų aprašus, kai pridedate duomenis iš savo „Azure Data Lake Storage”** Dabar galite peržiūrėti ir redaguoti metaduomenų ar objektų aprašus auditorijos įžvalgose, kai pridedate duomenis iš „Common Data Model” savo „Azure Data Lake Storage”. Ši galimybė pateikia atsiliepimus realiuoju laiku, modelio tikrinimą ir klaidų patikrinimą. Ji leis sklandžiai redaguoti tiek model.json, tiek manifest.json.
+
+### <a name="extensibility"></a>Išplėtimas
+
+- **Patobulintas segmentų eksportavimas, pasirinktinis grafikas ir dublikatų kūrimas** Dabar galite [matyti visus konkretaus segmento eksportavimus](export-destinations.md#view-exports-and-export-details) sąraše. Šis naujas rodinys padeda valdyti konkretaus segmento naudojimą ir pritaikyti esamą arba sukurti naują eksportavimą.    
+  Vienu metu [galite apibrėžti pasirinktinius atnaujinimo grafikus](export-destinations.md#schedule-and-run-exports) atskiriems arba keliems eksportavimams. Iki šiol visi eksportavimai būdavo vykdomi kaskart atnaujinus sistemą.    
+  Užuot sukūrę naują eksportavimą nuo nulio, galite pradėti dirbti pagal esamą, kad sutaupytumėte laiko.
+
+- **Segmentų eksportavimas į „Microsoft Advertising“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Microsoft Advertising“. Kurkite klientų atitikties auditorijas „Microsoft Advertising“ pasinaudodami vieningųjų klientų profilių duomenimis ir naudokite šias auditorijas savo reklamos kampanijoms. Daugiau informacijos rasite [Segmentų eksportavimas į „Microsoft Advertising”](export-microsoft-advertising.md).
+
+- **Segmentų eksportavimas į „LinkedIn Ads”** Išplėtėme mūsų eksportavimo paskirties vietas, kad būtų įtraukta „LinkedIn Ads” ir įgalintumėte jus atrakinti Taikymą pagal kontaktus bei Taikymą pagal kompaniją per „LinkedIn”, eksportuodami jūsų vieningojo kliento profilio duomenis. Daugiau informacijos rasite [Segmentų eksportavimas į „LinkedIn Ads”](export-linkedin-ads.md).
+
+
+- **Segmentų eksportavimas į „Omnisend“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Omnisend“. Naudodami auditorijos įžvalgose sukurtus segmentus, kurkite kampanijas, teikite rinkodaros el. laiškus ir naudokite konkrečias klientų grupes su „Omnisend“. Daugiau informacijos rasite [Segmentų eksportavimas į „Omnisend”](export-omnisend.md)
+
+### <a name="predictions"></a>Prognozės
+
+- **Įvesties duomenų naudojimo ataskaita** Įvesties duomenų naudojimo ataskaita pateikia klaidų ir įspėjimų, kuriuos gali sugeneruoti jūsų visiškai parengtos prognozės, apibendrintą rodinį. Joje taip pat pateikiama rekomendacijų, kaip pagerinti modelio efektyvumą.    
+  Ataskaita yra pasiekiama atlikus modelio mokymo procesą. Ji sukuriama kiekvienam modeliui atskirai, nepriklausomai nuo to, ar jis užbaigtas sėkmingai.
+  Šiuo metu ši funkcija yra galima tik su Operacijų praradimo modeliu. Daugiau informacijos rasite [Įvesties duomenų naudojimo ataskaita](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Ryšiai
+
+- **Ryšių vizualizavimo priemonė** Ryšių vizualizavimo priemonė jums leidžia matyti visus esamus ryšius tarp objektų ir jų skaičių. Ryšiai dabar tvarkomi grupėmis: vartotojo sukurti, sistemos ir paveldėti ryšiai. Taip pat galite eksportuoti rodinį kaip vaizdą. Daugiau informacijos ieškokite [Peržiūrėti ryšius](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>2021 m. balandžio mėn. naujinimai
 

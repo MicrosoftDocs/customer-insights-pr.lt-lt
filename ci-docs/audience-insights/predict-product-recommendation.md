@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906774"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095566"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produkto rekomendacijos prognozė (apžvalga)
 
@@ -205,33 +205,9 @@ Kartais tik tam tikri produktai yra naudingi arba tinkami jūsų sukurtos progno
        > [!div class="mx-imgBorder"]
        > ![Sąrašas, kuriame rodomi aukšti pavienių klientų rinkinio pasiūlymai](media/product-recommendation-highconfidence.PNG "Sąrašas, kuriame rodomi aukšti pavienių klientų rinkinio pasiūlymai")
 
-## <a name="fix-a-failed-prediction"></a>Nesėkmingos prognozės koregavimas
+## <a name="manage-predictions"></a>Prognozių valdymas
 
-1. Eikite į skirtuką **Mano prognozės** iš **Duomenų rinkimas** > **Prognozės**.
-
-1. Pasirinkite prognozę, kurios klaidų žurnalus norite peržiūrėti, ir pasirinkite **Žurnalai**.
-
-1. Peržiūrėkite visas klaidas. Galimos kelių tipų klaidos, kurios aprašo, kokia būsena sukėlė klaidą. Pavyzdžiui, klaida, pranešanti, kad nepakanka duomenų tiksliai prognozei, paprastai išsprendžiama įkeliant daugiau duomenų į „Customer Insights“.
-
-## <a name="refresh-a-prediction"></a>Prognozės atnaujinimas
-
-Prognozės automatiškai atnaujinamos pagal tą patį [grafiką, kai duomenys](system.md#schedule-tab) atnaujinami, kaip sukonfigūruoti parametruose.
-
-1. Eikite į skirtuką **Mano prognozės** iš **Duomenų rinkimas** > **Prognozės**.
-
-1. Pasirinkite vertikalius daugtaškius šalia norimos atnaujinti prognozės.
-
-1. Pasirinkite **Atnaujinti**.
-
-## <a name="delete-a-prediction"></a>Prognozės šalinimas
-
-Panaikinus objektą prognozė taip pat bus pašalinti jo išvesties objektas.
-
-1. Eikite į skirtuką **Mano prognozės** iš **Duomenų rinkimas** > **Prognozės**.
-
-1. Pasirinkite vertikalius daugtaškius šalia norimos pašalinti prognozės.
-
-1. Pasirinkite **Naikinti**.
+Prognozes galima optimizuoti, šalinti jų triktis, atnaujinti arba panaikinti. Peržiūrėkite įvesties duomenų naudojimo ataskaitą ir sužinokite, kaip greičiau sukurti patikimesnę prognozę. Daugiau informacijos rasite [Prognozių valdymas](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

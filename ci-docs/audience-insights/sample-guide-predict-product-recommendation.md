@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595283"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129909"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Produkto rekomendacijų prognozės (peržiūros) pavyzdžio gairės
 
@@ -22,7 +22,7 @@ Paaiškinsime, kad galutinis produkto rekomendacijų pavyzdys pateiktas prognoz�
 
 ## <a name="scenario"></a>Scenarijus
 
-„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jų tikslas yra suprasti, kuriuos produktus jie turėtų rekomenduoja savo pasikartojantiems klientams. Žinodami, kokie klientai **labiau tikėtina,** kad juos įsigys, jie galės sutaupyti rinkodaros pastangų susitelkdami į konkrečius elementus.
+„Contoso” yra įmonė, kurianti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda savo „Contoso Coffee” svetainėje. Jų tikslas yra suprasti, kuriuos produktus jie turėtų rekomenduoja savo pasikartojantiems klientams. Žinodami, kokie klientai **labiau tikėtina,** kad juos įsigys, jie galės sutaupyti rinkodaros pastangų susitelkdami į konkrečius elementus.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -65,7 +65,7 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
 
 1. Laukelyje **Pavadinimas** šoninėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos įsigijimai**.
 
-1. Įrašykite duomenų šaltinį.
+1. **Įrašykite** duomenų šaltinį.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Kliento duomenų naudojimas iš lojalumo schemos
@@ -83,11 +83,11 @@ Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [import
 
 1. Laukelyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **lojalūs klientai**.
 
-1. Įrašykite duomenų šaltinį.
+1. **Įrašykite** duomenų šaltinį.
 
 ## <a name="task-2---data-unification"></a>Užduotis 2 - Duomenų suvienodinimas
 
-Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** procesą siekiant sukurti suvienodintą kliento profilį. Dėl daugiau informacijos, žr. [Duomenų suvienodinimas](data-unification.md).
+Įtraukę duomenis mes pradedame duomenų suvienodinimo procesą, kad sukurtumėte vieningąjį kliento profilį. Dėl daugiau informacijos, žr. [Duomenų suvienodinimas](data-unification.md).
 
 ### <a name="map"></a>Schema
 
@@ -156,7 +156,7 @@ Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravi
 
    - **Produktų skaičius**: nustatykite šią reikšmę į **5**. Šis parametras apibrėžia, kiek produktų norite rekomenduojama klientams.
 
-   - **Siūlyti produktus, kuriuos klientai neseniai įsigijo?** : Pasirinkite **Taip** ir nurodykite, kad į klientų anksčiau įsigytą rekomendaciją norite įtraukti produktų.
+   - **Pakartokite tikėtinus pirkinius**: Pasirinkite **Taip**, jei į rekomendaciją norite įtraukti produktus, kuriuos jūsų klientai nusipirko anksčiau.
 
    - **Atsidarę langą:** pažymėkite bent **365 dienas**. Šie nustatymai nurodo, kiek toli modelis žiūrės į praeitį kliento veikloje, kuri buvo naudojama kaip įvestis rekomendacijoms.
    
@@ -177,7 +177,7 @@ Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravi
 1. Peržiūrėję visą išsamią informaciją pasirinkite **Įrašyti ir vykdyti**.
 
 
-## <a name="task-4---review-model-results-and-explanations"></a>Užduotis 4 - Peržiūrėti modelio rezultatus ir paaiškinimus
+## <a name="task-4---review-model-results-and-explanations"></a>4 užduotis – Peržiūrėti modelio rezultatus ir paaiškinimus
 
 Leisti modeliui užbaigti mokymąsi ir duomenų vertinimą. Dabar galite peržiūrėti produkto rekomendacijų modelio paaiškinimus. Dėl išsamesnės informacijos, žr. [Peržiūrėti prognozės būseną ir rezultatus](predict-subscription-churn.md#review-a-prediction-status-and-results).
 

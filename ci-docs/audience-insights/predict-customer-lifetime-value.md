@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954589"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095520"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Kliento gyvavimo ciklo vertės (CLV) prognozė (Apžvalga)
 
@@ -149,7 +149,6 @@ Pagrindiniai duomenų sąveikos su klientais veiksmai (pvz., žiniatinklis, klie
 
 1. Pasirinkite **Toliau**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Modelio konfigūracijos peržiūra ir paleidimas
 
 1. Atlikdami savo **modelio išsamios informacijos peržiūros** veiksmą, patikrinkite jų prognozę. Prie bet kurios prognozės konfigūracijos dalies galite sugrįžti pažymėdami **Redaguoti** po rodoma reikšme. Taip pat galite pasirinkti konfigūracijos žingsnį iš eigos indikatoriaus.
@@ -170,11 +169,10 @@ Pagrindiniai duomenų sąveikos su klientais veiksmai (pvz., žiniatinklis, klie
 - **Būsena:**: Prognozės vykdymo būsena.
     - **Eilė**: prognozė laukia, kol bus užbaigti kiti procesai.
     - **Atnaujinimas**: prognozė vykdomas, kad būtų kuriami rezultatai, kurie bus įtraukti į išvesties objektą.
-    - **Nepavyko** : Prognozės vykdymas nepavyko. [Peržiūrėkite įrašus](#troubleshoot-a-failed-prediction) dėl išsamesnės informacijos.
+    - **Nepavyko** : Prognozės vykdymas nepavyko. [Peržiūrėkite įrašus](manage-predictions.md#troubleshoot-a-failed-prediction) dėl išsamesnės informacijos.
     - **Pavyko**: Prognozė pavyko. Pasirinkite **Peržiūrėti** po vertikaliomis elipsėmis prognozavimo rezultatų peržiūrai.
 - **Redaguota**: data, kai buvo pakeista prognozės konfigūracija.
 - **Paskutinį kartą atnaujinta** : data, kai prognozė atnaujino rezultatus išvesties objekte.
-
 
 ### <a name="review-prediction-results"></a>Peržiūrėti prognozės rezultatus
 
@@ -216,28 +214,8 @@ Rezultatų puslapyje yra trys pagrindinės duomenų dalys.
 
 - **Daugelis ne vienu metu lemiamų veiksnių**: kuriant CLV prognozė remiantis AI modeliui pateikiamais įvesties duomenimis. Kiekvienas iš veiksnių turi savo svarbą, apskaičiuojamą bendroms modelio prognozėms. Šiuos veiksnius galite naudoti prognozės rezultatams patvirtinti. Šie faktoriai taip pat suteikia daugiau įžvalgų apie svarbiausius faktorius, kurie labiausiai pranašesni visiems jūsų klientams prognozuojant CLV.
 
-## <a name="refresh-a-prediction"></a>Prognozės atnaujinimas
+## <a name="manage-predictions"></a>Prognozių valdymas
 
-Prognozės automatiškai atnaujinamos pagal tą patį [grafiką, kai duomenys](system.md#schedule-tab) atnaujinami, kaip sukonfigūruoti parametruose. Galite juos paleisti iš naujo ir rankiniu būdu.
-
-1. Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
-2. Pasirinkite vertikalius daugtaškius šalia norimos atnaujinti prognozės.
-3. Pasirinkite **Atnaujinti**.
-
-## <a name="delete-a-prediction"></a>Prognozės šalinimas
-
-Prognozės panaikinimas taip pat pašalina jos išvesties objektą.
-
-1. Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
-2. Pasirinkite vertikalius daugtaškius šalia norimos pašalinti prognozės.
-3. Pasirinkite **Naikinti**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Nepavykusios prognozės trikčių šalinimas
-
-1. Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
-2. Pasirinkite vertikalias elipses šalia prognozės, kuriose norite peržiūrėti klaidų žurnalus.
-3. Pasirinkite **Žurnalai**.
-4. Peržiūrėkite visas klaidas. Galimos kelių tipų klaidos, kurios aprašo, kokia būsena sukėlė klaidą. Pavyzdžiui, klaida, kurios duomenų nepakanka, kad būtų galima tiksliai prognozuoti, paprastai išsprendžiama į auditorijos įžvalgas įkeliant daugiau duomenų.
-
+Prognozes galima optimizuoti, šalinti jų triktis, atnaujinti arba panaikinti. Peržiūrėkite įvesties duomenų naudojimo ataskaitą ir sužinokite, kaip greičiau sukurti patikimesnę prognozę. Daugiau informacijos rasite [Prognozių valdymas](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
