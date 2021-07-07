@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095732"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315888"
 ---
 # <a name="manage-predictions"></a>Prognozių valdymas
 
@@ -35,9 +35,6 @@ ms.locfileid: "6095732"
 Įvesties duomenų naudojimo ataskaita pateikia klaidų ir įspėjimų, kuriuos gali sugeneruoti jūsų visiškai parengtos prognozės, apibendrintą rodinį. Joje taip pat pateikiama rekomendacijų, kaip pagerinti modelio efektyvumą.
 
 Ataskaita yra pasiekiama atlikus modelio mokymo procesą. Ji sukuriama kiekvienam modeliui atskirai, neatsižvelgiant į tai, ar jis užbaigtas sėkmingai.
-
-> [!NOTE]
-> Šiuo metu ši funkcija veikia tik su Operacijų praradimo modeliu.
 
 ### <a name="view-the-input-data-usability-report"></a>Peržiūrėti įvesties duomenų naudojimo ataskaitą
 

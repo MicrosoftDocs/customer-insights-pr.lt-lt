@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259109"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304890"
 ---
 # <a name="manage-environments"></a>Aplinkų valdymas
 
@@ -51,32 +51,35 @@ Norėdami sukurti aplinką:
 
 1. Programos antraštėje pasirinkite **Aplinkos** parinkėją.
 
-1. Pasirinkite **Naujas**.
+1. Pasirinkite **Nauja**.
 
    > [!div class="mx-imgBorder"]
-   > ![Aplinkų parametrai](media/environment-settings-dialog.png)
+   > ![Aplinkų parametrai.](media/environment-settings-dialog.png)
 
-1. Dialogo lange **Naujos aplinkos kūrimas** pasirinkite **Nauja aplinka**.
+1. Dialogo lange **Aplinkos kūrimas** pažymėkite **Nauja aplinka**.
 
    Jei norite [kopijuoti duomenis iš esamos aplinkos](#considerations-for-copy-configuration-preview), pasirinkite **Kopijuoti iš esamos aplinkos**. Matysite visų jūsų organizacijoje pasiekiamų aplinkų sąrašą, iš kurių galima kopijuoti duomenis.
 
 1. Nurodykite toliau pateiktą informaciją.
    - **Pavadinimas**: Šios aplinkos pavadinimas. Šis laukas jau užpildytas, jei kopijuojate esamą aplinką, tačiau jį galite keisti.
-   - **Sritis**: sritis, kurioje įdiegta ir teikiama ši paslauga.
    - **Tipas**: pasirinkite, ar norite kurti gamybos ar smėlio dėžės aplinką.
-
+   - **Sritis**: sritis, kurioje įdiegta ir teikiama ši paslauga.
+   
 1. Pasirinktinai galite spustelėti **Išplėstiniai parametrai**.
 
-   - **Įrašyti visus duomenis į**: nurodo, kur norite saugoti išvesties duomenis, sugeneruotus iš „Customer Insights“. Galimos dvi parinktys: **„Customer Insights“ saugykla** („Azure Data Lake“ valdomas „Customer Insights“ komandos) ir **„Azure Data Lake Storage Gen2”** (jūsų nuosava „Azure Data Lake Storage“). Pagal numatytuosius parametrus, pasirenkama „Customer Insights“ saugykla.
+   - **Įrašyti visus duomenis į**: nurodo, kur norite saugoti išvesties duomenis, sugeneruotus iš „Customer Insights“. Galėsite pasirinkti dvi galimybes: **„Customer Insights" saugyklą** („Azure Data Lake", kurią valdo „Customer Insights" komanda ir **Azure Data Lake Storage** (komanda ir „Azure Data Lake Storage“). Pagal numatytuosius parametrus, pasirenkama „Customer Insights“ saugykla.
 
-   > [!NOTE]
-   > Įrašydami duomenis į „Azure Data Lake Storage, sutinkate, kad jūsų duomenys būtų perkelti ir saugomi konkrečiai „Azure“ paskyrai paskirtoje geografinėje vietovėje , kuri gali skirtis nuo vietovės, kurioje saugomi „Dynamics 365 Customer Insights“ duomenys. [Sužinokite daugiau „Microsoft“ patikimumo centre.](https://www.microsoft.com/trust-center)
-   >
-   > Šiuo metu surinkti objektai visada saugomi „Customer Insights“ valdomame duomenų telkinyje.
-   > Palaikome tik „Azure Data Lake Gen2“ talpinimo paskyras iš to paties „Azure“ regiono, kurį pasirinkote kurdami aplinką.
-   > Palaikome tik „Azure Data Lake Gen2“ saugyklų paskyras, kurioms įgalinta hierarchinio pavadinimo (HNS) funkcija.
+     > [!NOTE]
+     > Įrašydami duomenis į „Azure Data Lake Storage, sutinkate, kad jūsų duomenys būtų perkelti ir saugomi konkrečiai „Azure“ paskyrai paskirtoje geografinėje vietovėje , kuri gali skirtis nuo vietovės, kurioje saugomi „Dynamics 365 Customer Insights“ duomenys. [Sužinokite daugiau „Microsoft“ patikimumo centre.](https://www.microsoft.com/trust-center)
+     >
+     > Šiuo metu surinkti objektai visada saugomi „Customer Insights“ „Managed Data Lake.“ 
+     > 
+     > Palaikome tik to „Azure Data Lake Storage“ paties „Azure" regiono, kurį pasirinkote kurdami aplinką, abonementus. 
+     > 
+     > Palaikome tik „Azure Data Lake Storage“ abonementus, kurių hierarchinė vardų sritis įjungta.
 
-   - „Azure Data Lake Storage Gen2“ parinkčiai galite pasirinkti tarp resursais pagrįstos parinkties ir prenumeravimu pagrįstos parinkties autentifikavimui. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). **Talpyklės** pavadinimo keisti negalima, jis bus `customerinsights`.
+
+   - Galite „Azure Data Lake Storage“ pasirinkti iš išteklių pagrįstą parinktį ir prenumerata pagrįstą autentifikavimo parinktį. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). **Talpyklės** pavadinimo keisti negalima, jis bus `customerinsights`.
    
    - Jei norite naudoti [prognozes](predictions.md), konfigūruoti duomenų bendrinimą su „Microsoft Dataverse” arba įjungti duomenų paėmimą iš vietinių duomenų šaltinių, nurodykite „Microsoft Dataverse” aplinkos URL skiltyje **Duomenų bendrinimo su „Microsoft Dataverse” konfigūravimas ir papildomų galimybių įjungimas**. Pasirinkite Įjungti **duomenų bendrinimą** ir bendrinkite Customer Insights išvedimo duomenis su Microsoft Dataverse valdomu Data Lake.
 
@@ -85,7 +88,7 @@ Norėdami sukurti aplinką:
      > - [Prognozės šiuo metu nepalaikomos](predictions.md) trūkstamų objekto reikšmių reikšmės, kai leidžiate bendrinti duomenis su Microsoft Dataverse valdomojo Data Lake duomenimis.
 
      > [!div class="mx-imgBorder"]
-     > ![Konfigūravimo parinktys norint įjungti duomenų bendrinimą naudojant Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.](media/datasharing-with-DataverseMDL.png)
 
    Jums vykdant procesus, tokius kaip duomenų suvartojimas ar segmento sukūrimas, atitinkantys katalogai bus sukuriami talpinimo paskyroje, kurią nurodėte prieš tai. Duomenų failai ir model.json failai bus kuriami ir įtraukiami į aplankus, atsižvelgiant į proceso pavadinimą.
 
@@ -113,14 +116,14 @@ Kopijuojami šie konfigūracijos parametrai:
 
 - Klientų profiliai.
 - Duomenų šaltinio kredencialai. Turėsite pateikti kiekvieno duomenų šaltinio kredencialus ir rankiniu būdu atnaujinti duomenų šaltinius.
-- Duomenų šaltiniai iš „Common Data Model” aplanko ir „Common Data Service” valdomojo telkinio. Šiuos duomenų šaltinius turėsite kurti rankiniu būdu tuo pačiu pavadinimu kaip ir šaltinio aplinka.
+- Duomenų šaltiniai iš „Common Data Model“ aplanko ir „Dataverse“ valdomojo duomenų „Data Lake". Šiuos duomenų šaltinius turėsite kurti rankiniu būdu tuo pačiu pavadinimu kaip ir šaltinio aplinka.
 
 Kai kopijuojate aplinką, pamatysite patvirtinimo pranešimą, kad sukurta nauja aplinka. Pasirinkite **Eiti į duomenų šaltinius**, kad peržiūrėtumėte duomenų šaltinių sąrašą.
 
 Visi duomenų šaltiniai rodys būseną **Reikia kredencialų**. Redaguokite duomenų šaltinius ir įveskite kredencialus, kad juos atnaujintumėte.
 
 > [!div class="mx-imgBorder"]
-> ![Nukopijuoti duomenų šaltiniai](media/data-sources-copied.png)
+> ![Nukopijuoti duomenų šaltiniai.](media/data-sources-copied.png)
 
 Atnaujinę duomenų šaltinius, eikite į **Duomenys** > **Suvienodinti**. Čia rasite parametrus iš šaltinio aplinkos. Jei reikia, redaguokite juos arba pasirinkite **Vykdyti**, kad pradėtumėte duomenų sujungimo procesą ir sukurtumėte bendrąjį kliento objektą.
 
@@ -136,7 +139,7 @@ Galite redaguoti kai kurią esamos aplinkos informaciją.
 
 3. Lauke **Redaguoti aplinką** galite atnaujinti aplinkos rodomą **Pavadinimą**, tačiau negalite keisti  **Regiono** arba **Tipo**.
 
-4. Jei aplinka sukonfigūruojama saugoti duomenis „Azure Data Lake Storage Gen2“, galite atnaujinti **Paskyros raktą**. Tačiau negalite keisti **Paskyros pavadinimo** arba **Konteinerio** pavadinimo.
+4. Jei aplinka sukonfigūruota duomenims saugoti „Azure Data Lake Storage“, galite atnaujinti **kliento raktą**. Tačiau negalite keisti **Paskyros pavadinimo** arba **Konteinerio** pavadinimo.
 
 5. Pasirinktinai galite naujinti iš paskyros pagrindinių pagrįstų jungčių į resursais pagrįstą arba prenumeravimu pagrįstą jungtį. Jums atnaujinus negalėsite grįžti prie pagrindinės paskyros po naujinimo. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Negalite keisti **Talpyklos** informacijos naujinant jungtį.
 
@@ -158,19 +161,19 @@ Kaip administratorius galite iš naujo nustatyti aplinką į tuščią būseną,
 
 1.  Programos antraštėje pasirinkite **Aplinkos** parinkėją. 
 
-2.  Pažymėkite aplinką, kurią norite nustatyti iš naujo, ir pažymėkite daugtaškį **...**. 
+2.  Pažymėkite aplinką, kurią norite nustatyti iš naujo, ir pažymėkite daugtaškį (**...**). 
 
 3. Pasirinkite parinktį **Nustatyti iš naujo**. 
 
 4.  Šio panaikinimo patvirtinimui, įveskite aplinkos pavadinimą ir pasirinkite **Paleisti iš naujo**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Esamos aplinkos naikinimas (galima tik administratoriams)
+## <a name="delete-an-existing-environment"></a>Esamos aplinkos naikinimas
 
 Kaip administratorius galite panaikinti jūsų administruojamą aplinką.
 
 1.  Programos antraštėje pasirinkite **Aplinkos** parinkėją.
 
-2.  Pažymėkite aplinką, kurią norite nustatyti iš naujo, ir pažymėkite daugtaškį **...**. 
+2.  Pažymėkite aplinką, kurią norite nustatyti iš naujo, ir pažymėkite daugtaškį (**...**). 
 
 3. Pasirinkite parinktį **Naikinti**. 
 

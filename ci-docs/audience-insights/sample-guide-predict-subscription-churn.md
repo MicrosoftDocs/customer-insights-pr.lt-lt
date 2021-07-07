@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595528"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306313"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Prenumeravimo atsisakymo prognozės (peržiūros) pavyzdžio vedlys
 
@@ -22,7 +22,7 @@ Praeisime kartu pro prenumeravimo nutraukimo prognozės pavyzdį nuo pradžios i
 
 ## <a name="scenario"></a>Scenarijus
 
-„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jie neseniai pradėjo prenumeravimo verslą savo klientams tam, kad jie reguliariai gautų kavos. Jų tikslas yra suprasti, kurie prenumeruojantys klientai gali atšaukti savo prenumeratą per kelis ateinančius mėnesius. Žinojimas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.
+„Contoso” yra įmonė, kurianti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda savo „Contoso Coffee” svetainėje. Jie neseniai pradėjo prenumeravimo verslą savo klientams tam, kad jie reguliariai gautų kavos. Jų tikslas yra suprasti, kurie prenumeruojantys klientai gali atšaukti savo prenumeratą per kelis ateinančius mėnesius. Žinojimas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -128,9 +128,9 @@ Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** pro
 
 1. Eikite į **Atitikties** skirtuką ir pasirinkite **Nustatyti užsakymą**.
 
-1. **Pagrindiniame** iškrentančiame meniu sąraše pasirinkite **e-komercijos kontaktai : e-komercija** kaip pagrindinį šaltinį ir įtraukite visus įrašus.
+1. Pirminiame **išplečiamajame** sąraše pasirinkite **eCommerceContacts: el. prekyba** pirminis šaltinis ir įtraukite visus įrašus.
 
-1. **Objektas 2** iškrentančiame sąraše pasirinkite **lojalūs klientai : lojalumo schemą** ir įtraukite visus įrašus.
+1. Išplečiamajame sąraše **Objektas 2** pasirinkite **loyCustomers: LoyaltyScheme** įtraukite visus įrašus.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Suvienodinti e-komercijos atitiktį ir lojalumą.":::
 
@@ -138,16 +138,16 @@ Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** pro
 
 1. Įtraukite savo pirmąją sąlygą naudodami visą pavadinimą.
 
-   * E-komercijos kontaktams pasirinkite **Visas pavadinimas** iškrentančiame meniu.
-   * Lojalumo klientams pasirinkite **Visas pavadinimas** iškrentančiame meniu.
+   * El. prekyboscontacts išplečiamajame sąraše pažymėkite **Visas vardas**.
+   * loyCustomers išplečiamajame sąraše pažymėkite **Visas vardas**.
    * Pasirinkite **Normalizuoti** iškrentantį meniu ir pasirinkite **Tipas (Telefonas, Pavadinimas, Adresas, ...)**.
    * Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
 
 1. Įveskite pavadinimą **Visas pavadinimas, El. paštas** naujai taisyklei.
 
    * Įtraukite antrąją sąlygą el. pašto adresui pasirinkdami **Įtraukite sąlygą**
-   * Objekto e-komercijos kontaktams, pasirinkite **El. paštas** iškrentančiame meniu.
-   * Lojalių klientų objektui pasirinkite **El. paštas** iškrentančiame meniu. 
+   * Objekto "eCommerceContacts" **išplečiamajame sąraše** pasirinkite "El. paštas".
+   * Objekto loyCustomers **išplečiamajame sąraše** pasirinkite "El. paštas". 
    * Palikite normalizavimą tuščią. 
    * Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
 
@@ -205,7 +205,7 @@ Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravi
 
 1. Peržiūrėję visą išsamią informaciją pasirinkite **Įrašyti ir vykdyti**.
 
-## <a name="task-4---review-model-results-and-explanations"></a>Užduotis 4 - Peržiūrėti modelio rezultatus ir paaiškinimus
+## <a name="task-4---review-model-results-and-explanations"></a>4 užduotis – Peržiūrėti modelio rezultatus ir paaiškinimus
 
 Leisti modeliui užbaigti mokymąsi ir duomenų vertinimą. Galite dabar peržiūrėti prenumeravimo atsisakymo modelio paaiškinimus. Dėl išsamesnės informacijos, žr. [Peržiūrėti prognozės būseną ir rezultatus](predict-subscription-churn.md#review-a-prediction-status-and-results).
 

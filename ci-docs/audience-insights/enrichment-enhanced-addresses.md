@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965588"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305442"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientų profilių papildymas išplėstiniais adresais
 
@@ -22,11 +22,11 @@ Adresai jūsų duomenyse gali būti nesusisteminti, neišsamūs arba neteisingi.
 
 ## <a name="how-we-enhance-addresses"></a>Kaip išplečiame adresus
 
-Mūsų modelis adreso papildymui naudoja dviejų veiksmų procesą. Pirma, jis išanalizuoja adresą, kad galėtų identifikuoti jo komponentus ir pateikti juos susistemintu formatu. Tada mes naudojame dirbtinį intelektą adreso reikšmėms pataisyti, užbaigti ir standartizuoti.
+Mūsų modelis adreso papildymui naudoja dviejų veiksmų procesą. Pirma, jis išanalizuoja adresą, kad galėtų identifikuoti jo komponentus ir pateikti juos susistemintu formatu. Tada AI naudojame adreso reikšmėms pataisyti, užbaigti ir standartizuoti.
 
 ### <a name="example"></a>Pavyzdžiui
 
-Adreso informacija gali būti nestandartiniu formatu ir joje gali būti rašybos klaidų. Modelis gali išspręsti šias problemas ir sukurti nuoseklius adresus vieninguosiuose klientų profiliuose.
+Adreso informacija gali būti non pavadinimo formatu ir jame yra rašybos klaidų. Modelis gali išspręsti šias problemas ir sukurti nuoseklius adresus vieninguosiuose klientų profiliuose.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Išplėstiniai adresai veikia tik su tomis reikšmėmis, kurios jau yra jūsų �
 2. Netikrina, ar konkrečios reikšmės, pavyzdžiui, pašto kodai ar gatvių pavadinimai, yra tinkami.
 3. Nekeičia reikšmių, kurių neatpažįsta.
 
-Siekiant papildyti adresus, modelis naudoja mašininio mokymo metodus. Nors modeliui taikome aukštą pasikliovimo ribą, kai modelis pakeičia įvesties reikšmę, kaip ir su visais ML pagrįstais modeliais, 100 % tikslumas nėra garantuotas.
+Siekiant papildyti adresus, modelis naudoja mašininio mokymo metodus. Nors modeliui pakeičiant įvesties reikšmę taikoma aukšta ribinė reikšmė, kaip ir naudojant mašininį mokomosios sistemos modelį, 100 procentų tikslumas nėra tarpusavio tikslumas.
 
 ## <a name="supported-countries-or-regions"></a>Palaikomos šalys arba regionai
 
@@ -76,7 +76,7 @@ Adresuose turi būti šalies/regiono reikšmė. Mes neapdorojame nepalaikomų š
 1. Pasirinkite, kaip jūsų duomenų rinkinyje yra formatuojami adresai. Pasirinkite **Adresas su vienu atributu**, jei jūsų duomenų adresuose naudojamas vienas laukas. Pasirinkite **Adresas su keliais atributais**, jei jūsų duomenų adresuose naudojamas daugiau nei vienas duomenų laukas.
 
    > [!NOTE]
-   > Šalis/regionas yra privalomai nurodomas tiek vieno, tiek kelių atributų adresuose. Adresai, kuriuose nėra galiojančių arba palaikomų šalies/regiono reikšmių, nebus papildyti
+   > Šalis / regionas privalomai nurodomas ir vieno, ir kelių atributų adresuose. Adresai, kuriuose nėra galiojančių arba palaikomų šalies/regiono reikšmių, nebus papildyti.
 
 1.  Susiekite adreso laukus iš jūsų vieningojo kliento objekto.
 
@@ -98,6 +98,6 @@ Išsamų kiekvieno papildyto profilio rodinį galite pasiekti pasirinkę **Perž
 
 ## <a name="next-steps"></a>Tolesni veiksmai
 
-Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [segmentus](segments.md), [matavimus](measures.md) ir net [eksportuokite duomenis](export-destinations.md), kad užtikrintumėte klientų poreikiams pritaikytą aptarnavimą.
+Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [segmentus](segments.md) ir [priemones](measures.md) bei net [eksportuokite duomenis,](export-destinations.md) kad klientams būtų galima teikti personalizuotas funkcijas.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049260"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304810"
 ---
 # <a name="define-and-manage-measures"></a>Matų apibrėžimas ir valdymas
 
-Šios priemonės padeda jums geriau suprasti klientų elgesį ir įmonės efektyvumą. Jos peržvelgia atitinkamas vertes iš [vieningųjų profilių](data-unification.md). Pavyzdžiui, įmonė nori peržiūrėti *bendras kiekvieno kliento išlaidas*, kad suprastų kiekvieno kliento pirkimo istoriją arba išmatuotų *bendrus įmonės pardavimus*, kad galėtų suprasti agregavimo lygio pajmas vidoje įmonėje.  
+Šios priemonės padeda jums geriau suprasti klientų elgesį ir įmonės efektyvumą. Jos peržvelgia atitinkamas vertes iš [vieningųjų profilių](data-unification.md). Pavyzdžiui, įmonė nori, kad *bendras vienam klientui* skirtas išlaidas būtų galima pamatyti norint suprasti kliento pirkimo retrospektyvą arba įvertinti *bendrą įmonės pardavimą* tam, kad būtų galima suprasti agregavimo lygio pajamas visoje įmonėje.  
 
 Priemonės kuriamos naudojant priemonę eilės duomenų užklausos platformą su įvairiais operatoriais ir paprastomis susiejimo parinktimis. Ji leidžia filtruoti duomenis, grupuoti rezultatus, aptikti [objekto ryšio maršrutus](relationships.md), ir peržiūrėti išvestį.
 
@@ -36,7 +36,7 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
    > [!NOTE]
    > Jei jūsų naujo matavimo konfigūracijoje yra tik du laukai, pavyzdžiui, Kliento ID ir vienas skaičiavimas, išeiga bus įtraukta kaip naujas stulpelis į sistemos sugeneruotą objektą, pavadintą Kliento matavimas. O priemonės vertę galėsite matyti unifikuotame kliento profilyje. Kitos priemonės sugeneruos nuosavus objektus.
 
-1. Konfigūracijos srityje pasirinkite agregavimo funkciją **Pažymėti funkciją** išplečiamajame meniu. Agregavimo funkcijos yra šios: 
+1. Konfigūracijos srityje pasirinkite agregavimo funkciją išplečiamajame meniu **Pažymėti funkciją**. Agregavimo funkcijos yra šios: 
    - **Sum**
    - **Vidurkis**
    - **Skaičius**
@@ -64,17 +64,19 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
 
 1. Norėdami įtraukti filtrų, konfigūracijos srityje pažymėkite **filtrą**. 
   
-   1. Filtrų srities atributų skyriuje **Įtraukti atributą** ir **Filtrai** pažymėkite atributą, kurį norite naudoti kurdami filtrus.
+   1. Filtrų **srities skyriuje** Įtraukti atributą **pažymėkite** atributą, kurį norite naudoti kurdami filtrus.
    1. Nustatykite filtro operatorių, kad apibrėžtų kiekvieno pažymėto atributo filtrą.
    1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
 
 1. Norėdami įtraukti dimensijas, konfigūracijos srityje pažymėkite **Dimensijos**. Dimensijų rezultatai bus rodomi kaip stulpeliai.
+ 
    1. Pasirinkite **Redaguoti dimensijas** reikšmę ir įtraukite duomenų atributų, pagal kuriuos norite grupuoti matavimo reikšmes. Pvz.: miestą arba lytį. Pagal numatytuosius nustatymus, siekiant kurti *kliento lygio matus*, pasirenkama *Kliento ID*. Jei norite kurti verslo lygio priemones, galite pašalinti *numatytąją dimensiją*.
    1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
 
 1. Jei jūsų duomenyse yra verčių, kurias reikia pakeisti, pavyzdžiui, sveikuoju skaičiumi, reikšmę *null* pakeiskite į *0* ir pasirinkite **Taisyklės**. Sukonfigūruokite taisyklę ir įsitikinkite, kad pakeitimui renkatės tik sveikuosius skaičius.
 
 1. Jei tarp jūsų susietų duomenų objektų ir *Kliento* objekto yra keli keliai, turite pasirinkti vieną iš nustatytų [objekto ryšio kelių](relationships.md). Matavimo rezultatai gali skirtis atsižvelgiant į pasirinktą kelią. 
+   
    1. Pažymėkite **Duomenų nuostatas** ir pasirinkite kelią, kurį reikėtų naudoti jūsų priemonei identifikuoti. Jei yra tik vienas kelias į *Kliento* objektą, šis valdiklis nebus rodomas.
    1. Pasirinkite **Atlikta**, kad pritaikytumėte savo pasirinkimą. 
 
@@ -113,7 +115,7 @@ Tolesnė procedūra apžvelgia veiksmus, reikalingus naujai priemonei kurti naud
 
 1. Pasirinkite **Naujas** ir pasirinkite **Rinktis šabloną**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Išskleidžiamojo meniu ekrano nuotrauka kuriant naują priemonę su šablono paryškinimu.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Kai kuriate naują priemonę su šablono paryškinimo parinktimi, išskleidžiamajame meniu yra šiek tiek pasislėpęs.":::
 
 1. Raskite jūsų poreikius atitinkantį šabloną ir pasirinkite **Rinktis šabloną**.
 
@@ -123,7 +125,7 @@ Tolesnė procedūra apžvelgia veiksmus, reikalingus naujai priemonei kurti naud
 
 1. Pasirinkite **Atlikta**.
 
-1. Skiltyje **Laikotarpio nustatymas** apibrėžkite naudojamų duomenų laiko tarpą. Pasirinkite, ar norite, kad naujoji priemonė apimtų visus nustatytus duomenis, pasirinkdami **Visą laiką**. Arba, jei norite, kad priemonė būtų nukrepta į **konkretų laikotarpį**.
+1. Skiltyje **Laikotarpio nustatymas** apibrėžkite naudojamų duomenų laiko tarpą. Pasirinkite, ar norite, kad nauja priemonė apimtų visą duomenų rinkinį pažymėdami "Visas laikas" arba, jei norite, kad **priemonė sufokusuos** konkretų laiko **periodą**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Ekrano nuotrauka, kurioje rodoma laikotarpio skiltis konfigūruojant priemonę iš šablono.":::
 
@@ -142,12 +144,12 @@ Tolesnė procedūra apžvelgia veiksmus, reikalingus naujai priemonei kurti naud
 
 Priemonių sąrašą galima rasti puslapyje **Priemonės**.
 
-Rasite informacijos apie matavimo tipą, kūrėją, kūrimo datą, būseną ir būseną. Kai sąraše pažymite priemonę, galite peržiūrėti išvestį ir atsisiųsti .CSV failą.
+Rasite informacijos apie matavimo tipą, kūrėją, kūrimo datą, būseną ir būseną. Kai sąraše pažymite priemonę, galite peržiūrėti išvestį ir atsisiųsti CSV failą.
 
 Norėdami tuo pačiu metu atnaujinti visus savo matus, spustelėkite **Atnaujinti visus** nepažymėdami konkretaus mato.
 
 > [!div class="mx-imgBorder"]
-> ![Atskirų matų valdymo veiksmai](media/measure-actions.png "Atskirų matų valdymo veiksmai")
+> ![Atskirų matų valdymo veiksmai.](media/measure-actions.png "Atskirų matų valdymo veiksmai.")
 
 Sąraše pažymėkite toliau nurodytų parinkčių matą.
 
@@ -159,11 +161,11 @@ Sąraše pažymėkite toliau nurodytų parinkčių matą.
 - **Aktyvuokite** arba **Deaktyvuokite**. Suplanuoto atnaujinimo metu neaktyvūs duomenys nebus [atnaujinti](system.md#schedule-tab).
 
 > [!TIP]
-> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
+> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pažymėję Peržiūrėti vienos iš užduoties užduočių išsamią informaciją rasite papildomos informacijos: apdorojimo laiko, paskutinio apdorojimo datos ir visų su užduotimi susijusių klaidų **ir įspėjimų**.
 
 ## <a name="next-step"></a>Kitas veiksmas
 
-Naudodami esamas priemones, vaizdo kamera kuriate [klientų segmentą](segments.md).
+Galite naudoti esamus priemones klientų [segmentui kurti](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896337"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304614"
 ---
 # <a name="customer-profiles"></a>Klientų profiliai
 
@@ -57,13 +57,13 @@ Pasirinkite bet kurias kliento plytas tam, kad atvertumėte **Kliento informacij
 
 Kliento išsami informacija apima:
 
--   **Kliento profilio plyta:** Ši plyta rodo skirtingas vertes lyginant su suvienodintu kliento profilio objektu. Ši išsami informacija gali apimti el. pašto adresą, vardą, miestą ir t.t. 
+-   **Kliento profilio plyta**: Ši plyta rodo skirtingas vertes lyginant su suvienodintu kliento profilio objektu. Ši išsami informacija gali apimti el. pašto adresą, vardą, miestą ir t.t. 
 
--   **Galimi interesai, galimi prekės ženklai:** Rodo, ar jūs sukonfigūravote pirmosios šalies praturtinimą. Jis rodo galimus interesus ir panašumus su kliento turimais prekių ženklais su profiliu. Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft.md).
+-   **Galimi interesai, galimi prekės ženklai**: Rodo, ar jūs sukonfigūravote pirmosios šalies praturtinimą. Jis rodo galimus interesus ir panašumus su kliento turimais prekių ženklais su profiliu. Daugiau informacijos žr. [Klientų profilių papildymas prekių ženklų ir pomėgių panašumais](enrichment-microsoft.md).
 
--   **Priemonės:** Rodo, ar jūs sukonfigūravote vieną ar keletą priemonių konkrečiam tipui: kliento savybių priemonėms. Jos apima apskaičiuotą KPI pagal jūsų klientus individualiu kliento lygmeniu. Dėl daugiau informacijos, žr. [Nustatyti ir valdyti priemones](measures.md).
+-   **Priemonės**: Rodo, ar jūs sukonfigūravote vieną ar keletą priemonių konkrečiam tipui: kliento savybių priemonėms. Jos apima apskaičiuotą KPI pagal jūsų klientus individualiu kliento lygmeniu. Dėl daugiau informacijos, žr. [Nustatyti ir valdyti priemones](measures.md).
 
--   **Aktyvumo laiko juosta:** Rodo, ar konfigūravote veiklas. Laiko juostos rodinys turi chronologiškai surikiuotas šio kliento veiklas, pradedant su naujausia veikla. Norėdami gauti daugiau informacijos, žr. [Klientų veiklos](activities.md).
+-   **Aktyvumo laiko juosta**: Rodo, ar konfigūravote veiklas. Laiko juostos rodinys turi chronologiškai surikiuotas šio kliento veiklas, pradedant su naujausia veikla. Norėdami gauti daugiau informacijos, žr. [Klientų veiklos](activities.md).
 
 Pasirinkite **Atgal į klientus** norėdami grįžti į kliento paieškos puslapį.
 

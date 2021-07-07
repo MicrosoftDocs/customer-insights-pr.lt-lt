@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954497"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305258"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientų profilių papildymas (peržiūra)
 
@@ -22,7 +22,8 @@ Naudokite duomenis iš tolių šaltinių kaip „Microsoft“ ar kiti partneriai
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Papildymo telkinio puslapis":::
 
-Publikos įžvalgose eikite į **Duomenys** > **Papildymas** tam, kad dirbtumėte su papildymo parinktimis.    
+Publikos įžvalgose eikite į **Duomenys** > **Papildymas** tam, kad dirbtumėte su papildymo parinktimis.  
+
 Norėdami kurti arba redaguoti papildymus, turite turėti dalyvio arba administratoriaus teises. Daugiau informacijos žr. [Teisės](permissions.md).
 
 Skirtuke **Atrasti** rasite šiuos papildymus:
@@ -31,7 +32,7 @@ Skirtuke **Atrasti** rasite šiuos papildymus:
 - [Pomėgiai](enrichment-microsoft.md), kuriuos teikia „Microsoft“
 - [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft”
 - [Bendrovės duomenys](enrichment-leadspace.md) pateikti „Leadspace“
-- [Demografiniai duomenys](enrichment-experian.md), pateikti „Experian“
+- [Demografiniai](enrichment-experian.md) duomenys pateikti „Experian“
 - [Vietos duomenys](enrichment-here.md) pateikti „HERE Technologies“
 - [Tinkinti duomenys](enrichment-SFTP-custom-import.md) per „Secure File Transfer Protocol“ (SFTP)
 
@@ -39,7 +40,7 @@ Skirtuke **Mano papildymai** galite matyti sukonfigūruotus papildymus ir redagu
 
 ## <a name="manage-existing-enrichments"></a>Esamų papildymų tvarkymas
 
-Eikite į **Mano papildymai**, kad peržiūrėtumėte visus sukonfigūruotus papildymus. Kiekvienas papildymas atvaizduotas kaip eilutė su papildoma informacija apie papildymą.
+Eikite į skirtuką **Mano papildymai**, kad pamatytumėte visus sukonfigūruotus papildymus. Kiekvienas papildymas atvaizduotas kaip eilutė su papildoma informacija apie papildymą.
 
 Pasirinkite papildymą, kad pamatytumėte galimas parinktis. Taip pat galite pažymėti elipsę (...) sąrašo elemente ir peržiūrėti parinktis.
 
@@ -59,6 +60,6 @@ Trečiosios šalies papildymai konfigūruojami naudojant [ryšius](connections.m
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Keli to paties tipo papildymai
 
-Objektas, kurį reikia papildyti, nurodomas papildymo konfigūracijoje, o tai jums leidžia papildyti tik antrinį jūsų profilių rinkinį. Pavyzdžiui, duomenų papildymas tik konkrečiam segmentui. Galite konfigūruoti kelis to paties tipo papildymus ir pakartotinai naudoti tą patį ryšį. Kai kuriems papildymams bus ribojamas to paties tipo sukuriamų papildymų skaičius. Apribojimus ir dabartinį naudojima galima peržiūrėti puslapyje **Papildymas**.
+Objektas, kurį reikia papildyti, nurodomas papildymo konfigūracijoje, o tai jums leidžia papildyti tik antrinį jūsų profilių rinkinį. Pavyzdžiui, duomenis papildyti galima tik konkrečiame segmente. Galite konfigūruoti kelis to paties tipo papildymus ir pakartotinai naudoti tą patį ryšį. Kai kuriems papildymams bus ribojamas to paties tipo sukuriamų papildymų skaičius. Apribojimus ir dabartinį naudojima galima peržiūrėti puslapyje **Papildymas**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

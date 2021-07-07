@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085632"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306038"
 ---
 # <a name="match-entities"></a>Susiekite objektus
 
@@ -209,7 +209,7 @@ Išbandykite skirtingas sąlygų ribines vertes optimaliai vertei rasti.
 
 Galite konfigūruoti iš naujo ir tiksliai nustatyti daugumą atitikties parametrų.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Išplečiamojo meniu su gretinimo taisyklės parinktimis ekrano kopija.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Išplečiamojo meniu vaizdas su atitikties taisyklės parinktimis.":::
 
 - **Pakeiskite taisyklių eiliškumą**, jeigu apibrėžėte kelias taisykles. Galite pakeisti gretinimo taisyklių tvarką pasirinkdami parinktis **Perkelti aukštyn** ir **Perkelti žemyn** arba nuvilkdami.
 
@@ -247,7 +247,7 @@ Galite nurodyti sąlygas, pagal kurias tam tikri įrašai turi visada atitikti a
 
 1. Eikite **Duomenys** > **Duomenų šaltiniai** ir permeskite šablonų failus kaip naujus objektus. Kai failai paversti, galite juos naudoti atitikties konfigūracijai.
 
-1. Kai galite įkelti failus ir objektus, pasirinkite **pasirinktinės atitikties** parinktį dar kartą, Matysite parametrus, nurodančius objektus, kuriuos norite įtraukti. Iš išskleidžiamojo meniu pasirinkite būtinus objektus.
+1. Kai galite įkelti failus ir objektus, pasirinkite **pasirinktinės atitikties** parinktį dar kartą, Matysite parametrus, nurodančius objektus, kuriuos norite įtraukti. Išplečiamajame meniu pažymėkite reikiamus objektus.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Dialogo lango, kai reikia pasirinkti pasirinktinio atitikties scenarijaus perrašymus, ekrano kopija.":::
 

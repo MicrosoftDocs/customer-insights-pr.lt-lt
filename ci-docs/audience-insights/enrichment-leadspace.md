@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895923"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305212"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Įmonių profilių papildymas su „Leadspace“ (peržiūra)
 
@@ -36,7 +36,7 @@ Norint konfigūruoti „Leadspace“, turi būti tenkinamos šios būtinosios s�
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace plytos momentinė ekrano nuotrauka.":::
 
-1. Išskleidžiamajame sąraše pasirinkite [ryšį](connections.md). Jei ryšio nėra, kreipkitės į administratorių. Jei esate administratorius, ryšį galite sukurti pasirinkdami **Pridėti ryšį** ir **„Leadspace“**. 
+1. Pasirinkite [ryšį](connections.md) iš iškrentančiojo sąrašo. Jei ryšio nėra, kreipkitės į administratorių. Jei esate administratorius, ryšį galite sukurti pasirinkdami **Pridėti ryšį** ir **„Leadspace“**. 
 
 1. Norėdami patvirtinti ryšį pasirinkite **Prisijungti prie „Leadspace“**.
 
@@ -57,13 +57,13 @@ Norint konfigūruoti „Leadspace“, turi būti tenkinamos šios būtinosios s�
 
 Jei norite konfigūruoti ryšius, turite būti administratorius. Pasirinkite **Pridėti ryšį**, kai konfigūruosite papildymą *arba* eikite į **Administravimas** > **Ryšiai** ir plytelėje „Leadspace“ pasirinkite **Sąranka**.
 
-1. Pasirinkite **Darbo pradžia** 
+1. Pasirinkite **Darbo pradžia**. 
 
 1. Laukelyje **Rodomas pavadinimas** įveskite ryšio pavadinimą.
 
 1. Nurodykite galiojantį „Leadspace“ atpažinimo ženklą.
 
-1. Peržiūrėkite ir pateikite sutikimą dėl **Duomenų privatumo ir atitikties** pažymėdami žymės langelį **Sutinku**
+1. Pasirinkdami Sutinku, peržiūrėkite **ir pateikite savo sutikimą dėl** duomenų privatumo ir sąlygų **sutinku**.
 
 1. Pažymėkite **Patvirtinti**, kad patvirtintumėte konfigūraciją.
 
@@ -81,7 +81,7 @@ Daugiau informacijos žr. [„Leadspace“ API](https://support.leadspace.com/hc
 
 ## <a name="next-steps"></a>Tolesni veiksmai
 
-Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [segmentus](segments.md), [matavimus](measures.md) ir net [eksportuokite duomenis](export-destinations.md), kad užtikrintumėte klientų poreikiams pritaikytą aptarnavimą.
+Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [segmentus](segments.md) ir [priemones](measures.md) bei net [eksportuokite duomenis,](export-destinations.md) kad klientams būtų galima teikti personalizuotas funkcijas.
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 

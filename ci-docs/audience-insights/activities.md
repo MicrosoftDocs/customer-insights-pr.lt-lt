@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866417"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304936"
 ---
 # <a name="customer-activities"></a>Kliento veiklos
 
@@ -45,7 +45,7 @@ Jūsų duomenų šaltiniuose gali būti objektų su operacijų ir veiklos duomen
 
    - **Pirma:** veiklos objekto, kuris bus naudojamas ryšiui su kitu objektu užmegzti, laukelis „Svetimas“.
    - **Antra:** atitinkamas šaltinio kliento objektas, su kuriuo sąveikaus jūsų veiklos objektas. Ryšį galite nustatyti tik su tais šaltinio kliento objektais, kurie naudojami duomenų suvienodinimo procese.
-   - **Trečia:** jei ryšys tarp šio veiklos objekto ir pasirinkto šaltinio kliento objekto jau yra, ryšio pavadinimas veiks tik skaitymo režimu. Jei tokio ryšio nėra, bus sukurtas naujas ryšys tokiu pavadinimu, kurį pateikiate šiame laukelyje.
+   - **Trečia:** jei ryšys tarp šio veiklos objekto ir pasirinkto šaltinio kliento objekto jau yra, ryšio pavadinimas veiks tik skaitymo režimu. Jei tokio ryšio nėra, bus sukurtas naujas ryšys tokiu pavadinimu, kurį pateikiate šiame lauke.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Objekto ryšio apibrėžimas.":::
 
@@ -53,23 +53,23 @@ Jūsų duomenų šaltiniuose gali būti objektų su operacijų ir veiklos duomen
 
 1. **Veiklos suvienodinimo** žingsnyje pasirinkite veiklos įvykį ir veiklos pradžios laiką. 
    - **Būtini laukai**
-      1. **Įvykio veikla**: laukelis, kuris yra šios veiklos įvykis
-      2. **Laiko žyma**: laukelis, nurodantis jūsų veiklos pradžios laiką.
+      - **Įvykio veikla**: laukelis, kuris yra šios veiklos įvykis.
+      - **Laiko žyma**: laukelis, nurodantis jūsų veiklos pradžios laiką.
 
    - **Pasirinktiniai laukai**
-      1. **Papildoma informacija**: laukelis su svarbia šios veiklos informacija.
-      2. **Piktograma:** piktograma, geriausiai atspindinti šį veiklos tipą.
-      3. **Žiniatinklio adresas**: laukelis, kuriame yra URL su informacija apie šią veiklą. Pavyzdžiui, tai gali būti operacijų sistema, skirta šiai veiklai. Šis URL gali būti bet kuris laukas iš duomenų šaltinio arba jį galima sukurti kaip naują lauką naudojant „Power Query“ transformaciją. URL duomenys bus išsaugoti *Unified Activity* objektui, kurį galima naudoti tolesniuose srautuose naudojant [API](apis.md).
+      - **Papildoma informacija**: laukelis su svarbia šios veiklos informacija.
+      - **Piktograma:** piktograma, geriausiai atspindinti šį veiklos tipą.
+      - **Žiniatinklio adresas**: laukelis, kuriame yra URL su informacija apie šią veiklą. Pavyzdžiui, tai gali būti operacijų sistema, skirta šiai veiklai. Šis URL gali būti bet kuris laukas iš duomenų šaltinio arba jį galima sukurti kaip naują lauką naudojant „Power Query“ transformaciją. URL duomenys bus išsaugoti *Unified Activity* objektui, kurį galima naudoti tolesniuose srautuose naudojant [API](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Kliento veiklos duomenis nurodykite „Unified Activity“ objekte.":::
 
 1. Norėdami pereiti prie kito veiksmo, pasirinkite **Pirmyn**. Galite pažymėti **Baigti ir peržiūrėti**, kad veiklą įrašytumėte dabar, kai veiklos tipas nustatytas kaip **Kitas**. 
 
-1. Žingsnyje **Veiklos tipas** pasirinkite veiklos tipą ir pasirinktinai pažymėkite, ar norite po kelis veiklos tipus susieti ir naudoti kitose „Customer Insights“ srityse. Šiuo metu veiklos tipus *Prenumerata* & *SalesOrderLine* galima semantiškai susieti sutikus susieti laukelius. Jei veiklos tipas nėra aktualus naujai veiklai, galite pasirinkti *Kita* arba *Kurti naują* pasirinktinio veiklos tipo atveju.
+1. Žingsnyje **Veiklos tipas** pasirinkite veiklos tipą ir pasirinktinai pažymėkite, ar norite po kelis veiklos tipus susieti ir naudoti kitose „Customer Insights“ srityse. Kol kas *prenumeratos* ir *Pardavimo užsakkymo eilutės* veiklos tipus galima susieti po to, kai sutiksite susieti laukus. Jei veiklos tipas nėra aktualus naujai veiklai, galite pasirinkti *Kita* arba *Kurti naują* pasirinktinio veiklos tipo atveju.
 
 1. Norėdami pereiti prie kito veiksmo, pasirinkite **Pirmyn**. 
 
-1. Žingsnyje **Atsiliepimas** patikrinkite savo pasirinkimus. Galite grįžti prie bet kurio iš ankstesnių veiksmų ir, jei reikia, atnaujinti informaciją.
+1. Žingsnyje **Atsiliepimas** patikrinkite savo pasirinkimus. Grįžkite prie bet kurio iš ankstesnių veiksmų ir prireikus atnaujinkite informaciją.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Peržiūrėkite nurodytus veiklos laukelius.":::
    
@@ -89,7 +89,7 @@ Pasirinkus veiklą galimi nurodyti veiksmai.
 
 - **Redaguoti**: peržiūros žingsnyje atidaro veiklos sąranką. Atlikdami šį veiksmą galite keisti bet kurią arba visą dabartinę konfigūraciją. Pakeitę konfigūraciją, pasirinkite **Įrašyti veiklą**, tada pasirinkite **Vykdyti**, kad būtų apdoroti pakeitimai.
 
-- **Pervadinti**: atidaromas dialogas, kuriame galima įvesti kitą pažymėtos veiklos pavadinimą. Pasirinkite **Įrašyti**, kad pritaikytumėte keitimus.
+- **Pervardykite**: atidaromas dialogas, kuriame galite įvesti kitą pažymėtos veiklos pavadinimą. Pasirinkite **Įrašyti**, kad pritaikytumėte keitimus.
 
 - **Trinti**: atidaro dialogą, kad patvirtintų pažymėtos veiklos trynimą. Taip pat iš karto galite ištrinti daugiau nei vieną veiklą, pažymėdami veiklas ir pažymėdami trynimo piktogramą. Pasirinkite **Trinti** ir patvirtinkite ištrynimą.
 

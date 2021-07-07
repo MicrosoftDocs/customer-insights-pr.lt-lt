@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595344"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306084"
 ---
 # <a name="segment-insights-preview"></a>Segmentų įžvalgos (peržiūra)
 
@@ -50,7 +50,7 @@ Pasirinkite įžvalgą, kad pamatytumėte analizės rezultatus:
 
 - Narių skaičius, persidengiančių su analizei pažymėtais segmentais.
 - Narių, įtrauktų į vieną iš segmentų, bet ne likusiais segmentais, skaičius.
-- Jei pažymėjote laukus konfigūruodami persidengimo analizę, jas rasite atitinkamuose skirtukuose. Galite naudoti išskleidžiamąjį filtrą, kad pažymėtumėte bet kurį dominančių atributų lygį, o apačioje esančioje lentelėje būtų rodomi atitinkami duomenys.
+- Jei pažymėjote laukus konfigūruodami persidengimo analizę, jas rasite atitinkamuose skirtukuose. Naudodami filtro išplečiamąjį sąrašą, galite pažymėti bet kokį dominantį atributo lygį, o apačioje esančioje lentelėje bus rodomi atitinkami duomenys.
 
 ## <a name="segment-differentiators"></a>Segmento diferenciatoriai
 

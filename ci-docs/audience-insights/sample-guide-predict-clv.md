@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129955"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306359"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Klientų ciklo reikšmės (CLV) prognozės pavyzdinis vadovas
 
@@ -123,9 +123,9 @@ Peržiūrėkite straipsnius [apie duomenų įtraukimą](data-sources.md) ir [duo
 
 1. Eikite į **Atitikties** skirtuką ir pasirinkite **Nustatyti užsakymą**.
 
-1. **Pagrindiniame** iškrentančiame meniu sąraše pasirinkite **e-komercijos kontaktai : e-komercija** kaip pagrindinį šaltinį ir įtraukite visus įrašus.
+1. Pirminiame **išplečiamajame** sąraše pasirinkite **eCommerceContacts: el. prekyba** pirminis šaltinis ir įtraukite visus įrašus.
 
-1. **Objektas 2** iškrentančiame sąraše pasirinkite **lojalūs klientai : lojalumo schemą** ir įtraukite visus įrašus.
+1. Išplečiamajame sąraše **Objektas 2** pasirinkite **loyCustomers: LoyaltyScheme** įtraukite visus įrašus.
 
    ![Suvienodinti e-komercijos atitiktį ir lojalumą.](media/unify-match-order.png)
 
@@ -133,16 +133,16 @@ Peržiūrėkite straipsnius [apie duomenų įtraukimą](data-sources.md) ir [duo
 
 1. Įtraukite savo pirmąją sąlygą naudodami visą pavadinimą.
 
-   - E-komercijos kontaktams pasirinkite **Visas pavadinimas** iškrentančiame meniu.
-   - Lojalumo klientams pasirinkite **Visas pavadinimas** iškrentančiame meniu.
-   - Pasirinkite **Normalizuoti** išplečiamąjį meniu ir pasirinkite **Tipas (Telefonas, Pavadinimas, Adresas, ...)**.
+   - El. prekyboscontacts išplečiamajame sąraše pažymėkite **Visas vardas**.
+   - loyCustomers išplečiamajame sąraše pažymėkite **Visas vardas**.
+   - Pažymėkite **normalizuoti** išplečiamąjį sąrašą ir pasirinkite **Tipas (Telefonas, Vardas, Adresas, ...)**.
    - Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
 
 1. Įveskite pavadinimą **Visas pavadinimas, El. paštas** naujai taisyklei.
 
    - Įtraukite antrąją sąlygą el. pašto adresui pasirinkdami **Įtraukite sąlygą**
-   - Objekto e-komercijos kontaktams, pasirinkite **El. paštas** iškrentančiame meniu.
-   - Lojalių klientų objektui pasirinkite **El. paštas** iškrentančiame meniu.
+   - Objekto "eCommerceContacts" **išplečiamajame sąraše** pasirinkite "El. paštas".
+   - Objekto loyCustomers **išplečiamajame sąraše** pasirinkite "El. paštas".
    - Palikite normalizavimą tuščią.
    - Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896107"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304982"
 ---
 # <a name="connections-preview-overview"></a>Ryšių (peržiūros) apžvalga
 
@@ -74,7 +74,9 @@ Nustatę arba redaguodami eksportavimo ryšį pasirenkate, kuriems naudotojams b
 
 ## <a name="remove-a-connection"></a>Ryšio pašalinimas
 
-Jei ryšys, kurį šalinate, naudojamas praturtinant ar eksportuojant, pirmiausia turite juos atsieti arba pašalinti. Šalinimo dialogas padės atlikti svarbius papildymus arba eksportavimą. Atsieti papildymai ir eksportavimai tampa neaktyvūs. Iš naujo suaktyvinate juos prie jų pridėdami kitą ryšį puslapyje [Papildymai](enrichment-hub.md) arba [Eksporavimai](export-destinations.md).
+Jei ryšys, kurį šalinate, naudojamas praturtinant ar eksportuojant, pirmiausia turite juos atsieti arba pašalinti. Šalinimo dialogas padės atlikti svarbius papildymus arba eksportavimą. 
+
+Atsieti papildymai ir eksportavimai tampa neaktyvūs. Iš naujo suaktyvinate juos prie jų pridėdami kitą ryšį puslapyje [Papildymai](enrichment-hub.md) arba [Eksporavimai](export-destinations.md).
 
 1. Eikite į **Administravimas** > **Ryšiai (peržiūra)**.
 
