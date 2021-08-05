@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977387"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327374"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Duomenų eksportavimas į „Azure Synapse Analytics” (Peržiūros versija)
 
@@ -74,8 +74,10 @@ Turite atitikti toliau pateiktas būtinąsias sąlygas, kad sukonfigūruotumėte
 1. Savo eksportavimui pateikite atpažįstamą **Rodomą pavadinimą** ir **Duomenų bazės pavadinimą**.
 
 1. Pasirinkite objektus, kuriuos norite eksportuoti į „Azure Synapse Analytics”.
+   > [!NOTE]
+   > Duomenų šaltiniai, pagrįsti [„Common Data Model” aplanku](connect-common-data-model.md) nėra palaikomi.
 
-1. Pasirinkite **Įrašyti**.
+2. Pasirinkite **Įrašyti**.
 
 Eksportavimo įrašymas eksportavimo iš karto nevykdo.
 

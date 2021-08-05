@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596555"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554904"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Jungimasis prie „Common Data Model” aplanko naudojant „Azure Data Lake” klientą
 
@@ -45,7 +45,7 @@ ms.locfileid: "5596555"
 
 1. Galite pasirinkti tarp naudojimo resursais pagrįstos parinkties ir prenumeravimu pagrįstos parinkties autentifikavimui. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Įveskite **Talpyklos** informaciją ir pasirinkite **Toliau**.
    > [!div class="mx-imgBorder"]
-   > ![Dialogo langas, skirtas naujai „Azure Data Lake“](media/enter-new-storage-details.png)
+   > ![Dialogo langas, skirtas naujai „Azure Data Lake“.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Kad galėtumėte prisijungti ir kurti abonementą, jums reikalingas vienas iš šių vaidmenų : konteinerio arba anksčiau nurodytas saugyklos duomenų šaltinis:
    >  - „Storage Blob Data“ skaitytojas
@@ -58,11 +58,11 @@ ms.locfileid: "5596555"
 
 1. Gausite galimų objektų sąrašą pasirinktame model.json arba sertifikato.json faile. Galite peržiūrėti ir pasirinkti objektus iš galimų objektų sąrašo, o tada pasirinkti **Įrašyti**. Visi pasirinkti objektai bus vartojami iš naujo duomenų šaltinio.
    > [!div class="mx-imgBorder"]
-   > ![Dialogo langas, kuriame pateikiamas sąrašas su objektais iš model.json failo](media/review-entities.png)
+   > ![Dialogo langas, kuriame pateikiamas sąrašas su objektais iš model.json failo.](media/review-entities.png)
 
 8. Nurodykite, kuriems duomenų objektams norite įjungti duomenų profiliavimą ir pasirinkite **Įrašyti**. Duomenų profiliavimas įgalina analizės ir kitas galimybes. Galite pasirinkti visą objektą, kuris pasirenka visus atributus iš objekto ar pasirinkite tam tikrus jūsų pasirinkimo atributus. Pagal nutylėjimą, nėra jokio objekto įjungto duomenų profiliavimui.
    > [!div class="mx-imgBorder"]
-   > ![Teksto laukelis rodo duomenų profiliavimą](media/dataprofiling-entities.png)
+   > ![Teksto laukelis rodo duomenų profiliavimą.](media/dataprofiling-entities.png)
 
 9. Įrašius pasirinkimus, atidaromas puslapis **Duomenų šaltiniai**. Dabar turėtumėte matyti „Common Data Model“ aplanko ryšį kaip duomenų šaltinį.
 
@@ -81,12 +81,12 @@ Galite naujinti prieigos raktą paskyros talpinimui, kurioje yra „Common Data 
 
 4. Taip pat galite atnaujinti **Prieigos raktą** ir pasirinkti **Pirmyn**.
 
-   ![Esamo duomenų šaltinio prieigos rakto redagavimo ir naujinimo dialogo langas](media/edit-access-key.png)
+   ![Esamo duomenų šaltinio prieigos rakto redagavimo ir naujinimo dialogo langas.](media/edit-access-key.png)
 
 5. Pasirinktinai galite naujinti iš paskyros pagrindinių pagrįstų jungčių į resursais pagrįstą ar prenumeravimu pagrįstą jungtį. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Negalite keisti **Talpyklos** informacijos naujinant jungtį.
    > [!div class="mx-imgBorder"]
 
-   > ![Dialogo langas, skirtas įvesti informacijai apie „Azure Data Lake” ryšį su esamu saugyklos abonementu įvesti](media/enter-existing-storage-details.png)
+   > ![Dialogo langas, skirtas įvesti informacijai apie „Azure Data Lake” ryšį su esamu saugyklos abonementu įvesti.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Kad galėtumėte prisijungti ir kurti abonementą, jums reikalingas vienas iš šių vaidmenų : konteinerio arba anksčiau nurodytas saugyklos duomenų šaltinis:

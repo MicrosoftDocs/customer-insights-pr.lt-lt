@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597153"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554031"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Klientų profiliai: ieškos ir filtro rodyklė
 
 Kliento duomenų suvienodinimo rezultatas yra kliento profilio objektas, kuris jūsų bendroje klientų bazėje teikia vieningą rodinį. Norėdami greitai [rasti informaciją apie tam tikrą klientą arba klientų grupę](customer-profiles.md), galite sukonfigūruoti **ieškos** ir **filtro** galimybes **klientų** puslapyje. Skaitydami toliau sužinosite, kaip administratoriai gali redaguoti **ieškos ir filtrų rodyklės** puslapyje esančius atributus, pasiekiamus norint ieškoti ir filtruoti.
 
 > [!div class="mx-imgBorder"]
-> ![Ieškos filtras](media/search-filter.png "Ieškos filtras")
+> ![Ieškos filtras.](media/search-filter.png "Ieškos filtras")
 
 ## <a name="add-fields-and-specify-attributes"></a>Įtraukti laukus ir nurodyti atributus
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124237"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362519"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmentų eksportavimas į „Mailchimp“ (peržiūros versija)
 
@@ -38,7 +38,7 @@ Eksportuoti suvienodintų kliento profilių segmentus į „Mailchimp“ siekian
 
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„Autopilot“**, kad sukonfigūruotumėte ryšį.
+1. Pasirinkite **Įtraukti ryšį** ir pasirinkite **„MailChimp“,** kad sukonfigūruotumėte ryšį.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 

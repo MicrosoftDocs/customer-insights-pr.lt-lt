@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095566"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556134"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produkto rekomendacijos prognozė (apžvalga)
 
@@ -64,7 +64,7 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 
 1. Rinkitės **Produkto rekomendacijų modelis (peržiūra)** plytelę ir rinkitės **Naudoti šį** modelį.
    > [!div class="mx-imgBorder"]
-   > ![Produkto rekomendacijų modelio plytelė su mygtuku Naudoti šį modelį](media/product-recommendation-usethismodel.PNG "Produkto rekomendacijų modelio plytelė su mygtuku Naudoti šį modelį")
+   > ![Produkto rekomendacijų modelio plytelė su mygtuku Naudoti šį modelį.](media/product-recommendation-usethismodel.PNG "Produkto rekomendacijų modelio plytelė su mygtuku Naudoti šį modelį")
 
 1. Peržiūrėkite informaciją apie modelio reikalavimus. Jei turite reikiamus duomenis, pažymėkite **Darbo pradžia**.
 
@@ -93,7 +93,7 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 
 1. Sudarykite semantinių laukelių žemėlapį į atributus per jūsų įsigijimo istorijos objektą ir pasirinkite **Kitas**. Norėdami peržiūrėti laukų aprašymus, peržiūrėkite [būtinąsias sąlygas](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Objekto ryšio apibrėžimas](media/product-recommendation-purchasehistorymapping.PNG "Pirkimo retrospektyvos puslapis, kuriame rodomi semantiniai atributai, susieti su pasirinkto pirkimo retrospektyvos objekto laukais")
+   > ![Objekto ryšio apibrėžimas.](media/product-recommendation-purchasehistorymapping.PNG "Pirkimo retrospektyvos puslapis, kuriame rodomi semantiniai atributai, susieti su pasirinkto pirkimo retrospektyvos objekto laukais")
 
 1. Jei toliau laukų neužpildote, konfigūruokite ryšį iš pirkimo retrospektyvos objekto į *Kliento* įrašą.
     1. Pasirinkite **Įsigijimo istorijos objektas**.
@@ -101,7 +101,7 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
     1. Pasirinkite **kliento objektą**, atitinkantį pirminį kliento objektą.
     1. Įveskite pavadinimą, apibūdinantį ryšį.
        > [!div class="mx-imgBorder"]
-       > ![Įsigijimo istorijos puslapis rodo ryšių sukūrimą su klientu](media/model-purchase-join.png "Įsigijimo istorijos puslapis rodo ryšių sukūrimą su klientu")
+       > ![Įsigijimo istorijos puslapis rodo ryšių sukūrimą su klientu.](media/model-purchase-join.png "Įsigijimo istorijos puslapis rodo ryšių sukūrimą su klientu")
 
 1. Pasirinkite **Įrašyti**.
 
@@ -145,7 +145,7 @@ Kartais tik tam tikri produktai yra naudingi arba tinkami jūsų sukurtos progno
 
 1. Eikite į skirtuką **Mano prognozės** iš **Duomenų rinkimas** > **Prognozės**.
    > [!div class="mx-imgBorder"]
-   > ![Mano prognozių puslapio rodinys](media/product-recommendation-mypredictions.PNG "Mano prognozių puslapio rodinys")
+   > ![Mano prognozių puslapio rodinys.](media/product-recommendation-mypredictions.PNG "Mano prognozių puslapio rodinys")
 
 1. Pasirinkite prognozę, kurią norite peržiūrėti.
    - **Prognozės pavadinimas:** kūrimo metu nurodytas prognozės pavadinimas.
@@ -163,7 +163,7 @@ Kartais tik tam tikri produktai yra naudingi arba tinkami jūsų sukurtos progno
 
 1. Pažymėkite vertikalius daugtaškius šalia prognozės, kurios rezultatus norite peržiūrėti, ir pasirinkite **Rodyti**.
    > [!div class="mx-imgBorder"]
-   > ![Prognozės parinkčių peržiūra vertikalių daugtaškių meniu, įskaitant redagavimą, atnaujinimą, peržiūrą, žurnalus ir šalinimą](media/product-recommendation-verticalellipses.PNG "Prognozės parinkčių peržiūra vertikalių daugtaškių meniu, įskaitant redagavimą, atnaujinimą, peržiūrą, žurnalus ir šalinimą")
+   > ![Prognozės parinkčių peržiūra vertikalių daugtaškių meniu, įskaitant redagavimą, atnaujinimą, peržiūrą, žurnalus ir šalinimą.](media/product-recommendation-verticalellipses.PNG "Prognozės parinkčių peržiūra vertikalių daugtaškių meniu, įskaitant redagavimą, atnaujinimą, peržiūrą, žurnalus ir šalinimą")
 
 1. Rezultatų puslapyje yra penkios pagrindinės duomenų skiltys:
     1. **Mokymo modelio efektyvumas:** galimi balai yra A, B arba C. Šis rezultatas nurodo prognozės efektyvumą ir gali padėti apsispręsti naudoti išvesties objekte saugomus rezultatus.
@@ -173,13 +173,13 @@ Kartais tik tam tikri produktai yra naudingi arba tinkami jūsų sukurtos progno
             - **C** Modelis laikomas **C** kokybės, jei „Success @ K“ metrika yra mažesnė nei pradinė vertė.
                
                > [!div class="mx-imgBorder"]
-               > ![Modelio efektyvumo rezultato rodinys](media/product-recommendation-modelperformance.PNG "Modelio efektyvumo rezultato rodinys")
+               > ![Modelio efektyvumo rezultato rodinys.](media/product-recommendation-modelperformance.PNG "Modelio efektyvumo rezultato rodinys")
             - **Pradinis**: modelis atsižvelgia į svarbiausius rekomenduojamus produktus, kai perkant naudojami visi klientai ir, naudojant modelio nustatytas išmokintas taisykles, klientams nustatomas rekomendacijų rinkinys. Tada prognozės lyginamos su geriausiais produktais ir apskaičiuojamos pagal klientų, kurie įsigijo produktą, skaičių. Jei klientas savo rekomenduojamuose produktuose turi bent vieną produktą, kuris taip pat buvo matomas geriausiai įsigytuose produktuose, jis laikomas pradinės linijos dalimi. Jei 10 iš šių klientų būtų įsigiję rekomenduojamą produktą iš 100 bendro klientų, pradinis atskaitos skaičius būtų 10%.
             - **Sėkmė @ K**: naudojant operacijų laikotarpio tikrinimo rinkinį, visiems klientams kuriamos rekomendacijos ir jos lyginamos su operacijų tikrinimo rinkinys. Pavyzdžiui, 12 mėnesių laikotarpiu 12 mėnesį galima atidėti kaip duomenų tikrinimo rinkinį. Jei modelis numato bent vieną dalyką, kurį galėtumėte įsigyti 12 mėnesį pagal tai, ką jis išmoko iš ankstesnių 11 mėnesių, klientas padidins metriką „Sėkmė @ K”.
     
     1. **Daugelis siūlomų produktų (su rezultatu):** penki pagrindiniai produktai, kurie buvo prognozuojami klientams.
        > [!div class="mx-imgBorder"]
-       > ![Grafikas, kuriame rodomi 5 populiariausi produktai](media/product-recommendation-topproducts.PNG "Grafikas, kuriame rodomi 5 populiariausi produktai")
+       > ![Grafikas, kuriame rodomi 5 populiariausi produktai.](media/product-recommendation-topproducts.PNG "Grafikas, kuriame rodomi 5 populiariausi produktai")
     
     1. **Pagrindiniai rekomendacijų veiksniai:** produktų rekomendacijoms teikti modelis naudoja klientų sandorių istoriją. Jis išmoksta modelius pagal paskutinius pirkimus ir rand panašumų tarp klientų ir produktų. Tada šie panašumai naudojami produktų rekomendacijoms generuoti.
     Toliau nurodyti veiksniai, galintys turėti įtakos pagal modelį sugeneruotai produkto rekomendacijai. 
@@ -190,20 +190,20 @@ Kartais tik tam tikri produktai yra naudingi arba tinkami jūsų sukurtos progno
         Kiekvienai produkto rekomendacijosi įtakos turi vienas ar keli iš šių veiksnių. Rekomendacijų, kai kiekvienas įtakojantis veiksnys atliko tam tikrą vaidmenį, dalis procentais vaizduojama diagramoje. Toliau pateikiamme pavyzdyje 100 % rekomendacijų įtakos turėjo ankstesni sandoriai. Iš jų 60 % pagal klientų panašumą, o 22 % pagal produktų panašumą. Pelės žymeklį palaikykite virš diagramos juostų, kad peržiūrėtumėte procentinę įtaką darančių veiksnių dalį.
 
         > [!div class="mx-imgBorder"]
-        > ![Pagrindiniai rekomendacijų veiksniai](media/product-recommendation-keyrecommendationfactors.png "Pagrindiniai rekomendacijų veiksniai, kuriuos išmoksta modelis produktų rekomendacijoms generuoti")
+        > ![Pagrindiniai rekomendacijų veiksniai.](media/product-recommendation-keyrecommendationfactors.png "Pagrindiniai rekomendacijų veiksniai, kuriuos išmoksta modelis produktų rekomendacijoms generuoti")
        
      
    1. **Duomenų statistika**: apžvelgiamas operacijų, klientų ir produktų, į kuriuos atsižvelgė modelis, skaičius. Jis pagrįstas įvesties duomenimis, kurie buvo naudojami modeliams išmokti ir produkto rekomendacijoms generuoti.
 
       > [!div class="mx-imgBorder"]
-      > ![Duomenų statistika](media/product-recommendation-datastatistics.png "Duomenų statistika apie modelio naudojamus įvesties ir išvesties duomenis šablonams išmokti")
+      > ![Duomenų statistika.](media/product-recommendation-datastatistics.png "Duomenų statistika apie modelio naudojamus įvesties ir išvesties duomenis šablonams išmokti")
 
       Šiame skyriuje rodoma duomenų taškų, kuriuos modelis naudojo modelyje, statistika, siekiant išmokti modelius ir generuoti produkto rekomendacijas. Filtravimas, sukonfigūruotas modelio konfigūracijoje, bus taikomas modelio sugeneruotam rezultatui. Tačiau modelis naudoja visus turimus duomenis modeliams išmokti. Todėl, jei modelio konfigūracijoje naudosite produktų filtravimą, šiame skyriuje bus rodomas bendras produktų, kuriuos išanalizavo modelis, kad išmoktų šablonus, skaičius, kuris gali skirtis nuo apibrėžtus filtravimo kriterijus atitinkančių produktų skaičiaus.
 
    1. **Didelio pasitikėjimo produktų rekomendacijos:** jūsų klientams pateiktų rekomendacijų, kuris modelis tikėtinai bus nupirktas kliento, pavyzdys.    
       Jei pridedamas produktų katalogas, produkto ID pakeičiamas produktų pavadinimais. Produktų pavadinimuose pateikiama daugiau veiksmų ir intuityvios informacijos apie prognozes.
        > [!div class="mx-imgBorder"]
-       > ![Sąrašas, kuriame rodomi aukšti pavienių klientų rinkinio pasiūlymai](media/product-recommendation-highconfidence.PNG "Sąrašas, kuriame rodomi aukšti pavienių klientų rinkinio pasiūlymai")
+       > ![Sąrašas, kuriame rodomi aukšti pavienių klientų rinkinio pasiūlymai.](media/product-recommendation-highconfidence.PNG "Sąrašas, kuriame rodomi aukšti pavienių klientų rinkinio pasiūlymai")
 
 ## <a name="manage-predictions"></a>Prognozių valdymas
 

@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595911"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692537"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Dalinių duomenų papildymas naudojant prognozes
 
@@ -31,11 +31,11 @@ Prognozės leidžia lengvai kurti numatomas reikšmes, kurios gali pagerinti jū
 
 Tam, kad jūsų organizacija galėtų naudoti prognozių funkciją, įsitikinkite, kad tenkinamos šios būtinosios sąlygos:
 
-1. Jūsų organizacija turi objektą [nustatykite „Common Data Service“](/ai-builder/build-model#prerequisites) ir jas toje pačioje organizacijoje kaip „Customer Insights“.
+1. Jūsų organizacijoje yra egzempliorius, kuris [nustatytas „Microsoft Dataverse”](/ai-builder/build-model#prerequisites) ir esantis toje pačioje organizacijoje kaip ir „Customer Insights”.
 
-2. Jūsų aplinka yra pridėta prie jūsų „Common Data Service“ elemento.
+2. Jūsų auditorijos įžvalgų aplinka pridedama prie jūsų „Dataverse” egzemplioriaus.
 
-Jei [kuriate naują aplinką](manage-environments.md), sukonfigūruokite ją dialogo lange **Kurti aplinką** ir pasirinkite **Išsamiau**. Jei jau sukūrėte aplinką, pereikite prie jos parametrų ir pasirinkite **Išsamiau**. Bet kuriuo būdu, **Naudoti prognozes** skyriuje eikite į „Common Data Service“ elemento URL, prie kurio norite pridėti savo aplinką.
+Jei [kuriate naują aplinką](get-started-paid.md), sukonfigūruokite ją dialogo lange **Kurti aplinką** ir pasirinkite **Išsamiau**. Jei jau sukūrėte aplinką, pereikite prie jos parametrų ir pasirinkite **Išsamiau**. Bet kuriuo būdu, **Naudoti prognozes** skyriuje eikite į „Dataverse“ elemento URL, prie kurio norite pridėti savo aplinką.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Sukurkite prognozę kliento objekte
 
@@ -47,17 +47,17 @@ Jei [kuriate naują aplinką](manage-environments.md), sukonfigūruokite ją dia
 
 4. Raskite atributo pavadinimą, kuriam norite prognozuoti reikšmės, tada stulpelyje **Suvestinė** pasirinkite piktogramą **Apžvalga**.
    > [!div class="mx-imgBorder"]
-   > ![Apžvalgos piktograma](media/intelligence-overviewicon.png "Apžvalgos piktograma")
+   > ![Apžvalgos piktograma.](media/intelligence-overviewicon.png "Apžvalgos piktograma")
 
 5. Jei jūsų atributui priskiriamas didelis kiekis trūkstamų reikšmių, pasirinkite **Numatyti trūkstamas reikšmes**, kad tęstumėte prognozę.
    > [!div class="mx-imgBorder"]
-   > ![Apžvalgos būsena su rodomu numatomų trūkstamų reikšmių mygtuku](media/intelligence-overviewpredictmissingvalues.png "Apžvalgos būsena su rodomu numatomų trūkstamų reikšmių mygtuku")
+   > ![Apžvalgos būsena su rodomu numatomų trūkstamų reikšmių mygtuku.](media/intelligence-overviewpredictmissingvalues.png "Apžvalgos būsena su rodomu numatomų trūkstamų reikšmių mygtuku")
 
 6. Įrašykite **rodomą pavadinimą** ir **išvesties objekto pavadinimą**, kad peržiūrėtumėte prognozės rezultatus.
 
 7. Iš anksto paruoštame parinkčių sąraše matysite, kur galite susieti reikšmes su numatoma kategorija. Tokiu atveju jūsų vienintelės kategorijos parinktys bus 0 arba 1, nes šios reikšmės susietos su „teisinga“ / „klaidinga“ arba dvejetainiu prognozės pobūdžiu. Kategorijos stulpelyje lauko reikšmes, kurios galutinėje prognozėje turėtų būti klasifikuojamos kaip „0“, susiekite su „0“, o elementus, kurie galutinėje prognozėje turėtų būti klasifikuojami kaip „1“, susiekite su „1“.
    > [!div class="mx-imgBorder"]
-   > ![Lauko reikšmių, susietų į kategorijas, pavyzdys](media/intelligence-categorymapping.png "Lauko reikšmių, susietų į kategorijas, pavyzdys")
+   > ![Lauko reikšmių, susietų į kategorijas, pavyzdys.](media/intelligence-categorymapping.png "Lauko reikšmių, susietų į kategorijas, pavyzdys")
 
 8. Pažymėkite **Atlikta** ir prognozė bus apdorota. Atsižvelgiant į duomenų dydį ir sudėtingumą, apdorojimas užtruks šiek tiek laiko. Rezultatai bus prieinami naujame objekte pagal sukurtos prognozės **išvesties objekto pavadinimą**.
 
@@ -77,7 +77,7 @@ Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus se
 
 5. Jei jūsų sukurtas segmentas turi neišsamius duomenis šaltinio lauke, galite pasirinkti prognozuoti trūkstamas reikšmes.
    > [!div class="mx-imgBorder"]
-   > ![Prognozės mygtukas](media/segments-predictoption.png "Prognozės mygtukas")
+   > ![Prognozės mygtukas.](media/segments-predictoption.png "Prognozės mygtukas")
 
 6. Įrašykite **rodomą pavadinimą** ir **išvesties objekto pavadinimą**, kad peržiūrėtumėte prognozės rezultatus.
 
@@ -93,7 +93,7 @@ Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus se
 
 4. Peržiūrint prognozę matysite duomenų taškų skaičių.
    > [!div class="mx-imgBorder"]
-   > ![Prognozių puslapis](media/intelligence-predictionsviewpage.png "Prognozių puslapis")
+   > ![Prognozių puslapis.](media/intelligence-predictionsviewpage.png "Prognozių puslapis")
 
    - **Numatomos reikšmės** rodo susiejimą, kurį sukūrėte lauko reikšmės susiejimo į kategoriją fazėje. Tai yra jūsų duomenų rinkinio reikšmės, susietos su konkrečia kategorija.
    -**Labiausiai įtakojantys veiksniai** yra jūsų duomenų rinkinio veiksniai, kurie galėjo turėti daugiausiai įtakos prognozės patikimumui, kai jūsų lauko reikšmė buvo susiejama su konkrečia kategorija.
@@ -139,7 +139,7 @@ Kitame jūsų prognozės vykdyme bus naudojamas jūsų sukurtas atnaujintas mode
 
 ## <a name="troubleshooting"></a>Trikčių šalinimas
 
-Jei dėl klaidos negalite baigti „Common Data Service“ pridėjimo proceso, procesą galite bandyti užbaigti rankiniu būdu. Yra dvi žinomos problemos, kurios gali kilti pridėjimo procese.
+Jei dėl klaidos negalite baigti „Dataverse“ pridėjimo proceso, procesą galite bandyti užbaigti rankiniu būdu. Yra dvi žinomos problemos, kurios gali kilti pridėjimo procese.
 
 - Kliento kortelės papildinio sprendimas nėra įdiegtas.
     1. Vadovaukitės instrukcijomis, kad [įdiegtumėte ir sukonfigūruotumėte sprendimą](customer-card-add-in.md).

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305652"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554858"
 ---
 # <a name="custom-machine-learning-models"></a>Pasirinktiniai mašininio mokymo modeliai
 
@@ -42,7 +42,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 1. Pasirinktiniam modeliui suteikite atpažįstamą pavadinimą lauke **Pavadinimas**.
 
    > [!div class="mx-imgBorder"]
-   > ![Naujos darbo eigos srities ekrano kopija](media/new-workflowv2.png "Naujos darbo eigos srities ekrano kopija")
+   > ![Naujos darbo eigos srities ekrano kopija.](media/new-workflowv2.png "Naujos darbo eigos srities ekrano kopija")
 
 1. Pasirinkite organizaciją, kurioje **Nuomininkas, kuriame yra jūsų žiniatinklio tarnyba** yra žiniatinklio tarnyba.
 
@@ -59,7 +59,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
    > Pasirinktinio modelio darbo eiga taisys atributus, kuriuos naudojant žiniatinklio tarnybos įvesties laukai bus susieti su objekto atributais pagal lauko pavadinimą ir duomenų tipą. Matysite klaidą, jei žiniatinklio tarnybos lauko negalima susieti su objektu.
 
    > [!div class="mx-imgBorder"]
-   > ![Darbo eigos konfigūravimas](media/intelligence-screen2-updated.png "Darbo eigos konfigūravimas")
+   > ![Darbo eigos konfigūravimas.](media/intelligence-screen2-updated.png "Darbo eigos konfigūravimas")
 
 1. **Modelio išvesties parametrų** žingsnyje nustatykite tolesnes ypatybes:
    - Mašininio mokymosi studija (įprasta versija)
@@ -70,12 +70,12 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
       1. Pasirinkite jūsų bendro vamzdyno iš iškrentančio meniu **Išvesties kelio parametro pavadinimas**.
 
       > [!div class="mx-imgBorder"]
-      > ![Modelio išvesties parametro juosta](media/intelligence-screen3-outputparameters.png "Modelio išvesties parametro juosta")
+      > ![Modelio išvesties parametro juosta.](media/intelligence-screen3-outputparameters.png "Modelio išvesties parametro juosta")
 
 1. Pasirinkite gretinimo atributą iš **Kliento ID rezultatuose** išplečiamojo sąrašo, kuris nustato klientus ir rinkitės **Įrašyti**.
 
    > [!div class="mx-imgBorder"]
-   > ![Susiekite rezultatus su kliento duomenų juosta](media/intelligence-screen4-relatetocustomer.png "Susiekite rezultatus su kliento duomenų juosta")
+   > ![Susiekite rezultatus su kliento duomenų juosta.](media/intelligence-screen4-relatetocustomer.png "Susiekite rezultatus su kliento duomenų juosta")
 
 1. Matysite ekraną **Darbo eiga įrašyta** su informacija apie darbo eigą.    
    Jei konfigūruojate darbo eigą „Azure“ mašininio mokymosi vamzdynui, publikos įžvalgos bus pridėtos prie darbo aplinkos, kuri turi vamzdyną. Publikos įžvalgos įgaus  **Prisidėjusiojo** vaidmenį „Azure“ darbo aplinkoje.

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304752"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554491"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbas su „Customer Insights“ API
 
@@ -35,7 +35,7 @@ ms.locfileid: "6304752"
  
    API įjungimas sukuria pirmąjį ir antrąjį prenumeravimo raktą jūsų elementui, kuris yra naudojamas API prašymų. Galite sukurti iš naujo raktus pasirinkdami **Sukurti iš naujo pirminį** ar **Sukurti iš naujo antrinį** skyriuose **Administratorius** > **Teisės** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Įjungti „Customer Insights“ API":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Įjungti Customer Insights API.":::
 
 1. Pasirinkite **Naršyti mūsų API** norėdami [išbandyti API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Sužinokite, kaip pradėti naudojant C# kliento bibliotekas iš NuGet.org. Dėl 
  
    Kitu atveju, vykdykite šią komandą **NuGet paketo tvarkytuvo konsolėje**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Įtraukite NuGet paketą į „Visual Studio“ projektą":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Įtraukite NuGet paketą į Visual Studio projektą.":::
 
 #### <a name="use-the-c-client-library"></a>Naudokite C# kliento biblioteką
 
@@ -141,7 +141,7 @@ Sužinokite, kaip pradėti naudojant C# kliento bibliotekas iš NuGet.org. Dėl 
 
 1. Praleiskite šį `HttpClient` į `CustomerInsights` kliento sukūrimą.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Http kliento pavyzdys":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Http kliento pavyzdys.":::
 
 1. Atlieka skambučius su klientu „plėtinio metodams“, pavyzdžiui  `GetAllInstancesAsync`. Jei norite prieiti prie po juo esančiu `Microsoft.Rest.HttpOperationResponse`, naudokite „http žinutės metodai”, pavyzdžiui `GetAllInstancesWithHttpMessagesAsync`.
 

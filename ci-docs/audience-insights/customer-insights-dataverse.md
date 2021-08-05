@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259201"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650052"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Dirbkite su „Customer Insights“ duomenimis „Microsoft Dataverse” platformoje
 
@@ -24,11 +24,11 @@ ms.locfileid: "6259201"
 
 **Organizacijos su esamomis „Dataverse” aplinkomis**
 
-Organizacijos, kurios jau naudoja „Dataverse”, gali [naudoti vieną iš jų esamų „Dataverse” aplinkų](manage-environments.md#create-an-environment-in-an-existing-organization), kai administratorius nustato auditorijos įžvalgas. Pateikiant URL į „Dataverse” aplinką, jis pridedamas prie naujos auditorijos įžvalgų aplinkos. Norint užtikrinti geriausią galimą efektyvumą, „Customer Insights” ir „Dataverse” aplinkos turi būti nuomojamos tame pačiame regione.
+Organizacijos, kurios jau naudoja „Dataverse”, gali [naudoti vieną iš jų esamų „Dataverse” aplinkų](get-started-paid.md), kai administratorius nustato auditorijos įžvalgas. Pateikiant URL į „Dataverse” aplinką, jis pridedamas prie naujos auditorijos įžvalgų aplinkos. Norint užtikrinti geriausią galimą efektyvumą, „Customer Insights” ir „Dataverse” aplinkos turi būti nuomojamos tame pačiame regione.
 
 Norėdami pridėti „Dataverse” aplinką, išplėskite **Išplėstinius parametrus**, kai kuriate auditorijos įžvalgų aplinką. Nurodykite **„Microsoft Dataverse” aplinkos URL** ir pasirinkite žymės langelį **Įgalinti duomenų bendrinimą**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alte":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
 
 **Nauja organizacija**
 

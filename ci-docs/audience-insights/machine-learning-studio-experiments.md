@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598349"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555179"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Naudokite modelius pagrįstus „Azure“ Mašininio mokymo studija (įprasta programa)
 
@@ -41,7 +41,7 @@ Pirmajame žingsnyje mums reikia sukurti darbo aplinką ir atverti Mašininio mo
 
 1. Sukūrus išteklių bus rodoma mašininio mokymo studijos darbo srities ataskaitų sritis. Pasirinkite **Paleisti mašininio mokymo studiją**.
 
-   ![„Azure” mašininio mokymo studijos vartotojo sąsaja](media/azure-machine-learning-studio.png)
+   ![„Azure” mašininio mokymo studijos vartotojo sąsaja.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Darbas su „Azure“ mašininio mokymo studija
 
@@ -55,7 +55,7 @@ Dabar galite sukurti naują bandymą arba importuoti esamą bandymo šabloną i�
 
 1. Jei kuriate naują bandymą arba naudojate bandymo šabloną iš galerijos, turite sukonfigūruoti **duomenų importavimo** ypatybes. Naudokite gairių patirtį ar tiesiogiai teikite išsamią informaciją siekiant prieiti prie „Azure Blob Storage“, kuriame yra jūsų duomenys.  
 
-   ![„Azure“ mašininio mokymo studijos bandymas](media/azure-machine-learning-studio-experiment.png)
+   ![„Azure“ mašininio mokymo studijos bandymas.](media/azure-machine-learning-studio-experiment.png)
 
 1. Dabar galite kurti pasirinktinį apdorojimo srautą, kad galėtumėte išvalyti ir iš anksto apdoroti duomenis, išskleisti funkcijas ir išmokyti tinkamą modelį.
 
@@ -63,15 +63,15 @@ Dabar galite sukurti naują bandymą arba importuoti esamą bandymo šabloną i�
 
 1. Kai esate patenkinti modelio kokybe, pasirinkite **Nustatyti žiniatinklio tarnybą** > **Prognozinė žiniatinklio tarnyba**. Šia parinktimi importuojami išmokomas modelis ir funkcijų rinkinių nustatymo srautas iš mokomojo bandymo į prognozinę tarnybą. Prognozinė tarnyba gali naudoti kitą įvesties duomenų rinkinį su schema, naudojama mokomajame bandyme, teikti prognozes.
 
-   ![Prognozinės žiniatinklio tarnybos nustatymas](media/predictive-webservice-control.png)
+   ![Prognozinės žiniatinklio tarnybos nustatymas.](media/predictive-webservice-control.png)
 
 1. Kai prognozinės žiniatinklio tarnybos bandymas yra sėkmingas, galite jį visuotinai diegti automatiniam planavimui. Jei norite, kad žiniatinklio tarnyba veiktų su „Customer Insights”, pasirinkite **Visuotinai diegti žiniatinklio tarnybą** > **Visuotinai diegti žiniatinklio tarnybos [naują] peržiūros versiją**. [Sužinokite daugiau apie žiniatinklio tarnybos visuotinį diegimą](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Prognozinės žiniatinklio tarnybos visuotinis diegimas](media/predictive-webservice-deploy.png)
+   ![Prognozinės žiniatinklio tarnybos visuotinis diegimas.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Modelių pavyzdžiai iš galerijos
 
-Šiame straipsnyje modeliams naudojame sugalvotą viešbutį „Danys“ scenarijų. Viešbutis „Danys“ renka šiuos duomenis:
+Šiame straipsnyje modeliams naudosime fiktyvų „Contoso Hotel” scenarijų. „Contoso Hotel” renka šiuos duomenis:
 
 - CRM duomenis, kuriuos sudaro apsistojimo viešbutyje veikla. Į duomenų rinkinį įtraukiama informacija apie kiekvieno registruoto kliento apsistojimo datas. Jame taip pat yra informacija apie rezervavimą, kambarių tipus, išsami informacija apie išlaidas ir t. t. Duomenys apima ketverius metus, nuo 2014 m. sausio mėn. iki 2018 m. sausio mėn.
 - Viešbučio svečių klientų profiliai. Šiuose profiliuose pateikiama informacija apie kiekvieną klientą, įskaitant jo vardą bei pavardę, gimimo datą, pašto adresą, lytį ir telefono numerį.
@@ -87,13 +87,13 @@ Klientų praradimo apibrėžtis gali skirtis atsižvelgiant į scenarijų. Šiam
 
 Eksperimento šablonas gali būti importuojamas iš galerijos. Pirmiausia, užsitikrinkite, kad importavote duomenis **Apsistojimo viešbutyje veiklai**, **Kliento duomenis** ir **Paslaugų naudojimo duomenys** iš „Azure Blob“ talpinimo.
 
-   ![Importuoti klientų praradimo modelio duomenis](media/import-data-azure-blob-storage.png)
+   ![Importuoti klientų praradimo modelio duomenis.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Funkcijų rinkinių nustatymas
 
 Remiantis nutraukimo sąvoka, pirmiausia nustatysime neapdorotas funkcijas, kurios paveiks žymą. Tada apdorosime šias neapdorotas funkcijas į skaitines funkcijas, kurias galima naudoti su mašininio mokymo modeliais. Duomenų integravimas vykdomas „Customer Insights“, todėl galime prisijungti prie šių lentelių naudojant *Kliento ID*.
 
-   ![Importuotų duomenų sujungimas](media/join-imported-data.png)
+   ![Importuotų duomenų sujungimas.](media/join-imported-data.png)
 
 Modelio kūrimui skirtas savybių suteikimas nutraukimo analizei gali būti kiek sudėtingas. Duomenis sudaro laiko funkcija su nauja viešbučio veikla, registruojama kasdien. Funkcijų rinkinių nustatymo metu mes siekiame generuoti statines funkcijas iš dinaminių duomenų. Tokiu atveju, sukuriame keletą funkcijų iš viešbučio veiklos su slankiojančiu vienerių metų langu. Taip pat išplėsdami funkcijų grupavimą, pvz., pagal kambario tipą arba rezervavimo tipą, į atskiras funkcijas, naudodamiesi vieno vieneto bito kodavimu.  
 
@@ -114,7 +114,7 @@ Dabar mums reikia rinktis optimalų naudojamą algoritmą. Šiuo atveju dauguma 
 
 Šiame vaizde pateikiamas „Azure” mašininio mokymo studijos modelio mokymas ir įvertinimo srautas:
 
-![„Azure” mašininio mokymo studijos klientų praradimo modelis](media/azure-machine-learning-model.png)
+![„Azure” mašininio mokymo studijos klientų praradimo modelis.](media/azure-machine-learning-model.png)
 
 Mes taip pat taikome techniką pavadintą **Derinių funkcijos svarba** yra svarbus modelio optimizavimo aspektas. Įtaisytieji modeliai turi mažai arba jokių įžvalgų apie tai, kokį poveikį turi bet kokia konkreti funkcija galutinei prognozei. Funkcijos svarbos skaičiuoklė naudoja tinkintą algoritmą siekiant apskaičiuoti atskirų funkcijų įtaką konkretaus modelio išvadoms. Funkcijų svarba normalizuojama nuo +1 iki –1. Neigiam įtaka reiškia, kad atitinkama funkcija susidūrė su intuityvia įtaka išvesčiai ir turi būti pašalinta iš modelio. Teigiama įtaka nurodo, kad funkcija labai reikšminga prognozei. Šios reikšmės nėra koreliacijos koeficientai, nes jie atitinka skirtingą metriką. Dėl išsamesnės informacijos, žr. [Derinio funkcijos svarba](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Mes apibrėžiame tikslą kaip maksimizuoti uždirbtų teikiant paslaugas doleri
 
 Kaip ir atsisakymo modelis, mes sujungiame viešbučio paslaugų kliento ID su kliento ID siekiant sukurti nuoseklias rekomendacijas kliento ID.
 
-![Rekomendacijų modelio funkcijų rinkinių nustatymas](media/azure-machine-learning-model-featurization.png)
+![Rekomendacijų modelio funkcijų rinkinių nustatymas.](media/azure-machine-learning-model-featurization.png)
 
 Duomenys yra paimami iš trijų skirtingų objektų ir funkcijos yra išvedamos iš jų. Funkcijų rinkinių nustatymas rekomendacijos problemai skiriasi, palyginti su klientų praradimu arba CLTV scenarijais. Rekomendacijos modeliui reikia įvesties duomenų trijų funkcijų rinkinių forma.
 
@@ -156,13 +156,13 @@ Duomenys yra paimami iš trijų skirtingų objektų ir funkcijos yra išvedamos 
 
 Prognozuojame produktus ir paslaugas naudojant algoritmą vadinamą **treniruoti atitikties laukelio patarėją** siekiant ištreniruoti rekomendacijos modelį.
 
-![Produktų rekomendacijos algoritmas](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Produktų rekomendacijos algoritmas.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Trys įvesties prieigos **Treniruoti atitikties laukelio patarėją** modelis ima mokymo paslaugų naudojimo duomenis, kliento aprašą (pasirenkamas) ir paslaugų aprašą. Esama trijų skirtingų šio modelio vertinimo būdų. Vienas yra skirtas modelio įvertinimui, kuriame įprastas nukainotas kumuliatyvinio padidėjimo (NDCG) balas yra skaičiuojamas siekiant įvertinti išreitinguotus elementus. Šiame bandyme mes turime NDCG balą kaip 0,97. Kitos dvi parinktys yra modelio įvertinimas pagal visą rekomenduojamą paslaugų katalogą ar vertinimą tik elementams, kurių vartotojai anksčiau nenaudojo.
 
 Žvelgiant toliau į rekomendacijų pasiskirstymą lyginant su visu paslaugų katalogu, pastebėjome, kad telefonas, WiFi ir vežėjas yra pagrindinės rekomenduotinos paslaugos. Tai atitinka tai, ką radome paslaugų naudojimo duomenų pasiskirstymuose:
 
-![Rekomendacijos modelio išvestis](media/azure-machine-learning-model-output.png)
+![Rekomendacijos modelio išvestis.](media/azure-machine-learning-model-output.png)
 
 Visas [produkto rekomendacijos eksperimentas gali būti prieinamas „Azure“ AI galerijoje.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

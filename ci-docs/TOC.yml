@@ -2,20 +2,20 @@
   href: index.yml
 - name: Produkto apžvalga
   href: overview.md
+- name: Bandomosios versijos kūrimas
+  href: audience-insights/get-started-trial.md
 - name: Prieiga prie jūsų aplinkos
   href: 'https://home.ci.ai.dynamics.com/'
-- name: „Audience Insights“
+- name: Auditorijos įžvalgos
   items:
     - name: Pagalbos centras
       href: audience-insights/index.yml
     - name: Galimybių apžvalga
       href: audience-insights/overview.md
-    - name: Nemokama bandomoji versija
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Naujos ir atnaujintos funkcijos
       href: audience-insights/whats-new-audience-insights.md
     - name: Kurti naują aplinką
-      href: audience-insights/home.md
+      href: audience-insights/get-started-paid.md
     - name: Sužinokite modulius
       items:
         - name: Duomenų suvartojimas
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Pridėkite „Common Data Model“ aplanką kaip duomenų šaltinį
           href: audience-insights/connect-common-data-model.md
-        - name: Įtraukite „Common Data Service“ valdomą duomenų telkinį
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Įtraukite „Dataverse“ valdomą duomenų telkinį
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: Duomenų šaltinių papildantysis naujinimas
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Duomenų įtraukimas realiuoju laiku
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: Papildykite su SFTP kliento importavimu
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmentai ir priemonės
+    - name: Segmentai
       items:
         - name: Segmentų apžvalga
           href: audience-insights/segments.md
-        - name: Kurkite segmentus ir klientų grupes
+        - name: Kurti segmentus
           href: audience-insights/segment-builder.md
         - name: 'Siūlomi segmentai, pagrįsti matais'
           href: audience-insights/suggested-segments.md
@@ -254,6 +254,8 @@
       items:
         - name: Kurti ir keisti įvykius
           href: engagement-insights/refined-events.md
+        - name: Žiniatinklio įvykių atpažinimas iš anksčiau autentifikuotų lankytojų
+          href: engagement-insights/unknown-to-known.md
         - name: Eksportuoti įvykius
           href: engagement-insights/export-events.md
     - name: Ataskaitos
@@ -304,7 +306,9 @@
       items:
         - name: Panaikinti ir eksportuoti asmenis duomenis
           href: engagement-insights/delete-export-personal-data.md
+    - name: Regionoinis pasiekiamumas
+      href: engagement-insights/regional-availability.md
     - name: Paslaugų apribojimai
       href: engagement-insights/quotas.md
-- name: Kreiptis į pagalbos tarnybą
+- name: Kreiptis į palaikymo tarnybą
   href: 'https://admin.powerplatform.microsoft.com/support'

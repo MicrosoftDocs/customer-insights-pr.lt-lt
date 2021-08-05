@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304614"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554628"
 ---
 # <a name="customer-profiles"></a>Klientų profiliai
 
@@ -23,11 +23,11 @@ ms.locfileid: "6304614"
 Klientai gali būti asmenys arba organizacijos (peržiūra). Kiekvienas kliento arba organizacijos profilis atvaizduojamas plytele. Pasirinkite plytelę, kad sužinotumėte papildomos informacijos apie konkretų klientą arba organizaciją. Norėdami pamatyti papildomus įrašus, naudokite puslapio apačioje esančius skaidymo į puslapius valdiklius.
 
 > [!div class="mx-imgBorder"] 
-> ![B2C klientų profiliai](media/profiles-customers.png "B2C klientų profiliai")
+> ![B2C klientų profiliai.](media/profiles-customers.png "B2C klientų profiliai")
 
 Organizacijos (peržiūra)
 > [!div class="mx-imgBorder"] 
-> ![B2B klientų profiliai](media/profile-customers-b2b.png "B2B klientų profiliai")
+> ![B2B klientų profiliai.](media/profile-customers-b2b.png "B2B klientų profiliai")
 
 > [!NOTE]
 > Jei naršymo juostoje pasirinkus **Klientai** plytelės nerodomos, reikia, kad administratorius **ieškos ir filtro rodyklėje** [apibrėžtų bent vieną ieškomą atributą ](search-filter-index.md).
@@ -47,7 +47,7 @@ Klientus galite filtruoti pagal kliento profilio objekto laukus. Panašiai kaip 
 2. Pažymėkite laukelius šalia atributų, pagal kuriuos norite filtruoti klientus.
 
    > [!div class="mx-imgBorder"] 
-   > ![Klientų profiliai](media/profiles-customers3.png "Klientų profiliai")
+   > ![Klientų profiliai.](media/profiles-customers3.png "Klientų profiliai")
 
 3. Pašalinkite savo filtrus pasirinkę **Pašalinti filtrus** **Klientų** puslapyje.
 

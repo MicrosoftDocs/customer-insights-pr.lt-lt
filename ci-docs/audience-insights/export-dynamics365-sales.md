@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 328bb2f26ebcea234fb645e5225930ab12f82a8b
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 9f11ab189117da5bcc1aee843b73962ec6615e82
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976236"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692353"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>„Dynamics 365 Sales“ segmentų naudojimas (peržiūra)
 
@@ -24,7 +24,7 @@ Naudokite savo klientų duomenis kurdami rinkodaros sąrašus, vykdydami darbo e
 
 ## <a name="prerequisite-for-connection"></a>Būtinoji ryšio sąlyga
 
-1. Kontaktų įrašai turi būti „Dynamics 365 Sales”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Sales”. Sužinokite daugiau, kaip pasiekti [„Dynamics 365 Sales” kontaktus naudojant „Common Data Services”](connect-power-query.md).
+1. Kontaktų įrašai turi būti „Dynamics 365 Sales”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Sales”. Sužinokite daugiau, kaip pasiekti [„Dynamics 365 Sales” kontaktus naudojant „Microsoft Dataverse”](connect-power-query.md).
 
    > [!NOTE]
    > Eksportuojant segmentus iš auditorijos įžvalgų į „Sales” nebus sukurta naujų kontaktų įrašų pardavimo egzemplioriuose. Kontaktų įrašai iš „Sales” turi būti įtraukti į auditorijos įžvalgas ir naudojami kaip duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.

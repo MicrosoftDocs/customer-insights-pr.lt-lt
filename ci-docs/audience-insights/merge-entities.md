@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305658"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650236"
 ---
 # <a name="merge-entities"></a>Suliekite objektus
 
@@ -109,7 +109,7 @@ Kai kuriuose objektuose yra daugiau išsamios informacijos nei kituose. Jei obje
 Nesvarbu, ar atributus suliejate rankiniu būdu, ar leidžiate juos sulieti sistemai, visada galite vykdyti savo suliejimą. Norėdami pradėti procesą, puslapyje **Sulieti** pasirinkite **Vykdyti**.
 
 > [!div class="mx-imgBorder"]
-> ![Duomenų suliejimo įrašymas ir vykdymas](media/configure-data-merge-save-run.png "Duomenų suliejimo įrašymas ir vykdymas")
+> ![Duomenų suliejimo įrašymas ir vykdymas.](media/configure-data-merge-save-run.png "Duomenų suliejimo įrašymas ir vykdymas")
 
 Pasirinkite **Vykdyti tik suliejimą**, jei norite tik peržiūrėti išvestį, kuri atsispindi vieningajame kliento objekte. Tolesni procesai bus atnaujinti taip, kaip [apibrėžta atnaujinimo grafike](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Pasirinkite **Vykdyti suliejimą ir tolesnius procesus**, kad atnaujintumėte si
 Jei norite atlikti daugiau pakeitimų ir iš naujo vykdyti veiksmą, galite atšaukti vykdomą suliejimą. Spustelėkite **Atnaujinama...** ir pasirodžiusiame šoniniame skydo pasirinkite **Atšaukti užduotį**.
 
 > [!TIP]
-> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
+> Paleidę atitikties procesą, pasirinkite proceso būseną, kad atidarytumėte **Išsamios užduočių informacijos** sritį. Joje apžvelgiamas apdorojimo laikas, paskutinio apdorojimo data ir visos su užduotimi susijusios klaidos ir įspėjimai. Pasirinkite **Peržiūrėti išsamią informaciją**, kad sužinotumėte, ar konflikto sprendimas pavyko ir tai, ar naujinimai buvo sėkmingai publikuoti.  
+> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Detalizavimo kelias, kuriuo galima apdoroti išsamią informaciją iš užduoties būsenos saito.":::
 
 ## <a name="next-step"></a>Kitas veiksmas
 

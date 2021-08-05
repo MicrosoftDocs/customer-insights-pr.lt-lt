@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306038"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650328"
 ---
 # <a name="match-entities"></a>Susiekite objektus
 
@@ -64,7 +64,7 @@ Atitikties taisyklėse nurodoma logika, pagal kurią bus derinama konkreti objek
    - **Objektas/Laukas (antroji eilutė)**: Pasirinkite atributą, susijusį su pirmoje eilutėje nurodyto objekto atributu.
 
    - **Normalizuoti** : Pasirinkite iš šių pasirinktų atributų normalizavimo parinkčių. 
-     - Tarpas: Pašalina visus tarpus. *Labas  Pasauli* tampa *LabasPasauli*.
+     - Tarpas: Pašalina visus tarpus. *Labas Pasauli* tampa *LabasPasauli*.
      - Simboliai: Pašalina visus simbolius ir specialiuosius simbolius. *„Head&Shoulder”* tampa *„HeadShoulder”*.
      - Tekstas į mažąsias raides: Konvertuoja visus simbolius į mažąsias raides. *VISOS DIDŽIOSIOS ir Pirmos Didžiosios* tampa *visos didžiosios ir pirmos didžiosios*.
      - „Unicode” į ASCII: Konvertuoja „Unicode” notaciją į ASCII simbolius. *„/u00B2”* tampa *2*.
@@ -138,7 +138,7 @@ Dublikatų naikinimo taisyklių nurodymas nėra būtinas. Jei nėra nustatytų t
    - **Seniausias**: Nustato įrašą laimėtoją pagal seniausius duomenis. Reikalauja datos ar skaičių laukelio, skirto nustatyti naujumą.
  
    > [!div class="mx-imgBorder"]
-   > ![Dublikatų naikinimo taisyklių 1 veiksmas](media/match-selfconflation.png "Dublikatų naikinimo taisyklių 1 veiksmas")
+   > ![Dublikatų naikinimo taisyklių veiksmas 1.](media/match-selfconflation.png "Dublikatų naikinimo taisyklių 1 veiksmas")
  
 1. Pasirinkę objektus ir nustatę jų suliejimo nuostatą, pasirinkite **Įtraukti taisyklę**, kad nustatytumėte dublikatų naikinimo taisykles objekto lygiu.
    - **Pasirinkti lauką** išvardijami visi galimi to objekto laukai. Pasirinkite lauką, kurio dublikatų norite ieškoti. Pasirinkite laukus, kurie, tikėtina, yra unikalūs kiekvienam klientui. Pavyzdžiui, el. pašto adresas ar vardo, miesto ir telefono numerio derinys.
@@ -146,7 +146,7 @@ Dublikatų naikinimo taisyklių nurodymas nėra būtinas. Jei nėra nustatytų t
    - Apibrėžkite daugiau sąlygų pasirinkdami **Įtraukti sąlygą**.
  
    > [!div class="mx-imgBorder"]
-   > ![Dublikatų naikinimo taisyklių 2 veiksmas](media/match-selfconflation-rules.png "Dublikatų naikinimo taisyklių 2 veiksmas")
+   > ![Dublikatų naikinimo taisyklių veiksmas 2.](media/match-selfconflation-rules.png "Dublikatų naikinimo taisyklių 2 veiksmas")
 
   Galite sukurti keletą dublikatų naikinimo taisyklių objektui. 
 
@@ -179,7 +179,9 @@ Eikite į **Duomenys** > **Suvienodinti** > **Atitikmuo** ir pasirinkite **Vykdy
 Sėkmingo atlikimo rezultatą – vieningąjį kliento profilio objektą, rasite **Objektų** puslapyje. Jūsų vieningasis kliento objektas yra pavadintas **Klientai** skyriuje **Profiliai**. Pirmasis sėkmingas vykdymas sukuria vieningąjį *Kliento* objektą. Visi tolesni gretinimo vykdymai išplečia tą objektą.
 
 > [!TIP]
-> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
+> Paleidę atitikties procesą, pasirinkite proceso būseną, kad atidarytumėte **Išsamios užduočių informacijos** sritį. Joje apžvelgiamas apdorojimo laikas, paskutinio apdorojimo data ir visos su užduotimi susijusios klaidos ir įspėjimai. Pasirinkite **Peržiūrėti išsamią informaciją**, kad sužinotumėte, kurie objektai dalyvavo gretinimo procese, kokios taisyklės jiems buvo pritaikytos ir tai, ar naujinimai buvo sėkmingai publikuoti.  
+> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Detalizavimo kelias, kuriuo galima apdoroti išsamią informaciją iš užduoties būsenos saito.":::
 
 ## <a name="review-and-validate-your-matches"></a>Peržiūrėkite ir patvirtinkite savo atitiktis
 

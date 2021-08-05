@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304706"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692445"
 ---
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
@@ -30,13 +31,13 @@ Duomenų šaltinį galite įtraukti trimis pagrindiniais būdais.
 
 - [Per dešimtis „Power Query“ jungčių](connect-power-query.md)
 - [Iš „Common Data Model“ aplanko](connect-common-data-model.md)
-- [Iš savo „Microsoft Dataverse“ telkinio](connect-common-data-service-lake.md)
+- [Iš savo „Microsoft Dataverse“ telkinio](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Duomenų įtraukimas iš vietinių duomenų šaltinių
 
-Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į „Microsoft Power Platform“ duomenų srautus. Nustatant aplinką duomenų eigas galima įgalinti „Customer Insights“ [pateikiant Microsoft Dataverse aplinkos URL](manage-environments.md#create-an-environment-in-an-existing-organization).
+Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į „Microsoft Power Platform“ duomenų srautus. Nustatant aplinką duomenų eigas galima įgalinti „Customer Insights“ [pateikiant Microsoft Dataverse aplinkos URL](get-started-paid.md).
 
-Numatyta, kad duomenų šaltiniai, sukurti Dataverse aplinką susiejus su „Customer Insights“, naudos [Power Platform duomenų eigas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Pašalinkite ir iš naujo sukurkite duomenų šaltinius, kurie egzistavo prieš tai, kai „Dataverse” aplinka buvo susieta su [vietinių duomenų šliuzų naudojimu](/data-integration/gateway/service-gateway-app.md).
+Numatyta, kad duomenų šaltiniai, sukurti Dataverse aplinką susiejus su „Customer Insights“, naudos [Power Platform duomenų eigas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Pašalinkite ir iš naujo sukurkite duomenų šaltinius, kurie egzistavo prieš tai, kai „Dataverse” aplinka buvo susieta su [vietinių duomenų šliuzų naudojimu](/data-integration/gateway/service-gateway-app).
 
 Esamos Power BI arba Power Apps aplinkos duomenų tinklų sietuvai bus matomi ir galėsite pakartotinai naudoti „Customer Insights“. Duomenų šaltinių puslapyje rodomi saitai, kuriuos naudojant galima peržiūrėti ir konfigūruoti duomenų „Microsoft Power Platform“ vietinis aplinką.
 
@@ -45,11 +46,11 @@ Esamos Power BI arba Power Apps aplinkos duomenų tinklų sietuvai bus matomi ir
 Matysite kiekvieno įtraukto duomenų šaltinio pavadinimą, jo būseną ir vėliausio to šaltinio duomenų atnaujinimo laiką. Galite rūšiuoti duomenų šaltinių sąrašą pagal kiekvieną stulpelį.
 
 > [!div class="mx-imgBorder"]
-> ![Įtrauktas duomenų šaltinis](media/configure-data-datasource-added.png "Įtrauktas duomenų šaltinis")
+> ![Įtrauktas duomenų šaltinis.](media/configure-data-datasource-added.png "Įtrauktas duomenų šaltinis")
 
-|Būsena  |Aprašo  |
+|Būsena  |Aprašymas  |
 |---------|---------|
-|Sėkminga   |Duomenų šaltinis buvo sėkmingai suvartotas, jei laikas yra paminėtas **Paleistas iš naujo** stulpelyje.
+|Pavyko   |Duomenų šaltinis buvo sėkmingai suvartotas, jei laikas yra paminėtas **Paleistas iš naujo** stulpelyje.
 |Nepradėta   |Duomenų šaltinis dar neturi jokių suvartotų duomenų arba jie dar yra šablono režime.         |
 |Atnaujinama    |Vyksta duomenų apdorojimas. Galite atšaukti šią operaciją, stulpelyje **Veiksmai** pasirinkdami **Sustabdyti naujinimą**. Sustabdžius duomenų šaltinio naujinimą, jis bus grąžintas į paskutinio naujinimo būseną.       |
 |Atlikta nesėkmingai     |Apdorojant duomenis įvyko klaidų.         |

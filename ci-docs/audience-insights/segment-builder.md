@@ -1,7 +1,7 @@
 ---
 title: Segmentų kūrimas ir valdymas
 description: Kurkite klientų segmentus, kad jie būtų sugrupuoti pagal įvairius atributus.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064947"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685472"
 ---
 # <a name="create-and-manage-segments"></a>Segmentų kūrimas ir valdymas
+
+> [!IMPORTANT]
+> Yra keli segmentų kūrimo patirties pakeitimai, pasirodantys 2021 m. rugsėjį: 
+> - Segmentų daryklė atrodys šiek tiek kitokia su atnaujinto stiliaus elementais ir pagerintu vartotojų srautu.
+> - Segmentų daryklėje įgalinti nauji datos ir laiko operatoriai bei patobulintas datų parinkiklis.
+> - Į segmentus galėsite įtraukti arba iš jų pašalinti sąlygas ir taisykles. 
+> - Taps prieinamos įdėtosios taisyklės, kurios prasideda sąlyga OR. Jums nebereikia sąlygos AND išoriniame sluoksnyje.
+> - Atributų pasirinkimo šoninė sritis bus nuolat pasiekiama.
+> - Objekto ryšio kelių pasirinkimo parinktis.
+> Norėdami išbandyti naują segmentų daryklę, nusiųskite elektroninį laišką su tema „Prašymas įjungti naują segmento daryklę” „cihelp” [adresu] microsoft.com. Įtraukite savo organizacijos pavadinimą ir smėlio dėžės aplinkos ID.
 
 Apibrėžkite vieningojo kliento objekto ir su juo susijusių objektų sudėtinius filtrus. Apdorojus, kiekvienas segmentas sukuria klientų duomenų rinkinį, kurį galite eksportuoti, ir su kuriuo galite atlikti veiksmus. Segmentai yra valdomi **Segmentų** puslapyje. 
 
@@ -50,11 +60,11 @@ Kurdami segmentą, jūs galite įrašyti juodraštį. Jis bus įrašytas kaip ne
 1. Pasirinkite operatorių ir pasirinkto atributo reikšmę.
 
    > [!div class="mx-imgBorder"]
-   > ![Pasirinktinis grupės filtras](media/customer-group-numbers.png "Klientų grupės filtras")
+   > ![Pasirinktinis grupės filtras.](media/customer-group-numbers.png "Klientų grupės filtras")
 
    |Skaičius |Apibrėžtis  |
    |---------|---------|
-   |1     |Objektas          |
+   |1     |Entity          |
    |2     |Atributas          |
    |3    |Operatorius         |
    |4    |Reikšmė         |
@@ -66,7 +76,7 @@ Kurdami segmentą, jūs galite įrašyti juodraštį. Jis bus įrašytas kaip ne
       - Operatorius **ARBA**: viena iš sąlygų turi būti įvykdyta kaip segmentavimo proceso dalis. Ši parinktis labiausiai naudinga nustatant kelias sąlygas tam pačiam objektui.
 
       > [!div class="mx-imgBorder"]
-      > ![Operatorius Ir, kuriame viena iš sąlygų turi būti įvykdyta](media/segmentation-either-condition.png "Operatorius Ir, kuriame viena iš sąlygų turi būti įvykdyta")
+      > ![Operatorius Ir, kuriame viena iš sąlygų turi būti įvykdyta.](media/segmentation-either-condition.png "Operatorius Ir, kuriame viena iš sąlygų turi būti įvykdyta")
 
       Šiuo metu galima įtraukti operatorių **Arba** į operatorių **Ir**, o ne atvirkščiai.
 
@@ -74,12 +84,12 @@ Kurdami segmentą, jūs galite įrašyti juodraštį. Jis bus įrašytas kaip ne
    Pažymėkite **Įtraukti grupę**.
 
       > [!div class="mx-imgBorder"]
-      > ![Klientų grupės grupės įtraukimas](media/customer-group-add-group.png "Klientų grupės grupės įtraukimas")
+      > ![Klientų grupės grupės įtraukimas.](media/customer-group-add-group.png "Klientų grupės grupės įtraukimas")
 
    1. Pažymėkite vieną iš rinkinio operatorių: **Sąjunga**, **Susikirtimas** arba **Išskyrus**.
 
    > [!div class="mx-imgBorder"]
-   > ![Klientų grupės sujungimo įtraukimas](media/customer-group-union.png "Klientų grupės sujungimo įtraukimas")
+   > ![Klientų grupės sujungimo įtraukimas.](media/customer-group-union.png "Klientų grupės sujungimo įtraukimas")
 
    - **Sujungimas** sujungia dvi grupes.
 
@@ -90,7 +100,7 @@ Kurdami segmentą, jūs galite įrašyti juodraštį. Jis bus įrašytas kaip ne
 1. Jei objektas yra sujungtas su sujungtu kliento objektu naudojant [ryšius](relationships.md), turite apibrėžti ryšio kelią, kad sukurtumėte tinkamą segmentą. Įtraukite objektus iš ryšio kelio, kol išplečiamajame sąraše galėsite pasirinkti objektą **Customer : CustomerInsights**. Tada pasirinkite **Visi įrašai** kiekvienam veiksmui.
 
    > [!div class="mx-imgBorder"]
-   > ![Ryšių kelias kuriant segmentą](media/segments-multiple-relationships.png "Ryšių kelias kuriant segmentą")
+   > ![Ryšių kelias kuriant segmentą.](media/segments-multiple-relationships.png "Ryšių kelias kuriant segmentą")
 
 1. Pagal numatytuosius nustatymus, segmentai generuoja išvesties objektą, kuriame yra visi klientų profilių atributai, atitinkantys nustatytus filtrus. Jei segmentas pagrįstas kitais objektais nei *Kliento* objektas, į išvesties objektą galite įtraukti daugiau atributų iš šių objektų. Pažymėkite **Projekto atributai**, kad pasirinktumėte atributus, kurie bus pridėti prie išvesties objekto.  
   
@@ -127,7 +137,7 @@ Spartieji segmentai leidžia jums greitai sukurti paprastus segmentus naudojant 
 4. Sistema parodys **numatomą segmento dydį**. Galite pasirinkti, ar generuoti apibrėžtą segmentą arba iš naujo jį peržiūrėti ir gauti kitą segmento dydį.
 
     > [!div class="mx-imgBorder"]
-    > ![Sparčiojo segmento pavadinimas ir įvertinimas](media/quick-segment-name.png "Sparčiojo segmento pavadinimas ir įvertinimas")
+    > ![Sparčiojo segmento pavadinimas ir įvertinimas.](media/quick-segment-name.png "Sparčiojo segmento pavadinimas ir įvertinimas")
 
 5. Įveskite segmento **Pavadinimą**. Pasirinktinai įveskite **rodomą pavadinimą**.
 

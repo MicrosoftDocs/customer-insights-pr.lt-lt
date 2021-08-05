@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059598"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692215"
 ---
 # <a name="customer-card-add-in-preview"></a>Papildinys Kliento kortelė (peržiūra)
 
@@ -25,7 +25,7 @@ Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ prog
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Papildinys veikia tik su „Dynamics 365” modeliu pagrįstomis programomis, pavyzdžiui, „Sales” arba „Customer Service” 9.0 arba naujesne versija.
-- Norint, kad jūsų „Dynamics 365” duomenys būtų susieti su auditorijos įžvalgų kliento profiliais, jie turi būti [įtraukti iš „Dynamics 365” programos naudojant „Common Data Service” jungtį](connect-power-query.md).
+- Norint, kad jūsų „Dynamics 365” duomenys būtų susieti su auditorijos įžvalgų kliento profiliais, jie turi būti [įtraukti iš „Dynamics 365” programos naudojant „Microsoft Dataverse” jungtį](connect-power-query.md).
 - Kad būtų galima matyti duomenis, visi „Dynamics 365” Kliento kortelės papildinio vartotojai turi būti [įtraukti kaip vartotojai](permissions.md) į auditorijos įžvalgas.
 - [Sukonfigūruotos ieškos ir filtravimo galimybės](search-filter-index.md) yra reikalingos auditorijos įžvalgose, kad veiktų duomenų peržvalga.
 - Kiekvienas papildinio valdiklis remiasi tam tikrais auditorijos įžvalgų duomenimis:
@@ -50,7 +50,7 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 1. Pasirinkite sprendimo **„Dynamics 365 Customer Insights“ papildinys Kliento kortelė (peržiūra)** nuorodą **Rodomas pavadinimas**.
 
    > [!div class="mx-imgBorder"]
-   > ![Rodomo pavadinimo pasirinkimas](media/select-display-name.png "Rodomo pavadinimo pasirinkimas")
+   > ![Rodomo pavadinimo pasirinkimas.](media/select-display-name.png "Rodomo pavadinimo pasirinkimas")
 
 1. Spustelėkite **Prisijungti** ir įveskite administratoriaus kliento, kurį naudojate „Customer Insights“ konfigūruoti, kredencialus.
 
@@ -64,7 +64,7 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
    - Norėdami sudaryti žemėlapį su paskyra, pasirinkite laukelį kliento objekte, kuris atitinka jūsų paskyros objekto ID.
 
    > [!div class="mx-imgBorder"]
-   > ![Kontakto ID laukas](media/contact-id-field.png "Kontakto ID laukas")
+   > ![Kontakto ID laukas.](media/contact-id-field.png "Kontakto ID laukas")
 
 1. Pasirinkite **Įrašyti konfigūraciją**, kad įrašytumėte šiuos parametrus.
 
@@ -83,7 +83,7 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 1. Pasirinkite kontakto formą, į kurią norite įtraukti kliento kortelės valdiklius.
 
     > [!div class="mx-imgBorder"]
-    > ![Kontakto formos pasirinkimas](media/contact-active-forms.png "Kontakto formos pasirinkimas")
+    > ![Kontakto formos pasirinkimas.](media/contact-active-forms.png "Kontakto formos pasirinkimas")
 
 1. Norėdami įtraukti valdiklį, formų rengyklėje bet kurį lauką iš **Laukų naršyklės** vilkite į tą vietą, kurioje norite matyti demografinį valdiklį.
 
@@ -110,7 +110,7 @@ Kliento kortelės papildymas automatiškai neatsijungia. Norėdami atnaujinti į
 
 1. Veiksmų juostoje pasirinkite **Taikyti sprendimo naujinimą**.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atnaujinkite sprendimą „Dynamics 365“ programų tinkinimo srityje":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atnaujinkite sprendimą „Dynamics 365“ programų tinkinimo srityje.":::
 
 1. Pradėjus naujinimo procesą, matysite įkėlimo indikatorių, kol naujinimas bus baigtas. Jei nėra naujesnės versijos, atnaujinus bus rodomas klaidos pranešimas.
 

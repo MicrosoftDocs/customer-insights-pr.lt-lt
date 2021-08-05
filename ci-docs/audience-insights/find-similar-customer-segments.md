@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596785"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554215"
 ---
 # <a name="similar-customers-preview"></a>Panašūs klientai (peržiūros versija)
 
@@ -50,7 +50,7 @@ Naudodamiesi šia funkcija, klientų bazėje rasite panašių klientų, naudodam
 Apdoroję panašų segmentą, naują segmentą rasite puslapyje **Segmentai**.
 
 > [!div class="mx-imgBorder"]
-> ![Panašių klientų segmentas](media/expanded-segment.png "Panašių klientų segmentas")
+> ![Panašių klientų segmentas.](media/expanded-segment.png "Panašių klientų segmentas")
 
 Norėdami atidaryti išsamią informaciją apie segmentą, veiksmų juostoje pasirinkite **Peržiūra**. Šiame rodinyje pateikiama informacija apie rezultatų paskirstymą remiantis [panašumo įverčiais](#about-similarity-scores). Panašumo įverčių reikšmes taip pat rasite pasirinkę **Segmento narių peržiūra**.
 

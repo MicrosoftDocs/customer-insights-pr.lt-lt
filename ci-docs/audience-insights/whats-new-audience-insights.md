@@ -1,7 +1,7 @@
 ---
 title: Naujos ir būsimos funkcijos
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263261"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692399"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
 
@@ -26,6 +26,28 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>2021 m. birželio mėn. naujinimai
+
+2021 m. birželio mėn. naujinimai apima keletą funkcijų, vykdymo pagerinimus ir klaidų ištaisymus.
+
+### <a name="data-ingestion"></a>Duomenų įsisavinimas
+
+- **Patobulinti duomenų suvienodinimo eigos naujinimai** Dabar galite peržiūrėti išsamesnius, patobulintus dinaminių būsenų atnaujinimus [duomenų suvienodinimo proceso](data-unification.md) veiksmuose. Ši funkcija leidžia jums sekti išsamią eigą, kad būtų galima suprasti procesų seką ir, jei reikia, imtis veiksmų.
+
+### <a name="extensibility"></a>Išplėtimas
+
+- **Eksportuoti segmentus ir kitus duomenis į „Salesforce Marketing Cloud”** Išplėtėme eksportavimo paskirties vietas, kad būtų įtrauktas [„Salesforce Marketing Cloud”](export-salesforce.md). Dabar galite eksportuoti segmentus ir kitų tipų duomenis į „Salesforce Marketing Cloud” per trumpąjį SFTP eksportavimą. Duomenų importavimą galima visiškai automatizuoti „Salesforce” ir naudoti norint kurti efektyvesnes rinkodaros kampanijas.  
+ 
+- **Eksportuoti segmentus į „ActiveCampaign”** Išplėtėme eksportavimo paskirties vietas, kad būtų įtraukta [„ActiveCampaign”](export-active-campaign.md). Dabar galite eksportuoti segmentus, kad kurtumėte kampanijas, vykdytumėte elektroninių laiškų rinkodarą ir dirbtumėte su konkrečiomis klientų grupėmis „ActiveCampaign“.
+ 
+- **Eksportuoti segmentus į „Sendinblue”** Išplėtėme eksportavimo paskirties vietas, kad būtų įtrauktas [„Sendinblue”](export-sendinblue.md). Dabar galite eksportuoti segmentus, kad kurtumėte kampanijas, vykdytumėte elektroninių laiškų rinkodarą ir dirbtumėte su konkrečiomis klientų grupėmis „Sendinblue“.
+ 
+### <a name="ux-updates"></a>UX atnaujinimai 
+
+- **Naujas ir patobulintas Klientų puslapis ir profilio išsamios informacijos puslapis** Mes pertvarkėme Klientų puslapį ir išsamios profilių informacijos puslapius, kad pagerintumėte vartotojų patirtį ir efektyvumą. Šie pakeitimai jums leidžia peržiūrėti, rikiuoti, ieškoti ir filtruoti klientus. Filtrai dabar pateikiami URL, kad ieškos rezultatai būtų sklandžiai bendrinami su kitais vartotojais. Ieškos rezultatus taip pat galima įrašyti kaip segmentą.    
+  Dabar klientų profilių išsamios informacijos puslapyje duomenys grupuojami į įvairius poskyrius, pavyzdžiui, demografinius duomenis, ID ir kitus profilio atributus dėl patobulinto skaitomumo. Dabar kiti išsamios profilio informacijos puslapio skyriai yra interaktyvesni. Pavyzdžiui, dabar veiklų skyrius leidžia filtruoti ir rikiuoti.
+
 
 ## <a name="may-2021-updates"></a>2021 m. gegužės mėn. naujinimai
 
@@ -170,7 +192,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 - **Aplinkos kopijavimas palaiko daugiau duomenų šaltinių tipų**
 
-  Administratoriai gali kopijuoti aplinkos konfigūracijas į naują aplinką toje pačioje organizacijoje. Ši funkcija išplečia aplinkos kopijavimo funkcijas tais atvejais, kai naudojami duomenų šaltiniai, pagrįsti „Common Data Service” duomenų telkiniu arba „Common Data Model” aplanku.
+  Administratoriai gali kopijuoti aplinkos konfigūracijas į naują aplinką toje pačioje organizacijoje. Ši funkcija išplečia aplinkos kopijavimo funkcijas atvejams, kai naudojami duomenų šaltiniai, pagrįsti „Microsoft Dataverse” valdomu „data lake” arba „Common Data Model” aplanku.
 
 ## <a name="january-2021-updates"></a>2021 m. sausio mėn. naujinimai
 

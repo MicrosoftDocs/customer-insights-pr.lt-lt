@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305901"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554693"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Prisijungimas prie „Power Query“ duomenų šaltinio
 
@@ -42,7 +42,7 @@ ms.locfileid: "6305901"
 1. Dialogo lange **„Power Query“ – redaguoti užklausas** galima peržiūrėti ir tikslinti duomenis. Objektai, kuriuos sistema nustatė jūsų pasirinktame duomenų šaltinyje, rodomi kairiosios srities dalyje.
 
    > [!div class="mx-imgBorder"]
-   > ![Užklausų redagavimo dialogo langas](media/data-manager-configure-edit-queries.png "Užklausų redagavimo dialogo langas")
+   > ![Užklausų dialogo lango redagavimas.](media/data-manager-configure-edit-queries.png "Užklausų redagavimo dialogo langas")
 
 1. Taip pat galite pertvarkyti savo duomenis. Pažymėkite objektą, kurį norite redaguoti arba pertvarkyti. Norėdami pritaikyti transformavimą, naudokite lango „Power Query“ parinktis. Vis transformavimai išvardijami dalyje **Pritaikyti veiksmai**. „Power Query“ suteikia daug iš anksto sukurtų transformavimo galimybių. Daugiau informacijos ieškokite [„Power Query“ transformavimai](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Jungtys su varnele stulpelyje **„Customer Insights“ (duomenų srautai)** gal
 2. Pažymėkite vertikalią elešką šalia norimos duomenų šaltinis dalies ir **išplečiamajame** meniu pasirinkite Redaguoti.
 
    > [!div class="mx-imgBorder"]
-   > ![Redagavimo parinktis](media/edit-option-data-sources.png "Redagavimo parinktis")
+   > ![Parinkties redagavimas.](media/edit-option-data-sources.png "Redagavimo parinktis")
 
 3. Pritaikykite savo pakeitimus ir transformavimus dialogo lange **„Power Query“ – redaguoti užklausas**, remdamiesi skyriumi [Naujo duomenų šaltinio kūrimas](#create-a-new-data-source).
 

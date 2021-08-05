@@ -1,7 +1,7 @@
 ---
 title: „Power BI“ jungtis
 description: Sužinokite, kaip naudoti „Dynamics 365 Customer Insights connector“ programoje „Power BI“.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596049"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661112"
 ---
 # <a name="connector-for-power-bi-preview"></a>„Power BI“ jungtis (peržiūra)
 
@@ -39,7 +39,7 @@ Sukurkite vizualizacija jūsų duomenims su „Power BI Desktop“. Generuokite 
 
 1. Dialogo lange **„Navigator“**. matysite aplinkų sąrašą, prie kurio turite prieigą. Išplėskite aplinką ir atverkite bet kurį katalogą (objektų, priemonių, segmentų, praturtinimų). Pavyzdžiui, atidarykite aplanką **Objektai**, kad pamatytumėte visus objektus, kuriuos galite importuoti.
 
-   ![Power BI jungčių naršyklė](media/power-bi-navigator.png "„Power BI“ jungčių naršyklė")
+   ![Power BI jungčių naršyklė.](media/power-bi-navigator.png "„Power BI“ jungčių naršyklė")
 
 1. Pažymėkite žymės langelius šalia objektų, kuriuos reikia įtraukti, ir **įkelkite**. Galite pažymėti kelis objektus iš kelių aplinkų.
 
@@ -68,5 +68,11 @@ Galite identifikuoti ir pašalinti dubliuotas ryšius.
 3. Pašalinti visus nustatytus dublikatų ryšius.
 
 Pašalę dubliuotų ryšių bandykite dar kartą Power BI programoje sukonfigūruoti jungtį. Aplinka turėtų būti prieinama dabar.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Klaidos datos laukuose, kai įkeliami objektai „Power BI Desktop”
+
+Įkeliant objektus, kuriuose yra laukų su datos formatu kaip MM/DD/YYYY, galite susidurti su klaidomis dėl nesutampančių lokalės formatų. Šis neatitikimas atsitinka, kai jūsų „Power BI Desktop” failas nustatomas į kitą lokalę nei anglų (Jungtinių Valstijų), nes datos laukai auditorijos įžvalgose įrašomi JAV formatu.
+
+„Power BI Desktop” faile yra vienas lokalės parametras, taikomas duomenims gauti. Tam, kad šie datos laukai būtų interpretuojami teisingai, nustatykite .BPI failo lokalę į anglų kalbą (Jungtinių Valstijų). [Sužinokite, kaip pakeisti „Power BI desktop” failo lokalę](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

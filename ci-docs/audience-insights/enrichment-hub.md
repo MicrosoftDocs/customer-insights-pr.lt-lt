@@ -1,7 +1,7 @@
 ---
 title: Papildykite suvienodintus kliento profilius
 description: Naudokite savybes siekiant papildyti jūsų kliento duomenis.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305258"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555271"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientų profilių papildymas (peržiūra)
 
 Naudokite duomenis iš tolių šaltinių kaip „Microsoft“ ar kiti partneriai, kad papildytumėte kliento duomenis.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Papildymo telkinio puslapis":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Papildymo telkinio puslapis.":::
 
 Publikos įžvalgose eikite į **Duomenys** > **Papildymas** tam, kad dirbtumėte su papildymo parinktimis.  
 
@@ -42,17 +43,17 @@ Skirtuke **Mano papildymai** galite matyti sukonfigūruotus papildymus ir redagu
 
 Eikite į skirtuką **Mano papildymai**, kad pamatytumėte visus sukonfigūruotus papildymus. Kiekvienas papildymas atvaizduotas kaip eilutė su papildoma informacija apie papildymą.
 
-Pasirinkite papildymą, kad pamatytumėte galimas parinktis. Taip pat galite pažymėti elipsę (...) sąrašo elemente ir peržiūrėti parinktis.
+Norėdami peržiūrėti galimas parinktis, pažymėkite papildymą. Taip pat galite pažymėti elipsę (...) sąrašo elemente ir peržiūrėti parinktis. Jei sukonfigūravote kelis papildymus, galite naudoti ieškos lauką, kad greitai juos rastumėte.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Papildymų tvarkymo parinktys papildymų sąraše":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Papildymų tvarkymo parinktys papildymų sąraše.":::
 
 - **Peržiūrėkite** papildymo informaciją su papildytų klientų profilių skaičiumi.
 - **Redaguokite** papildymo konfigūraciją.
 - **Vykdykite** papildymą ir atnaujinkite klientų profilius naujausiais duomenimis.
 - **Išjunkite** esamą papildymą, kad jis nebebūtų automatiškai atnaujinamas per kiekvieną suplanuotą atnaujinimą. Paskutinio sėkmingo atnaujinimo duomenys išliks prieinami. **Aktyvinkite** neaktyvų papildymą, jei norite iš naujo paleisti automatinį atnaujinimą su kiekvienu suplanuotu atnaujinimu.
-- **Panaikinti** papildymą.
+- **Panaikinkite** papildymą.
 
-Vienu metu galite vykdyti arba išjungti kelis papildymus pažymėdami juos sąraše. Peržiūros ir redagavimo parinktys nepasiekiamos kaip masiniai veiksmai ir vienu metu veikia tik viename papildyme.
+Vienu metu paleiskite arba išjunkite kelis papildymus pažymėdami juos sąraše. Peržiūros ir redagavimo parinktys negalimos kaip masinis veiksmas. Jos veikia tik vienam papildymui vienu metu.
 
 ## <a name="enrichments-and-connections"></a>Papildymai ir ryšiai
 

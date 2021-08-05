@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597429"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554445"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Naudokite „Azure Machine Learning“ pagrįstus modelius
 
@@ -52,7 +52,7 @@ Jums reikia kurti duomenų rinkinius tam, kad naudotumėte objekto duomenis iš 
      Kūrimo įrankyje atverkite **Pasirinkti stulpelius duomenų rinkinyje** ir pasirinkite **Nustatyti kaip vamzdyno parametrą**, kai pateikiate parametrui pavadinimą.
 
      > [!div class="mx-imgBorder"]
-     > ![Duomenų rinkinio parametrai kūrimo įrankyje](media/intelligence-designer-dataset-parameters.png "Duomenų rinkinio parametrai kūrimo įrankyje")
+     > ![Duomenų rinkinio parametrai kūrimo įrankyje.](media/intelligence-designer-dataset-parameters.png "Duomenų rinkinio parametrai kūrimo įrankyje")
    
 * Duomenų rinkinio parametrai SDK („Python“)
    
@@ -78,7 +78,7 @@ Jums reikia kurti duomenų rinkinius tam, kad naudotumėte objekto duomenis iš 
 
 * Kūrimo įrankis pateikia [Duomenų eksportavimo modulį](/azure/machine-learning/algorithm-module-reference/export-data) leidžiantį vamzdyno išvesčiai būti eksportuotai į „Azure“ talpinimą. Šiuo metu modulis turi naudoti duomenų talpinimo tipą **„Azure Blob Storage“** ir nustatyti parametrus **Duomenų talpinime** ir atitinkamą **Kelią**. „Customer Insights“ perrašo abu šiuos parametrus vamzdyno vykdymo metu su duomenų talpinimu ir keliu, kuris prieinamas produktui.
    > [!div class="mx-imgBorder"]
-   > ![Eksportuoti duomenų modulio konfigūravimą](media/intelligence-designer-importdata.png "Eksportuoti duomenų modulio konfigūravimą")
+   > ![Eksportuoti duomenų modulio konfigūravimą.](media/intelligence-designer-importdata.png "Eksportuoti duomenų modulio konfigūravimą")
    
 * Rašant išvesties išvestį su kodu, galite įkelti išvestį į kelią su *registruotu duomenų talpinimu* darbo aplinkoje. Jei keliui ir duomenų talpinimui vamzdyne yra nustatomi parametrai, tinkintos „Customer Insights“ galės nuskaityti ir importuoti išvesties išvestį. Šiuo metu yra palaikoma atskira lentelės išvestis csv formatu. Kelias turi apimti katalogą ir failo pavadinimą.
 

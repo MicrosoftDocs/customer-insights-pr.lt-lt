@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596509"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692123"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Prijunkite „Azure Data Lake Storage Gen2“ paskyrą prie „Azure“ pagrindinių paslaugų publikos įžvalgoms
 
 Automatizuoti įrankiai, naudojantys „Azure“ paslaugas visada turėtų turėti apribotus leidimus. Vietoje programų prisijungimo kaip vartotojui su teisėmis, „Azure“ siūlo pagrindines paslaugas. Perskaitykite tam, kad sužinotumėte, kaip prijungti publikos įžvalgas prie „Azure Data Lake Storage Gen2“ paskyros naudojant „Azure“ pagrindines paslaugas, o ne paskyros raktų talpinimą. 
 
-Galite naudoti pagrindines paslaugas tam, kad saugiai [įtrauktumėte ar redaguotumėte „Common Data Model“ katalogą kaip duomenų šaltinį](connect-common-data-model.md) ar [sukurtumėte naują ar atnaujintumėte esamą aplinką](manage-environments.md#create-an-environment-in-an-existing-organization).
+Galite naudoti pagrindines paslaugas tam, kad saugiai [įtrauktumėte ar redaguotumėte „Common Data Model“ katalogą kaip duomenų šaltinį](connect-common-data-model.md) ar [sukurtumėte naują ar atnaujintumėte esamą aplinką](get-started-paid.md).
 
 > [!IMPORTANT]
 > - „Azure Data lake Gen2” saugyklos paskyrai, norinčiai naudotis pagrindine tarnyba, turi būti įjungta [Hierarchinė vardų sritis (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Gali užtrukti iki 15 minučių, kol keitimai bus atlikti.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Įveskite „Azure“ išteklių ID arba „Azure“ prenumeravimo išsamią informaciją į talpinimo paskyros priedą prie publikos įžvalgų.
 
-Pridėkite „Azure Data Lake storage“ paskyrą publikos įžvalgose prie [talpinimo išvesties duomenų](manage-environments.md) ar [naudokite juos kaip duomenų šaltinį](connect-common-data-service-lake.md). Pasirinkus „Azure Data Lake“ parinktį ji leidžia jums rinktis tarp ištekliais pagrįstos ar prenumerata pagrįstos prieigos.
+Pridėkite „Azure Data Lake storage“ paskyrą publikos įžvalgose prie [talpinimo išvesties duomenų](manage-environments.md) ar [naudokite juos kaip duomenų šaltinį](connect-dataverse-managed-lake.md). Pasirinkus „Azure Data Lake“ parinktį ji leidžia jums rinktis tarp ištekliais pagrįstos ar prenumerata pagrįstos prieigos.
 
 Atlikite tolesnius žingsnius tam, kad gautumėte reikiamą informaciją apie pasirinktą prieigą.
 

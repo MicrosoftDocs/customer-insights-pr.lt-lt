@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305304"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555317"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Tinkintų profilių papildymas su „HERE Technologies“ (peržiūra)
 
@@ -35,7 +35,7 @@ Siekiant sukonfigūruoti „HERE Technologies“ papildymus, būtina atitikti to
 1. „HERE Technologies“ plytelėje pasirinkite **Papildyti mano duomenis** ir pasirinkite **Darbo pradžia**.
 
    > [!div class="mx-imgBorder"]
-   > ![„HERE Technologies“ plytą](media/HERE-tile.png "„HERE Technologies“ plytą")
+   > ![„HERE Technologies“ plytelė.](media/HERE-tile.png "„HERE Technologies“ plytą")
 
 1. Pasirinkite [ryšį](connections.md) iš iškrentančiojo sąrašo. Jei ryšio nėra, kreipkitės į administratorių. Jei esate administratorius, ryšį galite nustatyti pasirinkdami **Pridėti ryšį**. Rinkitės **HERE Technologies** iš iškrentančiojo sąrašo. 
 
@@ -50,7 +50,7 @@ Siekiant sukonfigūruoti „HERE Technologies“ papildymus, būtina atitikti to
 1. Nustatykite, kurie laukeliai iš jūsų suvienodintų profilių turi būti naudojami ieškoti atitinkančių vietos duomenų iš „HERE Technologies“. **Gatvė 1** ir **Pašto/Zip kodas** laukeliai yra būtini pasirinktam priminiam ir (arba) antrinį adresą. Didesniam atitikties tikslumui, galima įtraukti daugiau laukelių.
 
    > [!div class="mx-imgBorder"]
-   > ![„HERE Technologies“ papildymo konfigūravimo puslapis](media/enrichment-HERE-configuration.png "„HERE Technologies“ papildymo konfigūravimo puslapis")
+   > ![„HERE Technologies“ papildymo konfigūravimo puslapis.](media/enrichment-HERE-configuration.png "„HERE Technologies“ papildymo konfigūravimo puslapis")
 
 1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
 
@@ -73,7 +73,7 @@ Jei norite konfigūruoti ryšius, turite būti administratorius. Pasirinkite **P
 1. Baigę patikrinimą pasirinkite **Išsaugoti**.
 
    > [!div class="mx-imgBorder"]
-   > ![„HERE Technologies“ ryšio konfigūravimo puslapis](media/enrichment-HERE-connection.png "„HERE Technologies“ ryšio konfigūravimo puslapis")
+   > ![„HERE Technologies“ ryšio konfigūravimo puslapis.](media/enrichment-HERE-connection.png "„HERE Technologies“ ryšio konfigūravimo puslapis")
 
 ## <a name="enrichment-results"></a>Papildymo rezultatai
 

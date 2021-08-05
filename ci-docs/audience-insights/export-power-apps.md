@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598165"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554123"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>„Microsoft Power Apps“ jungtis (peržiūra)
 
@@ -56,12 +56,12 @@ Pavyzdžiui, įtraukiate kliento profilius į [galerijos valdymą](/powerapps/ma
 1. Įtraukite valdiklį **Galeriją** į kuriamą programą.
 
 > [!div class="mx-imgBorder"]
-> ![Galerijos elemento įtraukimas](media/connector-powerapps9.png "Galerijos elemento įtraukimas")
+> ![Galerijos elemento įtraukimas.](media/connector-powerapps9.png "Galerijos elemento įtraukimas")
 
 1. Pasirinkite **Klientas** kaip elementų duomenų šaltinį.
 
     > [!div class="mx-imgBorder"]
-    > ![Pasirinkti duomenų šaltinį](media/choose-datasource-powerapps.png "Duomenų šaltinio pasirinkimas")
+    > ![Pasirinkti duomenų šaltinį.](media/choose-datasource-powerapps.png "Duomenų šaltinio pasirinkimas")
 
 1. Galite keisti duomenų skydą dešinėje ir pasirinkti, kurį kliento objekto lauką rodyti galerijoje.
 
