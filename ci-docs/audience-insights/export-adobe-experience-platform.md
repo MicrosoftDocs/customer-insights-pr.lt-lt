@@ -1,6 +1,6 @@
 ---
-title: „Customer Insights” duomenų eksportavimas į „Adobe” patirties platformą
-description: Sužinokite, kaip naudoti auditorijų įžvalgų segmentus „Adobe Experience Platform".
+title: "\"Customer Insights\" duomenų eksportavimas į Adobe Experience Platform"
+description: Sužinokite, kaip naudoti auditorijų įžvalgų segmentus naudojant "Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,31 +9,31 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305534"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032127"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>„Customer Insights” segmentų naudojimas „Adobe” patirties platformoje (peržiūros versija)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>„Customer Insights“ segmentų naudojimas Adobe Experience Platform (peržiūra)
 
-Kaip auditorijos įžvalgų vartotojas, galbūt sukūrėte segmentų, kad rinkodaros kampanijos būtų efektyvesnės „Dynamics 365 Customer Insights“ atsižvelgiant į atitinkamas auditorijas. Norėdami naudoti segmentą iš „Adobe” patirties platformos auditorijos įžvalgų ir programų, pavyzdžiui, „Adobe Campaign Standard”, turite atlikti kelis šiame straipsnyje nurodytus veiksmus.
+Kaip auditorijos įžvalgų vartotojas, galbūt sukūrėte segmentų, kad rinkodaros kampanijos būtų efektyvesnės „Dynamics 365 Customer Insights“ atsižvelgiant į atitinkamas auditorijas. Norėdami naudoti segmentą iš auditorijos įžvalgų Adobe Experience Platform ir programose kaip "Adobe Campaign Standard", turite atlikti kelis šiame straipsnyje nurodytus veiksmus.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Apdoroti šiame straipsnyje aprašytų veiksmų diagramą.":::
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 -   „Dynamics 365 Customer Insights“ licencija
--   „Adobe” patirties platformos licencija
--   „Adobe Campaign Standard“ licencija
+-   „Adobe Experience Platform“ licencija
+-   Adobe Campaign Standard licencija
 -   „Azure“ didelių dvejetainių objektų saugyklos abonementas
 
 ## <a name="campaign-overview"></a>Kampanijos apžvalga
 
-Norėdami geriau suprasti, kaip galite naudoti auditorijos įžvalgų segmentus „Adobe” patirties platformoje, pažvelkime į fiktyvią pavyzdinę kampaniją.
+Norėdami geriau suprasti, kaip galite naudoti segmentus iš auditorijos įžvalgų Adobe Experience Platform, peržiūrėkime išgalvotą kampanijos pavyzdį.
 
-Tarkime, kad jūsų įmonė siūlo mėnesinę, prenumerata pagrįstą paslaugą jūsų klientams Jungtinėse Amerikos Valstijose. Norite nustatyti klientus, kurių prenumeratos turi būti atnaujintos per artimiausias aštuonias dienas, bet jie dar neatnaujino prenumeratos. Siekdami išlaikyti šiuos klientus, norite nusiųsti jiems reklaminį pasiūlymą el. paštu naudojant „Adobe” patirties platformą.
+Tarkime, kad jūsų įmonė siūlo mėnesinę, prenumerata pagrįstą paslaugą jūsų klientams Jungtinėse Amerikos Valstijose. Norite nustatyti klientus, kurių prenumeratos turi būti atnaujintos per artimiausias aštuonias dienas, bet jie dar neatnaujino prenumeratos. Norėdami išlaikyti šiuos klientus, el. paštu išsiųskite reklaminį pasiūlymą, naudojantis Adobe Experience Platform.
 
 Šiame pavyzdyje norime reklaminę el. pašto kampaniją įvykdyti vieną kartą. Šiame straipsnyje neaprašomas kampanijos vykdymas daugiau negu vieną kartą.
 
@@ -93,7 +93,7 @@ Išsaugoję eksportavimo paskirties vietą ją rasite pasirinkę **Duomenys** > 
 Dabar galite [eksportuoti segmentą pareikalavus](export-destinations.md#run-exports-on-demand). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md).
 
 > [!NOTE]
-> Įsitikinkite, kad eksportuoto segmento įrašų skaičius neviršija leistinos „Adobe Campaign Standard” licencijos ribos.
+> Įsitikinkite, kad eksportuotame segmente įrašų skaičius ribojamas pagal jūsų "Adobe Campaign Standard" licencijos leistiną ribą.
 
 Eksportuoti duomenys saugomi „Azure Blob Storage“ didelių dvejetainių objektų saugyklos talpyklėje, kurią sukonfigūravote aukščiau. Jūsų talpyklėje automatiškai sukuriamas šis aplanko maršrutas:
 
@@ -105,29 +105,29 @@ Eksportuotų objektų *„model.json”* išlieka *„%ExportDestinationName%”
 
 Pavyzdys: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Patirties duomenų modelio (XDM) apibrėžimas „Adobe” patirties platformoje
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Patirties duomenų modelio (XDM) apibrėžimas Adobe Experience Platform
 
-Prieš naudojant iš auditorijos įžvalgų eksportuotus duomenis „Adobe” patirties platformoje, turime apibrėžti patirties duomenų modelio schemą ir [konfigūruoti kliento profilio duomenis realiuoju laiku](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Prieš eksportuojant duomenis iš auditorijos įžvalgų, gali būti naudojama su Adobe Experience Platform, reikia apibrėžti patirties duomenų modelio schemą ir  [sukonfigūruoti kliento profilio duomenis realiuoju laiku](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Sužinokite, [kas yra XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) ir supraskite [schemos struktūros pagrindus](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
-## <a name="import-data-into-adobe-experience-platform"></a>Duomenų importavimas į „Adobe” patirties platformą
+## <a name="import-data-into-adobe-experience-platform"></a>Duomenų importavimas į „Adobe Experience Platform“
 
-Dabar, kai viskas tvarkoje, turime importuoti paruoštus auditorijos duomenis iš auditorijos įžvalgų į „Adobe” patirties platformą.
+Dabar, kai viskas parengta, reikia importuoti paruoštus auditorijos duomenis iš auditorijos įžvalgų į "Adobe Experience Platform.
 
 Pirma, [sukurkite „Azure” didelių dvejetainių objektų saugyklos ryšį](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Nustatę šaltinio ryšį, [sukonfigūruokite duomenų srautą](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) debesies saugyklos paketinio ryšiui tam, kad importuotumėte segmento išvestį iš auditorijos įžvalgų į „Adobe” patirties platformą.
+Apibrėžę šaltinio ryšį, [sukonfigūruokite duomenų srautą](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) debesies saugyklos paketo ryšio duomenų srautą, kad segmento išvestį iš auditorijos įžvalgų importuotume į Adobe Experience Platform.
 
-## <a name="create-an-audience-in-adobe-campaign-standard"></a>Auditorijos kūrimas „Adobe Campaign Standard” platformoje
+## <a name="create-an-audience-in-adobe-campaign-standard"></a>Sukurkite auditoriją "Adobe Campaign Standard"
 
-Jei norite siųsti šios kampanijos el. laišką, naudosime „Adobe Campaign Standard". Importavę duomenis į „Adobe” patirties platformą, turime [sukurti auditoriją](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) „Adobe Campaign Standard” platformoje naudodami duomenis iš „Adobe” patirties platformos.
+Jei norite siųsti šios kampanijos el. laišką, naudosime „Adobe Campaign Standard". Importavus duomenis į Adobe Experience Platform, turime [sukurti auditoriją](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) "Adobe Campaign Standard", naudodami duomenis Adobe Experience Platform.
 
 
-Sužinokite, kaip [naudoti segmentų daryklę](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) „Adobe Campaign Standard” platformoje, kad apibrėžtumėte auditoriją pagal „Adobe” patirties platformos duomenis.
+Sužinokite, kaip [naudoti segmento kurimo įrankį](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) "Adobe Campaign Standard", kad apibrėžtume auditoriją, pagrįstą Adobe Experience Platform duomenimis.
 
-## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>El. laiško sukūrimas ir siuntimas naudojant „Adobe Campaign Standard”
+## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Kurti ir siųsti el. laišką naudojant "Adobe Campaign Standard"
 
 Sukurkite el. pašto turinį ir tada [išbandykite ir išsiųskite](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) jūsų el. laišką.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Pavyzdinis el. laiškas su atnaujinimo pasiūlymu iš Adobe Campaign Standard.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="El. laiško su atnaujinimo pasiūlymu iš Adobe Campaign Standard" pavyzdys.":::

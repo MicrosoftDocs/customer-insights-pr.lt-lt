@@ -1,6 +1,6 @@
 ---
-title: „Customer Insights” duomenų eksportavimas į „Adobe Campaign Standard”
-description: Sužinokite, kaip naudoti auditorijos įžvalgų segmentus „Adobe Campaign Standard”.
+title: „Customer Insights“ duomenų eksportavimas į "Adobe Campaign Standard"
+description: Sužinokite, kaip naudoti auditorijų įžvalgų segmentus naudojant "Adobe Campaign Standard".
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,32 +9,32 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: d301b4f0cb875303fb3d373b77177acd1c1f5219cd6f23c2a1d29ce67a222eab
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305396"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032173"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>„Customer Insights” segmentų naudojimas „Adobe Campaign Standard” (peržiūros versija)
+# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>„Customer Insights“ segmentų naudojimas „Adobe Campaign Standard“ (peržiūra)
 
-Kaip auditorijos įžvalgų vartotojas, galbūt sukūrėte segmentų, kad rinkodaros kampanijos būtų efektyvesnės „Dynamics 365 Customer Insights“ atsižvelgiant į atitinkamas auditorijas. Norėdami naudoti segmentą iš „Adobe” patirties platformos auditorijos įžvalgų ir programų, pavyzdžiui, „Adobe Campaign Standard”, turite atlikti kelis šiame straipsnyje nurodytus veiksmus.
+Kaip auditorijos įžvalgų vartotojas, galbūt sukūrėte segmentų, kad rinkodaros kampanijos būtų efektyvesnės „Dynamics 365 Customer Insights“ atsižvelgiant į atitinkamas auditorijas. Norėdami naudoti segmentą iš auditorijos įžvalgų Adobe Experience Platform ir programose kaip "Adobe Campaign Standard", turite atlikti kelis šiame straipsnyje nurodytus veiksmus.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Apdoroti šiame straipsnyje aprašytų veiksmų diagramą.":::
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 -   „Dynamics 365 Customer Insights“ licencija
--   „Adobe Campaign Standard“ licencija
+-   Adobe Campaign Standard licencija
 -   „Azure“ didelių dvejetainių objektų saugyklos abonementas
 
 ## <a name="campaign-overview"></a>Kampanijos apžvalga
 
-Norėdami geriau suprasti, kaip galite naudoti auditorijos įžvalgų segmentus „Adobe” patirties platformoje, pažvelkime į fiktyvią pavyzdinę kampaniją.
+Norėdami geriau suprasti, kaip galite naudoti segmentus iš auditorijos įžvalgų Adobe Experience Platform, peržiūrėkime išgalvotą kampanijos pavyzdį.
 
-Tarkime, kad jūsų įmonė siūlo mėnesinę, prenumerata pagrįstą paslaugą jūsų klientams Jungtinėse Amerikos Valstijose. Norite nustatyti klientus, kurių prenumeratos turi būti atnaujintos per artimiausias aštuonias dienas, bet jie dar neatnaujino prenumeratos. Siekdami išlaikyti šiuos klientus, norite nusiųsti jiems reklaminį pasiūlymą el. paštu naudojant „Adobe Campaign Standard”.
+Tarkime, kad jūsų įmonė siūlo mėnesinę, prenumerata pagrįstą paslaugą jūsų klientams Jungtinėse Amerikos Valstijose. Norite nustatyti klientus, kurių prenumeratos turi būti atnaujintos per artimiausias aštuonias dienas, bet jie dar neatnaujino prenumeratos. Norėdami išlaikyti šiuos klientus, el. paštu išsiųskite reklaminį pasiūlymą, naudojantis „Adobe Campaign Standard“.
 
-Šiame pavyzdyje norime reklaminę el. pašto kampaniją įvykdyti vieną kartą. Šiame straipsnyje neaprašomas kampanijos vykdymas daugiau negu vieną kartą. Tačiau auditorijos įžvalgas ir „Adobe Campaign Standard” galima sukonfigūruoti taip, kad veiktų ir pasikartojančios kampanijos scenarijuje.
+Šiame pavyzdyje norime reklaminę el. pašto kampaniją įvykdyti vieną kartą. Šiame straipsnyje neaprašomas kampanijos vykdymas daugiau negu vieną kartą. Tačiau auditorijos įžvalgas ir „Adobe Campaign Standard“ galima sukonfigūruoti taip, kad jos veiktų ir naudojant pasikartojantį kampanijos scenarijų.
 
 ## <a name="identify-your-target-audience"></a>Atpažinkite savo tikslinę auditoriją
 
@@ -54,9 +54,9 @@ Atpažinę mūsų tikslinę auditoriją, galime konfigūruoti eksportavimą iš 
 
 1. Auditorijos įžvalgose eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„Adobe Campaign“**, jei norite konfigūruoti ryšį arba pasirinkite **Sąranka** plytelėje **„Adobe Campaign“**
+1. Pasirinkite **Pridėti jungtis** ir pasirinkite **Adobe Campaign** norint sukonfigūruoti jungtis arba pasirinkite **Sąranką** **Adobe kampanijos** plytelė.
 
-   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Konfigūracijos plytelė, skirta Adobe Campaign Standard.":::
+   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Konfigūracijos plytelė Adobe Campaign Standard.":::
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
@@ -80,7 +80,7 @@ Atpažinę mūsų tikslinę auditoriją, galime konfigūruoti eksportavimą iš 
 
 1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti eksportavimą**.
 
-1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Adobe Campaign“. Jei šio skyriaus pavadinimo nematote, jums nėra jokių šio tipo ryšių.
+1. **Jungtis eksportui** lauke pasirinkite jungtį iš Adobe Campaign skyriaus. Jei šio skyriaus pavadinimo nematote, jums nėra jokių šio tipo ryšių.
 
 1. Pasirinkite segmentą, kurį norite eksportuoti. Šiame pavyzdyje tai yra **„ChurnProneCustomers”**.
 
@@ -88,14 +88,14 @@ Atpažinę mūsų tikslinę auditoriją, galime konfigūruoti eksportavimą iš 
 
 1. Pasirinkite **Toliau**.
 
-1. Dabar mes susiejame **Šaltinio** laukus iš auditorijos įžvalgų segmento su **Paskirties** laukų pavadinimais „Adobe Campaign Standard” profilio schemoje.
+1. Dabar išdėstykite **Šaltinių** laukus iš auditorijos įžvalgų segmentų į **Tikslinį** lauko pavadinimą "Adobe Campaign Standard" profilio schemą.
 
-   :::image type="content" source="media/ACS-field-mapping.png" alt-text="Laukų susiejimas, skirtas Adobe Campaign Standard jungčiai.":::
+   :::image type="content" source="media/ACS-field-mapping.png" alt-text="Laukų susiejimas Adobe Campaign Standard jungčiai.":::
 
-   Jeigu norite įtraukti daugiau atributų, pasirinkite **Įtraukti atributą**. Paskirties pavadinimas gali skirtis nuo šaltinio lauko pavadinimo, todėl vis tiek galite susieti segmento išvestį iš auditorijos įžvalgų į „Adobe Campaign Standard”, jei laukų pavadinimai dvejuose sistemose nėra tokie patys.
+   Jeigu norite įtraukti daugiau atributų, pasirinkite **Įtraukti atributą**. Tikslinis pavadinimas gali skirtis nuo šaltinio lauko pavadinimo, kad segmento išvestį nuo auditorijos įžvalgų vis tiek būtų galima susieti su "Adobe Campaign Standard", jei laukai neturi tokio paties pavadinimo abiejose sistemose.
 
    > [!NOTE]
-   > El. pašto adresas naudojamas kaip tapatybės laukas, tačiau galite naudoti bet kurį kitą identifikatorių iš jūsų auditorijos įžvalgų kliento profilio, kad susietumėte duomenis su „Adobe Campaign Standard”.
+   > El. pašto adresas naudojamas kaip tapatybės laukas, tačiau galite naudoti bet kurį kitą identifikatorių iš savo auditorijos įžvalgų kliento profilio, kad susiedami duomenis su "Adobe Campaign Standard".
 
 1. Pasirinkite **Įrašyti**.
 
@@ -104,7 +104,7 @@ Išsaugoję eksportavimo paskirties vietą ją rasite pasirinkę **Duomenys** > 
 Dabar galite [eksportuoti segmentą pareikalavus](export-destinations.md#run-exports-on-demand). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md).
 
 > [!NOTE]
-> Įsitikinkite, kad eksportuoto segmento įrašų skaičius neviršija leistinos „Adobe Campaign Standard” licencijos ribos.
+> Įsitikinkite, kad eksportuotame segmente įrašų skaičius ribojamas pagal jūsų "Adobe Campaign Standard" licencijos leistiną ribą.
 
 Eksportuoti duomenys saugomi „Azure Blob Storage“ didelių dvejetainių objektų saugyklos talpyklėje, kurią sukonfigūravote aukščiau. Jūsų talpyklėje automatiškai sukuriamas šis aplanko maršrutas:
 
@@ -112,32 +112,32 @@ Eksportuoti duomenys saugomi „Azure Blob Storage“ didelių dvejetainių obje
 
 Pavyzdys: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo_ChurnProneCustomers_1613059542.csv
 
-## <a name="configure-adobe-campaign-standard"></a>„Adobe Campaign Standard“ konfigūravimas
+## <a name="configure-adobe-campaign-standard"></a>Adobe Campaign Standard konfigūracija
 
-Kai eksportuojamas segmentas iš auditorijos įžvalgų, jame yra stulpeliai, kuriuos pasirinkote nustatydami eksportavimo paskirties vietą ankstesniame veiksme. Šiuos duomenis galima naudoti [kuriant profilius „Adobe Campaign Standard” platformoje](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
+Kai eksportuojamas segmentas iš auditorijos įžvalgų, jame yra stulpeliai, kuriuos pasirinkote nustatydami eksportavimo paskirties vietą ankstesniame veiksme. Šie duomenys gali būti naudojami [kuriant šablonus Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
-Norėdami naudoti segmentą „Adobe Campaign Standard” platformoje, turime išplėsti profilio schemą „Adobe Campaign Standard”, kad įtrauktume du papildomus laukus. Sužinokite, kaip [išplėsti profilio išteklius](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) su naujais „Adobe Campaign Standard” laukais.
+Kad segmentą būtų galima "Adobe Campaign Standart", reikia išplėsti profilio schemą "Adobe Campaign Standard" ir įtraukti du papildomus laukus. Sužinokite, kaip [išplėsti profilio išteklių](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) naudojant naujus laukus "Adobe Campaign Standard".
 
 Mūsų pavyzdyje šie laukai yra *Segmento pavadinimas ir Segmento data (pasirenkama)*.
 
-Šiuos laukus naudosime atpažinti „Adobe Campaign Standard” profiliams, kuriems norime taikyti šią kampaniją.
+Šiuos laukus naudosime nustatyti profilius Adobe Campaign Standard mes siekiame šios kampanijos.
 
-Jei „Adobe Campaign Standard” nėra kitų įrašų, išskyrus tuos, kuriuos ketinate importuoti, galite praleisti šį veiksmą.
+Jei kitų įrašų nėra „Adobe Campaign Standard“, išskyrus tai, ką ketinate importuoti, šį veiksmą galite praleisti.
 
-## <a name="import-data-into-adobe-campaign-standard"></a>Duomenų importavimas į „Adobe Campaign Standard”
+## <a name="import-data-into-adobe-campaign-standard"></a>Duomenų importavimas į "Adobe Campaign Standard"
 
-Dabar, kai viskas tvarkoje, turime importuoti paruoštus auditorijos duomenis iš auditorijos įžvalgų į „Adobe Campaign Standard” profilių kūrimui. Sužinokite, [kaip importuoti „Adobe Campaign Standard” profilius](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) naudojant darbo eigą.
+Dabar, kai viskas parengta, reikia importuoti paruoštus auditorijos duomenis iš auditorijos įžvalgų į "Adobe Campaign Standard", kad būtų sukurti profiliai. Sužinokite [kaip importuoti profilius į Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) naudojant darbo eigą.
 
-Toliau pateiktame paveikslėlyje importavimo darbo eiga sukonfigūruota taip, kad ji būtų vykdoma kas aštuonias valandas ir ieškoma eksportuotų auditorijos įžvalgų segmentų (.csv failo „Azure Blob Storage"). Darbo eiga išskleidžia .csv failo turinį nustatyta stulpelių tvarka. Ši darbo eiga buvo sukurta atlikti pagrindiniam klaidų tvarkymui ir užtikrinti, kad kiekvienas įrašas turi el. pašto adresą, prieš drėkinant „Adobe Campaign Standard” duomenis. Darbo eiga taip pat iš failo pavadinimo išskleisti segmento pavadinimą prieš ją perrašant į „Adobe Campaign Standard" profilio duomenis.
+Toliau pateiktame paveikslėlyje importavimo darbo eiga sukonfigūruota taip, kad ji būtų vykdoma kas aštuonias valandas ir ieškoma eksportuotų auditorijos įžvalgų segmentų (.csv failo „Azure Blob Storage"). Darbo eiga išskleidžia .csv failo turinį nustatyta stulpelių tvarka. Ši darbo eiga sukurta siekiant atlikti pagrindinius klaidų apdorojimo veiksmus ir užtikrinti, kad kiekvienas įrašas turi el. pašto adresą prieš įrašant duomenis į "Adobe Campaign Standard". Darbo eiga taip pat iš failo pavadinimo išskleidžia segmento pavadinimą prieš ją perrašant į "Adobe Campaign Standard" profilio duomenis.
 
-:::image type="content" source="media/ACS-import-workflow.png" alt-text="Importavimo darbo eigos Adobe Campaign Standard vartotojo sąsajoje ekrano kopija.":::
+:::image type="content" source="media/ACS-import-workflow.png" alt-text="Importavimo darbo eigos ekrano kopija Adobe Campaign Standard vartotojo sąsajoje.":::
 
-## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>Auditorijos nuskaitymas „Adobe Campaign Standard” platformoje
+## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>Nuskaitykite auditoriją naudodami "Adobe Campaign Standard"
 
-Kai duomenys bus importuoti į Adobe „Campaign Standard”, jūs [galėsite sukurti darbo eigą](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) ir [pateikti užklausą](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) klientams pagal *Segmento pavadinimą* ir *Segmento datą* pasirinkti profiliams, kurie buvo identifikuoti mūsų pavyzdinėje kampanijoje.
+Kai duomenys importuoti į Adobe Campaign Standard, jūs [galite sukurti darbo eigą](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) ir [užklausą](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) paremtą klientais *Segmento pavadinimas* ir *Segmento data* kad pasirinktumėte profilius, kurie buvo numatyti mūsų pavyzdinei kampanijai.
 
-## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>El. laiško sukūrimas ir siuntimas naudojant „Adobe Campaign Standard”
+## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Kurti ir siųsti el. laišką naudojant "Adobe Campaign Standard"
 
 Sukurkite el. pašto turinį ir tada [išbandykite ir išsiųskite](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) jūsų el. laišką.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Pavyzdinis el. laiškas su atnaujinimo pasiūlymu iš Adobe Campaign Standard.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="El. laiško su atnaujinimo pasiūlymu iš Adobe Campaign Standard" pavyzdys.":::
