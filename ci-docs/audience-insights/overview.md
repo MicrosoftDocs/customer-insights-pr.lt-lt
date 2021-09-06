@@ -1,7 +1,7 @@
 ---
 title: Auditorijos įžvalgų „Dynamics 365 Customer Insights“ apžvalga
 description: Auditorijos įžvalgų „Dynamics 365 Customer Insights“ apžvalga.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539125"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034370"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Auditorijos įžvalgų „Dynamics 365 Customer Insights“ apžvalga
 
-Auditorijos įžvalgos padeda jums sukurti gilesnį jūsų klientų supratimą. Prijunkite duomenis iš įvairių operacijų, elgsenos ir stebėjimo šaltinių, kad sukurtumėte 360 laipsnių kliento rodinį. Naudokite šias įžvalgas, kad valdytumėte į klientus orientuotas funkcijas ir procesus. Suvienodinkite ir supraskite kliento duomenis ir pasitelkite juos protingoms įžvalgoms ir veiksmams.
+[Auditorijos įžvalgos, Dynamics 365 Customer Insights galimybė](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) padeda geriau suprasti klientus. Prijunkite duomenis iš įvairių operacijų, elgsenos ir stebėjimo šaltinių, kad sukurtumėte 360 laipsnių kliento rodinį. Naudokite šias įžvalgas, kad valdytumėte į klientus orientuotas funkcijas ir procesus. Suvienodinkite ir supraskite kliento duomenis ir pasitelkite juos protingoms įžvalgoms ir veiksmams.
 
 ## <a name="main-benefits"></a>Pagrindiniai pranašumai 
 
@@ -34,9 +34,9 @@ Auditorijos įžvalgos padeda jums sukurti gilesnį jūsų klientų supratimą. 
 
 - **Įgalinkite savo verslo procesus ir personalizuokite klientų patirtis**
 
-  - Naudokite personalizuotą įsitraukimą įvairiuose kanaluose – įgalinkite rinkodaros, pardavimo ir paslaugų profesionalus su iš anksto nustatytomis ir kontekstinėmis klientų įžvalgomis ir individualiomis klientų profilių kortelėmis, įtrauktomis į verslo programas, kurias jie jau naudoja kasdienėje veikloje
+  - Suteikite asmeniniams poreikiams pritaikytą bendradarbiavimą įvairiuose kanaluose – suteikite rinkodaros, pardavimo ir aptarnavimo profesionalams daugiau galimybių. Naudokite iš anksto sukurtas, įžvalgas ir pritaikytas klientų profilio korteles, integruotas su jau naudojamais verslo programomis.
   - Automatizuokite į klientus orientuotas funkcijas ir procesus pagal tinkinamus profilius, verslo priemones ir segmentus.
-  - Įgalinkite ir išplėskite darbo patirtį, pagrįstą [„Microsoft Power Platform“](https://powerplatform.microsoft.com/). Greitai sukurkite programas su išplėstomis įžvalgomis naudodami galingą žemo kodo prieigą per „PowerApps“.  
+  - Įgalinkite ir išplėskite darbo patirtį, pagrįstą [„Microsoft Power Platform“](https://powerplatform.microsoft.com/). Greitai sukurkite programas su išplėstomis įžvalgomis naudodami galingą žemo kodo prieigą per „Power Apps“.  
 
 ## <a name="key-audiences"></a>Pagrindinės auditorijos
 
@@ -50,13 +50,18 @@ Auditorijos įžvalgos padeda jums sukurti gilesnį jūsų klientų supratimą. 
 
 - **Verslo vartotojai:**
 
-  - 360 laipsnių klientų profilių įžvalgos ir klientų veiklos ciklų galutinis vaizdas.
+  - 360 laipsnių klientų profilių įžvalgos ir klientų veiklos ciklų įžvalgos.
   - Peržiūrėkite 360 laipsnių klientų duomenis „Dynamics 365“ verslo procesuose su iš anksto sukurtais paketais.
 
 - **Verslo analitikai:**
 
   - Kurkite tinkinamus profilius, apibrėžkite priemones ir kurkite segmentus bei pranašumus iš prognozuojamų analitikų, kad gautumėte 360 laipsnių kliento vaizdą pagal savo organizaciją.  
-  - Norėdami toliau apdoroti įžvalgas, naudokite kelių „Microsoft” ir trečiųjų šalių programų arba API iš anksto žinomas jungtis.
+  - Norėdami apdoroti įžvalgas, naudokite iš anksto skirtas jungtis kelioms "Microsoft" ir trečiųjų šalių programoms arba API.
 
+## <a name="pricing-and-licensing"></a>Kainodara ir licencijavimas
+
+"Customer Insights" licencijuotos vienam nuomotojui ir yra kelios galimybės. Į teisę turintį pajėgumą įtraukti profilių rinkinys, kasdien atnaujinamos sistemos, Power Platform užklausos ir dvi aplinkos. Norėdami padidinti numatytąją kvotą, galite įsigyti papildomų pajėgumų ir licencijų. 
+- Išsami informacija apie pajėgumą ir teises: ["Dynamics 365" licencijavimo vadovas](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Kainų apžvalga: ["Dynamics 365" kainos](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

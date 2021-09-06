@@ -150,7 +150,7 @@
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: „Adobe” patirties platforma
+            - name: „Adobe Experience Platform”
               href: audience-insights/export-adobe-experience-platform.md
             - name: „Campaign Monitor“
               href: audience-insights/export-campaign-monitor.md
@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: „Google Ads“
               href: audience-insights/export-google-ads.md
+            - name: '"Klaviyo"'
+              href: audience-insights/export-klaviyo.md
             - name: „LinkedIn“ reklamos
               href: audience-insights/export-linkedin-ads.md
             - name: „LiveRamp“
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Paslaugų apribojimai
       href: engagement-insights/quotas.md
-- name: Kreiptis į palaikymo tarnybą
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Auditorijos ir įtraukimo įžvalgų integravimas
+  items:
+    - name: Susieti įtraukimo įžvalgas su auditorijos įžvalgomis
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Naudokite auditorijų įžvalgų segmentus įtraukimo įžvalgų ataskaitose
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Naudokite demografinius matmenis elgsenos duomenims išskaidyti
+      href: engagement-insights/curate-dimensions.md
+- name: Gaukite pagalbą
+  href: 'https://dynamics.microsoft.com/en-us/support/'

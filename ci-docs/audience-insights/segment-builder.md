@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685472"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377798"
 ---
 # <a name="create-and-manage-segments"></a>Segmentų kūrimas ir valdymas
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685472"
 > - Atributų pasirinkimo šoninė sritis bus nuolat pasiekiama.
 > - Objekto ryšio kelių pasirinkimo parinktis.
 > Norėdami išbandyti naują segmentų daryklę, nusiųskite elektroninį laišką su tema „Prašymas įjungti naują segmento daryklę” „cihelp” [adresu] microsoft.com. Įtraukite savo organizacijos pavadinimą ir smėlio dėžės aplinkos ID.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Segmento kūrimo elementai ." lightbox="media/segment-builder-overview.png":::
+>
+> 1 – suskirstykite segmentą su taisyklėmis ir potaisyklėmis. Kiekvieną taisyklę ar potaisyklę sudaro sąlygos. Sąlygas derinkite su loginiais operatoriais
+>
+> 2 – pasirinkite [ryšio kelią](relationships.md) tarp objektų, kuriems taikoma taisyklė. Ryšio kelias nurodo, kuriuos atributus galima naudoti sąlygoje.
+>
+> 3 – valdykite taisykles ir potaisykles. Pakeiskite taisyklės padėtį arba panaikinkite ją.
+>
+> 4 – įtraukite sąlygų ir kurkite tinkamą įdėjimo lygį naudojant potaisykles.
+>
+> 5 – pritaikykite prijungtų taisyklių rinkinio operacijas.
+>
+> 6 – naudokite atributų sritį, jei norite įtraukti galimų objekto atributų arba sukurti sąlygas pagal atributus. Srityje rodomas objektų ir atributų, galimų pasirinkti taisyklei, sąrašas pagal pasirinktą ryšio kelią.
+>
+> 7 – įtraukite sąlygų, pagrįstų esamų taisyklių ir antrinių taisyklių atributais, arba įtraukite į naują taisyklę.
+>
+> 8 – kuriant segmentą anuliuokite ir perdarykite pakeitimus.
 
 Apibrėžkite vieningojo kliento objekto ir su juo susijusių objektų sudėtinius filtrus. Apdorojus, kiekvienas segmentas sukuria klientų duomenų rinkinį, kurį galite eksportuoti, ir su kuriuo galite atlikti veiksmus. Segmentai yra valdomi **Segmentų** puslapyje. 
 
@@ -145,8 +162,8 @@ Spartieji segmentai leidžia jums greitai sukurti paprastus segmentus naudojant 
 
 7. Kai segmento apdorojimas baigtas, jį galite peržiūrėti kaip bet kurį kitą sukurtą segmentą.
 
-## <a name="next-steps"></a>Paskesni veiksmai
+## <a name="next-steps"></a>Kiti veiksmai
 
-[Eksportuokite segmentą](export-destinations.md) ir susipažinkite su [kliento kortele](customer-card-add-in.md) bei [jungtimis](export-power-bi.md), kad gautumėte įžvalgų apie kliento lygį.
+[Eksportuokite segmentą](export-destinations.md) ir susipažinkite su [klientų kortelių integravimu](customer-card-add-in.md) naudoti segmentus kitose programose.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

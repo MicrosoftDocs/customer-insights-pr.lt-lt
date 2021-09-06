@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171174"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035241"
 ---
 # <a name="relationships-between-entities"></a>Objektų ryšiai
 
@@ -82,7 +82,7 @@ Ryšių puslapyje išvardyti visi sukurti ryšiai. Kiekviena eilutė nurodo ryš
 
 ### <a name="explore-the-relationship-visualizer"></a>Ryšių vizualizavimo priemonės naršymas
 
-Ryšių vizualizavimo priemonė rodo esamų ryšių tarp susietų objektų ir jų skaičiaus tinklo diagramą.
+Ryšių vizualizavimo priemonė rodo esamų ryšių tarp susietų objektų ir jų skaičiaus tinklo diagramą. Taip pat vizualizuoja ryšio kelią.
 
 Norėdami tinkinti rodinį, galite pakeisti laukų padėtį nuvilkdami juos į drobę.
 
@@ -92,6 +92,20 @@ Galimos parinktys:
 - **Eksportuoti kaip vaizdą**: Įrašo dabartinį rodinį kaip vaizdinį failą.
 - **Pakeisti į horizontalų/vertikalų išdėstymą**: Pakeičia objektų ir ryšių lygiuotę.
 - **Redaguoti**: Atnaujina pasirinktinių ryšių ypatybes redagavimo srityje ir įrašo pakeitimus.
+
+### <a name="relationship-path"></a>Ryšio kelias
+
+Ryšio kelias apibūdina objektus, kurie susieti su ryšiais tarp šaltinio objekto ir tikslinio objekto. Jis naudojamas kuriant segmentą ar priemonę, į kurią įtraukti kiti objektai, o ne vieningojo profilio objektas, ir vieningojo profilio objektą galima pasiekti keliomis parinktimis.
+
+Ryšio kelias informuoja sistemą, per kuriuos ryšius jungtis prie vieningojo profilio objekto. Įvairūs ryšio keliai gali pateikti skirtingus rezultatus.
+
+Pavyzdžiui, objektas, *eCommerce_eCommercePurchases* su vieningojo profilio kliento objektu, turi *Kliento* ryšius:
+
+- eCommerce_eCommercePurchases > klientas
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > klientas
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klientas 
+
+Ryšio kelias nurodo, kuriuos objektus galite naudoti kurdami priemonių arba segmentų taisykles. Pasirinkus parinktį su ilgiausią ryšio kelią tikriausiai bus gauti mažiau rezultatų, nes sutampantys įrašai turi būti visų objektų dalis. Šiame pavyzdyje klientas turi būti įsigijęs prekes per "e-eCommerce_eCommercePurchases", pardavimo vietoje (POS_posPurchases) ir dalyvauti mūsų programoje (loyaltyScheme_loyCustomers). Pasirinkę pirmą parinktį tikriausiai gausite daugiau rezultatų, nes klientams reikės tik vieno papildomo objekto.
 
 ## <a name="manage-existing-relationships"></a>Esamų ryšių valdymas 
 
@@ -105,6 +119,6 @@ Pasirinkite ryšį ir vieną iš šių parinkčių:
 
 ## <a name="next-step"></a>Tolesnis veiksmas
 
-Sistemos ir pasirinktiniai ryšiai naudojami [segmentams kurti](segments.md), remiantis keliais duomenų šaltiniais, kurie nebėra izoliuoti.
+Sistemos ir pasirinktiniai ryšiai naudojami [segmentams kurti](segments.md) ir [priemonėms](measures.md) pagrįstoms keliais duomenų šaltiniais, kurių nebenaudojama.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

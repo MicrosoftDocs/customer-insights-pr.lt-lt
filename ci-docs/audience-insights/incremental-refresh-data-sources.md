@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554169"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377844"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>„Power Query“ pagrįstų duomenų šaltinių papildantysis naujinimas
 
@@ -44,8 +44,7 @@ Publikos įžvalgos leidžia padidinti paleidimą iš naujo duomenų šaltiniams
 
 1. Pasirinkę **Papildančiojo naujinimo parametrai**, sukonfigūruojate papildantįjį naujinimą visiems objektams, kuriuos pasirinkote kurdami duomenų šaltinį.
 
-   > [!div class="mx-imgBorder"]
-   > ![Objektų konfigūravimas duomenų šaltinyje norint atlikti papildantįjį atnaujinimą.](media/incremental-refresh-settings.png "Objektų konfigūravimas duomenų šaltinyje norint atlikti papildantįjį naujinimą")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Objektų konfigūravimas duomenų šaltinyje norint atlikti papildantįjį atnaujinimą.":::
 
 1. Pažymėkite objektą ir nurodykite toliau pateikiamą informaciją.
 
