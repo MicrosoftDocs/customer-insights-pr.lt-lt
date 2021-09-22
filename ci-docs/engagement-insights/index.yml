@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: Įsitraukimo įžvalgų (peržiūra) galimybių sąvokų žodynas „Dynamics 365 Customer Insights“
+summary: Rinkti duomenis apie jūsų susekamus duomenis. Interaktyviai suprasti bendravimą su klientais ir naudojimą jūsų svetainėse. Naudodami gilų įtraukimo įžvalgų ir auditorijos įžvalgų integravimą, savo elgsenos realiuoju laiku analizę papildyti klientų profilio ataskaitomis. Praturtinkite klientų profilius naudodami žiniatinklio veiklas, kad realiuoju laiku būtų galima naudoti svarbius klientų duomenis. Pakeiskite savo verslą, kad iš klientų duomenų tiesiogiai gautų naudos.
+metadata:
+  title: Įtraukimo įžvalgų (peržiūros versija) dokumentai
+  description: Pagalbos telkinys su pagrindiniais įtraukimo įžvalgų saitais.
+  ms.service: customer-insights
+  ms.subservice: engagement-insights
+  ms.topic: hub-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.reviewer: mhart
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.translationtype: HT
+  ms.contentlocale: lt-LT
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036248"
+landingContent:
+- title: Apie
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Galimybių apžvalga
+      url: overview.md
+    - text: Sąlygos ir sąvokos
+      url: glossary.md
+    - text: Pažinkite įtraukimo įžvalgas
+      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+- title: Parengimas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Pradėti
+      url: get-started.md
+    - text: Kurti darbo sritį
+      url: create-workspace.md
+    - text: Savo interneto svetainėje talpinkite instrumentus
+      url: instrument-website.md
+- title: Ataskaitos
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Peržiūrėti ataskaitas
+      url: view-reports.md
+    - text: Kurti pasirinktines ataskaitas
+      url: custom-reports.md
+    - text: Peržiūrėti suvienodintą profilių ataskaitą
+      url: profile-reports.md
+    - text: Kurti tunelio ataskaitas
+      url: funnel-reports.md
+- title: Renginiai
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kurti patikslintus įvykius
+      url: refined-events.md
+    - text: Eksportuoti įvykius
+      url: export-events.md
+    - text: Panaikinti ir eksportuoti asmenis duomenis
+      url: delete-export-personal-data.md
+- title: Programų kūrėjo ištekliai
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Programų kūrėjo ištekliai
+      url: developer-resources.md
+    - text: WebSDK pavyzdys
+      url: websdk-sample.md
+    - text: Išplėstiniai žiniatinklio SDK scenarijai
+      url: advanced-SDK-implementation.md
+    - text: „Android“ SDK pavyzdys
+      url: get-started-android.md
+    - text: „iOS SDK" pavyzdys
+      url: get-started-ios.md
+- title: Administracija
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Valdyti aplinkas ir darbo aplinkas
+      url: manage-environments-workspaces.md
+    - text: Prisijungti prie auditorijos įžvalgų
+      url: configure-connections.md
+    - text: Valdyti slapukus ir vartotojo leidimą
+      url: user-consent-storage.md
