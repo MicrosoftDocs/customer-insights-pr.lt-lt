@@ -1,19 +1,19 @@
 ---
 title: Sąsajos tarp auditorijos įžvalgų ir įtraukimo įžvalgų kūrimas
 description: Sukurkite aktyvų ryšį tarp auditorijos įžvalgų ir įtraukimo įžvalgų, kad duomenis būtų galima bendrai naudoti dvipusio naudojimo srityje.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461023"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487117"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Sąsajos tarp auditorijos įžvalgų ir įtraukimo įžvalgų kūrimas
 
@@ -26,14 +26,14 @@ Norėdami gauti daugiau analizės parinkčių įtraukimo įžvalgų, naudokite v
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Auditorijos įžvalgų profiliai turi būti saugomi jūsų valdomoje Azure Data Lake Storage paskyroje arba [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash; valdomoje duomenų saugykloje. 
-
+- Jūsų auditorijų įžvalgų aplinkoje turi būti susieta „Dataverse” aplinka. O jei ta aplinka taip pat naudoja „Dataverse” duomenų saugojimui, būtinai patikrinkite **Įgalinti duomenų bendrinimą** auditorijos įžvalgose. Daugiau informacijos rasite [Mokamos aplinkos kūrimas ir konfigūravimas auditorijos įžvalgose](../audience-insights/get-started-paid.md).
 - Jums reikia administratoriaus teisių tiek įtraukimo įžvalgų, tiek auditorijos įžvalgų aplinkose.
-
 - Susietos aplinkos turi būti tame pačiame geografiniame regione.
 
 > [!NOTE]
-> - Jei auditorijos įžvalgų prenumerata yra bandomoji versija, kuri naudoja auditorijos įžvalgas viduje valdomus duomenų telkinius, kreipkitės į [pirequest@microsoft.com](mailto:pirequest@microsoft.com) dėl pagalbos. 
-> - Jei jūsų auditorijos įžvalgų aplinka naudoja jūsų nuosavą Azure Data Lake Storage duomenims saugoti, į saugyklos paskyrą turite įtraukti įtraukimo įžvalgų "Azure" pagrindinę tarnybą. Norėdami gauti daugiau informacijos, eikite [Prisijungti prie Azure Data Lake Storage paskyros su "Azure" tarnyba, kuri yra pagrindinė auditorijos įžvalgų dalis](../audience-insights/connect-service-principal.md). Be to, auditorijų įžvalgų aplinkoje turi būti susieta [Dataverse aplinka](../audience-insights/get-started-paid.md). 
+> - Jei jūsų auditorijos įžvalgų prenumerata yra bandomoji versija, naudojanti auditorijos įžvalgas viduje valdomus „data lake”, kreipkitės į [pirequest@microsoft.com](mailto:pirequest@microsoft.com) dėl pagalbos. 
+> - Jei jūsų auditorijos įžvalgų aplinka naudoja jūsų nuosavą Azure Data Lake Storage duomenims saugoti, į saugyklos paskyrą turite įtraukti įtraukimo įžvalgų "Azure" pagrindinę tarnybą. Norėdami gauti daugiau informacijos, eikite [Prisijungti prie Azure Data Lake Storage paskyros su "Azure" tarnyba, kuri yra pagrindinė auditorijos įžvalgų dalis](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Aplinkos ryšio kūrimas
 
@@ -75,6 +75,7 @@ Susieję aplinkas, galite pasirinkti pasirinktines susietų aplinkos funkcijų p
 
    > [!IMPORTANT]
    > Jei šiame žingsnyje aiškiai nepridėsite vartotojų, duomenys bus paslėpti nuo vartotojų įtraukimo įžvalgose.
+   > Kad auditorijos įžvalgų segmentai būtų rodomi įtraukimo įžvalgoje, pirmiausia turite [paleisti suliejimo ir pasroviui procesus](../audience-insights/merge-entities.md). Pasroviniai procesai yra svarbūs, nes jie sukuria unikalią lentelę, kuri paruošia auditorijos įžvalgų segmentus, kuriuos reikia bendrai naudoti su įtraukimo įžvalgomis. (Jei sistemos naujinimas suplanuotas, jis automatiškai apims tolesnius procesus).
 
 1. Peržiūrėkite savo pasirinkimą ir pasirinkite **Baigti**.
 

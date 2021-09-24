@@ -10,12 +10,12 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 925cb5c2ccb4279ae5db2eb927a356708d310360
+ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034370"
+ms.lasthandoff: 09/06/2021
+ms.locfileid: "7474067"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Auditorijos įžvalgų „Dynamics 365 Customer Insights“ apžvalga
 
@@ -57,11 +57,5 @@ ms.locfileid: "7034370"
 
   - Kurkite tinkinamus profilius, apibrėžkite priemones ir kurkite segmentus bei pranašumus iš prognozuojamų analitikų, kad gautumėte 360 laipsnių kliento vaizdą pagal savo organizaciją.  
   - Norėdami apdoroti įžvalgas, naudokite iš anksto skirtas jungtis kelioms "Microsoft" ir trečiųjų šalių programoms arba API.
-
-## <a name="pricing-and-licensing"></a>Kainodara ir licencijavimas
-
-"Customer Insights" licencijuotos vienam nuomotojui ir yra kelios galimybės. Į teisę turintį pajėgumą įtraukti profilių rinkinys, kasdien atnaujinamos sistemos, Power Platform užklausos ir dvi aplinkos. Norėdami padidinti numatytąją kvotą, galite įsigyti papildomų pajėgumų ir licencijų. 
-- Išsami informacija apie pajėgumą ir teises: ["Dynamics 365" licencijavimo vadovas](https://go.microsoft.com/fwlink/?LinkId=866544)
-- Kainų apžvalga: ["Dynamics 365" kainos](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

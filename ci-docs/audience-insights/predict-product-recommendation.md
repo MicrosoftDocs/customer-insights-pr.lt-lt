@@ -1,20 +1,20 @@
 ---
 title: Produkto rekomendacijos prognozė
 description: Prognozuojami produktai, kuriuos klientas gali įsigyti arba su jais bendrauti.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034966"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494549"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produkto rekomendacijos prognozė (apžvalga)
 
@@ -89,23 +89,24 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 
 ### <a name="add-required-data"></a>Įtraukti būtinus duomenis
 
-1. Rinkitės **Įtraukti duomenis** skirtus **Kliento operacijų istorijai** ir pasirinkite objektą, kuris pateikia operacijų istorijos informaciją kaip aprašyta [būtinose sąlygose](#prerequisites).
+1. Pasirinkite **Įtraukti duomenis** ir pasirinkite veiklos tipą šoninėje srityje, kurioje yra reikiama operacijos arba pirkimo retrospektyvos informacija.
 
-1. Sudarykite semantinių laukelių žemėlapį į atributus per jūsų įsigijimo istorijos objektą ir pasirinkite **Kitas**. Norėdami peržiūrėti laukų aprašymus, peržiūrėkite [būtinąsias sąlygas](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Objekto ryšio apibrėžimas.](media/product-recommendation-purchasehistorymapping.PNG "Pirkimo retrospektyvos puslapis, kuriame rodomi semantiniai atributai, susieti su pasirinkto pirkimo retrospektyvos objekto laukais")
+1. Dalyje **Pasirinkti veiklas** pasirinkite konkrečias veiklas iš pažymėtos veiklos, į kurios norite susitelkti skaičiuojant.
 
-1. Jei toliau laukų neužpildote, konfigūruokite ryšį iš pirkimo retrospektyvos objekto į *Kliento* įrašą.
-    1. Pasirinkite **Įsigijimo istorijos objektas**.
-    1. Pasirinkite **Laukelis**, kuris nustato klientą įsigijimo istorijos objekte. Ji turi būti susijęs su kliento objekto pirminiu kliento ID *Kliento* įraše.
-    1. Pasirinkite **kliento objektą**, atitinkantį pirminį kliento objektą.
-    1. Įveskite pavadinimą, apibūdinantį ryšį.
-       > [!div class="mx-imgBorder"]
-       > ![Įsigijimo istorijos puslapis rodo ryšių sukūrimą su klientu.](media/model-purchase-join.png "Įsigijimo istorijos puslapis rodo ryšių sukūrimą su klientu")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Šoninė sritis, vaizduojanti semantikos tipo konkrečių veiklų pasirinkimą.":::
+
+1. Jeigu dar nesusiejote veiklos su semantiniu tipu, pasirinkite **Redaguoti**, kad tai atliktumėte. Atidaroma interaktyvioji semantinių veiklų susiejimo parinktis. Susiekite savo duomenis su atitinkamais pasirinkto veiklos tipo laukais.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Puslapio parametro veiklos tipas.":::
+
+1. Susieję veiklą su atitinkamu semantiniu tipu, pažymėkite **Toliau**, kad tęstumėte 
+ 
+1. Susiekite semantinius atributus su laukais, kurių reikia modeliui paleisti.
 
 1. Pasirinkite **Įrašyti**.
 
 1. Pasirinkite **Toliau**.
+
 
 ### <a name="configure-product-filters"></a>Produkto filtrų konfigūravimas
 

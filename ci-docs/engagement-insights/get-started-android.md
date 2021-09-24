@@ -4,17 +4,17 @@ description: Sužinokite, kaip asmeniniams poreikiams pritaikyti ir paleisti „
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036928"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494285"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Pradėkite dirbti su „Android“ SDK
 
@@ -35,17 +35,38 @@ Per pateiktą failą į SDK galima perduoti šias konfigūravimo parinktis:
 
 - Prarijimo raktas (žr. toliau pateiktas instrukcijas, kaip jį gauti)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>1 veiksmas. SDK integravimas į taikomąją programą
+## <a name="integrate-the-sdk-into-your-application"></a>SDK integravimas į taikomąją programą
 Pradėkite procesą pasirinkdami darbo sritį, kurioje norite dirbti, pažymėdami „Android“ mobilią platformą ir atsisiųskite „Android“ SDK.
 
 - Kairiojoje naršymo srityje naudokite darbo srities perjungiklį ir pasirinkite savo darbo sritį.
 
 - Jei neturite esamos darbo srities, pažymėkite Nauja darbo sritis ir, norėdami **sukurti naują** darbo sritį, [atlikite veiksmus](create-workspace.md).
 
-## <a name="step-2-configure-the-sdk"></a>2 veiksmas. Konfigūruoti SDK
+- Sukūrę darbo sritį, eikite į **Administratorius** > **Darbo sritis** ir tada rinkitės **Diegimo vadovas**. 
 
-1. Sukūrę darbo sritį, eikite į **Administratorius** > **Darbo sritis** ir tada rinkitės **Diegimo vadovas**. 
+## <a name="configure-the-sdk"></a>Konfigūruoti SDK
 
+Kai atsisiunčiate SDK, su juo galite dirbti naudodami „Android Studio”, kad įjungtumėte ir apibrėžtumėte įvykius. Yra du būdai tai padaryti:
+### <a name="option-1-using-jitpack-recommended"></a>1 parinktis: naudojant „JitPack” (rekomenduojama)
+1. Įtraukite „JitPack”saugyklą į savo šakninį `build.gradle`:
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. Įtraukite priklausomybę:
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-using-download-link"></a>2 parinktis: naudojant atsisiuntimo saitą
 1. Atsisiųskite [įsitraukimo įžvalgas „Android“ SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) ir padėkite `eiandroidsdk-debug.aar` failą į `libs` katalogą.
 
 1. Atidarykite savo projekto lygio failą `build.gradle` ir įtraukite šiuos fragmentus:
@@ -62,7 +83,17 @@ Pradėkite procesą pasirinkdami darbo sritį, kurioje norite dirbti, pažymėda
     }
     ```
 
-1. Nustatykite įtraukimo įžvalgų SDK konfigūraciją naudodami `AndroidManifest.xml` failą, esantį `manifests` aplanke. 
+1. Įtraukite tinklo ir interneto teises į savo `AndroidManifest.xml` failą, esantį po `manifests` aplanku. 
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+    
+1. Nustatykite įtraukimo įžvalgų SDK konfigūraciją naudodami `AndroidManifest.xml` failą. 
+
+## <a name="enable-auto-instrumentation"></a>Įjungti automatinį persodinimą
 1. Nukopijuokite XML fragmentas iš **diegimo vadovo**. `Your-Ingestion-Key` Jis turėtų būti automatiškai įvedamas į lauką.
 
    > [!NOTE]
@@ -85,7 +116,7 @@ Pradėkite procesą pasirinkdami darbo sritį, kurioje norite dirbti, pažymėda
    </application>
    ```
 
-1. Įjunkite arba išjunkite automatinį įvykių peržiūros fiksavimą `View` ustatydami pirmiau nurodytą `autoCapture` lauką į `true` ar `false`.
+1. Įjunkite arba išjunkite automatinį įvykių peržiūros fiksavimą `View` ustatydami pirmiau nurodytą `autoCapture` lauką į `true` ar `false`. Šiuo metu `Action` įvykius reikia įtraukti rankiniu būdu.
 
 1. (pasirinktinis) Kitos konfigūracijos, pvz., galinių punktų išseksavimo URL nustatymas. Juos galima įtraukti po prarijus pagrindiniais `AndroidManifest.xml` metaduomenimis:
     ```xml
@@ -94,9 +125,9 @@ Pradėkite procesą pasirinkdami darbo sritį, kurioje norite dirbti, pažymėda
             android:value="https://some-endpoint-url.com" />
     ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>3 veiksmas. Inicijuoti SDK iš „MainActivity“ 
+## <a name="implement-custom-events"></a>Pasirinktinių įvykių diegimas
 
-Kai inicijuojate SDK, galite dirbti su įvykiais ir jų ypatybes MainActivity aplinkoje.
+Kai inicijuojate SDK, galite dirbti su įvykiais ir jų ypatybėmis `MainActivity` aplinkoje.
 
     
 Java:
@@ -147,7 +178,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>Įvykio vartotojo išsamios informacijos rinkinys (pasirenkamas)
+## <a name="set-user-details-for-your-event-optional"></a>Įvykio vartotojo išsamios informacijos rinkinys (pasirenkamas)
 
 SDK leidžia apibrėžti vartotojo informaciją, kurią galima siųsti su kiekvienu įvykiu. Galite nurodyti vartotojo informaciją iškviesite `setUser(user: User)` API `Analytics` lygyje.
 

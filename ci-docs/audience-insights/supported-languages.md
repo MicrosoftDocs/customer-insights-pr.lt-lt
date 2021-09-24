@@ -1,24 +1,23 @@
 ---
-title: Palaikomos kalbos publikos įžvalgoms
+title: Dynamics 365 Customer Insights palaikomos kalbos
 description: Supraskite ir konfigūruokite kalbos palaikymą.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035149"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483352"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Palaikomos kalbos publikos įžvalgų pajėgumams
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights palaikomos kalbos
 
-Auditorijos įžvalgos „Dynamics 365 Customer Insights” yra verčiamos į daugelį kalbų. Toliau pateiktas galimų kalbų ir informacijos apie tai, kas išversta, sąrašas. Be to, galite sužinoti daugiau apie tai, kaip pakeisti kalbos parametrus. 
+„Dynamics 365 Customer Insights” yra išverstas į daugelį kalbų. Toliau pateiktas galimų kalbų ir informacijos apie tai, kas išversta, sąrašas. Be to, galite sužinoti daugiau apie tai, kaip pakeisti kalbos parametrus. 
 
 ## <a name="languages"></a>Kalbos
 
@@ -69,7 +68,7 @@ Auditorijos įžvalgos „Dynamics 365 Customer Insights” yra verčiamos į da
 
 ## <a name="whats-translated"></a>Kas išversta
 
-Programa naudoja jūsų kalbos ypatybes tam, kad parodytų tokius elementus kaip meniu, žymos tekstas ir sistemos pranešimai jūsų pasirinkta kalba.
+„Customer Insights“ naudoja jūsų kalbos nuostatą, kad elementus, pavyzdžiui, meniu, žymos tekstą ir sistemos pranešimus, rodytų jūsų pageidaujama kalba.
 
 Kadangi dauguma funkcijų grindžiamos jūsų duomenimis, kai kurie elementai rodomi jų originalia kalba. Pavyzdžiui:
 

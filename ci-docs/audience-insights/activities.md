@@ -1,20 +1,20 @@
 ---
 title: Kliento veiklos
-description: Nustatykite kliento veiklas ir peržiūrėkite jas kliento laiko juostoje.
-ms.date: 04/07/2021
+description: Apibrėžkite klientų veiklas ir peržiūrėkite jas klientų profilių laiko planavimo juostose.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033641"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494421"
 ---
 # <a name="customer-activities"></a>Kliento veiklos
 
@@ -60,12 +60,15 @@ Jūsų duomenų šaltiniuose gali būti objektų su operacijų ir veiklos duomen
       - **Papildoma informacija**: laukelis su svarbia šios veiklos informacija.
       - **Piktograma:** piktograma, geriausiai atspindinti šį veiklos tipą.
       - **Žiniatinklio adresas**: laukelis, kuriame yra URL su informacija apie šią veiklą. Pavyzdžiui, tai gali būti operacijų sistema, skirta šiai veiklai. Šis URL gali būti bet kuris laukas iš duomenų šaltinio arba jį galima sukurti kaip naują lauką naudojant „Power Query“ transformaciją. URL duomenys bus išsaugoti *Unified Activity* objektui, kurį galima naudoti tolesniuose srautuose naudojant [API](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Kliento veiklos duomenis nurodykite „Unified Activity“ objekte.":::
+
+   - **Rodyti laiko planavimo juostoje**
+      - Pasirinkite, jei norite rodyti šią veiklą jūsų klientų profilių laiko planavimo juostos rodinyje. Pasirinkite **Taip**, jei norite rodyti veiklą laiko planavimo uostoje, arba **Ne**, jei ją norite paslėpti.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Kliento veiklos duomenis nurodykite „Unified Activity“ objekte.":::
 
 1. Norėdami pereiti prie kito veiksmo, pasirinkite **Pirmyn**. Galite pažymėti **Baigti ir peržiūrėti**, kad veiklą įrašytumėte dabar, kai veiklos tipas nustatytas kaip **Kitas**. 
 
-1. Žingsnyje **Veiklos tipas** pasirinkite veiklos tipą ir pasirinktinai pažymėkite, ar norite po kelis veiklos tipus susieti ir naudoti kitose „Customer Insights“ srityse. Kol kas *prenumeratos* ir *Pardavimo užsakkymo eilutės* veiklos tipus galima susieti po to, kai sutiksite susieti laukus. Jei veiklos tipas nėra aktualus naujai veiklai, galite pasirinkti *Kita* arba *Kurti naują* pasirinktinio veiklos tipo atveju.
+1. Žingsnyje **Veiklos tipas** pasirinkite veiklos tipą ir pasirinktinai pažymėkite, ar norite po kelis veiklos tipus susieti ir naudoti kitose „Customer Insights“ srityse. Šiuo metu *Atsiliepimo*, *Lojalumo*, *Pardavimo užsakymo*, *Pardavimo užsakymo eilutės* ir *Prenumeratos* veiklos tipus galima semantiškai susieti po to, kai sutiksite susieti laukus. Jei veiklos tipas nėra aktualus naujai veiklai, galite pasirinkti *Kita* arba *Kurti naują* pasirinktinio veiklos tipo atveju.
 
 1. Norėdami pereiti prie kito veiksmo, pasirinkite **Pirmyn**. 
 

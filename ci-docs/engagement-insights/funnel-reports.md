@@ -4,17 +4,17 @@ description: Kaip naudoti piltuvėlio ataskaitas norint suprasti, kaip auditorij
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032265"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498652"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Piltuvėlio ataskaitų kūrimas ir valdymas
 
@@ -158,4 +158,21 @@ Piltuvėlio ataskaitos pavadinimą galite keisti, panaikinti arba modifikuoti at
 1. Pažymėkite pavadinimą, kurį norite atidaryti.
 
 1. Pažymėkite norimus šalinti veiksmus, tada pašalinkite ir pasirinkite **Naikinti**.
+
+## <a name="funnel-insights"></a>Piltuvėlio įžvalgos 
+
+Dabar Įtraukimo įžvalgos klientams teikia piltuvėlio įžvalgas. Naudokite piltuvėlio įžvalgas, kad gautumėte gilesnių įžvalgų apie klientų elgesį apie veiksmus savo piltuvėlio ataskaitoje. Kai kuriate ir įrašote naują piltuvėlio ataskaitą, jūsų ataskaitai automatiškai generuojamos piltuvėlio įžvalgos. 
+
+Galite peržiūrėti piltuvėlio įžvalgas iš šių kategorijų tiek pagrindiniu, tiek veiksmo lygiu: 
+
+ - Konvertavimo koeficientas 
+ - Perėjimo Laikas 
+ - Užbaigimo Laikas 
+
+Naudodami šias įžvalgas galite giliau ištyrinėti klientų elgsenos aspektus ir geriau silpnąsias vietas ir konvertavimą piltuvėlio ataskaitoje. 
+
+Piltuvėlio įžvalgos yra perskaičiuojamos kas 24 valandas arba tada, kai **Įrašote** piltuvėlio ataskaitą. 
+
+> [!NOTE]
+> Norėdami peržiūrėti savo piltuvėlio įžvalgas, turite išsaugoti ataskaitą kiekvieną kartą, kai atliekate pakeitimus. 
 

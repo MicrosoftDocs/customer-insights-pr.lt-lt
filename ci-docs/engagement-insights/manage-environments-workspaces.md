@@ -4,17 +4,17 @@ description: Kaip kurti, pervardyti ir panaikinti darbo sritis ir aplinkas.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034052"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486045"
 ---
 # <a name="manage-environments-and-workspaces"></a>Valdyti aplinkas ir darbo aplinkas
 
@@ -85,13 +85,11 @@ Panaikinus darbo sritį, bus visam laikui pašalintas visas jos turinys, duomeny
 
 1. Norėdami **suteikti prieigą prie** vaidmenų ir juos priskirti, pažymėkite [Įtraukti narius](user-roles.md). Šiuo metu pasiekiamas **tik darbo** srities administratorius.
 
-1. Jei nustatote [ryšį su auditorijos įžvalgomis](configure-connections.md), galite pasirinkti **Leisti naudoti profilio duomenis,** kad narys galėtų peržiūrėti ataskaitas [vartotojų profilius](profile-reports.md).
-
 1. Pasirinkite **Įtraukti narius** ir įtraukite juos į savo darbo sritį.
 
 ## <a name="manage-an-environment"></a>Aplinkos valdymas
 
-Kaip aplinkos administratorius, kairiojoje naršymo srityje galite pasiekti aplinką. Galite konfigūruoti aplinkos parametrus, kitus aplinkos administratoriai, darbo sritis ir ryšius su [auditorijos įžvalgomis](configure-connections.md). Pažymėkite skirtukus, kad administravimo centre būtų galima pereiti iš vienos vietos į kitą.
+Kaip aplinkos administratorius, kairiojoje naršymo srityje galite pasiekti aplinką. Galite konfigūruoti aplinkos parametrus, kitus aplinkos administratorius ir darbo sritis. Pažymėkite skirtukus, kad administravimo centre būtų galima pereiti iš vienos vietos į kitą.
 
 :::image type="content" source="media/New-environment.png" alt-text="Aplinkos administravimo centras.":::
 
@@ -123,8 +121,6 @@ Kaip aplinkos administratorius, kairiojoje naršymo srityje galite pasiekti apli
 
 1. Norėdami **atnaujinti narius** ir juos priskirti, pažymėkite [Įtraukti narius](user-roles.md). Šiuo metu pasiekiamas **tik aplinkos** srities administratorius.
 
-1. Jei nustatote [ryšį su auditorijos įžvalgomis](configure-connections.md), galite pasirinkti **Leisti naudoti profilio duomenis,** kad narys galėtų peržiūrėti ataskaitas [vartotojų profilius](profile-reports.md).
-
 1. Pasirinkite **Įtraukti narius** ir įtraukite juos į savo aplinką.
 
 ### <a name="delete-an-environment"></a>Aplinkos naikinimas
@@ -143,7 +139,7 @@ Aplinkos administratoriai gali panaikinti aplinkas. Kad aplinką būtų galima p
 
 Užmesę ryšį su auditorijos įžvalgomis galite peržiūrėti ataskaitas įtraukimo įžvalgose, pagrįstose unifikuotais klientų profiliais. 
 
-Daugiau informacijos ieškokite [Konfigūruoti jungtis](configure-connections.md).
+Daugiau informacijos, žr. [Sąsajos tarp auditorijos įžvalgų ir įtraukimo įžvalgų kūrimas](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Tvarkyti asmeninius duomenis
 

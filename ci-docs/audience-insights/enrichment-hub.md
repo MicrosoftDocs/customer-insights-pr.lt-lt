@@ -1,7 +1,7 @@
 ---
 title: Papildykite suvienodintus kliento profilius
 description: Naudokite savybes siekiant papildyti jūsų kliento duomenis.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032538"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7470006"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientų profilių papildymas (peržiūra)
 
@@ -29,6 +29,7 @@ Norėdami kurti arba redaguoti papildymus, turite turėti dalyvio arba administr
 
 Skirtuke **Atrasti** rasite šiuos papildymus:
 
+- [„Azure” žemėlapiai](enrichment-azure-maps.md), kuriuos teikia „Microsoft”
 - [Rūšys](enrichment-microsoft.md), kurias teikia „Microsoft“
 - [Pomėgiai](enrichment-microsoft.md), kuriuos teikia „Microsoft“
 - [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft”
@@ -62,5 +63,17 @@ Trečiosios šalies papildymai konfigūruojami naudojant [ryšius](connections.m
 ## <a name="multiple-enrichments-of-the-same-type"></a>Keli to paties tipo papildymai
 
 Objektas, kurį reikia papildyti, nurodomas papildymo konfigūracijoje, o tai jums leidžia papildyti tik antrinį jūsų profilių rinkinį. Pavyzdžiui, duomenis papildyti galima tik konkrečiame segmente. Galite konfigūruoti kelis to paties tipo papildymus ir pakartotinai naudoti tą patį ryšį. Kai kuriems papildymams bus ribojamas to paties tipo sukuriamų papildymų skaičius. Apribojimus ir dabartinį naudojima galima peržiūrėti puslapyje **Papildymas**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Žiūrėti papildymo proceso eigą
+
+Galite rasti informacijos apie papildymo apdorojimą, įskaitant jo būseną ir galimas problemas jį atnaujinant arba pasibaigus atnaujinimui. Sužinokite, kurie procesai naudojami norint atnaujinti papildymą ir procesų vykdymo trukmes. Papildymo būseną palaiko „Experian”, „Leadspace”, HERE Technologijos, SFTP Importavimas ir „Azure” žemėlapiai.
+
+Norėdami peržiūrėti papildymo būseną
+
+1. Eikite į **Duomenys** > **Papildymas**. 
+1. Skirtuke **Mano papildymai** pažymėkite papildymo būseną, kad atidarytumėte šoninę sritį. 
+1. Srityje **Išsami eigos informacija** išplėskite **Papildymų** skyrių. 
+1. Po papildymu, kurio progresą norite peržiūrėti, pasirinkite **Žiūrėti išsamią informaciją**. 
+1. Srityje **Išsami užduoties informacija** pasirinkite **Rodyti išsamią informaciją**, kad peržiūrėtumėte procesus, kurie susiję su papildymų atnaujinimu ir jų būsena. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
