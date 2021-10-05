@@ -4,27 +4,27 @@ description: Raskite informacijos apie SDKs ir kaip juos naudoti.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036293"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558756"
 ---
 # <a name="developer-resources-overview"></a>Kūrėjo resursų apžvalga
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Šiame straipsnyje išvardyti visi galimi kodų podiežtės ir pavyzdžiai, kuriuos reikia greitai nurodyti. Gaukite savo platformos įvykių siuntėjo kodą ir sekite instrukcijas. 
+Šiame straipsnyje išvardyti visi galimi programinės įrangos kūrimo priemonių rinkinio (SDK) „code snippets“ ir pavyzdžiai, skirti kūrėjams bendrinti duomenis su „Dynamics 365 Customer Insights“. Gaukite konkrečių jūsų platformai įvykių kodą naudodami platformos instrukcijas.
 
 ## <a name="capture-events-from-websites"></a>Įvykių fiksavimas iš interneto puslapių
 
-- [Kaip įtraukti kodo fragmentą į svetainės puslapį](instrument-website.md)
+- [Žiniatinklio svetainės persodinimas](instrument-website.md)
 - [Tinklo SDK pavyzdys](websdk-sample.md)
 - [Išplėstinio žiniatinklio SDK integravimas](advanced-SDK-implementation.md)
 

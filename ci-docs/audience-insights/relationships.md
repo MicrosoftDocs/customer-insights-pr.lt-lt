@@ -1,20 +1,20 @@
 ---
 title: Ryšiai tarp objektų ir objektų kelių
 description: Sukurkite ir valdykite ryšius tarp objektų daugeliui duomenų šaltinių.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035241"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557362"
 ---
 # <a name="relationships-between-entities"></a>Objektų ryšiai
 
@@ -93,11 +93,11 @@ Galimos parinktys:
 - **Pakeisti į horizontalų/vertikalų išdėstymą**: Pakeičia objektų ir ryšių lygiuotę.
 - **Redaguoti**: Atnaujina pasirinktinių ryšių ypatybes redagavimo srityje ir įrašo pakeitimus.
 
-### <a name="relationship-path"></a>Ryšio kelias
+## <a name="relationship-paths"></a>Ryšio keliai
 
-Ryšio kelias apibūdina objektus, kurie susieti su ryšiais tarp šaltinio objekto ir tikslinio objekto. Jis naudojamas kuriant segmentą ar priemonę, į kurią įtraukti kiti objektai, o ne vieningojo profilio objektas, ir vieningojo profilio objektą galima pasiekti keliomis parinktimis.
+Ryšio kelias apibūdina objektus, kurie susieti su ryšiais tarp šaltinio objekto ir tikslinio objekto. Jis naudojamas kuriant segmentą ar priemonę, į kurią įtraukti kiti objektai, o ne vieningojo profilio objektas, ir vieningojo profilio objektą galima pasiekti keliomis parinktimis. 
 
-Ryšio kelias informuoja sistemą, per kuriuos ryšius jungtis prie vieningojo profilio objekto. Įvairūs ryšio keliai gali pateikti skirtingus rezultatus.
+Ryšių kelias informuoja sistemą, per kurią ryšiai turi prieigą prie vieningojo profilio objekto. Įvairūs ryšio keliai gali pateikti skirtingus rezultatus.
 
 Pavyzdžiui, objektas, *eCommerce_eCommercePurchases* su vieningojo profilio kliento objektu, turi *Kliento* ryšius:
 
@@ -105,7 +105,43 @@ Pavyzdžiui, objektas, *eCommerce_eCommercePurchases* su vieningojo profilio kli
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > klientas
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klientas 
 
-Ryšio kelias nurodo, kuriuos objektus galite naudoti kurdami priemonių arba segmentų taisykles. Pasirinkus parinktį su ilgiausią ryšio kelią tikriausiai bus gauti mažiau rezultatų, nes sutampantys įrašai turi būti visų objektų dalis. Šiame pavyzdyje klientas turi būti įsigijęs prekes per "e-eCommerce_eCommercePurchases", pardavimo vietoje (POS_posPurchases) ir dalyvauti mūsų programoje (loyaltyScheme_loyCustomers). Pasirinkę pirmą parinktį tikriausiai gausite daugiau rezultatų, nes klientams reikės tik vieno papildomo objekto.
+Ryšių kelias nurodo, kuriuos objektus galite naudoti kurdami priemonių arba segmentų taisykles. Pasirinkus parinktį su ilgiausią ryšio kelią tikriausiai bus gauti mažiau rezultatų, nes sutampantys įrašai turi būti visų objektų dalis. Šiame pavyzdyje klientas turi būti įsigijęs prekes per "e-eCommerce_eCommercePurchases", pardavimo vietoje (POS_posPurchases) ir dalyvauti mūsų programoje (loyaltyScheme_loyCustomers). Pasirinkę pirmą parinktį tikriausiai gausite daugiau rezultatų, nes klientams reikės tik vieno papildomo objekto.
+
+### <a name="direct-relationship"></a>Tiesioginis ryšys
+
+Ryšys yra konvertuojamas kaip **tiesioginis ryšys**, kai šaltinio objektas yra susijęs su paskirties objektu su tik vienu ryšiu.
+
+Pavyzdžiui, jei veiklos objektas vadinamas *eCommerce_eCommercePurchases* jungiasi prie paskirties objekto *eCommerce_eCommerceContacts* per *ContactId* tai yra tiesioginis ryšys.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Šaltinio objektas tiesiogiai jungiasi prie tikslinio objekto.":::
+
+#### <a name="multi-path-relationship"></a>Kelių kelių santykiai
+
+**Kelių maršrutų ryšys** yra specialaus tipo tiesioginis ryšys, jungiantis šaltinio objektą su daugiau nei vienu tiksliniu objektu.
+
+Pavyzdžiui, jei veiklos objektas, kurio pavadinimas *eCommerce_eCommercePurchases*  yra susijęs su dviem tiksliniais abiem *eCommerce_eCommerceContacts* ir *loyaltyScheme_loyCustomers*,tai yra kelių maršrutų ryšys.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Naudojant kelių objektų ryšį šaltinio objektas tiesiogiai jungiasi prie daugiau nei vieno tikslinio objekto.":::
+
+### <a name="indirect-relationship"></a>Netiesioginis ryšys
+
+Ryšys yra konvertuojamas kaip **netiesioginis ryšys**, kai šaltinio objektas yra susijęs su vienu ar daugiau papildomų objektų prieš susiejant su tiksliniu objektu.
+
+#### <a name="multi-hop-relationship"></a>Kelių šuolių santykiai
+
+*Kelių šaltinių ryšys* yra *nelydusis ryšys* leidžiantis šaltinio objektą susieti su paskirties objektu per vieną ar daugiau objektų.
+
+Pvz., jei veiklos objektas, vadinamas *eCommerce_eCommercePurchasesWest*, jungiasi prie išsamus objektas, vadinamas *eCommerce_eCommercePurchasesEast* ir tada jungiasi su tiksliniu obkektu vadinamu *eCommerce_eCommerceContacts*, tai yra kelių objektų ryšys.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Šaltinio objektas tiesiogiai jungiasi prie tikslinio objekto su susijusiu objektu.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Kelių šaltinių, kelių maršrutų ryšys
+
+Kelių -inerti ir kelių ryšiai gali būti naudojami kartu kuriant **kelių šaltinių, kelių maršrutų ryšius**. Šis specialus tipas sujungia kelių objektų ir **kelių šaltinių** ir **kelių maršrutų ryšius**. Jis leidžia jums prisijungti prie daugiau nei vieno tikslinio objekto naudojant tarpinius objektus.
+
+Pvz., jei veiklos objektas, vadinamas *eCommerce_eCommercePurchasesWest* sujungia su tarpiniu objektu pavadinimu *eCommerce_eCommercePurchasesEast* ir tada jungiasi su tiksliniu obkektu vadinamu *eCommerce_eCommerceContacts* ir *loyaltyScheme_loyCustomers*, nes tai yra kelių šaltinių, kelių maršrutų ryšys.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Šaltinio objektas tiesiogiai jungiasi prie vieno tikslinio objekto ir per tarpinį objektą jungiasi su kitu tiksliniu objektu.":::
 
 ## <a name="manage-existing-relationships"></a>Esamų ryšių valdymas 
 

@@ -242,7 +242,7 @@
   items:
     - name: Pagalbos centras
       href: engagement-insights/index.yml
-    - name: Galimybių apžvalga
+    - name: Apie įsitraukimo įžvalgas
       href: engagement-insights/overview.md
     - name: Pradėti
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Regionoinis pasiekiamumas
       href: engagement-insights/regional-availability.md
-- name: Auditorijos ir įtraukimo įžvalgų integravimas
+- name: Bendrinti duomenis tarp galimybių
   items:
     - name: Susieti įtraukimo įžvalgas su auditorijos įžvalgomis
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: DSR teisės ir užklausos
   href: dsr-rights-requests.md
-- name: Gaukite pagalbą
-  href: 'https://dynamics.microsoft.com/support/'

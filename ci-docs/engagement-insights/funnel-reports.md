@@ -4,17 +4,17 @@ description: Kaip naudoti piltuvėlio ataskaitas norint suprasti, kaip auditorij
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498652"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558930"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Piltuvėlio ataskaitų kūrimas ir valdymas
 
@@ -163,13 +163,23 @@ Piltuvėlio ataskaitos pavadinimą galite keisti, panaikinti arba modifikuoti at
 
 Dabar Įtraukimo įžvalgos klientams teikia piltuvėlio įžvalgas. Naudokite piltuvėlio įžvalgas, kad gautumėte gilesnių įžvalgų apie klientų elgesį apie veiksmus savo piltuvėlio ataskaitoje. Kai kuriate ir įrašote naują piltuvėlio ataskaitą, jūsų ataskaitai automatiškai generuojamos piltuvėlio įžvalgos. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Piltuvėlio įžvalgos.":::
+
+> [!NOTE]
+> Piltuvėlio įžvalgas galima generuoti tik piltuvėlio žingsniuose, kuriuose **nėra** pasirinktinio suslėktumo. Norėdami generuoti piltuvėlio įžvalgas apie visus piltuvėlio žingsnius, kurdami piltuvėlio žingsnius, naudokite iš anksto suplanuotas įtraukimo įžvalgas. 
+
 Galite peržiūrėti piltuvėlio įžvalgas iš šių kategorijų tiek pagrindiniu, tiek veiksmo lygiu: 
 
- - Konvertavimo koeficientas 
+ - Konvertavimo koeficientas
+ -    Konvertavimo koeficientas tarp išsiregistravimo ir pirkimo yra 22 %.
  - Perėjimo Laikas 
+ -    Vidutinis perėjimo laikas tarp vežimėlio ir išsiregistravimo yra 23 minutės. 
  - Užbaigimo Laikas 
+ -    Vidutinis laikas, per kurį klientai užpildo piltuvėlį, yra 47 minutės. 
 
 Naudodami šias įžvalgas galite giliau ištyrinėti klientų elgsenos aspektus ir geriau silpnąsias vietas ir konvertavimą piltuvėlio ataskaitoje. 
+
+Norėdami skirtingų žingsnių įžvalgas palyginti, pasirinkite **Žr. žingsnių suskirstyimą** arba **Palyginkite su kitais veiksmais** iš įžvalgų kortelių. Bus rodomas juostinis grafikas, kuriame lyginama kiekvieno piltuvėlio žingsnio metrika. 
 
 Piltuvėlio įžvalgos yra perskaičiuojamos kas 24 valandas arba tada, kai **Įrašote** piltuvėlio ataskaitą. 
 
