@@ -1,72 +1,97 @@
 ---
-title: Kurti ir modifikuoti patikslintus įvykius
-description: Kaip kurti ir modifikuoti patikslintus įvykius.
+title: Kurti ir keisti įvykius
+description: Kaip kurti ir modifikuoti įvykius.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 0344bac5f4d43df853309f43c94d95f962937f77c936ed7305c5de4a08835f04
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 935dc4cd41218842e8406b747daef47de04e337a
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034784"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606241"
 ---
-# <a name="create-and-modify-refined-events"></a>Kurti ir modifikuoti patikslintus įvykius
+# <a name="create-and-modify-events"></a>Kurti ir keisti įvykius
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
-
 
 Įvykis yra duomenys, nurodantys vartotojo elgesį, pvz., veiklą svetainėje.
 
 - *Pagrindinis* įvykis, kai vartotojas peržiūrės puslapį (peržiūrės įvykį) arba sąveikauja su turiniu (veiksmo įvykis).
 - Patobulintas *įvykis* yra pagrindinio įvykio virtualusis rodinys. Tobulinti įvykiai apibrėžiami šalinant ir įtraukiant ypatybes arba filtruojant įvykius pagal ypatybių reikšmes.
 
+## <a name="prerequisites"></a>Būtinosios sąlygos
+
+Norėdami kurti įvykius, prijunkite savo svetainės duomenis prie įtraukimo įžvalgų naudodami paprastą kodo fragmentą. Daugiau informacijos žr. [Žiniatinklio SDK diegimas svetainėje](instrument-website.md).
+
+ :::image type="content" source="media/new-events-connect-data.png" alt-text="Pirmiausia prijunkite savo duomenis.":::
+
+## <a name="create-refined-events"></a>Kurti patikslintus įvykius
+
 Naudokite patikslintus įvykius siekiant sumažinti pagrindinio apimtį [eksportavimui](export-events.md) ar norėdami pašalinti ypatybes, kurios nebereikalingos rodyti.
 
-## <a name="create-refined-events"></a>Sukurkite išdirbtus įvykius
+> [!NOTE]
+> Į svetainę įtraukę žiniatinklio SDK, galite peržiūrėti savo bazės įvykius ir kurti patobulintą įvykius. 
 
-Yra trys būdai iš pagrindinio įvykio sukurti patobulintą įvykį. 
+Norėdami peržiūrėti savo pagrindinę įvykius:
 
-1. Eikite į **Duomenys**> **Įvykiai** ir rinkitės vieną iš šių parinkčių:
-    - Pasirinkite **Nauji įvykiai**, tada – **Kurti patobulintą įvykius**.
-    - Pasirinkite pagrindinį įvykį, jei norite atidaryti išsamų rodinį, ir viršutiniame meniu pasirinkite **Kurti patobulintu įvykius**.
-    - Rinkitės **Daugiau [...]** norėdami atidaryti trumposios komandos meniu pagrindiniam įvykiui. Tada pasirinkite **Kurti patobulintą įvykius**.
-    
-    :::image type="content" source="media/create-refined-events-options.png" alt-text="Patobulintos įvykių kūrimo parinktys.":::
+1. Eikite į **Duomenys** kairiojoje naršymo srityje.
 
-1. Dialogo lange **Kurti patobulintus įvykius** įveskite toliau nurodytą informaciją:
+1. Pažymėkite **Įvykiai**, kad darbo srityje būtų rodomas visų įvykių sąrašas.
 
-- Jei kuriate naują **įvykį, pažymėkite** jį išplečiamajame sąraše Pagrindiniai įvykiai.
-- Laukelyje **Patobulintų įvykių rodomas pavadinimas** įveskite ryšio pavadinimą.
-- Arba atnaujinkite siūlomą **faktinį pavadinimą** nenaudodami tarpų.
+    :::image type="content" source="media/data-events.png" alt-text="Peržiūrėti įvykius.":::
 
-3. Pasirinkite **Kurti**, kad būtų taikomi jūsų parametrai.
+Jei norite kurti patobulintą įvykį iš pagrindinio įvykio: 
 
-1. Rafinuojamo įvykio išsamiame rodinyje pažymėkite **Įtraukti ir pašalinti ypatybes**, kad atidarytumėte sritį **Redaguoti ypatybes**. 
+1. Eikite į **Duomenys** > **įvykiai** ir rinkitės **+ Nauji įvykiai** ekrano viršuje.
 
-1. Naudodami žymės langelius, pažymėkite ypatybes, kurias norite matyti, ir tas, kurias norite slėpti. 
-   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Patobulinamų įvykių ypatybės redagavimas.":::
+1. Dialogo lange **Nauji įvykiai** lauką ir rinkitės **Kurti patobulintus įvykius** ir tada pažymėkite **Kitas**.
+   
+     :::image type="content" source="media/new-events-wizard.png" alt-text="Naujo įvykių vedlio kūrimas.":::
+     
+1. Dialogo **lange Nauji** įvykiai įveskite šią informaciją:
 
-1. Pasirinkite **Patvirtinti**, kad pritaikyumėte savo pasirinkimą.
+   - Pažymėkite įvykį **išplečiamajame sąraše** Pagrindiniai įvykiai.
+   - Laukelyje **Patobulintų įvykių rodomas pavadinimas** įveskite ryšio pavadinimą.
+   - Arba atnaujinkite siūlomą **faktinį pavadinimą** nenaudodami tarpų.
 
-1. Pasirinkite **Įrašyti**, kad įrašytumėte konfigūravimą.
+1. Pasirinkite **Kurti**, kad būtų taikomi jūsų parametrai.
 
-## <a name="edit-refined-events"></a>Redaguoti patobulintą įvykį
-
-Galite keisti patobulintos įvykio pavadinimą ir ypatybes.
+Dabar patobulintas įvykis bus rodomas jūsų **įvykių** sąraše.
 
 ### <a name="edit-event-name"></a>Redaguoti įvykio pavadinimą
 
-1. Eikite į **Duomenys** > **Įvykiai**. 
-1. Pasirinkite **Daugiau [...]** įvykiui ir pasirinkite **Redaguoti pavadinimą**.
-1. Atnaujinkite įvykio pavadinimą ir pasirinkite **Pervardyti**.
+Galite keisti pagrindinio arba patikslintame įvykyje pavadinimą ir ypatybes.
 
-### <a name="edit-selected-properties"></a>Redaguoti pasirinktas ypatybes
+1. Eikite į **Duomenys** > **Įvykiai**. 
+
+1. Pasirinkite **Daugiau [...]** įvykiui ir pasirinkite **Redaguoti pavadinimą**.
+    
+     :::image type="content" source="media/create-refined-events-options.png" alt-text="Patobulintos įvykių kūrimo parinktys.":::
+
+3. Atnaujinkite įvykio pavadinimą ir pasirinkite **Pervardyti**.
+
+### <a name="view-the-details-of-a-refined-event"></a>Peržiūrėkite patobulintą įvykį:
+
+1. Įvykių **sąraše** pažymėkite pagrindinį arba patobulintą įvykį. 
+
+1. Ekrano **viršuje pasirinkite Įtraukti** arba pašalinti ypatybes, kad atidarytumėte sritį **Redaguoti ypatybes**. 
+
+     :::image type="content" source="media/add-remove-properties.png" alt-text="Įtraukti ir pašalinti ypatybes.":::
+
+1. Naudodami žymės langelius, pažymėkite ypatybes, kurias norite matyti, ir tas, kurias norite slėpti. 
+
+   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Patobulinamų įvykių ypatybės redagavimas.":::
+
+1. Pasirinkite **Patvirtinti**, kad pritaikytumėte savo pasirinkimą, tada pasirinkite **Įrašyti**.
+
+
+### <a name="edit-selected-properties-for-a-refined-event"></a>Redaguoti parinktas patikslintas įvykio ypatybes
 
 1. Eikite į **Duomenys** > **Įvykiai** ir pasirinkite patobulintą įvykius, kad atidarytumėte išsamų rodinį.
 1. Pažymėkite **Įtraukti ir šalinti ypatybes**. 

@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights“ duomenų eksportavimas į „Azure“ didelių dvejetainių objektų saugyklą
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į didelių dvejetainių objektų saugyklą.
-ms.date: 06/30/2021
+ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b159f87276581f68e07bb73ffd257080eb3cb56422997b09a613bd7afa4e3980
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d02c09a1869d0099db4861b65ac8ff006914873e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034738"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605860"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmentų sąrašo ir kitų duomenų eksportavimas į „Azure“ didelių dvejetainių objektų saugyklą (peržiūros versija)
 
 Saugokite savo „Customer Insights“ duomenis didelių dvejetainių objektų saugykloje arba naudokite ją norėdami perkelti duomenis į kitas programas.
+
+## <a name="known-limitations"></a>Žinomi apribojimai
+
+1. Jei naudojate „Azure Blob Storage" didelių dvejetainių objektų saugyklą , galite pasirinkti iš  [Standartinės ir geriausio efektyvumo pakopos](/azure/storage/blobs/storage-blob-performance-tiers). Jei pasirinksite geriausio efektyvumo pakopą, pažymėkite [geriausio bloko didelių dvejetainių objektų kaip kliento tipą](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 
 ## <a name="set-up-the-connection-to-blob-storage"></a>Ryšio su Didelių dvejetainių objektų saugykla nustatymas
 

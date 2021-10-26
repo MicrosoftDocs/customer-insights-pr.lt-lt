@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557362"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623021"
 ---
 # <a name="relationships-between-entities"></a>Objektų ryšiai
 
@@ -68,6 +68,20 @@ Ryšys susideda iš *šaltinio objekto*, kuriame yra išorinis raktas, ir *paski
 
 4. Pasirinkite **Įrašyti** pasirinktinio ryšio kūrimui.
 
+## <a name="set-up-account-hierarchies"></a>Nustatyti klientų hierarchijas
+
+Aplinkos, sukonfigūruotos taip, kad verslo klientai būtų naudojami kaip pagrindinė tikslinė auditorija, gali konfigūruoti susijusių verslo paskyrų hierarchijas. Pavyzdžiui, įmonė, kuri turi atskirus verslo vienetus. 
+
+Organizacijos kuria abonementų hierarchijas, kad galėtų geriau valdyti abonementus ir jų ryšius tarpusavyje. Auditorijos įžvalgų funkcija palaiko jau egzistuojančias pirminio-antrinio klientų hierarchijas, kurios jau yra perdėtiuose kliento duomenyse. Pavyzdžiui, klientai iš „Dynamics 365 Sales". Šias hierarchijas galima sukonfigūruoti auditorijos įžvalgų puslapyje **Ryšiai** skirtuke Klientų hierarchija.
+
+1. Eikite į **Duomenys** > **Ryšiai**.
+1. Pasirinkti **Klientų hierarchija** skirtuką.
+1. Pasirinkti **Nauja klientų hierarchija**. 
+1. Srityje **Kliento hierarchija** pateikite hierarchijos pavadinimą. Sistema sukuria išvesties objekto pavadinimą. Galite keisti išvesties pavadinimo objekto pavadinimą.
+1. Pažymėkite objektą, kuriame yra jūsų abonementų hierarchija. Paprastai tai yra tame pačiame objektuje, kuriame yra klientai.
+1. Pasirinkite **Kliento ID** ir **Kliento pagrindinis ID** iš pasirinkto objekto 
+1. Pasirinkite **Įrašyti**, kad pritaikytumėte parametrus ir galutinę kliento hierarchiją.
+
 ## <a name="view-relationships"></a>Ryšių peržiūra
 
 Ryšių puslapyje išvardyti visi sukurti ryšiai. Kiekviena eilutė nurodo ryšį, kuriame taip pat pateikiama išsami informacija apie šaltinio objektą, paskirties objektą ir skaičių. 
@@ -105,7 +119,7 @@ Pavyzdžiui, objektas, *eCommerce_eCommercePurchases* su vieningojo profilio kli
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > klientas
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klientas 
 
-Ryšių kelias nurodo, kuriuos objektus galite naudoti kurdami priemonių arba segmentų taisykles. Pasirinkus parinktį su ilgiausią ryšio kelią tikriausiai bus gauti mažiau rezultatų, nes sutampantys įrašai turi būti visų objektų dalis. Šiame pavyzdyje klientas turi būti įsigijęs prekes per "e-eCommerce_eCommercePurchases", pardavimo vietoje (POS_posPurchases) ir dalyvauti mūsų programoje (loyaltyScheme_loyCustomers). Pasirinkę pirmą parinktį tikriausiai gausite daugiau rezultatų, nes klientams reikės tik vieno papildomo objekto.
+Ryšių kelias nurodo, kuriuos objektus galite naudoti kurdami priemonių arba segmentų taisykles. Pasirinkus parinktį su ilgiausią ryšio kelią tikriausiai bus gauti mažiau rezultatų, nes sutampantys įrašai turi būti visų objektų dalis. Šiame pavyzdyje klientas turi būti įsigijęs prekes per el. komerciją(eCommerce_eCommercePurchases) at a point of sale(POS_posPurchases) ir dalyvauti mūsų lojalumo programoje (loyaltyScheme_loyCustomers). Pasirinkę pirmą parinktį tikriausiai gausite daugiau rezultatų, nes klientams reikės tik vieno papildomo objekto.
 
 ### <a name="direct-relationship"></a>Tiesioginis ryšys
 

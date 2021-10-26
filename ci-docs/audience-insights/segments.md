@@ -1,7 +1,7 @@
 ---
 title: Auditorijos įžvalgų segmentai
 description: Segmentų apžvalga ir jų kūrimo bei valdymo informacija.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036383"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617385"
 ---
 # <a name="segments-overview"></a>Segmentų apžvalga
 
@@ -26,11 +26,19 @@ Klientų profiliai, atitinkantys segmento apibrėžties filtrus, yra vadinami se
 
 Naują segmentą galima sukurti keliais būdais: 
 
-- Sudėtinis segmentas naudojant segmentų kūrimo priemonę [Tuščias segmentas](segment-builder.md#create-a-new-segment)
-- Paprasti segmentai su vienu operatoriumi: [Spartusis segmentas](segment-builder.md#quick-segments)
-- Dirbtiniu intelektu pagrįstas būdas rasti panašius klientus: [Panašūs klientai](find-similar-customer-segments.md)
-- Dirbtiniu intelektu pagrįsti pasiūlymai, paremti priemonėmis arba atributais: [Siūlomi segmentai priemonių patobulinimui](suggested-segments.md)
-- Pasiūlymai, pagrįsti veiklomis: [Siūlomi segmentai, pagrįsti kliento veikla](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Atskirų klientų (B2C)](#tab/b2c)
+
+- Sudėtingas segmentas su segmentų kūrimo įrankiu: [Kurkite savo](segment-builder.md#create-a-new-segment) 
+- Paprasti segmentai su vienu operatoriumi: [Spartusis segmentas](segment-builder.md#quick-segments) 
+- Dirbtiniu intelektu pagrįstas būdas rasti panašius klientus: [Panašūs klientai](find-similar-customer-segments.md) 
+- Dirbtiniu intelektu pagrįsti pasiūlymai, paremti priemonėmis arba atributais: [Siūlomi segmentai priemonių patobulinimui](suggested-segments.md) 
+- Pasiūlymai, pagrįsti veiklomis: [Siūlomi segmentai, pagrįsti kliento veikla](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Verslo klientai (B2B)](#tab/b2b)
+
+- Sudėtingas segmentas su segmentų kūrimo įrankiu: [Kurkite savo](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Esamų segmentų tvarkymas
 
@@ -70,9 +78,9 @@ Galite eksportuoti segmentą iš segmentų arba [eksportavimo puslapio](export-d
 
 1. Veiksmų **išplečiamajame srąraše** pasirinkite Valdyti eksportą.
 
-1. Atidaromas **Segmento eksportavimai (peržiūra)** puslapis. Galite matyti visus sukonfigūruotus eksportavimus, sugrupuotus pagal tai, ar juose yra dabartinis segmentas, ar jo nėra.
+1. Atidaromas **Segmento eksportavimai (peržiūra)** puslapis. Galite matyti visus sukonfigūruotus eksportus, sugrupuotus pagal tai, ar juose yra dabartinis segmentas, ar ne.
 
-   1. Norėdami įtraukti pasirinktą segmentą į eksportavimą, sąraše pasirinkite eksportavimą ir **Įtraukti segmentą**.
+   1. Jei pažymėtą segmentą norite įtraukti į eksportavimą, **redaguokite** atitinkamą eksportavimą, kad pažymėtumėte atitinkamą segmentą, tada įrašykite. Vietoj to, galite pažymėti eksportavimą atskirų klientų aplinkose sąraše ir įtraukti segmentą, kad **būtų pasiektas** toks pat rezultatas.
 
    1. Jei norite sukurti naują eksportavimą su pažymėtu segmentu, pasirinkite **Įtraukti eksportavimą**. Daugiau informacijos apie eksportavimo kūrimą rasite [Naujo eksportavimo nustatymas](export-destinations.md#set-up-a-new-export).
 

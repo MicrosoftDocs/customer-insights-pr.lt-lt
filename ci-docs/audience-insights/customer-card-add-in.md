@@ -1,7 +1,7 @@
 ---
 title: Kliento kortelės papildinys, skirtas „Dynamics 365” programoms
 description: Šiame papildinyje galite rodyti duomenis iš auditorijos įžvalgų „Dynamics 365” programose.
-ms.date: 05/18/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032998"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643440"
 ---
 # <a name="customer-card-add-in-preview"></a>Papildinys Kliento kortelė (peržiūra)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ programose. Įdiegę Kliento kortelės papildinį palaikomoje „Dynamics 365” programoje, galite pasirinkti rodyti demografinius duomenis, įžvalgas ir veiklos laiko planavimo juostas. Papildinyje duomenys bus nuskaityti iš „Customer Insights” nepaveikiant duomenų prijungtoje „Dynamics 365” programoje. 
+Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ programose. Įdiegę kliento kortelės papildinį palaikomoje „Dynamics 365" programoje, galite pasirinkti rodyti klientų profilio laukus, įžvalgas ir veiklos laiko planavimo juostą. Papildinyje duomenys bus nuskaityti iš „Customer Insights” nepaveikiant duomenų prijungtoje „Dynamics 365” programoje.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -28,20 +30,19 @@ Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ prog
 - Norint, kad jūsų „Dynamics 365” duomenys būtų susieti su auditorijos įžvalgų kliento profiliais, jie turi būti [įtraukti iš „Dynamics 365” programos naudojant „Microsoft Dataverse” jungtį](connect-power-query.md).
 - Kad būtų galima matyti duomenis, visi „Dynamics 365” Kliento kortelės papildinio vartotojai turi būti [įtraukti kaip vartotojai](permissions.md) į auditorijos įžvalgas.
 - [Sukonfigūruotos ieškos ir filtravimo galimybės](search-filter-index.md) yra reikalingos auditorijos įžvalgose, kad veiktų duomenų peržvalga.
-- Kiekvienas papildinio valdiklis remiasi tam tikrais auditorijos įžvalgų duomenimis:
-  - Priemonės valdymas: Jam būtinos [konfigūruotos priemonės](measures.md).
-  - Intelekto valdiklis: Jam reikia duomenų, sugeneruotų naudojant [prognozes](predictions.md) arba [pasirinktinius modelius](custom-models.md).
-  - Demografijos valdymas: Demografijos laukeliai, tokie kaip amžius ar lytis yra prieinami suvienodintame kliento profilyje.
-  - Papildymo valdiklis: reikalingi aktyvieji [papildymai](enrichment-hub.md), pritaikyti klientų profiliams.
-  - Laiko juostos valdymas: Jam būtinos [konfigūruotos veiklos](activities.md).
+- Kiekvienas papildinio valdiklis remiasi tam tikrais auditorijos įžvalgų duomenimis. Kai kuriuos duomenis ir valdiklius galima naudoti tik konkrečių tipų aplinkose. Papildinyje konfigūracija informuos, ar valdiklio nėra dėl pasirinkto aplinkos tipo. Sužinokite daugiau apie [aplinkos naudojimo atvejus](work-with-business-accounts.md).
+  - **Matavimo valdiklis**: reikia [sukonfigūruotų kliento](measures.md) atributų tipo matų.
+  - **Intelekto valdiklis**: Jam reikia duomenų, sugeneruotų naudojant [prognozes](predictions.md) ar [tinkintus modelius](custom-models.md).
+  - **Išsamios kliento informacijos valdymas**: visi profilio laukai pasiekiami vieningoje kliento profilyje.
+  - **Papildymo valdiklis**: reikalingi aktyvieji [papildymai](enrichment-hub.md) pritaikyti klientų profiliams.
+  - **Kontaktų valdiklis**: būtinas kontaktų tipo semantinio objekto aprašas.
+  - **Laiko juostos valdymas**: Jam būtinos [konfigūruotos veiklos](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Kliento kortelės papildinio diegimas
 
 Kliento kortelės papildinys yra sprendimas, skirtas „Dynamics 365” platformos „Customer Engagement” programoms. Norėdami įdiegti sprendimą, eikite į „AppSource“ ir ieškokite **„Dynamics“ kliento kortelės**. Pasirinkite [papildinį Kliento kortelė svetainėje „AppSource“](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) ir pasirinkite **Gauti dabar**.
 
-Norint įdiegti sprendimą gali reikėti prisijungti naudojant „Dynamics 365“ programos administratoriaus kredencialus.
-
-Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
+Norint įdiegti sprendimą gali reikėti prisijungti naudojant „Dynamics 365“ programos administratoriaus kredencialus. Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 
 ## <a name="configure-the-customer-card-add-in"></a>Papildinio Kliento kortelė konfigūravimas
 
@@ -50,7 +51,7 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 1. Pasirinkite sprendimo **„Dynamics 365 Customer Insights“ papildinys Kliento kortelė (peržiūra)** nuorodą **Rodomas pavadinimas**.
 
    > [!div class="mx-imgBorder"]
-   > ![Rodomo pavadinimo pasirinkimas.](media/select-display-name.png "Rodomo pavadinimo pasirinkimas")
+   > ![Rodomo pavadinimo pasirinkimas.](media/select-display-name.png "Rodomo pavadinimo pasirinkimas.")
 
 1. Spustelėkite **Prisijungti** ir įveskite administratoriaus kliento, kurį naudojate „Customer Insights“ konfigūruoti, kredencialus.
 
@@ -59,12 +60,12 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 
 1. Pasirinkite „Customer Insights“ aplinką, iš kurios norite iškviesti duomenis.
 
-1. Apibrėžkite laukų susiejimą su įrašais „Dynamics 365” programoje. Atsižvelgdami į jūsų „Customer Insights” duomenis, galite pasirinkti susieti toliau pateiktas parinktis:
+1. Apibrėžkite laukų susiejimą su įrašais „Dynamics 365” programoje. Atsižvelgdami į jūsų „Customer Insights“ duomenis, galite pasirinkti susieti toliau pateiktas parinktis:
    - Norėdami sudaryti žemėlapį su kontaktu, pasirinkite laukelį kliento objekte, kuris atitinka jūsų kontakto objekto ID.
    - Norėdami sudaryti žemėlapį su paskyra, pasirinkite laukelį kliento objekte, kuris atitinka jūsų paskyros objekto ID.
 
    > [!div class="mx-imgBorder"]
-   > ![Kontakto ID laukas.](media/contact-id-field.png "Kontakto ID laukas")
+   > ![Kontakto ID laukas.](media/contact-id-field.png "Kontakto ID laukas.")
 
 1. Pasirinkite **Įrašyti konfigūraciją**, kad įrašytumėte šiuos parametrus.
 
@@ -73,17 +74,19 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 1. Vartotojams, kurie tinkins kortelėje rodomą turinį visoje organizacijoje, priskirkite vaidmenį **„Customer Insights“ kortelės tinkintojas**.
 
 ## <a name="add-customer-card-controls-to-forms"></a>Įtraukite kliento kortelės valdiklius į formas
-  
+
+Atsižvelgdami į savo scenarijų, galite įtraukti valdiklius į **Kontakto** formą ar **Kliento** formą. Jei auditorijos įžvalgų aplinka skirta verslo klientams, rekomenduojame įtraukti valdiklius į kliento formą. Tokiu atveju toliau pateikiamuose žingsniuose pakeiskite „kontaktą" į „paskyrą."
+
 1. Norėdami kliento kortelės valdiklius įtraukti į savo kontakto formą, programoje „Dynamics 365“ eikite į **Parametrai** > **Tinkinimai**.
 
 1. Pasirinkite **Tinkinti sistemą**.
 
 1. Eikite į objektą **Kontaktas**, jį išplėskite ir pasirinkite **Formos**.
 
-1. Pasirinkite kontakto formą, į kurią norite įtraukti kliento kortelės valdiklius.
+1. Pažymėkite kontakto formą, į kurią norite įtraukti kliento kortelės valdiklius.
 
     > [!div class="mx-imgBorder"]
-    > ![Kontakto formos pasirinkimas.](media/contact-active-forms.png "Kontakto formos pasirinkimas")
+    > ![Kontakto formos pasirinkimas.](media/contact-active-forms.png "Kontakto formos pasirinkimas.")
 
 1. Norėdami įtraukti valdiklį, formų rengyklėje bet kurį lauką iš **Laukų naršyklės** vilkite į tą vietą, kurioje norite matyti demografinį valdiklį.
 
@@ -102,11 +105,12 @@ Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 1. Norėdami tinkinti pasirinktiname valdiklyje rodomus duomenis, pasirinkite viršutiniame dešiniajame kampe esantį redagavimo mygtuką.
 
 ## <a name="upgrade-customer-card-add-in"></a>Atnaujinti kliento kortelės papildinį
-Kliento kortelės papildymas automatiškai neatsijungia. Norėdami atnaujinti į naujausią versiją, atlikite šią procedūrą „Dynamics 365” programoje, kuri turi įdiegtą priedą.
+
+Kliento kortelės papildymas automatiškai neatsijungia. Norėdami atnaujinti į naujausią versiją, atlikite šiuos veiksmus „Dynamics 365" programoje, prie kurios yra įdiegtas priedas.
 
 1. Programoje „Dynamics 365” eikite į **Parametrai** > **Tinkinimas** ir pasirinkite **Sprendimai**.
 
-1. Priedų lentelėje ieškokite **„CustomerInsightsCustomerCard”** ir pažymėkite eilutę.
+1. Priedų lentelėje ieškokite **CustomerInsightsCustomerCard** ir pažymėkite eilutę.
 
 1. Veiksmų juostoje pasirinkite **Taikyti sprendimo naujinimą**.
 

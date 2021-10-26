@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights” duomenų eksportavimas į „AdRoll”
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „AdRoll“.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e48f67ec21bb9b883dd30544ccf4dcfbf487acb1abaf0a0557764bc3d955e41a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032081"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617359"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmentų eksportavimas į „AdRoll“ (peržiūros versija)
 
@@ -28,11 +28,11 @@ Eksportuokite vieningųjų klientų profilių segmentus į „AdRoll” ir naudo
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Tuo pat metu galima eksportuoti iki 250000 profilių į „AdRoll“.
-- Į „AdRoll” negalite eksportuoti segmentų, kuriuose yra mažiau nei 100 profilių. 
+- Vienu metu į „AdRoll“ galite eksportuoti iki 250 000 klientų profilių.
+- Į „AdRoll‟ negalite eksportuoti segmentų, kuriuose yra mažiau nei 100 klientų profilių. 
 - Eksportavimas į „AdRoll” ribojamas segmentais.
-- Iki 250 000 profilių eksportavimas į „AdRoll” gali užtrukti iki 10 minučių. 
-- Profilių, kuriuos galite eksportuoti į „AdRoll", skaičius priklauso nuo sutarties su „AdRoll".
+- Iki 250 000 klientų profilių eksportavimas į „AdRoll" gali užtrukti iki 10 minučių. 
+- Klientų profilių, kuriuos galite eksportuoti į „AdRoll", skaičius priklauso nuo sutarties su „AdRoll".
 
 ## <a name="set-up-connection-to-adroll"></a>Ryšio su „AdRoll“ nustatymas
 
@@ -66,7 +66,7 @@ Eksportuokite vieningųjų klientų profilių segmentus į „AdRoll” ir naudo
 
 1. Įveskite Ad **AdRoll reklamuotojo ID**. Daugiau informacijos rasite informacijos [„AdRoll Advertiser Profiles“](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. Būtina eksportuoti segmentus į „AdRoll”.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. Būtina eksportuoti segmentus į „AdRoll”.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. Pasirinkite segmentą, turintį mažiausiai 100 narių. Negalite eksportuoti mažesnių segmentų. Be to, didžiausias eksportuojamo segmento dydis yra 250 000 narių vienam eksportavimui. 
 

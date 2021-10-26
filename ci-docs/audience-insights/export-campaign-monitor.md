@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights“ duomenų eksportavimas į „Campaign Monitor“
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Campaign Monitor“.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d2cc3ec944faa1d77ffb44e8abb422d753c5625d0ccef75cbb7efb14cb7c3741
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 063de14c4ffd51b3afd89786606d7b37626695dc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031897"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618991"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Segmentų eksportavimas į „Campaign Monitor“ (peržiūros versija)
 
@@ -28,10 +28,10 @@ Eksportuokite vieningų klientų profilių segmentus į „Campaign Monitor“ i
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Vienu metu į „Campaign Monitor“ galima eksportuoti iki 1 milijono profilių.
+- Vienam eksportavimui galima eksportuoti iki 1 milijono profilių į „Campaign Monitor“.
 - Eksportavimas į „Campaign Monitor“ leidžiamas tik segmentuose.
-- Iki 1 milijono profilių eksportavimas į „Campaign Monitor“ gali užtrukti iki 20 min. 
-- Profilių, kuriuos galite eksportuoti į „Campaign Monitor“ yra ribojamas ir priklauso nuo jūsų sutarties su „Campaign Monitor“.
+- Iki 1 milijono klientų profilių eksportavimas į „Campaign Monitor“ gali užtrukti iki 20 minučių. 
+- Klientų profilių, kuriuos galite eksportuoti į „Campaign Monitor“, skaičius priklauso ir yra apribotas pagal sutartį su „Campaign Monitor“.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Ryšio su „Campaign Monitor“ nustatymas
 
@@ -66,7 +66,7 @@ Eksportuokite vieningų klientų profilių segmentus į „Campaign Monitor“ i
 1. Įveskite savo [**„Campaign Monitor“ sąrašo ID**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
    [Norėdami peržiūrėti PI sąrašo ID pirmiausia sugeneruokite API raktą](https://www.campaignmonitor.com/api/getting-started/) „Campaign Monitor“ **paskyros nustatymų** srityje.  
 
-3. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „Campaign Monitor“.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „Campaign Monitor“.
 
 1. Pasirinkite **Įrašyti**.
 

@@ -1,7 +1,7 @@
 ---
 title: Suliekite objektus duomenų suvienyjime
 description: Suliekite objektus tam, kad sukurtumėte suvienytus kliento profilius.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494329"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648264"
 ---
 # <a name="merge-entities"></a>Suliekite objektus
 
@@ -89,7 +91,7 @@ Puslapyje **Sulieti** pasirinkite **Išbraukti laukai**, kad peržiūrėtumėte 
     :::image type="content" source="media/recency-merge-option.png" alt-text="Naujumo parinktis suliejimo laukų dialogo lange.":::
     - **Seniausia** : nustato laiminčią vertę pagal mažiausią naujumą. Norint apibrėžti naujumą, kiekvienam dalyvaujančiam objektui suliejimo laukų aprėptyje reikia datos arba skaitinio lauko.
 
-1.  Jei norite dalyvauti suliejimo procese, galite įtraukti papildomų laukų.
+1.  Norėdami dalyvauti suliejimo procese, galite įtraukti daugiau laukų.
 
 1.  Sulietą lauką galite pervadinti.
 
@@ -131,7 +133,7 @@ Kai kuriuose objektuose yra daugiau išsamios informacijos nei kituose. Jei obje
 
 Sukonfigūravę suliejimo laukus galite apibrėžti, kaip generuoti Kliento ID reikšmes, unikalius kliento profilio identifikatorius. Duomenų suvienodinimo proceso suliejimo žingsnis sugeneruoja unikalų kliento profilio identifikatorių. Identifikatorius yra *Kliento* objekto Kliento ID, kuris gaunamas iš duomenų suvienodinimo proceso. 
 
-Kliento objekto Kliento ID yra pagrįsta pirmosios ne nulinės laimėjusios pirminių raktų reikšmės maiša. Šie raktai gaunami iš objektų, naudojamų gretinimo ir suliejimo etapuose, ir juos sąlygoja atitikmenų tvarka.Tad sugeneruot Kliento ID gali pasikeisti, kai pirminė rakto reikšmė pakeičia atitikmens tvarkos pirminį objektą. Todėl pirminio rakto reikšmė ne visada gali atspindėti tą patį klientą.
+Kliento objekto Kliento ID yra pagrįsta pirmosios ne nulinės laimėjusios pirminių raktų reikšmės maiša. Šie raktai gaunami iš objektų, naudojamų gretinimo ir suliejimo etapuose, ir juos sąlygoja atitikmenų tvarka.Tad sugeneruot Kliento ID gali pasikeisti, kai pirminė rakto reikšmė pakeičia atitikmens tvarkos pirminį objektą. Todėl pirminio rakto reikšmė ne visada gali būti ta pati kaip ir tas klientas.
 
 Sukonfigūravus stabilų kliento ID galima išvengti tokio veikimo.
 
@@ -139,7 +141,7 @@ Sukonfigūravus stabilų kliento ID galima išvengti tokio veikimo.
 
 1. Eikite į **Vienyti** > **Sulieti**.
 
-1. Puslapyje **Sulieti** pasirinkite **Raktų** skirtuką. 
+1. Pasirinkite skirtuką **Raktai**. 
 
 1. Laikykite pelės žymeklį virš **Kliento ID** ir pasirinkite **Konfigūruoti** parinktį.
    :::image type="content" source="media/customize-stable-id.png" alt-text="ID generavimo tinkinimo valdiklis.":::
@@ -147,6 +149,30 @@ Sukonfigūravus stabilų kliento ID galima išvengti tokio veikimo.
 1. Pažymėkite ne daugiau kaip penkis laukus, kurie sudarys unikalųjį kliento ID ir kurie yra labiau stabilūs. Įrašuose, kurie neatitinka jūsų konfigūracijos, naudojamas sistemos sukonfigūruotas ID.  
 
 1. Pasirinkite **Atlikta** ir vykdykite suliejimo procesą, kad jūsų pakeitimai būtų pritaikyti.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Grupuokite profilius į indus ar grupes į indus
+
+Kaip kliento profilio generavimo konfigūravimo proceso dalį galite apibrėžti taisykles, pagal šias taisykles susijusius profilius grupuoti į grupę. Šiuo metu galimos dviejų tipų grupės – tarpastie ir pasirinktinės grupės. Sistema automatiškai pasirenka naudojant iš anksto nustatytas taisykles, jei *kliento* objektas turi semantiniais laukais *Asmens.Pavardė* ir *Vietos.Adresas*. Taip pat galite sukurti grupę su savo taisyklėmis ir sąlygomis, panašiomis į [atitikties taisykles](match-entities.md#define-rules-for-match-pairs).
+
+**Nustatykite kasos aparatą arba grupę**
+
+1. Eikite į **Vienyti** > **Sulieti**.
+
+1. Skirtuke **Sulieti** rinkitės **Išplėstinis** > **kūrimo grupė**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Naujos grupės kūrimo valdiklis.":::
+
+1. Pasirinkite iš **Namai** ar **Kliento** grupė. Jei semantiniai laukai yra *Asmens.Pavardė* ir *Veitos.Adresas* yra *Kliento* objekte, tai namai automatiškai pasirenkami.
+
+1. Nurodykite grupės pavadinimą ir pasirinkite **Atlikta**.
+
+1. Pasirinkite skirtuką **Grupės** ir raskite sukurtą grupę.
+
+1. Nurodykite savo grupės apibrėžties taisykles ir sąlygas.
+
+1. Pasirinkite **Vykdyti**, kad būtų vykdomas suliejimo procesas ir sukurta grupė.
+
+Atlikus suliejimo procesą, grupės identifikatoriai į kliento objektą įtraukiami kaip *nauji* laukai.
 
 ## <a name="run-your-merge"></a>Suliejimo vykdymas
 

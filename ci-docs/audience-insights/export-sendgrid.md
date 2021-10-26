@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights” duomenų eksportavimas į „SendGrid”
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „SendGrid“.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: da3da5ea68d178deab3b9ab31dd810dee610f607
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036111"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617841"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Segmentų eksportavimas į „SendGrid“ (peržiūra)
 
@@ -29,10 +29,10 @@ Eksportuokite vieningųjų klientų profilių segmentus į „SendGrid” kontak
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iš viso iki 100 000 profilių į „SendGrid”.
+- Iš viso iki 100 000 klientų profilių – „SendGrid".
 - Eksportavimas į „SendGrid” ribojamas segmentais.
-- Iki 100 000 profilių eksportavimas į „SendGrid” gali užtrukti iki kelių valandų. 
-- Profilių, kuriuos galite eksportuoti į „SendGrid”, skaičius yra priklausomas ir apribotas pagal jūsų sutartį su „SendGrid”.
+- Iki 100 000 klientų profilių eksportavimas į „SendGrid" gali užtrukti iki kelių valandų. 
+- Klientų profilių, kuriuos galite eksportuoti į „SendGrid“, skaičius priklauso ir yra apribotas pagal sutartį su „SendGrid“.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Ryšio su „SendGrid“ nustatymas
 
@@ -66,7 +66,7 @@ Eksportuokite vieningųjų klientų profilių segmentus į „SendGrid” kontak
 
 1. Įveskite **[„SendGrid” sąrašo ID](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
 
-1. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. Pakartokite tuos pačius žingsnius kitiems pasirinktiniams laukams, pvz.:**Vardas**, **Pavardė**, **Šalis / regionas**, **Valstija**, **Miestas**, **Pašto kodas**.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. Pakartokite tuos pačius žingsnius kitiems pasirinktiniams laukams, pvz.:**Vardas**, **Pavardė**, **Šalis / regionas**, **Valstija**, **Miestas**, **Pašto kodas**.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. Primygtinai **rekomenduojame eksportuoti ne daugiau nei 100 000 klientų profilių** į „SendGrid”. 
 

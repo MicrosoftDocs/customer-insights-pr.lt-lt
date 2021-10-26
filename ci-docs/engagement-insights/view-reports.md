@@ -4,17 +4,17 @@ description: Naudodami galimas ataskaitas, savo svetainėje galite matyti veikl�
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5ccdcb47db597154cf79b9f2e8fc238ab75dfde9
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036658"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582932"
 ---
 # <a name="view-reports"></a>Peržiūrėti ataskaitas
 
@@ -92,12 +92,18 @@ Mobiliosios ataskaitos grupuojami pagal naudojimo realiuoju laiku, programos ir 
 
 - **Vietose** rodoma informacija apie programos vartotojus pagal šalį, regioną ir miestas.
 
-## <a name="filter-by-time-or-value"></a>Filtruoti pagal laiką arba reikšmę
+## <a name="filter-by-time-or-date-range"></a>Filtruokite pagal laiką arba datų intervalą
 
-Žiniatinklio ar mobiliojo įrenginio ataskaitoje galite pažymėti laiko tarpą ar reikšmę, kad susitelkti ties reikšme arba laikotarpiu. 
+Ataskaitą galite pažymėti laiko tarpą arba datų intervalą, kad susitelkti ties reikšme arba laikotarpiu. 
 
-- Norėdami pasirinkti laiko tarpą, **Daugiau [...]** ataskaitos išplečiamajame sąraše. Išjungtos realiuoju laiku naudojimo ataskaitos laiko intervalo žymėjimo funkcijos; realiuoju laiku naudojimo ataskaitos laiko diapazonas yra „dabar".
+- Norėdami pažymėti laiką, viršutiniame dešiniajame ataskaitos rodinio kampe pažymėkite reikšmę išplečiamajame ataskaitos sąraše. Taip pat galite pasirinkti **Fiksuotas datų diapazonas**. 
 
-- Daugelyje ataskaitų pažymėkite diagramos arba sąrašo reikšmę ir filtruokite pasirinktos reikšmės ataskaitą.
+  :::image type="content" source="media/filter-by-time.png" alt-text="Filtruokite pagal laiką arba datų intervalą.":::   
+
+- Daugumai ataskaitų pažymėkite diagramos arba sąrašo reikšmę ataskaitai filtruoti.
+
+> [!NOTE]
+> Išjungtos realiuoju laiku naudojimo ataskaitos laiko intervalo žymėjimo funkcijos; realiuoju laiku naudojimo ataskaitos laiko diapazonas yra „dabar".
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

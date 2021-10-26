@@ -4,17 +4,17 @@ description: Kaip kurti, redaguoti ir naikinti segmentus, bei kur juos naudoti.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036158"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623597"
 ---
 # <a name="view-and-create-segments"></a>Peržiūrėti ir kurti segmentus
 
@@ -44,22 +44,27 @@ Toliau pateiktame pavyzdyje rodomas segmentas, kurio vienoje taisyklėje yra dvi
 
 1. Pasirinkite **Naujas segmentas**.
 
-1. **Išteklių bibliotekoje** pasirinkite atributą, pagal kurį norite filtruoti. Šiuo metu galite kurti tik segmentus pagal dimensijas.
+1. Išteklių **bibliotekoje pažymėkite** (+) šalia atributo, pagal kurį norite filtruoti. Šiuo metu galite kurti tik segmentus pagal dimensijas.
 
-1. Pasirinkite operatorių ir pasirinkto atributo reikšmę. Palaikomos toliau pateiktos operacijos.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Sukurkite naują segmentą.":::
+
+1. Taisyklės **skyriuje** pasirinkite operatorių ir pažymėto atributo reikšmę. Palaikomos toliau pateiktos operacijos.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Pasirinkite naujo segmento operatorių.":::
+
    - **yra**: būtinas tikslus atitikmuo, kad reikšmės būtų įtrauktos. Naudoja **lygus** vienai reikšmei arba **bet kuris iš** kelių reikšmių įtraukimui.
    - **nėra**: būtinas tikslus atitikmuo, kad reikšmės nebūtų įtrauktos. Naudoja **lygus** vienai reikšmei arba **bet kuris iš** kelių reikšmių įtraukimui.
    - **prasideda**: eilutė, kuria prasideda sutampančios reikšmės.
    - **pasibaigia**: eilutė, kuria pasibaigia sutampančios reikšmės.
    - **apima**: eilutė, esanti sutampančiose reikšmėse.
 
-1. Norėdami įtraukti daugiau sąlygų į grupę, galite naudoti du loginius operatorius. Suplanuoti atributai yra įtraukiami naudojant rinkinio operatorius.
+1. Norėdami į grupę įtraukti daugiau sąlygų, galite naudoti loginius operatorius. Suplanuoti atributai yra įtraukiami naudojant rinkinio operatorius.
    - Operatorius **IR**: abi sąlygos turi būti įvykdytos kaip segmentavimo proceso dalis. Ši parinktis labiausiai naudinga nustatant sąlygas skirtingiems objektams.
    - Operatorius **ARBA**: viena iš sąlygų turi būti įvykdyta kaip segmentavimo proceso dalis. Ši parinktis labiausiai naudinga nustatant kelias sąlygas tam pačiam objektui.
 
 1. Pasirinkite **Įrašyti** ir pavadinkite segmentą. 
 
-Segmentas bus pateiktas Segmentų puslapyje ir jį galėsite taikyti visoms darbo srities ataskaitoms ir piltuvėliams.
+Segmentas bus pateiktas **Segmentų** puslapyje ir jį galėsite taikyti visoms darbo srities ataskaitoms ir piltuvėliams.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Segmento naudojimas ataskaitoje arba piltuvėlyje
 
@@ -67,7 +72,7 @@ Galite taikyti segmentus ataskaitai arba piltuvėliui, kad filtruotumėte juos p
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Puslapių rodinių ataskaita su išplėstiniu išplečiamajame sąraše, kad būtų galima pasirinkti, kuriuos segmentus taikyti.":::
 
-Norėdami taikyti segmentą, atidarykite ataskaitą arba piltuvėlį. Pasirinkite **Įtraukti sąlygą** ir **Filtruoti pagal segmentą**. Iš sąrašo pasirinkite segmentą, kurį norite taikyti. Segmentas bus pritaikytas ataskaitai. Jeigu diagrama nepalaiko segmento, joje rodoma klaida.
+Norėdami taikyti segmentą, atidarykite ataskaitą arba piltuvėlį. Pasirinkite **+ Įtraukti sąlygą** ir **Filtruoti pagal segmentą**. Iš sąrašo pasirinkite segmentą, kurį norite taikyti. Segmentas bus pritaikytas ataskaitai. Jeigu diagrama nepalaiko segmento, joje rodoma klaida. Daugiau informacijos žr. [Piltuvėlio ataskaitų kūrimas ir valdymas](funnel-reports.md).
  
 Galite taikyti *iki trijų segmentų* ataskaitai arba piltuvėliui.
 
@@ -91,5 +96,7 @@ Galite taikyti *iki trijų segmentų* ataskaitai arba piltuvėliui.
 1. Segmentų sąraše pasirinkite **Daugiau [...]**. 
 1. Iš iškrentančiojo sąrašo rinkitės **Naikinti**.
 1. Pasirinkite **Naikinti** patvirtinimui.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

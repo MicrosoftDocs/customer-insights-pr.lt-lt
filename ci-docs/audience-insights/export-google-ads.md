@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558982"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617933"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentų eksportavimas į „Google Ads“ (peržiūra)
 
@@ -35,9 +35,9 @@ Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditor
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono profilių vieno eksportavimo metu į „Google Ads“.
+- Iki 1 milijono klientų profilių viename eksportavime į „Google Ads".
 - Eksportavimas į „Google Ads“ yra apribotas segmentais.
-- Eksportuojant segmentus su bendrai 1 milijonu profilių gali užimti iki 5 minučių dėl apribojimų tiekėjo pusėje. 
+- Dėl paslaugų teikėjų apribojimų segmentai, kuriuose iš viso yra 1 milijono klientų profilių, gali trukti iki 5 minučių. 
 - Suderinamumas „Google Ads“ gali trukti iki 48 valandų.
 
 ## <a name="set-up-connection-to-google-ads"></a>Ryšio su „Google Ads“ nustatymas
@@ -74,7 +74,7 @@ Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditor
 
 1. Įveskite savo **[„Google Ads“ publikos ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** ir pasirinkite **Sujungti** tam, kad pradėtumėte sujungimą su „Google Ads“.
 
-1. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. Galite eksportuoti iki 1 milijono kliento profilių bendrai į „Google Ads“.
 

@@ -1,7 +1,7 @@
 ---
 title: Robotas „Microsoft Teams“
 description: Ieškokite suvienodintų tinkintų profilių „Microsoft Teams“ su roboto pagalba.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 9bf401124b0ffb21b046954056141e7703386d4911f89f34ffc0fcb84bf0f4be
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: cff696834e3dad00ce5b0f1b5bcb13d86354a4e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032492"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617611"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Komandų robotas „Dynamics 365 Customer Insights“ (peržiūra)
 
@@ -31,6 +31,7 @@ Norint nustatyti ir sukonfigūruoti robotą, turi būti įvykdytos šios būtino
 - [Sujungimo procesas](data-unification.md) yra baigtas.
 - Laukai yra įtraukti į [ieškos ir filtravimo rodyklę](search-filter-index.md).
 - „Customer Insights“ ir „Teams“ yra toje pačioje organizacijoje.
+- Jūsų aplinkoje pagrindinė tikslinė auditorija nustatyta atskiriems klientams. Verslo klientai nepalaikomi.
 
 ## <a name="configure-the-bot"></a>Roboto konfigūravimas
 

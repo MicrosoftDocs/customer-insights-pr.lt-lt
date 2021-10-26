@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights“ duomenų eksportavimas į „RollWorks“
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „RollWorks“.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d8ce4d867835dcb7cf56c6fffff4e25d1f5c109af0e401fc0eb8b3a7427c1de4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f8f6a79db9cb4bb109c03a464d9f8c7f3b862ad5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034600"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617454"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Segmentų eksportavimas į „RollWorks“ (peržiūros versija)
 
@@ -28,11 +28,11 @@ Eksportuokite vieningų klientų profilių segmentus į „RollWorks“ ir naudo
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Vienu metu į „RollWorks“ galima eksportuoti iki 250 000 profilių.
-- Į „RollWorks“ negalima eksportuoti segmentų, kuriuose yra mažiau nei 100 profilių. 
+- Į „RollWorks‟ iš viso galima eksportuoti iki 250 000 eksportuojamų klientų profilių.
+- Į „RollWorks‟ negalite eksportuoti segmentų, kuriuose yra mažiau nei 100 klientų profilių. 
 - Segmentų eksportavimas į „RollWorks“ ribojamas.
-- Iki 250 000 profilių eksportavimas į „RollWorks“ gali užtrukti iki 10 min. 
-- Profilių, kuriuos galite eksportuoti į „RollWorks“ yra ribojamas ir priklauso nuo jūsų sutarties su „RollWorks“.
+- Iki 250 000 klientų profilių eksportavimas į „RollWorks" gali užtrukti iki 10 minučių. 
+- Klientų profilių, kuriuos galite eksportuoti į „RollWorks“, skaičius priklauso ir yra apribotas pagal sutartį su „RollWorks“.
 
 ## <a name="set-up-connection-to-rollworks"></a>Ryšio su „RollWorks“ nustatymas
 
@@ -66,7 +66,7 @@ Eksportuokite vieningų klientų profilių segmentus į „RollWorks“ ir naudo
 
 1. Įveskite savo **„RollWorks“ reklamuotojo ID** [„RollWorks“ reklama](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „RollWorks“.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „RollWorks“.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. Pasirinkite segmentą, turintį mažiausiai 100 narių. Negalite eksportuoti mažesnių segmentų. Be to, didžiausias eksportuojamo segmento dydis yra 250'000 narių vienam eksportavimui. 
 

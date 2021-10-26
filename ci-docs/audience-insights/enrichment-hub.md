@@ -1,7 +1,7 @@
 ---
 title: Papildykite suvienodintus kliento profilius
 description: Naudokite savybes siekiant papildyti jūsų kliento duomenis.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470006"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617565"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientų profilių papildymas (peržiūra)
 
@@ -27,16 +27,26 @@ Publikos įžvalgose eikite į **Duomenys** > **Papildymas** tam, kad dirbtumėt
 
 Norėdami kurti arba redaguoti papildymus, turite turėti dalyvio arba administratoriaus teises. Daugiau informacijos žr. [Teisės](permissions.md).
 
-Skirtuke **Atrasti** rasite šiuos papildymus:
+Skirtuke **Atrasti** rasite visas palaikomas gerinimo parinktis.
 
-- [„Azure” žemėlapiai](enrichment-azure-maps.md), kuriuos teikia „Microsoft”
+# <a name="individual-customers-b2c"></a>[Atskirų klientų (B2C)](#tab/b2c)
+
 - [Rūšys](enrichment-microsoft.md), kurias teikia „Microsoft“
 - [Pomėgiai](enrichment-microsoft.md), kuriuos teikia „Microsoft“
-- [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft”
-- [Bendrovės duomenys](enrichment-leadspace.md) pateikti „Leadspace“
+- [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft” 
 - [Demografiniai](enrichment-experian.md) duomenys pateikti „Experian“
-- [Vietos duomenys](enrichment-here.md) pateikti „HERE Technologies“
-- [Tinkinti duomenys](enrichment-SFTP-custom-import.md) per „Secure File Transfer Protocol“ (SFTP)
+- [Tinkinti duomenys](enrichment-SFTP-custom-import.md) per „Secure File Transfer Protocol“ (SFTP) 
+- [„Azure” žemėlapiai](enrichment-azure-maps.md), kuriuos teikia „Microsoft”
+
+# <a name="business-accounts-b2b"></a>[Verslo klientai (B2B)](#tab/b2b)
+
+- [Bendrovės duomenys](enrichment-leadspace.md) pateikti „Leadspace“
+- [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft” 
+- [Vietos duomenys](enrichment-here.md) pateikti „HERE Technologies“ 
+- [Tinkinti duomenys](enrichment-SFTP-custom-import.md) per „Secure File Transfer Protocol“ (SFTP) 
+- [„Azure” žemėlapiai](enrichment-azure-maps.md), kuriuos teikia „Microsoft”
+
+---
 
 Skirtuke **Mano papildymai** galite matyti sukonfigūruotus papildymus ir redaguoti jų ypatybes.
 
@@ -58,7 +68,7 @@ Vienu metu paleiskite arba išjunkite kelis papildymus pažymėdami juos sąraš
 
 ## <a name="enrichments-and-connections"></a>Papildymai ir ryšiai
 
-Trečiosios šalies papildymai konfigūruojami naudojant [ryšius](connections.md), kuriuos administratorius nustato su kredencialais ir pateikia sutikimą duomenims perduoti. Tada administratoriai ir bendradarbiai ryšį gali naudoti papildymams konfigūruoti.  
+Trečiosios šalies papildymai konfigūruojami naudojant [ryšius](connections.md), kuriuos administratorius nustato su kredencialais ir pateikia sutikimą duomenims perduoti. Ryšiai gali būti naudojami administratorių ir prie konfigūracijos papildinių prisidedančių subjektų.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Keli to paties tipo papildymai
 

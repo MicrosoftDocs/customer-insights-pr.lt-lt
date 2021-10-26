@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483535"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645182"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Prisijunkite prie Azure Data Lake Storage paskyros naudodami pagrindinę "Azure" tarnybą
 
 Automatizuoti įrankiai, naudojantys „Azure“ paslaugas visada turėtų turėti apribotus leidimus. Vietoje programų prisijungimo kaip vartotojui su teisėmis, „Azure“ siūlo pagrindines paslaugas. Sužinokite, kaip prisijungti prie Dynamics 365 Customer Insights su Azure Data Lake Storage paskyra, naudojant "Azure" pagrindinę paslaugą, vietoj saugyklos paskyros raktų. 
 
-Pagrindinę tarnybą galite naudoti, jei norite saugiai [įtraukti arba redaguoti Bendrą duomenų modelio aplanką kaip duomenų šaltinį](connect-common-data-model.md) arba [kurti ar naujinti aplinką](get-started-paid.md).
+Pagrindinę tarnybą galite naudoti, jei norite saugiai [įtraukti arba redaguoti Bendrą duomenų modelio aplanką kaip duomenų šaltinį](connect-common-data-model.md) arba [kurti ar naujinti aplinką](create-environment.md).
 
 > [!IMPORTANT]
 > - „Data Lake Storage” abonementas, kuris naudos pagrindinį aptarnavimą, privalo turėti [įgalintą hierarchinę vardų sritį](/azure/storage/blobs/data-lake-storage-namespace).

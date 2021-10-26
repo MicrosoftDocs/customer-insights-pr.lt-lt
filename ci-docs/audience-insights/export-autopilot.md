@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights” duomenų eksportavimas į „Autopilot”
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Autopilot“.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9ada8a6f4e4546990a1360567b400033050119c4c4c9a3df1af8fcaab75e157
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4cceb64484e8e257a90b8cbaedff4419659bb399
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032035"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618439"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Segmentų eksportavimas į „Autopilot“ (peržiūra)
 
@@ -28,10 +28,10 @@ Eksportuokite vieningųjų klientų profilių segmentus į „Autopilot” konta
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Į „Autopilot” iš viso galima eksportuoti iki 100 000 profilių.
+- Į „Autopilot‟ iš viso galima eksportuoti iki 100 000 klientų profilių.
 - Eksportavimas į „Autopilot” ribojamas segmentais.
-- Iki 100 000 profilių eksportavimas į „Autopilot” gali užtrukti iki kelių valandų. 
-- Profilių, kuriuos galite eksportuoti į „Autopilot”, skaičius yra priklausomas ir apribotas pagal jūsų sutartį su „Autopilot”.
+- Iki 100 000 klientų profilių eksportavimas į „Autopilot" gali užtrukti iki kelių valandų. 
+- Klientų profilių, kuriuos galite eksportuoti į „Autopilot“, skaičius priklauso ir yra apribotas pagal sutartį su „Autopilot“.
 
 ## <a name="set-up-connection-to-autopilot"></a>Ryšio su „Autopilot“ sąranka
 
@@ -43,7 +43,7 @@ Eksportuokite vieningųjų klientų profilių segmentus į „Autopilot” konta
 
 1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-3. Įveskite [„Autopilot“ API raktą](https://autopilot.docs.apiary.io/#).
+1. Įveskite [„Autopilot“ API raktą](https://autopilot.docs.apiary.io/#).
 
 1. Pasirinkę **Sutinku**, kad patvirtintumėte **Duomenų privatumą ir atitiktį**.
 
@@ -63,7 +63,7 @@ Eksportuokite vieningųjų klientų profilių segmentus į „Autopilot” konta
 
 1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Autopilot“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
 
-3. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. Pakartokite tuos pačius žingsnius kitiems pasirinktiniams laukams, pvz.: **Vardas** ar **Pavardė**.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. Pakartokite tuos pačius žingsnius kitiems pasirinktiniams laukams, pvz.: **Vardas** ar **Pavardė**.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. Primygtinai **rekomenduojame eksportuoti ne daugiau nei 100 000 klientų profilių** į „Autopilot”. 
 

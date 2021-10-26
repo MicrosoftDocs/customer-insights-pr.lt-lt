@@ -1,7 +1,7 @@
 ---
 title: Duomenų eksportavimas iš „Customer Insights“
 description: Tvarkykite duomenų bendrinimo eksportavimus.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034692"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623126"
 ---
 # <a name="exports-preview-overview"></a>Eksportavimų (peržiūros versija) apžvalga
 
-Puslapyje **Eksportavimai** rodomi visi sukonfigūruoti eksportavimai. Eksportavimuose su įvairiomis programomis bendrinami konkretūs duomenys. Jie gali apimti klientų profilius arba objektus, schemas ir žymėjimo duomenis. Kiekvienam eksportavimui reikalingas [ryšys, kurį nustato administratorius, kad galėtų tvarkyti įgaliojimą ir prieigą](connections.md).
+Puslapyje **Eksportavimai** rodomi visi sukonfigūruoti eksportavimai. Eksportavimuose su įvairiomis programomis bendrinami konkretūs duomenys. Jie gali apimti klientų profilius, objektus, schemas ir susiejimo išsamią informaciją. Kiekvienam eksportavimui reikalingas [ryšys, kurį nustato administratorius, kad galėtų tvarkyti įgaliojimą ir prieigą](connections.md).
 
 Eikite į **Duomenys** > **Eksportavimai**, kad peržiūrėtumėte eksportavimų puslapį. Visi vartotojų vaidmenys gali peržiūrėti sukonfigūruotą eksportą. Komandų juostoje naudokite ieškos lauką, kad rastumėte eksportą pagal jų vardą, ryšio pavadinimą arba ryšio tipą.
 
-## <a name="set-up-a-new-export"></a>Naujo eksportavimo sąranka
+## <a name="export-types"></a>Eksportavimo tipai
 
+Yra du pagrindiniai eksportuojami tipai:  
+
+- **Eksportuojant duomenis** galima eksportuoti bet kokio tipo objektą, prieinamą auditorijos įžvalgose. Jūsų pažymėti eksportuoti objektai eksportuojami su visais duomenų laukais, metaduomenimis, schemomis ir susiejimo informacija. 
+- **Segmentų eksportavimas** leidžia eksportuoti segmento objektus iš auditorijos įžvalgų. Segmentai atitinka klientų profilių sąrašą. Konfigūruodami eksportavimą, pažymite įtrauktus duomenų laukus, atsižvelgiant į paskirties sistemą, į kurią eksportuojate duomenis. 
+
+### <a name="export-segments"></a>Eksportuokite segmentus
+
+**Segmentų eksportavimas verslo klientų (B2B) arba atskirų klientų (B2C) aplinkose**  
+Dauguma eksportavimo parinkčių palaiko abiejų tipų aplinkas. Norint eksportuoti segmentus į įvairias paskirties sistemas taikomi konkretūs reikalavimai. Bendrai tariant, kliento segmento narys, kliento profilyje yra kontaktinė informacija. Nors paprastai taip būna segmentams, sukurtiems iš atskirų klientų (B2C), segmentams, pagrįstiems verslo klientais (B2B), nebūtina. 
+
+**Segmentų eksporto aplinkos verslo klientams (B2B)**  
+- Segmentai verslo paskyrų aplinkose kuriami naudojant *kliento* objektą. Kad klientų segmentai būtų eksportuojami taip, kaip yra, paskirties sistema turi palaikyti klientų segmentus. Taip yra su [„LinkedIn"](export-linkedin-ads.md) kai **apibrėždami** eksportavimą pasirenkate įmonės parinktį.
+- Visose kitose paskirties sistemose reikia laukų iš kontakto objekto. Norint užtikrinti, kad klientų segmentai galės nuskaityti duomenis iš susijusių kontaktų, jūsų segmento apraše turi būti pateikti kontakto objekto atributai. Sužinokite daugiau, kaip [konfigūruoti segmentus ir projekto atributus](segment-builder.md).
+
+**Segmentų eksportuojama pavienių klientų aplinkose (B2C)**  
+- Segmentai verslo paskyrų aplinkose atskirtiems klientams, kurie yra pagrįsti *vieningu kliento profilio* objektu. Visi segmentai, kurie atitinka paskirties sistemos reikalavimus (pvz., el. pašto adresas), gali būti eksportuojami.
+
+**Segmentų eksporto apribojimai**  
+- Trečiųjų šalių paskirties sistemos gali riboti klientų profilių, kuriuos galite eksportuoti, skaičių. 
+- Atskiriems klientams, pažymėdami eksportuoti norimą segmentą, matysite faktinį segmento narių skaičių. Jei segmentas yra per didelis, gausite įspėjimą. 
+- Verslo klientų segmente matysite klientų skaičių; tačiau kontaktų, kuriuos galima projektuoti, skaičius nerodo. Tam tikrais atvejais eksportuotas segmentas iš tiesų gali turėti daugiau klientų profilių nei tikslinė sistema. Jei viršysite tikslinių sistemų rezultatų apribojimus, eksportą praleisite. 
+
+## <a name="set-up-a-new-export"></a>Naujo eksportavimo sąranka  
 Jei norite nustatyti ar redaguoti eksportavimą, turite turėti prieinamų ryšių. Ryšiai priklauso nuo jūsų [naudotojo vaidmens](permissions.md):
-- Administratoriai turi prieigą prie visų ryšių. Jie taip pat gali kurti naujus ryšius nustatydami eksportavimą.
-- Bendradarbiai gali turėti prieigą prie konkrečių ryšių. Jie priklauso nuo administratorių, kad sukonfigūruotų ir bendrintų ryšius. Eksportavimų sąraše pateikiama, ar bendraautoriai gali redaguoti, ar tik peržiūrėti eksportavimą **Jūsų teisių** stulpelyje. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Žiūrovai gali tik peržiūrėti esamus eksportavimus, tačiau ne juos kurti.
+- **Administratoriai** turi prieigą prie visų ryšių. Jie taip pat gali kurti naujus ryšius nustatydami eksportavimą.
+- **Bendradarbiai** gali turėti prieigą prie konkrečių ryšių. Jie priklauso nuo administratorių, kad sukonfigūruotų ir bendrintų ryšius. Eksportavimų sąraše pateikiama, ar bendraautoriai gali redaguoti, ar tik peržiūrėti eksportavimą **Jūsų teisių** stulpelyje. Norėdami gauti daugiau informacijos, eikite į [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Peržiūrintieji** gali peržiūrėti tik esamą eksportą, o ne juos sukuria.
 
 ### <a name="define-a-new-export"></a>Naujo eksportavimo apibrėžimas
 

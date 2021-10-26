@@ -1,7 +1,7 @@
 ---
 title: Aplinkų kūrimas ir valdymas
 description: Sužinokite, kaip prisijungti prie paslaugų ir kaip valdyti aplinkas.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034187"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645136"
 ---
 # <a name="manage-environments"></a>Aplinkų valdymas
 
@@ -26,7 +26,7 @@ Norėdami keisti aplinkas, viršutiniame dešiniajame puslapio kampe pasirinkite
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Aplinkų perjungimo valdiklio ekrano kopija.":::
 
-Administratoriai gali [kurti](get-started-paid.md) ir valdyti aplinkas.
+Administratoriai gali [kurti](create-environment.md) ir valdyti aplinkas.
 
 ## <a name="edit-an-existing-environment"></a>Esamos aplinkos redagavimas
 
@@ -36,23 +36,9 @@ Galite redaguoti kai kurią esamos aplinkos informaciją.
 
 2.  Pasirinkite **Redagavimo** piktogramą.
 
-3. Lauke **Redaguoti aplinką** galite atnaujinti aplinkos rodomą **Pavadinimą**, tačiau negalite keisti  **Regiono** arba **Tipo**.
+3. Lauke **Redaguoti aplinką** galite atnaujinti aplinkos parametrus.
 
-4. Jei aplinka sukonfigūruota duomenims saugoti „Azure Data Lake Storage“, galite atnaujinti **kliento raktą**. Tačiau negalite keisti **Paskyros pavadinimo** arba **Konteinerio** pavadinimo.
-
-5. Pasirinktinai galite naujinti iš paskyros pagrindinių pagrįstų jungčių į resursais pagrįstą arba prenumeravimu pagrįstą jungtį. Jums atnaujinus negalėsite grįžti prie pagrindinės paskyros po naujinimo. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Negalite keisti **Talpyklos** informacijos naujinant jungtį.
-
-6. Taip pat galite nurodytų Microsoft Dataverse aplinkos URL skiltyje **Duomenų bendrinimo su Microsoft Dataverse konfigūravimas ir papildomų galimybių įjungimas**. Į šias galimybes įeina duomenų bendrinimas su „Microsoft Dataverse” pagrįstomis programomis ir sprendimais, duomenų paėmimas iš vietinių duomenų šaltinių arba [prognozių](predictions.md) naudojimas. Pasirinkite **Įjungti duomenų bendrinimą**, jei „Customer Insights“ išvesties duomenis norite bendrinti su Microsoft Dataverse valdomu „Data Lake“.
-
-   > [!NOTE]
-   > - Duomenų bendrinimas Microsoft Dataverse su valdomasis duomenų telkiniais šiuo metu nepalaikomas, kai įrašote visus duomenis savo Azure Data Lake Storage.
-   > - [Trūkstamų objekto reikšmių prognozė](predictions.md) ir „PowerBI” įdėtosios ataskaitos auditorijos įžvalgose (jei įgalinta jūsų aplinkoje) šiuo metu nepalaikomos, kai įgalinate duomenų bendrinimą su „Microsoft Dataverse” valdomu „data lake”.
-
-   Įgalinus duomenų bendrinimą su „Microsoft Dataverse”, prasideda visiškas jūsų duomenų šaltinių atnaujinimas ir kiti procesai. Jei šiuo metu vykdomi procesai, nematysite duomenų bendrinimo su „Microsoft Dataverse” įjungimo parinkties. Palaukite, kol šie procesai bus užbaigti arba atšaukite juos, kad įgalintumėte duomenų bendrinimą. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
-   
-   Jums vykdant procesus, tokius kaip duomenų suvartojimas ar segmento sukūrimas, atitinkantys katalogai bus sukuriami talpinimo paskyroje, kurią nurodėte prieš tai. Atsižvelgiant į jūsų vykdomą procesą, duomenų failai ir model.json failai kuriami ir įtraukiami į atitinkamus antrinius aplankus.
+Daugiau informacijos apie aplinkos parametrus žr. [Naujos aplinkos kūrimas](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Aplinkos konfigūracijos kopijavimas
 

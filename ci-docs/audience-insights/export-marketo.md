@@ -1,7 +1,7 @@
 ---
 title: Eksportuoti „Customer Insights“ duomenis į „Marketo“
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Marketo“.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033503"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619175"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmentų eksportavimas į „Marketo“ (peržiūra)
 
@@ -29,10 +29,10 @@ Eksportuokite suvienodintų klientų profilio segmentus siekiant sugeneruoti kam
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono profilių vieno eksportavimo metu į „Marketo“.
+- Iki 1 milijono klientų profilių viename eksportavime į „Marketo".
 - Eksportavimas į „Marketo“ yra apribotas segmentais.
-- Eksportuojant segmentus su bendrai 1 milijonu profilių gali užimti iki 3 valandų. 
-- Profilių skaičius, kurį galite eksportuoti į „Marketo“ priklauso ir yra apribotas jūsų sutartimi su „Marketo“.
+- Iš viso 1 milijono klientų profilių segmentų eksportavimas gali trukti iki 3 valandų. 
+- Klientų profilių, kuriuos galite eksportuoti į „Marketo“, skaičius priklauso ir yra apribotas pagal sutartį su „Marketo“.
 
 ## <a name="set-up-connection-to-marketo"></a>Ryšio su „Marketo“ sąranka
 
@@ -64,7 +64,7 @@ Eksportuokite suvienodintų klientų profilio segmentus siekiant sugeneruoti kam
 
 1. Įveskite savo **[„Marketo“ sąrašo ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. Sąrašo ID yra grynai skaitinė vertė. Pavyzdžiui, jei jūsų „Marketo” sąrašo ID yra ST12345A7, pašalinkite neskaitinius simbolius ir įveskite `12345`. 
 
-1. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. 
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. 
 
 1. Taip pat galite eksportuoti **vardą**, **pavardę**, **miestą**, **valstiją** ir **šalį / regioną**, jei norite sukurti labiau personalizuotus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
 

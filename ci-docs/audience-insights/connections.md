@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033228"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605959"
 ---
 # <a name="connections-preview-overview"></a>Ryšių (peržiūros) apžvalga
 
@@ -47,6 +47,7 @@ Norėdami įtraukti ryšius, turite turėti [administratoriaus teises](permissio
 1. Srityje **Nustatyti ryšį** pateikite reikiamą informaciją. 
    1. **Rodomas pavadinimas** ir ryšio tipas apibūdina ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas šio ryšio tikslas ir paskirtis.
    1. Tikslūs laukeliai priklauso nuo to, prie kokios paslaugos jungiatės. Apie konkretaus ryšio tipo duomenis galite sužinoti straipsnyje apie tikslinę paslaugą.
+   1. Jei [naudojate savo „Key Vault“](use-azure-key-vault.md) slaptai saugoti, suaktyvinkite **naudoti Key Vault** ir sąraše pasirinkite slaptą parinktį.
 
 1. Jei norite sukurti ryšį, pasirinkite **Įrašyti**.
 
@@ -93,3 +94,6 @@ Atsieti papildymai ir eksportavimai tampa neaktyvūs. Iš naujo suaktyvinate juo
 
 1. Jei norite patvirtinti trynimą, pasirinkite **Šalinti**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Ryšių su slaptais įrašais, kuriuos valdo jūsų „Key Vault“, nustatymas
+
+Kai kuriems ryšiams reikia slaptai pvz., API raktų arba slaptažodžius. Kai kurie ryšiai palaiko slaptas informacijas, saugomas jūsų saugykloje „Key Vault“. Sužinokite daugiau apie palaikomus ryšius ir apie tai, kaip [kaip savo „Key Vault“ nustatyti auditorijos įžvalgoms](use-azure-key-vault.md).

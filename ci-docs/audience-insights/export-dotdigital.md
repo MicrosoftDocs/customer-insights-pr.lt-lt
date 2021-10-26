@@ -1,7 +1,7 @@
 ---
 title: Eksportuoti „Customer Insights“ duomenis į „DotDigital“
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „DotDigital“.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f09be0dfa599c1ef7cf0055b7ce1df8784cf447ada64b56bc7543c214f9a5b99
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034646"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618393"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Segmentų eksportavimas į „DotDigital“ (peržiūros versija)
 
@@ -22,17 +22,17 @@ Eksportuokite suvienodintų klientų profilio segmentus į „DotDigital“ adre
 
 ## <a name="prerequisites-for-a-connection"></a>Būtinosios ryšio sąlygos
 
--   Turite [„DotDigital“ paskyrą](https://dotdigital.com/) ir atitinkančius administratoriaus prisijungimo duomenis.
+-   Turite [„DotDigital" paskyrą](https://dotdigital.com/) ir sukūrėte [API vartotoją](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Norėdami sukurti ryšį, turėsite naudoti API vartotojo kredencialus
 -   Yra esančių adreso knygų „DotDigital“ ir atitinkamų ID. ID gali būti prieinamas URL, kurį pasirinkote ir atvėrėte adresų knygoje. Dėl daugiau informacijos, žr. [„DotDigital“ adresų knygos](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Turite [sukonfigūruotus segmentus](segments.md) publikos įžvalgose.
 -   Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono profilių vieno eksportavimo metu į „DotDigital“.
+- Iki 1 milijono klientų profilių viename eksportavime į „DotDigital".
 - Eksportavimas į „DotDigital“ yra apribotas segmentais.
-- Eksportuojant segmentus su bendrai 1 milijonu profilių gali užimti iki 3 valandų dėl apribojimų tiekėjo pusėje. 
-- Profilių skaičius, kurį galite eksportuoti į „DotDigital“ priklauso ir yra apribotas jūsų sutartimi su „DotDigital“.
+- Dėl paslaugų teikėjų apribojimų segmentai, kuriuose iš viso yra 1 milijono klientų profilių, gali trukti iki 3 valandų. 
+- Klientų profilių, kuriuos galite eksportuoti į „DotDigital“, skaičius priklauso ir yra apribotas pagal sutartį su „DotDigital“.
 
 ## <a name="set-up-connection-to-dotdigital"></a>„DotDigital“ ryšio sąranka
 
@@ -44,7 +44,7 @@ Eksportuokite suvienodintų klientų profilio segmentus į „DotDigital“ adre
 
 1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Įveskite savo **„DotDigital“ vartotojo vardą ir slaptažodį**.
+1. Įveskite savo **„DotDigital“ API vartotojo vardą ir slaptažodį**. 
 
 1. Įveskite savo **[„DotDigital“ adreso knygos ID](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
 
@@ -67,7 +67,7 @@ Eksportuokite suvienodintų klientų profilio segmentus į „DotDigital“ adre
 1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „DotDigital“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
 
 
-1. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. Pakartokite tuos pačius žingsnius kitiems pasirenkamiems laukeliams, tokius kaip **Vardas**, **Pavardė**, **Vardas ir pavardė**, **Lytis** ir **Pašto kodas**.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. Pakartokite tuos pačius žingsnius kitiems pasirenkamiems laukeliams, tokius kaip **Vardas**, **Pavardė**, **Vardas ir pavardė**, **Lytis** ir **Pašto kodas**.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. Galite eksportuoti iki 1 milijono kliento profilių bendrai į „DotDigital“.
 

@@ -1,7 +1,7 @@
 ---
 title: „Power Apps“ jungtis
 description: Susijunkite su „Power Apps“ ir „Power Automate“.
-ms.date: 01/19/2021
+ms.date: 10/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: fc0af656cd5b436d9efd65b2a2c75dde9c9deb9dbcdd56ffc6a960f5878a631f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 985e6c85795fba8ca3063cdffc7f9012e798856a
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031805"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623233"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>„Microsoft Power Apps“ jungtis (peržiūra)
 
@@ -30,48 +30,47 @@ Perkelkite sujungtus klientų profilius į individualizuotas programas naudodami
 
 „Customer Insights“ įtraukę kaip duomenų ryšį, „Power Apps“ galite pasirinkti toliau nurodytus objektus.
 
-- Klientas: norėdami naudoti duomenis iš [sujungto kliento profilio](customer-profiles.md).
-- Sujungta klientų veikla: norėdami, kad programėlėje būtų rodoma [sujungta laiko juosta](activities.md).
+- **Klientas**: norėdami naudoti duomenis iš  [sujungto kliento profilio](customer-profiles.md).
+- **UnifiedActivity** : programoje rodoma [veiklos laiko planavimo](activities.md) juosta.
+- **ContactProfile** : rodyti kliento kontaktus. Šis objektas yra tik prieinamas auditorijos įžvalgose skirtomis auditorijos įžvalgų aplinkomis.
 
 ## <a name="limitations"></a>Apribojimai
 
 ### <a name="retrievable-entities"></a>Gaunamieji objektai
 
-Naudodami „Power Apps“ jungtį, galite gauti tik objektus **Klientas**, **UnifiedActivity** ir **Segmentai**. Kiti objektai rodomi, nes pagrindinė jungtis juos palaiko per „Power Automate“ paleidiklius.  
+Per jungtį galite nuskaityti **Klientas**, **UnifiedActivity**, **Segmentai**, ir **ContactProfile** laukus per „Power Apps“ jungtį. „ContactProfile“ yra tik prieinamas auditorijos įžvalgose elemntuose skirtuose verslo paskyroms. Kiti objektai rodomi, nes pagrindinė jungtis juos palaiko per „Power Automate“ paleidiklius.
 
 ### <a name="delegation"></a>Perdavimas
 
-Perdavimo funkcija veikia su objektais Customer ir UnifiedActivity. 
+Perdavimo funkcija veikia su objektais **Klientas** ir **Sujungta veikla**. 
 
 - **Kliento** objekto perdavimas: Šio objekto perdavimo naudojimui, laukeliai turi būti sužymėti [Paieškos ir filtravimo turinyje](search-filter-index.md).  
-
 - **UnifiedActivity** perdavimas: šiame objekte perdavimo funkcija veikia tik su laukais **ActivityId** ir **CustomerId**.  
+- **ContactProfile** perdavimas: šio objekto indų indavimas veikia tik laukuose **ContactId** ir **CustomerId**. „ContactProfile“ yra tik prieinamas auditorijos įžvalgose aplinkose skirtose verslo paskyroms.
 
-- Norėdami gauti daugiau informacijos apie perdavimą, žr. [„Power Apps“ perduodamosios funkcijos ir operacijos](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+Norėdami gauti daugiau informacijos apie pervaldavimą, [„Power Apps“ eikite į deavaluojamas funkcijas ir operacijas](/powerapps/maker/canvas-apps/delegation-overview). 
 
 ## <a name="example-gallery-control"></a>Galerijos valdiklio pavyzdys
 
-Pavyzdžiui, įtraukiate kliento profilius į [galerijos valdymą](/powerapps/maker/canvas-apps/add-gallery).
+Į galerijos valdiklį galite įtraukti [klientų profilių](/powerapps/maker/canvas-apps/add-gallery).
 
-1. Įtraukite valdiklį **Galeriją** į kuriamą programą.
-
-> [!div class="mx-imgBorder"]
-> ![Galerijos elemento įtraukimas.](media/connector-powerapps9.png "Galerijos elemento įtraukimas")
-
-1. Pasirinkite **Klientas** kaip elementų duomenų šaltinį.
+1. Įtraukite valdiklį **galeriją** į kuriamą programą.
 
     > [!div class="mx-imgBorder"]
-    > ![Pasirinkti duomenų šaltinį.](media/choose-datasource-powerapps.png "Duomenų šaltinio pasirinkimas")
+    > ![Galerijos elemento įtraukimas.](media/connector-powerapps9.png "Galerijos elemento įtraukimas.")
 
-1. Galite keisti duomenų skydą dešinėje ir pasirinkti, kurį kliento objekto lauką rodyti galerijoje.
+2. Pasirinkite **Klientas** kaip elementų duomenų šaltinį.
 
-1. Jei galerijoje norite parodyti bet kurį pasirinkto kliento lauką, užpildykite žymos teksto ypatybę:  **{Name_of_the_gallery}.Selected.{property_name}**
+    > [!div class="mx-imgBorder"]
+    > ![Pasirinkti duomenų šaltinį.](media/choose-datasource-powerapps.png "Duomenų šaltinio pasirinkimas.")
 
-    Pavyzdys: Gallery1.Selected.address1_city
+3. Galite keisti duomenų skydą dešinėje ir pasirinkti, kurį kliento objekto lauką rodyti galerijoje.
 
-1. Norėdami, kad būtų rodoma vieninga kliento laiko planavimo juosta, įtraukite galerijos elementą ir įtraukite elementų ypatybę: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
+4. Jei galerijoje norite parodyti bet kurį pasirinkto kliento lauką, užpildykite žymos teksto ypatybę **tekstą** naudojant **{Name_of_the_gallery}.Pasirinktas.{property_name}**  
+    - Pavyzdys: _Gallery1.Selected.address1_city_
 
-    Pavyzdys: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+5. Norėdami, kad būtų rodoma sujungta kliento laiko planavimo juosta, įtraukite galerijos elementą ir įtraukite **Elementai** ypatybę su **Filtras('UnifiedActivity', CustomerId = {Customer_Id})**  
+    - Pavyzdys: _Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

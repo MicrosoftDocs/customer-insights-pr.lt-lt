@@ -8,18 +8,18 @@ ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
-ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
+ms.openlocfilehash: 82591919b44eaac8a251d7fdb148253d5cac23c3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "7564604"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645411"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Regioninis „Dynamics 365 Customer Insights” pasiekiamumas
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Įtraukimo įžvalgose, kuri yra „Dynamics 365 Customer Insights” galimybė, palaipsniui pristatoma daugiau regionų, kuriuose klientai gali pasirinkti saugoti savo duomenis. Administratoriai gali pasirinkti regioną, kai jie [kuria naują aplinką](manage-environments-workspaces.md#create-an-environment). 
+Įtraukimo įžvalgose, kuri yra „Dynamics 365 Customer Insights” galimybė, palaipsniui pristatoma daugiau regionų, kuriuose klientai gali pasirinkti saugoti savo duomenis. Administratoriai gali pasirinkti regioną, kai jie [kuria naują aplinką](create-new-environment.md). 
 
 Kai pirmą kartą nustatote įtraukimo įžvalgas, galite pasirinkti regioną vykdydami [interaktyviąją pirmojo paleidimo patirtį](quickstart.md). Vėliau kiekviena nauja aplinka leidžia pasirinkti regioną, kuriame bus saugomi duomenys.
 

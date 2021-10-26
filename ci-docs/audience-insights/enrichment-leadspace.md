@@ -1,32 +1,32 @@
 ---
 title: Bendrovės profilių praturtinimas su trečiosios šalies praturtinimo „Leadspace“
 description: Bendra informacija apie „Leadspace“ trečiosios šalies praturtinimą.
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031713"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617411"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Įmonių profilių papildymas su „Leadspace“ (peržiūra)
 
-„Leadspace“ yra duomenų mokslo įmonė, teikianti B2B klientų duomenų platformą. Tai leidžia klientams su vieningais įmonių klientų profiliais papildyti savo duomenis. Papildymai apima daugiau atributų, pvz., įmonės dydį, vietą, pramonės šaką ir daugiau.
+„Leadspace“ yra duomenų mokslo įmonė, teikianti B2B klientų duomenų platformą. Tai suteikia galimybę sąskaitoms papildyti naudojant vieningus klientų profilius, pagrįstus klientais. Praturtinkite *klientų profilius* atributais, pvz., įmonės dydžiu, vieta ar pramonės šaka. Praturtinkite *kontaktų profilius* naudodami atributus, pvz., pareigas, asmenį arba el. pašto tikrinimą.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 Norint konfigūruoti „Leadspace“, turi būti tenkinamos šios būtinosios sąlygos:
 
 - Turite aktyvią „Leadspace“ licenciją.
-- Turite įmonių [vieningus klientų profilius](customer-profiles.md).
-- „LeadSpace“ ryšį jau sukonfigūravo administratorius arba turite [administratoriaus](permissions.md#administrator) teises bei „neribotą raktą“ (vadinamą **„LeadSpace“ atpažinimo ženklu**). Norėdami gauti išsamios informacijos apie jų produktą, kreipkitės tiesiogiai į [„Leadspace“](https://www.leadspace.com/products/leadspace-on-demand/).
+- Turite [vieningus klientų profilius](customer-profiles.md), pagrįstus klientais.
+- „LeadSpace“ ryšį jau sukonfigūravo administratorius arba turite [administratoriaus](permissions.md#administrator) teises bei „neribotą raktą“ (vadinamą **„LeadSpace“ atpažinimo ženklu**). Norėdami gauti išsamios informacijos apie jų produktą, kreipkitės tiesiogiai į [„Leadspace“](https://www.leadspace.com/leadspace-microsoft-dynamics-365/).
 
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 
@@ -50,6 +50,10 @@ Norint konfigūruoti „Leadspace“, turi būti tenkinamos šios būtinosios s�
 
 1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
 
+1. Pažymėkite žymės langelį, jei turite *norimų papildyti* kontaktų profilių. Auditorijos įžvalgos automatiškai susies būtinus laukus.
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Galimų klientų srities kontaktų įrašų papildymas.":::
+ 
 1. Nurodykite papildymo pavadinimą ir peržiūrėję pasirinkimus pažymėkite **Išsaugoti papildymą**.
 
 
@@ -79,9 +83,10 @@ Išsamų kiekvieno papildyto profilio rodinį galite pasiekti pasirinkę **Perž
 
 Daugiau informacijos žr. [„Leadspace“ API](https://support.leadspace.com/hc/en-us/sections/201997649-API).
 
-## <a name="next-steps"></a>Tolesni veiksmai
+## <a name="next-steps"></a>Kiti veiksmai
 
-Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [segmentus](segments.md) ir [priemones](measures.md) bei net [eksportuokite duomenis,](export-destinations.md) kad klientams būtų galima teikti personalizuotas funkcijas.
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 

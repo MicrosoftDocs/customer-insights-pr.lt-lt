@@ -1,7 +1,7 @@
 ---
 title: Eksportuoti „Customer Insights“ duomenis į „Mailchimp“
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Mailchimp“.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033549"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618623"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmentų eksportavimas į „Mailchimp“ (peržiūros versija)
 
@@ -29,10 +29,10 @@ Eksportuoti suvienodintų kliento profilių segmentus į „Mailchimp“ siekian
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono profilių vieno eksportavimo metu į „Mailchimp“.
+- Iki 1 milijono klientų profilių viename eksportavime į „Mailchimp".
 - Eksportavimas į „Mailchimp“ yra apribotas segmentais.
-- 1 milijono profilių segmentų eksportavimas gali trukti iki trijų valandų. 
-- Profilių skaičius, kurį galite eksportuoti į „Mailchimp“ priklauso ir yra apribotas jūsų sutartimi su „Mailchimp“.
+- 1 milijono klientų profilių segmentų eksportavimas gali trukti iki trijų valandų. 
+- Klientų profilių, kuriuos galite eksportuoti į „Mailchimp“, skaičius priklauso ir yra apribotas pagal sutartį su „Mailchimp“.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Ryšio su „Mailchimp“ nustatymas
 
@@ -66,7 +66,7 @@ Eksportuoti suvienodintų kliento profilių segmentus į „Mailchimp“ siekian
 
 1. Įveskite savo **[„Mailchimp“ auditorijos ID](https://mailchimp.com/help/find-audience-id/)**
 
-3. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. 
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. 
 
 1. Taip pat galite eksportuoti **vardą** ir **pavardę**, jei norite sukurti labiau personalizuotus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
 

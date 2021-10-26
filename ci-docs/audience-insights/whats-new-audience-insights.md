@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465215"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606104"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
 
@@ -26,6 +26,20 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>2021 m. rugsėjo mėn. naujinimai
+
+Į 2021 m. rugsėjo mėn. naujinimus įtrauktos naujos funkcijos, efektyvumo naujiniai ir klaidų taisymai.
+
+### <a name="activities"></a>Veiklos
+
+- **Veiklos laiko planavimo juostos** patobulinimai Išplėtė veiklos laiko planavimo juostos filtrus klientų profiliuose. Be to, naudodami naują filtro keptuvę galite filtruoti pagal veiklos tipą ir datą. Datas galima filtruoti naudojant skirtingas sąlygas. Daugiau informacijos žr. [Veiklos laiko planavimo juostų rodymas klientų profiliuose](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Ryšiai
+
+- **Kelių objektų ryšių palaikymas** Konfigūruodami veiklas ir apibrėždami objektų ryšius naudokite kelių objektų ryšius. Kelių objektų ryšiai naudoja išsamų objektą dviem objektams sujungti. Konfigūruodami veiklą galite naudoti kelių kanalų ryšį, kad susietumėte savo veiklos objektą su susiautinu objektu, o tada su kliento objektu. Galite derinti kelių eilučių ryšius su kelių maršrutų ryšiais. Daugiau informacijos rasite [kelių eilučių ryšys](relationships.md#multi-hop-relationship).
+
+- **Kelių kelių ryšių palaikymas** Konfigūruodami veiklas ir apibrėždami kelių ryšius naudokite kelių objektų ryšius. Kelių kelių maršrutų ryšiai šaltinio objektą sieja su daugiau nei vienu objektu. Konfigūruodami veiklą galite naudoti kelių kanalų kelią, kad susietumėte savo veiklos objektą su susiautinu objektu, o tada su daugiau nei vienu kliento objektu. Galite derinti kelių eilučių kelius su kelių maršrutų ryšiais. Daugiau informacijos rasite [kelių kelių ryšys](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>2021 m. rugpjūčio mėn. naujinimai
 

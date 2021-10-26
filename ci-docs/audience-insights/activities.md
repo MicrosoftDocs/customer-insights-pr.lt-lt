@@ -1,7 +1,7 @@
 ---
 title: Kliento veiklos
 description: Apibrėžkite klientų veiklas ir peržiūrėkite jas klientų profilių laiko planavimo juostose.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494421"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617979"
 ---
 # <a name="customer-activities"></a>Kliento veiklos
 
@@ -24,8 +24,7 @@ Suderinkite kliento veiklą iš [įvairių duomenų šaltinių](data-sources.md)
 
 Jūsų duomenų šaltiniuose gali būti objektų su operacijų ir veiklos duomenimis iš kelių duomenų šaltinių. Identifikuokite šiuos objektus ir pasirinkite veiklas, kurias norite peržiūrėti kliento laiko planavimo juostoje. Pasirinkite objektą, kuriame yra jūsų tikslinė veikla arba veiklos.
 
-> [!NOTE]
-> Objekte turi būti bent vienas **Data** tipo atributas, kurį reikia įtraukti į kliento planavimo juostą; negalite įtraukti objektų be **Data** laukų. Valdiklis **Įtraukti veiklą** yra išjungtas, jei nerastas toks objektas.
+Objekte turi būti bent vienas **Data** tipo atributas, kurį reikia įtraukti į kliento planavimo juostą; negalite įtraukti objektų be **Data** laukų. Valdiklis **Įtraukti veiklą** yra išjungtas, jei nerastas toks objektas.
 
 1. Publikos įžvalgose, eikite į **Duomenys** > **Veiklos**.
 
@@ -41,13 +40,16 @@ Jūsų duomenų šaltiniuose gali būti objektų su operacijų ir veiklos duomen
 
 1. Norėdami pereiti prie kito veiksmo, pasinkite **Toliau**.
 
-1. Atlikdami veiksmą **Santykis** konfigūruokite išsamią informaciją, kad veiklos duomenys būtų susieti su atitinkamu klientu. Šiuo veiksmu vaizduojamas objektų ryšys.  
+1. Ryšių **žingsnyje** konfigūruokite išsamią informaciją, kad veiklos duomenys būtų susieti su atitinkamo kliento įrašu. Šiuo veiksmu vaizduojamas objektų ryšys.  
 
    - **Pirma:** veiklos objekto, kuris bus naudojamas ryšiui su kitu objektu užmegzti, laukelis „Svetimas“.
    - **Antra:** atitinkamas šaltinio kliento objektas, su kuriuo sąveikaus jūsų veiklos objektas. Ryšį galite nustatyti tik su tais šaltinio kliento objektais, kurie naudojami duomenų suvienodinimo procese.
    - **Trečia:** jei ryšys tarp šio veiklos objekto ir pasirinkto šaltinio kliento objekto jau yra, ryšio pavadinimas veiks tik skaitymo režimu. Jei tokio ryšio nėra, bus sukurtas naujas ryšys tokiu pavadinimu, kurį pateikiate šiame lauke.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Objekto ryšio apibrėžimas.":::
+
+   > [!TIP]
+   > B2B aplinkose galite pažymėti kliento objektus ir kitus objektus. Jei pažymėsite kliento objektą, ryšio kelias bus nustatomas automatiškai. Kitiems objektams turite nustatyti ryšio kelią virš vieno ar daugiau objektų, kol pasieksite kliento objektą.
 
 1. Norėdami pereiti prie kito veiksmo, pasinkite **Toliau**. 
 
@@ -94,6 +96,35 @@ Pasirinkus veiklą galimi nurodyti veiksmai.
 
 - **Pervardykite**: atidaromas dialogas, kuriame galite įvesti kitą pažymėtos veiklos pavadinimą. Pasirinkite **Įrašyti**, kad pritaikytumėte keitimus.
 
-- **Trinti**: atidaro dialogą, kad patvirtintų pažymėtos veiklos trynimą. Taip pat iš karto galite ištrinti daugiau nei vieną veiklą, pažymėdami veiklas ir pažymėdami trynimo piktogramą. Pasirinkite **Trinti** ir patvirtinkite ištrynimą.
+- **Trinti**: atidaro dialogą, kad patvirtintų pažymėtos veiklos trynimą. Taip pat iš karto galite ištrinti daugiau nei vieną veiklą, pažymėdami veiklas ir pažymėdami trynimo piktogramą. Pasirinkite **Naikinti** naikinimo patvirtinimui.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Veiklos laiko planavimo juostų rodinys klientų profiliuose
+
+Sukonfigūrę klientų veiklas, veiklos konfigūracijoje pasirinkite **Rodyti veiklos laiko planavimo juostoje** ir profilyje raskite visas kliento veiklas.
+
+Norėdami atidaryti kliento laiko planavimo juostą, eikite į **Klientai** ir pasirinkite norimą peržiūrėti kliento profilį.
+
+Jei klientas dalyvauja jūsų sukonfigūruotoje veikloje, ją rasite skyriuje **Veiklos laiko planavimo juosta**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Peržiūrėkite sukonfigūruotas veiklas klientų profiliuose.":::
+
+Yra keli veiklos filtravimo būdai veiklos laiko planavimo juostoje:
+
+- Galite pažymėti vieną arba daugelį veiklos piktogramų, jei norite tobulinti rezultatus ir įtraukti tik pažymėtus tipus.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtruoti veiklas pagal tipą naudojant piktogramas.":::
+
+- Galite pažymėti **Filtras,** kad atidarytumėte filtrų skydą ir sukonfigūruotumėte laiko planavimo juostos filtrus.
+
+   1. Galite filtruoti pagal *ActivityType* ir *Data*
+   1. Pažymėkite **Taikyti** , kad būtų naudojami veiklos laiko planavimo juostos filtrai.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Naudodami filtrų skydą konfigūruokite filtravimo sąlygas.":::
+
+Norėdami pašalinti filtrus, pažymėkite **x** šalia kiekvieno laiko planavimo juostai taikomojo filtro arba pažymėkite **Valyti filtrus**.
+
+
+> [!NOTE]
+> Veiklos filtrai pašalinami išeidami iš kliento profilio. Juos turite taikyti kiekvieną kartą juos atidarydami kliento profilyje.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

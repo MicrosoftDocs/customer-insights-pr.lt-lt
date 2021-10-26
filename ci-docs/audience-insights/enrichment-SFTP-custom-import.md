@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032722"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618715"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Praturtinkite klientų profilius su tinkintais duomenimis (peržiūra)
 
@@ -44,6 +44,8 @@ Siekiant sukonfigūruoti SFTP tinkintą importavimą, būtina atitikti tolesnes 
 1.  Pažymėkite **Kitas** ir įveskite **norimo** ir **Failo kelią** importuoti duomenų failo kelią ir failo vardą.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Ekrano nuotrauka įvedant duomenų vietą.":::
+
+1. Pažymėkite **Kitas** ir pasirinkite kliento duomenų rinkinį. Tai gali būti visi klientų profiliai arba segmentas.
 
 1. Pasirinkite **Toliau** ir pateikite papildymo pavadinimą bei išvesties objekto pavadinimą. 
 
@@ -121,8 +123,8 @@ Po papildymo proceso pabaigos, galėsite peržiūrėti jūsų naujai importuotus
 
 Išsamų kiekvieno papildyto profilio rodinį galite pasiekti pasirinkę **Peržiūrėti papildytus duomenis**.
 
-## <a name="next-steps"></a>Tolesni veiksmai
+## <a name="next-steps"></a>Kiti veiksmai
 
-Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [segmentai](segments.md) ir [priemones](measures.md) bei net [eksportuokite duomenis,](export-destinations.md) kad klientams būtų galima teikti personalizuotas funkcijas.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

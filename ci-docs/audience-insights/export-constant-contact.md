@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights“ duomenų eksportavimas į „Constant Contact“
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Constant Contact“.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 30dfe4d6c2374ba9979827ea70a71c52a1334b45dd3e36ccb1de90fae0c61ad9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031851"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619129"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Segmentų eksportavimas į „Constant Contact“ (peržiūros versija)
 
@@ -28,10 +28,10 @@ Eksportuokite vieningų klientų profilių segmentus į „Constant Contact“ i
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Vienu metu į „Constant Contact“ galima eksportuoti iki 1 milijono profilių.
+- Vienam eksportavimui galima eksportuoti iki 1 milijono profilių į „Constant Contact“.
 - Segmentų eksportavimas į „Constant Contact“ ribojamas.
-- Iki 1 milijono profilių eksportavimas į „Constant Contact“ gali užtrukti iki 1 val. 
-- Profilių, kuriuos galite eksportuoti į „Constant Contact“ yra ribojamas ir priklauso nuo jūsų sutarties su „Constant Contact“.
+- Iki 1 milijono klientų profilių eksportavimas į „Constant Contact“ gali užtrukti iki 1 valandos. 
+- Klientų profilių, kuriuos galite eksportuoti į „Constant Contact“, skaičius priklauso ir yra apribotas pagal sutartį su „Constant Contact“.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Ryšio su „Constant Contact“ nustatymas
 
@@ -65,7 +65,7 @@ Eksportuokite vieningų klientų profilių segmentus į „Constant Contact“ i
 
 1. Įveskite savo [**„Constant Contact“ sąrašo ID**](https://app.constantcontact.com/pages/contacts/ui#lists). Norėdami rasti URL sąrašo ID, atidarykite sąrašą „Constant Contact“.
 
-1. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „Constant Contact“.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „Constant Contact“.
 
 1. Pasirinktinai, galite eksportuoti Vardą ir Pavardę kaip papildomus laukelius norėdami sukurti labiau suasmenintus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
 

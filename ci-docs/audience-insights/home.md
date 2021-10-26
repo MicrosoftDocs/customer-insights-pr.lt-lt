@@ -1,7 +1,7 @@
 ---
 title: Pagrindinis puslapis publikos įžvalgose
 description: Pradėkite naršyti programoje pagrindiniame puslapyje.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470005"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617704"
 ---
 # <a name="explore-audience-insights"></a>Tyrinėkite auditorijos įžvalgas
 
@@ -23,7 +23,7 @@ Galite pasiekti [auditorijos įžvalgas Dynamics 365 Customer Insights](https://
 
 :::image type="content" source="media/home-page.png" alt-text="Pagrindinio ekrano, kuriame rodomi įžvalgų pavyzdžiai, ekrano kopija.":::
 
-1 – „Customer Insights” galimybių perjungimas 2 – Naudokite kairiąją sritį naršymui tarp skirtingų sričių 3 – Sužinokite, kurioje aplinkoje dirbate ir tvarkykite aplinkas kaip administratorius 4 – Nurodykite asmeninius „Customer Insights” parametrus
+1 – „Customer Insights“ 2 galimybių perjungimas – kairiojoje srityje naršydami skirtingas sritis ir pasirinkite pagrindinę tikslinę auditoriją 3 – sužinokite, kurioje aplinkoje dirbate ir kaip administratorius valdote aplinkas kaip administratorius 4 – Asmeninių „Customer Insights“ parametrų nurodymas
 
 Dalyje **Naujausi segmentai** matysite klientų grupes pagal demografinius, elgsenos arba operacijų atributus, kuriuos nustatėte. [Kuriant segmentus ](segments.md)galima grupuoti klientų bazę ir geriau nukreipti į verslo veiklas.
 
