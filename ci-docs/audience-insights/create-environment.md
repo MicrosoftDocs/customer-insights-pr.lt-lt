@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645710"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673401"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Kurti aplinką publikos auditorijos įžvalgose
 
@@ -46,7 +46,7 @@ Pagrindinės **informacijos žingsnyje** pasirinkite, ar norite kurti aplinką n
 
 Nurodykite toliau pateiktą informaciją.
    - **Pavadinimas**: Šios aplinkos pavadinimas. Šis laukas jau užpildytas, jei kopijuojate esamą aplinką, tačiau jį galite keisti.
-   - **Pasirinkite verslo**: pasirinkite pagrindinę naujos aplinkos auditoriją. Galite dirbti su pavieniais klientais (B2C) arba [verslo klientais](work-with-business-accounts.md) (B2B).
+   - **Pasirinkite savo verslą**: pasirinkite pagrindinę naujos aplinkos auditoriją. Galite dirbti su individualiais atsiliepimais (B 2 C) arba [verslo klientais](work-with-business-accounts.md) (B2B).
    - **Tipas**: pasirinkite, ar norite sukurti gamybos, ar smėlio dėžės aplinką. Smėlio dėžės aplinkos neleidžia suplanuoto duomenų atnaujinimo ir yra skirtos išankstiniam diegimui ir testavimui. Smėlio dėžės aplinkos naudoja tą pačią pagrindinę auditoriją kaip ir dabar pažymėta gamybos aplinka.
    - **Sritis**: sritis, kurioje įdiegta ir teikiama ši paslauga.
 
@@ -54,7 +54,7 @@ Nurodykite toliau pateiktą informaciją.
 
 Atlikdami **duomenų saugyklos** veiksmą pasirinkite, kur norite saugoti duomenis iš auditorijos įžvalgų.
 
-Galėsite pasirinkti dvi galimybes: **„Customer Insights" saugyklą** „Azure Data Lake", kurią valdo „Customer Insights" komanda ir **Azure Data Lake Storage** (komanda ir „Azure Data Lake Storage“). Pagal numatytuosius parametrus, pasirenkama „Customer Insights“ saugykla.
+Galėsite pasirinkti dvi galimybes: **„Customer Insights" saugyklą** „Azure Data Lake", kurią valdo klientų įžvalgų komanda ir **Azure Data Lake Storage** (komanda ir „Azure Data Lake Storage“). Pagal numatytuosius parametrus, pasirenkama „Customer Insights“ saugykla.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Pasirinkite, „Azure Data Lake Storage“, kurioje norite saugoti auditorijos įžvalgų duomenis.":::
 
@@ -66,7 +66,7 @@ Galėsite pasirinkti dvi galimybes: **„Customer Insights" saugyklą** „Azure
 > - „Azure Data Lake Storage" paskyrų abonementai iš to paties „Azure" regiono, kurį pasirinkote kurdami aplinką.
 > - „Azure Data Lake Storage“ abonementai, kurių *hierarchinė vardų sritis* įjungta.
 
-Galite „Azure Data Lake Storage“ pasirinkti iš išteklių pagrįstą parinktį ir prenumerata pagrįstą autentifikavimo parinktį. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Konteinerio **pavadinimas** bus ir jo keisti nebus `customerinsights` galima.
+Galite „Azure Data Lake Storage“ pasirinkti iš išteklių pagrįstą parinktį ir prenumerata pagrįstą autentifikavimo parinktį. Dėl išsamesnės informacijos, žr. [Prisijungti prie „Azure Data Lake Storage“ paskyros su „Azure“ pagrindinėmis paslaugomis](connect-service-principal.md). Konteinerio **pavadinimas** bus ir jo keisti nebus `customerinsights` galima.
 
 Kai sistema apdoroja, pvz., užbaigė duomenų sugadinimą, sistema sukuria atitinkamus aplankus jūsų nurodytame saugyklos abonemente. Duomenų failai ir *model.json* failai yra kuriami ir įtraukiami į aplankus pagal proceso pavadinimą.
 
@@ -76,14 +76,14 @@ Jei sukuriate kelias „Customer Insights“ aplinkas ir pasirenkate įrašyti i
    
 Šis **Microsoft Dataverse** veiksmas leidžia „Customer Insights“ susieti su „Dataverse“ aplinka.
 
-Jei norite [naudoti iš anksto anksto prognozė modelius](predictions-overview.md#out-of-box-models) konfigūruokite duomenų bendrinimą su „Dataverse“. Arba galite įjungti duomenų nurijimas iš vietinis šaltinių, pateikdami jūsų „Microsoft Dataverse“ organizacijos administruojami aplinkos URL. Pasirinkite Įjungti **duomenų bendrinimą** ir bendrinkite Customer Insights išvedimo duomenis su Dataverse valdomu Data Lake.
+Jei norite [naudoti iš anksto anksto prognozė modelius](predictions-overview.md#out-of-box-models) konfigūruokite duomenų bendrinimą su „Dataverse“. Arba galite įjungti duomenų nurijimas iš vietinis šaltinių, pateikdami jūsų „Microsoft Dataverse“ organizacijos administruojami aplinkos URL. Pasirinkite **Įjungti duomenų bendrinimą**, jei „Customer Insights“ išvesties duomenis norite bendrinti su „Dataverse“ valdomu „Data Lake“.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
 
 > [!NOTE]
 > Jūsų „Customer Insights“ aplinkos konfigūracija nepalaiko šių duomenų bendrinimo scenarijų:
-> - Jei visus duomenis įrašysite savo, negalėsite įjungti bendro duomenų bendrinimo su valdomojo „Azure Data Lake Storage“ duomenų „Microsoft Dataverse“ sutvarkytas „Data Lake“.
-> - Įjungę duomenų bendrinimą su sutvarkytu „Data Lake", negalėsite kurti prognozuojamų „Microsoft Dataverse“ [arba trūkstamų objekto reikšmių](predictions.md).
+> - Jei visus duomenis įrašysite savo, negalėsite įjungti bendro duomenų bendrinimo su valdomojo „Azure Data Lake Storage“ duomenų „Dataverse“ sutvarkytas „Data Lake“.
+> - Įjungę duomenų bendrinimą su „Dataverse“, negalėsite kurti prognozuojamų [arba trūkstamų objekto reikšmių](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>4 veiksmas: užbaikite nustatymus
 
@@ -93,7 +93,7 @@ Taip pat daugumą parametrų galite keisti vėliau. Daugiau informacijos žr. [A
 
 ## <a name="work-with-your-new-environment"></a>Darbas su nauja aplinka
 
-Peržiūrėkite šiuos straipsnius, kad galėtumėte pradėti konfigūruoti „Customer Insights”. 
+Peržiūrėkite šiuos straipsnius, kad būtų galima pradėti konfigūruoti „Customer Insights“: 
 
 - [Įtraukite daugiau vartotojų ir priskirkite teises](permissions.md).
 - [Įtraukite savo duomenų šaltinius](data-sources.md) ir paleiskite juos per [duomenų suvienodinimo procesą](data-unification.md), kad gautumėte [suvienodintus klientų profilius](customer-profiles.md).

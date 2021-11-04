@@ -1,7 +1,7 @@
 ---
 title: Mašininis mokymas siūlomų segmentų kūrimas
 description: Leiskite mašininis mokymas rasti naujus ir suskirstytus segmentus, pagrįstus klientų atributais.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028370"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673193"
 ---
 # <a name="suggested-segments-preview"></a>Siūlomi segmentai (peržiūra)
 
@@ -23,7 +23,7 @@ Naudodami AI modelį, galite atrasti klientų klientus su susidavimo segmentais.
 > [!NOTE]
 > Siūloma segmentų funkcija naudoja automatizuotas priemones duomenims įvertinti ir pagal juos numatyti, todėl ją galima naudoti kaip profiliavimo metodą, kaip apibrėžta Bendrajame duomenų apsaugos reglamente (BDAR). Jūsų duomenų naudojantis šia funkcija siekiant tvarkyti duomenis gali būti taikomos BDAR ar kitų teisės aktų nuostatos. Jūs esate atsakingas už tai, kad jūsų naudojimas, įskaitant šią funkciją, užtikrina visų taikytinų įstatymų ir pagrindų, įskaitant įstatymus, susijusius su privatumu, asmeniniais duomenimis, sistemų vientisumu, duomenų apsauga ir „Dynamics 365 Customer Insights“ ryšių slaptumu.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Customer Insights siūlomų segmentų puslapyje, kuriame pateikiama išsami pasiūlymo informacija srityje.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Siūlomų segmentų puslapis, kuriame pateikiama išsami informacija apie pasiūlymą srityje.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Siūlomi segmentai KPI tobulinti
 
@@ -49,7 +49,7 @@ Jei pasirinksite skaitinį atributą arba kategorijų atributą kaip pagrindinį
 
 Su skaičių atributais, tokiais kaip *metinės pajamos* ar *narystės laikotarpis* kaip pagrindiniu atributu, sistema siūlo segmentus, kurių vidutinė skaitinio atributo reikšmė yra didesnė arba mažesnė, palyginti su visais klientais.
 
-Toks kategorijos atributas kaip *kliento pasitenkinimas* kaip pirminis atributas, lemia siūlomus segmentus, kurių klientų, priklausančių konkrečiai kategorijai, procentas yra didesnis arba mažesnis, palyginti su visų tai pačiai kategorijai priklausančių klientų procentine dalimi. Pavyzdžiui, *klientų pasitenkinimas* pasirenkamas kaip pirminis atributas ir jį sudaro trys kategorijos (*Žemas*, *vidutinis* ir *didelis*). Bus siūloma, kad kiekvienos kategorijos segmentai turėtų gerokai daugiau arba mažiau klientų, priklausančių tai kategorijai, palyginti su visų tai pačiai kategorijai priklausančių klientų dalimi. Jei 22% visų klientų yra *Labai* satisfaction, patenkinti, tai bus siūloma tik segmentams, kurių klientų pasitenkinimo lygis yra gerokai *Didesnis* palyginti su 22%, palyginti su 22%. Panašiai, jei segmentai yra statistiniu atžvilgiu svarbūs, bus siūlomi kiekvienai iš kitų kategorijų (*žema* ir *vidutinė*).
+Toks kategorijos atributas kaip *kliento pasitenkinimas* kaip pirminis atributas, lemia siūlomus segmentus, kurių klientų, priklausančių konkrečiai kategorijai, procentas yra didesnis arba mažesnis, palyginti su visų tai pačiai kategorijai priklausančių klientų procentine dalimi. Pavyzdžiui, *klientų pasitenkinimas* pasirenkamas kaip pirminis atributas ir jį sudaro trys kategorijos (*Žemas*, *vidutinis* ir *didelis*). Bus siūloma, kad kiekvienos kategorijos segmentai turėtų daugiau arba mažiau klientų, priklausančių tai kategorijai, palyginti su visų tai pačiai kategorijai priklausančių klientų dalimi. Jei 22 % visų klientų turi aukštą pasitenkinimo lygį, bus siūlomi tik segmentai, kurių klientų pasitenkinimo lygis yra didesnis arba mažesnis, palyginti su 22 %, ir kurie atitinka *aukštą* klientų pasitenkinimo lygį, palyginti su *aukštu* lygiu. Panašiai, jei segmentai yra statistiniu atžvilgiu svarbūs, bus siūlomi kiekvienai iš kitų kategorijų (*žema* ir *vidutinė*).
 
 > [!NOTE]
 > Šiuo metu palaikome tik pirminius kategorijų atributus, kurių kategorijų yra iki 10. Jei norite peržiūrėti segmento pasiūlymus, pagrįstus pirminiu atributu, turiu daugiau nei 10 kategorijų, rekomenduojame sugrupuoti kai kurias kategorijas, kad kategorijų skaičius būtų mažesnis nei 10. Šis apribojimas taikomas tik pirminiams atributams. Norėdami naudoti klasifikuojamuosius atributus, šiuo metu palaikome ne daugiau kaip 100 kategorijų.
@@ -77,7 +77,7 @@ Toks kategorijos atributas kaip *kliento pasitenkinimas* kaip pirminis atributas
 
 Sugeneravote AI modelį, jie pateikiami segmentų pasiūlymuose **Segmentai** > **Siūlymai (peržiūra)**.
  
-Pasirinkite siūlomą segmentą, kad peržiūrėtumėte to pasiūlymo išsamią informaciją, taip pat palyginkite vidutinę vertę ir segmento narių skaičių. Taip pat galite peržiūrėti atributų reikšmes arba taisykles, kurias AI modelis išmoko pasiūlyti pasirinktą segmentą.
+Pasirinkite siūlomą segmentą ir peržiūrėkite išsamią to pasiūlymo informaciją. Taip pat galite peržiūrėti atributų reikšmes arba taisykles, kurias AI modelis išmoko pasiūlyti pasirinktą segmentą.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Įrašykite siūlymą kaip segmentą
 

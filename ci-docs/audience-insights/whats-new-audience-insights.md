@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606104"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673867"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
 
@@ -166,7 +166,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 - **Segmentų eksportavimas į „Constant Contact“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Constant Contact“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „Constant Contact“ sąrašus ir juos naudoti kaip jūsų rinkodaros kampanijų pagrindą.   
    Daugiau informacijos žr. [Eksportavimas į „Constant Contact“](export-constant-contact.md).
 
-- **Segmentų eksportavimas į „RollWorks“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „RollWorks“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „RollWorks“ auditorijas ir juos naudoti kaip jūsų B2B reklamą.    
+- **Segmentų eksportavimas į „RollWorks“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „RollWorks“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „RollWorks" auditorijas ir naudoti juos kaip bazinę B2B reklamos dalį.    
    Daugiau informacijos žr. [Eksportavimas į „RollWorks“](export-rollworks.md).
 
 - **Segmentų eksportavimas į „Snapchat“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Snapchat“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „Snapchat“ auditorijas ir juos naudoti kaip jūsų reklamą.     

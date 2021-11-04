@@ -1,7 +1,7 @@
 ---
 title: Kurkite segmentus naudodami segmentų kūrimo priemonę
 description: Kurkite klientų segmentus, kad jie būtų sugrupuoti pagal įvairius atributus.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623039"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673560"
 ---
 # <a name="create-segments"></a>Kurti segmentus
 
@@ -23,6 +23,7 @@ Apibrėžkite vieningojo kliento objekto ir su juo susijusių objektų sudėtini
 > [!TIP]
 > - Sparčiuosius segmentus galima naudoti tik atskirų **klientų aplinkose**.    
 > - Segmentuose, pagrįstuose **atskirais klientais**, automatiškai įtraukiama prieinama segmento narių kontaktinė informacija. Verslo paskyrų **aplinkose segmentai** grindžiami klientais (įmonėmis arba antrinėmis įmonėmis). Norėdami į segmentą įtraukti kontaktinę informaciją, naudokite **projekto atributų** funkcijas segmento atributų atributuose.
+>    - Užtikrinkite, kad kontaktų duomenų šaltiniai [būtų automatiškai susieti su „ContactProfile"](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) objektu.
 
 ## <a name="segment-builder"></a>Segmentų kūrimo priemonė
 
@@ -52,7 +53,7 @@ Aukščiau pateiktas pavyzdys iliustruoja segmentavimo galimybę. Sukūrėme seg
 
 Naują segmentą galima sukurti keliais būdais. Šiame skyriuje aprašoma, kaip sukurti savo segmentą nuo nulio. Taip pat galite sukurti *spartųjį segmentą*, pagrįstą esamais objektais, arba naudoti mašininio mokymo modelį, kad gautumėte *siūlomus segmentus*. Norėdami gauti daugiau informacijos, eikite į [Segmentų apžvalga](segments.md).
 
-Kurdami segmentą, jūs galite įrašyti juodraštį. Juodraščio etapo segmentas įrašomas kaip neaktyvusis segmentas. Baigę konfigūruoti segmentą, paleiskite jį, kad suaktyvintumėte segmentą. Arba galite _ **Aktyvinti** _ segmentą iš puslapio **Visi segmentai**.
+Kurdami segmentą, jūs galite įrašyti juodraštį. Juodraščio etapo segmentas įrašomas kaip neaktyvusis segmentas. Baigę konfigūruoti segmentą, paleiskite jį, kad suaktyvintumėte segmentą. Arba galite taip pat **Aktyvinti** segmentą iš puslapio **Visi segmentai**.
 
 1. Eikite į puslapį **Segmentai**.
 
@@ -86,17 +87,25 @@ Kurdami segmentą, jūs galite įrašyti juodraštį. Juodraščio etapo segment
 
    Naudojant ARBA operatorių visos sąlygos turi būti pagrįstos į ryšio kelią įtrauktais objektais.
 
-   - Galite sukurti kelias taisykles skirtingiems klientų įrašų rinkiniams kurti. Galite sujungti grupes, kad įtrauktumėte klientus, reikalingus jūsų veiklos atvejui. Pasirinkite **Įtraukti taisyklę**, kad sukurtumėte naują taisyklę. Jei į taisyklę negalite įtraukti objekto dėl nurodyto ryšio kelio, turite sukurti naują taisyklę, pagal kurią būtų galima pasirinkti atributų formą.
+   - Galite sukurti kelias taisykles skirtingiems klientų įrašų rinkiniams kurti. Galite sujungti grupes, kad įtrauktumėte klientus, reikalingus jūsų veiklos atvejui. Pasirinkite **Įtraukti taisyklę**, kad sukurtumėte naują taisyklę. Konkrečiau, jei negalite įtraukti taisyklės ir į ją įtraukti objekto dėl nurodyto ryšio maršruto, turite sukurti naują taisyklę, pagal kurią būtų galima pasirinkti atributų formą.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Į segmentą įtraukite naują taisyklę ir pasirinkite rinkinio operatorių.":::
 
    - Pažymėkite vieną iš rinkinio operatorių: **Sąjunga**, **Susikirtimas** arba **Išskyrus**.
 
       - **Sujungimas** sujungia dvi grupes.
-      - **Susikirtimas** persidengia su dviem grupėmis. Tik duomenys, kurie *yra bendri* abiem grupėms yra laikomi vieningoje grupėje.
-      - **Išskyrus** sujungia dvi grupes. Laikomi tik duomenys, kurie yra A grupėje ir *nėra bendri* duomenims grupėje B.
+      - **Susikirtimas** persidengia su dviem grupėmis. Vieningoje *grupėje* lieka tik duomenys, kurie dažnai pasitaiko abiejose grupėse.
+      - **Išskyrus** sujungia dvi grupes. Saugomi tik A grupės *duomenys* kurie nėra įprasta B grupės duomenims.
 
-1. Pagal numatytuosius nustatymus segmentai sugeneruoja išvesties objektą, kuriame yra visi klientų profilių atributai, atitinkantys apibrėžtus filtrus. Jei segmentas pagrįstas kitais objektais nei *Kliento* objektas, į išvesties objektą galite įtraukti daugiau atributų iš šių objektų. Pažymėkite **Projekto atributai**, kad pasirinktumėte atributus, kurie bus pridėti prie išvesties objekto.  
+1. Pagal numatytuosius nustatymus segmentai sugeneruoja išvesties objektą, kuriame yra visi klientų profilių atributai, atitinkantys apibrėžtus filtrus. Jei segmentas pagrįstas kitais objektais nei *Kliento* objektas, į išvesties objektą galite įtraukti daugiau atributų iš šių objektų. Pažymėkite **Projekto atributai**, kad pasirinktumėte atributus, kurie bus pridėti prie išvesties objekto. 
+
+   > [!IMPORTANT]
+   > Segmentams, pagrįstims verslo klientais, į segmentą reikia įtraukti išsamią informaciją apie vieną ar daugiau kiekvieno kliento kontaktų, kad tą segmentą būtų galima aktyvuoti arba eksportuoti iš *ContactProfile* į paskirties vietas, kurioms reikia kontaktinės informacijos. Daugiau informacijos apie *ContactProfile* objektą ieškokite [Semantiniai susiejimai](semantic-mappings.md).
+   > Segmento, pagrįsto verslo klientais, su projektais kontaktų atributais, rezultatų pavyzdys gali atrodyti taip: 
+   >
+   > |ID  |Paskyros pavadinimas  |Įplaukos  |Kontakto pavadinimas  | Kontakto vaidmuo|
+   > |---------|---------|---------|---------|---|
+   > |10021     | „Contoso“ | 100K (100K) | [Abbie Moss, Ruth Soto]  | [CEO, Tiekimo vadovas]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Projektuotų atributų, pasirinktų šoninėje srityje, kuriuos reikia įtraukti į išvesties objektą, pavyzdys.":::
   
@@ -107,13 +116,14 @@ Kurdami segmentą, jūs galite įrašyti juodraštį. Juodraščio etapo segment
    > - Jei atributas, kurį norite įtraukti į projektą, yra daugiau nei vienas objekto klientas, kaip apibrėžta ryšio, šis atributas turi būti naudojamas kiekvienoje *kuriamos* segmento užklausos taisyklėje. 
    > - Jei atributas, kurį norite įtraukti į projektą, yra daugiau nei vienas objekto klientas, kaip apibrėžta ryšio, šis atributas neturi būti rodomas kiekvienoje *kuriamos* segmento užklausos taisyklėje. 
    > - **Suplanuoti atributai** yra įtraukiami naudojant rinkinio operatorius.
-   > - Segmentams, pagrįstims verslo klientais, į segmentą reikia įtraukti išsamią informaciją apie vieną ar daugiau kiekvieno kliento kontaktų, kad tą segmentą būtų galima aktyvuoti arba eksportuoti į paskirties vietas, kurioms reikia kontaktinės informacijos.
 
 1. Prieš įrašydami ir paleisdami segmentą, pasirinkite **Redaguoti išsamią informaciją** šalia segmento pavadinimo. Įveskite savo segmento pavadinimą ir atnaujinkite siūlomą **Išvesties objekto pavadinimą** segmentui. Į segmentą taip pat galite įtraukti aprašą.
 
 1. Pasirinkite **Vykdyti**, kad įrašytumėte segmentą, jį suaktyvintumėte ir pradėkite apdoroti segmentą pagal visas taisykles ir sąlygas. Priešingu atveju jis bus įrašytas kaip neaktyvusis segmentas.
-
+   
 1. Pasirinkite **Atgal į segmentus**, kad sugrįžtumėte į puslapį **Segmentai**.
+
+1. Pagal numatytuosius nustatymus segmentas sukuriamas kaip dinaminis segmentas. Tai reiškia, kad sistemos atnaujinimo metu segmentas atnaujinamas. Norėdami [sustabdyti automatinį naujinimą](segments.md#manage-existing-segments), pažymėkite segmentą ir pasirinkite parinktį **Atlikti statinį**. Statinius segmentus galima [naujinti rankiniu būdu](segments.md#refresh-segments) bet kuriuo metu.
 
 > [!TIP]
 > - Nustatant sąlygų operatorius, segmentų kūrimo priemonė nesiūlys galiojančių objektų reikšmių. Galite eiti į **Duomenis** > **Objektai** ir atsisiųsti objekto duomenis, kad pamatytumėte, kurios reikšmės yra galimos.

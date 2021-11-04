@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623126"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673333"
 ---
 # <a name="exports-preview-overview"></a>Eksportavimų (peržiūros versija) apžvalga
 
@@ -32,7 +32,7 @@ Yra du pagrindiniai eksportuojami tipai:
 
 ### <a name="export-segments"></a>Eksportuokite segmentus
 
-**Segmentų eksportavimas verslo klientų (B2B) arba atskirų klientų (B2C) aplinkose**  
+**Segmentų eksportavimas verslo klientų (B2B) arba atskirų klientų (B2B) aplinkose ar (B2C) klientams**  
 Dauguma eksportavimo parinkčių palaiko abiejų tipų aplinkas. Norint eksportuoti segmentus į įvairias paskirties sistemas taikomi konkretūs reikalavimai. Bendrai tariant, kliento segmento narys, kliento profilyje yra kontaktinė informacija. Nors paprastai taip būna segmentams, sukurtiems iš atskirų klientų (B2C), segmentams, pagrįstiems verslo klientais (B2B), nebūtina. 
 
 **Segmentų eksporto aplinkos verslo klientams (B2B)**  

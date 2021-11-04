@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617385"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673851"
 ---
 # <a name="segments-overview"></a>Segmentų apžvalga
 
@@ -26,7 +26,7 @@ Klientų profiliai, atitinkantys segmento apibrėžties filtrus, yra vadinami se
 
 Naują segmentą galima sukurti keliais būdais: 
 
-# <a name="individual-customers-b2c"></a>[Atskirų klientų (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
 
 - Sudėtingas segmentas su segmentų kūrimo įrankiu: [Kurkite savo](segment-builder.md#create-a-new-segment) 
 - Paprasti segmentai su vienu operatoriumi: [Spartusis segmentas](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Naują segmentą galima sukurti keliais būdais:
 - Dirbtiniu intelektu pagrįsti pasiūlymai, paremti priemonėmis arba atributais: [Siūlomi segmentai priemonių patobulinimui](suggested-segments.md) 
 - Pasiūlymai, pagrįsti veiklomis: [Siūlomi segmentai, pagrįsti kliento veikla](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Verslo klientai (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
 
 - Sudėtingas segmentas su segmentų kūrimo įrankiu: [Kurkite savo](segment-builder.md#create-a-new-segment)
 

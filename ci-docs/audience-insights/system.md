@@ -1,7 +1,7 @@
 ---
 title: Sistemos konfigūravimas publikos įžvalgose
 description: Sužinokite apie sistemos nustatymus „Dynamics 365 Customer Insights“ publikos įžvalgų pajėgumuose.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035924"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651850"
 ---
 # <a name="system-configuration"></a>Sistemos konfigūracija
 
@@ -24,9 +24,9 @@ ms.locfileid: "7035924"
 - [API naudojimas](#api-usage-tab)
 - [Apie](#about-tab)
 - [Bendroji informacija](#general-tab)
+- [Sauga](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Sistemos puslapis.](media/system-tabs.png "Sistemos puslapis")
+:::image type="content" source="media/system-tabs.png" alt-text="Parametrų skirtukai sistemos puslapyje.":::
 
 ## <a name="status-tab"></a>Būsenos skirtukas
 
@@ -84,9 +84,15 @@ Skirtuke **Apie** rodomas organizacijos **Rodomas pavadinimas**, aktyvus **Aplin
 
 ## <a name="general-tab"></a>Bendros informacijos skirtukas
 
-Skirtuke **Bendra** yra dvi parinktys – **Kalba** ir **Šalies / regiono formatas**.
+Kalbą ir šalies / regiono formatą galite keisti skirtuke **Bendra**.
 
-Programa [palaiko daugelį kalbų](supported-languages.md). Norėdami pakeisti pageidaujamą kalbą, išplečiamajame sąraše pasirinkite **Kalba**.
+„Customer Insights“ [palaikoma nemažai kalbų](/dynamics365/get-started/availability). Programa naudoja jūsų kalbos ypatybes tam, kad parodytų tokius elementus kaip meniu, žymos tekstas ir sistemos pranešimai jūsų pasirinkta kalba.
+
+Importuoti duomenys ir informacija, kurią įvedėte rankiniu būdu, nėra išversti.
+
+### <a name="update-the-settings"></a>Naujinti parametrus
+
+Norėdami pakeisti pageidaujamą kalbą, išplečiamajame sąraše pasirinkite **Kalba**.
 
 Norėdami keisti pageidaujamą datų, laiko ir skaičių formatavimą, naudokite išplečiamąjį sąrašą **Šalies / regiono formatas**. Po šiuo lauku rodoma formatavimo peržiūra. Sistema automatiškai siūlys pasirinkimą jums pasirinkus naują kalbą.
 
@@ -105,6 +111,13 @@ Raskite informacijos apie realiojo laiko API naudojimą ir sužinokite, kurie į
 
    Operacijose, kuriose pateikiami [realiuoju laiku naudojami duomenys](real-time-data-ingestion.md) yra mygtukas su žiūrono simboliu, skirtu peržiūrėti API naudojimą realiuoju laiku. Pasirinkite mygtuką siekiant atidaryti šoninę juostą turinčią suvartojimo informaciją realaus laiko API naudojimui ir esamai aplinkai.   
    Naudokite lauką **Grupuoti** pagal **pateikiamą realiuoju** laiku naudojant API, ir pasirinkite, kaip geriausiai pateikti bendravimą realiuoju laiku. Duomenis galite grupuoti pagal API būdą, objekto apibrėžtą pavadinimą (įtrauktas objektas), kūrėją (įvykio šaltinis), rezultatą (sėkmė arba nesėkmė) arba klaidų kodus. Duomenys prieinami kaip retrospektyvos diagrama ir kaip lentelė.
+
+## <a name="security-tab"></a>Saugos skirtukas
+
+Skirtukas **Sauga** leidžia susieti ir valdyti savo [„Azure" „key vault“](/azure/key-vault/general/basic-concepts) su aplinka.
+Skirta raktų saugykla gali būti naudojama organizacijos sienų etapų ir naudojimo slaptai vietai nustatyti. Auditorijos įžvalgos gali naudoti „Azure“ „Key Vault“ [slaptas vietas ryšiams](connections.md) su trečiųjų šalių sistemomis nustatyti.
+
+Daugiau informacijos žr. [„Azure” „key vault“ sukūrimas](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

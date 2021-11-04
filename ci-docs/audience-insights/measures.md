@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622980"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673479"
 ---
 # <a name="define-and-manage-measures"></a>Matų apibrėžimas ir valdymas
 
@@ -28,7 +28,7 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
 
 Šiame skyriuje pateikiama informacija apie naujos priemonės sukūrimą nuo pradžių. Galite sukurti priemonę su duomenų atributais iš duomenų objektų, kurių ryšys nustatytas taip, kad būtų galima prisijungti prie vieningojo kliento profilio objekto.
 
-# <a name="individual-customers-b2c"></a>[Atskirų klientų (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
 
 1. Publikos įžvalgose, eikite į **Priemonės**.
 
@@ -92,7 +92,7 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
 
 1. Eikite į **Priemonės**, kad peržiūrėtumėte naujai sukurtą priemonę sąraše.
 
-# <a name="business-accounts-b2b"></a>[Verslo klientai (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
 
 1. Publikos įžvalgose, eikite į **Priemonės**.
 
@@ -164,7 +164,7 @@ Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis i
 
 Jiems kurti galite naudoti iš anksto apibrėžtus dažniausiai naudojamų priemonių šablonus. Išsamūs šablonų aprašymai ir interaktyvioji patirtis padeda efektyviai matuoti kūrimą. Šablonai kuriami pagal žymimys duomenis iš objekto *„Unified Activity“*. Prieš kurdami priemonę pagal šabloną įsitikinkite, kad sukonfigūravote [kleinto veiklą](activities.md).
 
-# <a name="individual-customers-b2c"></a>[Atskirų klientų (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
 
 Jiems kurti galite naudoti iš anksto apibrėžtus dažniausiai naudojamų priemonių šablonus. Išsamūs šablonų aprašymai ir interaktyvioji patirtis padeda efektyviai matuoti kūrimą. Šablonai kuriami pagal žymimys duomenis iš objekto *„Unified Activity“*. Prieš kurdami priemonę pagal šabloną įsitikinkite, kad sukonfigūravote [kleinto veiklą](activities.md).
 
@@ -212,7 +212,7 @@ Tolesnė procedūra apžvelgia veiksmus, reikalingus naujai priemonei kurti naud
 
 1. Dabar galite pasirinkti **Vykdyti** ir apskaičiuoti priemonės rezultatus. Jei paiešką vėliau norėsite susiaurinti, pasirinkite **Išsaugoti juodarštį**.
 
-# <a name="business-accounts-b2b"></a>[Verslo klientai (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
 
 Ši funkcija galima tik priemonėms, sukurtoms aplinkose su atskirais klientais kaip pirmine tiksline auditorija.
 
