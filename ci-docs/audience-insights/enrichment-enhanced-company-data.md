@@ -1,7 +1,7 @@
 ---
 title: Įmonės duomenų tobulinimas
 description: Praturtinkite ir normalizuokite įmonės duomenis naudodami "Microsoft" modelius.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
-ms.translationtype: HT
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770180"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813928"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Įmonės profilių praturtinimas patobulintais įmonės duomenimis
 
@@ -51,13 +51,14 @@ Patobulintais duomenimis taikomi keli apribojimai. Modelis nepalaiko toliau pate
 
 1.  Patvirtinkite įmonės tapatybę. Netikriname, ar įvestis yra esama organizacija, ar įmonė naudoja išvestį kaip standartinį pavadinimą.
 2.  Visapusiškai apimti įmones visame pasaulyje. "Microsoft" surinkti įmonės duomenys apima visą pasaulį, tačiau daugiausia aprėpties yra Australijoje, Kanadoje, Jungtinėje Karalystėje ir Jungtinėse Amerikos Valstijose.
-3.  Garantuoti duomenų tikslumą arba šviežumą. Kadangi verslo informacija dažnai keičiasi, negalime garantuoti, kad pateikti patobulinti įmonės duomenys visada bus tikslūs arba atnaujinti.
+3.  Standartizuoti įmonės adresus visame pasaulyje. Šiuo metu palaikome adresų standartizavimą šiose šalyse ar regionuose: Australijoje, Kanadoje, Prancūzijoje, Vokietijoje, Italijoje, Japonijoje, Jungtinėje Karalystėje ir Jungtinėse Amerikos Valstijose.
+4.  Garantuoti duomenų tikslumą arba šviežumą. Kadangi verslo informacija dažnai keičiasi, negalime garantuoti, kad pateikti patobulinti įmonės duomenys visada bus tikslūs arba atnaujinti.
 
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 
 1. Eikite į **Duomenys** > **Papildymas**.
 
-1. **·** Plytelėje Patobulinti įmonės duomenys pasirinkite Praturtinti mano **·** duomenis.
+1. **Plytelėje** Patobulinti įmonės duomenys pasirinkite Praturtinti mano **duomenis**.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Sodrinimo plytelės įmonės duomenų sodrinimo centre.":::
 
