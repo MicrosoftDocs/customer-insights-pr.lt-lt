@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645320"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673453"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Naujos darbo srities kūrimas ir narių įtraukimas
 
@@ -26,17 +26,17 @@ Kurdami darbo sritį, pažymėkite duomenų, ties kuriuos norite sutelkti dėmes
 
 ## <a name="create-a-new-workspace"></a>Kurti naują darbo sritį
 
-Darbo srities kūrimo procesas apima aplinkos nustatymą *darbo vietai* tvarkyti. Aplinka yra tarpas, kuriame gali būti viena ar daugiau darbo sričių. Galite naudoti aplinką savo darbo sritims ir ryšiams su „Customer Insights" auditorijos įžvalgų galimybėmis valdyti.
+Darbo srities kūrimo procesas apima aplinkos nustatymą *darbo vietai* tvarkyti. Aplinka yra tarpas, kuriame gali būti viena ar daugiau darbo sričių. Galite naudoti aplinką savo darbo sričiai ir ryšiams su auditorijos įžvalgų funkcija valdyti.
 
-1. Darbo **srities** perjungituve pažymėkite Naujas.
+1. **·** Darbo srities perjungiklyje pasirinkite +Naujas.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Customer insights puslapis su išnašomis naršymo srityje ir apraše.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="&quot;Customer Insights&quot; puslapis su paaiškinimu naršymo srityje ir aprašu.":::
 
 1. Juostoje **Darbo sritis** įveskite **Darbo srities pavadinimą**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Įvesti darbo srities pavadinimą.":::
 
-1. Pasirinkite norimą matuoti platformos tipą (žiniatinklį arba mobiliesiems įrenginiams).
+1. Pasirinkite platformos tipą (žiniatinklio arba mobilųjį), kurį norite matuoti.
 
 1. Pasirinkite **Rodyti išplėstinius parametrus** kad įjungtumėte arba išjungtumėte šiuos pasirinktinius parametrus:
 

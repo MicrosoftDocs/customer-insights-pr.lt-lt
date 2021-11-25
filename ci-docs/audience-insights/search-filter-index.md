@@ -1,7 +1,7 @@
 ---
 title: Ieškokite ir filtruokite kliento profilius
 description: Greitai raskite vieningų klientų profilių informaciją ir filtruokite nurodytus atributus.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
-ms.translationtype: HT
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470007"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732044"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Klientų profiliai: ieškos ir filtro rodyklė
 
-Kliento duomenų suvienodinimo rezultatas yra kliento profilio objektas, kuris jūsų bendroje klientų bazėje teikia vieningą rodinį. Norėdami greitai [rasti informaciją apie tam tikrą klientą arba klientų grupę](customer-profiles.md), galite sukonfigūruoti **ieškos** ir **filtro** galimybes **klientų** puslapyje. Skaitydami toliau sužinosite, kaip administratoriai gali redaguoti **ieškos ir filtrų rodyklės** puslapyje esančius atributus, pasiekiamus norint ieškoti ir filtruoti.
+Kliento duomenų suvienodinimo rezultatas yra kliento profilio objektas, kuris jūsų bendroje klientų bazėje teikia vieningą rodinį. Norėdami greitai [rasti informaciją apie tam tikrą klientą arba klientų grupę](customer-profiles.md), galite sukonfigūruoti [ieškos](customer-profiles.md) ir [filtro](customer-profiles.md) galimybes [klientų](customer-profiles.md) puslapyje. Skaitydami toliau sužinosite, kaip administratoriai gali redaguoti **ieškos ir filtrų rodyklės** puslapyje esančius atributus, pasiekiamus norint ieškoti ir filtruoti.
 
-> [!div class="mx-imgBorder"]
-> ![Ieškos filtras.](media/search-filter.png "Ieškos filtras")
+   :::image type="content" source="media/search-filter.png" alt-text="Ieškos filtras":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Įtraukti laukus ir nurodyti atributus
 

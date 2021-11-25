@@ -4,7 +4,7 @@
   href: overview.md
 - name: Nemokama bandomoji versija
   items:
-    - name: Registracija norint naudoti nemokamą bandomąją versiją
+    - name: Prisiregistruokite nemokamai bandomajai versijai
       href: trial-signup.md
     - name: Su bandomąja versija susiję DUK
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Pridėkite „Common Data Model“ aplanką kaip duomenų šaltinį
           href: audience-insights/connect-common-data-model.md
-        - name: Įtraukite „Dataverse“ valdomą duomenų telkinį
+        - name: Pridėti Dataverse valdomų duomenų ežerą
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Duomenų šaltinių papildantysis naujinimas
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,13 +84,15 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Išplėstiniai adresai
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Įmonės duomenų gerinimas
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Papildykite su „Azure”„” žemėlapiais
           href: audience-insights/enrichment-azure-maps.md
         - name: Papildykite su „HERE Technologies“
           href: audience-insights/enrichment-here.md
         - name: Papildymas „Leadspace”
           href: audience-insights/enrichment-leadspace.md
-        - name: Praturtinkite su „Experian“
+        - name: Papildymas naudojant „Experian”
           href: audience-insights/enrichment-experian.md
         - name: Papildykite su SFTP kliento importavimu
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -162,13 +164,13 @@
               href: audience-insights/export-autopilot.md
             - name: „Azure Blob Storage“
               href: audience-insights/export-azure-blob-storage.md
-            - name: „Azure Data Lake Storage Gen2“
+            - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: „Azure Synapse Analytics“
+            - name: Azure Synapse Analytics"
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: „Adobe Experience Platform”
+            - name: „Adobe” patirties platforma
               href: audience-insights/export-adobe-experience-platform.md
             - name: „Campaign Monitor“
               href: audience-insights/export-campaign-monitor.md
@@ -180,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: Dynamics 365 Sales
               href: audience-insights/export-dynamics365-sales.md
-            - name: „Facebook“ skelbimų tvarkytuvas
+            - name: Facebook skelbimų tvarkytuvas
               href: audience-insights/export-facebook.md
             - name: „Google Ads“
               href: audience-insights/export-google-ads.md
@@ -214,7 +216,7 @@
           items:
             - name: 'Kliento kortelės papildinys, skirtas „Dynamics 365”'
               href: audience-insights/customer-card-add-in.md
-            - name: „Microsoft Teams“ (robotas)
+            - name: Microsoft Teams (botas)
               href: audience-insights/export-teams-bot.md
             - name: Power Apps
               href: audience-insights/export-power-apps.md
@@ -244,12 +246,46 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Objektų schemų peržiūra „Common Data Model”
           href: audience-insights/entity-schemas.md
-        - name: „Customer Insights“ duomenys „Dataverse” platformoje
+        - name: '"Customer Insights" duomenys Dataverse'
           href: audience-insights/customer-insights-dataverse.md
         - name: Dirbkite su API
           href: audience-insights/apis.md
         - name: API nuorodos
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Sutikimo valdymas (peržiūra)
+  items:
+    - name: Pagalbos centras
+      href: consent-management/index.yml
+    - name: Galimybių apžvalga
+      href: consent-management/overview.md
+    - name: Pradėti
+      items:
+        - name: Pradėti
+          href: consent-management/get-started.md
+        - name: Sąvokos ir terminologija
+          href: consent-management/glossary.md
+    - name: Importuoti sutikimo duomenis
+      items:
+        - name: Importuoti sutikimo duomenis
+          href: consent-management/import-consent-data.md
+        - name: Nustatyti sutikimo duomenis ir taikyti sutikimo nuostatas
+          href: consent-management/set-consent-rules.md
+    - name: Tvarkyti sutikimo duomenis
+      items:
+        - name: Sutikimo taisyklių įgalinimas auditorijos įžvalgose
+          href: audience-insights/activate-consent.md
+        - name: Numatytųjų sutikimo taisyklių valdymas auditorijos įžvalgų segmentuose
+          href: audience-insights/change-default-consent-rules.md
+    - name: Parametrų ir vartotojų valdymas
+      items:
+        - name: Konfigūruoti sistemos parametrus
+          href: consent-management/system-settings.md
+        - name: Vartotojų ir teisių valdymas
+          href: consent-management/manage-users.md
+    - name: Sutikimo duomenų naudojimas
+      items:
+        - name: Kurti prognozes su sutikimo duomenimis
+          href: consent-management/predictions-consent-data.md
 - name: Įtraukimo įžvalgos (peržiūros versija)
   items:
     - name: Pagalbos centras
@@ -302,9 +338,9 @@
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Tinklo SDK pavyzdys
           href: engagement-insights/websdk-sample.md
-        - name: „Android“ SDK mokymai
+        - name: „Android“ SDK mokymo priemonė
           href: engagement-insights/get-started-android.md
-        - name: „Android“ SDK pavyzdys
+        - name: Android SDK mėginys
           href: engagement-insights/androidsdk-sample.md
         - name: „iOS“ SDK mokymo priemonė
           href: engagement-insights/get-started-ios.md

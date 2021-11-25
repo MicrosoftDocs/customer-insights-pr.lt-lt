@@ -1,7 +1,7 @@
 ---
 title: Naudokite duomenų šaltinius duomenų suvartojimui
 description: Sužinokite, kaip importuoti duomenis iš įvairių šaltinių.
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645365"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732165"
 ---
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Publikos įžvalgų galimybės „Dynamics 365 Customer Insights“ sujungia su duomenimis iš platesnio šaltinių rinkinio. Prisijungimas prie duomenų šaltinio dažnai vadinamas *duomenų įtraukimo procesu*. Įtraukę duomenis galite juos [suvienodinti](data-unification.md) ir imtis susijusių veiksmų.
+Auditorijos įžvalgų galimybė Dynamics 365 Customer Insights jungiasi prie duomenų iš plataus šaltinių rinkinio. Prisijungimas prie duomenų šaltinio dažnai vadinamas *duomenų įtraukimo procesu*. Įtraukę duomenis galite juos [suvienodinti](data-unification.md) ir imtis susijusių veiksmų.
 
 ## <a name="add-a-data-source"></a>Įtraukti duomenų šaltinį
 
@@ -31,15 +31,15 @@ Duomenų šaltinį galite įtraukti trimis pagrindiniais būdais.
 
 - [Per dešimtis „Power Query“ jungčių](connect-power-query.md)
 - [Iš „Common Data Model“ aplanko](connect-common-data-model.md)
-- [Iš savo „Microsoft Dataverse“ telkinio](connect-dataverse-managed-lake.md)
+- [Iš savo Microsoft Dataverse ežero](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Duomenų įtraukimas iš vietinių duomenų šaltinių
 
-Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į „Microsoft Power Platform“ duomenų srautus. Nustatant aplinką duomenų eigas galima įgalinti „Customer Insights“ [pateikiant Microsoft Dataverse aplinkos URL](create-environment.md).
+Duomenų nurijimas iš vietinis duomenų šaltinių auditorijos įžvalgose palaikomas remiantis Microsoft Power Platform duomenų srautais. Duomenų srautai gali būti įgalinti "Customer Insights" [pateikiant Microsoft Dataverse aplinkos URL nustatant](create-environment.md) aplinką.
 
-Numatyta, kad duomenų šaltiniai, sukurti Dataverse aplinką susiejus su „Customer Insights“, naudos [Power Platform duomenų eigas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Pašalinkite ir iš naujo sukurkite duomenų šaltinius, kurie egzistavo prieš tai, kai „Dataverse” aplinka buvo susieta su [vietinių duomenų šliuzų naudojimu](/data-integration/gateway/service-gateway-app).
+Duomenų šaltiniai, sukurti susiejus Dataverse aplinką su "Customer Insights", pagal numatytuosius nustatymus naudos [Power Platform duomenų](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) srautus. Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Pašalinkite ir iš naujo sukurkite duomenų šaltinius, egzistavusius prieš susiejant Dataverse aplinką, kad būtų [galima naudoti vietinis duomenų šliuzus](/data-integration/gateway/service-gateway-app).
 
-Esamos Power BI arba Power Apps aplinkos duomenų tinklų sietuvai bus matomi ir galėsite pakartotinai naudoti „Customer Insights“. Duomenų šaltinių puslapyje rodomi saitai, kuriuos naudojant galima peržiūrėti ir konfigūruoti duomenų „Microsoft Power Platform“ vietinis aplinką.
+Bus matomi esamos Power BI arba Power Apps aplinkos duomenų šliuzai, kuriuos galėsite pakartotinai naudojate "Customer Insights". Duomenų šaltinių puslapyje rodomi saitai, skirti eiti į Microsoft Power Platform aplinką, kurioje galite peržiūrėti ir konfigūruoti vietinis duomenų šliuzus.
 
 ## <a name="review-ingested-data"></a>Įtrauktų duomenų peržiūra
 
@@ -48,14 +48,7 @@ Matysite kiekvieno įtraukto duomenų šaltinio pavadinimą, jo būseną ir vėl
 > [!div class="mx-imgBorder"]
 > ![Įtrauktas duomenų šaltinis.](media/configure-data-datasource-added.png "Įtrauktas duomenų šaltinis")
 
-|Būsena  |Aprašymas  |
-|---------|---------|
-|Pavyko   |Duomenų šaltinis buvo sėkmingai suvartotas, jei laikas yra paminėtas **Paleistas iš naujo** stulpelyje.
-|Nepradėta   |Duomenų šaltinis dar neturi jokių suvartotų duomenų arba jie dar yra šablono režime.         |
-|Atnaujinama    |Vyksta duomenų apdorojimas. Galite atšaukti šią operaciją, stulpelyje **Veiksmai** pasirinkdami **Sustabdyti naujinimą**. Sustabdžius duomenų šaltinio naujinimą, jis bus grąžintas į paskutinio naujinimo būseną.       |
-|Atlikta nesėkmingai     |Apdorojant duomenis įvyko klaidų.         |
-
-Pasirinkite **Statusas**, kad sužinotumėte bet kurios būsenos duomenų šaltinio reikšmę. Išsamios informacijos **apie eigą** srityje išplėskite  **Duomenų šaltiniai**. Pasirinkite **Gauti daugiau informacijos** apie naujinimo būseną, įskaitant klaidų informaciją ir tolesnius procesų naujinimus.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 Duomenų įkėlimas gali užtrukti. Sėkmingai atnaujinus, galima peržiūrėti apdorotus duomenis puslapyje **Objektai**. Norėdami gauti daugiau informacijos, žr. [Objektai](entities.md).
 

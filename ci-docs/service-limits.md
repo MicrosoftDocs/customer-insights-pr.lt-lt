@@ -1,5 +1,5 @@
 ---
-title: „Dynamics 365 Customer Insights“ aptarnavimo apribojimai
+title: Paslaugų apribojimai Dynamics 365 Customer Insights
 description: Supraskite apribojimus ir suvaržymus.
 ms.date: 09/03/2021
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483689"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7791991"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>„Customer Insights“ galimybių aptarnavimo apribojimai
 
@@ -22,11 +22,11 @@ Straipsnis aprašo inkorporuotus apribojimus „Customer Insights“ paslaugoms,
 
 ## <a name="audience-insights"></a>Auditorijos įžvalgos
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Paslaugų limitai „Dynamics 365 Customer Insights“ publikos įžvalgų pajėgume
+### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Paslaugų apribojimai Dynamics 365 Customer Insights auditorijos įžvalgų galimybėse
 
 | Plotas  | Apribojimai  | Pastabos |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmentai ir priemonės | 100 segmentų ar priemonių. | Bendras aktyvių [segmentų](audience-insights/segments.md) ir [priemonių](audience-insights/measures.md) skaičius bendrai negali viršyti 100.  |
+| Segmentai, priemonės ir prognozės | 300  | Bendras [segmentų](audience-insights/segments.md), [matų ir prognozių skaičius](audience-insights/measures.md) kartu negali viršyti [...](audience-insights/predictions.md) 300.  |
 | Ryšiai | 20 gylio lygių santykiuose objektų keliuose. | Kuriant [segmentus](audience-insights/segments.md) ar [priemones](audience-insights/measures.md) naudojant kūrėjo sąsają, objekto keliai gali turėti iki 20 ryšių perėjimų tarp pradinio ir tikslinio objekto.  |
 
 

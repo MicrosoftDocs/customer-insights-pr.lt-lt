@@ -1,7 +1,7 @@
 ---
 title: Kliento veiklos
 description: Apibrėžkite klientų veiklas ir peržiūrėkite jas klientų profilių laiko planavimo juostose.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673148"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732470"
 ---
 # <a name="customer-activities"></a>Kliento veiklos
 
-Suderinkite kliento veiklą iš [įvairių duomenų šaltinių](data-sources.md) sistemoje Dynamics 365 Customer Insights, kad sukurtumėte laiko juostą, kurioje veiklos sąrašas pateikiamas chronologine tvarka. Laiko planavimo juostą įtraukite į „Dynamics 365“ programas naudodami sprendimą [Kliento kortelės priedas](customer-card-add-in.md) arba Power BI ataskaitų sritį.
+Sujunkite klientų veiklas iš [įvairių duomenų šaltinių į](data-sources.md) Dynamics 365 Customer Insights, kad sukurtumėte laiko planavimo juostą, kurioje veiklos išvardytos chronologiškai. Įtraukite laiko planavimo juostą į "Dynamics 365" programas naudodami [kliento kortelės priedo sprendimą arba Power BI ataskaitų](customer-card-add-in.md) sritį.
 
 ## <a name="define-an-activity"></a>Veiklos apibrėžimas
 
@@ -82,9 +82,7 @@ Objekte turi būti bent vienas **Data** tipo atributas, kurį reikia įtraukti �
 
 1. Puslapyje **Veiklos** pasirinkite **Vykdyti**, kad apdorotumėte veiklą. 
 
-> [!TIP]
-> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Esamos veiklos tvarkymas
 
@@ -117,7 +115,7 @@ Yra keli veiklos filtravimo būdai veiklos laiko planavimo juostoje:
 - Galite pažymėti **Filtras,** kad atidarytumėte filtrų skydą ir sukonfigūruotumėte laiko planavimo juostos filtrus.
 
    1. Galite filtruoti pagal *ActivityType* ir *Data*
-   1. Pažymėkite **Taikyti** , kad būtų naudojami veiklos laiko planavimo juostos filtrai.
+   1. Pažymėkite **Taikyti**, kad būtų naudojami veiklos laiko planavimo juostos filtrai.
 
    :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Naudodami filtrų skydą konfigūruokite filtravimo sąlygas.":::
 

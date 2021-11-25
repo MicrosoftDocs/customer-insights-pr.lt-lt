@@ -1,6 +1,6 @@
 ---
 title: Duomenų subjekto teisių (DSR) prašymai pagal BDAR | „Microsoft Docs”
-description: Atsakykite į duomenų subjekto užklausas „Dynamics 365 Customer Insights“ publikos įžvalgų galimybėms.
+description: Atsakykite į duomenų subjekto užklausas dėl Dynamics 365 Customer Insights auditorijos įžvalgų galimybės.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483688"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732690"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Duomenų subjekto teisių (DSR) prašymai pagal BDAR
 
@@ -24,7 +24,7 @@ Esame įsipareigoję padėti klientams atitikti jų BDAR reikalavimus. Ji apima 
 
 ## <a name="audience-insights"></a>Auditorijos įžvalgos
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Atsakant į BDAR duomenų subjekto panaikinimo užklausas „Dynamics 365 Customer Insights“ publikos įžvalgų galimybėms
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Atsakydamas į BDAR duomenų subjektas ištrinti užklausas Dynamics 365 Customer Insights auditorijos įžvalgų galimybes
 
 Teisė naikinti asmens duomenis iš įmonės klientų duomenų bazės buvo įtvirtinta kaip pagrindinė ir saugoma įstatymų Bendrajame duomenų apsaugos reglamente (BDAR). Asmens duomenų naikinimas apima visų asmens duomenų ir sistemos sugeneruotų žurnalų, išskyrus tikrinimo žurnalų informacijos, naikinimą.
 
@@ -79,7 +79,14 @@ Nuomotojas administratorius gali vadovautis šiais veiksmais duomenims perkelti:
 2. Patvirtins vartotojo, dėl kurio buvo pateiktas prašymas, duomenų eksportavimo patvirtinimą.
 3. Gaus eksportuotus duomenis, naudodamasis nuomotojo administratoriaus el. pašto adresu.
 
-## <a name="engagement-insights"></a>Įtraukimo įžvalgos
+## <a name="consent-management-preview"></a>Sutikimo valdymas (peržiūra)
+
+Sutikimo valdymo funkcija tiesiogiai nerenka vartotojo duomenų. Ji importuoja ir apdoroja tik sutikimo duomenis, kuriuos naudotojai pateikia kitose programose.
+
+Norėdami pašalinti sutikimo duomenis apie konkrečius naudotojus, pašalinkite juos į duomenų šaltinius, nurytus pagal sutikimo valdymo funkciją. Atnaujinus duomenų šaltinis, pašalinti duomenys taip pat bus panaikinti sutikimo centre. Programos, naudojančios sutikimo objektą, taip pat panaikins duomenis, kurie buvo pašalinti šaltinyje po [atnaujinimo](audience-insights/system.md#refresh-processes). Rekomenduojame greitai atnaujinti duomenų šaltinius, atsakius į duomenų subjekto užklausą pašalinti vartotojo duomenis iš visų kitų procesų ir programų.
+
+
+## <a name="engagement-insights-preview"></a>Įtraukimo įžvalgos (peržiūros versija)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Įvykio duomenų, kuriuose yra galutinio vartotojo identifikavimo informacija, naikinimas ir eksportavimas
 

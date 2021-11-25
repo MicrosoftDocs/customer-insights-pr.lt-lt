@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 8ff04a6b2ffbd513a77f7f8a33358f3d8f559c7e
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648127"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673652"
 ---
 # <a name="create-a-new-environment"></a>Kurti naują aplinką 
 
@@ -40,13 +40,13 @@ Aplinka yra vieta, kurioje valdote savo darbo sritis ir ryšius. Kaip naudoti ap
 
 1. Pasirinkite **Regioną** ir pasirinkite **Kitas**. 
 
-1. Įveskite **darbo srities pavadinimą**, kuris leidžia rinkti duomenis konkrečiai svetainei ar programoms. Daugiau informacijos žr. dalyje [Darbo srities kūrimas](create-workspace.md).
+1. Įveskite **darbo srities pavadinimą**, kuris leidžia rinkti duomenis konkrečioms svetainėms ar programoms. Daugiau informacijos žr. dalyje [Darbo srities kūrimas](create-workspace.md).
 
-1. Pasirinkite **Darbo srities tipą** (žiniatinklio ar mobilią), kurią norite kurti. 
+1. Pasirinkite darbo **srities tipą** (žiniatinklį arba mobilųjį), kurį norite sukurti. 
 
 1. Pasirinkite **Rodyti išplėstinius parametrus** kad įjungtumėte arba išjungtumėte šiuos pasirinktinius parametrus:
 
-   - Perjunkite **nežinomas ir žinomą** kaip "įjungtas", kad susietumėte žiniatinklio įvykius su vartotojais, kurie anksčiau buvo autentifikuoti. Daugiau informacijos rasite [žiniatinklio įvykių iš anksčiau autentifikuoto lankytojų atpažinimas](unknown-to-known.md)
+   - Perjunkite **nežinomas ir žinomą** kaip "įjungtas", kad susietumėte žiniatinklio įvykius su vartotojais, kurie anksčiau buvo autentifikuoti. Daugiau informacijos ieškokite [Atpažinkite anksčiau autentifikuotų lankytojų žiniatinklio įvykius](unknown-to-known.md).
    - Perjunkite **filtro žiniatinklio srautą** į „įjungtas", kad pašalintumėte žiniatinklio srautą iš šios darbo srities. 
 
 1. Rinkitės **Atlikti** baigę veiksmus. 

@@ -1,7 +1,7 @@
 ---
 title: Visos duomenų dalys naudojančios prognozes
 description: Naudokite prognozes tam, kad užpildytumėte nepilnus kliento duomenis.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,31 +9,32 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645044"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732416"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Dalinių duomenų papildymas naudojant prognozes
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Užpildykite dalinius duomenis prognozėmis (nebenaudojami)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Ši funkcija bus **pasenusi** nuo **2021 m. lapkričio 5 d**. Dabartiniai diegimai veiks tol, kol funkcija bus pašalinta, tačiau negalėsite kurti naujų integravimų naudodami toliau pateiktas instrukcijas.
 
 Prognozės leidžia lengvai kurti numatomas reikšmes, kurios gali pagerinti jūsų nusimanymą apie klientą. **Protingumas** > **Prognozės** puslapyje galite pasirinkti **Mano prognozės** tam, kad matytumėte prognozes, kurias sukonfigūravote kitose publikos įžvalgų dalyse ir leistumėte sau toliau jas tinkinti.
 
 > [!NOTE]
 > Šios funkcijos naudoti negalima, jei jūsų aplinka naudoja „Azure Data Lake Gen 2“ saugyklą.
 >
-> Prognozių funkcija naudoja automatizuotas priemones, kad įvertintų duomenis ir pateiktų tais duomenimis pagrįstas prognozes, todėl šią funkciją galima naudoti kaip profiliavimo, kaip ši sąvoka apibrėžta Bendrajame duomenų apsaugos reglamente (BDAR), būdą. Klientui naudojant šią funkciją duomenims tvarkyti gali būti taikomi BDAR arba kiti įstatymai ar kiti teisės aktai. Esate atsakingas už užtikrinimą, kad naudojate „Dynamics 365 Customer Insights“, įskaitant prognozes, atitikimą su visais taikomais teisės aktais ir reglamentais, įskaitant teisės aktus susijusius su privatumu, asmens duomenimis, biometriniais duomenimis, duomenų apsauga ir bendravimo konfidencialumu.
+> Prognozių funkcija naudoja automatizuotas priemones, kad įvertintų duomenis ir pateiktų tais duomenimis pagrįstas prognozes, todėl šią funkciją galima naudoti kaip profiliavimo, kaip ši sąvoka apibrėžta Bendrajame duomenų apsaugos reglamente (BDAR), būdą. Klientui naudojant šią funkciją duomenims tvarkyti gali būti taikomi BDAR arba kiti įstatymai ar kiti teisės aktai. Jūs esate atsakingi už tai, kad jūsų naudojimasis Dynamics 365 Customer Insights, įskaitant prognozes, atitiktų visus galiojančius įstatymus ir kitus teisės aktus, įskaitant įstatymus, susijusius su privatumu, asmens duomenimis, biometriniais duomenimis, duomenų apsauga ir pranešimų konfidencialumu.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 Tam, kad jūsų organizacija galėtų naudoti prognozių funkciją, įsitikinkite, kad tenkinamos šios būtinosios sąlygos:
 
-1. Jūsų organizacijoje yra egzempliorius, kuris [nustatytas „Microsoft Dataverse”](/ai-builder/build-model#prerequisites) ir esantis toje pačioje organizacijoje kaip ir „Customer Insights”.
+1. Jūsų organizacijoje egzempliorius [nustatytas Microsoft Dataverse ir jis yra](/ai-builder/build-model#prerequisites) toje pačioje organizacijoje kaip ir "Customer Insights".
 
-2. Jūsų auditorijos įžvalgų aplinka pridedama prie jūsų „Dataverse” egzemplioriaus.
+2. Auditorijos įžvalgų aplinka pridėta prie Dataverse egzemplioriaus.
 
 Daugiau informacijos žiūrėkite [Naujos aplinkos kūrimas](create-environment.md).
 
@@ -60,6 +61,8 @@ Daugiau informacijos žiūrėkite [Naujos aplinkos kūrimas](create-environment.
    > ![Lauko reikšmių, susietų į kategorijas, pavyzdys.](media/intelligence-categorymapping.png "Lauko reikšmių, susietų į kategorijas, pavyzdys")
 
 8. Pažymėkite **Atlikta** ir prognozė bus apdorota. Atsižvelgiant į duomenų dydį ir sudėtingumą, apdorojimas užtruks šiek tiek laiko. Rezultatai bus prieinami naujame objekte pagal sukurtos prognozės **išvesties objekto pavadinimą**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Prognozės kūrimas kuriant segmentą
 
@@ -139,7 +142,7 @@ Kitame jūsų prognozės vykdyme bus naudojamas jūsų sukurtas atnaujintas mode
 
 ## <a name="troubleshooting"></a>Trikčių šalinimas
 
-Jei dėl klaidos negalite baigti „Dataverse“ pridėjimo proceso, procesą galite bandyti užbaigti rankiniu būdu. Yra dvi žinomos problemos, kurios gali kilti pridėjimo procese.
+Jei dėl klaidos negalite užbaigti Dataverse pridėjimo proceso, galite pabandyti užbaigti procesą neautomatiniu būdu. Yra dvi žinomos problemos, kurios gali kilti pridėjimo procese.
 
 - Kliento kortelės papildinio sprendimas nėra įdiegtas.
     1. Vadovaukitės instrukcijomis, kad [įdiegtumėte ir sukonfigūruotumėte sprendimą](customer-card-add-in.md).

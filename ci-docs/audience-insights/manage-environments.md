@@ -1,7 +1,7 @@
 ---
 title: Aplinkų kūrimas ir valdymas
 description: Sužinokite, kaip prisijungti prie paslaugų ir kaip valdyti aplinkas.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673754"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799646"
 ---
 # <a name="manage-environments"></a>Aplinkų valdymas
 
@@ -39,6 +39,19 @@ Galite redaguoti kai kurią esamos aplinkos informaciją.
 3. Lauke **Redaguoti aplinką** galite atnaujinti aplinkos parametrus.
 
 Daugiau informacijos apie aplinkos parametrus žr. [Naujos aplinkos kūrimas](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Prisijungti prie Microsoft Dataverse
+   
+**Microsoft Dataverse veiksmas leidžia sujungti** "Customer Insights" su Dataverse aplinka.
+
+Norėdami naudoti prognozė modelius, [konfigūruokite](predictions-overview.md#out-of-box-models) duomenų bendrinimą su Dataverse. Arba galite įgalinti duomenų nurijimą iš vietinis duomenų šaltinių, pateikdami jūsų organizacijos administruojamos Microsoft Dataverse aplinkos URL. Pasirinkite **Įgalinti duomenų** bendrinimą, kad galėtumėte bendrinti "Customer Insights" išvesties duomenis su "Dataverse" valdomų duomenų ežeru.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigūravimo parinktys, leidžiančios bendrai naudoti duomenis su Microsoft Dataverse.":::
+
+> [!NOTE]
+> Jūsų „Customer Insights“ aplinkos konfigūracija nepalaiko šių duomenų bendrinimo scenarijų:
+> - Jei visus duomenis įrašysite savo Azure Data Lake Storage, negalėsite įgalinti duomenų bendrinimo naudodami "Dataverse" valdomą duomenų ežerą.
+> - Jei įgalinsite duomenų bendrinimą su Dataverse, negalėsite [sukurti nuspėjamų arba trūkstamų objekto reikšmių](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Aplinkos konfigūracijos kopijavimas
 
@@ -68,7 +81,7 @@ Kopijuojami šie konfigūracijos parametrai:
 - Klientų profiliai.
 - Duomenų šaltinio kredencialai. Turėsite pateikti kiekvieno duomenų šaltinio kredencialus ir rankiniu būdu atnaujinti duomenų šaltinius.
 
-- Duomenų šaltiniai iš bendrojo duomenų modelio aplanko ir „Dataverse“ valdomo „data lake“. Šiuos duomenų šaltinius turėsite kurti rankiniu būdu tuo pačiu pavadinimu kaip ir šaltinio aplinka.
+- Duomenų šaltiniai iš aplanko Bendrasis duomenų modelis ir Dataverse valdomų duomenų ežeras. Šiuos duomenų šaltinius turėsite kurti rankiniu būdu tuo pačiu pavadinimu kaip ir šaltinio aplinka.
 
 Kai kopijuojate aplinką, pamatysite patvirtinimo pranešimą, kad sukurta nauja aplinka. Pasirinkite **Eiti į duomenų šaltinius**, kad peržiūrėtumėte duomenų šaltinių sąrašą.
 

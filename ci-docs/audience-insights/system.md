@@ -1,7 +1,7 @@
 ---
 title: Sistemos konfigūravimas publikos įžvalgose
-description: Sužinokite apie sistemos nustatymus „Dynamics 365 Customer Insights“ publikos įžvalgų pajėgumuose.
-ms.date: 10/15/2021
+description: Sužinokite apie sistemos parametrus Dynamics 365 Customer Insights auditorijos įžvalgų galimybėse.
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
-ms.translationtype: HT
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651850"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732380"
 ---
 # <a name="system-configuration"></a>Sistemos konfigūracija
+
+Norėdami pasiekti sistemos konfigūracijas auditorijos įžvalgose, kairiojoje naršymo juostoje pasirinkite **Administravimo** > **·** sistema, kad peržiūrėtumėte sistemos užduočių ir procesų sąrašą.
 
 **Sistemos** puslapyje yra šie skirtukai:
 - [Būsena](#status-tab)
@@ -30,39 +32,55 @@ ms.locfileid: "7651850"
 
 ## <a name="status-tab"></a>Būsenos skirtukas
 
-Skirtukas **Būsena leidžia sekti duomenų** prarijimo, duomenų eksporto eigą ir kelis kitus svarbius produktų procesus. Peržiūrėkite informaciją šiame skirtuke tam, kad užtikrintumėte aktyvių procesų pilnavertiškumą.
+**Skirtuke Būsena galite sekti užduočių** eigą, duomenų nurijimą, duomenų eksportavimą ir kelis kitus svarbius produkto procesus. Peržiūrėkite šiame skirtuke esantį informaciją, kad užtikrintumėte aktyvių užduočių ir procesų išsamumą.
 
-Šiame skirtuke yra lentelių su įvairių procesų būsena ir apdorojimo informacija. Kiekvienoje lentelėje sekamas užduoties **Pavadinimas** ir atitinkamas objektas, naujausio vykdymo **Būsena** ir kada ji buvo **Paskutinį kartą atnaujinta**.
+Šiame skirtuke yra lentelių su įvairių procesų būsena ir apdorojimo informacija. Kiekvienoje lentelėje sekamas užduoties **Pavadinimas** ir atitinkamas objektas, naujausio vykdymo **Būsena** ir kada ji buvo **Paskutinį kartą atnaujinta**. Galite peržiūrėti paskutinių kelių važiavimų informaciją pasirinkdami užduoties arba proceso pavadinimą. 
 
-Peržiūrėkite paskutinių kelių užduočių vykdymų informaciją pasirinkdami užduoties pavadinimą.
+Stulpelyje Būsena pasirinkite būseną šalia užduoties arba **·** proceso, kad atidarytumėte **sritį Išsami eigos** informacija.
 
-### <a name="status-types"></a>Būsenos tipai
+   :::image type="content" source="media/system-progress-details.png" alt-text="Sistemos eigos išsamios informacijos sritis":::
 
-Esama šešių būsenų tipų užduotims. Toliau nurodyti būsenos tipai taip pat rodomi puslapiuose *Gretinimas*, *Suliejimas*, *Duomenų šaltiniai*, *Segmentai*, *Matai*, *Papildymas*, *Veiklos* ir *Prognozės*.
+### <a name="status-definitions"></a>Būsenos apibrėžimai
 
-- **Apdorojama:** užduotis vykdoma. Būsena gali pasikeisti į Sėkmingai įvykdyta ar Nepavyko įvykdyti.
-- **Sėkmingai įvykdyta:** užduotis sėkmingai įvykdyta.
-- **Praleistas:**: užduotis praleista. Vienas ar daugiau procesų, nuo kurių priklauso ši užduotis, nesėkmingi arba buvo praleisti.
-- **Nepavyko įvykdyti:** užduoties apdoroti nepavyko.
-- **Atšaukta:** vartotojas atšaukė apdorojimą, kol jis nebuvo baigtas.
-- **Eilė:** apdorojama į eilę ir pradedama, kai bus užbaigtos visos srauto užduotys. Daugiau informacijos žr. [Atnaujinimo strategijos](#refresh-policies)
+Uždaviniams ir procesams sistema naudoja šias būsenas:
 
-### <a name="refresh-policies"></a>Atnaujinimo strategijos
+|Būsena  |Apibrėžtis  |
+|---------|---------|
+|Atšauktos |Vartotojas atšaukė apdorojimą prieš jį baigiant.   |
+|Atlikta nesėkmingai   |Apdorojant duomenis įvyko klaidų.         |
+|Triktis  |Apdoroti nepavyko.  |
+|Nepradėta   |Duomenų šaltinis dar neturi jokių suvartotų duomenų arba jie dar yra šablono režime.         |
+|Apdorojimas  |Užduotis arba procesas vyksta.  |
+|Atnaujinama    |Vyksta duomenų apdorojimas. Galite atšaukti šią operaciją, stulpelyje **Veiksmai** pasirinkdami **Sustabdyti naujinimą**. Sustabdžius duomenų šaltinio naujinimą, jis bus grąžintas į paskutinio naujinimo būseną.       |
+|Praleista  |Užduotis arba procesas praleistas. Vienas ar daugiau procesų, nuo kurių priklauso ši užduotis, nesėkmingi arba buvo praleisti.|
+|Pavyko  |Užduotis arba procesas sėkmingai baigtas. Duomenų šaltinių atveju nurodo, kad duomenys buvo sėkmingai nuryti, jei **stulpelyje Atnaujinta paminėtas** laikas.|
+|Įtraukta į eilę | Apdorojimas yra eilėje ir prasidės, kai bus baigtos visos tiekėjų užduotys ir procesai. Daugiau informacijos ieškokite [Refresh processes](#refresh-processes).|
 
-Sąraše rodomos atnaujinimo strategijos kiekvienam iš pagrindinių procesų:
+### <a name="refresh-processes"></a>Atnaujinti procesus
 
-- **Duomenų šaltiniai:** vykdoma pagal [sukonfigūruotą grafiką](#schedule-tab). Nepriklauso nuo jokio kito proceso. Gretinimas priklauso nuo, ar šis procesas buvo sėkmingai baigtas.
-- **Gretinimas:** vykdoma pagal [sukonfigūruotą grafiką](#schedule-tab). Priklauso nuo duomenų šaltinių, naudojamų gretinimo apraše, apdorojimo. Suliejimas priklauso nuo, ar šis procesas buvo sėkmingai baigtas.
-- **Suliejimas**: vykdoma pagal [sukonfigūruotą grafiką](#schedule-tab). Priklauso nuo, ar gretinimo procesas buvo sėkmingai baigtas. Segmentai, matai, papildymas, ieška, veiklos, prognozės ir duomenų paruošimas priklauso nuo to, ar šis procesas buvo sėkmingai baigtas.
-- **Segmentai**: vykdoma neautomatiškai (vienkartinis atnaujinimas) ir pagal [sukonfigūruotą grafiką](#schedule-tab). Priklauso nuo proceso Suliejimas. Nuo jo apdorojimo priklauso įžvalgos.
-- **Matai**: vykdoma neautomatiškai (vienkartinis atnaujinimas) ir pagal [sukonfigūruotą grafiką](#schedule-tab). Priklauso nuo proceso Suliejimas.
-- **Veiklos**: vykdoma neautomatiškai (vienkartinis atnaujinimas) ir pagal [sukonfigūruotą grafiką](#schedule-tab). Priklauso nuo proceso Suliejimas.
-- **Papildymas**: vykdoma neautomatiškai (vienkartinis atnaujinimas) ir pagal [sukonfigūruotą grafiką](#schedule-tab). Priklauso nuo proceso Suliejimas.
-- **Ieška**: vykdoma neautomatiškai (vienkartinis atnaujinimas) ir pagal [sukonfigūruotą grafiką](#schedule-tab). Priklauso nuo proceso Suliejimas.
-- **Duomenų paruošimas:** vykdoma pagal [sukonfigūruotą grafiką](#schedule-tab). Priklauso nuo proceso Suliejimas.
-- **Įžvalgos**: vykdoma neautomatiškai (vienkartinis atnaujinimas) ir pagal [sukonfigūruotą grafiką](#schedule-tab). Priklauso nuo proceso Segmentai.
+Užduočių ir procesų atnaujinimas vykdomas pagal [sukonfigūruotą tvarkaraštį](#schedule-tab). 
 
-Spustelėkite užduoties būseną, kad matytumėte visos užduoties, kurioje buvo ta užduotis, vykdymo eigos išsamią informaciją. Aukščiau pateiktos atnaujinimo strategijos gali padėti suprasti, kokių veiksmų galite imtis dėl **Praleistos** arba į **Įtrauktos į eilę** užduoties.
+|Proceso  |Aprašymas  |
+|---------|---------|
+|Veikla  |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo suliejimo proceso. Nuo jo apdorojimo priklauso įžvalgos.|
+|Analizės susiejimas |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo segmentų.  |
+|Analizės parengimas |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo segmentų.  |
+|Duomenų paruošimas   |Priklauso nuo suliejimo.   |
+|Duomenų šaltiniai   |Nepriklauso nuo jokio kito proceso. Gretinimas priklauso nuo, ar šis procesas buvo sėkmingai baigtas.  |
+|Papildymai   |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo suliejimo proceso. |
+|Eksporto paskirties vietos |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo segmentų.  |
+|Įžvalgos |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo segmentų.  |
+|Duomenų rinkimas   |Priklauso nuo suliejimo.   |
+|Sugretinti |Priklauso nuo duomenų šaltinių, naudojamų gretinimo apraše, apdorojimo.      |
+|Matavimai  |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo suliejimo proceso.  |
+|Sulieti   |Priklauso nuo, ar gretinimo procesas buvo sėkmingai baigtas. Segmentai, matai, papildymas, ieška, veiklos, prognozės ir duomenų paruošimas priklauso nuo to, ar šis procesas buvo sėkmingai baigtas.   |
+|Profiliai   |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo suliejimo proceso. |
+|Paieška   |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo suliejimo proceso. |
+|Segmentai  |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo suliejimo proceso. Nuo jo apdorojimo priklauso įžvalgos.|
+|Sistema   |Priklauso nuo, ar gretinimo procesas buvo sėkmingai baigtas. Segmentai, matai, papildymas, ieška, veiklos, prognozės ir duomenų paruošimas priklauso nuo to, ar šis procesas buvo sėkmingai baigtas.   |
+|Vartotojas  |Veikia rankiniu būdu (vienkartinis atnaujinimas). Priklauso nuo objektų.  |
+
+Pasirinkti proceso būseną, kad būtų galima peržiūrėti visos užduoties, kurioje jis buvo, eigos informaciją. Aukščiau pateikti atnaujinimo procesai gali padėti suprasti, ką galite padaryti, kad išspręstumėte **praleistą arba į eilę įrašytą** **užduotį ar** procesą.
 
 ## <a name="schedule-tab"></a>Grafiko skirtukas
 
@@ -86,7 +104,7 @@ Skirtuke **Apie** rodomas organizacijos **Rodomas pavadinimas**, aktyvus **Aplin
 
 Kalbą ir šalies / regiono formatą galite keisti skirtuke **Bendra**.
 
-„Customer Insights“ [palaikoma nemažai kalbų](/dynamics365/get-started/availability). Programa naudoja jūsų kalbos ypatybes tam, kad parodytų tokius elementus kaip meniu, žymos tekstas ir sistemos pranešimai jūsų pasirinkta kalba.
+"Customer Insights" [palaiko daug kalbų](/dynamics365/get-started/availability). Programa naudoja jūsų kalbos ypatybes tam, kad parodytų tokius elementus kaip meniu, žymos tekstas ir sistemos pranešimai jūsų pasirinkta kalba.
 
 Importuoti duomenys ir informacija, kurią įvedėte rankiniu būdu, nėra išversti.
 
@@ -107,9 +125,9 @@ Raskite informacijos apie realiojo laiko API naudojimą ir sužinokite, kurie į
 
 - **Duomenų perdavimas** – diagrama, kurioje rodomas per API per pasirinktą laiko tarpą perduotų duomenų kiekis.
 
--  **Operacijos** – lentelė su kiekvienos galimos API operacijos eilutėmis ir išsami informacija apie operacijų naudojimą. Galite pažymėti operacijos pavadinimą, kurį [į norite eiti API ](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+-  **Operacijos** – lentelė su kiekvienos galimos API operacijos eilutėmis ir išsami informacija apie operacijų naudojimą. Galite pažymėti operacijos pavadinimą, kurį [į norite eiti API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Operacijose, kuriose pateikiami [realiuoju laiku naudojami duomenys](real-time-data-ingestion.md) yra mygtukas su žiūrono simboliu, skirtu peržiūrėti API naudojimą realiuoju laiku. Pasirinkite mygtuką siekiant atidaryti šoninę juostą turinčią suvartojimo informaciją realaus laiko API naudojimui ir esamai aplinkai.   
+   Operacijose, kurios naudoja [duomenų nurijimą realiuoju](real-time-data-ingestion.md) laiku, yra mygtukas su žiūroniniu simboliu, kad būtų galima peržiūrėti api naudojimą realiuoju laiku. Pasirinkite mygtuką siekiant atidaryti šoninę juostą turinčią suvartojimo informaciją realaus laiko API naudojimui ir esamai aplinkai.   
    Naudokite lauką **Grupuoti** pagal **pateikiamą realiuoju** laiku naudojant API, ir pasirinkite, kaip geriausiai pateikti bendravimą realiuoju laiku. Duomenis galite grupuoti pagal API būdą, objekto apibrėžtą pavadinimą (įtrauktas objektas), kūrėją (įvykio šaltinis), rezultatą (sėkmė arba nesėkmė) arba klaidų kodus. Duomenys prieinami kaip retrospektyvos diagrama ir kaip lentelė.
 
 ## <a name="security-tab"></a>Saugos skirtukas

@@ -1,7 +1,7 @@
 ---
 title: Naujos ir būsimos funkcijos
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,58 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673867"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753127"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo auditorijos įžvalgų galimybėje Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Džiaugiamės galėdami pranešti apie mūsų naujausius atnaujinimus! Šiame straipsnyje apibendrinamos viešos peržiūros versijos funkcijos, bendro pasiekiamumo patobulinimai ir funkcijų atnaujinimai. Norėdami peržiūrėti ilgalaikius funkcijų planus, peržiūrėkite [„Dynamics 365“ ir „Power Platform“ išleidimo planai](/dynamics365/release-plans/).
+Džiaugiamės galėdami pranešti apie mūsų naujausius atnaujinimus! Šiame straipsnyje apibendrinamos viešos peržiūros versijos funkcijos, bendro pasiekiamumo patobulinimai ir funkcijų atnaujinimai. Norėdami peržiūrėti ilgalaikius funkcijų planus, peržiūrėkite ["Dynamics 365" ir Power Platform leidimo planus](/dynamics365/release-plans/).
 
 Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkcijas prieš kitus. Jei nenurodyta kitaip, jums nereikia imtis jokių veiksmų ir mes automatiškai atnaujinsime programą be prastovų.
 
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>2021 m. spalio mėn. naujinimai
+
+2021 m. spalio naujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų taisymus.
+
+### <a name="b-to-b"></a>Nuo B iki B
+
+Nuo 2021 m. spalio galite dirbti su verslo klientais ir su jų susijusiais kontaktais programoje "Customer Insights". Anksčiau programa daugiausia buvo pritaikyta individualiems vartotojams. Kelios funkcijų sritys buvo atnaujintos, kad palaikytų B-to-B scenarijus ant naujo aplinkos tipo. Palaikomų B-to-B funkcijų apžvalgą rasite [Darbas su verslo klientais auditorijos įžvalgose](work-with-business-accounts.md).
+
+Tolesniuose skirsniuose išryškinamos kai kurios pagrindinės sritys, kurios buvo pritaikytos verslo sąskaitoms ir individualiems vartotojams remti.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Eksportuoti segmentus pagal verslo sąskaitas
+
+Visas segmento eksportas auditorijos įžvalgomis galimas verslo sąskaitų kontekste. Daugumai segmentų eksportavimo reikia papildomos konfigūracijos ir [kontaktinės informacijos, numatytos](segment-builder.md#create-a-new-segment) pagrindiniuose segmentuose, kad ji galiotų verslo sąskaitoms. Daugiau informacijos ieškokite [Export segments](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>"LinkedIn Ads" eksportavimo naudojimas su verslo paskyromis
+
+"LinkedIn Ads" eksportavimą dabar galima taikyti pagal kontaktus ir įmonę verslo paskyrų kontekste. Pasirinkdami taikymą pagal įmonę kaip pagrindinį "LinkedIn" eksportavimo židinį, galite eksportuoti segmentus, sukurtus pagal verslo paskyras, neprojektuodami kontaktinės informacijos. Norėdami gauti daugiau informacijos, eikite į dokumentus apie ["LinkedIn Ads" eksportavimą](export-linkedin-ads.md) ir skirtumą tarp taikymo pagal [kontaktus ir taikymo pagal įmonę](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting)[...](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Kurti priemones pagal verslo sąskaitas ir jų hierarchiją
+
+Matavimo daryklė leidžia kurti priemones aplink verslo paskyras ir pasirinktinai naudoti hierarchijos informaciją. Hierarchijos informacija naudojama norint išskleisti matavimo skaičiavimą visoje paskyroje ir visose susijusiose subsąskaitose. Pavyzdžiui, galite kurti priemones, pvz., bendrąsias įplaukas kiekvienai verslo sąskaitų grupei, identifikuojamai pagal jų hierarchiją. Dėl daugiau informacijos, žr. [Nustatyti ir valdyti priemones](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Kurti segmentus pagal verslo sąskaitas ir jų hierarchiją
+
+Segmentų daryklė leidžia kurti verslo sąskaitų segmentus, kuriuose pasirinktinai įtraukiama kiekvieno segmento kliento kontaktinė informacija. Jei nustatėte sąskaitų hierarchiją, kurdami segmentus galite naudoti sąskaitų hierarchijos informaciją. Daugiau informacijos ieškokite [Create a new segment](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Išlaikykite savo verslo paskyras su giliomis įžvalgomis apie jų mušimą
+
+Klientas churn prognozė modelis dabar palaiko verslo sąskaitas per. Galite įvertinti ne tik sąskaitos, bet ir sąskaitos bei produkto ar paslaugos kategorijos, kurią jie perka iš jūsų, sujungimo riziką. Šis papildymas padeda jums suprasti, ar sąskaita yra labiau tikėtina, kad nustoti pirkti iš jūsų apskritai arba tik tam tikros kategorijos prekių ar paslaugų. Kad būtų lengviau naudoti šį DI modelį, jame taip pat išvardijamos priežastys, dėl kurių paskyra gali sumušti. Daugiau informacijos ieškokite [Transaction churn prognozė (preview)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Verslo abonemento kontaktų peržiūra kliento rodinyje
+
+Jei verslo paskyros susietos su susijusiais klientais, programa "Customer Insights" rodo šiuos susijusius kontaktus kaip kliento išsamios informacijos rodinio dalį. Daugiau informacijos ieškokite [Customer profiles](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>2021 m. rugsėjo mėn. naujinimai
 
@@ -78,7 +113,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 ### <a name="data-ingestion"></a>Duomenų įsisavinimas
 
-- **Peržiūrėti arba modifikuoti metaduomenų ar objektų aprašus, kai pridedate duomenis iš savo „Azure Data Lake Storage”** Dabar galite peržiūrėti ir redaguoti metaduomenų ar objektų aprašus auditorijos įžvalgose, kai pridedate duomenis iš „Common Data Model” savo „Azure Data Lake Storage”. Ši galimybė pateikia atsiliepimus realiuoju laiku, modelio tikrinimą ir klaidų patikrinimą. Ji leis sklandžiai redaguoti tiek model.json, tiek manifest.json.
+- **Peržiūrėkite arba modifikuokite metaduomenis arba objekto aprašą, kai pridedate duomenis iš savo Azure Data Lake Storage** Dabar galite peržiūrėti ir redaguoti metaduomenis arba objekto apibrėžimą auditorijos įžvalgose, kai pridedate duomenis iš "Common Data Model" aplanko savo Azure Data Lake Storage. Ši galimybė pateikia atsiliepimus realiuoju laiku, modelio tikrinimą ir klaidų patikrinimą. Ji leis sklandžiai redaguoti tiek model.json, tiek manifest.json.
 
 ### <a name="extensibility"></a>Išplėtimas
 
@@ -153,7 +188,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 ### <a name="data-ingestion"></a>Duomenų įsisavinimas
 
-- **Prisijunkite prie vietinių duomenų šaltinių, naudodami Power Platform duomenų srautus ir tinklų sietuvus** Su malonumu pranešame apie Power Platform duomenų srautų ir vietinio jungiamumo naudojant tinklų sietuvus su „Customer Insights“ peržiūrą su siejama Power Platform arba Dataverse aplinka. Visi nauji duomenų šaltiniai, sukurti „Customer Insights“ su susieta Dataverse aplinka bus numatytieji Power Platform duomenų srautai, užtikrinantys vietinį duomenų ryšį ir išsamų jungčių bei transformavimo galimybių rinkinį.
+- **Prisijungimas prie vietinis duomenų šaltinių naudojant Power Platform duomenų srautus ir šliuzus** Džiaugiamės galėdami pranešti apie Power Platform duomenų srautų ir vietinis ryšio peržiūrą naudodami "Customer Insights" šliuzus su susijusia Power Platform arba Dataverse Aplinkos. Bet kokie nauji duomenų šaltiniai, sukurti "Customer Insights" aplinkoje su susieta Dataverse aplinka, pagal numatytuosius nustatymus Power Platform duomenų srautus, suteikiančias vietinis duomenų ryšį ir gausų jungčių rinkinį bei transformacijos galimybes.
 
 ### <a name="extensibility"></a>Išplėtimas
 
@@ -215,7 +250,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 - **Aplinkos kopijavimas palaiko daugiau duomenų šaltinių tipų**
 
-  Administratoriai gali kopijuoti aplinkos konfigūracijas į naują aplinką toje pačioje organizacijoje. Ši funkcija išplečia aplinkos kopijavimo funkcijas atvejams, kai naudojami duomenų šaltiniai, pagrįsti „Microsoft Dataverse” valdomu „data lake” arba „Common Data Model” aplanku.
+  Administratoriai gali kopijuoti aplinkos konfigūracijas į naują aplinką toje pačioje organizacijoje. Ši funkcija išplečia kopijavimo aplinkos funkcijas tais atvejais, kai naudojami duomenų šaltiniai, pagrįsti Microsoft Dataverse valdomų duomenų ežeras arba "Common Data Model" aplankas.
 
 ## <a name="january-2021-updates"></a>2021 m. sausio mėn. naujinimai
 
@@ -241,7 +276,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 #### <a name="system-administration"></a>Sistemos administravimas
 
-- **Sklandžiai bendrinkite duomenis su „Microsoft Dataverse“** „Customer Insights” rezultatais su programomis „Microsoft Dataverse“ naudodami „Microsoft Dataverse“ sutvarkyto „Data Lake” funkciją. Susieję aplinką „Dataverse“ su „Customer Insights”, galėsite įjungti duomenų bendrinimą.
+- **Sklandžiai bendrinkite duomenis Microsoft Dataverse** Dabar galite bendrinti "Customer Insights" išvestį su Microsoft Dataverse programomis naudodami Microsoft Dataverse valdomų duomenų ežerą. Susieję Dataverse aplinką su "Customer Insights", gausite parinktį įgalinti duomenų bendrinimą.
   Daugiau informacijos žr. [Aplinkų valdymas](manage-environments.md).
 
 

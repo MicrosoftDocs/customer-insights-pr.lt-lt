@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033595"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732274"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbas su „Customer Insights“ API
 
-„Dynamics 365 Customer Insights“ „Customer Insights" teikia API, kad galėsite kurti savo taikomąsias programas pagal savo duomenis.
+Dynamics 365 Customer Insights teikia API, kad sukurtų savo programas pagal jūsų duomenis "Customer Insights".
 
 > [!IMPORTANT]
 > Šių API išsami informacija yra išvardyta [„Customer Insights“ API nuorodoje](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Jie apima papildomą informaciją apie operacijas, parametrus ir atsakymus.
@@ -117,17 +117,17 @@ Informacijos apie API naudojimas mūsų klientų bibliotekose ieškokite [„Cus
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Sužinokite, kaip pradėti naudojant C# kliento bibliotekas iš NuGet.org. Dėl išsamesnės informacijos apie NuGet paketą, žr. [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Šiuo metu šis paketas siekia netstandard2.0 ir netcoreapp2.0 darbotvarkių.
+Sužinokite, kaip pradėti naudoti C# kliento bibliotekas iš NuGet.org. Daugiau informacijos apie NuGet paketą ieškokite [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Šiuo metu šis paketas siekia netstandard2.0 ir netcoreapp2.0 darbotvarkių.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Įtraukite C# kliento biblioteką į C# projektą
 
-1. „Visual Studio“, atverkite **NuGet paketo tvarkytuvą** jūsų projektui.
+1. Dalyje Visual Studio atidarykite **projekto NuGet paketų** tvarkytuvą.
 
 1. Ieškokite **„Microsoft.Dynamics.CustomerInsights.Api“**.
 
 1. Pasirinkite **Įdiegti** norėdami įtraukti paketą projektui.
  
-   Kitu atveju, vykdykite šią komandą **NuGet paketo tvarkytuvo konsolėje**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Arba vykdykite šią komandą **NuGet paketų tvarkytuvo** konsolėje:`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
    :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Įtraukite NuGet paketą į Visual Studio projektą.":::
 
@@ -135,7 +135,7 @@ Sužinokite, kaip pradėti naudojant C# kliento bibliotekas iš NuGet.org. Dėl 
 
 1. Naudokite [„Microsoft“ autentifikavimo biblioteką (MSAL)](/azure/active-directory/develop/msal-overview) tam, kad gautumėte `AccessToken` naudodami esančią savo [„Azure“ programos registraciją](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Po sėkmingo autentifikavimo ir žymos gavimo, sukurkite naują ar naudokite esančią `HttpClient` su papildomu **„DefaultRequestHeaders” leidimu** nustatytu į **Būdingas <access token>** ir **Ocp-Apim-Prenumeravimo-raktu** nustatytu į [**prenumeravimo raktas** iš jūsų „Customer Insights“ aplinkos](#get-started-trying-the-customer-insights-apis).   
+1. Sėkmingai autentifikavę ir įsigiję atpažinimo ženklą, sukurkite naują arba naudokite esamą `HttpClient` su papildomu **DefaultRequestHeaders "Autorizavimas",** nustatytu kaip **Bearer "access token"** ir **Ocp-Apim-Subscription-Key,** nustatytą prenumeratos [**raktui iš jūsų** "Customer Insights" aplinkos](#get-started-trying-the-customer-insights-apis).   
  
    Paleiskite iš naujo **autorizavimo** antraštę, kai būtina. Pavyzdžiui, kai žyma baigė galioti.
 

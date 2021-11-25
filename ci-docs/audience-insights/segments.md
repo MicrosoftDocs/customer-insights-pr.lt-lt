@@ -1,7 +1,7 @@
 ---
 title: Auditorijos įžvalgų segmentai
 description: Segmentų apžvalga ir jų kūrimo bei valdymo informacija.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 56978c984a91e85e86956e7eac1d59609c349b6a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673851"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732598"
 ---
 # <a name="segments-overview"></a>Segmentų apžvalga
 
@@ -54,7 +54,7 @@ Pasirinkus segmentą pasiekiami toliau nurodyti veiksmai.
 - **Redaguoti** segmentą ir pakeisti jo ypatybes.
 - **Kurti dublikatą** segmentui. Galite iš karto pasirinkti redaguoti jo ypatybes arba tiesiog įrašyti dublikatą.
 - **Atnaujinti** segmentą, kad būtų įtraukti naujausi duomenys.
-- **Aktyvinti** arba **Išjungti** segmentą. Segmentai turi dvi galimas būsenas – aktyvią arba neaktyvią. Šios būsenos yra naudingos redaguojant segmentą. Neaktyvių segmentų aprašas yra, bet į jį dar neįtraukta klientų. Suaktyvinus segmentą, jo būsena keičiasi iš neaktyvios į aktyvią, ir jis pradeda ieškoti klientų, atitinkančių segmento aprašą. Jei [suplanuotas atnaujinimas](system.md#schedule-tab) yra sukonfigūruotas, neaktyvių segmentų **Būsena** nurodoma kaip **Praleista** – tai reiškia, kad net nebuvo bandyta atnaujinti. Suaktyvinus neaktyvų segmentą, jis bus atnaujintas ir įtrauktas į suplanuotus atnaujinimus.
+- **Aktyvinti** arba **Išjungti** segmentą. Segmentai turi dvi galimas būsenas – aktyvią arba neaktyvią. Šios būsenos yra naudingos redaguojant segmentą. Neaktyvių segmentų aprašas yra, bet į jį dar neįtraukta klientų. Suaktyvinus segmentą, jo būsena keičiasi iš neaktyvios į aktyvią, ir jis pradeda ieškoti klientų, atitinkančių segmento aprašą. Jei [suplanuotas atnaujinimas](system.md#schedule-tab) yra sukonfigūruotas, neaktyvių segmentų [Būsena](system.md#schedule-tab) nurodoma kaip [Praleista](system.md#schedule-tab) – tai reiškia, kad net nebuvo bandyta atnaujinti. Suaktyvinus neaktyvų segmentą, jis bus atnaujintas ir įtrauktas į suplanuotus atnaujinimus.
   Taip pat galite naudoti funkciją **Planuoti vėliau**, esančią iškleidžiamajame meniu **Aktyvinti / išjungti**, kad nurodytumėte būsimą datą ir laiką, kada reikia aktyvinti ir išjungti tam tikrą segmentą.
 - **Pervardyti** segmentą.
 - **Atsisiųsti** narių sąrašą kaip .CSV failą.
@@ -65,8 +65,7 @@ Pasirinkus segmentą pasiekiami toliau nurodyti veiksmai.
 
 Visus segmentus galite atnaujinti vienu metu pažymėdami **Atnaujinti viską** puslapyje **Segmentai** arba galite atnaujinti vieną ar kelis segmentus, kai juos pažymite ir parinktyse pasirenkate **Atnaujinti**. Taip pat galite sukonfigūruoti pasikartojantį atnaujinimą dalyje **Administravimas** > **Sistemas** > **Planuoti**.
 
-> [!TIP]
-> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Eksportuokite segmentus
 
@@ -105,5 +104,6 @@ Apatinėje dalyje yra segmento narių sąrašas.
 > Šiame sąraše pateikiami laukai grindžiami jūsų segmento objektų atributais.
 >
 >Šiame sąraše rodomi sutampantys segmento nariai ir pirmieji 100 jūsų segmento įrašai, kad galėtumėte greitai jį įvertinti ir peržiūrėti apibrėžimus, jei to reikia. Norėdami peržiūrėti visu sutampančius įrašus, turite [eksportuoti segmentą](export-destinations.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 
