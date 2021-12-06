@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618301"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866898"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentų eksportavimas į „LinkedIn Ads” (peržiūra)
 
@@ -22,12 +22,13 @@ Eksportuokite vieningųjų klientų profilius į „LinkedIn Ads”, kad sukurtu
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
--   Turite [„LinkedIn Campaign Manager” paskyrą](https://business.linkedin.com/marketing-solutions/ads) ir atitinkamus administratoriaus kredencialus.
+-   Turite [LinkedIn Campaign Manager abonementą](https://business.linkedin.com/marketing-solutions/ads) ir atitinkamus administratoriaus kredencialus.
 -   Turite [sukonfigūruotus segmentus](segments.md) publikos įžvalgose.
 -   Klientų profiliuose, esančiuose eksportuotuose segmentuose, yra laukas su el. pašto adresu.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
+- Jūsų segmente programoje "Customer Insights" turi būti bent 300 unikalių profilių. 
 - Į „LinkedIn Ads‟ iš viso galima eksportuoti iki 100 tūkstančių eksportuojamų klientų profilių.
 - Eksportavimas į „LinkedIn Ads“ apsiriboja segmentais.
 - Iki 100 tūkstančių klientų profilių eksportavimas į „LinkedIn Ads“ gali užtrukti iki 10 minučių. 
@@ -42,13 +43,13 @@ Eksportuokite vieningųjų klientų profilius į „LinkedIn Ads”, kad sukurtu
 
 1. Pasirinkite, kas gali naudoti šį ryšį. Jei neatliksite jokio veiksmo, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Pateikite savo [„LinkedIn Campaign Manager” paskyros ID](https://www.linkedin.com/help/lms/answer/a424270).
+1. Pateikite [savo LinkedIn Campaign Manager paskyros ID](https://www.linkedin.com/help/lms/answer/a424270).
 
 1. Pasirinkę **Sutinku**, kad patvirtintumėte **Duomenų privatumą ir atitiktį**.
 
 1. Pasirinkite **Prisijungti** ir inicijuokite ryšį su „Campaign Monitor“.
 
-1. Pažymėkite **Autentifikuoti naudojant „LinkedIn“** ir pateikite savo „LinkedIn Campaign Manager“ administratoriaus kredencialus.
+1. Pasirinkite **Autentifikuoti naudojant "LinkedIn"** ir pateikite savo administratoriaus kredencialus LinkedIn Campaign Manager.
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
@@ -68,7 +69,7 @@ Galite sukonfigūruoti eksportavimą, jei turite prieigą prie šio tipo ryšio.
 
 1. Jei tai kontaktas, skyriuje **Duomenų gretinimas** pažymėkite bent vieną lauką, kuriame pateikiamas kliento el. pašto adresas „Apple Ad ID", „Google Ad ID", „Google" vartotojo ID arba pirmasis pavardė. Jei pasirinksite taiką pagal įmonę, pažymėkite bent vieną lauką, kuriame pateikiamas įmonės pavadinimas, el. pašto domenas, „LinkedIn" puslapio URL, akcijų simbolis arba svetainė. Papildomus laukus galima pasirinkti norint labiau apibrėžti eksportavimą. 
 
-1. Pasirinkite segmentus, kuriuos norite eksportuoti. „Matched Audiences” bus automatiškai sukurtos „LinkedIn Campaign Manager” platformoje su eksportavimui pasirinktų segmentų pavadinimu. Kiekviename segmente bus sukurta atskira „matched audience”. 
+1. Pasirinkite segmentus, kuriuos norite eksportuoti. LinkedIn Campaign Manager suderintos auditorijos bus automatiškai sukurtos su segmentų, kuriuos pasirinkote eksportuoti, pavadinimu. Kiekviename segmente bus sukurta atskira „matched audience”. 
 
 1. Pasirinkite **Įrašyti**.
 
@@ -79,6 +80,6 @@ Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedul
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
-Kai įgalinate „Dynamics 365 Customer Insights” perduoti duomenis į „LinkedIn Ads“, leidžiate perduoti duomenis už „Dynamics 365 Customer Insights” atitikties ribų, įskaitant galimai slaptus duomenis, pavyzdžiui, Asmeninius duomenis. „Microsoft“ tokius duomenis perduos jums leidus, tačiau jūs esate atsakingi už užtikrinimą, jog „LinkedIn Ads“ atitinka privatumo ir saugos įsipareigojimus, kuriuos jūs galimai turite. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
+Kai įgalinate Dynamics 365 Customer Insights perduoti duomenis į "LinkedIn Ads", leidžiate perduoti duomenis už Dynamics 365 Customer Insights atitikties ribų, įskaitant potencialiai neskelbtinus duomenis, pvz., Asmens duomenis. „Microsoft“ tokius duomenis perduos jums leidus, tačiau jūs esate atsakingi už užtikrinimą, jog „LinkedIn Ads“ atitinka privatumo ir saugos įsipareigojimus, kuriuos jūs galimai turite. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
 
-Jūsų „Dynamics 365 Customer Insights“ Administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu, kad sustabdytų šios funkcijos naudojimą.
+Jūsų Dynamics 365 Customer Insights administratorius gali bet kuriuo metu pašalinti šią eksportavimo paskirties vietą, kad sustabdytų šios funkcijos naudojimą.

@@ -1,7 +1,7 @@
 ---
 title: Suderinkite objektus duomenų suvienodinimui
-description: Sugretinkite objektus, kad derinti duomenų rinkinius ir sukurtumėte vieningus klientų profilius.
-ms.date: 11/01/2021
+description: Suderinkite objektus tam, kad sukurtumėte suvienytus kliento profilius.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732644"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863821"
 ---
 # <a name="match-entities"></a>Susiekite objektus
 
@@ -79,7 +79,7 @@ Atitikties taisyklėse nurodoma logika, pagal kurią bus derinama konkreti objek
 
 1. Pateikite **Pavadinimą** taisyklei.
 
-1. [Įtraukite daugiau sąlygų](#add-conditions-to-a-rule) arba pasirinkite [Atlikta](#add-conditions-to-a-rule), kad užbaigtumėte taisyklę.
+1. [Įtraukite daugiau sąlygų](#add-conditions-to-a-rule) arba pasirinkite **Atlikta**, kad užbaigtumėte taisyklę.
 
 1. Pasirinktinai [įtraukite daugiau taisyklių](#add-rules-to-a-match-pair).
 
@@ -224,17 +224,24 @@ Galite konfigūruoti iš naujo ir tiksliai nustatyti daugumą atitikties paramet
 
 ## <a name="specify-custom-match-conditions"></a>Nurodykite pasirinktines gretinimo sąlygas
 
-Galite nurodyti sąlygas, pagal kurias tam tikri įrašai turi visada atitikti arba neatitikti. Šias taisykles galima nusiųsti standartinio gretinimo proceso perrašymui. Pavyzdžiui, jei mūsų įrašuose yra Rimvydas Saulis I ir Rimvydas Saulis II, sistema gali juos sugretinti kaip vieną asmenį. Pasirinktinės gretinimo taisyklės leidžia nurodyti, kad jų profiliai būtų skirti skirtingiems asmenims. 
+Galite nurodyti sąlygas, kurios nepaiso numatytosios atitikties logikos. Galimos keturios parinktys: 
+
+|Parinktis  |Aprašą |Pavyzdžiui  |
+|---------|---------|---------|
+|Visada atitikti     | Apibrėžia reikšmes, kurios visada sutampa.         |  Visada rungtynės *Mike* ir *MikeR*.       |
+|Niekada neatitinka     | Apibrėžia reikšmes, kurios niekada nesutampa.        | Niekada neprilygti *Jonui* ir *Džonatanui*.        |
+|Pasirinktinis apėjimas     | Apibrėžia reikšmes, kurių sistema visada turėtų nepaisyti atitikties etape. |  Nepaisyti reikšmių *11111* ir *Nežinoma* rungtynių metu.        |
+|Pseudonimo susiejimas    | Reikšmių, kurias sistema turėtų laikyti ta pačia verte, apibrėžimas.         | Apsvarstykite *Joe būti lygus Joseph* *·*.        |
 
 1. Eikite į **Duomenys** > **Suvienodinti** > **Atitikmuo** ir pasirinkite **Pasirinktinis atitikmuo** skyriuje **Suderintų įrašų informacija**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Skyriaus Gretinimo taisyklės su pažymėtu pasirinktinio atitikmens valdikliu ekrano kopija.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Skyriaus Gretinimo taisyklės su pažymėtu pasirinktinio atitikmens valdikliu ekrano kopija.":::
 
-1. Jeigu neturite pasirinktinių gretinimo taisyklių rinkinio, pamatysite naują **Pasirinktinio gretinimo** sritį su daugiau informacijos.
+1. Srityje **Pasirinktiniai** eikite į **skirtuką** Įrašai.
 
-1. Pasirinkite **Užpildyti šabloną**, jei norite gauti šabloną, nurodantį, kurie įrašai iš kurių objektų turi visada atitikti arba neatitikti. Dviejuose skirtinguose failuose turėsite atskirai užpildyti „visada atitinka“ ir „niekada neatitinka“ įrašus.
+1. Išplečiamajame sąraše Pasirinktinis tipas pasirinkite pasirinktinės atitikties parinktį **ir pasirinkite Atsisiųsti šabloną** **·**. Kiekvienai atitikimo parinktai reikia atskiro šablono.
 
-1. Šablone yra laukų, nurodančių objektą ir objekto pirminių raktų reikšmes, kurias reikia naudoti pasirinktinio atitikimo srityje. Pavyzdžiui, jeigu norite, kad pirminis raktas *„12345”* iš objekto *Pardavimas* visada atitiktų pirminį raktą *„34567”* iš objekto *Kontaktas*, užpildykite šabloną:
+1. Šablono failo atsisiuntimai. Atidarykite jį ir užpildykite išsamią informaciją. Šablone yra laukų, nurodančių objektą ir objekto pirminių raktų reikšmes, kurias reikia naudoti pasirinktinio atitikimo srityje. Pavyzdžiui, jeigu norite, kad pirminis raktas *„12345”* iš objekto *Pardavimas* visada atitiktų pirminį raktą *„34567”* iš objekto *Kontaktas*, užpildykite šabloną:
     - Objektas1: pardavimai
     - Objekto1kodas: 12345
     - Objektas2: kontaktas
@@ -244,26 +251,32 @@ Galite nurodyti sąlygas, pagal kurias tam tikri įrašai turi visada atitikti a
    
    Jei norite nurodyti objekto dublikatų naikinimo pasirinktinį gretinimą, pateikite tą patį objektą kaip ir Objektą1, ir Objektą2 ir nustatykite skirtingas pirminio rakto reikšmes.
 
-1. Įtraukę visus pageidaujamus perrašymus, išsaugokite šablono failą.
+1. Įtraukę visus nepaisymus, įrašykite šablono failą.
 
-1. Eikite **Duomenys** > **Duomenų šaltiniai** ir permeskite šablonų failus kaip naujus objektus. Kai failai paversti, galite juos naudoti atitikties konfigūracijai.
+1. Eikite **Duomenys** > **Duomenų šaltiniai** ir permeskite šablonų failus kaip naujus objektus.
 
-1. Kai galite įkelti failus ir objektus, pasirinkite **pasirinktinės atitikties** parinktį dar kartą, Matysite parametrus, nurodančius objektus, kuriuos norite įtraukti. Išplečiamajame meniu pažymėkite reikiamus objektus.
+1. Kai galite įkelti failus ir objektus, pasirinkite **pasirinktinės atitikties** parinktį dar kartą, Matysite parametrus, nurodančius objektus, kuriuos norite įtraukti. Išplečiamajame meniu pasirinkite reikiamus objektus ir pasirinkite **Atlikta**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Dialogo lango, kai reikia pasirinkti pasirinktinio atitikties scenarijaus perrašymus, ekrano kopija.":::
 
-1. Pasirinkite objektus, kuriuos norite naudoti **visada atitinka** ir **niekada neatitinka**, tada pažymėkite **atlikta**.
+1. Pasirinktinio atitikmens taikymas priklauso nuo norimos naudoti atitikties parinkties. 
+
+   - Jei **visada** atitinkate arba niekada **nesutampate**, pereikite prie kito veiksmo.
+   - Pasirinktinio **apėjimo** arba **pseudonimo susiejimui** pasirinkite Redaguoti **esamoje** gretinimo taisyklėje arba sukurkite naują taisyklę. Išplečiamajame sąraše Normalizavimas pasirinkite **parinktį Pasirinktinis apėjimas** arba **Pseudonimas** ir pasirinkite **Atlikta**.
 
 1. Pasirinkite **Įrašyti** puslapyje **Atitikmuo** pasirinktinės gretinimo konfigūracijos pritaikymui.
 
 1. Pasirinkite **Vykdyti** puslapyje **Atitikmuo** gretinimo procesui pradėti. Kitas nurodytas gretinimo taisykles perrašo pasirinktinė gretinimo konfigūracija.
 
-> [!TIP]
-> Eikite **Duomenys** > **Objektai** ir peržiūrėkite objektą **„ConflationMatchPair”** patvirtinti, kad pritaikyti perrašymai.
+### <a name="known-issues"></a>Žinomos problemos
 
-## <a name="next-step"></a>Kitas veiksmas
+- Savęs supainiojimas nerodo normalizuotų duomenų deduplication objektuose. Tačiau jis taiko normalizavimą viduje deduplication metu. Tai pagal dizainą visiems normalizacijoms. 
+- Jei semantinio tipo parametras pašalinamas **žemėlapio** fazėje, kai atitikties taisyklė naudoja pseudonimo susiejimą arba pasirinktinį apėjimą, normalizavimas nebus taikomas. Taip atsitinka tik tada, jei išvalysite semantinį tipą konfigūravę normalizavimą rungtynių taisyklėje, nes semantinis tipas bus nežinomas.
 
-Kai užbaigsite bent vienos atitinkančios poros gretinimo procesą, galėsite išspręsti galimus duomenų prieštaravimus [**suliejimo**](merge-entities.md) temoje.
+
+## <a name="next-step"></a>Tolesnis veiksmas
+
+Baigę bent vienos rungtynių poros gretinimo procesą, pereikite prie [**·**](merge-entities.md) suliejimo veiksmo.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
