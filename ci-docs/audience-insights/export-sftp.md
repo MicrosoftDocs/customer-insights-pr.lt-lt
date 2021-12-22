@@ -1,5 +1,5 @@
 ---
-title: Eksportuoti „Customer Insights“ duomenis į SFTP šeimininkus
+title: Eksportuoti "Customer Insights" duomenis į SFTP hosts (Video)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į SFTP vietą.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673926"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927613"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmentų ir kitų duomenų eksportavimas į SFTP (peržiūros versija)
 
@@ -28,6 +28,7 @@ Savo kliento duomenis trečiųjų šalių programose naudokite eksportuodami juo
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
+- SFTP paskirties vietos už užkardų šiuo metu nepalaikomos. 
 - Eksportavimo trukmė priklauso nuo sistemos efektyvumo. Kaip minimalią serverio konfigūraciją rekomenduojame naudoti du procesorius IR 1 GB atminties. 
 - Objektų, kurių klientų profiliai yra iki 100 milijonų, eksportavimas gali užtrukti 90 minučių naudojant rekomenduojamą minimalią dviejų procesorių IR 1 GB atminties konfigūraciją. 
 

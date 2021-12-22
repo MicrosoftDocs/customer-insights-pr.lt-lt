@@ -1,7 +1,7 @@
 ---
 title: Prisijunkite prie Azure Data Lake Storage paskyros naudodami pagrindinę tarnybą
 description: Norėdami prisijungti prie savo duomenų telkinio, naudokite pagrindinę "Azure" tarnybą.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645182"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900285"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Prisijunkite prie Azure Data Lake Storage paskyros naudodami pagrindinę "Azure" tarnybą
 
-Automatizuoti įrankiai, naudojantys „Azure“ paslaugas visada turėtų turėti apribotus leidimus. Vietoje programų prisijungimo kaip vartotojui su teisėmis, „Azure“ siūlo pagrindines paslaugas. Sužinokite, kaip prisijungti prie Dynamics 365 Customer Insights su Azure Data Lake Storage paskyra, naudojant "Azure" pagrindinę paslaugą, vietoj saugyklos paskyros raktų. 
+Šiame straipsnyje aptariama, kaip prisijungti prie Dynamics 365 Customer Insights Azure Data Lake Storage paskyros naudojant "Azure" tarnybos pagrindinę dalį, o ne saugojimo abonemento raktus. 
 
-Pagrindinę tarnybą galite naudoti, jei norite saugiai [įtraukti arba redaguoti Bendrą duomenų modelio aplanką kaip duomenų šaltinį](connect-common-data-model.md) arba [kurti ar naujinti aplinką](create-environment.md).
+Automatizuoti įrankiai, naudojantys „Azure“ paslaugas visada turėtų turėti apribotus leidimus. Vietoje programų prisijungimo kaip vartotojui su teisėmis, „Azure“ siūlo pagrindines paslaugas. Galite naudoti aptarnavimo principus, kad saugiai [įtrauktumėte arba redaguotumėte bendrojo duomenų modelio aplanką kaip duomenų šaltinis](connect-common-data-model.md) arba [kurtumėte arba atnaujintumėte aplinką](create-environment.md).
 
 > [!IMPORTANT]
 > - „Data Lake Storage” abonementas, kuris naudos pagrindinį aptarnavimą, privalo turėti [įgalintą hierarchinę vardų sritį](/azure/storage/blobs/data-lake-storage-namespace).
-> - Jums reikia administratoriaus teisių jūsų „Azure“ prenumeratai siekiant sukurti pagrindines paslaugas.
+> - Norint sukurti paslaugos pagrindinę paslaugą, reikia "Azure" prenumeratos administratoriaus teisių.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Pagrindinės "Customer Insights" "Azure" tarnybos kūrimas
 
-Prieš kurdami naują pagrindinę auditorijos įžvalgų ar įtraukimo įžvalgų tarnybą, patikrinkite, ar ji jau yra jūsų organizacijoje.
+Prieš kurdami naują "Customer Insights" aptarnavimo vadovą, patikrinkite, ar jis jau yra jūsų organizacijoje.
 
 ### <a name="look-for-an-existing-service-principal"></a>Ieškokite esančių pagrindinių paslaugų
 

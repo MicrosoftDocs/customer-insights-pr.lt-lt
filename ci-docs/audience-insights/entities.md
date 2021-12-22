@@ -1,7 +1,7 @@
 ---
 title: Objektai ir duomenų rinkiniai
 description: Peržiūrėkite duomenis objektų puslapyje.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,51 +9,57 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732090"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900437"
 ---
 # <a name="entities-in-audience-insights"></a>Objektai publikos įžvalgose
 
-[Sukonfigūravę duomenų šaltinius](data-sources.md), eikite į puslapį [Objektai](data-sources.md), kad įvertintumėte apdorotų duomenų kokybę. Objektai yra laikomi duomenų rinkiniais. Aplink šiuos objektus sukurtos kelios Dynamics 365 Customer Insights galimybės. Jei atidžiai juos peržiūrėsite, lengviau įvertinsite šių galimybių rezultatus.
+[Sukonfigūravę duomenų šaltinius](data-sources.md), eikite į puslapį **Objektai**, kad įvertintumėte apdorotų duomenų kokybę. Objektai yra laikomi duomenų rinkiniais. Daugelis „Dynamics 365 Customer Insights“ pajėgumų yra sukurti aplink šiuos objektus. Jei atidžiai juos peržiūrėsite, lengviau įvertinsite šių galimybių rezultatus.
 
-Puslapyje **Objektai** išvardyti objektai ir yra keletas stulpelių:
+**Puslapyje Objektai** išvardijami objektai ir įtraukiami šie stulpeliai:
 
-- **Pavadinimas**: duomenų objekto pavadinimas. Jei prie objekto pavadinimo rodomas įspėjamasis simbolis, reiškia, kad objekto duomenų nepavyko įkelti.
-- **Šaltinis**: duomenų šaltinio, apdorojusio objektą, tipas
-- **Sukūrė**: objektą sukūrusio žmogaus vardas, pavardė
-- **Sukurta**: objekto sukūrimo data ir laikas
-- **Atnaujinta** : Objektą atnaujinusio asmens vardas
-- **Būsena** : išsami informacija apie paskutinį objekto naujinimą
+- **Pavadinimas** : duomenų objekto pavadinimas. Jei prie objekto pavadinimo rodomas įspėjamasis simbolis, reiškia, kad objekto duomenų nepavyko įkelti.
+- **Šaltinis** : objekto nurijimo duomenų šaltinis tipas.
+- **Atnaujinta** : paskutinio objekto atnaujinimo laikas.
+- **Būsena** : išsami informacija apie paskutinį objekto naujinimą.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Susipažinkite su konkretaus objekto duomenimis
 
-Pažymėkite objektą, kad susipažintumėte su skirtingais laukais ir įrašais, įtrauktais į šį objektą.
+1. Publikos įžvalgose, eikite į **Duomenys** > **Objektai**.
+1. Puslapyje **Objektai** pasirinkite objektą, kad atidarytumėte išsamios informacijos puslapį.  
+1. Ištirkite skirtingus to objekto laukus ir įrašus.
 
-> [!div class="mx-imgBorder"]
-> ![Pasirinkite objektą.](media/data-manager-entities-data.png "Pasirinkti objektą")
-
-- Skirtuke **Duomenys** rodoma lentelė su išsamia informacija apie atskirus objekto įrašus.
+- Skirtukas **Atributai** yra pažymėtas pagal numatytuosius parametrus ir rodo lentelę, skirtą peržiūrėti pasirinkto objekto išsamią informaciją, pavyzdžiui, laukų pavadinimus, duomenų tipus ir tipus. Stulpelyje **Tipas** pateikiami su „Common Data Model” susiję tipai, kuriuos sistema nustato automatiškai arba [susieja patys](map-entities.md) vartotojai. Šie tipai yra semantiniai, kurie gali skirtis nuo atributų duomenų tipų. Pavyzdžiui, toliau pateikto lauko *Elektroninis paštas* duomenų tipas yra *Tekstas*, tačiau jo (semantinis) „Common Data Model” tipas gali būti *Elektroninis laiškas* arba *Elektroninio pašto adresas*.
 
 > [!div class="mx-imgBorder"]
 > ![Laukų lentelė.](media/data-manager-entities-fields.PNG "Laukų lentelė")
 
-- Skirtukas **Atributai** yra pažymėtas pagal numatytuosius parametrus ir rodo lentelę, skirtą peržiūrėti pasirinkto objekto išsamią informaciją, pavyzdžiui, laukų pavadinimus, duomenų tipus ir tipus. Stulpelyje **Tipas** pateikiami su „Common Data Model” susiję tipai, kuriuos sistema nustato automatiškai arba [susieja patys](map-entities.md) vartotojai. Šie tipai yra semantiniai, kurie gali skirtis nuo atributų duomenų tipų. Pavyzdžiui, toliau pateikto lauko *Elektroninis paštas* duomenų tipas yra *Tekstas*, tačiau jo (semantinis) „Common Data Model” tipas gali būti *Elektroninis laiškas* arba *Elektroninio pašto adresas*.
-
 > [!NOTE]
-> Abiejose lentelėse parodytas tik objekto duomenų pavyzdys. Norėdami peržiūrėti visą duomenų rinkinį, eikite į puslapį **Duomenų šaltiniai**, pasirinkite objektą, pasirinkite **Redaguoti** ir peržiūrėkite šio objekto duomenis, naudodami rengyklę „Power Query”, kaip paaiškinta skyriuje [Duomenų šaltiniai](data-sources.md).
+> Šiame puslapyje rodomas tik jūsų objekto duomenų pavyzdys. Norėdami peržiūrėti visą duomenų rinkinį, eikite į puslapį **Duomenų šaltiniai**, pasirinkite objektą, pasirinkite **Redaguoti** ir peržiūrėkite šio objekto duomenis, naudodami rengyklę „Power Query”, kaip paaiškinta skyriuje [Duomenų šaltiniai](data-sources.md).
 
-Jei norite sužinoti daugiau apie į objektą įtrauktus duomenis, stulpelyje **Suvestinė** pateikiamos kai kurios svarbios duomenų charakteristikos, pvz., neapibrėžtos reikšmės, trūkstamos reikšmės, unikalios reikšmės, skaičiai ir pasiskirstymai, taikomi jūsų duomenims.
-
-Norėdami peržiūrėti duomenų suvestinę, pažymėkite diagramos piktogramą.
+Jei norite sužinoti daugiau apie į objektą įtrauktus duomenis, stulpelyje **Suvestinė** pateikiamos kai kurios svarbios duomenų charakteristikos, pvz., neapibrėžtos reikšmės, trūkstamos reikšmės, unikalios reikšmės, skaičiai ir pasiskirstymai, taikomi jūsų duomenims. Norėdami peržiūrėti duomenų suvestinę, pažymėkite diagramos piktogramą.
 
 > [!div class="mx-imgBorder"]
 > ![Suvestinės simbolis.](media/data-manager-entities-summary.png "Duomenų suvestinės lentelė")
+
+- Skirtuke **Duomenys** rodoma lentelė su išsamia informacija apie atskirus objekto įrašus. Pateikta informacija priklauso nuo objekto duomenų tipo.
+
+> [!div class="mx-imgBorder"]
+> ![Pasirinkite objektą.](media/data-manager-entities-data.png "Pasirinkti objektą")
+
+- **Skirtukas Ataskaitos** (galimas kai kuriems objektams) leidžia vizualizuoti duomenis sukuriant ataskaitą ir apima šiuos stulpelius:
+
+  - **Ataskaitos pavadinimas** : ataskaitos pavadinimas.
+  - **Sukurta** : objekto sukūrusio asmens vardas.
+  - **Sukurta** : objekto sukūrimo data ir laikas.
+  - **Redagavo** : objekto modifikavusio asmens vardas.
+  - **Redaguota** : objekto modifikavimo data ir laikas. 
 
 ## <a name="entity-specific-information"></a>Konkretaus objekto informacija
 
@@ -73,8 +79,7 @@ Toliau nurodyti įtrauktų duomenų patikrinimai, skirti pažeistiems įrašams 
 
 - Lauko reikšmė neatitinka jo stulpelio duomenų tipo.
 - Laukuose yra simbolių, dėl kurių stulpeliai neatitinka numatytos schemos. Pavyzdžiui: neteisingai suformatuotos citatos, nepakeistos citatos arba naujų eilučių simboliai.
-- Jei yra datos ir laiko/datos/datos ir laiko nuokrypio stulpelių, jų formatą reikia nurodyti modelyje, jei jie neatitinka standartinio ISO formato.
-
+- Jei yra datetime/date/datetimeoffset stulpelių, jų formatas turi būti nurodytas modelyje, jei jis neatitinka standartinio ISO formato.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

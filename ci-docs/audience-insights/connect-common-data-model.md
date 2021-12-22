@@ -1,7 +1,7 @@
 ---
 title: Sujungti „Common Data Model“ duomenis su „Azure Data Lake“ paskyra
 description: Dirbkite su „Common Data Model“ duomenimis naudodami „Azure Data Lake Storage“.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033136"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900207"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Jungimasis prie „Common Data Model” aplanko naudojant „Azure Data Lake” klientą
 
@@ -30,7 +30,7 @@ ms.locfileid: "7033136"
 
 - „Azure Data Lake“, kurį norite prijungti ir iš kurio suvartoti duomenis turi būti tame pačiame „Azure“ regione kaip ir „Dynamics 365 Customer Insights“ aplinka. Ryšiai su „Common Data Model“ katalogu iš kito „Azure“ regiono duomenų telkinio nėra palaikomi. Norėdami sužinoti „Azure“ aplinkos regioną, eikite į **Administravimas** > **Sistema** > **Apie** publikos įžvalgose.
 
-- Duomenys laikomi interneto paslaugose gali būti laikomi kitoje vietoje, o ne ten, kur duomenys apdorojami ar laikomi „Dynamics 365 Customer Insights“. Importuodami arba prisijungdami prie duomenų, saugomų internetinėse tarnybose, sutinkate, kad duomenys gali būti perkeliami ir saugomi „Dynamics 365 Customer Insights“.  [Sužinokite daugiau „Microsoft“ patikimumo centre.](https://www.microsoft.com/trust-center)
+- Duomenys, saugomi internetinėse paslaugose, gali būti saugomi kitoje vietoje nei ten, kur duomenys tvarkomi ar saugomi Dynamics 365 Customer Insights.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse paslaugose, jūs sutinkate, kad duomenys gali būti perduodami ir saugomi Dynamics 365 Customer Insights su .  [Sužinokite daugiau "Microsoft" patikimumo centre](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Prisijungti prie „Common Data Model“ aplanko
 
@@ -38,12 +38,11 @@ ms.locfileid: "7033136"
 
 1. Pasirinkite **Įtraukti duomenų šaltinį**.
 
-1. Pasirinkite **Sujungti su „Common Data Model“ katalogu**, pasirinkite **Pavadinimas** duomenų šaltiniui ir rinkitės **Toliau**. Pavadinimų rekomendacijos: 
-   - Pradėti nuo raidės.
-   - Naudokite tik raides ir skaičius. Specialiųjų simbolių ir tarpų neleidžiama įvesti.
-   - Naudokite nuo 3 iki 64 simbolių.
+1. Pasirinkite **Azure duomenų ežero** saugykla, įveskite duomenų šaltinis **pavadinimą**, tada pasirinkite **Pirmyn**.
 
-1. Galite pasirinkti tarp naudojimo resursais pagrįstos parinkties ir prenumeravimu pagrįstos parinkties autentifikavimui. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Įveskite **Talpyklos** informaciją ir pasirinkite **Toliau**.
+   - Jei būsite paraginti, pasirinkite vieną iš duomenų rinkinių, susijusių su jūsų pramone, tada pasirinkite **Pirmyn**. 
+
+1. Galite pasirinkti tarp naudojimo resursais pagrįstos parinkties ir prenumeravimu pagrįstos parinkties autentifikavimui. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Įveskite **serverio adresą**, **pasirinkite prisijungti**, tada pasirinkite **Pirmyn**.
    > [!div class="mx-imgBorder"]
    > ![Dialogo langas, skirtas naujai „Azure Data Lake“.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ ms.locfileid: "7033136"
    > [!NOTE]
    > Sąraše nebus rodomas bet koks failas model.json arba jison duomenų šaltinis su kitu aplinkos sąrašu.
 
-1. Gausite galimų objektų sąrašą pasirinktame model.json arba sertifikato.json faile. Galite peržiūrėti ir pasirinkti objektus iš galimų objektų sąrašo, o tada pasirinkti **Įrašyti**. Visi pasirinkti objektai bus vartojami iš naujo duomenų šaltinio.
+1. Pasirinktame model.json arba manifest.json faile matysite galimų objektų sąrašą. Peržiūrėkite ir pasirinkite iš galimų objektų sąrašo, tada pasirinkite **Įrašyti**. Visi pasirinkti objektai bus vartojami iš naujo duomenų šaltinio.
    > [!div class="mx-imgBorder"]
    > ![Dialogo langas, kuriame pateikiamas sąrašas su objektais iš model.json failo.](media/review-entities.png)
 
-8. Nurodykite, kuriems duomenų objektams norite įjungti duomenų profiliavimą ir pasirinkite **Įrašyti**. Duomenų profiliavimas įgalina analizės ir kitas galimybes. Galite pasirinkti visą objektą, kuris pasirenka visus atributus iš objekto ar pasirinkite tam tikrus jūsų pasirinkimo atributus. Pagal nutylėjimą, nėra jokio objekto įjungto duomenų profiliavimui.
+8. Nurodykite, kuriuos duomenų objektus norite įgalinti duomenų profiliavimą, tada pasirinkite **Įrašyti**. Duomenų profiliavimas įgalina analizės ir kitas galimybes. Galite pasirinkti visą objektą, kuris pasirenka visus atributus iš objekto ar pasirinkite tam tikrus jūsų pasirinkimo atributus. Pagal nutylėjimą, nėra jokio objekto įjungto duomenų profiliavimui.
    > [!div class="mx-imgBorder"]
    > ![Teksto laukelis rodo duomenų profiliavimą.](media/dataprofiling-entities.png)
 

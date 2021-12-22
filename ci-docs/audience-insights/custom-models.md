@@ -1,7 +1,7 @@
 ---
 title: Pasirinktiniai mašininio mokymo modeliai | „Microsoft Docs“
 description: Darbas su pasirinktiniais modeliais iš „Azure“ mašininio mokymosi „Dynamics 365 Customer Insights“.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032952"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881794"
 ---
 # <a name="custom-machine-learning-models"></a>Pasirinktiniai mašininio mokymo modeliai
+
+> [!NOTE]
+> Parama mašininis mokymas Studijai (klasikinis) baigsis 2024 m. rugpjūčio 31 d. Rekomenduojame iki tos datos pereiti prie ["Azure](/azure/machine-learning/overview-what-is-azure-machine-learning) mašininis mokymas".
+>
+> Nuo 2021 m. gruodžio 1 d. negalėsite kurti naujų mašininis mokymas Studio (klasikinių) išteklių. Iki 2024 m. rugpjūčio 31 d. galite toliau naudoti esamus mašininis mokymas Studio (klasikinius) išteklius. Daugiau informacijos ieškokite [Migrate to Azure mašininis mokymas](/azure/machine-learning/migrate-overview).
+
 
 **Įžvalga** > **Tinkinti modeliai** leidžia jums valdyti darbo eigas pagrįstas „Azure“ mašininio mokymosi modeliais. Darbo eigos padeda jums pasirinkti duomenis, iš kurių norite sukurti įžvalgas ir padaryti žemėlapių rezultatus į jūsų suvienodinto kliento duomenis. Dėl išsamesnės informacijos apie tinkintų ML modelių kūrimą, žr. [Naudoti „Azure“ mašininiu mokymusi pagrįstus modelius](azure-machine-learning-experiments.md).
 
@@ -26,7 +32,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- Šiuo metu ši funkcija palaiko žiniatinklio paslaugas publikuotas per [mašininio mokymosi studiją (įprastą versiją)](https://studio.azureml.net) ir [„Azure“ mašininio mokymosi bendrus vamzdynus](/azure/machine-learning/concept-ml-pipelines).
+- Ši funkcija palaiko žiniatinklio tarnybas, paskelbtas per ["Azure mašininis mokymas" paketinius vamzdynus](/azure/machine-learning/concept-ml-pipelines).
 
 - Jums reikia „Azure Data Lake Gen2“ talpinimo paskyros susietos su „Azure“ studijos elementu siekiant naudoti šią funkciją. Daugiau informacijos rasite [„Azure Data Lake Storage Gen2“ saugyklos abonemento kūrimas](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
 1. Jei jūsų „Azure Machine Learning“ prenumerata yra kitame nuomininke nei „Customer Insights“, pasirinktai organizacijai pasirinkite **Prisijungti** naudodami savo kredencialus.
 
-1. Pasirinkite **Darbo aplinkas** susietas su jūsų žiniatinklio paslaugomis. Esama dviejų išvardytų skyrių, „Azure“ mašininio mokymosi v1 (mašininio mokymosi studijos (įprastos versijos)) ir „Azure“ mašininio mokymosi v2 („Azure“ mašininio mokymosi). Jei nesate tikras, kuri darbo aplinka tinka jūsų mašininio mokymosi studijai (įprastos) versijos žiniatinklio paslaugoms, pasirinkite **Bet kuris**.
+1. Pasirinkite **Darbo aplinkas** susietas su jūsų žiniatinklio paslaugomis. 
 
-1. Pasirinkite mašininio mokymosi studijos (įprastos versijos) žiniatinklio paslaugas arba „Azure“ mašininio mokymosi vamzdyną **Žiniatinklio paslaugos, turinčios jūsų modelio** iškrentantį meniu. Tada pasirinkite **Toliau**.
-   - Sužinokite apie [žiniatinklio paslaugų publikavimą mašininio mokymosi studijoje (įprastoje versijoje)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Sužinokite apie [„Azure“ mašininio mokymosi vamzdyno publikavimą naudojant kūrimo įrankį](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ar [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsų vamzdynas turi būti publikuojamas skyriuje [vamzdyno galutinis taškas](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. **Žiniatinklio tarnyboje, kurioje yra modelio išplečiamasis meniu, pasirinkite "Azure mašininis mokymas" pardavimo galimybių.** Tada pasirinkite **Toliau**.    
+   Sužinokite apie [„Azure“ mašininio mokymosi vamzdyno publikavimą naudojant kūrimo įrankį](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ar [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsų vamzdynas turi būti publikuojamas skyriuje [vamzdyno galutinis taškas](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Kiekvienai **Žiniatinklio paslaugos įvesčiai**, pasirinkite atitinkantį **Objektą** iš publikos įžvalgų ir pasirinkite **Kitas**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
    > ![Darbo eigos konfigūravimas.](media/intelligence-screen2-updated.png "Darbo eigos konfigūravimas")
 
 1. **Modelio išvesties parametrų** žingsnyje nustatykite tolesnes ypatybes:
-   - Mašininio mokymosi studija (įprasta versija)
-      1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti žiniatinklio išvesties rezultatus.
-   - „Azure“ mašininis mokymas
       1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti vamzdyno išvestį.
       1. Pasirinkite jūsų bendro vamzdyno iš iškrentančio meniu **Išvesties duomenų talpinimo parametro pavadinimas**.
       1. Pasirinkite jūsų bendro vamzdyno iš iškrentančio meniu **Išvesties kelio parametro pavadinimas**.
@@ -93,9 +95,6 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 1. Kiekvienai **Žiniatinklio paslaugos įvesčiai**, galite naujinti atitikties **Objektą** iš publikos įžvalgų. Tada pasirinkite **Toliau**.
 
 1. **Modelio išvesties parametrų** žingsnyje nustatykite tolesnes ypatybes:
-   - Mašininio mokymosi studija (įprasta versija)
-      1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti žiniatinklio išvesties rezultatus.
-   - „Azure“ mašininis mokymas
       1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti vamzdyno išvestį.
       1. Pasirinkite **Išvesties duomenų talpinimo parametro pavadinimą** jūsų bandymo vamzdynui.
       1. Pasirinkite **Išvesties kelio parametro pavadinimą** jūsų bandymo vamzdynui.

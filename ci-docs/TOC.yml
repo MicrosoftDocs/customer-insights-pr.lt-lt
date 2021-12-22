@@ -4,7 +4,7 @@
   href: overview.md
 - name: Nemokama bandomoji versija
   items:
-    - name: Prisiregistruokite nemokamai bandomajai versijai
+    - name: Registracija norint naudoti nemokamą bandomąją versiją
       href: trial-signup.md
     - name: Su bandomąja versija susiję DUK
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Pridėkite „Common Data Model“ aplanką kaip duomenų šaltinį
           href: audience-insights/connect-common-data-model.md
-        - name: Pridėti Dataverse valdomų duomenų ežerą
+        - name: Įtraukite „Dataverse“ valdomą duomenų telkinį
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Duomenų šaltinių papildantysis naujinimas
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,7 +84,7 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Išplėstiniai adresai
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Įmonės duomenų gerinimas
+        - name: Išplėstiniai įmonės duomenys
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Papildykite su „Azure”„” žemėlapiais
           href: audience-insights/enrichment-azure-maps.md
@@ -92,8 +92,10 @@
           href: audience-insights/enrichment-here.md
         - name: Papildymas „Leadspace”
           href: audience-insights/enrichment-leadspace.md
-        - name: Papildymas naudojant „Experian”
+        - name: Praturtinkite su „Experian“
           href: audience-insights/enrichment-experian.md
+        - name: Praturtinti Office 365 duomenimis
+          href: audience-insights/enrichment-office.md
         - name: Papildykite su SFTP kliento importavimu
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmentai
@@ -144,8 +146,6 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Eksperimentai naudojant „Azure“ mašininį mokymą
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Eksperimentai su „Azure Machine Learning studio“
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: Prognozių valdymas
           href: audience-insights/manage-predictions.md
         - name: Segmentų kūrimas prognozių pagrindu
@@ -164,13 +164,13 @@
               href: audience-insights/export-autopilot.md
             - name: „Azure Blob Storage“
               href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Gen2
+            - name: „Azure Data Lake Storage Gen2“
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics"
+            - name: „Azure Synapse Analytics“
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: „Adobe” patirties platforma
+            - name: „Adobe Experience Platform”
               href: audience-insights/export-adobe-experience-platform.md
             - name: „Campaign Monitor“
               href: audience-insights/export-campaign-monitor.md
@@ -182,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: Dynamics 365 Sales
               href: audience-insights/export-dynamics365-sales.md
-            - name: Facebook skelbimų tvarkytuvas
+            - name: „Facebook“ skelbimų tvarkytuvas
               href: audience-insights/export-facebook.md
             - name: „Google Ads“
               href: audience-insights/export-google-ads.md
@@ -216,7 +216,7 @@
           items:
             - name: 'Kliento kortelės papildinys, skirtas „Dynamics 365”'
               href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (botas)
+            - name: „Microsoft Teams“ (robotas)
               href: audience-insights/export-teams-bot.md
             - name: Power Apps
               href: audience-insights/export-power-apps.md
@@ -240,13 +240,15 @@
               href: audience-insights/use-azure-key-vault.md
             - name: Susijungti su ADLS laikymo paskyra naudojant „Service Principal“
               href: audience-insights/connect-service-principal.md
+            - name: Eksportuoti diagnostikos žurnalus
+              href: audience-insights/diagnostics.md
     - name: Išplėtimas
       items:
         - name: Žiniatinklio duomenų integravimas iš įtraukimo įžvalgų
           href: audience-insights/integrate-engagement-insights.md
         - name: Objektų schemų peržiūra „Common Data Model”
           href: audience-insights/entity-schemas.md
-        - name: '"Customer Insights" duomenys Dataverse'
+        - name: „Customer Insights“ duomenys „Dataverse” platformoje
           href: audience-insights/customer-insights-dataverse.md
         - name: Dirbkite su API
           href: audience-insights/apis.md
@@ -268,23 +270,23 @@
       items:
         - name: Importuoti sutikimo duomenis
           href: consent-management/import-consent-data.md
-        - name: Nustatyti sutikimo duomenis ir taikyti sutikimo nuostatas
+        - name: Sutikimo duomenų nustatymas ir sutikimo nuostatų taikymas
           href: consent-management/set-consent-rules.md
     - name: Tvarkyti sutikimo duomenis
       items:
-        - name: Sutikimo taisyklių įgalinimas auditorijos įžvalgose
+        - name: Įgalinti sutikimo taisykles auditorijos įžvalgose
           href: audience-insights/activate-consent.md
         - name: Numatytųjų sutikimo taisyklių valdymas auditorijos įžvalgų segmentuose
           href: audience-insights/change-default-consent-rules.md
-    - name: Parametrų ir vartotojų valdymas
+    - name: Tvarkyti parametrus ir vartotojus
       items:
         - name: Konfigūruoti sistemos parametrus
           href: consent-management/system-settings.md
         - name: Vartotojų ir teisių valdymas
           href: consent-management/manage-users.md
-    - name: Sutikimo duomenų naudojimas
+    - name: Naudoti sutikimo duomenis
       items:
-        - name: Kurti prognozes su sutikimo duomenimis
+        - name: Prognozuoti su sutikimo duomenimis kūrimas
           href: consent-management/predictions-consent-data.md
 - name: Įtraukimo įžvalgos (peržiūros versija)
   items:
@@ -338,9 +340,9 @@
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Tinklo SDK pavyzdys
           href: engagement-insights/websdk-sample.md
-        - name: „Android“ SDK mokymo priemonė
+        - name: „Android“ SDK mokymai
           href: engagement-insights/get-started-android.md
-        - name: Android SDK mėginys
+        - name: „Android“ SDK pavyzdys
           href: engagement-insights/androidsdk-sample.md
         - name: „iOS“ SDK mokymo priemonė
           href: engagement-insights/get-started-ios.md

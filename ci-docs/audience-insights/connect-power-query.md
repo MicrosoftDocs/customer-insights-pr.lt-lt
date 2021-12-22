@@ -1,7 +1,7 @@
 ---
-title: Suvartokite duomenis per „Power Query“ jungtį
+title: Duomenų praryjimas per "Power Query" jungtį (Video)
 description: Duomenų šaltinių jungtys pagal „Power Query“.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732228"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903850"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Prisijungimas prie „Power Query“ duomenų šaltinio
 
-„Power Query“ siūlo platų jungčių pasirinkimą duomenims įtraukti. Daugumą šių jungčių palaiko Dynamics 365 Customer Insights. Duomenų šaltiniai pagal „Power Query“ jungtis paprastai įtraukiami atliekant kitame skyriuje aprašytus veiksmus. Tačiau, atsižvelgiant į naudojamą jungtį, reikalinga kita informacija. Daugiau informacijos ieškokite dokumentacijoje apie konkrečias jungtis skyriuje [„Power Query“ jungčių aprašas](/power-query/connectors/).
+„Power Query“ siūlo platų jungčių pasirinkimą duomenims įtraukti. Daugelį šių jungčių palaiko „Dynamics 365 Customer Insights“. 
+
+Duomenų šaltinių pridėjimas, pagrįstas "Power Query" jungtimis, paprastai seka šiame skyriuje nurodytus veiksmus. Tačiau, atsižvelgiant į naudojamą jungtį, reikalinga kita informacija. Norėdami sužinoti daugiau, peržiūrėkite dokumentaciją apie atskiras jungtis ["Power Query" jungties nuorodoje](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ ms.locfileid: "7732228"
 
 1. Pasirinkite **Įtraukti duomenų šaltinį**.
 
-1. Pasirinkite metodą **Importuoti duomenis** ir pasirinkite **Toliau**.
+1. Pasirinkite **Microsoft "Power Query", tada** pasirinkite **Pirmyn**.
 
-1. Nurodykite duomenų šaltinio **Pavadinimas** ir pasirinkite **Toliau**, kad sukurtumėte duomenų šaltinį. Pavadinimų rekomendacijos: 
-   - Pradėti nuo raidės.
-   - Naudokite tik raides ir skaičius. Specialiųjų simbolių ir tarpų neleidžiama įvesti.
-   - Naudokite nuo 3 iki 64 simbolių.
+1. Nurodykite duomenų šaltinio **Pavadinimas** ir pasirinkite **Toliau**, kad sukurtumėte duomenų šaltinį.
 
-1. Pasirinkite vieną iš [galimų jungčių](#available-power-query-data-sources). Šiame pavyzdyje pasirinksime jungtį **Tekstas/CSV**.
+1. Pasirinkite vieną iš [galimų jungčių](#available-power-query-data-sources). Šiame pavyzdyje pasirenkame **teksto / CSV** jungtį.
 
 1. Įveskite reikiamą pasirinktos jungties informaciją dalyje **Ryšio parametrai** ir pasirinkite **Toliau**, kad peržiūrėtumėte duomenis.
 
@@ -50,7 +49,7 @@ ms.locfileid: "7732228"
 
 1. Galite įtraukti papildomų objektų į savo duomenų šaltinį, dialogo lange **Redaguoti užklausas** pasirinkdami **Gauti duomenis**.
 
-   Primygtinai rekomenduojama atlikti šiuos pertvarkymus:
+   Rekomenduojame naudoti šias transformacijas:
 
    - Jei duomenis įtraukiate iš CSV failo, pirmojoje eilutėje dažnai pateikiamos antraštės. Pereikite prie **Transformavimo lentelė** ir pasirinkite **Naudoti antraštes kaip pirmąją eilutę**.
    - Užtikrinkite, kad tinkamai nustatytas duomenų tipas.
@@ -61,7 +60,7 @@ ms.locfileid: "7732228"
 
 ## <a name="available-power-query-data-sources"></a>Pasiekiami „Power Query“ duomenų šaltiniai
 
-Žr. skyrių [„Power Query“ jungčių aprašas](/power-query/connectors/), kuriame pateikiamas aktualus jungčių, kurias galite pasirinkti importuodami duomenis į „Customer Insights“, sąrašas. 
+[Peržiūrėkite](/power-query/connectors/) jungčių, kurias galite naudoti duomenims importuoti į "Customer Insights", "Power Query" jungties nuorodą. 
 
 Jungtys su varnele stulpelyje **„Customer Insights“ (duomenų srautai)** gali būti naudojamos kuriant naujus duomenų šaltinius pagal „Power Query“. Peržiūrėkite konkrečios jungties dokumentaciją ir sužinokite daugiau apie būtinąsias sąlygas, apribojimus ir kitą išsamią informaciją.
 
@@ -70,7 +69,7 @@ Jungtys su varnele stulpelyje **„Customer Insights“ (duomenų srautai)** gal
 > [!NOTE]
 > Gali būti neįmanoma keisti duomenų šaltinius, kurie dabar yra naudojami viename iš programos procesų (pvz., *segmentavimo*, *sutapdinimo* arba *suliejimo*). 
 >
-> Naudodamiesi puslapiu **Parametrai** galite sekti kiekvieno iš aktyvių procesų eigą. Kai procesas bus užbaigtas, galite grįžti į puslapį **Duomenų šaltiniai** ir atlikti pakeitimus.
+> Puslapyje **Parametrai** galite stebėti kiekvieno aktyvaus procesų eigą. Kai procesas bus užbaigtas, galite grįžti į puslapį **Duomenų šaltiniai** ir atlikti pakeitimus.
 
 1. Publikos įžvalgose, eikite į **Duomenys** > **Duomenų šaltiniai**.
 

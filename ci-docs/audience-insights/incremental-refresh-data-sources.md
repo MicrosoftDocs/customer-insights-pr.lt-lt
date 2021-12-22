@@ -1,7 +1,7 @@
 ---
 title: Padidėjimo paleidimas iš naujo „Power Query“ pagrįstiems duomenų šaltiniams
 description: Atnaujinkite naujus ir atnaujintus „Power Query“ pagrįstų didelių duomenų šaltinių duomenis.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
-ms.translationtype: HT
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377844"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900278"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>„Power Query“ pagrįstų duomenų šaltinių papildantysis naujinimas
+
+Šiame straipsnyje aptariama, kaip konfigūruoti papildomą duomenų šaltinių atnaujinimą pagal "Power Query".
 
 Papildantysis duomenų šaltinių naujinimas teikia toliau nurodytus privalumus.
 
@@ -30,9 +32,9 @@ Publikos įžvalgos leidžia padidinti paleidimą iš naujo duomenų šaltiniams
 
 1. [Kurkite „Power Query“ pagrįstą naują duomenų šaltinį](connect-power-query.md).
 
-1. Įveskite duomenų šaltinio pavadinimą.
+1. Nurodykite **duomenų** šaltinis pavadinimą.
 
-1. Pažymėkite duomenų šaltinį, palaikantį papildantįjį naujinimą, pvz., „Azure“ SQL duomenų bazę.
+1. Pasirinkite duomenų šaltinis, palaikančią papildomą atnaujinimą, pvz., ["Azure SQL" duomenų bazę](/power-query/connectors/azuresqldatabase).
 
 1. Pažymėkite rinktinus objektus arba lenteles.
 

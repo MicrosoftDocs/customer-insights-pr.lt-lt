@@ -1,7 +1,7 @@
 ---
 title: Aplinkų kūrimas ir valdymas
 description: Sužinokite, kaip prisijungti prie paslaugų ir kaip valdyti aplinkas.
-ms.date: 11/12/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799646"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892394"
 ---
 # <a name="manage-environments"></a>Aplinkų valdymas
 
@@ -40,18 +40,21 @@ Galite redaguoti kai kurią esamos aplinkos informaciją.
 
 Daugiau informacijos apie aplinkos parametrus žr. [Naujos aplinkos kūrimas](create-environment.md).
 
-## <a name="connect-to-microsoft-dataverse"></a>Prisijungti prie Microsoft Dataverse
+## <a name="connect-to-microsoft-dataverse"></a>Prisijungti prie „Microsoft Dataverse“
    
-**Microsoft Dataverse veiksmas leidžia sujungti** "Customer Insights" su Dataverse aplinka.
+Šis **Microsoft Dataverse** veiksmas leidžia „Customer Insights“ susieti su „Dataverse“ aplinka.
 
-Norėdami naudoti prognozė modelius, [konfigūruokite](predictions-overview.md#out-of-box-models) duomenų bendrinimą su Dataverse. Arba galite įgalinti duomenų nurijimą iš vietinis duomenų šaltinių, pateikdami jūsų organizacijos administruojamos Microsoft Dataverse aplinkos URL. Pasirinkite **Įgalinti duomenų** bendrinimą, kad galėtumėte bendrinti "Customer Insights" išvesties duomenis su "Dataverse" valdomų duomenų ežeru.
+Jei norite [naudoti iš anksto anksto prognozė modelius](predictions-overview.md#out-of-box-models) konfigūruokite duomenų bendrinimą su „Dataverse“. Arba galite įjungti duomenų nurijimas iš vietinis šaltinių, pateikdami jūsų „Microsoft Dataverse“ organizacijos administruojami aplinkos URL. Pasirinkite **Įjungti duomenų bendrinimą**, jei „Customer Insights“ išvesties duomenis norite bendrinti su „Dataverse“ valdomu „Data Lake“.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigūravimo parinktys, leidžiančios bendrai naudoti duomenis su Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Klientų įžvalgos ir Dataverse turi būti tame pačiame regione, kad būtų galima bendrinti duomenis.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
 
 > [!NOTE]
 > Jūsų „Customer Insights“ aplinkos konfigūracija nepalaiko šių duomenų bendrinimo scenarijų:
-> - Jei visus duomenis įrašysite savo Azure Data Lake Storage, negalėsite įgalinti duomenų bendrinimo naudodami "Dataverse" valdomą duomenų ežerą.
-> - Jei įgalinsite duomenų bendrinimą su Dataverse, negalėsite [sukurti nuspėjamų arba trūkstamų objekto reikšmių](predictions.md).
+> - Jei visus duomenis įrašysite savo, negalėsite įjungti bendro duomenų bendrinimo su valdomojo „Azure Data Lake Storage“ duomenų „Dataverse“ sutvarkytas „Data Lake“.
+> - Įjungę duomenų bendrinimą su „Dataverse“, negalėsite kurti prognozuojamų [arba trūkstamų objekto reikšmių](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Aplinkos konfigūracijos kopijavimas
 
@@ -81,7 +84,7 @@ Kopijuojami šie konfigūracijos parametrai:
 - Klientų profiliai.
 - Duomenų šaltinio kredencialai. Turėsite pateikti kiekvieno duomenų šaltinio kredencialus ir rankiniu būdu atnaujinti duomenų šaltinius.
 
-- Duomenų šaltiniai iš aplanko Bendrasis duomenų modelis ir Dataverse valdomų duomenų ežeras. Šiuos duomenų šaltinius turėsite kurti rankiniu būdu tuo pačiu pavadinimu kaip ir šaltinio aplinka.
+- Duomenų šaltiniai iš bendrojo duomenų modelio aplanko ir „Dataverse“ valdomo „data lake“. Šiuos duomenų šaltinius turėsite kurti rankiniu būdu tuo pačiu pavadinimu kaip ir šaltinio aplinka.
 
 Kai kopijuojate aplinką, pamatysite patvirtinimo pranešimą, kad sukurta nauja aplinka. Pasirinkite **Eiti į duomenų šaltinius**, kad peržiūrėtumėte duomenų šaltinių sąrašą.
 

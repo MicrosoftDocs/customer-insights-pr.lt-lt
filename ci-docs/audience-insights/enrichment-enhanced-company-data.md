@@ -1,7 +1,7 @@
 ---
 title: Įmonės duomenų tobulinimas
 description: Praturtinkite ir normalizuokite įmonės duomenis naudodami "Microsoft" modelius.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,25 +9,25 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813928"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927592"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Įmonės profilių praturtinimas patobulintais įmonės duomenimis
 
-Naudokite "Microsoft" modelius ir sukompiliuotus įmonės duomenis, kad ištaisytumėte, papildytumėte ir standartizuotumėte savo įmonės profilius. Naudosime ["Common Data Model"](/common-data-model/schema/core/applicationcommon/account) formatą, kad gautume daugiau tikslumo ir įžvalgų.
+Naudokite "Microsoft" modelius ir surinktus įmonės duomenis įmonės profiliams taisyti, papildyti ir standartizuoti. Mes naudosime [bendro duomenų modelio](/common-data-model/schema/core/applicationcommon/account) formatą, kad būtų galima geriau tikslumui ir įžvalgoms.
 
-## <a name="how-we-enhance-company-data"></a>Kaip mes tobuliname įmonės duomenis
+## <a name="how-we-enhance-company-data"></a>Kaip pagerinti įmonės duomenis
 
-Mūsų modelis pereina dviejų etapų procesą, kad pagerintų įmonės profilį. Pirma, jis normalizuoja įmonės pavadinimą. Pavyzdžiui, *"Microsoft Corp"* bus pataisyta ir standartizuota *"Microsoft Corporation"*. Ji bando rasti atitikmenį "Microsoft" sukompiliuotuose įmonės duomenyse. Radę atitikmenį, įmonės profilį praturtiname informacija iš mūsų surinktų įmonės duomenų, įskaitant įmonės pavadinimą.
+Mūsų modelis pereina dviejų etapų procesą, kad pagerintų įmonės profilį. Pirma, jis normalizuoja įmonės pavadinimą. Pavyzdžiui, *"Microsoft Corp"* bus pataisyta ir standartizuota *su "Microsoft Corporation"*. Jis bando rasti atitikmenį "Microsoft" surinktuose įmonės duomenyse. Jei randamas atitikmuo, įmonės profilį praturtiname informacija iš mūsų surinktų įmonės duomenų, įskaitant įmonės pavadinimą.
 
 
 ### <a name="example"></a>Pavyzdžiui
 
-Jūsų įmonės informacija gali nesivadovauti standartizuotu formatu ir joje gali būti rašybos klaidų. Modelis bando išspręsti šias problemas ir sukurti nuoseklią informaciją.
+Jūsų įmonės informacija gali nesilaikyti standartizuoto formato ir joje gali būti rašybos klaidų. Modelis bando išspręsti šias problemas ir sukurti nuoseklią informaciją.
 
 ```Input
 Microsft
@@ -47,28 +47,28 @@ Microsft
 
 ## <a name="limitations"></a>Apribojimai
 
-Patobulintais duomenimis taikomi keli apribojimai. Modelis nepalaiko toliau pateikto sąrašo elementų.
+Yra keletas apribojimų su patobulintais duomenimis. Toliau pateikto sąrašo elementų nepalaiko modelis.
 
 1.  Patvirtinkite įmonės tapatybę. Netikriname, ar įvestis yra esama organizacija, ar įmonė naudoja išvestį kaip standartinį pavadinimą.
-2.  Visapusiškai apimti įmones visame pasaulyje. "Microsoft" surinkti įmonės duomenys apima visą pasaulį, tačiau daugiausia aprėpties yra Australijoje, Kanadoje, Jungtinėje Karalystėje ir Jungtinėse Amerikos Valstijose.
+2.  Visapusiškai apima įmones visame pasaulyje. "Microsoft" surinkti įmonės duomenys turi pasaulinę aprėptį, tačiau labiausiai apima Australiją, Kanadą, Jungtinę Karalystę ir Jungtines Amerikos Valstijas.
 3.  Standartizuoti įmonės adresus visame pasaulyje. Šiuo metu palaikome adresų standartizavimą šiose šalyse ar regionuose: Australijoje, Kanadoje, Prancūzijoje, Vokietijoje, Italijoje, Japonijoje, Jungtinėje Karalystėje ir Jungtinėse Amerikos Valstijose.
-4.  Garantuoti duomenų tikslumą arba šviežumą. Kadangi verslo informacija dažnai keičiasi, negalime garantuoti, kad pateikti patobulinti įmonės duomenys visada bus tikslūs arba atnaujinti.
+4.  Užtikrinti duomenų tikslumą ar šviežumą. Kadangi verslo informacija dažnai keičiasi, negalime garantuoti, kad pateikti patobulinti įmonės duomenys visada yra tikslūs ar naujausi.
 
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 
 1. Eikite į **Duomenys** > **Papildymas**.
 
-1. **Plytelėje** Patobulinti įmonės duomenys pasirinkite Praturtinti mano **duomenis**.
+1. Pasirinkite **Praturtinti mano duomenis** **išplėstinių įmonės duomenų** plytelėje.
 
-   :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Sodrinimo plytelės įmonės duomenų sodrinimo centre.":::
+   :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Įmonės duomenų sodrinimo plytelė įmonės duomenų sodrinimo centre.":::
 
 1. Pažymėkite **Kliento duomenų rinkinį** ir pasirinkite objektą, kuriame yra norimi papildyti adresai. Galite pasirinkti *Kliento* objektą, kad adresai būtų papildyti visuose jūsų klientų profiliuose, arba pasirinkti segmento objektą, kad adresai būtų papildyti tik to segmento klientų profiliuose.
 
-1. Pasirinkite, kokio tipo laukai iš jūsų įmonės profilių turėtų būti naudojami derinant juos su "Microsoft" sudarytais įmonės duomenimis. Šis pasirinkimas turės įtakos žymėjimo laukeliams, prie kurių turite prieigą atlikdami kitą veiksmą.
+1. Pasirinkite, kokio tipo laukai iš jūsų įmonės profilių turėtų būti naudojami norint suderinti su "Microsoft" surinktais įmonės duomenimis. Šis pasirinkimas turės įtakos žymėjimo laukeliams, prie kurių turite prieigą atlikdami kitą veiksmą.
 
-1.  Susiekite įmonės laukus iš vieningo kliento objekto. Kuo daugiau pagrindinių identifikatorių ir laukų susiejate, tuo didesnė tikimybė, kad atitikimo lygis bus didesnis.
+1.  Susiekite įmonės laukus iš vieningo kliento objekto. Kuo daugiau pagrindinių identifikatorių ir laukų susiejate, tuo didesnė tikimybė, kad atitiks.
 
-    :::image type="content" source="media/enhanced-company-data-mapping.png" alt-text="Duomenų susiejimo veiksmas konfigūruojant įmonės sodrinimą.":::
+    :::image type="content" source="media/enhanced-company-data-mapping.png" alt-text="Duomenų susiejimo veiksmas konfigūruojant įmonės sodrinimo.":::
 
 1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
 
@@ -84,7 +84,17 @@ Pasibaigus papildymo procesui, galite peržiūrėti naujai papildytus klientų p
 
 Išsamų kiekvieno papildyto profilio rodinį galite pasiekti pasirinkę **Peržiūrėti papildytus duomenis**.
 
-## <a name="next-steps"></a>Kiti veiksmai
+### <a name="overview-card"></a>Apžvalgos kortelė
+
+Apžvalgos kortelėje rodoma išsami informacija apie sodrinimo aprėptį. 
+
+* **Klientai apdoroti ir pakeisti** : sėkmingai praturtintų klientų profilių skaičius.
+
+* **Klientai apdoroti ir nepakeitti** : klientų profilių, kurie buvo pripažinti, bet nepakeitė, skaičius. Paprastai tai atsitinka, kai įvesties duomenys yra galiojantys ir negali būti patobulinti praturtinus.
+
+* **Klientai neapdoroti ir nepakeitti** : neatpažintų profilių skaičius. Paprastai įvesties duomenims, kurie yra netinkami arba nepalaikomi sodrinimo.
+
+## <a name="next-steps"></a>Paskesni veiksmai
 
 [!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 

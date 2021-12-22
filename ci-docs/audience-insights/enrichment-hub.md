@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770134"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884226"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientų profilių papildymas (peržiūra)
 
@@ -34,7 +34,7 @@ Skirtuke **Atrasti** rasite visas palaikomas gerinimo parinktis.
 - [Rūšys](enrichment-microsoft.md), kurias teikia „Microsoft“
 - [Pomėgiai](enrichment-microsoft.md), kuriuos teikia „Microsoft“
 - [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft” 
-- [Demografiniai duomenys](enrichment-experian.md), pateikti „Experian“
+- [Demografiniai](enrichment-experian.md) duomenys pateikti „Experian“
 - [Tinkinti duomenys](enrichment-SFTP-custom-import.md) per „Secure File Transfer Protocol“ (SFTP) 
 - [„Azure” žemėlapiai](enrichment-azure-maps.md), kuriuos teikia „Microsoft”
 
@@ -42,10 +42,11 @@ Skirtuke **Atrasti** rasite visas palaikomas gerinimo parinktis.
 
 - [Bendrovės duomenys](enrichment-leadspace.md) pateikti „Leadspace“
 - [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft” 
-- [Patobulinti įmonės](enrichment-enhanced-company-data.md) duomenys, kuriuos pateikė "Microsoft"
+- [Patobulinti](enrichment-enhanced-company-data.md) "Microsoft" teikiami įmonės duomenys
 - [Vietos duomenys](enrichment-here.md) pateikti „HERE Technologies“ 
 - [Tinkinti duomenys](enrichment-SFTP-custom-import.md) per „Secure File Transfer Protocol“ (SFTP) 
 - [„Azure” žemėlapiai](enrichment-azure-maps.md), kuriuos teikia „Microsoft”
+- ["Microsoft" pateikti abonemento įtraukimo duomenys](enrichment-office.md)
 
 ---
 
@@ -77,7 +78,7 @@ Objektas, kurį reikia papildyti, nurodomas papildymo konfigūracijoje, o tai ju
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Žiūrėti papildymo proceso eigą
 
-Galite rasti informacijos apie papildymo apdorojimą, įskaitant jo būseną ir galimas problemas jį atnaujinant arba pasibaigus atnaujinimui. Sužinokite, kurie procesai naudojami norint atnaujinti papildymą ir procesų vykdymo trukmes. Sodrinimo būsena palaikoma Experian, "Leadspace", "HERE Technologies", "SFTP Import" ir "Azure Maps".
+Galite rasti informacijos apie papildymo apdorojimą, įskaitant jo būseną ir galimas problemas jį atnaujinant arba pasibaigus atnaujinimui. Sužinokite, kurie procesai naudojami norint atnaujinti papildymą ir procesų vykdymo trukmes. Papildymo būseną palaiko „Experian”, „Leadspace”, HERE Technologijos, SFTP Importavimas ir „Azure” žemėlapiai.
 
 Norėdami peržiūrėti papildymo būseną
 

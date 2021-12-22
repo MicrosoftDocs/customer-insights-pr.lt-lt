@@ -1,20 +1,20 @@
 ---
-title: Kliento kortelės papildinys, skirtas „Dynamics 365” programoms
+title: Kliento kortelės priedas, skirtas "Dynamics 365" taikomoms programoms (Video)
 description: Šiame papildinyje galite rodyti duomenis iš auditorijos įžvalgų „Dynamics 365” programose.
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
-ms.translationtype: MT
+ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
+ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792037"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "7921875"
 ---
 # <a name="customer-card-add-in-preview"></a>Papildinys Kliento kortelė (peržiūra)
 
@@ -27,20 +27,20 @@ Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ prog
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Papildinys veikia tik su „Dynamics 365” modeliu pagrįstomis programomis, pavyzdžiui, „Sales” arba „Customer Service” 9.0 arba naujesne versija.
-- Kad jūsų "Dynamics 365" duomenys būtų susieti su auditorijos įžvalgomis, kurias klientai turi pateikti, juos reikia [nuryti iš "Dynamics 365" programos naudojant Microsoft Dataverse jungtį](connect-power-query.md).
+- Norint, kad jūsų „Dynamics 365” duomenys būtų susieti su auditorijos įžvalgų kliento profiliais, jie turi būti [įtraukti iš „Dynamics 365” programos naudojant „Microsoft Dataverse” jungtį](connect-power-query.md).
 - Kad būtų galima matyti duomenis, visi „Dynamics 365” Kliento kortelės papildinio vartotojai turi būti [įtraukti kaip vartotojai](permissions.md) į auditorijos įžvalgas.
 - [Sukonfigūruotos ieškos ir filtravimo galimybės](search-filter-index.md) yra reikalingos auditorijos įžvalgose, kad veiktų duomenų peržvalga.
 - Kiekvienas papildinio valdiklis remiasi tam tikrais auditorijos įžvalgų duomenimis. Kai kuriuos duomenis ir valdiklius galima naudoti tik konkrečių tipų aplinkose. Papildinyje konfigūracija informuos, ar valdiklio nėra dėl pasirinkto aplinkos tipo. Sužinokite daugiau apie [aplinkos naudojimo atvejus](work-with-business-accounts.md).
   - **Matavimo valdiklis**: reikia [sukonfigūruotų kliento](measures.md) atributų tipo matų.
-  - **Intelekto valdiklis**: Jam reikia duomenų, sugeneruotų naudojant [prognozes](predictions.md) ar [tinkintus modelius](custom-models.md).
+  - **Žvalgybos valdiklis** : reikia duomenų, sugeneruotų naudojant [prognozes arba pasirinktinius modelius](predictions-overview.md).
   - **Išsamios kliento informacijos valdymas**: visi profilio laukai pasiekiami vieningoje kliento profilyje.
-  - **Papildymo valdiklis**: reikalingi aktyvieji [papildymai](enrichment-hub.md) pritaikyti klientų profiliams. Kortelės priedas palaiko šiuos sodrinimo ženklus: [...](enrichment-microsoft.md) "Microsoft" teikiamus prekės [...](enrichment-microsoft.md) ženklus, "Microsoft" pateiktus pomėgius.
+  - **Papildymo valdiklis**: reikalingi aktyvieji [papildymai](enrichment-hub.md) pritaikyti klientų profiliams. Kortelės priedas palaiko šiuos papildymus: [...](enrichment-microsoft.md) "Microsoft" teikiami prekių ženklai, [...](enrichment-microsoft.md) "Microsoft" pateikti interesai ir ["Office" įtraukimo duomenys,](enrichment-office.md) kuriuos teikia "Microsoft".
   - **Kontaktų valdiklis**: būtinas kontaktų tipo semantinio objekto aprašas.
   - **Laiko juostos valdymas**: Jam būtinos [konfigūruotos veiklos](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Kliento kortelės papildinio diegimas
 
-Kliento kortelės papildinys yra sprendimas, skirtas „Dynamics 365 Customer Engagement“ programoms. Norėdami įdiegti sprendimą, eikite į „AppSource“ ir ieškokite **„Dynamics“ kliento kortelės**. Pasirinkite [papildinį Kliento kortelė svetainėje „AppSource“](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) ir pasirinkite **Gauti dabar**.
+Kliento kortelės papildinys yra sprendimas, skirtas „Dynamics 365” platformos „Customer Engagement” programoms. Norėdami įdiegti sprendimą, eikite į „AppSource“ ir ieškokite **„Dynamics“ kliento kortelės**. Pasirinkite [papildinį Kliento kortelė svetainėje „AppSource“](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) ir pasirinkite **Gauti dabar**.
 
 Norint įdiegti sprendimą gali reikėti prisijungti naudojant „Dynamics 365“ programos administratoriaus kredencialus. Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 
