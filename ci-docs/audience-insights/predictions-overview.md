@@ -1,21 +1,20 @@
 ---
 title: Apžvalga apie palaikomus prognozės scenarijus
 description: Prognozės scenarijų ir parinkčių, kuriuos apima „Dynamics 365 Customer Insights” taikomoji programa.
-ms.date: 09/06/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673972"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7978023"
 ---
 # <a name="predictions-overview"></a>Prognozių apžvalga
 
@@ -31,6 +30,7 @@ Lengviausias būdas pradėti prognozuoti duomenis yra iš anksto nustatyti model
 - [Produkto rekomendacija](predict-product-recommendation.md): Pasiūlo numatytąsias produktų rekomendacijas pagal pirkimo elgseną ir klientus su panašiais pirkimo modeliais.
 - [Prenumeratų praradimas](predict-subscription-churn.md): Prognozuoja, ar yra rizika, kad klientas nebenaudos jūsų įmonės prenumeruojamų produktų ar paslaugų.
 - [Operacijų praradimas](predict-transactional-churn.md): Numato, ar klientas nebepirks jūsų produktų ar paslaugų tam tikru skirtuoju laiku.
+- [Sentimentų analizė](sentiment-analysis.md) : analizuokite klientų atsiliepimų nuotaikas ir nustatykite dažnai paminėtus verslo aspektus.
 
 # <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
 
@@ -43,6 +43,6 @@ Lengviausias būdas pradėti prognozuoti duomenis yra iš anksto nustatyti model
 
 Jei organizacija jau naudoja mašininio mokymo scenarijus, pagrįstus „Azure” mašininio mokymo eksperimentais, „Customer Insights” pasirinktinių modelių funkcija padeda susieti informaciją. Kurkite darbo eigas, padedančias pasirinkti duomenis, iš kurių norite generuoti įžvalgas, ir susieti rezultatus su jūsų vieningaisiais klientų profiliais. Daugiau informacijos rasite [Pasirinktiniai mašininio mokymo modeliai](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>„AI Builder“ prognozė
+## <a name="ai-builder-prediction"></a>AI Builder prognozė
 
 Kartais duomenų rinkiniai yra neišsamūs ir trūksta tam tikrų reikšmių. „Customer Insights” gali padėti numatyti trūkstamas Kliento objekto ir segmentų reikšmes. Daugiau informacijos rasite [Užbaikite savo nepilnus duomenis naudodami prognozes](predictions.md).

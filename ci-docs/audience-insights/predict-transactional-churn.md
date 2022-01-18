@@ -1,7 +1,7 @@
 ---
-title: Sandorių prognozė (Video)
+title: Sandorių prognozė (yra vaizdo įrašas)
 description: Prognozuokite, ar klientas yra rizikingas taip, kad daugiau nebepirks jūsų produktų ar paslaugų.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904082"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967757"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Prenumeratų praradimo nuspėjimas (peržiūra)
 
@@ -103,10 +103,10 @@ Aplinkose, pagrįstose verslo klientais, galime prognozuoti kliento transakcijos
 
 1. Pasirinkite **Kliento nutraukimo modelis (peržiūra)** plytą ir pasirinkite **Naudoti šį modelį**.
 
-1. Srityje **Kliento praradimo modelis** pasirinkite **Operacija** ir rinkitės **Pradėti**.
+1. Srityje **Kliento apysavimo modelis (peržiūra)** pasirinkite **Operacija ir** pasirinkite **Pradėti**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Momentinė ekrano nuotrauka su pasirinkta transakcijos parinktimi, esančioje srityje Kliento modelis juosta.":::
-
+ 
 ### <a name="name-model"></a>Pavadinimo modelis
 
 1. Suteikite modeliui pavadinimą, kad atskirtumėte jį nuo kitų modelių.
@@ -117,11 +117,11 @@ Aplinkose, pagrįstose verslo klientais, galime prognozuoti kliento transakcijos
 
 ### <a name="define-customer-churn"></a>Apibrėžkite kliento praradimą
 
-1. Nustatykite dienų langą siekiant nuprognozuoti nutraukimą **Nustatyti klientus, kurie gali atsisakyti per tolesnį laiką** laukelį. Pavyzdžiui, prognozuoti jūsų klientų nutraukimo riziką kitoms 90 dienų siekiant suderinti su jūsų reklamos laikymo pastangomis. Nutraukimo rizikos prognozavimas ilgesniam ar trumpesniam laikotarpiui gali apsunkinti faktorių nustatymą jūsų atsisakymo rizikos profilyje, bet jis priklauso nuo konkrečių verslo reikalavimų.
+1. Nustatykite **langą prognozė**. Pavyzdžiui, prognozuoti jūsų klientų nutraukimo riziką kitoms 90 dienų siekiant suderinti su jūsų reklamos laikymo pastangomis. Nutraukimo rizikos prognozavimas ilgesniam ar trumpesniam laikotarpiui gali apsunkinti faktorių nustatymą jūsų atsisakymo rizikos profilyje, bet jis priklauso nuo konkrečių verslo reikalavimų.
    >[!TIP]
-   > **Įrašyti ir uždaryti** galite pasirinkti bet kuriuo metu, kad prognozė būtų išsaugota kaip juodraštis. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
+   > Norėdami **įrašyti** prognozė juodraštį kaip juodraštį, galite bet kada pasirinkti Įrašyti juodraštį. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
 
-1. Įveskite dienų skaičių siekiant nustatyti atsisakymą **Klientas atsisakė, jei jie neatliko jokių pirkimų per:** laukelį. Pavyzdžiui, jei klientas nieko nenupirko per paskutines 30 dienų, jis gali būti laikomas atsisakęs jūsų verslo paslaugų. 
+1. Lauke Churn apibrėžimas įveskite dienų **skaičių**. Pavyzdžiui, jei klientas nieko nenupirko per paskutines 30 dienų, jis gali būti laikomas atsisakęs jūsų verslo paslaugų. 
 
 1. Norėdami tęsti, spustelėkite **Pirmyn**.
 
@@ -129,19 +129,16 @@ Aplinkose, pagrįstose verslo klientais, galime prognozuoti kliento transakcijos
 
 1. Pasirinkite **Įtraukti duomenis** ir pasirinkite veiklos tipą šoninėje srityje, kurioje yra reikiama operacijos arba pirkimo retrospektyvos informacija.
 
-1. Dalyje **Pasirinkti veiklas** pasirinkite konkrečias veiklas iš pažymėtos veiklos, į kurios norite susitelkti skaičiuojant.
+1. Dalyje **Pasirinkti** veiklas pasirinkite konkrečią veiklą iš pasirinkto veiklos tipo, į kurį norite sutelkti dėmesį.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Šoninė sritis, vaizduojanti semantikos tipo konkrečių veiklų pasirinkimą.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Šoninė sritis, vaizduojanti semantikos tipo konkrečių veiklų pasirinkimą.":::
 
-1. Jeigu dar nesusiejote veiklos su semantiniu tipu, pasirinkite **Redaguoti**, kad tai atliktumėte. Atidaroma interaktyvioji semantinių veiklų susiejimo parinktis. Susiekite savo duomenis su atitinkamais pasirinkto veiklos tipo laukais.
+   Jeigu dar nesusiejote veiklos su semantiniu tipu, pasirinkite **Redaguoti**, kad tai atliktumėte. Atidaroma interaktyvioji semantinių veiklų susiejimo parinktis. Susiekite savo duomenis su atitinkamais pasirinkto veiklos tipo laukais.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Puslapio parametro veiklos tipas.":::
+1. Susiekite semantinius atributus su laukais, kurių reikia modeliui paleisti. Jei laukeliai nėra užpildyti, konfigūruokite ryšius iš jūsų įsigijimo istorijos laukelio į *kliento* laukelį. Pasirinkite **Įrašyti**.
 
-1. Susieję veiklą su atitinkamu semantiniu tipu, pažymėkite **Toliau**, kad tęstumėte
+1. **Veiksmą Įtraukti reikiamus duomenis** pasirinkite **Pirmyn,** jei nenorite įtraukti daugiau veiklų.
 
-1. Susiekite semantinius atributus su laukais, kurių reikia modeliui paleisti. Jei laukeliai nėra užpildyti, konfigūruokite ryšius iš jūsų įsigijimo istorijos laukelio į *kliento* laukelį.
-
-1. Pasirinkite **Toliau**.
 
 # <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
 

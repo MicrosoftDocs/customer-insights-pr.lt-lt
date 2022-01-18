@@ -1,5 +1,5 @@
 ---
-title: Prenumeratos prognozė (Video)
+title: Prenumeratos prognozė (yra vaizdo įrašas)
 description: Prognozuokite, ar yra rizika, kad klientas nebenaudoti prenumeruojamų jūsų įmonės produktų ar paslaugų.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903999"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967711"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prenumeratos praradimo prognozė (peržiūra)
 
@@ -77,7 +77,7 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
 1. Įveskite **Dienų skaičių nuo prenumeratos pabaigos**, kurį jūsų įmonė taikys prarastam klientui. Šis laikotarpis įprastai skirtas verslo veikloms, pvz., pasiūlymams ar kitoms rinkodaros pastangoms, siekiant išvengti kliento praradimo.
 1. Įveskite **dienų, kiek toli reikia prognozuoti klientų praradimą,** skaičių, kad nustatytumėte laikotarpį, kuriam reikia prognozuoti klientų praradimą. Pavyzdžiui, jei norite prognozuoti klientų praradimo riziką per 90 dienų laikotarpį tam, kad galėtumėte stengtis pritaikyti savo klientų išlaikymo rinkodaros priemones. Jei prognozuojama, kad ši riziką užtruks ilgiau ar trumpiau, gali būti sunkiau atsižvelgti į jūsų netekimų riziką, atsižvelgiant į konkrečius jūsų įmonės reikalavimus. Norėdami tęsti, spustelėkite **Pirmyn**
    >[!TIP]
-   > **Įrašyti ir uždaryti** galite pasirinkti bet kuriuo metu, kad prognozė būtų išsaugota kaip juodraštis. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
+   > Norėdami **įrašyti** prognozė juodraštį kaip juodraštį, galite bet kada pasirinkti Įrašyti juodraštį. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
 
 ### <a name="add-required-data"></a>Įtraukti būtinus duomenis
 

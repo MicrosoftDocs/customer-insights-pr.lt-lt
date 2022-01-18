@@ -44,7 +44,7 @@
       items:
         - name: Duomenų šaltinių apžvalga
           href: audience-insights/data-sources.md
-        - name: 'Duomenų šaltinių įtraukimas, naudojant „Power Query“ jungtis'
+        - name: Duomenų šaltinių įtraukimas per Power Query jungtis
           href: audience-insights/connect-power-query.md
         - name: Pridėkite „Common Data Model“ aplanką kaip duomenų šaltinį
           href: audience-insights/connect-common-data-model.md
@@ -80,7 +80,7 @@
       items:
         - name: Papildyti klientų profilius
           href: audience-insights/enrichment-hub.md
-        - name: Prekės ženklų ir pomėgių panašumai
+        - name: Prekių ženklai ir pomėgiai
           href: audience-insights/enrichment-microsoft.md
         - name: Išplėstiniai adresai
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Nuspėti perdavimo praradimą
               href: audience-insights/predict-transactional-churn.md
+            - name: Analizuoti klientų atsiliepimų nuotaikas
+              href: audience-insights/sentiment-analysis.md
             - name: Naudoti „Azure“ mašininio mokymo pasirinktinius modelius
               href: audience-insights/custom-models.md
             - name: Užbaigti iš dalies trūkstamus duomenis

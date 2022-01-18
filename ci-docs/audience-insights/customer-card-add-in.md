@@ -1,7 +1,7 @@
 ---
-title: Kliento kortelės priedas, skirtas "Dynamics 365" taikomoms programoms (Video)
+title: Kliento kortelės priedas, skirtas "Dynamics 365" taikomoms programoms (yra vaizdo įrašas)
 description: Šiame papildinyje galite rodyti duomenis iš auditorijos įžvalgų „Dynamics 365” programose.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
-ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
-ms.translationtype: HT
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "7921875"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945437"
 ---
 # <a name="customer-card-add-in-preview"></a>Papildinys Kliento kortelė (peržiūra)
 
@@ -27,7 +27,7 @@ Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ prog
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Papildinys veikia tik su „Dynamics 365” modeliu pagrįstomis programomis, pavyzdžiui, „Sales” arba „Customer Service” 9.0 arba naujesne versija.
-- Norint, kad jūsų „Dynamics 365” duomenys būtų susieti su auditorijos įžvalgų kliento profiliais, jie turi būti [įtraukti iš „Dynamics 365” programos naudojant „Microsoft Dataverse” jungtį](connect-power-query.md).
+- Jei norite, kad "Dynamics 365" duomenys būtų susieti su auditorijos įžvalgomis apie klientų profilius, rekomenduojame juos [nuryti iš "Dynamics 365" programos naudojant Microsoft Dataverse jungtį](connect-power-query.md). Jei naudojate kitą metodą "Dynamics 365" kontaktams (arba abonementams) nuryti, turite įsitikinti, `contactid` kad (arba `accountid`) laukas nustatytas kaip pagrindinis to [duomenų šaltinis raktas duomenų suvienijimo proceso struktūros žingsnyje](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Kad būtų galima matyti duomenis, visi „Dynamics 365” Kliento kortelės papildinio vartotojai turi būti [įtraukti kaip vartotojai](permissions.md) į auditorijos įžvalgas.
 - [Sukonfigūruotos ieškos ir filtravimo galimybės](search-filter-index.md) yra reikalingos auditorijos įžvalgose, kad veiktų duomenų peržvalga.
 - Kiekvienas papildinio valdiklis remiasi tam tikrais auditorijos įžvalgų duomenimis. Kai kuriuos duomenis ir valdiklius galima naudoti tik konkrečių tipų aplinkose. Papildinyje konfigūracija informuos, ar valdiklio nėra dėl pasirinkto aplinkos tipo. Sužinokite daugiau apie [aplinkos naudojimo atvejus](work-with-business-accounts.md).
