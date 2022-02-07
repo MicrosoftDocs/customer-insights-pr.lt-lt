@@ -1,7 +1,7 @@
 ---
 title: Suderinkite objektus duomenų suvienodinimui
-description: Suderinkite objektus tam, kad sukurtumėte suvienytus kliento profilius.
-ms.date: 11/24/2021
+description: 'Suderinkite objektus tam, kad sukurtumėte suvienytus kliento profilius.'
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: MT
-ms.contentlocale: lt-LT
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863821"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Susiekite objektus
 
 Atitikimo etapas nurodo, kaip sujungti jūsų duomenų rinkinius į vieningą kliento profilio duomenų rinkinį. Atlikę [susiejimo veiksmą](map-entities.md) duomenų suvienodinimo procese, esate pasirengę suderinti savo objektus. Atitikties etapui reikia bent dviejų susietų objektų.
@@ -35,7 +30,7 @@ Kiekvienas atitikmuo suvienodina du ar daugiau objektų į vieną konsoliduotą 
 
 :::image type="content" source="media/match-page.png" alt-text="Atitikmenų puslapio, esančio duomenų suvienijimo proceso srityje Suvienodinti, ekrano kopija.":::
   
-Pirminio objekto *„eCommerce:eCommerceContacts”* sugretinami su kitu objektu *„LoyaltyScheme:loyCustomers”*. Duomenų rinkinys, gautas atlikus pirmąjį gretinimo veiksmą, sugretinamas su šiuo objektu, jeigu turite daugiau nei du objektus.
+Pirminio objekto *„eCommerce:eCommerceContacts”* sugretinami su kitu objektu *„LoyaltyScheme:loyCustomers”*. Duomenų rinkinys, gaunamas atlikus pirmąjį atitikties veiksmą, yra suderintas su šiuo objektu, jei turite daugiau nei du objektus.
 
 > [!IMPORTANT]
 > Objektas, kurį pasirinkote savo pirminiu objektu, bus naudojamas kaip suvienyto profilių duomenų rinkinio pagrindas. Papildomi objektai, kurie yra pasirenkami per atitikties etapą, bus pridėti prie šio objekto. Tai nereiškia, kad suvienytame objekte bus *visi* duomenys, įtraukti į šį objektą.
@@ -108,7 +103,7 @@ Gretinimo taisyklės reiškia sąlygų rinkinius. Norėdami sugretinti objektus 
 
 ### <a name="change-the-entity-order-in-match-rules"></a>Objekto tvarkos keitimas atitikties taisyklėse
 
-Galite pertvarkyti objektus, kad atitikties taisyklės pakeistų jų apdorojimo tvarką. Taisyklės, kurios prieštaraus viena kitai dėl pakeisto tvarkos, bus pašalintos. Turite iš naujo sukurti pašalintas taisykles naudodami atnaujintą konfigūraciją.
+Galite pertvarkyti atitikties taisyklių objektus, kad pakeistumėte jų apdorojimo tvarką. Taisyklės, kurios prieštaraus viena kitai dėl pakeisto tvarkos, bus pašalintos. Turite iš naujo sukurti pašalintas taisykles naudodami atnaujintą konfigūraciją.
 
 1. Eikite į **Duomenis** > **Suvienodinti** > **Atitiktis** ir pasirinkite **Redaguoti**.
 
@@ -130,17 +125,21 @@ Dublikatų naikinimo taisyklių nurodymas nėra būtinas. Jei nėra nustatytų t
 
 1. Eikite į **Duomenys** > **Suvienodinti”** > **Atitikmuo**.
 
-1. Skyriuje **Sulieti dublikatai** pasirinkite **Nustatyti objektus**. Tuo atveju, jei dublikatų naikinimo taisyklės jau sukurtos, pasirinkite **Redaguoti**.
+1. Skyriuje **Deduplicated records details** pasirinkite **Nustatyti objektus**. Tuo atveju, jei dublikatų naikinimo taisyklės jau sukurtos, pasirinkite **Redaguoti**.
 
 1. Srityje **Suliejimo nuostatos** pasirinkite objektus, kuriems norite vykdyti dublikatų naikinimą.
 
-1. Nurodykite, kaip sujungti pasikartojančius įrašus ir pasirinkite vieną iš trijų parinkčių:
-   - **Labiausiai užpildytas**: Nustato įrašą su labiausiai užpildytais atributo laikais kaip nugalėtoją. Tai yra numatytoji suliejimo parinktis.
-   - **Naujausias**: Nustato įrašą laimėtoją pagal naujausius duomenis. Reikalauja datos ar skaičių laukelio, skirto nustatyti naujumą.
-   - **Seniausias**: Nustato įrašą laimėtoją pagal seniausius duomenis. Reikalauja datos ar skaičių laukelio, skirto nustatyti naujumą.
+   1. Nurodykite, kaip sujungti pasikartojančius įrašus ir pasirinkite vieną iš trijų parinkčių:
+      - **Labiausiai užpildytas**: Nustato įrašą su labiausiai užpildytais atributo laikais kaip nugalėtoją. Tai yra numatytoji suliejimo parinktis.
+      - **Naujausias**: Nustato įrašą laimėtoją pagal naujausius duomenis. Reikalauja datos ar skaičių laukelio, skirto nustatyti naujumą.
+      - **Seniausias**: Nustato įrašą laimėtoją pagal seniausius duomenis. Reikalauja datos ar skaičių laukelio, skirto nustatyti naujumą.
+
+   1. Pasirinktinai pasirinkite **Išplėstinė**, kad apibrėžtumėte atskirų objekto atributų išdėjimo taisykles. Pavyzdžiui, galite pasirinkti išlaikyti naujausią el. laišką IR išsamiausią adresą iš skirtingų įrašų. Išplėskite objektą, kad pamatytumėte visus jo atributus, ir nurodykite, kurią parinktį naudoti atskiriems atributams. Jei pasirinksite pagal terminus pagrįstą parinktį, taip pat turite nurodyti datos / laiko lauką, kuris apibrėžia recentidą. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Dublikatų naikinimo taisyklių veiksmas 1.](media/match-selfconflation.png "Dublikatų naikinimo taisyklių 1 veiksmas")
+      > [!div class="mx-imgBorder"]
+      > ![Dublikatų naikinimo taisyklių veiksmas 1.](media/match-selfconflation.png "Dublikatų naikinimo taisyklių 1 veiksmas")
+
+   1. Pasirinkite **Atlikta**, kad būtų taikomos suliejimo nuostatos dedupliacijai.
  
 1. Pasirinkę objektus ir nustatę jų suliejimo nuostatą, pasirinkite **Įtraukti taisyklę**, kad nustatytumėte dublikatų naikinimo taisykles objekto lygiu.
    - **Pasirinkti lauką** išvardijami visi galimi to objekto laukai. Pasirinkite lauką, kurio dublikatų norite ieškoti. Pasirinkite laukus, kurie, tikėtina, yra unikalūs kiekvienam klientui. Pavyzdžiui, el. pašto adresas ar vardo, miesto ir telefono numerio derinys.
@@ -158,7 +157,7 @@ Dublikatų naikinimo taisyklių nurodymas nėra būtinas. Jei nėra nustatytų t
 
 1. Bet kuri apibrėžta pasirinktinė gretinimo taisyklė perrašo dublikatų naikinimo taisykles. Jei dublikatų naikinimo taisyklė nustato atitikties įrašus ir tinkinta atitikties taisyklė yra nustatyta taip, kad niekada neatitiktų tų įrašų, tuomet šie du įrašai nebebus suderinti.
 
-1. Paleidę [gretinimo procesą](#run-the-match-process), pagrindinių metrikų plytelėse matysite dublikatų naikinimo statistiką.
+1. Pajungę [rungtynių procesą](#run-the-match-process), pagrindinių metrikos plytelėse matysite išdėjimo statistiką.
 
 ### <a name="deduplication-output-as-an-entity"></a>Dublikatų naikinimo išvestis kaip objektas
 
@@ -222,26 +221,42 @@ Galite konfigūruoti iš naujo ir tiksliai nustatyti daugumą atitikties paramet
 
 - **Panaikinkite taisyklę** pasirinkdami **Naikinti** simbolį.
 
-## <a name="specify-custom-match-conditions"></a>Nurodykite pasirinktines gretinimo sąlygas
+## <a name="advanced-options"></a>Išplėstinės parinktys
 
-Galite nurodyti sąlygas, kurios nepaiso numatytosios atitikties logikos. Galimos keturios parinktys: 
+### <a name="add-exceptions-to-a-rule"></a>Išimčių įtraukimas į taisyklę
+
+Daugeliu atvejų objekto atitikimas lemia unikalius vartotojo profilius su konsoliduotais duomenimis. Norėdami dinamiškai spręsti retus klaidingų teigiamų ir klaidingų negatyvų atvejus, galite nustatyti rungtynių taisyklės išimtis. Apdorojant rungtynių taisykles taikomos išimtys ir vengiama suderinti visus įrašus, atitinkančius išimties kriterijus.
+
+Pavyzdžiui, jei jūsų rungtynių taisyklė apjungia pavardė, miestą ir gimimo datą, sistema identifikuotų dvynius su tuo pačiu pavardė, kurie gyvena tame pačiame mieste kaip ir tas pats profilis. Galite nurodyti išimtį, kuri neatitinka profilių, jei vardas jūsų sujungtiuose objektuose nėra vienodi.
+
+1. Eikite į **Duomenys** > **Suvienodinti** > **Atitikmuo** ir pasirinkite **Redaguoti** taisyklėje, į kurią norite įtraukti sąlygas.
+
+1. **Srityje Redaguoti taisyklę** pasirinkite **Įtraukti išimtį**.
+
+1. Nurodyti išimties kriterijus. 
+
+1. Norėdami išsaugoti taisyklę, pasirinkite **atlikta**.
+
+### <a name="specify-custom-match-conditions"></a>Nurodykite pasirinktines gretinimo sąlygas
+
+Galite nurodyti sąlygas, kurios nepaiso numatytosios atitikties logikos. Galimi keturi variantai: 
 
 |Parinktis  |Aprašą |Pavyzdžiui  |
 |---------|---------|---------|
-|Visada atitikti     | Apibrėžia reikšmes, kurios visada sutampa.         |  Visada rungtynės *Mike* ir *MikeR*.       |
-|Niekada neatitinka     | Apibrėžia reikšmes, kurios niekada nesutampa.        | Niekada neprilygti *Jonui* ir *Džonatanui*.        |
-|Pasirinktinis apėjimas     | Apibrėžia reikšmes, kurių sistema visada turėtų nepaisyti atitikties etape. |  Nepaisyti reikšmių *11111* ir *Nežinoma* rungtynių metu.        |
-|Pseudonimo susiejimas    | Reikšmių, kurias sistema turėtų laikyti ta pačia verte, apibrėžimas.         | Apsvarstykite *Joe būti lygus Joseph* *·*.        |
+|Visada atitikti     | Apibrėžia reikšmes, kurios visada derintos.         |  Visada rungtynės *Mike* ir *MikeR*.       |
+|Niekada neatitinka     | Apibrėžia reikšmes, kurios niekada nesutampa.        | Niekada nederėk su *Džonu* ir *Džonatanu*.        |
+|Pasirinktinis apėjimas     | Apibrėžia reikšmes, kurių sistema visada turėtų nepaisyti rungtynių etape. |  Nepaisyti reikšmių *11111* ir *Nežinoma* rungtynių metu.        |
+|Pseudonimo susiejimas    | Reikšmių, kurias sistema turėtų laikyti ta pačia verte, apibrėžimas.         | Manau, *kad Džo* yra lygus *Juozapui*.        |
 
 1. Eikite į **Duomenys** > **Suvienodinti** > **Atitikmuo** ir pasirinkite **Pasirinktinis atitikmuo** skyriuje **Suderintų įrašų informacija**.
 
    :::image type="content" source="media/custom-match-create.png" alt-text="Skyriaus Gretinimo taisyklės su pažymėtu pasirinktinio atitikmens valdikliu ekrano kopija.":::
 
-1. Srityje **Pasirinktiniai** eikite į **skirtuką** Įrašai.
+1. **Srityje Pasirinktinis** eikite į skirtuką **Įrašai**.
 
-1. Išplečiamajame sąraše Pasirinktinis tipas pasirinkite pasirinktinės atitikties parinktį **ir pasirinkite Atsisiųsti šabloną** **·**. Kiekvienai atitikimo parinktai reikia atskiro šablono.
+1. Išplečiamajame meniu Pasirinktinis tipas **pasirinkite pasirinktinį atitikimo variantą** ir pasirinkite **Atsisiųsti šabloną**. Kiekvienai rungtynių pasirinkčių parinkties reikia atskiro šablono.
 
-1. Šablono failo atsisiuntimai. Atidarykite jį ir užpildykite išsamią informaciją. Šablone yra laukų, nurodančių objektą ir objekto pirminių raktų reikšmes, kurias reikia naudoti pasirinktinio atitikimo srityje. Pavyzdžiui, jeigu norite, kad pirminis raktas *„12345”* iš objekto *Pardavimas* visada atitiktų pirminį raktą *„34567”* iš objekto *Kontaktas*, užpildykite šabloną:
+1. Atidarykite atsisiųstą šablono failą ir užpildykite išsamią informaciją. Šablone yra laukų, nurodančių objektą ir objekto pirminių raktų reikšmes, kurias reikia naudoti pasirinktinio atitikimo srityje. Pavyzdžiui, jeigu norite, kad pirminis raktas *„12345”* iš objekto *Pardavimas* visada atitiktų pirminį raktą *„34567”* iš objekto *Kontaktas*, užpildykite šabloną:
     - Objektas1: pardavimai
     - Objekto1kodas: 12345
     - Objektas2: kontaktas
@@ -251,7 +266,7 @@ Galite nurodyti sąlygas, kurios nepaiso numatytosios atitikties logikos. Galimo
    
    Jei norite nurodyti objekto dublikatų naikinimo pasirinktinį gretinimą, pateikite tą patį objektą kaip ir Objektą1, ir Objektą2 ir nustatykite skirtingas pirminio rakto reikšmes.
 
-1. Įtraukę visus nepaisymus, įrašykite šablono failą.
+1. Pridėję visus nepaisus, įrašykite šablono failą.
 
 1. Eikite **Duomenys** > **Duomenų šaltiniai** ir permeskite šablonų failus kaip naujus objektus.
 
@@ -259,24 +274,24 @@ Galite nurodyti sąlygas, kurios nepaiso numatytosios atitikties logikos. Galimo
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Dialogo lango, kai reikia pasirinkti pasirinktinio atitikties scenarijaus perrašymus, ekrano kopija.":::
 
-1. Pasirinktinio atitikmens taikymas priklauso nuo norimos naudoti atitikties parinkties. 
+1. Pasirinktinio atitikimo taikymas priklauso nuo norimą naudoti gretinimo parinktį. 
 
-   - Jei **visada** atitinkate arba niekada **nesutampate**, pereikite prie kito veiksmo.
-   - Pasirinktinio **apėjimo** arba **pseudonimo susiejimui** pasirinkite Redaguoti **esamoje** gretinimo taisyklėje arba sukurkite naują taisyklę. Išplečiamajame sąraše Normalizavimas pasirinkite **parinktį Pasirinktinis apėjimas** arba **Pseudonimas** ir pasirinkite **Atlikta**.
+   - Jei **visada atitinkate** arba **niekada nesutampate**, pereikite prie kito žingsnio.
+   - Pasirinktiniam **apvažiavimui** arba **Pseudonimo susiejimui** pasirinkite **Redaguoti** esamoje atitikties taisyklėje arba sukurkite naują taisyklę. Išplečiamajame dalyje Normalizavimas pasirinkite parinktį **Pasirinktinis aplinkkelis** arba **Pseudonimo susiejimas** ir pasirinkite **Atlikta**.
 
 1. Pasirinkite **Įrašyti** puslapyje **Atitikmuo** pasirinktinės gretinimo konfigūracijos pritaikymui.
 
 1. Pasirinkite **Vykdyti** puslapyje **Atitikmuo** gretinimo procesui pradėti. Kitas nurodytas gretinimo taisykles perrašo pasirinktinė gretinimo konfigūracija.
 
-### <a name="known-issues"></a>Žinomos problemos
+#### <a name="known-issues"></a>Žinomos problemos
 
-- Savęs supainiojimas nerodo normalizuotų duomenų deduplication objektuose. Tačiau jis taiko normalizavimą viduje deduplication metu. Tai pagal dizainą visiems normalizacijoms. 
-- Jei semantinio tipo parametras pašalinamas **žemėlapio** fazėje, kai atitikties taisyklė naudoja pseudonimo susiejimą arba pasirinktinį apėjimą, normalizavimas nebus taikomas. Taip atsitinka tik tada, jei išvalysite semantinį tipą konfigūravę normalizavimą rungtynių taisyklėje, nes semantinis tipas bus nežinomas.
+- Savikontrolė nerodo normalizuotų duomenų dedupliacijos objektuose. Tačiau jis taiko normalizavimą viduje dedupliacijos metu. Tai pagal dizainą visiems normalizavimui. 
+- Jei semantinio tipo parametras pašalinamas žemėlapio **fazėje**, kai rungtynių taisyklė naudoja Pseudonimo susiejimą arba Pasirinktinį aplinkkelį, normalizavimas nebus taikomas. Tai atsitinka tik tuo atveju, jei išvalysite semantinį tipą, sukonfigūravę rungtynių taisyklės normalizavimą, nes semantinis tipas bus nežinomas.
 
 
 ## <a name="next-step"></a>Tolesnis veiksmas
 
-Baigę bent vienos rungtynių poros gretinimo procesą, pereikite prie [**·**](merge-entities.md) suliejimo veiksmo.
+Baigę bent vienos rungtynių poros rungtynių procesą, pereikite [**prie suliejimo**](merge-entities.md) veiksmo.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

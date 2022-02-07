@@ -1,6 +1,6 @@
 ---
 title: Naudokite duomenų šaltinius duomenų suvartojimui
-description: Sužinokite, kaip importuoti duomenis iš įvairių šaltinių.
+description: 'Sužinokite, kaip importuoti duomenis iš įvairių šaltinių.'
 ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: MT
-ms.contentlocale: lt-LT
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977839"
 ---
+
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Publikos įžvalgų galimybės „Dynamics 365 Customer Insights“ sujungia su duomenimis iš platesnio šaltinių rinkinio. Prisijungimas prie duomenų šaltinio dažnai vadinamas *duomenų įtraukimo procesu*. Įtraukę duomenis galite juos [suvienodinti](data-unification.md) ir imtis susijusių veiksmų.
 
@@ -33,13 +28,13 @@ Galite įtraukti šiuos duomenų šaltinius:
 - [Microsoft Dataverse ežeras](connect-dataverse-managed-lake.md)
 
 > [!NOTE]
-> Jei naudojate bandomąją versiją, importavimo metodų skyriuje yra **"Customer Insights" duomenų bibliotekos** parinktis. Pasirinkite šią parinktį, jei norite pasirinkti duomenų rinkinio pavyzdį, prieinamą įvairioms pramonės šakoms. Daugiau informacijos rasite [Dynamics 365 Customer Insights teismo procese](../trial-signup.md).
+> Jei naudojate bandomąją versiją, importavimo metodų skyriuje yra **"Customer Insights" duomenų bibliotekos** parinktis. Pasirinkite šią parinktį, jei norite pasirinkti duomenų rinkinio pavyzdį, prieinamą įvairioms pramonės šakoms. Daugiau informacijos rasite teisme [Dynamics 365 Customer Insights](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Duomenų įtraukimas iš vietinių duomenų šaltinių
 
-Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į „Microsoft Power Platform“ duomenų srautus. Galite įgalinti duomenų srautus "Customer Insights" [pateikdami Microsoft Dataverse aplinkos URL](create-environment.md) nustatydami aplinką.
+Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į „Microsoft Power Platform“ duomenų srautus. Duomenų srautus galite įgalinti "Customer Insights", nustatydami [aplinką pateikdami aplinkos URL Microsoft Dataverse.](create-environment.md)
 
-Duomenų šaltiniai, sukurti susieus Dataverse aplinką su "Customer Insights", [Power Platform pagal numatytuosius nustatymus naudoja duomenų](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) srautus. Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Galite pašalinti ir iš naujo atkurti duomenų šaltinius, egzistavusius prieš Dataverse susietą [aplinką, naudodami vietinis duomenų šliuzus](/data-integration/gateway/service-gateway-app).
+Duomenų šaltiniai, sukurti susiedžius Dataverse aplinką su "Customer Insights", pagal numatytuosius nustatymus naudoja [Power Platform duomenų srautus](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Naudodami vietinis duomenų šliuzus, galite pašalinti ir iš naujo atkurti duomenų šaltinius, egzistavusius Dataverse prieš [susietą](/data-integration/gateway/service-gateway-app) aplinką.
 
 Esamos Power BI arba Power Apps aplinkos duomenų tinklų sietuvai bus matomi ir galėsite pakartotinai naudoti „Customer Insights“. Duomenų šaltinių puslapyje rodomi saitai, kuriuos naudojant galima peržiūrėti ir konfigūruoti duomenų „Microsoft Power Platform“ vietinis aplinką.
 

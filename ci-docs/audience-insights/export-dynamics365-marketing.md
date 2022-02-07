@@ -1,6 +1,6 @@
 ---
 title: Eksportuoti „Customer Insights“ duomenis į „Dynamics 365 Marketing“
-description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Dynamics 365 Marketing“.
+description: 'Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Dynamics 365 Marketing“.'
 ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,11 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
-ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
-ms.translationtype: MT
-ms.contentlocale: lt-LT
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "7975134"
 ---
+
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>„Dynamics 365 Marketing“ segmentų naudojimas (peržiūra)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Naudokite [segmentus](segments.md) tam, kad sukurtumėte kampanijas ir susisiektumėte su konkrečiomis klientų grupėmis su „Dynamics 365 Marketing“. Daugiau informacijos žr. [Segmentų naudojimas iš „Dynamics 365 Customer Insights“ su „Dynamics 365 Marketing“](/dynamics365/marketing/customer-insights-segments).
 
@@ -45,7 +40,7 @@ Jei naudojate naujas "Dynamics 365 Marketing" galimybes realiuoju klientų instr
 
 1. Skyriuje **Serverio administratoriaus klientas** spustelėkite **Prisijungti** ir pasirinkite „Dynamics 365 Marketing“ klientą.
 
-1. Susiekite kliento objekto lauką Kontakto ID su "Dynamics 365" kontakto ID.
+1. Susieti kliento objekto kontaktinį ID su "Dynamics 365 Contact ID".
 
 1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį. 
 

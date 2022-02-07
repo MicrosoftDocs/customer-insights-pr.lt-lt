@@ -1,7 +1,7 @@
 ---
 title: Sujungti „Common Data Model“ duomenis su „Azure Data Lake“ paskyra
 description: Dirbkite su „Common Data Model“ duomenimis naudodami „Azure Data Lake Storage“.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: lt-LT
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900207"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Jungimasis prie „Common Data Model” aplanko naudojant „Azure Data Lake” klientą
 
 Šis straipsnis pateikia informaciją, kaip vartoti duomenis iš „Common Data Model“ katalogo naudojant jūsų „Azure Data Lake Storage Gen2“ paskyrą.
@@ -26,11 +21,13 @@ ms.locfileid: "7900207"
 
 - Duomenų suvartojimas palaiko tik „Azure Data Lake“ *Gen2* talpinimo paskyras. Negalite naudoti „Azure Data Lake“ Gen1 talpinimo paskyrų siekiant suvartoti duomenis.
 
+- "Azure Data Lake" saugyklos abonemente turi būti [įgalinta hierarchinė vardų sritis](/azure/storage/blobs/data-lake-storage-namespace).
+
 - Norėdami autentifikuoti su „Azure“ pagrindinėmis paslaugomis, įsitikinkite, kad sukonfigūravote jas savo nuomotojuje. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md).
 
 - „Azure Data Lake“, kurį norite prijungti ir iš kurio suvartoti duomenis turi būti tame pačiame „Azure“ regione kaip ir „Dynamics 365 Customer Insights“ aplinka. Ryšiai su „Common Data Model“ katalogu iš kito „Azure“ regiono duomenų telkinio nėra palaikomi. Norėdami sužinoti „Azure“ aplinkos regioną, eikite į **Administravimas** > **Sistema** > **Apie** publikos įžvalgose.
 
-- Duomenys, saugomi internetinėse paslaugose, gali būti saugomi kitoje vietoje nei ten, kur duomenys tvarkomi ar saugomi Dynamics 365 Customer Insights.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse paslaugose, jūs sutinkate, kad duomenys gali būti perduodami ir saugomi Dynamics 365 Customer Insights su .  [Sužinokite daugiau "Microsoft" patikimumo centre](https://www.microsoft.com/trust-center).
+- Duomenys, saugomi internetinėse paslaugose, gali būti saugomi kitoje vietoje nei ta vieta, kur duomenys apdorojami ar saugomi Dynamics 365 Customer Insights.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse paslaugose, sutinkate, kad duomenys gali būti perduodami ir saugomi su Dynamics 365 Customer Insights. [Sužinokite daugiau "Microsoft" patikimumo centre](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Prisijungti prie „Common Data Model“ aplanko
 
@@ -38,11 +35,11 @@ ms.locfileid: "7900207"
 
 1. Pasirinkite **Įtraukti duomenų šaltinį**.
 
-1. Pasirinkite **Azure duomenų ežero** saugykla, įveskite duomenų šaltinis **pavadinimą**, tada pasirinkite **Pirmyn**.
+1. Pasirinkite **Azure duomenų ežero saugykla** **, įveskite duomenų šaltinis pavadinimą**, tada pasirinkite **Pirmyn**.
 
-   - Jei būsite paraginti, pasirinkite vieną iš duomenų rinkinių, susijusių su jūsų pramone, tada pasirinkite **Pirmyn**. 
+   - Jei būsite paraginti, pasirinkite vieną iš pavyzdinių duomenų rinkinių, susijusių su jūsų pramone, tada pasirinkite **Pirmyn**. 
 
-1. Galite pasirinkti tarp naudojimo resursais pagrįstos parinkties ir prenumeravimu pagrįstos parinkties autentifikavimui. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Įveskite **serverio adresą**, **pasirinkite prisijungti**, tada pasirinkite **Pirmyn**.
+1. Galite pasirinkti tarp naudojimo resursais pagrįstos parinkties ir prenumeravimu pagrįstos parinkties autentifikavimui. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Įveskite serverio **adresą**, pasirinkite **prisijungti, tada pasirinkite** **Pirmyn**.
    > [!div class="mx-imgBorder"]
    > ![Dialogo langas, skirtas naujai „Azure Data Lake“.](media/enter-new-storage-details.png)
    > [!NOTE]

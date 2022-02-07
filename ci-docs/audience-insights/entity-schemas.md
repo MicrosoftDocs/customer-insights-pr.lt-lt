@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: lt-LT
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380753"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Objektų schemos „Common Data Model”
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [„Common Data Model“](/common-data-model/) yra deklaratyvi specifikacija ir standartinių objektų, kurie atitinka verslo ir produktyvumo programose visuotinai naudojamas koncepcijas ir veiklas, aprašas. Šis modelis taip pat taikomas stebėjimo ir analitiniams duomenims. „Common Data Model“ teikiami tinkamai apibrėžti, moduliniai ir plečiami verslo objektai, pvz., Klientas, Verslo vienetas, Atvejis, Kontaktas, Galimas klientas, taip pat veiksmai su pardavėjais, darbuotojais ir klientais, pvz., veiklos ir aptarnavimo lygio sutartys. Kiekvienas gali sukurti ir išplėsti „Common Data Model“, kad užfiksuotų papildomas konkrečias verslo idėjas.
 

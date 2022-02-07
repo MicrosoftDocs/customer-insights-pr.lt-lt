@@ -1,6 +1,6 @@
 ---
 title: Aplinkų kūrimas ir valdymas
-description: Sužinokite, kaip prisijungti prie paslaugų ir kaip valdyti aplinkas.
+description: 'Sužinokite, kaip prisijungti prie paslaugų ir kaip valdyti aplinkas.'
 ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,11 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
-ms.contentlocale: lt-LT
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892394"
 ---
+
 # <a name="manage-environments"></a>Aplinkų valdymas
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ## <a name="switch-environments"></a>Perjungti aplinką
 
@@ -47,7 +42,7 @@ Daugiau informacijos apie aplinkos parametrus žr. [Naujos aplinkos kūrimas](cr
 Jei norite [naudoti iš anksto anksto prognozė modelius](predictions-overview.md#out-of-box-models) konfigūruokite duomenų bendrinimą su „Dataverse“. Arba galite įjungti duomenų nurijimas iš vietinis šaltinių, pateikdami jūsų „Microsoft Dataverse“ organizacijos administruojami aplinkos URL. Pasirinkite **Įjungti duomenų bendrinimą**, jei „Customer Insights“ išvesties duomenis norite bendrinti su „Dataverse“ valdomu „Data Lake“.
 
 > [!IMPORTANT]
-> Klientų įžvalgos ir Dataverse turi būti tame pačiame regione, kad būtų galima bendrinti duomenis.
+> "Customer Insights" ir Dataverse turi būti tame pačiame regione, kad būtų galima bendrinti duomenis.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
 

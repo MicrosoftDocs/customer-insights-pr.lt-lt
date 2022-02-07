@@ -1,7 +1,7 @@
 ---
 title: Suliekite objektus duomenų suvienyjime
-description: Suliekite objektus tam, kad sukurtumėte suvienytus kliento profilius.
-ms.date: 11/01/2021
+description: 'Suliekite objektus tam, kad sukurtumėte suvienytus kliento profilius.'
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: lt-LT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732782"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Suliekite objektus
 
 Suliejimo etapas yra paskutinis duomenų sujungimo proceso etapas. Jo tikslas – suderinti prieštaringus duomenis. Prieštaringų duomenų pavyzdžiai: kliento vardas, randamas dviejuose jūsų duomenų rinkiniuose, bet kiekviename iš jų rašomas šiek tiek skirtingai (pvz., „Grant Marshall“ ir „Grant Marshal“), arba telefono numeris, kurio formatas skiriasi (617-803-091X ir 617803091X). Šių prieštaringų duomenų taškų sujungimas atliekamas „atributas pagal atributą“ pagrindu.
@@ -99,11 +94,13 @@ Puslapyje **Sulieti** pasirinkite **Išbraukti laukai**, kad peržiūrėtumėte 
 
 1. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus. 
 
-## <a name="manually-combine-fields"></a>Laukų sujungimas neautomatiniu būdu
+## <a name="combine-fields-manually"></a>Sujungti laukus neautomatiniu būdu
 
-Sulietą atributą nurodykite rankiniu būdu. 
+Sulietą atributą nurodykite rankiniu būdu.
 
-1. Puslapyje **Sulieti** pasirinkite **Sujungti laukus**.
+1. **Puslapyje Suliejimas** pasirinkite **Sujungti**.
+
+1. Pasirinkite parinktį **Laukai**.
 
 1. Nurodykite suliejimo laimėtojo išrinkimo strategiją **Sujungti laukus pagal** išplečiamajame sąraše.
 
@@ -114,6 +111,26 @@ Sulietą atributą nurodykite rankiniu būdu.
 1. Pasirinkite **Atlikta** pakeitimų pritaikymui.
 
 1. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus. 
+
+## <a name="combine-a-group-of-fields"></a>Laukų grupės sujungimas
+
+Traktuokite laukų grupę kaip vieną vienetą. Pavyzdžiui, kai mūsų įrašuose yra laukai Adresas1, Adresas2, Miestas, Valstija ir Zip. Mes tikriausiai nenorime sujungti į kitą įrašą Adresas2, manydami, kad tai padarys mūsų duomenis išsamesnius
+
+1. **Puslapyje Suliejimas** pasirinkite **Sujungti**.
+
+1. Pasirinkite **laukų** grupės parinktį.
+
+1. Išplečiamajame lape Rang grupėse nurodykite suliejimo laimėtojo **strategiją**.
+
+1. Pasirinkite **Įtraukti** ir pasirinkite, ar į laukus norite įtraukti daugiau laukų ar papildomų grupių.
+
+1. Pateikite **kiekvieno kombinuoto lauko pavadinimą** ir **išeigos pavadinimą**.
+
+1. Pateikite **laukų grupės pavadinimą**. 
+
+1. Pasirinkite **Atlikta** pakeitimų pritaikymui.
+
+1. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus.
 
 ## <a name="change-the-order-of-fields"></a>Laukų tvarkos keitimas
 
