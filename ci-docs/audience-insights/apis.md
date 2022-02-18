@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732274"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100150"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbas su „Customer Insights“ API
 
-Dynamics 365 Customer Insights teikia API, kad sukurtų savo programas pagal jūsų duomenis "Customer Insights".
+„Dynamics 365 Customer Insights“ „Customer Insights" teikia API, kad galėsite kurti savo taikomąsias programas pagal savo duomenis.
 
 > [!IMPORTANT]
 > Šių API išsami informacija yra išvardyta [„Customer Insights“ API nuorodoje](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Jie apima papildomą informaciją apie operacijas, parametrus ir atsakymus.
@@ -35,7 +35,7 @@ Dynamics 365 Customer Insights teikia API, kad sukurtų savo programas pagal jū
  
    API įjungimas sukuria pirmąjį ir antrąjį prenumeravimo raktą jūsų elementui, kuris yra naudojamas API prašymų. Galite sukurti iš naujo raktus pasirinkdami **Sukurti iš naujo pirminį** ar **Sukurti iš naujo antrinį** skyriuose **Administratorius** > **Teisės** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Įjungti Customer Insights API.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. Pasirinkite **Naršyti mūsų API** norėdami [išbandyti API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -49,7 +49,7 @@ Dynamics 365 Customer Insights teikia API, kad sukurtų savo programas pagal jū
 
 HTTP atsakas greitai pasirodys apačioje.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Kaip patikrinti API.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Sukurkite naują programos registravimą „Azure“ portale
 
@@ -65,7 +65,7 @@ HTTP atsakas greitai pasirodys apačioje.
 
 1. Jūsų naujos programos registracijoje eikite į **API teisės**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Kaip nustatyti API teises registruojant programą.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Rinkitės **Įtraukti teisę** ir pasirinkite **„Customer Insights“** šoninėje juostoje.
 
@@ -77,7 +77,7 @@ HTTP atsakas greitai pasirodys apačioje.
 
 Galite naudoti programos/kliento ID šios programos registracijai su „Microsoft“ autentifikavimo biblioteka (MSAL) tam, kad gautumėte būdingą žymą ir siųstumėte ją su savo prašymu į API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Kaip suteikti administratoriaus sutikimą.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Daugiau informacijos apie MSAL, rasite [„Microsoft“ autentifikavimo bibliotekos (MSAL) apžvalga](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +103,7 @@ Informacijos apie API naudojimas mūsų klientų bibliotekose ieškokite [„Cus
 
 1. Pasirinkite **Suteikite administratoriaus leidimą...** tam, kad užbaigtumėte programos registraciją.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Kaip suteikti administratoriaus sutikimą.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Siekiant užbaigti, įtraukėme programos registracijos pavadinimą kaip vartotoją į „Customer Insights“.  
    
@@ -117,31 +117,31 @@ Informacijos apie API naudojimas mūsų klientų bibliotekose ieškokite [„Cus
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Sužinokite, kaip pradėti naudoti C# kliento bibliotekas iš NuGet.org. Daugiau informacijos apie NuGet paketą ieškokite [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Šiuo metu šis paketas siekia netstandard2.0 ir netcoreapp2.0 darbotvarkių.
+Sužinokite, kaip pradėti naudojant C# kliento bibliotekas iš NuGet.org. Dėl išsamesnės informacijos apie NuGet paketą, žr. [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Šiuo metu šis paketas siekia netstandard2.0 ir netcoreapp2.0 darbotvarkių.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Įtraukite C# kliento biblioteką į C# projektą
 
-1. Dalyje Visual Studio atidarykite **projekto NuGet paketų** tvarkytuvą.
+1. „Visual Studio“, atverkite **NuGet paketo tvarkytuvą** jūsų projektui.
 
 1. Ieškokite **„Microsoft.Dynamics.CustomerInsights.Api“**.
 
 1. Pasirinkite **Įdiegti** norėdami įtraukti paketą projektui.
  
-   Arba vykdykite šią komandą **NuGet paketų tvarkytuvo** konsolėje:`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Kitu atveju, vykdykite šią komandą **NuGet paketo tvarkytuvo konsolėje**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Įtraukite NuGet paketą į Visual Studio projektą.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>Naudokite C# kliento biblioteką
 
 1. Naudokite [„Microsoft“ autentifikavimo biblioteką (MSAL)](/azure/active-directory/develop/msal-overview) tam, kad gautumėte `AccessToken` naudodami esančią savo [„Azure“ programos registraciją](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Sėkmingai autentifikavę ir įsigiję atpažinimo ženklą, sukurkite naują arba naudokite esamą `HttpClient` su papildomu **DefaultRequestHeaders "Autorizavimas",** nustatytu kaip **Bearer "access token"** ir **Ocp-Apim-Subscription-Key,** nustatytą prenumeratos [**raktui iš jūsų** "Customer Insights" aplinkos](#get-started-trying-the-customer-insights-apis).   
+1. Sėkmingai autentifikuoti ir įsigiję atpažinimo ženklo, sukurkite naują arba naudokite esamą `HttpClient` su papildomais **defaultRequestHeaders "Authorization"**, nustatytais kaip **"prieigos atpažinimo ženklas" ir**"Ocp-Apim-Subscription-Key"**prenumeratos** rakto rinkinys prenumeratos raktui [**iš** "Customer Insights" aplinkos](#get-started-trying-the-customer-insights-apis).   
  
    Paleiskite iš naujo **autorizavimo** antraštę, kai būtina. Pavyzdžiui, kai žyma baigė galioti.
 
 1. Praleiskite šį `HttpClient` į `CustomerInsights` kliento sukūrimą.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Http kliento pavyzdys.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Atlieka skambučius su klientu „plėtinio metodams“, pavyzdžiui  `GetAllInstancesAsync`. Jei norite prieiti prie po juo esančiu `Microsoft.Rest.HttpOperationResponse`, naudokite „http žinutės metodai”, pavyzdžiui `GetAllInstancesWithHttpMessagesAsync`.
 

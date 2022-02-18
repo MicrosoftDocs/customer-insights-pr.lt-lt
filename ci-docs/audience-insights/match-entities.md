@@ -1,7 +1,7 @@
 ---
 title: Suderinkite objektus duomenų suvienodinimui
-description: 'Suderinkite objektus tam, kad sukurtumėte suvienytus kliento profilius.'
-ms.date: 01/28/2022
+description: Suderinkite objektus tam, kad sukurtumėte suvienytus kliento profilius.
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: lt-LT
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098845"
 ---
-
 # <a name="match-entities"></a>Susiekite objektus
 
 Atitikimo etapas nurodo, kaip sujungti jūsų duomenų rinkinius į vieningą kliento profilio duomenų rinkinį. Atlikę [susiejimo veiksmą](map-entities.md) duomenų suvienodinimo procese, esate pasirengę suderinti savo objektus. Atitikties etapui reikia bent dviejų susietų objektų.
@@ -24,13 +29,7 @@ Suderinimo puslapį sudaro trys dalys:
 
 ## <a name="specify-the-match-order"></a>Nurodykite atitikties eiliškumą
 
-Eikite į **Duomenys** > **Duomenų suvienodinimas** > **Derinimas** ir pasirinkite **Nustatyti tvarką**, kad būtų pradedamas atitikties etapas.
-
-Kiekvienas atitikmuo suvienodina du ar daugiau objektų į vieną konsoliduotą objektą. Tuo pačiu metu jis saugo unikaliuosius klientų įrašus. Pavyzdžiui, mes pasirinkome du objektus: **„eCommerce:eCommerceContacts”** kaip pirminį, o **„LoyaltyScheme:loyCustomers”** kaip antrąjį objektą. Objektų tvarka nurodo, kokia tvarka sistema bandys sugretinti įrašus.
-
-:::image type="content" source="media/match-page.png" alt-text="Atitikmenų puslapio, esančio duomenų suvienijimo proceso srityje Suvienodinti, ekrano kopija.":::
-  
-Pirminio objekto *„eCommerce:eCommerceContacts”* sugretinami su kitu objektu *„LoyaltyScheme:loyCustomers”*. Duomenų rinkinys, gaunamas atlikus pirmąjį atitikties veiksmą, yra suderintas su šiuo objektu, jei turite daugiau nei du objektus.
+Kiekvienas atitikmuo suvienodina du ar daugiau objektų į vieną konsoliduotą objektą. Tuo pačiu metu jis saugo unikaliuosius klientų įrašus. Rungtynių tvarka nurodo tvarką, kuria sistema bando suderinti įrašus.
 
 > [!IMPORTANT]
 > Objektas, kurį pasirinkote savo pirminiu objektu, bus naudojamas kaip suvienyto profilių duomenų rinkinio pagrindas. Papildomi objektai, kurie yra pasirenkami per atitikties etapą, bus pridėti prie šio objekto. Tai nereiškia, kad suvienytame objekte bus *visi* duomenys, įtraukti į šį objektą.
@@ -38,9 +37,18 @@ Pirminio objekto *„eCommerce:eCommerceContacts”* sugretinami su kitu objektu
 > Yra dvi aplinkybės, kurios gali padėti pasirinkti jūsų objektų hierarchiją:
 >
 > - Kaip pagrindinį objektą pasirinkite tokį, kuris turi pačius išsamiausius ir patikimiausius duomenis apie jūsų klientus.
-> - Kaip pagrindinį objektą pasirinkite objektą, kuriame yra keli atributai, bendri su kitais objektais (pavyzdžiui, pavadinimas, telefono numeris arba el. pašto adresas).
+> - Pasirinkite objektą, turintį kelis atributus, bendrus su kitais objektais (pvz., vardą, telefono numerį arba el. pašto adresą), kaip pirminį objektą.
 
-Nurodę gretinimo tvarką, matysite apibrėžtas atitikmenų poras skyriuje **Sugretintų įrašų informacija**, esančiame **Duomenys** > **Suvienodinti** > **Atitikmuo**. Pagrindinės metrikos bus tuščios tol, kol bus baigtas gretinimo procesas.
+1. Eikite į **Duomenys** > **Duomenų suvienodinimas** > **Derinimas** ir pasirinkite **Nustatyti tvarką**, kad būtų pradedamas atitikties etapas.
+1. Pasirinkite **Objekto užsakymą**. Pavyzdžiui, pasirinkite **e.Komercija:e-komercijoskontakta** kaip pirminis subjektas ir **LoyaltyScheme:loyCustomers** kaip antrą objektą. 
+1. Norėdami, kad kiekvienas objekto įrašas būtų unikalus klientas ir atitiktų kiekvieną šį objektą, pasirinkite **Įtraukti visus**.
+1. Pasirinkite **Atlikta**. 
+
+Nurodę rungtynių tvarką, nustatytos rungtynių poros rodomos **"DataUnifyMatch** **"** > **skyriuje** > **Suderinti įrašai.** Pagrindinė metrika yra tuščia, kol baigsis rungtynių procesas.
+
+:::image type="content" source="media/match-page.png" alt-text="Atitikmenų puslapio, esančio duomenų suvienijimo proceso srityje Suvienodinti, ekrano kopija.":::
+  
+Pirminio objekto *„eCommerce:eCommerceContacts”* sugretinami su kitu objektu *„LoyaltyScheme:loyCustomers”*. Duomenų rinkinys, gaunamas atlikus pirmąjį atitikties veiksmą, yra suderintas su šiuo objektu, jei turite daugiau nei du objektus.
 
 ## <a name="define-rules-for-match-pairs"></a>Taisyklių apibrėžimas atitikmenų poroms
 
@@ -50,7 +58,7 @@ Atitikties taisyklėse nurodoma logika, pagal kurią bus derinama konkreti objek
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Skyriaus Sugretinto įrašo informacija su pažymėtu taisyklių įtraukimo valdikliu, ekrano kopija.":::
 
-1. Pasirinkite **Įtraukti taisykles** po skyriaus **Sugretinto įrašo informacija** objektu apibrėžti sugretinimo taisyklėms.
+1. Norėdami nustatyti gretinti taisykles, skyriuje Suderinta įrašų informacija **pasirinkite** **Įtraukti taisyklę** pagal objektą.
 
 1. Srityje **Kurti taisyklę** sukonfigūruokite sąlygas taisyklei.
 
@@ -61,15 +69,15 @@ Atitikties taisyklėse nurodoma logika, pagal kurią bus derinama konkreti objek
    - **Objektas/Laukas (antroji eilutė)**: Pasirinkite atributą, susijusį su pirmoje eilutėje nurodyto objekto atributu.
 
    - **Normalizuoti** : Pasirinkite iš šių pasirinktų atributų normalizavimo parinkčių. 
-     - Tarpas: Pašalina visus tarpus. *Labas Pasauli* tampa *LabasPasauli*.
+     - Skaitmenys: Konvertuoja kitas skaičių sistemas, pavyzdžiui, romėniškus skaitmenis į arabiškus skaitmenis. *VIII* tampa *8*.
      - Simboliai: Pašalina visus simbolius ir specialiuosius simbolius. *„Head&Shoulder”* tampa *„HeadShoulder”*.
      - Tekstas į mažąsias raides: Konvertuoja visus simbolius į mažąsias raides. *VISOS DIDŽIOSIOS ir Pirmos Didžiosios* tampa *visos didžiosios ir pirmos didžiosios*.
+     - Tipas (telefonas, vardas, adresas, organizacija): standartizuoja vardus, pavadinimus, telefono numerius, adresus ir kt. 
      - „Unicode” į ASCII: Konvertuoja „Unicode” notaciją į ASCII simbolius. *„/u00B2”* tampa *2*.
-     - Skaitmenys: Konvertuoja kitas skaičių sistemas, pavyzdžiui, romėniškus skaitmenis į arabiškus skaitmenis. *VIII* tampa *8*.
-     - Semantiniai tipai: Standartizuoja vardus, pavadinimus, telefono numerius, adresus ir kita. 
+     - Tarpas: Pašalina visus tarpus. *Labas Pasauli* tampa *LabasPasauli*.
 
    - **Tikslumas**: Nustatykite šiai sąlygai taikytiną tikslumo lygį. 
-     - **Pagrindinis**: Pasirinkite iš *Žemas*, *Vidutinis*, *Aukštas* ir *Tikslus*. Pasirinkite **tikslus**, kai norite suderinti įrašus, kurie atitinka 100 procentų. Pasirinkite bet kurį kitą lygį, kai norite suderinti įrašus, kurie nėra vienodi 100 procentų.
+     - **Pagrindinis**: Pasirinkite iš *Žemas*, *Vidutinis*, *Aukštas* ir *Tikslus*. Pasirinkite **Tikslus**, kad atitiktų tik 100 proc. atitinkančius įrašus. Pasirinkite bet kurį kitą lygį, kai norite suderinti įrašus, kurie nėra vienodi 100 procentų.
      - **Pasirinktinis**: Nustatykite procentą, kurį turi atitikti įrašai. Sistema sugretins tik įrašus, perlipusius ribinę reikšmę.
 
 1. Pateikite **Pavadinimą** taisyklei.
@@ -92,7 +100,7 @@ Norėdami sugretinti objektus tik tuo atveju, jei atributai atitinka kelias sąl
 
 ### <a name="add-rules-to-a-match-pair"></a>Taisyklių įtraukimas į atitikmenų porą
 
-Gretinimo taisyklės reiškia sąlygų rinkinius. Norėdami sugretinti objektus pagal keletą objekto atributų, įtraukite daugiau taisyklių
+Gretinimo taisyklės reiškia sąlygų rinkinius. Norėdami suderinti objektus pagal sąlygas, pagrįstas keliais atributais, pridėkite daugiau taisyklių.
 
 1.  Eikite į **Duomenys** > **Suvienodinti** > **Atitikmuo** ir pasirinkite **Įtraukti taisyklę** objekte, į kurį norite įtraukti taisykles.
 
@@ -117,7 +125,7 @@ Galite pertvarkyti atitikties taisyklių objektus, kad pakeistumėte jų apdoroj
 
 Be [kelių objektų gretinimo taisyklių](#define-rules-for-match-pairs), taip pat galite nurodyti dublikatų naikinimo taisykles. *Dublikatų naikinimas* yra dar vienas įrašų sugretinimo procesu metu vykstantis procesas. Jis aptinka pasikartojančius įrašus ir sulieja juos į vieną įrašą. Šaltinio įrašai yra susiejami su sulietu įrašu su alternatyviais ID.
 
-Panaikinti pasikartojantys įrašai bus naudojami gretinimo procese tarp objektų. Dublikatų naikinimas vyksta atskiruose objektuose ir gali būti konfigūruojamas kiekvienam objektui, naudojamam atitikmenų porose.
+Deduplicated įrašai naudojami kryžminio objekto gretinimo procese. Išdėjimas vyksta atskiruose objektuose ir gali būti sukonfigūruotas kiekvienam objektui, naudojamam rungtynių porose.
 
 Dublikatų naikinimo taisyklių nurodymas nėra būtinas. Jei nėra nustatytų tokių taisyklių, taikomos sistemos nustatytos taisyklės. Dėl didesnio efektyvumo jos sujungia visus įrašus į vieną įrašą prieš perduodant objekto duomenis gretinimui tarp objektų.
 
@@ -134,7 +142,7 @@ Dublikatų naikinimo taisyklių nurodymas nėra būtinas. Jei nėra nustatytų t
       - **Naujausias**: Nustato įrašą laimėtoją pagal naujausius duomenis. Reikalauja datos ar skaičių laukelio, skirto nustatyti naujumą.
       - **Seniausias**: Nustato įrašą laimėtoją pagal seniausius duomenis. Reikalauja datos ar skaičių laukelio, skirto nustatyti naujumą.
 
-   1. Pasirinktinai pasirinkite **Išplėstinė**, kad apibrėžtumėte atskirų objekto atributų išdėjimo taisykles. Pavyzdžiui, galite pasirinkti išlaikyti naujausią el. laišką IR išsamiausią adresą iš skirtingų įrašų. Išplėskite objektą, kad pamatytumėte visus jo atributus, ir nurodykite, kurią parinktį naudoti atskiriems atributams. Jei pasirinksite pagal terminus pagrįstą parinktį, taip pat turite nurodyti datos / laiko lauką, kuris apibrėžia recentidą. 
+   1. Pasirinktinai, norėdami nustatyti atskirų objekto atributų išdėjimo taisykles, pasirinkite **Išplėstinė**. Pavyzdžiui, galite pasirinkti išlaikyti naujausią el. laišką IR išsamiausią adresą iš skirtingų įrašų. Išplėskite objektą, kad pamatytumėte visus jo atributus, ir nurodykite, kurią parinktį naudoti atskiriems atributams. Jei pasirinksite pagal terminus pagrįstą parinktį, taip pat turite nurodyti datos / laiko lauką, kuris apibrėžia recentidą. 
  
       > [!div class="mx-imgBorder"]
       > ![Dublikatų naikinimo taisyklių veiksmas 1.](media/match-selfconflation.png "Dublikatų naikinimo taisyklių 1 veiksmas")

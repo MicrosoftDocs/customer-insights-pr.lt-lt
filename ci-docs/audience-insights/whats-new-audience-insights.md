@@ -1,7 +1,7 @@
 ---
 title: Naujos ir būsimos funkcijos
-description: 'Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.'
-ms.date: 01/27/2022
+description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: lt-LT
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088295"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
 
 
@@ -21,6 +26,17 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>2022 m. sausio mėn. naujinimai
+
+2022 m. sausio naujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų taisymus.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Jūsų klientų atsiliepimų sentimentų analizė
+
+"Customer Insights" suteikia naują AI varomą funkciją, skirtą sintetinti klientų nuotaikas ir nustatyti konkrečius verslo aspektus kaip tikslinių patobulinimų galimybes. Analizuodami savo klientų rašytinius atsiliepimus, galite gauti tikslių įžvalgų mažomis sąnaudomis. Sentimentų analizė, kurią maitina natūralios kalbos apdorojimo (NLP) modeliai, generuojantys dvi išvestines įžvalgas kiekvienam kliento ID. Sentimentų balas (nuo -5 iki 5) ir taikomų verslo aspektų sąrašas. 
+
+Daugiau informacijos ieškokite [Analizuoti klientų atsiliepimų (Preview) jausmus](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>2021 m. gruodžio mėn. naujinimai
@@ -37,7 +53,7 @@ Daugiau informacijos ieškokite [Log forwarding Dynamics 365 Customer Insights i
 
 Naudokite duomenis, kad Microsoft Office 365 papildytumėte savo klientų paskyros profilius įžvalgomis apie įtraukimus per Office 365 programas. Įtraukimo duomenis sudaro el. pašto ir susitikimo veikla, kuri kaupiama paskyros lygiu. Pavyzdžiui, el. laiškų iš verslo abonemento skaičius arba susitikimų su abonementu skaičius. Duomenys apie atskirus vartotojus nėra bendrinami. Šis praturtėjimas yra prieinamas šiuose regionuose: Jungtinėje Karalystėje, Europoje, Šiaurės Amerikoje.
 
-Daugiau informacijos ieškokite [Praturtinkite klientų profilius su įtraukimo duomenimis (peržiūra)](enrichment-office.md)
+Daugiau informacijos ieškokite [Praturtinkite klientų profilius įtraukimo duomenimis (Preview)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Išplėstinės duomenų suvienijimo funkcijos
 

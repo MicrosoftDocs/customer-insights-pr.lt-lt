@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892348"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088123"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Kurti aplinką publikos auditorijos įžvalgose
 
@@ -28,7 +28,7 @@ Organizacijos gali sukurti *dvi* aplinkas kiekvienai „Customer Insights“ lic
 
 ## <a name="create-a-new-environment"></a>Kurti naują aplinką
 
-Įsigijus „Customer Insights” prenumeratos licenciją, „Microsoft 365” nuomotojo visuotinis administratorius gauna elektroninį laišką, kuris paragina juos sukurti aplinką. Eikite į [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start), kad pradėtumėte. 
+Įsigijęs "Customer Insights" prenumeratos licenciją, nuomotojo Microsoft 365 visuotinis administratorius gauna el. laišką, kviečiantį kurti aplinką. Eikite į [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start), kad pradėtumėte. 
 
 Interaktyviuoju būdu galima atlikti visus veiksmus, kurių reikia norint surinkti visą reikiamą informaciją apie naują aplinką. Norint kurti [arba valdyti aplinkas](permissions.md), reikia administratoriaus teisių auditorijos įžvalgų srityje.
 
@@ -64,7 +64,7 @@ Galėsite pasirinkti dvi galimybes: **„Customer Insights" saugyklą** „Azure
 > „Customer Insights“ dabar palaiko šiuos dalykus:
 > - Iš duomenų srautų, „Power BI“ saugomų valdomojoje „Microsoft Dataverse“ „Data Lake“ saugomų objektų.  
 > - „Azure Data Lake Storage" paskyrų abonementai iš to paties „Azure" regiono, kurį pasirinkote kurdami aplinką.
-> - „Azure Data Lake Storage“ abonementai, kurių *hierarchinė vardų sritis* įjungta.
+> - Azure Data Lake Storage abonementai, kurie yra Gen2 ir kuriuose *įgalinta hierarchinė vardų sritis*. "Azure Data Lake Gen1" saugyklos abonementai nepalaikomi.
 
 Galite „Azure Data Lake Storage“ pasirinkti iš išteklių pagrįstą parinktį ir prenumerata pagrįstą autentifikavimo parinktį. Dėl išsamesnės informacijos, žr. [Prisijungti prie „Azure Data Lake Storage“ paskyros su „Azure“ pagrindinėmis paslaugomis](connect-service-principal.md). Konteinerio **pavadinimas** bus ir jo keisti nebus `customerinsights` galima.
 
@@ -79,7 +79,7 @@ Jei sukuriate kelias „Customer Insights“ aplinkas ir pasirenkate įrašyti i
 Jei norite [naudoti iš anksto anksto prognozė modelius](predictions-overview.md#out-of-box-models) konfigūruokite duomenų bendrinimą su „Dataverse“. Arba galite įjungti duomenų nurijimas iš vietinis šaltinių, pateikdami jūsų „Microsoft Dataverse“ organizacijos administruojami aplinkos URL. Pasirinkite **Įjungti duomenų bendrinimą**, jei „Customer Insights“ išvesties duomenis norite bendrinti su „Dataverse“ valdomu „Data Lake“.
 
 > [!IMPORTANT]
-> Klientų įžvalgos ir Dataverse turi būti tame pačiame regione, kad būtų galima bendrinti duomenis.
+> "Customer Insights" ir Dataverse turi būti tame pačiame regione, kad būtų galima bendrinti duomenis.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
 

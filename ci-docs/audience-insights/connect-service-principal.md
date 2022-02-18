@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900285"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088157"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Prisijunkite prie Azure Data Lake Storage paskyros naudodami pagrindinę "Azure" tarnybą
 
-Šiame straipsnyje aptariama, kaip prisijungti prie Dynamics 365 Customer Insights Azure Data Lake Storage paskyros naudojant "Azure" tarnybos pagrindinę dalį, o ne saugojimo abonemento raktus. 
+Šiame straipsnyje aptariama, kaip prisijungti prie Dynamics 365 Customer Insights Azure Data Lake Storage paskyros naudojant "Azure" aptarnavimo pagrindinį, o ne saugyklos paskyros raktus. 
 
-Automatizuoti įrankiai, naudojantys „Azure“ paslaugas visada turėtų turėti apribotus leidimus. Vietoje programų prisijungimo kaip vartotojui su teisėmis, „Azure“ siūlo pagrindines paslaugas. Galite naudoti aptarnavimo principus, kad saugiai [įtrauktumėte arba redaguotumėte bendrojo duomenų modelio aplanką kaip duomenų šaltinis](connect-common-data-model.md) arba [kurtumėte arba atnaujintumėte aplinką](create-environment.md).
+Automatizuoti įrankiai, naudojantys „Azure“ paslaugas visada turėtų turėti apribotus leidimus. Vietoje programų prisijungimo kaip vartotojui su teisėmis, „Azure“ siūlo pagrindines paslaugas. Galite naudoti aptarnavimo vadovus, kad saugiai [įtrauktumėte arba redaguotumėte aplanką "Common Data Model" kaip duomenų šaltinis](connect-common-data-model.md) arba [kurtumėte arba atnaujintumėte aplinką](create-environment.md).
 
 > [!IMPORTANT]
-> - „Data Lake Storage” abonementas, kuris naudos pagrindinį aptarnavimą, privalo turėti [įgalintą hierarchinę vardų sritį](/azure/storage/blobs/data-lake-storage-namespace).
-> - Norint sukurti paslaugos pagrindinę paslaugą, reikia "Azure" prenumeratos administratoriaus teisių.
+> - Duomenų ežero saugyklos paskyra, kuri naudosis aptarnavimo pagrindiniu direktoriumi, turi būti Gen2 ir turėti [hierarchinę vardų sritį](/azure/storage/blobs/data-lake-storage-namespace). "Azure Data Lake Gen1" saugyklos abonementai nepalaikomi.
+> - Norint sukurti tarnybos vadovą, jums reikia administratoriaus teisių, kad sukurtumėte tarnybos vadovą.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Pagrindinės "Customer Insights" "Azure" tarnybos kūrimas
 
-Prieš kurdami naują "Customer Insights" aptarnavimo vadovą, patikrinkite, ar jis jau yra jūsų organizacijoje.
+Prieš kurdami naują "Customer Insights" aptarnavimo pagrindinį vadovą, patikrinkite, ar jis jau yra jūsų organizacijoje.
 
 ### <a name="look-for-an-existing-service-principal"></a>Ieškokite esančių pagrindinių paslaugų
 

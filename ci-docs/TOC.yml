@@ -2,6 +2,22 @@
   href: index.yml
 - name: Produkto apžvalga
   href: overview.md
+- name: Mokymosi katalogas
+  items:
+    - name: Pradėti
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Duomenų suvartojimas
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Sujungto kliento profilio kūrimas
+      href: /learn/modules/unified-customer-profile/
+    - name: Darbas su auditorijos įžvalgomis
+      href: /learn/modules/working-with-customer-insights/
+    - name: Praturtinkite duomenis ir prognozes
+      href: /learn/modules/enrich-data/
+    - name: Išorinių ryšių valdymas
+      href: /learn/modules/configure-third-party-connections/
+    - name: Administruokite „Customer Insights“
+      href: /learn/modules/administer-customer-data-platform/
 - name: Nemokama bandomoji versija
   items:
     - name: Registracija norint naudoti nemokamą bandomąją versiją
@@ -30,16 +46,6 @@
           href: audience-insights/home.md
     - name: Darbas su veiklos paskyros
       href: audience-insights/work-with-business-accounts.md
-    - name: Sužinokite modulius
-      items:
-        - name: Duomenų suvartojimas
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Sujungto kliento profilio kūrimas
-          href: /learn/modules/unified-customer-profile/
-        - name: Darbas su programa
-          href: /learn/modules/working-with-customer-insights/
-        - name: Papildykite duomenis ir prognozes
-          href: /learn/modules/enrich-data/
     - name: Duomenų šaltiniai
       items:
         - name: Duomenų šaltinių apžvalga
@@ -94,7 +100,7 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Praturtinkite su „Experian“
           href: audience-insights/enrichment-experian.md
-        - name: Praturtinti Office 365 duomenimis
+        - name: Office 365 Praturtinti duomenimis
           href: audience-insights/enrichment-office.md
         - name: Papildykite su SFTP kliento importavimu
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -168,7 +174,7 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: „Azure Data Lake Storage Gen2“
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: „Azure Synapse Analytics“
+            - name: „Azure Synapse Analytics”
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
@@ -286,9 +292,9 @@
           href: consent-management/system-settings.md
         - name: Vartotojų ir teisių valdymas
           href: consent-management/manage-users.md
-    - name: Naudoti sutikimo duomenis
+    - name: Sutikimo duomenų naudojimas
       items:
-        - name: Prognozuoti su sutikimo duomenimis kūrimas
+        - name: Prognozių kūrimas su sutikimo duomenimis
           href: consent-management/predictions-consent-data.md
 - name: Įtraukimo įžvalgos (peržiūros versija)
   items:
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: DSR teisės ir užklausos
   href: dsr-rights-requests.md
+- name: Gaukite pagalbą
+  href: /power-platform/admin/get-help-support

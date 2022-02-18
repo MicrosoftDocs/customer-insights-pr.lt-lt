@@ -4,15 +4,15 @@ metadata:
   author: m-hartmann
   description: Laukelis atitinkantis straipsnius skirtus pradėti su pagalbos turiniu.
   ms.author: mhart
-  ms.date: 07/30/2021
+  ms.date: 03/02/2022
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e6a658f43b382934ee9b9b55c54fc1dff3f4df72
-  ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
+  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
   ms.translationtype: HT
   ms.contentlocale: lt-LT
-  ms.lasthandoff: 09/17/2021
-  ms.locfileid: "7498607"
+  ms.lasthandoff: 02/10/2022
+  ms.locfileid: "8107209"
 title: „Dynamics 365 Customer Insights“ dokumentacija
 summary: Raskite naudingų išteklių kad pradėtumėte ir sužinokite apie "Customer Insights" funkcijas ir galimybes.
 landingContent:
@@ -23,9 +23,13 @@ landingContent:
     - text: „Customer Insights“ apžvalga
       url: overview.md
     - text: Išleidimo planai
-      url: /dynamics365-release-plan/
+      url: /dynamics365/release-plans/
     - text: Atraskite CDP
       url: https://dynamics.microsoft.com/ai/customer-insights/
+  - linkListType: learn
+    links:
+    - text: "\"Customer Insights\" mokymosi kelias"
+      url: /learn/paths/build-customer-insights/
 - title: Pradėkite darbą su „Customer Insights”
   linkLists:
   - linkListType: get-started
@@ -34,8 +38,26 @@ landingContent:
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
     - text: Kas nauja auditorijos įžvalgose
       url: audience-insights/whats-new-audience-insights.md
-    - text: Kas nauja įtraukimo įžvalgose
-      url: https://docs.microsoft.com/dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
+    - text: Greito pasirengimo darbui vadovas
+      url: audience-insights/get-started.md
+  - linkListType: learn
+    links:
+    - text: Pradėti
+      url: /learn/modules/get-started-customer-data-platform/
+- title: Administruokite publikos įžvalgas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sukonfigūruokite sistemą
+      url: audience-insights/system.md
+    - text: Nurodykite vartotojo teises
+      url: audience-insights/permissions.md
+    - text: Valdykite kelias aplinkas
+      url: audience-insights/manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Administruokite „Customer Insights“
+      url: /learn/modules/administer-customer-data-platform/
 - title: Palaikykite ryšį
   linkLists:
   - linkListType: overview
@@ -66,16 +88,6 @@ landingContent:
       url: audience-insights/customer-card-add-in.md
     - text: „Power BI“ jungtis
       url: audience-insights/export-power-bi.md
-- title: Administruokite publikos įžvalgas
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Sukonfigūruokite sistemą
-      url: audience-insights/system.md
-    - text: Nurodykite vartotojo teises
-      url: audience-insights/permissions.md
-    - text: Valdykite kelias aplinkas
-      url: audience-insights/manage-environments.md
 - title: Apie įsipareigojimų įžvalgas (peržiūra)
   linkLists:
   - linkListType: overview

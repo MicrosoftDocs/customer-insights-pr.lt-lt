@@ -3,18 +3,18 @@ title: Bandomosios versijos DUK - „Dynamics 365 Customer Insights“
 description: Atsakymai į bendruosius klausimus, susijusius su „Customer Insights“ bandomosios versijos nustatymu ir valdymu. Sužinokite, kaip išspręsti problemas, susijusias su platforma ir programa.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642892"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8115978"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Su „Dynamics 365 Customer Insights” bandomąja versija susiję DUK
 
@@ -24,7 +24,7 @@ ms.locfileid: "7642892"
 
 Ši programa yra debesies paslauga, kuriai nereikia jokios specialios programinės įrangos, išskyrus naujausią žiniatinklio naršyklės versiją, nors taikomi kai kurie apribojimai. Kad būtų geriausia bandomoji versija, stenkitės, kad inkognito režimu nebūtų galima pasiekti bandomosios versijos svetainės ir pasirinkite arčiausiai jūsų artimiausią bandomosios versijos vietą. [Sužinokite daugiau apie žiniatinklio programos reikalavimus.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kaip galiu užsiregistruoti naudoti bandomąją versiją, jei neturiu „Microsoft 365” nuomotojo?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kaip užsiregistruoti į teismą be nuomininko Microsoft 365?
 
 Galite įvesti ne darbo el. pašto adresą, o mes sukursime jums klientą ir nuomotoją.
 
@@ -43,7 +43,7 @@ Užsiregistravę bandomajai versijai gauti, gausite el. laišką su išsamia ban
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Kaip įtraukti daugiau vartotojų į bandomąją versiją?
 
-Norėdami įtraukti vartotojų, eikite į [„Microsoft 365” administravimo centrą ](https://admin.microsoft.com) naudodami administratoriaus kliento bandomąją versiją. Vykdykite [administravimo centro nurodymus](/microsoft-365/admin/add-users/add-users), kad įtrauktumėte vartotojų į bandomosios versijos licencijos limitą. Jei įtraukiamas vartotojas jau turi „Microsoft 365” klientą, priskirkite jam atitinkamą saugos vaidmenį organizacijos bandomojoje versijoje. Daugiau informacijos žr. [Saugos vaidmens priskyrimas vartotojui](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Norėdami įtraukti vartotojų, eikite į [Microsoft 365 administravimo centrą](https://admin.microsoft.com) naudodami bandomąjį administratoriaus abonementą. Vykdykite [administravimo centro nurodymus](/microsoft-365/admin/add-users/add-users), kad įtrauktumėte vartotojų į bandomosios versijos licencijos limitą. Jei vartotojas, kurį įtraukiate, jau turi abonementą Microsoft 365, priskirkite jam atitinkamą saugos vaidmuo bandomojoje orgijoje. Daugiau informacijos ieškokite [Priskirti vartotojui saugos vaidmuo](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Kiek vartotojų galiu įtraukti į bandomąją aplinką?
 
@@ -63,7 +63,7 @@ Galite išplėsti bandomąją versiją programoje tiesiogiai. Bandomąjį laikot
 
 Paprastai rekomenduojame pradėti su naujais duomenimis atnaujinus į mokamą „Customer Insights” versiją. 
 
-Pasirinktinai, jei naudojate tik auditorijos įžvalgas, galite nukopijuoti savo duomenis iš bandomosios versijos aplinkos, jei įsigysite „Customer Insights“. Turite būti „Customer Insights” bandomosios versijos administratorius ir visuotinis jūsų „Microsoft 365” nuomotojo administratorius arba savo organizacijos „Dynamics 365” administratorius, kad perkeltumėte parametrus iš bandomosios aplinkos į mokamą aplinką. 
+Pasirinktinai, jei naudojate tik auditorijos įžvalgas, galite nukopijuoti savo duomenis iš bandomosios versijos aplinkos, jei įsigysite „Customer Insights“. Norėdami perkelti parametrus iš bandomosios aplinkos į mokamą aplinką, turite būti "Customer Insights" bandomosios bandomosios sistemos administratorius ir nuomotojo Microsoft 365 visuotinis administratorius arba "Dynamics 365" administratorius. 
 
 Pirmą kartą prisijungus prie savo apmokėto „Customer Insights” egzemplioriaus, jūsų bus paprašyta sukurti naują aplinką. Šiame procese jūs galite pasirinkti kopijuoti konfigūraciją iš esamos aplinkos ir perkelti daugumą parametrų. Jei jūs turite aukščiau minimas teises, šiame sąraše bus rodoma bandomosios versijos aplinka. Daugiau informacijos rasite [Aplinkos konfigūravimo kopijavimas](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,8 +82,9 @@ Užsiregistravę bandomajai versijai gauti, būsite perkeltas į programos pagri
 
 Daugelį „Customer Insights“ galimybių funkcijų galima naudoti bandomojoje versiją.
 
-Prieinama tolesnė funkcija: 
+Šios funkcijos **nepasiekiomos**: 
 - Negalite kurti naujų aplinkoje, kurios naudoja jūsų „Azure Data Lake" talpinimo paskyrą.
+- Negalite panaikinti bandomosios aplinkos. 
 
 ### <a name="how-long-does-the-trial-last"></a>Kiek laiko galioja bandomoji versija?
 
