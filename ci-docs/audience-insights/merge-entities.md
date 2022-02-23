@@ -1,6 +1,6 @@
 ---
 title: Suliekite objektus duomenų suvienyjime
-description: 'Suliekite objektus tam, kad sukurtumėte suvienytus kliento profilius.'
+description: Suliekite objektus tam, kad sukurtumėte suvienytus kliento profilius.
 ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: lt-LT
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046604"
 ---
-
 # <a name="merge-entities"></a>Suliekite objektus
 
 Suliejimo etapas yra paskutinis duomenų sujungimo proceso etapas. Jo tikslas – suderinti prieštaringus duomenis. Prieštaringų duomenų pavyzdžiai: kliento vardas, randamas dviejuose jūsų duomenų rinkiniuose, bet kiekviename iš jų rašomas šiek tiek skirtingai (pvz., „Grant Marshall“ ir „Grant Marshal“), arba telefono numeris, kurio formatas skiriasi (617-803-091X ir 617803091X). Šių prieštaringų duomenų taškų sujungimas atliekamas „atributas pagal atributą“ pagrindu.

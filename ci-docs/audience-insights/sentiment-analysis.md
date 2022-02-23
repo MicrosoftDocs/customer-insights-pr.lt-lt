@@ -1,6 +1,6 @@
 ---
 title: Klientų atsiliepimų sentimentų analizė
-description: 'Sužinokite, kaip naudoti sentimentų analizės modelį klientų atsiliepimuose Dynamics 365 Customer Insights.'
+description: Sužinokite, kaip naudoti sentimentų analizės modelį klientų atsiliepimuose Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: lt-LT
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008775"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Klientų atsiliepimų sentimentų analizė (Peržiūra)
 
 Klientai tikisi aukštos kokybės produktų, paslaugų ir patirties šiomis dienomis. Ypač klientai, kurie dalijasi savo atsiliepimais. Organizacijoms labai sunku analizuoti didėjantį duomenų kiekį, nesumažinant tikslumo ir didesnių darbo sąnaudų. Dynamics 365 Customer Insights siūlo klientų atsiliepimų sentimentų analizės modelį, kuris leidžia organizacijoms tiksliau ir mažesnėmis sąnaudomis analizuoti savo duomenis.
