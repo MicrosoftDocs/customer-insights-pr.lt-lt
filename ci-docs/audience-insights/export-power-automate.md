@@ -1,20 +1,20 @@
 ---
 title: Power Automate jungtis | „Microsoft Docs“
-description: Kurkite srautus „Microsoft Power Automate” platformoje iš „Dynamics 365 Customer Insights”.
-ms.date: 06/24/2021
-ms.reviewer: mhart
+description: Kurkite srautus „Microsoft“ programoje „Power Automate“ iš „Dynamics 365 Customer Insights“.
+ms.date: 08/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: 95e0fcbfb43f2b3e7e2d0e8a1690dc7ff5a44433402b7ef3d437710eb0efff15
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035609"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406377"
 ---
 # <a name="power-automate-connector-preview"></a>„Power Automate“ jungtis (peržiūra)
 
@@ -22,35 +22,28 @@ Nustatykite, kad konkretūs įvykiai būtų automatiškai vykdomi pasikeitus duo
 
 ## <a name="power-automate-triggers"></a>„Power Automate“ paleidikliai
 
-Naudokite paleidinius debesies srautams kurti ir pasikartojančioms užduotims, pvz.: pranešimams ar išplėstiniams veiksmams, automatizuoti. 
+Galite naudoti įvairius paleidiklius, leidžiančius kurti srautus, automatizuojančius pasikartojančias užduotis, pvz., pranešimus ar sudėtingesnius veiksmus. 
 
 - Paleidiklis, kai nepavyksta atnaujinti duomenų šaltinio. 
 - Paleidiklis, kai pavyksta atnaujinti duomenų šaltinį.
 - Paleidiklis, pasiekus segmento ribinę reikšmę. Paleidiklis taikomas tik ribinės vertės viršijimui.
-- Paleidiklis, pasiekus verslo mato ribinę reikšmę. Palaikomi tik verslo matai be dimensijos. Paleidiklis taikomas tik ribinės vertės viršijimui.
-- Paleidimas, kai visas paleidimas iš naujo (duomenų šaltinių, segmentų, priemonių, ...) yra pabaigtas.
+- Paleidiklis, pasiekus verslo mato ribinę reikšmę. Paleidiklis taikomas tik ribinės vertės viršijimui.
+- Paleidimas, kai visas paleidimas iš naujo (duomenų šaltinių, segmentų, priemonių,...) yra pabaigtas.
 - Suaktyvinamas baigus sujungimo proceso (susiejimas, sutapdinimas, suliejimas) atnaujinimą.
 
-[Paleidiklių konfigūravimas „Power Automate“.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
+[Paleidiklių konfigūravimas „Power Automate“](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>„Power Automate“ veiksmai
+„Power Automate“ jungtis leidžia atlikti veiksmus, papildančius pasiekiamus paleidiklius. Norėdami gauti daugiau informacijos, žr. [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-„Power Automate“ jungtis leidžia atlikti veiksmus, papildančius pasiekiamus paleidiklius. Norėdami gauti daugiau informacijos, žr. [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
+## <a name="create-a-power-automate-flow-in-audience-insights"></a>Sukurkite „Power Automate“ eigą publikso įžvalgose
 
-## <a name="create-a-power-automate-flow"></a>Kurti Power Automate srautą
+1. Publikos įžvalgose, eikite į **Administravimas** > **Sistema**.
 
-1. Publikos įžvalgose, eikite į **Administravimas** > **Eksportavimo paskirties vietos**.
+1. Puslapyje **Sistema** pasirinkite skirtuką **Būsena**.
 
-1. Plytelėje **„Power Automate”** pasirinkite **Nustatyti**.
+1. Skyriuje **Duomenų šaltiniai** pasirinkite **Srautai**, o išplečiamajame sąraše pasirinkite **Kurti srautą**.
+   > [!div class="mx-imgBorder"]
+   > ![„Power Automate“ jungtis, rodanti srauto kūrimo veiksmą](media/power-automate-connector-create-flow.png "„Power Automate“ jungtis, rodanti srauto kūrimo veiksmą")
 
-1. Atsidaro „Power Automate“ jungtis programoje „Customer Insights“. **Prisijunkite** prie „Power Automate“.
-
-1. Pasirinkite vieną iš galimų paleidiklių ir įtraukite daugiau veiksmų į naują srautą. Daugiau informacijos [žr. Debesies srauto kūrimas Power Automate](/power-automate/get-started-logic-flow).
-
-Pavyzdžiai, kaip naudoti srautus: 
-- Jei nepavyksta atnaujinti duomenų šaltinio kanale, praneškite Microsoft Teams kanale. 
-- Duomenų savininkams nusiuntus ribinę segmento ribinę vertę, el. laišką siųskite duomenų savininkams.
-
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+1. Programoje „Power Automate“ pasirinkite vieną iš galimų paleidiklių, kad sukurtumėte pageidaujamą srautą. Jei kuriate pirmąjį srautą, pirmiausia turite patvirtinti savo tapatybę su „Power Automate“ jungtimi.

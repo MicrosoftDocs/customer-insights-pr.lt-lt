@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights“ duomenų eksportavimas į „Snapchat“
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Snapchat“.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618693"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760585"
 ---
-# <a name="export-segments-to-snapchat-preview"></a>Segmentų eksportavimas į „Snapchat“ (peržiūros versija)
+# <a name="export-segment-lists-to-snapchat-preview"></a>Segmentų sąrašų eksportavimas į „Snapchat“ (peržiūra)
 
 Eksportuokite vieningų klientų profilių segmentus į „Snapchat“ ir naudokite juos reklamai. 
 
@@ -29,7 +29,7 @@ Eksportuokite vieningų klientų profilių segmentus į „Snapchat“ ir naudok
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
 - Segmentų eksportavimas į „Snapchat“ ribojamas.
-- Iki 1 milijono klientų profilių eksportavimas į „Snapchat“ gali užtrukti iki 15 minučių. 
+- Iki 1 milijono profilių eksportavimas į „Snapchat“ gali užtrukti iki 15 min. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Ryšio su „Snapchat“ nustatymas
 
@@ -63,7 +63,7 @@ Eksportuokite vieningų klientų profilių segmentus į „Snapchat“ ir naudok
 
 1. Įveskite [**„Snapchat“ auditorijos ID**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „Snapchat“.
+1. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „Snapchat“.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. 
 

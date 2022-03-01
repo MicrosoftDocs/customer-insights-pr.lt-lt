@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights“ objekto schemos „Common Data Model“
 description: Dirbkite su objektais „Common Data Model“.
-ms.date: 08/13/2021
+ms.date: 04/17/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2cdbe11a1c0cc5d65434fb2ae3a3f38c18f31cf4
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046526"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692315"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Objektų schemos „Common Data Model”
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 [„Common Data Model“](/common-data-model/) yra deklaratyvi specifikacija ir standartinių objektų, kurie atitinka verslo ir produktyvumo programose visuotinai naudojamas koncepcijas ir veiklas, aprašas. Šis modelis taip pat taikomas stebėjimo ir analitiniams duomenims. „Common Data Model“ teikiami tinkamai apibrėžti, moduliniai ir plečiami verslo objektai, pvz., Klientas, Verslo vienetas, Atvejis, Kontaktas, Galimas klientas, taip pat veiksmai su pardavėjais, darbuotojais ir klientais, pvz., veiklos ir aptarnavimo lygio sutartys. Kiekvienas gali sukurti ir išplėsti „Common Data Model“, kad užfiksuotų papildomas konkrečias verslo idėjas.
 
@@ -42,7 +42,7 @@ Daugiau informacijos žr. dokumentuose apie [„Customer Insights“ objektų sc
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Objektų peržiūra naudojant „Common Data Model“ objekto naršyklę
 
-Galite peržiūrėti objektus [„Common Data Model“ objekto naršyklėje](https://microsoft.github.io/CDM/). Norėdami gauti "Customer Insights" objektų ir jų aprašų sąrašą, pasirinkite objektą iš skyriaus "Insights Application".
+Galite peržiūrėti objektus [„Common Data Model“ objekto naršyklėje](https://microsoft.github.io/CDM/). Pasirinkite mygtuką **Įkelti „GitHub!“** ir eikite į **foundationCommon** > **crmCommon** > **sprendimai** > **customerInsights**, kur rasite „Customer Insights“ objektų sąrašą ir jų apibrėžimus.
 > [!div class="mx-imgBorder"]
 > ![CDM objektų naršyklė, rodanti „CustomerActivity” objektą.](media/CDM-entity-navigator.png "CDM objektų naršyklė, rodanti „CustomerActivity” objektą")
 

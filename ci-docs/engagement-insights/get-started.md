@@ -4,18 +4,18 @@ description: Žinyno išteklių apžvalga, norint greitai pradėti darbą.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 10/01/2021
+ms.date: 12/21/2020
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: 5ee1567cea834670a16aaa3253912b7957ce26b3
+ms.sourcegitcommit: 86739a3f238162fc96837270b5d184e648fab15c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623687"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "7405368"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Darbo su įtraukimo „Dynamics 365 Customer Insights“ įžvalgų funkcijomis pradžia (vieša peržiūra)
 
@@ -25,63 +25,47 @@ Naudodami įtraukimo įžvalgų galimybes galite rinkti ir matuoti klientų elge
 
 ## <a name="step-1-review-prerequisites"></a>1 veiksmas: būtinųjų sąlygų peržiūra
 
-Visų pirma, turite turėti aktyvų „Microsoft Azure Active Directory“ vartotojo abonementą. Tada, prieš nustatydami įtraukimo įžvalgų darbo sritį, perskaitykite šiuos straipsnius.
+Pirma turite turėti aktyvų „Microsoft Azure Active Directory“ vartotojo abonementą. Tada, prieš nustatydami įtraukimo įžvalgų darbo sritį, perskaitykite šiuos straipsnius.
 
-- Peržiūrėkite ir sutikite su [„Microsoft" paslaugų teikimo](terms-of-service.md) sąlygomis.  
-- Perskaitykite straipsnį [Tvarkyti slapukus ir vartotojo](user-consent-storage.md) sutikimą. Tada įvertinkite, ar turite atnaujinti savo vartotojo sutikimo pranešimą. Jei anksčiau nebuvote „neesmių“ slapukų, tikriausiai reikės atnaujinti savo svetainės strategiją.
+- Peržiūrėkite ir sutikite [su „Microsoft" paslaugų teikimo](terms-of-service.md) sąlygomis.  
+- Perskaitykite straipsnį [Tvarkyti slapukus ir vartotojo](user-consent-storage.md) sutikimą. Peržiūrėsite šį straipsnį ir įvertinkite, ar turite atnaujinti savo vartotojo sutikimą. Jei anksčiau nebuvote „neesmių“ slapukų, tikriausiai reikės atnaujinti savo svetainės strategiją.
 - Peržiūrėkite [sąvokų žodyną](glossary.md), kad galėtumėte greitai įvesti pagrindines sąvokas ir sąvokas.
 
 ## <a name="step-2-explore-engagement-insights"></a>2 žingsnis: susipažinkite su įtraukimo įžvalgomis
 
-Pirmą kartą lankydami įtraukimo įžvalgas galite konfigūruoti parametrus, peržiūrėti strategijas ir naršyti galimybes.
+Pirmą kartą lankydami įtraukimo įžvalgas galite konfigūruoti parametrus, peržiūrėti strategijas ir naršyti produktą.
 
-1. Prisijunkite prie [įtraukimo įžvalgų galimybių portalo](https://home.ci.ai.dynamics.com/app/engagement-insights) naudodami savo „Microsoft” AAD vartotojo (mokymo įstaigos arba darbo) abonementą.
+1. Prisijunkite prie [įtraukimo įžvalgų galimybių portalą](https://pi.dynamics.com) naudodami savo „Microsoft Azure Active Directory“ vartotojo paskyrą. (Tai gali būti jūsų mokymo įstaigos arba darbo paskyra.)
 
-1. Pažymėkite savo regioną ir žymės langelį, jei norite pasirinkti gauti elektroninių laiškų naujinimus ir pasiūlymus.
+1. Pažymėkite savo regioną ir naudodami žymės langelį nurodykite, ar norite pasirinkti gauti naujinimus ir pasiūlymus el. paštu.
 
-1. Peržiūrėkite įtraukimo įžvalgų (peržiūros versijos) **Naudojimo sąlygos** ir **Privatumo nuostatas**, o tada rinkitės **Naršykite demonstracinę versiją** tam, kad priimtumėte šiuos parametrus.
+1. Peržiūrėkite **įtraukimo įžvalgų (peržiūros) naudojimo sąlygas** ir **privatumo patvirtinimą,** tada pasirinkite **Susipažinkite su demonstracinę** versiją ir priimkite jas.
 
 1. Susipažinkite su produktu naudodami duomenų pavyzdžių rinkinį.
 
-##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>3 žingsnis: darbo srities kūrimas ir ataskaitų kūrimas
+##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>3 žingsnis: nustatykite darbo sritį ir įtraukite kodą į svetainę
 
-Darbo srityje galite peržiūrėti vartotojo veiklą tikruoju laiku ir saugoti bei valdyti ataskaitas. Įtraukite kodą į savo svetainę norėdami pradėti *rinkti* įvykius, veiklos duomenis, kuriuos vartotojai gali gauti.
+Darbo srityje galite peržiūrėti vartotojo veiklą tikruuoju laiku ir saugoti bei valdyti ataskaitas. Įtraukite kodą į savo svetainę norėdami pradėti *rinkti* įvykius, veiklos duomenis, kuriuos vartotojai gali gauti.
 
 1. [Kurti darbo sritį](create-workspace.md) ir įtraukti narius.
 
-1. Įtraukite kodą į [svetainę](instrument-website.md) arba [mobiliąją programą](developer-resources.md#capture-events-from-mobile-apps) ir peržiūrėkite vartotojo veiklos susekimo į darbo sritį sąrašą.
+1. [Įtraukite kodą į svetainę](instrument-website.md) arba [mobiliąją programą](developer-resources.md#capture-events-from-mobile-apps)ir peržiūrėkite vartotojo veiklos susekimo į darbo sritį sąrašą.
 
-1. Peržiūrėkite [realiojo laiko ataskaitą](view-reports.md), kurioje rodomi aktyvūs vartotojai pagal naršyklę, įrenginį, operacinę sistemą, vietą ir kalbą. Taip pat galite kurti [pasirinktines ataskaitas](custom-reports.md) ir kurti savo vizualizacijas.
-
-1. Kurti [dimensijas](dimensions.md) norint rūšiuoti lankytojus pagal naujus ir grįžtančius vartotojus, [metrikos](metrics.md) gali padėti geriau suprasti vartotojų elgesį bei [segmentus](segments.md), kurie nustato lankytojų papildomas parinktis pagal savybes ar svetainės sąveikas.
+1. Peržiūrėkite [realiojo laiko ataskaitą,](view-reports.md) kurioje rodomi aktyvūs vartotojai naudodami naršyklę, įrenginį, operacinę sistemą, vietą ir kalbą. Taip pat galite kurti [pasirinktines ataskaitas](custom-reports.md) ir kurti savo vizualizacijas.
     
 ## <a name="step-4-export-data-to-other-channels"></a>4 žingsnis: duomenų eksportavimas į kitus kanalus
 
-Galite kurti *patobulintą įvykius* (virtualų rodinį) savo žiniatinklio analizės duomenims. Tada filtruokite ir eksportuokite duomenis į „Azure Data Lake Storage“. Eksportuotus duomenis galite naudoti kaip duomenų šaltinį.
+Galite kurti *patobulintą įvykius* (virtualų rodinį) savo žiniatinklio analizės duomenims. Tada filtruokite ir eksportuokite duomenis į „Azure Data Lake Storage“. Eksportuotus duomenis galite naudoti kaip duomenų šaltinį. Daugiau informacijos, žr. [Sąsajos tarp auditorijos įžvalgų ir įtraukimo įžvalgų kūrimas](integrate-audience-insights-engagement-insights.md).
 
 1. [Kurti tobulintimus eksportavimo](refined-events.md) įvykius.
 
-1. [Duomenų eksportavimas](export-events.md) į „Azure Data Lake Storage“.
-
-1. [Sukurkite saitą tarp auditorijos ir įtraukimo įžvalgų](integrate-audience-insights-engagement-insights.md), kad bendrintumėte duomenis tarp dviejų galimybių.
-
-1. [Atpažinti žiniatinklio įvykius iš anksčiau autentifikuotos vartotojų](unknown-to-known.md) su **nežinoma ar žinoma** funkcija.
+1. [Eksportuokite duomenis į](export-events.md) „Data Lake Storage“.
 
 1. Sužinokite, kaip [naikinti ir eksportuoti įvykių duomenis, kuriuose yra asmeninė informacija](delete-export-personal-data.md).
-
-## <a name="step-5-create-and-manage-funnel-reports"></a>5 žingsnis: piltuvėlio ataskaitų kūrimas ir valdymas
-
-Piltuvėlio ataskaita renka informaciją apie veiksmus, kuriuos reikia atlikti klientų veiklos ciklas per žiniatinklio svetainę arba mobiliąją programą. Galite kurti ne tik iš anksto sukurtas profilio ataskaitas ir pasirinktines ataskaitas, bet ir piltuvėlio ataskaitą, padėsia nustatyti, ko klientai gali imtis prieš jiems perkant. 
-
-1. [Sukurkite piltuvėlio ataskaitą,](funnel-reports.md) kurioje kurkite sprendimus ir nurodykite optimizavimo bei procesų patobulinimų sritis.
-
-1. Sukurkite kelių kanalų piltuvėlio ataskaitas, kai savo mobiliąją programą pereisite naudodami įtraukimo įžvalgų [Android SDK](get-started-android.md) arba [iOS SDK](get-started-ios.md).
-
-1. Naudokite [piltuvėlio įžvalgas](funnel-reports.md#funnel-insights) tam, kad gautumėte gilesnių įžvalgų apie klientų elgesį apie veiksmus savo piltuvėlio ataskaitoje.
  
-## <a name="step-6-stay-connected"></a>6 žingsnis: palaikykite ryšį
+## <a name="step-5-stay-connected"></a>5 žingsnis: palaikykite ryšį
 
-Mes vertiname jūsų aktyvų dalyvavimą ir atsižvelgiama į visus svarbius atsiliepimus kurdami būsimus naujinimus. Bendrinkite savo atsiliepimus ir praneškite apie problemas vienu iš šių kanalų:
+Aktyviame jūsų dalyvavimą ir ketiname įvertinti visus aktualius atsiliepimus kuriant būsimus pranešimus. Bendrinkite savo atsiliepimus ir praneškite apie problemas vienu iš šių kanalų:
 - [Bendruomenė](https://go.microsoft.com/fwlink/?linkid=2141648)
 - [Pateikite atsiliepimą](https://go.microsoft.com/fwlink/?linkid=2143222)
 - [Palaikymo užklausa](https://go.microsoft.com/fwlink/?linkid=2145734) 

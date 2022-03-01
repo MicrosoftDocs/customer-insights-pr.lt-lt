@@ -1,7 +1,7 @@
 ---
 title: Eksportuoti „Customer Insights“ duomenis į „Google Ads“
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Google Ads“.
-ms.date: 09/27/2021
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,19 +9,16 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
+ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617933"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6604287"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentų eksportavimas į „Google Ads“ (peržiūra)
 
 Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditorijų sąrašą ir naudokite juos norėdami juos naudoti reklamuojant „Google" paiešką, „Gmail" „YouTube“ ir „Google Display Network". 
-
-> [!IMPORTANT]
-> Šiuo metu galite sukurti naują ryšį ir eksportuoti duomenis į „Google Ads", tik jei jau turite patvirtintą „Google Ads" kūrėjų atpažinimo ženklą. Dėl strategijos pakeitimų greitai atnaujinsime „Google Ads" eksportavimą ir galėsite pasirinkti eksportavimo parinktį, pagal kurią kūrėjo atpažinimo ženklas nebus reikalingas, kad būtų užtikrinta, jog jūsų patirtis ir supaprastintas eksportavimas į „Google Ads". Rekomenduojame ne nustatyti daugiau ryšių su „Google Ads", kad būtų lengviau pereiti prie naujos eksportavimo parinkties.
 
 ## <a name="prerequisites-for-connection"></a>Būtinosios ryšio sąlygos
 
@@ -35,9 +32,9 @@ Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditor
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono klientų profilių viename eksportavime į „Google Ads".
+- Iki 1 milijono profilių vieno eksportavimo metu į „Google Ads“.
 - Eksportavimas į „Google Ads“ yra apribotas segmentais.
-- Dėl paslaugų teikėjų apribojimų segmentai, kuriuose iš viso yra 1 milijono klientų profilių, gali trukti iki 5 minučių. 
+- Eksportuojant segmentus su bendrai 1 milijonu profilių gali užimti iki 5 minučių dėl apribojimų tiekėjo pusėje. 
 - Suderinamumas „Google Ads“ gali trukti iki 48 valandų.
 
 ## <a name="set-up-connection-to-google-ads"></a>Ryšio su „Google Ads“ nustatymas
@@ -74,7 +71,7 @@ Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditor
 
 1. Įveskite savo **[„Google Ads“ publikos ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** ir pasirinkite **Sujungti** tam, kad pradėtumėte sujungimą su „Google Ads“.
 
-1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą.
+1. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. Galite eksportuoti iki 1 milijono kliento profilių bendrai į „Google Ads“.
 

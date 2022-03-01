@@ -1,20 +1,20 @@
 ---
 title: Ryšiai tarp objektų ir objektų kelių
 description: Sukurkite ir valdykite ryšius tarp objektų daugeliui duomenų šaltinių.
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623021"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171174"
 ---
 # <a name="relationships-between-entities"></a>Objektų ryšiai
 
@@ -68,20 +68,6 @@ Ryšys susideda iš *šaltinio objekto*, kuriame yra išorinis raktas, ir *paski
 
 4. Pasirinkite **Įrašyti** pasirinktinio ryšio kūrimui.
 
-## <a name="set-up-account-hierarchies"></a>Nustatyti klientų hierarchijas
-
-Aplinkos, sukonfigūruotos taip, kad verslo klientai būtų naudojami kaip pagrindinė tikslinė auditorija, gali konfigūruoti susijusių verslo paskyrų hierarchijas. Pavyzdžiui, įmonė, kuri turi atskirus verslo vienetus. 
-
-Organizacijos kuria abonementų hierarchijas, kad galėtų geriau valdyti abonementus ir jų ryšius tarpusavyje. Auditorijos įžvalgų funkcija palaiko jau egzistuojančias pirminio-antrinio klientų hierarchijas, kurios jau yra perdėtiuose kliento duomenyse. Pavyzdžiui, klientai iš „Dynamics 365 Sales". Šias hierarchijas galima sukonfigūruoti auditorijos įžvalgų puslapyje **Ryšiai** skirtuke Klientų hierarchija.
-
-1. Eikite į **Duomenys** > **Ryšiai**.
-1. Pasirinkti **Klientų hierarchija** skirtuką.
-1. Pasirinkti **Nauja klientų hierarchija**. 
-1. Srityje **Kliento hierarchija** pateikite hierarchijos pavadinimą. Sistema sukuria išvesties objekto pavadinimą. Galite keisti išvesties pavadinimo objekto pavadinimą.
-1. Pažymėkite objektą, kuriame yra jūsų abonementų hierarchija. Paprastai tai yra tame pačiame objektuje, kuriame yra klientai.
-1. Pasirinkite **Kliento ID** ir **Kliento pagrindinis ID** iš pasirinkto objekto 
-1. Pasirinkite **Įrašyti**, kad pritaikytumėte parametrus ir galutinę kliento hierarchiją.
-
 ## <a name="view-relationships"></a>Ryšių peržiūra
 
 Ryšių puslapyje išvardyti visi sukurti ryšiai. Kiekviena eilutė nurodo ryšį, kuriame taip pat pateikiama išsami informacija apie šaltinio objektą, paskirties objektą ir skaičių. 
@@ -96,7 +82,7 @@ Ryšių puslapyje išvardyti visi sukurti ryšiai. Kiekviena eilutė nurodo ryš
 
 ### <a name="explore-the-relationship-visualizer"></a>Ryšių vizualizavimo priemonės naršymas
 
-Ryšių vizualizavimo priemonė rodo esamų ryšių tarp susietų objektų ir jų skaičiaus tinklo diagramą. Taip pat vizualizuoja ryšio kelią.
+Ryšių vizualizavimo priemonė rodo esamų ryšių tarp susietų objektų ir jų skaičiaus tinklo diagramą.
 
 Norėdami tinkinti rodinį, galite pakeisti laukų padėtį nuvilkdami juos į drobę.
 
@@ -106,56 +92,6 @@ Galimos parinktys:
 - **Eksportuoti kaip vaizdą**: Įrašo dabartinį rodinį kaip vaizdinį failą.
 - **Pakeisti į horizontalų/vertikalų išdėstymą**: Pakeičia objektų ir ryšių lygiuotę.
 - **Redaguoti**: Atnaujina pasirinktinių ryšių ypatybes redagavimo srityje ir įrašo pakeitimus.
-
-## <a name="relationship-paths"></a>Ryšio keliai
-
-Ryšio kelias apibūdina objektus, kurie susieti su ryšiais tarp šaltinio objekto ir tikslinio objekto. Jis naudojamas kuriant segmentą ar priemonę, į kurią įtraukti kiti objektai, o ne vieningojo profilio objektas, ir vieningojo profilio objektą galima pasiekti keliomis parinktimis. 
-
-Ryšių kelias informuoja sistemą, per kurią ryšiai turi prieigą prie vieningojo profilio objekto. Įvairūs ryšio keliai gali pateikti skirtingus rezultatus.
-
-Pavyzdžiui, objektas, *eCommerce_eCommercePurchases* su vieningojo profilio kliento objektu, turi *Kliento* ryšius:
-
-- eCommerce_eCommercePurchases > klientas
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > klientas
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klientas 
-
-Ryšių kelias nurodo, kuriuos objektus galite naudoti kurdami priemonių arba segmentų taisykles. Pasirinkus parinktį su ilgiausią ryšio kelią tikriausiai bus gauti mažiau rezultatų, nes sutampantys įrašai turi būti visų objektų dalis. Šiame pavyzdyje klientas turi būti įsigijęs prekes per el. komerciją(eCommerce_eCommercePurchases) at a point of sale(POS_posPurchases) ir dalyvauti mūsų lojalumo programoje (loyaltyScheme_loyCustomers). Pasirinkę pirmą parinktį tikriausiai gausite daugiau rezultatų, nes klientams reikės tik vieno papildomo objekto.
-
-### <a name="direct-relationship"></a>Tiesioginis ryšys
-
-Ryšys yra konvertuojamas kaip **tiesioginis ryšys**, kai šaltinio objektas yra susijęs su paskirties objektu su tik vienu ryšiu.
-
-Pavyzdžiui, jei veiklos objektas vadinamas *eCommerce_eCommercePurchases* jungiasi prie paskirties objekto *eCommerce_eCommerceContacts* per *ContactId* tai yra tiesioginis ryšys.
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="Šaltinio objektas tiesiogiai jungiasi prie tikslinio objekto.":::
-
-#### <a name="multi-path-relationship"></a>Kelių kelių santykiai
-
-**Kelių maršrutų ryšys** yra specialaus tipo tiesioginis ryšys, jungiantis šaltinio objektą su daugiau nei vienu tiksliniu objektu.
-
-Pavyzdžiui, jei veiklos objektas, kurio pavadinimas *eCommerce_eCommercePurchases*  yra susijęs su dviem tiksliniais abiem *eCommerce_eCommerceContacts* ir *loyaltyScheme_loyCustomers*,tai yra kelių maršrutų ryšys.
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="Naudojant kelių objektų ryšį šaltinio objektas tiesiogiai jungiasi prie daugiau nei vieno tikslinio objekto.":::
-
-### <a name="indirect-relationship"></a>Netiesioginis ryšys
-
-Ryšys yra konvertuojamas kaip **netiesioginis ryšys**, kai šaltinio objektas yra susijęs su vienu ar daugiau papildomų objektų prieš susiejant su tiksliniu objektu.
-
-#### <a name="multi-hop-relationship"></a>Kelių šuolių santykiai
-
-*Kelių šaltinių ryšys* yra *nelydusis ryšys* leidžiantis šaltinio objektą susieti su paskirties objektu per vieną ar daugiau objektų.
-
-Pvz., jei veiklos objektas, vadinamas *eCommerce_eCommercePurchasesWest*, jungiasi prie išsamus objektas, vadinamas *eCommerce_eCommercePurchasesEast* ir tada jungiasi su tiksliniu obkektu vadinamu *eCommerce_eCommerceContacts*, tai yra kelių objektų ryšys.
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="Šaltinio objektas tiesiogiai jungiasi prie tikslinio objekto su susijusiu objektu.":::
-
-### <a name="multi-hop-multi-path-relationship"></a>Kelių šaltinių, kelių maršrutų ryšys
-
-Kelių -inerti ir kelių ryšiai gali būti naudojami kartu kuriant **kelių šaltinių, kelių maršrutų ryšius**. Šis specialus tipas sujungia kelių objektų ir **kelių šaltinių** ir **kelių maršrutų ryšius**. Jis leidžia jums prisijungti prie daugiau nei vieno tikslinio objekto naudojant tarpinius objektus.
-
-Pvz., jei veiklos objektas, vadinamas *eCommerce_eCommercePurchasesWest* sujungia su tarpiniu objektu pavadinimu *eCommerce_eCommercePurchasesEast* ir tada jungiasi su tiksliniu obkektu vadinamu *eCommerce_eCommerceContacts* ir *loyaltyScheme_loyCustomers*, nes tai yra kelių šaltinių, kelių maršrutų ryšys.
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Šaltinio objektas tiesiogiai jungiasi prie vieno tikslinio objekto ir per tarpinį objektą jungiasi su kitu tiksliniu objektu.":::
 
 ## <a name="manage-existing-relationships"></a>Esamų ryšių valdymas 
 
@@ -169,6 +105,6 @@ Pasirinkite ryšį ir vieną iš šių parinkčių:
 
 ## <a name="next-step"></a>Tolesnis veiksmas
 
-Sistemos ir pasirinktiniai ryšiai naudojami [segmentams kurti](segments.md) ir [priemonėms](measures.md) pagrįstoms keliais duomenų šaltiniais, kurių nebenaudojama.
+Sistemos ir pasirinktiniai ryšiai naudojami [segmentams kurti](segments.md), remiantis keliais duomenų šaltiniais, kurie nebėra izoliuoti.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

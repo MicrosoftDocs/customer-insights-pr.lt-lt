@@ -1,247 +1,113 @@
 ---
-title: Matų kūrimas ir valdymas
-description: Apibrėžkite verslo efektyvumo analizės ir peržiūros priemones.
-ms.date: 11/01/2021
+title: Sukurti ir redaguoti priemones
+description: Apibrėžkite su klientu susijusius matus, kad galėtumėte analizuoti ir pateikti tam tikrų verslo sričių rezultatus.
+ms.date: 10/15/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: wameng
-ms.reviewer: mhart
+ms.author: mhart
+ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732736"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406420"
 ---
 # <a name="define-and-manage-measures"></a>Matų apibrėžimas ir valdymas
 
-Šios priemonės padeda jums geriau suprasti klientų elgesį ir įmonės efektyvumą. Jos peržvelgia atitinkamas vertes iš [vieningųjų profilių](data-unification.md). Pavyzdžiui, įmonė nori, kad *bendras vienam klientui* skirtas išlaidas būtų galima pamatyti norint suprasti kliento pirkimo retrospektyvą arba įvertinti *bendrą įmonės pardavimą* tam, kad būtų galima suprasti agregavimo lygio pajamas visoje įmonėje.  
+**Matai** pateikia pagrindinius veiklos rodiklius (KPI), kurie atspindi tam tikrų verslo sričių našumą ir būseną. Publikos įžvalgos pateikia intuityvią patirtį skirtą sukurti skirtingus priemonių tipus naudojant laukimo kūrimo įrankį, kuriam neprivalote koduoti ar patvirtinti savo priemones rankiniu būdu. **Pagrindiniame** puslapyje galite sekti savo verslo matus, matyti konkrečių klientų matus **kliento kortelėje** ir naudoti matus klientų segmentams apibrėžti **segmentų** puslapyje.
 
-Priemonės kuriamos naudojant priemonę eilės duomenų užklausos platformą su įvairiais operatoriais ir paprastomis susiejimo parinktimis. Ji leidžia filtruoti duomenis, grupuoti rezultatus, aptikti [objekto ryšio maršrutus](relationships.md), ir peržiūrėti išvestį.
+## <a name="create-a-measure"></a>Sukurti matą
 
-Naudodami matą, galite planuoti verslo veiklas užklausdami klientų duomenis ir išskleisti įžvalgas. Pavyzdžiui, sukūrus *bendrą vienam klientui išleidus sumą* ir *bendrą grąžą klientui* galima nustatyti klientų grupę, kurios išlaidos yra didelės, bet didelė ir grąža. Galite  [sukurti segmentą](segments.md) ir imtis kitų geriausių veiksmų. 
-
-## <a name="build-your-own-measure-from-scratch"></a>Savo priemonės kūrimas nuo pradžių
-
-Šiame skyriuje pateikiama informacija apie naujos priemonės sukūrimą nuo pradžių. Galite sukurti priemonę su duomenų atributais iš duomenų objektų, kurių ryšys nustatytas taip, kad būtų galima prisijungti prie vieningojo kliento profilio objekto.
-
-# <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
+Šis skyrius padės jums sukurti matą nuo nulio. Galite kurti matus su duomenimis iš kelių duomenų šaltinių, sujungtų su kliento objektu. Kai kurie [paslaugų apribojimai](service-limits.md) yra taikomi.
 
 1. Publikos įžvalgose, eikite į **Priemonės**.
 
-1. Pasirinkite **Naujas** ir pasirinkite **Kurti savo**.
+2. Pasirinkite **naujas matas**
 
-1. Pasirinkite **Redaguoti pavadinimą** ir įveskite priemonės **pavadinimą**. 
+3. Pasirinkite mato **tipą**:
 
-1. Konfigūracijos srityje pasirinkite agregavimo funkciją išplečiamajame meniu **Pažymėti funkciją**. Agregavimo funkcijos yra šios: 
-   - **Sum**
-   - **Vidurkis**
-   - **Skaičius**
-   - **Unikalusis skaičius**
-   - **Didžiausia**
-   - **Min**
-   - **Pirma:** perima pirmą duomenų įrašo reikšmę
-   - **Paskutinė:** perima paskutinę į duomenų įrašą pridėtą reikšmę
+   - **Kliento atributas**: vienas kliento laukas, kuris atspindi kliento rezultatą, vertę arba būseną. Kliento atributai kuriami kaip atributai naujame sistemos sugeneruotame objekte, vadinamame **kliento matu**.
 
-   :::image type="content" source="media/measure-operators.png" alt-text="Apibrėžkite mato skaičiavimus.":::
+   - **Kliento matas**: įžvalgos apie kliento elgseną pagal pažymėtų matmenų suskirstymą. Naujas objektas yra sukuriamas kiekvienam matui, galimai su keliais įrašais klientui.
 
-1. Pasirinkite **Įtraukti** atributą ir pažymėkite duomenis, kurių reikia sukurti šią priemonę.
-   
-   1. Pasirinkti **Atributus**. 
-   1. Duomenų objektas: pasirinkite objektą, kuriame yra atributas, kurį norite matuoti. 
-   1. Duomenų atributas: pasirinkite atributą, kurį norite naudoti agregavimo funkcijai apskaičiuoti. Vienu metu galite pasirinkti tik vieną atributą.
-   1. Taip pat galite pažymėti duomenų atributą iš esamos priemonės pažymėdami skirtuką **Priemonės** arba galite ieškoti objekto arba priemonės pavadinimo. 
-   1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
+   - **Verslo matas**: seka jūsų verslo veiklos rezultatus ir įmonės būseną. Verslo matai gali turėti dvi skirtingas išvestis: skaitmeninę išvestį, kuri rodoma **pagrindiniame** puslapyje arba naują objektą, kurį galite rasti **objektų** puslapyje.
 
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Pažymėkite atributą, kuris bus naudojamas skaičiavimams.":::
+4. Įveskite **pavadinimą** ir pasirinktinai **rodomą pavadinimą**, tada pasirinkite **toliau**.
 
-1. Norėdami sukurti sudėtingesnių matų, galite įtraukti daugiau atributų arba naudoti matavimo funkcijos operatoriais.
+5. **Objektų** skyriuje, pasirinkite pirmą objektą iš išskleidžiamojo sąrašo. Šiuo metu turite nuspręsti, ar jūsų mato apibrėžimui yra reikalingi papildomi objektai.
 
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Sukurkite sudėtingą matą su operatoriais, kuriuose yra operatoriai.":::
+   > [!div class="mx-imgBorder"]
+   > ![Matavimo apibrėžimas](media/measure-definition.png "Matavimo apibrėžimas")
 
-1. Norėdami įtraukti filtrų, konfigūracijos srityje pažymėkite **filtrą**. 
-  
-   1. Filtrų **srities skyriuje** Įtraukti atributą **pažymėkite** atributą, kurį norite naudoti kurdami filtrus.
-   1. Nustatykite filtro operatorių, kad apibrėžtų kiekvieno pažymėto atributo filtrą.
-   1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
+   Norėdami įtraukti daugiau objektų, pasirinkite **pridėti objektą** ir pasirinkite objektus, kuriuos norite naudoti matui.
 
-1. Norėdami įtraukti dimensijas, konfigūracijos srityje pažymėkite **Dimensijos**. Dimensijų rezultatai bus rodomi kaip stulpeliai.
- 
-   1. Pasirinkite **Redaguoti dimensijas** reikšmę ir įtraukite duomenų atributų, pagal kuriuos norite grupuoti matavimo reikšmes. Pvz.: miestą arba lytį. Pagal numatytuosius nustatymus, siekiant kurti *kliento lygio matus*, pasirenkama *Kliento ID*. Jei norite kurti verslo lygio priemones, galite pašalinti *numatytąją dimensiją*.
-   1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
+   > [!NOTE]
+   > Galite pasirinkti tik tuos objektus, kurie turi ryšį su jūsų pradžios objektu. Daugiau informacijos apie ryšių apibrėžimą, žr. [ryšiai](relationships.md).
 
-1. Jei jūsų duomenyse yra reikšmių, kurias reikia pakeisti sąsočiu, pažymėkite **Taisyklės**. Sukonfigūruokite taisyklę ir įsitikinkite, kad pakeitimui renkatės tik sveikuosius skaičius. Pavyzdžiui, nulines *reikšmes* pakeiskite *nuliu*.
+6. Pasirinktinai galite konfigūruoti kintamuosius. **Kintamųjų** skyriuje pasirinkite **naują kintamąjį**.
 
-1. Jei tarp jūsų susietų duomenų objektų ir *Kliento* objekto yra keli keliai, turite pasirinkti vieną iš nustatytų [objekto ryšio kelių](relationships.md). Matavimo rezultatai gali skirtis atsižvelgiant į pasirinktą kelią. 
-   
-   1. Pažymėkite **ryšio kelią** ir pasirinkite objekto kelią, kurį reikėtų naudoti jūsų priemonei identifikuoti. Jei yra tik vienas kelias į *Kliento* objektą, šis valdiklis nebus rodomas.
-   1. Pasirinkite **Atlikta**, kad pritaikytumėte savo pasirinkimą. 
+   Kintamieji yra kiekvienam pasirinktam įrašui atliekami skaičiavimai. Pavyzdžiui, pardavimo vietos (POS) ir pardavimo internetu, kiekvienam jūsų kliento įrašui, apibendrinimas.
 
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Pasirinkite diagramos objektą.":::
+7. Pateikite kintamojo **pavadinimą**.
 
-1. Jei norite įtraukti daugiau matavimo skaičiavimų, pažymėkite  **Naujas skaičiavimas**. Norėdami atlikti naujus skaičiavimus, galite naudoti tik objektus tame pačiame objekto kelyje. naujų skaičiavimų rezultatai bus rodomi kaip stulpeliai.
+8. **Išraiškos** srityje pasirinkite lauką, kad pradėtumėte skaičiavimą.
 
-1. Pažymėkite **...** skaičiavimuose, kad **Duplikuotumėte**, **Pervardykite** arba **Pašalinkite**  skaičiavimą iš priemonės.
+9. Įveskite išraišką **išraiškos** srityje kol renkatės daugiau į apskaičiavimą įtraukiamų laukų.
 
-1. **Peržiūros** srityje matysite išvesties objekto matavimo duomenų schemą, įskaitant filtrus ir dimensijas. Peržiūra dinamiškai keičiasi ir pasikeičia konfigūracija.
+   > [!NOTE]
+   > Šiuo metu tik aritmetinės išraiškos yra palaikomos. Be to, kintamųjų skaičiavimas nepalaikomas objektams iš skirtingų [objektų maršrutų](relationships.md).
 
-1. Pažymėkite **Vykdyti**, kad apskaičiuotų sukonfigūruoto matavimo rezultatus. Pasirinkite **Įrašyti ir uždaryti**, jei norite išlaikyti dabartinę konfigūraciją ir vėliau vykdyti priemonę.
+10. Pasirinkite **Atlikta**.
 
-1. Eikite į **Priemonės**, kad peržiūrėtumėte naujai sukurtą priemonę sąraše.
+11. **Mato apibrėžimo** skyriuje apibrėšite, kaip jūsų pasirinkti objektai ir apskaičiuoti kintamieji yra sujungiami į naują objekto ar atributo matmenį.
 
-# <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
+12. Pasirinkti **naują matmenį**. Galite galvoti apie matmenį kaip apie *grupuoti pagal* funkciją. Jūsų mato objekto ar atributo duomenų išvestis bus sugrupuota pagal visus apibrėžtus matmenis.
 
-1. Publikos įžvalgose, eikite į **Priemonės**.
+    > [!div class="mx-imgBorder"]
+    > ![Pasirinkti sujungimo ciklą](media/measures-businessreport-measure-definition2.png "Pasirinkti sujungimo ciklą")
 
-1. Pasirinkite **Naujas** ir pasirinkite **Kurti savo**.
+    Savo matmenų apibrėžimui pasirinkite arba įveskite šią informaciją:
 
-1. Pasirinkite **Redaguoti pavadinimą** ir įveskite priemonės **pavadinimą**. 
+    - **Objektas**: jei nustatote matavimo objektą, jis turi turėti bent vieną atributą. Jei apibrėžiate matavimo atributą, pagal numatytąją reikšmę jis apims tik vieną atributą. Šis pasirinkimas yra apie objekto, kuris turi atributą, pasirinkimą.
+    - **Laukas**: pasirinkite konkretų atributą, kuris bus įtrauktas į matavimo objektą arba atributą.
+    - **Talpykla**: pasirinkite, ar norite kaupti duomenis kasdien, kas mėnesį ar kas metus. Tai būtina pasirinkti tik tuo atveju, jei pasirinkote atributą Datos tipas.
+    - **Kaip**: apibrėžia naujo lauko pavadinimą.
+    - **Rodomas pavadinimas**: apibrėžia jūsų lauko rodomą pavadinimą.
 
-1. Konfigūracijos srityje pasirinkite agregavimo funkciją išplečiamajame meniu **Pažymėti funkciją**. Agregavimo funkcijos yra šios: 
-   - **Sum**
-   - **Vidurkis**
-   - **Skaičius**
-   - **Unikalusis skaičius**
-   - **Didžiausia**
-   - **Min**
-   - **Pirma:** perima pirmą duomenų įrašo reikšmę
-   - **Paskutinė:** perima paskutinę į duomenų įrašą pridėtą reikšmę
+    > [!NOTE]
+    > Jūsų verslo matas bus išsaugotas kaip vieno skaičiaus objektas ir atsiras **pagrindiniame** puslapyje, nebent pridėsite daugiau matmenų. Pridėjus daugiau matmenų, matas *nebus* rodomas **pagrindiniame** puslapyje.
 
-   :::image type="content" source="media/measure-operators.png" alt-text="Apibrėžkite mato skaičiavimus.":::
+13. Pasirinktinai įtraukite sujungimo funkcijas. Bet kokia jūsų sukurta agregacija pavirsta nauja jūsų mato objekto ar atributo reikšme. Palaikomos sujungimo funkcijos yra: **min**, **maks**, **vidurkis**, **mediana**, **suma**, **unikalus skaičius**, **pirmas** (užima pirmąjį matmens reikšmės įrašą) ir **paskutinis** (užima paskutinį įrašą, įtrauktą į matmens vertę).
 
-1. Pasirinkite **Įtraukti** atributą ir pažymėkite duomenis, kurių reikia sukurti šią priemonę.
-   
-   1. Pasirinkti **Atributus**. 
-   1. Duomenų objektas: pasirinkite objektą, kuriame yra atributas, kurį norite matuoti. 
-   1. Duomenų atributas: pasirinkite atributą, kurį norite naudoti agregavimo funkcijai apskaičiuoti. Vienu metu galite pasirinkti tik vieną atributą.
-   1. Taip pat galite pažymėti duomenų atributą iš esamos priemonės pažymėdami skirtuką **Priemonės** arba galite ieškoti objekto arba priemonės pavadinimo. 
-   1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
-
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Pažymėkite atributą, kuris bus naudojamas skaičiavimams.":::
-
-1. Norėdami sukurti sudėtingesnių matų, galite įtraukti daugiau atributų arba naudoti matavimo funkcijos operatoriais.
-
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Sukurkite sudėtingą matą su operatoriais, kuriuose yra operatoriai.":::
-
-1. Norėdami įtraukti filtrų, konfigūracijos srityje pažymėkite **filtrą**. 
-  
-   1. Filtrų **srities skyriuje** Įtraukti atributą **pažymėkite** atributą, kurį norite naudoti kurdami filtrus.
-   1. Nustatykite filtro operatorių, kad apibrėžtų kiekvieno pažymėto atributo filtrą.
-   1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
-
-1. Norėdami įtraukti dimensijas, konfigūracijos srityje pažymėkite **Dimensijos**. Dimensijų rezultatai bus rodomi kaip stulpeliai.
- 
-   1. Pasirinkite **Redaguoti dimensijas** reikšmę ir įtraukite duomenų atributų, pagal kuriuos norite grupuoti matavimo reikšmes. Pvz.: miestą arba lytį. Pagal numatytuosius nustatymus, siekiant kurti *kliento lygio matus*, pasirenkama *Kliento ID*. Jei norite kurti verslo lygio priemones, galite pašalinti *numatytąją dimensiją*.
-   1. Pasirinkite **Pridėti**, kad pridėtumėte pasirinktus atributus ir priemones.
-
-1. Jei jūsų duomenyse yra reikšmių, kurias reikia pakeisti sąsočiu, pažymėkite **Taisyklės**. Sukonfigūruokite taisyklę ir įsitikinkite, kad pakeitimui renkatės tik sveikuosius skaičius. Pavyzdžiui, nulines *reikšmes* pakeiskite *nuliu*.
-
-1. Galite naudoti antrinių **abonementų sujungimą** jei naudojate [abonementus su hierarchijomis](relationships.md#set-up-account-hierarchies).
-   - Jei nustatyta lauko **Išjungta** vertė, matavimo vienetas apskaičiuojamas kiekvienam abonementui. Kiekvienas abonementas gauna rezultatų savį.
-   - Jei jis nustatytas kaip **Įjungtas**, rinkitės **Redaguoti** kad pasirinktumėte kliento hierarchiją pagal prarytas hierarchijas. Priemonė duos tik vieną rezultatą, nes jis agreguotas su antriniais klientais.
-
-1. Jei tarp jūsų susietų duomenų objektų ir *Kliento* objekto yra keli keliai, turite pasirinkti vieną iš nustatytų [objekto ryšio kelių](relationships.md). Matavimo rezultatai gali skirtis atsižvelgiant į pasirinktą kelią. 
-   
-   1. Pažymėkite **ryšio kelią** ir pasirinkite objekto kelią, kurį reikėtų naudoti jūsų priemonei identifikuoti. Jei yra tik vienas kelias į *Kliento* objektą, šis valdiklis nebus rodomas.
-   1. Pasirinkite **Atlikta**, kad pritaikytumėte savo pasirinkimą. 
-
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Pasirinkite diagramos objektą.":::
-
-1. Pažymėkite **...** skaičiavimuose, kad **Duplikuotumėte**, **Pervardykite** arba **Pašalinkite**  skaičiavimą iš priemonės.
-
-1. **Peržiūros** srityje matysite išvesties objekto matavimo duomenų schemą, įskaitant filtrus ir dimensijas. Peržiūra dinamiškai keičiasi ir pasikeičia konfigūracija.
-
-1. Pažymėkite **Vykdyti**, kad apskaičiuotų sukonfigūruoto matavimo rezultatus. Pasirinkite **Įrašyti ir uždaryti**, jei norite išlaikyti dabartinę konfigūraciją ir vėliau vykdyti priemonę.
-
-1. Eikite į **Priemonės**, kad peržiūrėtumėte naujai sukurtą priemonę sąraše.
-
----
-
-## <a name="use-a-template-to-build-a-measure"></a>Šablono naudojimas priemonei kurti
-
-Jiems kurti galite naudoti iš anksto apibrėžtus dažniausiai naudojamų priemonių šablonus. Išsamūs šablonų aprašymai ir interaktyvioji patirtis padeda efektyviai matuoti kūrimą. Šablonai kuriami pagal žymimys duomenis iš objekto *„Unified Activity“*. Prieš kurdami priemonę pagal šabloną įsitikinkite, kad sukonfigūravote [kleinto veiklą](activities.md).
-
-# <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
-
-Jiems kurti galite naudoti iš anksto apibrėžtus dažniausiai naudojamų priemonių šablonus. Išsamūs šablonų aprašymai ir interaktyvioji patirtis padeda efektyviai matuoti kūrimą. Šablonai kuriami pagal žymimys duomenis iš objekto *„Unified Activity“*. Prieš kurdami priemonę pagal šabloną įsitikinkite, kad sukonfigūravote [kleinto veiklą](activities.md).
-
-Galimi priemonių šablonai: 
-- Vidutinė operacijų vertė (ATV)
-- Bendra operacijos vertė
-- Vidutinės dienos pajamos
-- Vidutinės metų pajamos
-- Operacijų skaičius
-- Gauti lojalumo taškai
-- Panaudoti lojalumo taškai
-- Lojalumo taškų balansas
-- Aktyvaus kliento veiklos trukmė
-- Lojalumo narystės trukmė
-- Laikas nuo paskutinio pirkimo
-
-Tolesnė procedūra apžvelgia veiksmus, reikalingus naujai priemonei kurti naudojant šabloną.
-
-1. Publikos įžvalgose, eikite į **Priemonės**.
-
-1. Pasirinkite **Naujas** ir pasirinkite **Rinktis šabloną**.
-
-   :::image type="content" source="media/measure-use-template.png" alt-text="Kai kuriate naują priemonę su šablono paryškinimo parinktimi, išskleidžiamajame meniu yra šiek tiek pasislėpęs.":::
-
-1. Raskite jūsų poreikius atitinkantį šabloną ir pasirinkite **Rinktis šabloną**.
-
-1. Peržiūrėkite reikiamus duomenis ir pasirinkite **Darbo pradžia**, jei turite visus duomenis.
-
-1. Srityje **Pavadinimo redagavimas** nustatykite savo priemonės pavadinimą ir išvesties objektą. 
-
-1. Pasirinkite **Atlikta**.
-
-1. Skiltyje **Laikotarpio nustatymas** apibrėžkite naudojamų duomenų laiko tarpą. Pasirinkite, ar norite, kad nauja priemonė apimtų visą duomenų rinkinį pažymėdami "Visas laikas" arba, jei norite, kad **priemonė sufokusuos** konkretų laiko **periodą**.
-
-   :::image type="content" source="media/measure-set-time-period.png" alt-text="Ekrano nuotrauka, kurioje rodoma laikotarpio skiltis konfigūruojant priemonę iš šablono.":::
-
-1. Kitoje skiltyje pasirinkite **Pridėti duomenis** ir pasirinkite veiklas bei pažymėkite attitinkamus duomenis iš savo objekto *Unified Activity*.
-
-    1. 1 veiksmas iš 2: skiltyje **Veiklos tipas** pasirinkite norimo naudoti objekto tipą. Skiltyje **Veiklos** pasirinkite objektus, kuriuos norite žymėti.
-    1. 2 veiksmas iš 2: pasirinkite formulės reikalaujamo komponento atributą iš objekto *Unified Activity*. Pvz., jei operacijos vertė vidutinė, tai operacijos vertę vaiduojantis atributas. **Veiklos laiko žymai** pasirinkite atributą iš objekto „Unified Activity“, kuriame vaizduojama veiklos data ir laikas.
-   
-1. Sėkmingai pažymėjė duomenis būseną galite matyti kaip **Baigta** kartu su pažymėtų veiklų ir atributų pavadinimu.
-
-   :::image type="content" source="media/measure-template-configured.png" alt-text="Baigtų priemonių šablono konfigūravimo ekrano nuotrauka.":::
-
-1. Dabar galite pasirinkti **Vykdyti** ir apskaičiuoti priemonės rezultatus. Jei paiešką vėliau norėsite susiaurinti, pasirinkite **Išsaugoti juodarštį**.
-
-# <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
-
-Ši funkcija galima tik priemonėms, sukurtoms aplinkose su atskirais klientais kaip pirmine tiksline auditorija.
-
----
+14. Pasirinkite **išsaugoti** norėdami pritaikyti mato pakeitimus.
 
 ## <a name="manage-your-measures"></a>Matų valdymas
 
-Priemonių sąrašą galima rasti puslapyje **Priemonės**.
+Jums sukūrus mažiausiai vieną priemonę, matysite priemonių sąrašą **Priemonių** puslapyje.
 
-Rasite informacijos apie matavimo tipą, kūrėją, kūrimo datą, būseną ir būseną. Kai sąraše pažymite priemonę, galite peržiūrėti išvestį ir atsisiųsti CSV failą.
+Rasite informaciją apie mato tipą, kūrėją, sukūrimo datą ir laiką, paskutinę redagavimo datą ir laiką, būseną (ar matas aktyvus, nesuaktyvintas arba nepavykęs) ir paskutinę naujinimo datą ir laiką. Iš sąrašo pasirinkę matą galite peržiūrėti jo išvesties peržiūrą.
 
 Norėdami tuo pačiu metu atnaujinti visus savo matus, spustelėkite **Atnaujinti visus** nepažymėdami konkretaus mato.
 
 > [!div class="mx-imgBorder"]
-> ![Atskirų matų valdymo veiksmai.](media/measure-actions.png "Atskirų matų valdymo veiksmai.")
+> ![Atskirų matų valdymo veiksmai](media/measure-actions.png "Atskirų matų valdymo veiksmai")
 
-Sąraše pažymėkite toliau nurodytų parinkčių matą.
+Arba pasirinkite priemonę iš sąrašo ir atlikite vieną iš toliau nurodytų veiksmų.
 
 - Pažymėkite mato pavadinimą, kad peržiūrėtumėte jo išsamią informaciją.
 - **Redaguokite** mato konfigūraciją.
-- **Atnaujinkite** priemonę pagal naujausius duomenis.
 - **Pervardykite** matą.
 - **Panaikinkite** matą.
-- **Aktyvuokite** arba **Deaktyvuokite**. Suplanuoto atnaujinimo metu neaktyvūs duomenys nebus [atnaujinti](system.md#schedule-tab).
+- Pažymėkite elipsę (...), tada pasirinkite **Atnaujinti**, kad būtų pradėtas mato atnaujinimo procesas.
+- Pažymėkite elipsę (...), tada pasirinkite **Atsisiųsti**, kad gautumėte mato .CSV failą.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
 
 ## <a name="next-step"></a>Kitas veiksmas
 
-Galite naudoti esamus priemones klientų [segmentui kurti](segments.md).
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Galite naudoti esančius matus, jei norite sukurti savo pirmą kliento segmentą **segmentų** puslapyje. Daugiau informacijos galite rasti čia [segmentas](segments.md).

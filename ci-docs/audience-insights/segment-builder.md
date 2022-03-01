@@ -1,7 +1,7 @@
 ---
-title: Kurkite segmentus naudodami segmentų kūrimo priemonę
+title: Segmentų kūrimas ir valdymas
 description: Kurkite klientų segmentus, kad jie būtų sugrupuoti pagal įvairius atributus.
-ms.date: 10/18/2021
+ms.date: 05/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,148 +9,125 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
+ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673560"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "6064947"
 ---
-# <a name="create-segments"></a>Kurti segmentus
+# <a name="create-and-manage-segments"></a>Segmentų kūrimas ir valdymas
 
-Apibrėžkite vieningojo kliento objekto ir su juo susijusių objektų sudėtinius filtrus. Apdorojus, kiekvienas segmentas sukuria klientų duomenų rinkinį, kurį galite eksportuoti, ir su kuriuo galite atlikti veiksmus. Segmentai yra valdomi **Segmentų** puslapyje. Galite [kurti naujus segmentus](#create-a-new-segment) naudodami segmentų kūrimo priemonę ar [kurti sparčiuosius segmentus](#quick-segments) iš kitų programos sričių. 
+Apibrėžkite vieningojo kliento objekto ir su juo susijusių objektų sudėtinius filtrus. Apdorojus, kiekvienas segmentas sukuria klientų duomenų rinkinį, kurį galite eksportuoti, ir su kuriuo galite atlikti veiksmus. Segmentai yra valdomi **Segmentų** puslapyje. 
 
-> [!TIP]
-> - Sparčiuosius segmentus galima naudoti tik atskirų **klientų aplinkose**.    
-> - Segmentuose, pagrįstuose **atskirais klientais**, automatiškai įtraukiama prieinama segmento narių kontaktinė informacija. Verslo paskyrų **aplinkose segmentai** grindžiami klientais (įmonėmis arba antrinėmis įmonėmis). Norėdami į segmentą įtraukti kontaktinę informaciją, naudokite **projekto atributų** funkcijas segmento atributų atributuose.
->    - Užtikrinkite, kad kontaktų duomenų šaltiniai [būtų automatiškai susieti su „ContactProfile"](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) objektu.
+Tolesnis pavyzdys rodo segmento pajėgumą. Nustatėme klientų, kurie per paskutines 90 dienų užsisakė prekių bent už 500 $ *ir* kurie atliko klientų aptarnavimo skambutį, kuris buvo perskirtas, segmentą.
 
-## <a name="segment-builder"></a>Segmentų kūrimo priemonė
-
-Toliau pateiktas vaizdas iliustruoja įvairius segmentų kūrimo priemonės aspektus. Jame rodomas segmentas, sukuriantis klientų grupę. Klientai užsaavo prekes konkrečiu laikotarpiu ir surinko apdovanojimo taškus arba praleido tam tikrą pinigų sumą. 
-
-:::image type="content" source="media/segment-builder-overview.png" alt-text="Segmento kūrimo elementai ." lightbox="media/segment-builder-overview.png":::
-
-1. Suskirstykite segmentą su taisyklėmis ir potaisyklėmis. Kiekvieną taisyklę ar potaisyklę sudaro sąlygos. Sąlygas derinkite su loginiais operatoriais
-
-1. Pasirinkite [ryšio kelią](relationships.md) tarp objektų, kuriems taikoma taisyklė. Ryšio kelias nurodo, kuriuos atributus galima naudoti sąlygoje.
-
-1. Valdykite taisykles ir potaisykles. Pakeiskite taisyklės padėtį arba panaikinkite ją.
-
-1. Įtraukite sąlygų ir kurkite tinkamą įdėjimo lygį naudojant potaisykles.
-
-1. Pritaikykite prijungtų taisyklių rinkinio operacijas.
-
-1. Naudokite atributų sritį, jei norite įtraukti galimų objekto atributų arba sukurti sąlygas pagal atributus. Srityje rodomas objektų ir atributų, galimų pasirinkti taisyklei, sąrašas pagal pasirinktą ryšio kelią.
-
-1. Įtraukite sąlygų, pagrįstų esamų taisyklių ir antrinių taisyklių atributais, arba įtraukite į naują taisyklę.
-
-1. Kuriant segmentą anuliuokite ir perdarykite pakeitimus.
-
-Aukščiau pateiktas pavyzdys iliustruoja segmentavimo galimybę. Sukūrėme segmentą klientams, kurie bent už $500 nusipirko prekių internetu *ir* yra suinteresuoti programinės įrangos kūrimu.
+:::image type="content" source="media/segmentation-group1-2.png" alt-text="Segmento kūrimo priemonės vieningosios sąsajos su dvejomis grupėmis, nurodančiomis kliento segmentą, ekrano kopija.":::
 
 ## <a name="create-a-new-segment"></a>Sukurkite naują segmentą
 
-Naują segmentą galima sukurti keliais būdais. Šiame skyriuje aprašoma, kaip sukurti savo segmentą nuo nulio. Taip pat galite sukurti *spartųjį segmentą*, pagrįstą esamais objektais, arba naudoti mašininio mokymo modelį, kad gautumėte *siūlomus segmentus*. Norėdami gauti daugiau informacijos, eikite į [Segmentų apžvalga](segments.md).
+Naują segmentą galima sukurti keliais būdais. Šiame skyriuje aprašoma, kaip sukurti *tuščią segmentą* nuo nulio. Taip pat galite sukurti *spartųjį segmentą*, pagrįstą esamais objektais, arba naudoti mašininio mokymo modelį, kad gautumėte *siūlomus segmentus*. Daugiau informacijos: [Segmentų apžvalga](segments.md).
 
-Kurdami segmentą, jūs galite įrašyti juodraštį. Juodraščio etapo segmentas įrašomas kaip neaktyvusis segmentas. Baigę konfigūruoti segmentą, paleiskite jį, kad suaktyvintumėte segmentą. Arba galite taip pat **Aktyvinti** segmentą iš puslapio **Visi segmentai**.
+Kurdami segmentą, jūs galite įrašyti juodraštį. Jis bus įrašytas kaip neaktyvusis segmentas ir jo nebus galima suaktyvinti užbaigus jį naudojant tinkamą konfigūraciją.
 
 1. Eikite į puslapį **Segmentai**.
 
-1. Pažymėkite **Naujas** > **Sukurkite savo**.
+1. Pasirinkite **Naujas** > **Tuščias segmentas**.
 
-1. Segmento segmento apibrėžiate arba kuriate taisykles. Taisyklę sudaro viena ar daugiau sąlygų, apibrėžiaančių klientų rinkinį.
+1. Srityje **Naujas segmentas** pasirinkite segmento tipą:
 
-1. Skyriuje **1 taisyklė** pasirinkite objekto atributą, pagal kurį norite filtruoti klientus. Pasirinkti atributus galite dviem būdais: 
-   - Peržiūrėkite galimų objektų ir atributų sąrašą srityje **Įtraukti į taisyklę** ir pažymėkite **„+”** piktogramą šalia atributo, kurį norite įtraukti. Pasirinkite, ar norite įtraukti atributą į esamą taisyklę, ar naudoti jį naujai taisyklei kurti.
-   - Norėdami peržiūrėti sutampančius pasiūlymus, taisyklės skyriuje įveskite atributo pavadinimą.
+   - **Dinaminiai segmentai** [atnaujinami](segments.md#refresh-segments) pagal pasikartojantį grafiką.
+   - **Statiniai segmentai** paleidžiami vieną kartą, kai juos kuriate.
 
-1. Pasirinkite operatorius, kad nurodytumėte sąlygos atitikmenų reikšmes. Atributas gali turėti vieną iš keturių duomenų tipų kaip reikšmę: skaitinę, eilutės, datos arba Bulio logikos. Priklausomai nuo atributo duomenų tipo, sąlygą galima nurodyti skirtingais operatoriais. Segmentuose su verslo klientais galimi du specialūs operatoriai, kad būtų galima įtraukti potencialias iki šiol suskirstytas paskyras. Norėdami įtraukti *susijusius* ir *pagrindinius* operatorius į susijusias paskyras. 
+1. Įveskite segmento **Išvesties objekto pavadinimą**. Galite pasirinktinai nurodyti rodomą pavadinimą ir aprašą, padedantį identifikuoti segmentą.
 
-1. Pasirinkite **Įtraukti sąlygą**, jei į taisyklę norite įtraukti daugiau sąlygų. Norėdami sukurti taisyklę pagal dabartinę taisyklę, pažymėkite **Įtraukti antrinę taisyklę**.
+1. Norėdami atidaryti **segmentų kūrimo priemonės** puslapį, kuriame apibrėžėte grupė, pasirinkite **Kitas**. Grupė yra klientų rinkinys.
 
-1. Jei taisyklė naudoja kitus objektus, o ne *Kliento* objektą, turite nustatyti ryšio kelią. Ryšio kelias reikalingas informuoti sistemą, per kuriuos ryšius jūs norite pasiekti vieningąjį kliento objektą. Pasirinkite **Nustatyti ryšio kelią**, kad pažymėtą objektą būtų galima susieti su vieninguoju kliento objektu. Jei yra tik vienas galimas ryšio kelias, sistema jį pasirinks automatiškai. Įvairūs ryšio keliai gali pateikti skirtingus rezultatus. Kiekviena taisyklė gali turėti savo ryšio kelią.
+1. Pasirinkite objektą, kuriame yra atributas, pagal kurį norite segmentuoti.
 
-   :::image type="content" source="media/relationship-path.png" alt-text="Galimas ryšio kelias kuriant taisyklę, pagrįstą objektu, susietu su vieninguoju kliento objektu.":::
+1. Pasirinkite atributą, pagal kurį norite segmentuoti. Šis atributas gali turėti vieną iš keturių reikšmių tipų: skaičiaus, eilutės, datos arba Bulio.
 
-   Pavyzdžiui, objektas *„eCommerce_eCommercePurchases”* ekrano kopijoje turi keturias susiejimo su *Kliento* objektu parinktis: 
-   - „eCommerce_eCommercePurchases” > „eCommerce_eCommerceContacts” > Klientas
-   - eCommerce_eCommercePurchases > klientas
-   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > klientas
-   - „eCommerce_eCommercePurchases” > „eCommerce_eCommerceContacts” > „POS_posPurchases” > „loyaltyScheme_loyCustomers” > „Customer” Kai pasirenkate paskutinę parinktį, į taisyklės sąlygas galime įtraukti atributus iš visų išvardytų objektų. Tikriausiai gausime mažiau rezultatų, nes sutampantys klientų įrašai turės būti visų objektų dalis. Šiame pavyzdyje jie turi būti įsigiję prekes per elektroninę prekybą(*„eCommerce_eCommercePurchases”*), pardavimo vietoje (*„POS_posPurchases”*) ir dalyvauti mūsų lojalumo programoje (*„loyaltyScheme_loyCustomers”*). Pasirinkdami antrą parinktį galime pasirinkti tik atributus iš *„eCommerce_eCommercePurchases”* ir *Kliento* objektų. Tikėtina, jog dėl to atsiras daugiau klientų profilių.
+1. Pasirinkite operatorių ir pasirinkto atributo reikšmę.
 
-1. Jeigu taisyklėje yra kelios sąlygos, galite pasirinkti, kuris loginis operatorius juos prijungs.  
-   - **IR** operatorius: norint į segmentą įtraukti įrašą, visos sąlygos turi būti įvykdytos. Ši parinktis labiausiai naudinga nustatant sąlygas skirtingiems objektams.
-   - **ARBA** operatorius: norint į segmentą įtraukti įrašą, viena iš pateiktų sąlygų turi būti įvykdyta. Ši parinktis labiausiai naudinga nustatant kelias sąlygas tam pačiam objektui.
+   > [!div class="mx-imgBorder"]
+   > ![Pasirinktinis grupės filtras](media/customer-group-numbers.png "Klientų grupės filtras")
 
-   :::image type="content" source="media/segmentation-either-condition.png" alt-text="Taisyklė su dvejomis IR sąlygomis.":::
+   |Skaičius |Apibrėžtis  |
+   |---------|---------|
+   |1     |Objektas          |
+   |2     |Atributas          |
+   |3    |Operatorius         |
+   |4    |Reikšmė         |
 
-   Naudojant ARBA operatorių visos sąlygos turi būti pagrįstos į ryšio kelią įtrauktais objektais.
+   1. Norėdami įtraukti daugiau sąlygų į grupę, galite naudoti du loginius operatorius:
 
-   - Galite sukurti kelias taisykles skirtingiems klientų įrašų rinkiniams kurti. Galite sujungti grupes, kad įtrauktumėte klientus, reikalingus jūsų veiklos atvejui. Pasirinkite **Įtraukti taisyklę**, kad sukurtumėte naują taisyklę. Konkrečiau, jei negalite įtraukti taisyklės ir į ją įtraukti objekto dėl nurodyto ryšio maršruto, turite sukurti naują taisyklę, pagal kurią būtų galima pasirinkti atributų formą.
+      - Operatorius **IR**: abi sąlygos turi būti įvykdytos kaip segmentavimo proceso dalis. Ši parinktis labiausiai naudinga nustatant sąlygas skirtingiems objektams.
 
-      :::image type="content" source="media/segment-rule-grouping.png" alt-text="Į segmentą įtraukite naują taisyklę ir pasirinkite rinkinio operatorių.":::
+      - Operatorius **ARBA**: viena iš sąlygų turi būti įvykdyta kaip segmentavimo proceso dalis. Ši parinktis labiausiai naudinga nustatant kelias sąlygas tam pačiam objektui.
 
-   - Pažymėkite vieną iš rinkinio operatorių: **Sąjunga**, **Susikirtimas** arba **Išskyrus**.
+      > [!div class="mx-imgBorder"]
+      > ![Operatorius Ir, kuriame viena iš sąlygų turi būti įvykdyta](media/segmentation-either-condition.png "Operatorius Ir, kuriame viena iš sąlygų turi būti įvykdyta")
 
-      - **Sujungimas** sujungia dvi grupes.
-      - **Susikirtimas** persidengia su dviem grupėmis. Vieningoje *grupėje* lieka tik duomenys, kurie dažnai pasitaiko abiejose grupėse.
-      - **Išskyrus** sujungia dvi grupes. Saugomi tik A grupės *duomenys* kurie nėra įprasta B grupės duomenims.
+      Šiuo metu galima įtraukti operatorių **Arba** į operatorių **Ir**, o ne atvirkščiai.
 
-1. Pagal numatytuosius nustatymus segmentai sugeneruoja išvesties objektą, kuriame yra visi klientų profilių atributai, atitinkantys apibrėžtus filtrus. Jei segmentas pagrįstas kitais objektais nei *Kliento* objektas, į išvesties objektą galite įtraukti daugiau atributų iš šių objektų. Pažymėkite **Projekto atributai**, kad pasirinktumėte atributus, kurie bus pridėti prie išvesties objekto. 
+   1. Kiekviena grupė atitinka klientų rinkinį. Galite sujungti grupes, kad įtrauktumėte klientus, reikalingus jūsų veiklos atvejui.    
+   Pažymėkite **Įtraukti grupę**.
 
-   > [!IMPORTANT]
-   > Segmentams, pagrįstims verslo klientais, į segmentą reikia įtraukti išsamią informaciją apie vieną ar daugiau kiekvieno kliento kontaktų, kad tą segmentą būtų galima aktyvuoti arba eksportuoti iš *ContactProfile* į paskirties vietas, kurioms reikia kontaktinės informacijos. Daugiau informacijos apie *ContactProfile* objektą ieškokite [Semantiniai susiejimai](semantic-mappings.md).
-   > Segmento, pagrįsto verslo klientais, su projektais kontaktų atributais, rezultatų pavyzdys gali atrodyti taip: 
-   >
-   > |ID  |Paskyros pavadinimas  |Įplaukos  |Kontakto pavadinimas  | Kontakto vaidmuo|
-   > |---------|---------|---------|---------|---|
-   > |10021     | „Contoso“ | 100K (100K) | [Abbie Moss, Ruth Soto]  | [CEO, Tiekimo vadovas]
+      > [!div class="mx-imgBorder"]
+      > ![Klientų grupės grupės įtraukimas](media/customer-group-add-group.png "Klientų grupės grupės įtraukimas")
 
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Projektuotų atributų, pasirinktų šoninėje srityje, kuriuos reikia įtraukti į išvesties objektą, pavyzdys.":::
+   1. Pažymėkite vieną iš rinkinio operatorių: **Sąjunga**, **Susikirtimas** arba **Išskyrus**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Klientų grupės sujungimo įtraukimas](media/customer-group-union.png "Klientų grupės sujungimo įtraukimas")
+
+   - **Sujungimas** sujungia dvi grupes.
+
+   - **Susikirtimas** persidengia su dviem grupėmis. Tik duomenys, kurie *yra bendri* abiem grupėms yra laikomi vieningoje grupėje.
+
+   - **Išskyrus** sujungia dvi grupes. Laikomi tik duomenys, kurie yra A grupėje ir *nėra bendri* duomenims grupėje B.
+
+1. Jei objektas yra sujungtas su sujungtu kliento objektu naudojant [ryšius](relationships.md), turite apibrėžti ryšio kelią, kad sukurtumėte tinkamą segmentą. Įtraukite objektus iš ryšio kelio, kol išplečiamajame sąraše galėsite pasirinkti objektą **Customer : CustomerInsights**. Tada pasirinkite **Visi įrašai** kiekvienam veiksmui.
+
+   > [!div class="mx-imgBorder"]
+   > ![Ryšių kelias kuriant segmentą](media/segments-multiple-relationships.png "Ryšių kelias kuriant segmentą")
+
+1. Pagal numatytuosius nustatymus, segmentai generuoja išvesties objektą, kuriame yra visi klientų profilių atributai, atitinkantys nustatytus filtrus. Jei segmentas pagrįstas kitais objektais nei *Kliento* objektas, į išvesties objektą galite įtraukti daugiau atributų iš šių objektų. Pažymėkite **Projekto atributai**, kad pasirinktumėte atributus, kurie bus pridėti prie išvesties objekto.  
   
-   Pavyzdžiui: segmentas pagrįstas objektu, kuriame yra pirkimo duomenų, susijusių su *kliento* objektu. Segmentas ieško visų klientų iš Ispanijos, kurie per dabartinius metus įsigijo prekių. Galite pasirinkti pridėti atributus, pavyzdžiui, prekių kainą, arba pirkimo datą visiems atitinkantiems kliento įrašams išvesties objekte. Ši informacija gali būti naudinga analizuojant bendrų išlaidų sezonines sąsajas.
+   Pavyzdys: segmentas A yra pagrįstas objektu, kuriame yra kliento veiklos duomenų, susijusių su *Kliento* objektu. Segmentas ieško visų klientų, skambinusių pagalbos tarnybai per pastarąsias 60 dienų. Galite pasirinkti pridėti skambučio trukmę ir skambučių skaičių prie visų sutampančių išvesties objekto kliento įrašų. Ši informacija gali būti naudinga siunčiant el. laišką su naudingomis nuorodomis į internetinius žinyno straipsnius ir DUK dažnai skambinusiems klientams.
 
    > [!NOTE]
-   > - **Projekto atributai** veikia tik objektams, kurie turi ryšį "vienas su daugeliu" su kliento objektu. Pavyzdžiui, vienas klientas gali turėti kelias prenumeratas.
-   > - Jei atributas, kurį norite įtraukti į projektą, yra daugiau nei vienas objekto klientas, kaip apibrėžta ryšio, šis atributas turi būti naudojamas kiekvienoje *kuriamos* segmento užklausos taisyklėje. 
-   > - Jei atributas, kurį norite įtraukti į projektą, yra daugiau nei vienas objekto klientas, kaip apibrėžta ryšio, šis atributas neturi būti rodomas kiekvienoje *kuriamos* segmento užklausos taisyklėje. 
-   > - **Suplanuoti atributai** yra įtraukiami naudojant rinkinio operatorius.
+   > - Suplanuoti atributai veikia tik tiems objektams, kurie turi „vienas su daugeliu” ryšį su kliento objektu. Pavyzdžiui, vienas klientas gali turėti kelias prenumeratas.
+   > - Suplanuoti atributus galite tik iš to objekto, kuris yra naudojamas kiekvienoje jūsų kuriamų segmentų užklausų grupėje.
+   > - Suplanuoti atributai yra įtraukiami naudojant rinkinio operatorius.
 
-1. Prieš įrašydami ir paleisdami segmentą, pasirinkite **Redaguoti išsamią informaciją** šalia segmento pavadinimo. Įveskite savo segmento pavadinimą ir atnaujinkite siūlomą **Išvesties objekto pavadinimą** segmentui. Į segmentą taip pat galite įtraukti aprašą.
+1. Pasirinkite **Įrašyti**, kad įrašytumėte segmentą. Jūsų segmentas bus įrašytas ir apdorojamas, jei visi reikalavimai bus patvirtinti. Kitu atveju jis bus Išsaugota kaip juodraštis.
 
-1. Pasirinkite **Vykdyti**, kad įrašytumėte segmentą, jį suaktyvintumėte ir pradėkite apdoroti segmentą pagal visas taisykles ir sąlygas. Priešingu atveju jis bus įrašytas kaip neaktyvusis segmentas.
-   
 1. Pasirinkite **Atgal į segmentus**, kad sugrįžtumėte į puslapį **Segmentai**.
 
-1. Pagal numatytuosius nustatymus segmentas sukuriamas kaip dinaminis segmentas. Tai reiškia, kad sistemos atnaujinimo metu segmentas atnaujinamas. Norėdami [sustabdyti automatinį naujinimą](segments.md#manage-existing-segments), pažymėkite segmentą ir pasirinkite parinktį **Atlikti statinį**. Statinius segmentus galima [naujinti rankiniu būdu](segments.md#refresh-segments) bet kuriuo metu.
 
-> [!TIP]
-> - Nustatant sąlygų operatorius, segmentų kūrimo priemonė nesiūlys galiojančių objektų reikšmių. Galite eiti į **Duomenis** > **Objektai** ir atsisiųsti objekto duomenis, kad pamatytumėte, kurios reikšmės yra galimos.
-> - Datomis pagrįstos sąlygos leidžia jums perjungti tarp fiksuotų datų ir slankiojo kablelio datų intervalo.
-> - Jei turite kelias segmento taisykles, redaguojate taisyklę šalia jos yra vertikali mėlyna linija. 
-> - Taisykles ir sąlygas galite perkelti į kitas segmento aprašo vietas. Pasirinkite [...] šalia taisyklės arba sąlygos ir pasirinkite, kaip ir kur ją perkelti.
-> - Naudojant komandų juostoje valdiklius **Anuliuoti** ir Perdaryti galima **atšaukti** keitimus.
 
 ## <a name="quick-segments"></a>Spartieji segmentai
 
 Spartieji segmentai leidžia jums greitai sukurti paprastus segmentus naudojant vieną operatorių, kad įžvalgos būtų greitesnės.
 
 1. Puslapyje **Segmentai** pasirinkite **Naujas** > **Kurti iš**.
+
    - Pažymėkite parinktį **Profiliai**, kad sukurtumėte segmentą, pagrįstą *vieningojo klientu* objektu.
    - Pažymėkite parinktį **Matavimai**, kad sukurtumėte segmentą pagal anksčiau jūsų sukurtus matavimus.
    - Pasirinkite parinktį **Įžvalgos**, norėdami sukurti segmentą naudojant vieną iš išvesties objektų, kuriuos sugeneravote naudodami galimybes **Prognozės** arba **Pasirinktiniai modeliai**.
 
 2. Dialogo lange **Naujas spartusis segmentas** pasirinkite atributą iš išplečiamojo sąrašo **Laukas**.
 
-3. Sistema pateiks daugiau įžvalgų, padėsiančių jums kurti geresnius klientų segmentus.
+3. Sistema pateiks keletą papildomų įžvalgų, kurios padės kurti geresnius klientų segmentus.
    - Pagal kategorinius laukus parodysime 10 geriausių klientų skaičių. Pasirinkite **Reikšmė** ir pažymėkite **Peržiūra**.
+
    - Jei yra skaičiaus atributas, sistema parodys, kokią atributo reikšmę turi kiekvienas kliento procentilis. Pasirinkite **operatorių** ir **reikšmę**, tada pažymėktie **Peržiūra**.
 
 4. Sistema parodys **numatomą segmento dydį**. Galite pasirinkti, ar generuoti apibrėžtą segmentą arba iš naujo jį peržiūrėti ir gauti kitą segmento dydį.
 
     > [!div class="mx-imgBorder"]
-    > ![Sparčiojo segmento pavadinimas ir įvertinimas.](media/quick-segment-name.png "Sparčiojo segmento pavadinimas ir įvertinimas")
+    > ![Sparčiojo segmento pavadinimas ir įvertinimas](media/quick-segment-name.png "Sparčiojo segmento pavadinimas ir įvertinimas")
 
 5. Įveskite segmento **Pavadinimą**. Pasirinktinai įveskite **rodomą pavadinimą**.
 
@@ -158,8 +135,8 @@ Spartieji segmentai leidžia jums greitai sukurti paprastus segmentus naudojant 
 
 7. Kai segmento apdorojimas baigtas, jį galite peržiūrėti kaip bet kurį kitą sukurtą segmentą.
 
-## <a name="next-steps"></a>Kiti veiksmai
+## <a name="next-steps"></a>Paskesni veiksmai
 
-[Eksportuokite segmentą](export-destinations.md) ir susipažinkite su [klientų kortelių integravimu](customer-card-add-in.md) naudoti segmentus kitose programose.
+[Eksportuokite segmentą](export-destinations.md) ir susipažinkite su [kliento kortele](customer-card-add-in.md) bei [jungtimis](export-power-bi.md), kad gautumėte įžvalgų apie kliento lygį.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Semantiniai susiejimai (peržiūra)
 description: Semantinio susiejimo apžvalga ir kaip juos naudoti.
-ms.date: 12/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881840"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622945"
 ---
-# <a name="semantic-mappings-preview"></a>Semantiniai susiejimai (peržiūra)
+# <a name="semantic-mappings"></a>Semantinis susiejimas
 
 Naudojant semantiniai susiejimai leidžia susieti ne veiklos duomenis su iš anksto apibrėžtomis schemomis. Šios schemos padeda auditorijos įžvalgoms geriau suprasti jūsų duomenų atributus. Nuoseklus susiejimas ir pateikiami duomenys suteikia naujų įžvalgų ir funkcijų auditorijos įžvalgose. Norėdami susieti savo veiklos duomenis su schemomis, peržiūrėkite [veiklų](activities.md) dokumentaciją.
 
@@ -75,7 +75,8 @@ Naudojant semantiniai susiejimai leidžia susieti ne veiklos duomenis su iš ank
 
 1. Norėdami vėliau paleisti semaninį susiejimą, pažymėkite semaninį susiejimą ir **atnaujinkite**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
 
 ## <a name="manage-existing-semantic-mappings"></a>Valdyti esamus semaninius susiejimus
 
@@ -90,41 +91,5 @@ Naudojant semantiniai susiejimai leidžia susieti ne veiklos duomenis su iš ank
 - **Pervardykite**: atidaromas dialogas, kuriame galite įvesti kitą pažymėto semantinio susiejimo pavadinimą. Pasirinkite **Įrašyti**, kad pritaikytumėte keitimus.
 
 - **Naikinti**: atidaro dialogą, kad patvirtintų pažymėto semantinio susiejimo naikinimą. Taip pat vienu metu galite panaikinti daugiau nei vieną semaninį susiejimą pažymėdami semaninius susiejimus ir naikinimo piktogramą. Pasirinkite **Naikinti** naikinimo patvirtinimui.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Kontakto lygio veiklų kūrimas naudojant ContactProfile semantinį objekto susiejimą
-
-Sukūrę *ContactProfile* semantinį objekto susiejimą, galite užfiksuoti kontaktų veiklas. Tai leidžia veiklos laiko juostoje matyti, kuris kontaktas buvo atsakingas už kiekvieną veiklą. Dauguma veiksmų seka tipinę veiklos susiejimo konfigūraciją.
-
-   > [!NOTE]
-   > Kad kontakto lygio veikla veiktų, turite turėti **ir "AccountID",** ir **"ContactID"** atributus kiekvienam veiklos duomenų įrašui.
-
-1. [Apibrėžti *ContactProfile* semantinį objekto susiejimą.](#define-a-contactprofile-semantic-entity-mapping) Ir vykdyti semantinį susiejimą.
-
-1. Publikos įžvalgose, eikite į **Duomenys** > **Veiklos**.
-
-1. Pasirinkite **Įtraukti** veiklą, kad sukurtumėte naują veiklą.
-
-1. Pavadinkite veiklą, pasirinkite šaltinio veiklos objektą ir pasirinkite pagrindinį veiklos objekto raktą.
-
-1. Veiksmų **srityje** sukurkite netiesioginį ryšį tarp veiklos šaltinio duomenų su klientais, naudodami kontaktinius duomenis kaip tarpininko objektą. Daugiau informacijos ieškokite [direct and indirect relationship paths](relationships.md#relationship-paths).
-   - Veiklos, vadinamos pirkimais, ryšio *pavyzdys*:
-      - **Pirkimų šaltinio veiklos duomenys** > **Kontaktiniai duomenys** atribute **ContactID**
-      - **Kontaktinių duomenų** > **abonemento duomenys** atribute **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Ryšio nustatymo pavyzdys.":::
-
-1. Nustatę ryšius pasirinkite **Pirmyn** ir užbaikite veiklos susiejimo konfigūraciją. Išsamių veiklos kūrimo veiksmų ieškokite [define a veikla](activities.md).
-
-1. Vykdyti veiklos susiejimus.
-
-1. Jūsų kontaktinio lygio veikla dabar bus matoma jūsų klientų laiko planavimo juostoje.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Galutinis rezultatas sukonfigūravus kontaktinę veiklą":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Kontakto lygio veiklos laiko planavimo juostos filtravimas
-
-Sukonfigūravus kontakto lygio veiklos susiejimą ir jį paleidus, bus atnaujinta jūsų klientų veiklos laiko juosta. Tai apima jų ID arba pavadinimus, atsižvelgiant į jūsų *ContactProfile* konfigūraciją, veiklai, kurią jie veikė. Galite filtruoti veiklas pagal laiko planavimo juostos kontaktus, kad pamatytumėte konkrečius jus dominančius kontaktus. Be to, galite matyti visas veiklas, kurios nepriskiritos konkrečiam kontaktui, pasirinkdami **Veikla, nesusieta su kontaktu**.
-
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Galimos kontakto lygio veiklos filtravimo parinktys.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights“ duomenų eksportavimas į „Azure Synapse Analytics“
 description: Sužinokite, kaip sukonfigūruoti ryšį į „Azure Synapse Analytics”.
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951052"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327374"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Duomenų eksportavimas į „Azure Synapse Analytics” (Peržiūros versija)
 
@@ -49,8 +49,6 @@ Turite atitikti toliau pateiktas būtinąsias sąlygas, kad sukonfigūruotumėte
 
 ### <a name="configure-a-connection"></a>Ryšio konfigūravimas
 
-Norint sukurti ryšį, aptarnavimo vadovui ir vartotojo abonementui programoje "Customer Insights" reikia **skaitytuvo** teisių išteklių *grupėje*, kurioje yra "Synapse Analytics" darbo sritis. Be to, tarnybos vadovui ir vartotojui, dirbamam "Synapse Analytics" darbo srityje, reikia **"Synapse"** administratoriaus teisių. 
-
 1. Eikite į **Administravimas** > **Ryšiai**.
 
 1. Pasirinkite **Įtraukti ryšį** ir **„Azure Synapse Analytics”** arba pasirinkite **Nustatyti** plytelėje **„Azure Synapse Analytics”**, kad sukonfigūruotumėte ryšį.
@@ -65,7 +63,7 @@ Norint sukurti ryšį, aptarnavimo vadovui ir vartotojo abonementui programoje "
 
 ### <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Norėdami konfigūruoti eksportavimą bendrinamuoju ryšiu, turite bent **autorių** teisių programoje "Customer Insights". Daugiau informacijos rasite [eksportavimo konfigūravimui reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos rasite [eksportavimo konfigūravimui reikalingi leidimai](export-destinations.md#set-up-a-new-export).
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
@@ -84,8 +82,6 @@ Norint sukurti ryšį, aptarnavimo vadovui ir vartotojo abonementui programoje "
 Eksportavimo įrašymas eksportavimo iš karto nevykdo.
 
 Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand).
-
-Norėdami pateikti užklausą duomenims, kurie buvo eksportuoti į "Synapse Analytics", jums reikia **"Storage Blob Data Reader"** prieigos prie paskirties vietos saugyklos eksportavimo darbo srityje. 
 
 ### <a name="update-an-export"></a>Eksportavimo naujinimas
 

@@ -1,7 +1,7 @@
 ---
 title: "\"Dynamics 365\" programėlių kliento kortelės papildinis (yra vaizdo įrašas)"
 description: Šiame papildinyje galite rodyti duomenis iš auditorijos įžvalgų „Dynamics 365” programose.
-ms.date: 02/02/2022
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
-ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.openlocfilehash: 98597600c2a39f8bb707af8461df4736f913e6bc
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "8085258"
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046490"
 ---
 # <a name="customer-card-add-in-preview"></a>Papildinys Kliento kortelė (peržiūra)
 
@@ -118,26 +118,5 @@ Kliento kortelės papildymas automatiškai neatsijungia. Norėdami atnaujinti į
 
 1. Pradėjus naujinimo procesą, matysite įkėlimo indikatorių, kol naujinimas bus baigtas. Jei nėra naujesnės versijos, atnaujinus bus rodomas klaidos pranešimas.
 
-## <a name="troubleshooting"></a>Trikčių šalinimas
-
-### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Kliento kortelės priedo valdikliai neranda duomenų
-
-**Problema:**
-
-Net ir tinkamai sukonfigūruotuose ID laukuose valdikliai negali rasti duomenų apie bet kurį klientą.  
-
-**Sprendimas.**
-
-1. Įsitikinkite, kad kortelės priedą sukonfigūravote pagal instrukcijas: [Konfigūruokite kliento kortelės priedą](#configure-the-customer-card-add-in) 
-
-1. Peržiūrėti duomenų nurijimo konfigūraciją. Redaguoti "Dynamics 365" sistemos, kurioje yra kontakto ID GUID, duomenų šaltinis. Jei kontakto ID GUID rodomas su didžiosiomis raidėmis, rengyklėje Power Query pabandykite atlikti šiuos veiksmus: 
-    1. Redaguokite duomenų šaltinis, kad atidarytumėte redaktoriaus Power Query duomenų šaltinis.
-    1. Pasirinkite kontakto ID stulpelį.
-    1. Antraštės juostoje pasirinkite **Transformuoti**, kad pamatytumėte galimus veiksmus.
-    1. Pasirinkite **mažinę dalį**. Patikrinkite, ar lentelės GUID dabar yra mažoji.
-    1. Įrašykite duomenų šaltinį.
-    1. Paleiskite duomenų nurijimą, suvienodinimą ir tolesnius procesus, kad būtų galima platinti GUID pakeitimus. 
-
-Užbaigus visą atnaujinimą, pirkėjo kortelės priedo valdikliuose turėtų būti rodomi laukiami duomenys. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

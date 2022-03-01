@@ -1,7 +1,7 @@
 ---
 title: Jungtis prie lentelių „Microsoft Dataverse“
 description: Duomenų importavimas iš „Microsoft Dataverse“ valdomo duomenų telkinio.
-ms.date: 12/06/2021
+ms.date: 07/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,25 +9,22 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: 436345d8932820eb4c517a9e9164b1377c1f62d3
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: f92d64723e6a4d2fcebdbb3758519d4bfd4aeaf4
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046435"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692584"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-
-Šiame straipsnyje pateikiama informacija apie tai, kaip Dataverse vartotojai gali greitai prisijungti prie analitinių objektų valdomame Microsoft Dataverse ežere. 
-
-> [!NOTE]
-> Norėdami tęsti ir peržiūrėti valdomo ežero objektų sąrašą, Dataverse turite būti organizacijos administratorius.
+Šiame straipsnyje pateikiama informacija apie tai, kaip „Dataverse” vartotojai gali greitai prisijungti prie savo analizės objektų „Dataverse” valdomame telkinyje. Norėdami tęsti ir peržiūrėti valdomo duomenų telkinio objektų sąrašą, turite būti „Dataverse“ organizacijos administratorius.
 
 ## <a name="important-considerations"></a>Svarbi informacija
 
-Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Storage“, gali būti saugomi kitoje vietoje, kurioje duomenys yra apdorojami ar saugomi „Dynamics 365 Customer Insights“.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse paslaugose, sutinkate, kad duomenys gali būti perduodami ir saugomi su Dynamics 365 Customer Insights. [Sužinokite daugiau "Microsoft" patikimumo centre](https://www.microsoft.com/trust-center).
+Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Storage“, gali būti saugomi kitoje vietoje, kurioje duomenys yra apdorojami ar saugomi „Dynamics 365 Customer Insights“. Importuodami arba prisijungdami prie duomenų, saugomų internetinėse tarnybose, sutinkate, kad duomenys gali būti perkeliami ir saugomi „Dynamics 365 Customer Insights“.  [Sužinokite daugiau „Microsoft“ patikimumo centre.](https://www.microsoft.com/trust-center)
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Prisijungimas prie „Dataverse” valdomojo telkinio
 
@@ -35,9 +32,12 @@ Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Stor
 
 2. Pasirinkite **Įtraukti duomenų šaltinį**.
 
-3. Pasirinkite **Microsoft Dataverse** ir pasirinkite **Pirmyn**.
+3. Pasirinkite **Prisijungti prie „Microsoft Dataverse” valdomo telkinio** ir **Kitas**.
 
-4. Įveskite duomenų šaltinio **Pavadinimą** ir pasirinkite **Pirmyn**. 
+4. Įveskite duomenų šaltinio **Pavadinimą** ir pasirinkite **Pirmyn**. Pavadinimų rekomendacijos: 
+   - Pradėti nuo raidės.
+   - Naudokite tik raides ir skaičius. Specialiųjų simbolių ir tarpų neleidžiama įvesti.
+   - Naudokite nuo 3 iki 64 simbolių.
 
 5. Nurodykite „Dataverse” organizacijos **Serverio adresą** ir pasirinkite **Prisijungti**.
 

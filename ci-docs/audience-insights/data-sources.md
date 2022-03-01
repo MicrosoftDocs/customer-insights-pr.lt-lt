@@ -1,58 +1,64 @@
 ---
 title: Naudokite duomenų šaltinius duomenų suvartojimui
 description: Sužinokite, kaip importuoti duomenis iš įvairių šaltinių.
-ms.date: 12/06/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ca979527c9cb8418e12af4a74513033047e4901c
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046600"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887904"
 ---
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Publikos įžvalgų galimybės „Dynamics 365 Customer Insights“ sujungia su duomenimis iš platesnio šaltinių rinkinio. Prisijungimas prie duomenų šaltinio dažnai vadinamas *duomenų įtraukimo procesu*. Įtraukę duomenis galite juos [suvienodinti](data-unification.md) ir imtis susijusių veiksmų.
 
 ## <a name="add-a-data-source"></a>Įtraukti duomenų šaltinį
 
-Peržiūrėkite išsamius straipsnius, kaip įtraukti duomenų šaltinis, priklausomai nuo pasirinktos parinkties.
+Informacijos apie tai, kaip įtraukti duomenų šaltinį, atsižvelgiant į pasirinktą parinktį, žr. išsamiuose straipsniuose.
 
-Galite įtraukti šiuos duomenų šaltinius:
+Duomenų šaltinį galite įtraukti trimis pagrindiniais būdais.
 
-- [Power Query Jungtys](connect-power-query.md)
-- [Common Data Model](connect-common-data-model.md)
-- [Microsoft Dataverse ežeras](connect-dataverse-managed-lake.md)
-
-> [!NOTE]
-> Jei naudojate bandomąją versiją, importavimo metodų skyriuje yra **"Customer Insights" duomenų bibliotekos** parinktis. Pasirinkite šią parinktį, jei norite pasirinkti duomenų rinkinio pavyzdį, prieinamą įvairioms pramonės šakoms. Daugiau informacijos rasite teisme [Dynamics 365 Customer Insights](../trial-signup.md).
+- [Per dešimtis „Power Query“ jungčių](connect-power-query.md)
+- [Iš „Common Data Model“ aplanko](connect-common-data-model.md)
+- [Iš savo „Common Data Service“ telkinio](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Duomenų įtraukimas iš vietinių duomenų šaltinių
 
-Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į „Microsoft Power Platform“ duomenų srautus. Duomenų srautus galite įgalinti "Customer Insights", nustatydami [aplinką pateikdami aplinkos URL Microsoft Dataverse.](create-environment.md)
+Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į Power Platform duomenų srautus. Nustatant aplinką duomenų eigas galima įgalinti „Customer Insights“ [pateikiant Microsoft Dataverse aplinkos URL](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Duomenų šaltiniai, sukurti susiedžius Dataverse aplinką su "Customer Insights", pagal numatytuosius nustatymus naudoja [Power Platform duomenų srautus](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Naudodami vietinis duomenų šliuzus, galite pašalinti ir iš naujo atkurti duomenų šaltinius, egzistavusius Dataverse prieš [susietą](/data-integration/gateway/service-gateway-app) aplinką.
+Numatyta, kad duomenų šaltiniai, sukurti Dataverse aplinką susiejus su „Customer Insights“, naudos [Power Platform duomenų eigas](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų eigos palaiko vietos ryšį, naudojant duomenų tinklų sietuvus. Pašalinkite ir iš naujo sukurkite duomenų šaltinius, kurie buvo prieš Dataverse aplinką susiejant su vietinių tinklų sietuvų naudojimu.
 
-Esamos Power BI arba Power Apps aplinkos duomenų tinklų sietuvai bus matomi ir galėsite pakartotinai naudoti „Customer Insights“. Duomenų šaltinių puslapyje rodomi saitai, kuriuos naudojant galima peržiūrėti ir konfigūruoti duomenų „Microsoft Power Platform“ vietinis aplinką.
+Esamos Power BI arba Power Apps aplinkos duomenų tinklų sietuvai bus matomi ir galėsite pakartotinai naudoti „Customer Insights“. Duomenų šaltinių puslapyje rodomos nuorodos perėjimui į Power Platform aplinką, kurioje galima peržiūrėti ir konfigūruoti vietinius duomenų tinklų sietuvus.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Duomenų šaltinių puslapio, kuriame rodomos nuorodos į Power Platform aplinką, ekrano vaizdas.":::
 
 ## <a name="review-ingested-data"></a>Įtrauktų duomenų peržiūra
 
 Matysite kiekvieno įtraukto duomenų šaltinio pavadinimą, jo būseną ir vėliausio to šaltinio duomenų atnaujinimo laiką. Galite rūšiuoti duomenų šaltinių sąrašą pagal kiekvieną stulpelį.
 
 > [!div class="mx-imgBorder"]
-> ![Įtrauktas duomenų šaltinis.](media/configure-data-datasource-added.png "Įtrauktas duomenų šaltinis")
+> ![Įtrauktas duomenų šaltinis](media/configure-data-datasource-added.png "Įtrauktas duomenų šaltinis")
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+|Būsena  |Aprašo  |
+|---------|---------|
+|Sėkminga   |Duomenų šaltinis buvo sėkmingai suvartotas, jei laikas yra paminėtas **Paleistas iš naujo** stulpelyje.
+|Nepradėta   |Duomenų šaltinis dar neturi jokių suvartotų duomenų arba jie dar yra šablono režime.         |
+|Atnaujinama    |Vyksta duomenų apdorojimas. Galite atšaukti šią operaciją, stulpelyje **Veiksmai** pasirinkdami **Sustabdyti naujinimą**. Sustabdžius duomenų šaltinio naujinimą, jis bus grąžintas į paskutinio naujinimo būseną.       |
+|Atlikta nesėkmingai     |Apdorojant duomenis įvyko klaidų.         |
 
-Duomenų įkėlimas gali užtrukti. Sėkmingai atnaujinus, galima peržiūrėti apdorotus duomenis puslapyje **Objektai**. Norėdami gauti daugiau informacijos, žr. [Objektai](entities.md).
+Pasirinkite **Statusas**, kad sužinotumėte bet kurios būsenos duomenų šaltinio reikšmę. Išsamios informacijos **apie eigą** srityje išplėskite  **Duomenų šaltiniai**. Pasirinkite **Gauti daugiau informacijos** apie naujinimo būseną, įskaitant klaidų informaciją ir tolesnius procesų naujinimus.
+
+Duomenų įkėlimas gali šiek tiek užtrukti. Sėkmingai atnaujinus, galima peržiūrėti apdorotus duomenis puslapyje **Objektai**. Norėdami gauti daugiau informacijos, žr. [Objektai](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Paleisti iš naujo duomenų šaltinį
 
@@ -62,9 +68,9 @@ Eikite į **Administravimas** > **Sistema** > [**Grafikas**](system.md#schedule-
 
 Norėdami paleisti iš naujo duomenų šaltinį pagal poreikį, atlikite šiuos veiksmus:
 
-1. Publikos įžvalgose, eikite į **Duomenys** > **Duomenų šaltiniai**.
+1. Publikos įžvalgose, eikite į **Duomenys** > **Duomenų šaltiniai**
 
-2. Pažymėkite vertikalią elešką šalia norimos duomenų naujinti dalies ir **Naujinti** meniu pasirinkite Redaguoti.
+2. Pasirinkite vertikalią elipsę šalia duomenų šaltinio, kurį norite paleisti iš naujo ir pasirinkite **Paleisti iš naujo** iš iškrentančio meniu.
 
 3. Šis duomenų šaltinis dabar yra įjungtas rankiniam paleidimui iš naujo. Atnaujinus duomenų šaltinį bus atnaujinta ir objekto schema, ir duomenys, skirti visiems duomenų šaltinyje nurodytiems objektams.
 
@@ -74,7 +80,7 @@ Norėdami paleisti iš naujo duomenų šaltinį pagal poreikį, atlikite šiuos 
 
 1. Publikos įžvalgose, eikite į **Duomenys** > **Duomenų šaltiniai**.
 
-2. Pažymėkite vertikalią elešką šalia norimos duomenų naikinti dalies ir **Naikinti** meniu pasirinkite Redaguoti.
+2. Pažymėkite vertikalią elipsę, esančią šalia duomenų šaltinio, kurį norite pašalinti, ir išplečiamajame meniu pasirinkite **Naikinti**.
 
 3. Patvirtinkite šį naikinimą.
 

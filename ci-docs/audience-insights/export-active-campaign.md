@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights“ duomenų eksportavimas į „ActiveCampaign“
 description: Sužinokite, kaip konfigūruoti ryšį ir eksportuoti į „ActiveCampaign“.
-ms.date: 10/08/2021
+ms.date: 06/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
+ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618163"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6314647"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Segmentų eksportavimas į „ActiveCampaign“ (peržiūra)
 
@@ -28,9 +28,9 @@ Eksportuokite vieningų klientų profilių segmentus į „ActiveCampaign" ir na
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Eksportuojant į „ActiveCampaign" galima eksportuoti iki 1 milijonai klientų profilių, o užbaigti gali trukti iki 90 minučių.
+- Eksportuojant į „ActiveCampaign" galima eksportuoti iki 1 milijonai profilių, jis gali trukti iki 90 minučių.
 - Eksportavimas į „ActiveCampaign“ ribojamas segmentais.
-- Klientų profilių, kuriuos galite eksportuoti į „ActiveCampaign", skaičius priklauso nuo sutarties su „ActiveCampaign".
+- Profilių, kuriuos galite eksportuoti į „ActiveCampaign", skaičius priklauso nuo sutarties su „ActiveCampaign".
 
 ## <a name="set-up-connection-to-activecampaign"></a>Nustatyti ryšį su „ActiveCampaign“
 
@@ -64,7 +64,7 @@ Galite sukonfigūruoti eksportavimą, jei turite prieigą prie šio tipo ryšio.
 
 1. Įveskite savo [**ActiveCampaign sąrašo ID**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. Būtina eksportuoti segmentus į „ActiveCampaign“. Arba galite eksportuoti vardas, pavardė ir telefonas sukurtumėte labiau personalizuotus el. laiškus. Pasirinkite Įtraukti atributą siekiant sukurti šių laukelių žemėlapį.
+3. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. Būtina eksportuoti segmentus į „ActiveCampaign“. Arba galite eksportuoti vardas, pavardė ir telefonas sukurtumėte labiau personalizuotus el. laiškus. Pasirinkite Įtraukti atributą siekiant sukurti šių laukelių žemėlapį.
 
 1. Pasirinkite **Įrašyti**.
 

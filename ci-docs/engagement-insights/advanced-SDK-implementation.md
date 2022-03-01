@@ -4,17 +4,17 @@ description: Išplėstiniai scenarijai, į kuriuos reikia atsižvelgti pereinant
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 09/27/2021
+ms.date: 11/12/2020
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 4c6646ecadbb604000d6c95b685cf6e420969a6d
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558712"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036338"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>Išplėstinio žiniatinklio SDK integravimas
 
@@ -33,20 +33,20 @@ SDK leidžia apibrėžti vartotojo informaciją, kurią galima siųsti su kiekvi
 - **„authType“**: autentifikavimo tipas, naudojamas autentifikuoto vartotojo ID gauti.
 - **vardas**: Vartotojo vardas.
 - **el. paštas**: Vartotojo el. pašto adresas.
-
-Toliau pateiktame pavyzdyje rodoma kodo fragmentas vartotojo informacijos siuntimo informacija. Funkcijas, prieš kurias matote žvaigždutę * simbolį, pakeiskite ją savo pasirinktiniu diegimu:
+    
+Toliau pateiktame pavyzdyje rodoma kodo fragmentas vartotojo informacijos siuntimo informacija. Čia matote funkcijas, kurių reikšmę žymi *, pakeiskite ją savo šių reikšmių iškviečomis funkcijomis:  
 
 ```
 […]
-window, document
+window, document 
 {
-    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
-    name:"myproject",
-    cfg:{
-      ingestionKey:<paste your ingestion key>",
-      autoCapture:{
-        view:true,
-        click:true
+    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
+    name:"myproject",      
+    cfg:{ 
+      ingestionKey:<paste your ingestion key>", 
+      autoCapture:{ 
+        view:true, 
+        click:true 
       }
     },
     user:{
@@ -58,25 +58,25 @@ window, document
 […]
 ```
 
-Be to, iškviesite API, galite nurodyti vartotojo `setUser(user: IUser)` informaciją. Iškviestame `setUser` API telemetrijoje bus vartotojo informacija.
+Taip pat galite nurodyti vartotojo informaciją `setUser(user: IUser)` iškviesite API SDK. Iškviestame `setUser API` telemetrijoje bus vartotojo informacija.
 
 ## <a name="adding-custom-properties-for-each-event"></a>Pasirinktinių kiekvieno įvykio ypatybės įtraukimas
 
-SDK leidžia nurodyti kliento savybes, kurias galima siųsti su kiekvienu įvykiu. Pasirinktines ypatybes galite nurodyti kaip objektą, kuriame yra pagrindinių reikšmių porų (reikšmė gali būti tipo `string | number | boolean`). Objektą galite įtraukti į ypatybę, vadinamą  `props`, panašią į `src`, `name`, ir `cfg` į kodo fragmentas konfigūraciją.
+SDK leidžia nurodyti kliento savybes, kurias galima siųsti su kiekvienu įvykiu. Pasirinktines ypatybes galite nurodyti kaip objektą, kuriame yra pagrindinių reikšmių porų (reikšmė gali būti tipo `string | number | boolean`). Objektas gali būti įtrauktas į ypatybę pavadinimu `props`, panašią į `src`, `name`, ir `cfg` kodo fragmento konfigūracijoje. 
 
 Toliau pateiktame pavyzdyje rodomas kodo fragmentas, siunčiantis kliento ypatybes:
 
 ```
 […]
-window, document
+window, document 
 {
-    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
-    name:"myproject",
-    cfg:{
-      ingestionKey:<paste your ingestion key>",
-      autoCapture:{
-        view:true,
-        click:true
+    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
+    name:"myproject",      
+    cfg:{ 
+      ingestionKey:<paste your ingestion key>", 
+      autoCapture:{ 
+        view:true, 
+        click:true 
       }
     },
     props:{
@@ -87,7 +87,7 @@ window, document
 […]
 ```
 
-Be to, iškviesite API, galite nurodyti vartotojo ypatybes atskirai `setProperty(name: string, value: string | number | boolean)`.
+Taip pat galite nurodyti pasirinktines ypatybes atskirai `setProperty(name: string, value: string | number | boolean)` iškviesite API SDK.
 
 ## <a name="sending-custom-events"></a>Siųsti pasirinktinius įvykius
 

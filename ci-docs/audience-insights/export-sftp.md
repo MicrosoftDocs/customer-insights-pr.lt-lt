@@ -1,5 +1,5 @@
 ---
-title: Eksportuoti "Customer Insights" duomenis į SFTP hosts (yra vaizdo įrašas)
+title: Eksportuoti „Customer Insights“ duomenis į SFTP šeimininkus
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į SFTP vietą.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,18 +9,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934897"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035471"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmentų ir kitų duomenų eksportavimas į SFTP (peržiūros versija)
 
 Savo kliento duomenis trečiųjų šalių programose naudokite eksportuodami juos į saugiųjų failų perkėlimo protokolo (SFTP) vietą.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Būtinosios ryšio sąlygos
 
@@ -28,7 +26,6 @@ Savo kliento duomenis trečiųjų šalių programose naudokite eksportuodami juo
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- SFTP paskirties vietos už užkardų šiuo metu nepalaikomos. 
 - Eksportavimo trukmė priklauso nuo sistemos efektyvumo. Kaip minimalią serverio konfigūraciją rekomenduojame naudoti du procesorius IR 1 GB atminties. 
 - Objektų, kurių klientų profiliai yra iki 100 milijonų, eksportavimas gali užtrukti 90 minučių naudojant rekomenduojamą minimalią dviejų procesorių IR 1 GB atminties konfigūraciją. 
 

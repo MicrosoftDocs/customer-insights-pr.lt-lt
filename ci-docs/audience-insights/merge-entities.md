@@ -1,7 +1,7 @@
 ---
 title: Suliekite objektus duomenų suvienyjime
 description: Suliekite objektus tam, kad sukurtumėte suvienytus kliento profilius.
-ms.date: 01/28/2022
+ms.date: 04/16/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,214 +9,85 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-merge
-ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046604"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896521"
 ---
 # <a name="merge-entities"></a>Suliekite objektus
 
 Suliejimo etapas yra paskutinis duomenų sujungimo proceso etapas. Jo tikslas – suderinti prieštaringus duomenis. Prieštaringų duomenų pavyzdžiai: kliento vardas, randamas dviejuose jūsų duomenų rinkiniuose, bet kiekviename iš jų rašomas šiek tiek skirtingai (pvz., „Grant Marshall“ ir „Grant Marshal“), arba telefono numeris, kurio formatas skiriasi (617-803-091X ir 617803091X). Šių prieštaringų duomenų taškų sujungimas atliekamas „atributas pagal atributą“ pagrindu.
 
-:::image type="content" source="media/merge-fields-page.png" alt-text="Suliejimo puslapis duomenų unifikavimo procese, rodantis lentelę su sulietais laukais, kurie apibrėžia vieningąjį kliento profilį.":::
-
 Užbaigus [sutapdinimo etapą](match-entities.md) pradedamas suliejimo etapas, pasirinkus plytelę **Sulieti**, pateikiamą puslapyje **Sujungti**.
 
 ## <a name="review-system-recommendations"></a>Sistemos rekomendacijų peržiūra
 
-**Duomenys** > **Suvienodinti** > **Sulieti** galite pasirinkti ir išskirti atributus iš suliejimo jūsų vieningojo kliento profilio objekte. Vieningasis kliento profilis yra duomenų unifikavimo proceso rezultatas. Kai kuriuos atributus sistema sulieja automatiškai.
+Puslapyje **Sulieti** galite pasirinkti ir pašalinti atributus, kurie bus sulieti jūsų sujungtame kliento profilio objekte (konfigūravimo proceso rezultatas). Kai kuriuos atributus sistema sulieja automatiškai.
 
-Norėdami peržiūrėti atributus, įtrauktus į vieną iš jūsų automatiškai sulietų atributų, pasirinkite sulietą atributą lentelės skirtuke **Kliento laukai**. Atributai, kurie sudaro sulietą atributą, yra rodomi dviejose naujose eilutėse po sulietu atributu.
+### <a name="view-merged-attributes"></a>Sulietų atributų peržiūra
 
-## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Sulietų laukų atskyrimas, pervardijimas, išbraukimas ir redagavimas
+Norėdami peržiūrėti atributus, įtrauktus į vieną iš automatiškai sulietų atributų, pažymėkite tą sulietą atributą. Du atributai, kurie sudaro sulietą atributą, rodomi dviejose naujose eilėse po sulietu atributu.
 
-Galite pakeisti, kaip sistema apdoroja sulietus atributus, kad sugeneruotų vieningąjį kliento profilį. Pažymėkite **Rodyti daugiau** ir pasirinkite norimą keisti parinktį.
+> [!div class="mx-imgBorder"]
+> ![Sulieto atributo pasirinkimas](media/configure-data-merge-profile-attributes.png "Sulieto atributo pasirinkimas")
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Parinktys išplečiamajame meniu Rodyti daugiau, kad valdytume sulietus atributus.":::
+### <a name="separate-merged-attributes"></a>Sulietų atributų atskyrimas
 
-Daugiau informacijos rasite tolesniuose skyriuose.
+Norėdami atskirti bet kurį automatiškai sulietą atributą arba atšaukti jo suliejimą, tą atributą susiraskite lentelėje **Profilio atributai**.
 
-## <a name="separate-merged-fields"></a>Sulietų laukų atskyrimas
-
-Norėdami atskirti sulietus laukus, lentelėje suraskite atributą. Vieningajame kliento profilyje atskiri laukai yra rodomi kaip atskiri duomenų elementai. 
-
-1. Pasirinkite sulietą lauką.
+1. Pasirinkite mygtuką su daugtaškiu (...).
   
-1. Pažymėkite **Rodyti daugiau** ir pasirinkite **Atskirti laukus**.
- 
-1. Patvirtinkite atskyrimą.
+2. Išplečiamajame sąraše pasirinkite **Atskiri laukai**.
 
-1. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus.
+### <a name="remove-merged-attributes"></a>Sulietų atributų pašalinimas
 
-## <a name="rename-merged-fields"></a>Sulietų laukų pervardijimas
+Norėdami pašalinti atributą iš galutinio kliento profilio objekto, tą atributą susiraskite lentelėje **Profilio atributai**.
 
-Pakeiskite sulietų atributų rodomą pavadinimą. Negalite pakeisti įvesties objekto pavadinimo.
-
-1. Pasirinkite sulietą lauką.
+1. Pasirinkite mygtuką su daugtaškiu (...).
   
-1. Pažymėkite **Rodyti daugiau** ir pasirinkite **Pervadinti**.
+2. Išplečiamajame sąraše pasirinkite **Nesulieti**.
 
-1. Patvirtinkite pakeistą rodomą pavadinimą. 
+   Atributas perkeliamas į sekciją **Pašalinta iš kliento įrašo**.
 
-1. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus.
+## <a name="manually-add-a-merged-attribute"></a>Sulieto atributo įtraukimas rankiniu būdu
 
-## <a name="exclude-merged-fields"></a>Sulietų laukų išbraukimas
+Norėdami įtraukti sulietą atributą, nueikite į puslapį **Suliejimas**.
 
-Išbraukite atributą iš vieningojo kliento profilio. Jei laukas yra naudojamas kituose procesuose, pavyzdžiui, segmente, pašalinkite jį iš šių procesų prieš išbraukdami jį iš kliento profilio. 
+1. Pasirinkite **Įtraukti sulietą atributą**.
 
-1. Pažymėkite sulietą lauką.
-  
-1. Pažymėkite **Rodyti daugiau** ir pasirinkite **Išbraukti**.
+2. Nurodykite **Pavadinimą**, kad jį vėliau galėtumėte identifikuoti puslapyje **Suliejimas**.
 
-1. Patvirtinkite neišbraukimą.
+3. Papildomai galite nurodyti **Rodomą pavadinimą**, kuris rodomas sujungtame kliento profilio objekte.
 
-1. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus. 
+4. Sukonfigūruokite **Pasirinkti dubliuotus atributus**, kad pasirinktumėte atributus, kuriuos norite sulieti iš sutapdintų objektų. Taip pat galite ieškoti atributų.
 
-Puslapyje **Sulieti** pasirinkite **Išbraukti laukai**, kad peržiūrėtumėte visų išbrauktų laukų sąrašą. Ši sritis jums leidžia vėl įtraukti išbrauktus laukus.
-
-## <a name="edit-a-merged-field"></a>Sulieto lauko redagavimas
-
-1.  Pažymėkite sulietą lauką.
-
-1.  Pažymėkite **Rodyti daugiau** ir pasirinkite **Redaguoti**.
-
-1.  Nurodykite, kaip sujungti arba sulieti laukus viena iš trijų parinkčių:
-    - **Svarba**: nustato laiminčią reikšmę pagal svarbos reitingą, nurodytą dalyvaujantiems laukams. Tai yra numatytoji suliejimo parinktis. Pasirinkite **Perkelti aukštyn/žemyn**, kad nustatytumėte svarbos vertinimą.
-    :::image type="content" source="media/importance-merge-option.png" alt-text="Svarbos parinktis suliejimo laukų dialogo lange."::: 
-    - **Naujausia** : nustato laiminčią vertę pagal didžiausią naujumą. Norint apibrėžti naujumą, kiekvienam dalyvaujančiam objektui suliejimo laukų aprėptyje reikia datos arba skaitinio lauko.
-    :::image type="content" source="media/recency-merge-option.png" alt-text="Naujumo parinktis suliejimo laukų dialogo lange.":::
-    - **Seniausia** : nustato laiminčią vertę pagal mažiausią naujumą. Norint apibrėžti naujumą, kiekvienam dalyvaujančiam objektui suliejimo laukų aprėptyje reikia datos arba skaitinio lauko.
-
-1.  Norėdami dalyvauti suliejimo procese, galite įtraukti daugiau laukų.
-
-1.  Sulietą lauką galite pervadinti.
-
-1. Pasirinkite **Atlikta** jūsų pakeitimų pritaikymui.
-
-1. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus. 
-
-## <a name="combine-fields-manually"></a>Sujungti laukus neautomatiniu būdu
-
-Sulietą atributą nurodykite rankiniu būdu.
-
-1. **Puslapyje Suliejimas** pasirinkite **Sujungti**.
-
-1. Pasirinkite parinktį **Laukai**.
-
-1. Nurodykite suliejimo laimėtojo išrinkimo strategiją **Sujungti laukus pagal** išplečiamajame sąraše.
-
-1. Pasirinkite lauką, kurį norite įtraukti. Pasirinkite **Įtraukti laukus**, kad sujungtumėte daugiau laukų.
-
-1. Įveskite **Pavadinimą** ir **Išvesties lauko pavadinimą**.
-
-1. Pasirinkite **Atlikta** pakeitimų pritaikymui.
-
-1. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus. 
-
-## <a name="combine-a-group-of-fields"></a>Laukų grupės sujungimas
-
-Traktuokite laukų grupę kaip vieną vienetą. Pavyzdžiui, kai mūsų įrašuose yra laukai Adresas1, Adresas2, Miestas, Valstija ir Zip. Mes tikriausiai nenorime sujungti į kitą įrašą Adresas2, manydami, kad tai padarys mūsų duomenis išsamesnius
-
-1. **Puslapyje Suliejimas** pasirinkite **Sujungti**.
-
-1. Pasirinkite **laukų** grupės parinktį.
-
-1. Išplečiamajame lape Rang grupėse nurodykite suliejimo laimėtojo **strategiją**.
-
-1. Pasirinkite **Įtraukti** ir pasirinkite, ar į laukus norite įtraukti daugiau laukų ar papildomų grupių.
-
-1. Pateikite **kiekvieno kombinuoto lauko pavadinimą** ir **išeigos pavadinimą**.
-
-1. Pateikite **laukų grupės pavadinimą**. 
-
-1. Pasirinkite **Atlikta** pakeitimų pritaikymui.
-
-1. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus.
-
-## <a name="change-the-order-of-fields"></a>Laukų tvarkos keitimas
-
-Kai kuriuose objektuose yra daugiau išsamios informacijos nei kituose. Jei objekte yra naujausių duomenų apie lauką, galite jam teikti pirmenybę prieš kitus objektus, kai suliejate reikšmes.
-
-1. Pasirinkite sulietą lauką.
-  
-1. Pažymėkite **Rodyti daugiau** ir pasirinkite **Redaguoti**.
-
-1. Srityje **Sujungti laukus** pasirinkite **Perkelti aukštyn/žemyn**, kad nustatytumėte jų tvarką arba juos nuvilktumėte į norimą padėtį.
-
-1. Patvirtinkite pakeitimą.
-
-1. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus.
-
-## <a name="configure-customer-id-generation"></a>Kliento ID generavimo konfigūravimas 
-
-Sukonfigūravę suliejimo laukus galite apibrėžti, kaip generuoti Kliento ID reikšmes, unikalius kliento profilio identifikatorius. Duomenų suvienodinimo proceso suliejimo žingsnis sugeneruoja unikalų kliento profilio identifikatorių. Identifikatorius yra *Kliento* objekto Kliento ID, kuris gaunamas iš duomenų suvienodinimo proceso. 
-
-Kliento objekto Kliento ID yra pagrįsta pirmosios ne nulinės laimėjusios pirminių raktų reikšmės maiša. Šie raktai gaunami iš objektų, naudojamų gretinimo ir suliejimo etapuose, ir juos sąlygoja atitikmenų tvarka.Tad sugeneruot Kliento ID gali pasikeisti, kai pirminė rakto reikšmė pakeičia atitikmens tvarkos pirminį objektą. Todėl pirminio rakto reikšmė ne visada gali būti ta pati kaip ir tas klientas.
-
-Sukonfigūravus stabilų kliento ID galima išvengti tokio veikimo.
-
-**Konfigūruoti unikalųjį kliento ID**
-
-1. Eikite į **Vienyti** > **Sulieti**.
-
-1. Pasirinkite skirtuką **Raktai**. 
-
-1. Laikykite pelės žymeklį virš **Kliento ID** ir pasirinkite **Konfigūruoti** parinktį.
-   :::image type="content" source="media/customize-stable-id.png" alt-text="ID generavimo tinkinimo valdiklis.":::
-
-1. Pažymėkite ne daugiau kaip penkis laukus, kurie sudarys unikalųjį kliento ID ir kurie yra labiau stabilūs. Įrašuose, kurie neatitinka jūsų konfigūracijos, naudojamas sistemos sukonfigūruotas ID.  
-
-1. Pasirinkite **Atlikta** ir vykdykite suliejimo procesą, kad jūsų pakeitimai būtų pritaikyti.
-
-## <a name="group-profiles-into-households-or-clusters"></a>Grupuokite profilius į indus ar grupes į indus
-
-Kaip kliento profilio generavimo konfigūravimo proceso dalį galite apibrėžti taisykles, pagal šias taisykles susijusius profilius grupuoti į grupę. Šiuo metu galimos dviejų tipų grupės – tarpastie ir pasirinktinės grupės. Sistema automatiškai pasirenka naudojant iš anksto nustatytas taisykles, jei *kliento* objektas turi semantiniais laukais *Asmens.Pavardė* ir *Vietos.Adresas*. Taip pat galite sukurti grupę su savo taisyklėmis ir sąlygomis, panašiomis į [atitikties taisykles](match-entities.md#define-rules-for-match-pairs).
-
-**Nustatykite kasos aparatą arba grupę**
-
-1. Eikite į **Vienyti** > **Sulieti**.
-
-1. Skirtuke **Sulieti** rinkitės **Išplėstinis** > **kūrimo grupė**.
-
-   :::image type="content" source="media/create-cluster.png" alt-text="Naujos grupės kūrimo valdiklis.":::
-
-1. Pasirinkite iš **Namai** ar **Kliento** grupė. Jei semantiniai laukai yra *Asmens.Pavardė* ir *Veitos.Adresas* yra *Kliento* objekte, tai namai automatiškai pasirenkami.
-
-1. Nurodykite grupės pavadinimą ir pasirinkite **Atlikta**.
-
-1. Pasirinkite skirtuką **Grupės** ir raskite sukurtą grupę.
-
-1. Nurodykite savo grupės apibrėžties taisykles ir sąlygas.
-
-1. Pasirinkite **Vykdyti**, kad būtų vykdomas suliejimo procesas ir sukurta grupė.
-
-Atlikus suliejimo procesą, grupės identifikatoriai į kliento objektą įtraukiami kaip *nauji* laukai.
+5. Nustatykite **Rikiuoti pagal svarbą**, kad suteiktumėte prioritetą vienam atributui. Pavyzdžiui, jei objekte *WebAccountCSV* pateikiami tiksliausi duomenys apie atributą *Vardai ir pavardės*, pasirinkdami *WebAccountCSV*, galite nustatyti, kad šiam objektui būtų teikiama daugiau svarbos nei *ContactCSV*. Todėl kai reikia išgauti atributo *Vardas ir pavardė* detales, *WebAccountCSV* suteikiamas pirmasis prioritetas, o *ContactCSV* perkeliamas į antrąjį prioritetą.
 
 ## <a name="run-your-merge"></a>Suliejimo vykdymas
 
 Nesvarbu, ar atributus suliejate rankiniu būdu, ar leidžiate juos sulieti sistemai, visada galite vykdyti savo suliejimą. Norėdami pradėti procesą, puslapyje **Sulieti** pasirinkite **Vykdyti**.
 
 > [!div class="mx-imgBorder"]
-> ![Duomenų suliejimo įrašymas ir vykdymas.](media/configure-data-merge-save-run.png "Duomenų suliejimo įrašymas ir vykdymas")
+> ![Duomenų suliejimo įrašymas ir vykdymas](media/configure-data-merge-save-run.png "Duomenų suliejimo įrašymas ir vykdymas")
 
-Pasirinkite **Vykdyti tik suliejimą**, jei norite tik peržiūrėti išvestį, kuri atsispindi vieningajame kliento objekte. Tolesni procesai bus atnaujinti taip, kaip [apibrėžta atnaujinimo grafike](system.md#schedule-tab).
+Norėdami atlikti papildomų pakeitimų ir iš naujo paleisti veiksmą, vykdomą suliejimą galite atšaukti. Spustelėkite **Atnaujinama...** ir pasirodžiusiame šoniniame skydo pasirinkite **Atšaukti užduotį**.
 
-Pasirinkite **Vykdyti suliejimą ir tolesnius procesus**, kad atnaujintumėte sistemą savo pakeitimais. Visi procesai, įskaitant papildymą, segmentus ir priemones, bus vykdomi iš naujo automatiškai. Užbaigus visus tolesnius procesus, klientų profiliai atspindės visus jūsų atliktus pakeitimus.
+Kai tekstas **Atnaujinama...** pasikeičia į **Sėkmingai atlikta**, suliejimas yra baigtas, o duomenų prieštaravimai buvo išspręsti pagal jūsų apibrėžtą strategiją. Sulieti ir nesulieti atributai įtraukiami į vieningojo profilio objektą. Neįtraukti atributai į vieningojo profilio objektą neįtraukiami.
 
-Jei norite atlikti daugiau pakeitimų ir iš naujo vykdyti veiksmą, galite atšaukti vykdomą suliejimą. Spustelėkite **Atnaujinama...** ir pasirodžiusiame šoniniame skydo pasirinkite **Atšaukti užduotį**.
+Jei tai nėra pirmas kartas, kai sėkmingai įvykdėte suliejimą, visi proceso pabaigos procesai, įskaitant papildymą, segmentaciją ir matavimą, bus automatiškai paleisti iš naujo. Kai visi proceso pabaigos procesai bus įvykdyti pakartotinai, klientų profiliuose bus matomi bet kokie atlikti pakeitimai.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
-
-:::image type="content" source="media/process-detail-path.png" alt-text="Detalizavimo kelias, kuriuo galima apdoroti išsamią informaciją iš užduoties būsenos saito.":::
+> [!TIP]
+> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
 
 ## <a name="next-step"></a>Kitas veiksmas
 
 Norėdami gauti daugiau įžvalgų apie savo klientus, sukonfigūruokite [veiklas](activities.md), [papildymą](enrichment-hub.md) arba [ryšius](relationships.md).
 
-Jei jau sukonfigūravote veiklas, papildymą ar segmentus, jie bus automatiškai apdorojami, kad naudotų naujausius kliento duomenys.
+Jei jau sukonfigūravote veiklas, papildymą arba ryšius arba jei sukonfigūravote segmentus, jie bus apdorojami automatiškai, kad būtų naudojami naujausi kliento duomenys.
+
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
