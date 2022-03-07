@@ -3,18 +3,20 @@ title: Ryšiai su kitomis paslaugomis iš „Customer Insights“.
 description: Bendrinkite duomenis su kitomis paslaugomis.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304982"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354394"
 ---
 # <a name="connections-preview-overview"></a>Ryšių (peržiūros) apžvalga
 
@@ -47,6 +49,7 @@ Norėdami įtraukti ryšius, turite turėti [administratoriaus teises](permissio
 1. Srityje **Nustatyti ryšį** pateikite reikiamą informaciją. 
    1. **Rodomas pavadinimas** ir ryšio tipas apibūdina ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas šio ryšio tikslas ir paskirtis.
    1. Tikslūs laukeliai priklauso nuo to, prie kokios paslaugos jungiatės. Apie konkretaus ryšio tipo duomenis galite sužinoti straipsnyje apie tikslinę paslaugą.
+   1. Jei [naudojate savo „Key Vault“](use-azure-key-vault.md) slaptai saugoti, suaktyvinkite **naudoti Key Vault** ir sąraše pasirinkite slaptą parinktį.
 
 1. Jei norite sukurti ryšį, pasirinkite **Įrašyti**.
 
@@ -93,3 +96,6 @@ Atsieti papildymai ir eksportavimai tampa neaktyvūs. Iš naujo suaktyvinate juo
 
 1. Jei norite patvirtinti trynimą, pasirinkite **Šalinti**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Ryšių su slaptais įrašais, kuriuos valdo jūsų „Key Vault“, nustatymas
+
+Kai kuriems ryšiams reikia slaptai pvz., API raktų arba slaptažodžius. Kai kurie ryšiai palaiko slaptas informacijas, saugomas jūsų saugykloje „Key Vault“. Sužinokite daugiau apie palaikomus ryšius ir apie tai, kaip [kaip savo „Key Vault“ nustatyti auditorijos įžvalgoms](use-azure-key-vault.md).

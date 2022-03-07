@@ -1,20 +1,25 @@
 ---
 title: Adreso didinimo sodrinimas (yra vaizdo įrašas)
 description: Papildykite ir normalizuokite klientų profilių adresų informaciją naudodami „Microsoft” modelius.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934933"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353646"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientų profilių papildymas išplėstiniais adresais
 
@@ -100,17 +105,17 @@ Norėdami pradėti papildymo procesą, komandų juostoje pasirinkite **Vykdyti**
 
 Pasibaigus papildymo procesui, galite peržiūrėti naujai papildytus klientų profilių duomenis dalyje **Mano papildymai**. Be to, rasite vėliausio naujinimo laiką ir papildytų profilių skaičių.
 
-Išsamų kiekvieno papildyto profilio rodinį galite pasiekti pasirinkę **Peržiūrėti papildytus duomenis**.
+Praturtintų duomenų pavyzdį galite pamatyti plytelėje **Praturtinti klientai**. Pasirinkite **Peržiūrėti daugiau** ir pasirinkite skirtuką **Duomenys**, kad pasiektumėte išsamų kiekvieno praturtinto profilio rodinį.
 
 ### <a name="overview-card"></a>Apžvalgos kortelė
 
-Apžvalgos kortelėje rodoma išsami informacija apie sodrinimo aprėptį. 
+Apžvalgos kortelėje pateikiama išsami informacija apie sodrinimo aprėptį. 
 
-* **Klientai apdoroti ir pakeisti** : sėkmingai praturtintų klientų profilių skaičius.
+* **Apdoroti ir pakeisti** adresai: klientų profilių su sėkmingai praturtintais adresais skaičius.
 
-* **Klientai apdoroti ir nepakeitti** : klientų profilių, kurie buvo pripažinti, bet nepakeitė, skaičius. Paprastai tai atsitinka, kai įvesties duomenys yra galiojantys ir negali būti patobulinti praturtinus.
+* **Adresai apdoroti ir nepakeisti**: klientų profilių su adresais, kurie buvo atpažinti, bet nepakeisti, skaičius. Paprastai tai atsitinka, kai įvesties duomenys galioja ir jų negalima pagerinti sodrinus.
 
-* **Klientai neapdoroti ir nepakeitti** : neatpažintų profilių skaičius. Paprastai įvesties duomenims, kurie yra netinkami arba nepalaikomi sodrinimo.
+* **Adresai neapdoroti ir nepakeisti**: profilių su neatpažintais adresais skaičius. Paprastai įvesties duomenims, kurie yra netinkami arba nepalaikomi sodrinimo.
 
 ## <a name="next-steps"></a>Paskesni veiksmai
 

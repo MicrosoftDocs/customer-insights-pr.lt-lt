@@ -1,20 +1,24 @@
 ---
 title: Darbo su verslo klientais kaip pagrindinę tikslinę auditoriją pradžia
 description: Darbo su verslo klientais kaip pagrindinę tikslinę auditoriją pradžia „Dynamics 365 Customer Insights“.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
+ms.custom: intro-internal
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-semantic-mapping
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 88882dc727c37262c9f204fbc8049abe17bd21a3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644998"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353553"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Darbas su verslo klientais naudojant auditorijos įžvalgas
 
@@ -32,7 +36,7 @@ Suvienodinę [duomenis, nurodykite abonementų hierarchijas](relationships.md#se
 
 Jei jūsų organizacija išlaiko atskirų klientų ir verslo klientų aplinkas, kairiojoje srityje naudodami jungiklį galite pasirinkti pagrindinę tikslinę auditoriją.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Perjungėjas pakeičia pagrindinę tikslinę auditoriją tarp atskirų klientų ir verslo klientų.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Perjungėjas pakeičia pagrindinę tikslinę auditoriją tarp atskirų klientų ir verslo klientų.":::
 
 ## <a name="supported-feature-areas"></a>Palaikomų funkcijų sritys
 

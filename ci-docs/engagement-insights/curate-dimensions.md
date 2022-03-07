@@ -2,18 +2,17 @@
 title: Naudokite demografinius matmenis elgsenos duomenims išskaidyti (kuruotos dimensijos)
 description: Naudokite vieningą profilio kuruotą matmenį, kad įgalintumėte auditorijos įžvalgų kliento profilio ypatybes.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
-ms.translationtype: HT
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461113"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233057"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Naudokite demografinius matmenis elgsenos duomenims išskaidyti
 
@@ -29,7 +28,7 @@ Naudodami vieningas profilio demografinius matmenis, įtraukimo įžvalgų varto
 - Įtraukimo įžvalgų aplinka, kurioje yra kliento profilio duomenų, susietų su auditorijos įžvalgų aplinka, kurioje kuriami klientų profiliai. Daugiau informacijos: [Sąsajos tarp auditorijos įžvalgų ir įtraukimo įžvalgų kūrimas](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Sukūrę ryšį tarp auditorijos įžvalgų ir įtraukimo įžvalgų aplinkos, galbūt norėsite tik duomenų, susijusių su klientų profilio ypatybėmis, kurie gali būti naudingi kaip įtraukimo įžvalgų aspektai. Norėdami gauti daugiau informacijos, eikite į [Įjunkite auditorijos įžvalgų vieningus profilių atributus ir segmentus](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Sukūrę ryšį tarp auditorijos įžvalgų ir įtraukimo įžvalgų aplinkos, galbūt norėsite tik duomenų, susijusių su klientų profilio ypatybėmis, kurie gali būti naudingi kaip įtraukimo įžvalgų aspektai. Norėdami gauti daugiau informacijos, eikite į [Įjunkite auditorijos įžvalgų vieningus profilių atributus ir segmentus](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Sukurkite naują pasirinktinę ataskaitą.
 

@@ -5,26 +5,25 @@ author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
 ms.date: 06/09/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 101888ecc3a741a1ab6eb87c20055644eb8022b2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7777541"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228079"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>„MICROSOFT DYNAMICS 365 CUSTOMER INSIGHTS“ – Įsitraukimo įžvalgos (peržiūra) 
 
-Įtraukimo įžvalgos (peržiūra) yra peržiūros prieš išleidimą galimybė, o tai reiškia, kad ji turi mažiau arba kitokių saugos, privatumo ir duomenų vietos matų nei funkcijos ir galimybės, kurios paprastai pasiekiamos Dynamics 365 Customer Insights. Peržiūrėkite toliau pateiktas sąlygas ir produkto dokumentaciją ir nustatykite, ar įtraukimo įžvalgos (peržiūra) tinka jūsų duomenims.
+Įtraukimo įžvalgos (peržiūra) yra ne leidimo peržiūros galimybė, o tai reiškia, kad jos saugos, privatumo ir duomenų vietos priemonės skiriasi nuo visuotinai prieinamų funkcijų ir „Dynamics 365 Customer Insights“ galimybių. Peržiūrėkite toliau pateiktas sąlygas ir produkto dokumentaciją ir nustatykite, ar įtraukimo įžvalgos (peržiūra) tinka jūsų duomenims.
 
 ## <a name="preview-terms-of-service"></a>PERŽIŪRĖTI PASLAUGŲ SĄLYGAS
 
 PASKUTINIS NAUJINIMAS 2020 SPALIS 
 
-Prisijungdami arba naudodamiesi Dynamics 365 Customer Insights – Įtraukimo įžvalgomis (kartu su bet kokiais "Microsoft" pateiktais duomenų šaltiniais, "Paslaugomis"),, jūs sutinkate su šios Sutarties sąlygomis. Jei jų neprisiimate, nenaudokite paslaugų ir jų nenaudokite.
+Priėję ar naudodami paslaugų peržiūra „Dynamics 365 Customer Insights“ – Įsitraukimo įžvalgomis (kartu su bet kuriais „Microsoft“ pateiktais duomenų šaltiniais, „Paslaugos“), sutinkate su šios sutarties sąlygomis ir nuostatomis. Jei jų neprisiimate, nenaudokite paslaugų ir jų nenaudokite.
 
 ## <a name="1-what-this-agreement-covers"></a>1. KAM ŠI SUTARTIS YRA TAIKOMA
 
@@ -154,7 +153,7 @@ TIEK, KIEK TAI LEIDŽIAMA PAGAL ĮSTATYMUS, „MICROSOFT" JOKIOMIS ĮVYKIUS NEĮ
 
 ### <a name="111-term"></a>11.1. Terminas
 
-Šis Susitarimas galioja nuo sutikimo su ja dienos. Ši Sutartis pakeičia bet kokią ankstesnę sutartį, pagal kurią naudojotės Dynamics 365 Product Insights ar bet kokiomis pirmtakų paslaugomis. Ši Sutartis nutraukiama anksčiau nei (i) pirmojo komercinio paslaugų leidimo prieinamumo dieną (jei tokia bus), ar (ii) dieną, kai „Microsoft“ Jums pateikia pranešimą apie nutraukimą. „Microsoft" gali bet kuriuo metu dėl kokios nors priežasties ir savo nuožiūra laikinai sustabdyti arba atšaukti jūsų visos arba bet kurios Paslaugų dalies naudojimą ir prieigą prie jos arba nutraukti šią Sutartį.
+Šis Susitarimas galioja nuo sutikimo su ja dienos. Ši Sutartis pakeičia bet kurią ankstesnę sutartį, pagal kurią naudojate „Dynamics 365 Product Insights“ ar bet kokias kitas paslaugas. Ši Sutartis nutraukiama anksčiau nei (i) pirmojo komercinio paslaugų leidimo prieinamumo dieną (jei tokia bus), ar (ii) dieną, kai „Microsoft“ Jums pateikia pranešimą apie nutraukimą. „Microsoft" gali bet kuriuo metu dėl kokios nors priežasties ir savo nuožiūra laikinai sustabdyti arba atšaukti jūsų visos arba bet kurios Paslaugų dalies naudojimą ir prieigą prie jos arba nutraukti šią Sutartį.
 
 ### <a name="112-effect-of-termination"></a>11.2. Nutraukimo įsigaliojimas
 

@@ -1,26 +1,31 @@
 ---
 title: Auditorijos įžvalgų segmentai
 description: Segmentų apžvalga ir jų kūrimo bei valdymo informacija.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673851"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355993"
 ---
 # <a name="segments-overview"></a>Segmentų apžvalga
 
 Segmentai leidžia jums grupuoti jūsų klientus pagal demografiją, perlaidas ar elgesio savybes. Norėdami pasiekti verslo tikslus, galite naudoti segmentus, kad tikslingai vykdytumėte reklamines kampanijas, pardavimo veiklas ir klientų aptarnavimo veiksmus.
 
-Klientų profiliai, atitinkantys segmento apibrėžties filtrus, yra vadinami segmento *nariais*. Kai kurie [paslaugų apribojimai](service-limits.md) yra taikomi.
+Klientų profiliai, atitinkantys segmento apibrėžties filtrus, yra vadinami segmento *nariais*. Kai kurie [paslaugų apribojimai](/dynamics365/customer-insights/service-limits) yra taikomi.
 
 ## <a name="create-a-new-segment"></a>Sukurkite naują segmentą
 
@@ -65,8 +70,7 @@ Pasirinkus segmentą pasiekiami toliau nurodyti veiksmai.
 
 Visus segmentus galite atnaujinti vienu metu pažymėdami **Atnaujinti viską** puslapyje **Segmentai** arba galite atnaujinti vieną ar kelis segmentus, kai juos pažymite ir parinktyse pasirenkate **Atnaujinti**. Taip pat galite sukonfigūruoti pasikartojantį atnaujinimą dalyje **Administravimas** > **Sistemas** > **Planuoti**.
 
-> [!TIP]
-> Esama [šešių būsenos tipų](system.md#status-types) užduotims/procesams. Be to, dauguma procesų [priklauso nuo kitų tolesnių procesų](system.md#refresh-policies). Galite spustelėti proceso būseną, kad matytumėte išsamią informaciją apie visos užduoties vykdymo eigą. Pasirinkę parinktį **Peržiūrėti**, pateiktą prie vienos iš užduočių, rasite papildomos informacijos: apdorojimo laiką, paskutinę apdorojimo datą ir visus su užduotimi susijusius įspėjimus bei klaidas.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Eksportuokite segmentus
 
@@ -106,4 +110,5 @@ Apatinėje dalyje yra segmento narių sąrašas.
 >
 >Šiame sąraše rodomi sutampantys segmento nariai ir pirmieji 100 jūsų segmento įrašai, kad galėtumėte greitai jį įvertinti ir peržiūrėti apibrėžimus, jei to reikia. Norėdami peržiūrėti visu sutampančius įrašus, turite [eksportuoti segmentą](export-destinations.md).
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

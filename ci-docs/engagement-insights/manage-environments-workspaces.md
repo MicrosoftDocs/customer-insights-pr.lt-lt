@@ -4,17 +4,16 @@ description: Kaip kurti, pervardyti ir panaikinti darbo sritis ir aplinkas.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
-ms.translationtype: HT
+ms.openlocfilehash: ded9e98f06109b7cdc27f449455b7f58d633722f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486045"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350647"
 ---
 # <a name="manage-environments-and-workspaces"></a>Valdyti aplinkas ir darbo aplinkas
 
@@ -22,42 +21,20 @@ ms.locfileid: "7486045"
 
 ## <a name="overview"></a>Apžvalga
 
-Darbo sritis – tai vieta įvykiams ir ataskaitoms saugoti ir valdyti. Čia galite peržiūrėti vartotojo veiklą tikruuoju laiku. Kurdami darbo sritį, pažymėkite duomenų, ties kuriuos siųsite į darbo sritį. Šiuo metu palaikomi žiniatinklio duomenys ir mobiliųjų įrenginių programos.
+Šioje temoje aptariama, kaip valdyti darbo sritis ir aplinkas jau sukūrus. 
 
-Aplinka yra vieta, kurioje valdote savo darbo sritis ir ryšius. Kaip naudoti aplinkas, priklauso nuo jūsų organizacijos ir atvejo. Pavyzdžiui, galite kurti:
+- Tai *Darbo sritis* yra vieta įvykiams ir ataskaitoms saugoti ir valdyti. Čia galite peržiūrėti vartotojo veiklą tikruuoju laiku. Kurdami darbo sritį, pažymėkite duomenų, ties kuriuos siųsite į darbo sritį. Šiuo metu palaikomi žiniatinklio duomenys ir mobiliųjų įrenginių programos. Daugiau informacijos ieškokite [Kurti naują darbo sritį ir įtraukti narių](create-workspace.md).
 
--   Vieną aplinką.
--   Atskiros tikrinimo ir gamybos aplinkos.
--   Atskiros konkrečių jūsų organizacijos komandų ar skyrių aplinkos, kuriose yra kiekvienos auditorijos aktualių įvykių.
--   Atskiras skirtingų jūsų įmonės visuotinių šakų aplinkas.
--   Jungtys su „Customer Insights“ publikos įžvalgų galimybėmis.
+- Tai *Aplinka* yra vieta, kurioje valdote savo darbo sritis ir ryšius. Daugiau informacijos žiūrėkite [Naujos aplinkos kūrimas](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Aplinkos pasirinkimas ir darbo srities kūrimas 
-
-Kiekviena darbo sritis turi būti aplinkoje. Galite pažymėti iš anksto esamą aplinką arba sukurti naują, kai kuriate darbo sritį. Tada galėsite įtraukti darbo srities narių ir pradėti rinkti duomenis.
-
-**Norėdami kurti savo pirmą darbo sritį**
-
-1. Įtraukimo įžvalgose pasirinkite **Naujas** iš darbo srities perjungtuvo. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Customer Insights puslapio darbo srities parinkėjas.":::
-
-1. Sąraše pasirinkite vieną aplinką arba **Kurti naują aplinką**.
-
-1. Įveskite **Darbo srities** pavadinimą. 
-
-1. Atsižvelgdami į tai, ką norite įvertinti svetainėje, ar mobilioje programoje, pasirinkite norimos kurti aplinkos tipą. 
-
-1. Vaidmenų sąraše galite įtraukti narių ir priskirti jų **teisių** lygį. Tada pasirinkite **Baigti**, kad sukurtumėte darbo sritį, arba **Kitas**, kad įdiegtumėte kodą. 
-
-1. Įdiekite šį kodo fragmentas, kad būtų pradėti gauti duomenys, tada pasirinkite **Atlikta**. 
-
-## <a name="manage-a-workspace"></a>Tvarkyti darbo sritį
+## <a name="manage-an-existing-workspace"></a>Valdyti esamą darbo sritį
 
 Aplinkoje galite turėti kelias darbo sritis, kurios veikia sklandžiai. Jūsų [vaidmuo](user-roles.md) apibrėžia, kaip galite su jais dirbti. 
 
  - Jei norite valdyti aplinką, turite būti darbo srities administratorius arba darbo srities administratorius.
  - Kaip darbo srities administratorius galite pervardyti esamas darbo sritis arba jas panaikinti. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Darbo srities administratorius centras.":::
 
 ### <a name="edit-a-workspace-name"></a>Redaguoti darbo srities pavadinimą
 
@@ -69,13 +46,13 @@ Aplinkoje galite turėti kelias darbo sritis, kurios veikia sklandžiai. Jūsų 
 
 ### <a name="delete-a-workspace"></a>Naikinti darbo sritį
 
-Panaikinus darbo sritį, bus visam laikui pašalintas visas jos turinys, duomenys, parametrai ir teisės. Anuliuoti negalėsite.
+Panaikinus darbo sritį visam laikui pašalinamas visas jos turinys, duomenys, parametrai ir teisės. Anuliuoti negalėsite.
 
 1. Eikite į **Administratorius** > **Darbo sritis** ir rinkitės **Nustatymai**.
 
 1. Pasirinkite **Naikinti darbo sritį**. 
 
-1. Laukelyje **Naikinti darbo sritį** įveskite **PATVIRTINTI NAIKINIMĄ**. 
+1. Dialogo lange **Naikinti darbo aplinkos** lauką ir įveskite **PATVIRTINTI NAIKINIMĄ** visose didžiosiose raidėse. 
 
 1. Rinkitės **Naikinti** norėdami visam laikui panaikinti darbo sritį.
 
@@ -87,41 +64,17 @@ Panaikinus darbo sritį, bus visam laikui pašalintas visas jos turinys, duomeny
 
 1. Pasirinkite **Įtraukti narius** ir įtraukite juos į savo darbo sritį.
 
-## <a name="manage-an-environment"></a>Aplinkos valdymas
+## <a name="manage-an-existing-environment"></a>Valdyti esančią aplinką
 
 Kaip aplinkos administratorius, kairiojoje naršymo srityje galite pasiekti aplinką. Galite konfigūruoti aplinkos parametrus, kitus aplinkos administratorius ir darbo sritis. Pažymėkite skirtukus, kad administravimo centre būtų galima pereiti iš vienos vietos į kitą.
 
-:::image type="content" source="media/New-environment.png" alt-text="Aplinkos administravimo centras.":::
+:::image type="content" source="media/environment-edit.png" alt-text="Aplinkos administravimo centras.":::
 
-### <a name="create-an-environment"></a>Sukurkite aplinką
-
-1. Darbo srities parinkiklyje pasirinkite **+Nauja**.
-
-1. Interaktyviojoje aplinkoje atidarykite išplečiamąjį meniu **Aplinka** ir pasirinkite **Kurti naują aplinką**. 
-
-1. Pateikite **Aplinkos pavadinimą**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Naudokite interaktyviąją patirtį, kad nurodytumėte išsamią informaciją apie aplinką.":::
-
-1. Pasirinkite **Regioną** ir pasirinkite **Kitas**. 
-
-1. Pateikite darbo srities pavadinimą ir pasirinkite, kurį darbo srities tipą norite sukurti. 
-
-1.  Pasirinktinai įtraukite narių ir nukopijuokite kodo fragmentą, kad užbaigtumėte kūrimo procesą.
-
-### <a name="rename-an-environment"></a>Pervardyti aplinką
+### <a name="edit-an-environment-name"></a>Aplinkos pavadinimo redagavimas
 
 1. Eikite į **Administratorius** > **Aplinka** ir rinkitės **Nustatymai**.
 
 1. Atnaujinkite **aplinkos pavadinimą** ir pasirinkite **Įrašyti,** kad pakeitimai būtų pritaikyti.
-
-### <a name="manage-environment-members"></a>Valdyti aplinkos narius
-
-1. Eikite į **Administratorius** > **Aplinka** ir rinkitės **Nariai**.
-
-1. Norėdami **atnaujinti narius** ir juos priskirti, pažymėkite [Įtraukti narius](user-roles.md). Šiuo metu pasiekiamas **tik aplinkos** srities administratorius.
-
-1. Pasirinkite **Įtraukti narius** ir įtraukite juos į savo aplinką.
 
 ### <a name="delete-an-environment"></a>Aplinkos naikinimas
 
@@ -131,9 +84,17 @@ Aplinkos administratoriai gali panaikinti aplinkas. Kad aplinką būtų galima p
 
 1. Pasirinkite **Naikinti aplinką**. 
 
-1. Laukelyje **Naikinti darbo sritį** įveskite **PATVIRTINTI NAIKINIMĄ**. 
+1. Dialogo lange **Naikinti darbo aplinkos** lauką ir įveskite **PATVIRTINTI NAIKINIMĄ** visose didžiosiose raidėse. 
 
 1. Pasirinkite **Naikinti**, kad visam laikui panaikintumėte aplinką.
+
+### <a name="manage-environment-members"></a>Valdyti aplinkos narius
+
+1. Eikite į **Administratorius** > **Aplinka** ir rinkitės **Nariai**.
+
+1. Norėdami **atnaujinti narius** ir juos priskirti, pažymėkite [Įtraukti narius](user-roles.md). Šiuo metu pasiekiamas **tik aplinkos** srities administratorius.
+
+1. Pasirinkite **Įtraukti narius** ir įtraukite juos į savo aplinką.
 
 ## <a name="manage-connections"></a>Ryšių valdymas
 
@@ -145,7 +106,6 @@ Daugiau informacijos, žr. [Sąsajos tarp auditorijos įžvalgų ir įtraukimo �
 
 Norėdami apsaugoti kliento asmeninius duomenis, galite panaikinti arba eksportuoti galutinio vartotojo identifikavimo duomenis.
 
-Dėl išsamesnės informacijos, žr. [Naikinti ir eksportuoti įvykių duomenis, kuriuose yra asmeninė informacija](delete-export-personal-data.md).
-
+Dėl išsamesnės informacijos, žr. [Naikinti ir eksportuoti įvykių duomenis, kuriuose yra asmeninė informacija](../dsr-rights-requests.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

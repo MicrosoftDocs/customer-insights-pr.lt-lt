@@ -4,26 +4,25 @@ description: Sužinokite daugiau apie regionus ir geografines sritis, kuriuose �
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
-ms.service: customer-insights
+ms.date: 09/28/2021
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: 08435e651c3706257b8c0548e6e9bbf98f39dce9
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483307"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228116"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Regioninis „Dynamics 365 Customer Insights” pasiekiamumas
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Įtraukimo įžvalgose, kuri yra „Dynamics 365 Customer Insights” galimybė, palaipsniui pristatoma daugiau regionų, kuriuose klientai gali pasirinkti saugoti savo duomenis. Administratoriai gali pasirinkti regioną, kai jie [kuria naują aplinką](manage-environments-workspaces.md#create-an-environment). 
+Įtraukimo įžvalgose, kuri yra „Dynamics 365 Customer Insights” galimybė, palaipsniui pristatoma daugiau regionų, kuriuose klientai gali pasirinkti saugoti savo duomenis. Administratoriai gali pasirinkti regioną, kai jie [kuria naują aplinką](create-new-environment.md). 
 
-Kai pirmą kartą nustatote įtraukimo įžvalgas, galite pasirinkti regioną vykdydami [interaktyviąją pirmojo paleidimo patirtį](quickstart.md). Vėliau kiekviena nauja aplinka leidžia jums pasirinkti regioną, kuriame bus saugomi duomenys.
+Kai pirmą kartą nustatote įtraukimo įžvalgas, galite pasirinkti regioną vykdydami [interaktyviąją pirmojo paleidimo patirtį](quickstart.md). Vėliau kiekviena nauja aplinka leidžia pasirinkti regioną, kuriame bus saugomi duomenys.
 
-Šiuo metu yra dvi geografinės vietos: JAV ir Europa. Vartotojai gali pasirinkti iš Vakarų JAV regiono ir Šiaurės Europos regiono.
+Šiuo metu palaikome JAV ir Europos sritis. Vartotojai gali pasirinkti šiuos regionus: Vakarų JAV, Rytų JAV, Šiaurės Europą ir Vakarų Europą.
 
 Organizacija gali tvarkyti aplinkas skirtinguose regionuose. Pavyzdžiui, aplinka A saugo duomenis Vakarų JAV ir aplinka B – Šiaurės Europoje.
 

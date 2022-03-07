@@ -2,8 +2,30 @@
   href: index.yml
 - name: Produkto apžvalga
   href: overview.md
-- name: Bandomosios versijos kūrimas
-  href: audience-insights/get-started-trial.md
+- name: Mokymosi katalogas
+  items:
+    - name: Pradėti
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Duomenų suvartojimas
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Sujungto kliento profilio kūrimas
+      href: /learn/modules/unified-customer-profile/
+    - name: Darbas su auditorijos įžvalgomis
+      href: /learn/modules/working-with-customer-insights/
+    - name: Praturtinkite duomenis ir prognozes
+      href: /learn/modules/enrich-data/
+    - name: Išorinių ryšių valdymas
+      href: /learn/modules/configure-third-party-connections/
+    - name: Administruokite „Customer Insights“
+      href: /learn/modules/administer-customer-data-platform/
+- name: Nemokama bandomoji versija
+  items:
+    - name: Registracija norint naudoti nemokamą bandomąją versiją
+      href: trial-signup.md
+    - name: Su bandomąja versija susiję DUK
+      href: trial-FAQ.md
+- name: Pradėkite nuo apmokėtos licencijos
+  href: paid-license.md
 - name: Prieiga prie jūsų aplinkos
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Auditorijos įžvalgos
@@ -19,29 +41,25 @@
         - name: Greito pasirengimo darbui vadovas
           href: audience-insights/get-started.md
         - name: Kurti naują aplinką
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Tyrinėkite auditorijos įžvalgas
           href: audience-insights/home.md
-    - name: Sužinokite modulius
-      items:
-        - name: Duomenų suvartojimas
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Sujungto kliento profilio kūrimas
-          href: /learn/modules/unified-customer-profile/
-        - name: Darbas su programa
-          href: /learn/modules/working-with-customer-insights/
-        - name: Papildykite duomenis ir prognozes
-          href: /learn/modules/enrich-data/
+    - name: Darbas su veiklos paskyros
+      href: audience-insights/work-with-business-accounts.md
     - name: Duomenų šaltiniai
       items:
         - name: Duomenų šaltinių apžvalga
           href: audience-insights/data-sources.md
-        - name: 'Duomenų šaltinių įtraukimas, naudojant „Power Query“ jungtis'
+        - name: Duomenų šaltinių įtraukimas per Power Query jungtis
           href: audience-insights/connect-power-query.md
         - name: Pridėkite „Common Data Model“ aplanką kaip duomenų šaltinį
           href: audience-insights/connect-common-data-model.md
         - name: Įtraukite „Dataverse“ valdomą duomenų telkinį
           href: audience-insights/connect-dataverse-managed-lake.md
+        - name: „Azure Synapse Analytics“ įtraukimas
+          href: audience-insights/connect-synapse.md
+        - name: Duomenų šaltinių praturtinimas
+          href: audience-insights/data-sources-enrichment.md
         - name: Duomenų šaltinių papildantysis naujinimas
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Duomenų įtraukimas realiuoju laiku
@@ -66,22 +84,30 @@
           href: audience-insights/relationships.md
         - name: Peržiūrėkite kliento veiklas
           href: audience-insights/activities.md
+        - name: Nustatyti semantinius susiejimus
+          href: audience-insights/semantic-mappings.md
     - name: Duomenų papildymas
       items:
         - name: Papildyti klientų profilius
           href: audience-insights/enrichment-hub.md
-        - name: Prekės ženklų ir pomėgių panašumai
+        - name: Prekių ženklai ir pomėgiai
           href: audience-insights/enrichment-microsoft.md
         - name: Išplėstiniai adresai
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Išplėstiniai įmonės duomenys
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Papildykite su „Azure”„” žemėlapiais
           href: audience-insights/enrichment-azure-maps.md
         - name: Papildykite su „HERE Technologies“
           href: audience-insights/enrichment-here.md
         - name: Papildymas „Leadspace”
           href: audience-insights/enrichment-leadspace.md
+        - name: Praturtinkite "LiveRamp"
+          href: audience-insights/enrichment-liveramp.md
         - name: Praturtinkite su „Experian“
           href: audience-insights/enrichment-experian.md
+        - name: Office 365 Praturtinti duomenimis
+          href: audience-insights/enrichment-office.md
         - name: Papildykite su SFTP kliento importavimu
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmentai
@@ -100,8 +126,12 @@
           href: audience-insights/find-similar-customer-segments.md
     - name: Matavimai
       items:
-        - name: Apibrėžkite matus ir KPI
+        - name: Priemonių apžvalga
           href: audience-insights/measures.md
+        - name: Kurti naują matą
+          href: audience-insights/measure-builder.md
+        - name: Priemonės šablono naudojimas
+          href: audience-insights/measure-templates.md
     - name: Prognozės
       items:
         - name: Prognozuoti duomenis naudojant AI
@@ -114,8 +144,10 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Prenumeratos praradimo prognozavimas
               href: audience-insights/predict-subscription-churn.md
-            - name: Nuspėti perdavimo maišytuvą
+            - name: Nuspėti perdavimo praradimą
               href: audience-insights/predict-transactional-churn.md
+            - name: Analizuoti klientų atsiliepimų nuotaikas
+              href: audience-insights/sentiment-analysis.md
             - name: Naudoti „Azure“ mašininio mokymo pasirinktinius modelius
               href: audience-insights/custom-models.md
             - name: Užbaigti iš dalies trūkstamus duomenis
@@ -126,14 +158,12 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Pavyzdžio vedlys prenumeravimo maišytuvo nuspėjimui
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Pavyzdžio vedlys perdavimo maišytuvo nuspėjimui
+            - name: Operacijos praradimo prognozės vadovas
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Produkto rekomendacijų pavyzdžio prognozė
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Eksperimentai naudojant „Azure“ mašininį mokymą
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Eksperimentai su „Azure Machine Learning studio“
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: Prognozių valdymas
           href: audience-insights/manage-predictions.md
         - name: Segmentų kūrimas prognozių pagrindu
@@ -154,7 +184,7 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: „Azure Data Lake Storage Gen2“
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: „Azure Synapse Analytics“
+            - name: „Azure Synapse Analytics”
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
@@ -222,14 +252,16 @@
           href: audience-insights/connections.md
         - name: Valdykite kelias aplinkas
           href: audience-insights/manage-environments.md
-        - name: Susijungti su ADLS laikymo paskyra naudojant „Service Principal“
-          href: audience-insights/connect-service-principal.md
-        - name: Palaikomos kalbos
-          href: audience-insights/supported-languages.md
+        - name: Sauga
+          items:
+            - name: Papildykite patys „Key Vault“
+              href: audience-insights/use-azure-key-vault.md
+            - name: Susijungti su ADLS laikymo paskyra naudojant „Service Principal“
+              href: audience-insights/connect-service-principal.md
+            - name: Eksportuoti diagnostikos žurnalus
+              href: audience-insights/diagnostics.md
     - name: Išplėtimas
       items:
-        - name: Žiniatinklio duomenų integravimas iš įtraukimo įžvalgų
-          href: audience-insights/integrate-engagement-insights.md
         - name: Objektų schemų peržiūra „Common Data Model”
           href: audience-insights/entity-schemas.md
         - name: „Customer Insights“ duomenys „Dataverse” platformoje
@@ -238,83 +270,45 @@
           href: audience-insights/apis.md
         - name: API nuorodos
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Įtraukimo įžvalgos (peržiūros versija)
+- name: Sutikimo valdymas (peržiūra)
   items:
     - name: Pagalbos centras
-      href: engagement-insights/index.yml
-    - name: Apie įsitraukimo įžvalgas
-      href: engagement-insights/overview.md
+      href: consent-management/index.yml
+    - name: Galimybių apžvalga
+      href: consent-management/overview.md
     - name: Pradėti
       items:
-        - name: Greito pasirengimo darbui vadovas
-          href: engagement-insights/get-started.md
-        - name: Kurti darbo sritį
-          href: engagement-insights/create-workspace.md
-        - name: Užfiksuokite įvykius iš žiniatinklių ir mobiliųjų įrenginių programų
-          href: engagement-insights/developer-resources.md
+        - name: Pradėti
+          href: consent-management/get-started.md
         - name: Sąvokos ir terminologija
-          href: engagement-insights/glossary.md
-    - name: Renginiai
+          href: consent-management/glossary.md
+    - name: Importuoti sutikimo duomenis
       items:
-        - name: Kurti ir keisti įvykius
-          href: engagement-insights/refined-events.md
-        - name: Žiniatinklio įvykių atpažinimas iš anksčiau autentifikuotų lankytojų
-          href: engagement-insights/unknown-to-known.md
-        - name: Eksportuoti įvykius
-          href: engagement-insights/export-events.md
-    - name: Ataskaitos
+        - name: Importuoti sutikimo duomenis
+          href: consent-management/import-consent-data.md
+        - name: Sutikimo duomenų nustatymas ir sutikimo nuostatų taikymas
+          href: consent-management/set-consent-rules.md
+    - name: Tvarkyti sutikimo duomenis
       items:
-        - name: Peržiūrėti ataskaitas
-          href: engagement-insights/view-reports.md
-        - name: Kurti pasirinktines ataskaitas
-          href: engagement-insights/custom-reports.md
-        - name: Kurkite vieningas profilio ataskaitas
-          href: engagement-insights/profile-reports.md
-        - name: Peržiūrėti ir kurti dimensijas
-          href: engagement-insights/dimensions.md
-        - name: Peržiūrėti ir kurti metrikas
-          href: engagement-insights/metrics.md
-        - name: Peržiūrėti ir kurti segmentus
-          href: engagement-insights/segments.md
-    - name: Veiklos ciklo analizė
+        - name: Įgalinti sutikimo taisykles auditorijos įžvalgose
+          href: audience-insights/activate-consent.md
+        - name: Numatytųjų sutikimo taisyklių valdymas auditorijos įžvalgų segmentuose
+          href: audience-insights/change-default-consent-rules.md
+    - name: Tvarkyti parametrus ir vartotojus
       items:
-        - name: Piltuvėlio ataskaitų kūrimas ir valdymas
-          href: engagement-insights/funnel-reports.md
-    - name: Programų kūrėjo ištekliai
+        - name: Konfigūruoti sistemos parametrus
+          href: consent-management/system-settings.md
+        - name: Vartotojų ir teisių valdymas
+          href: consent-management/manage-users.md
+    - name: Sutikimo duomenų naudojimas
       items:
-        - name: Kūrėjo resursų apžvalga
-          href: engagement-insights/developer-resources.md
-        - name: Žiniatinklio SDK mokymo programa
-          href: engagement-insights/advanced-SDK-implementation.md
-        - name: Tinklo SDK pavyzdys
-          href: engagement-insights/websdk-sample.md
-        - name: „Android“ SDK mokymai
-          href: engagement-insights/get-started-android.md
-        - name: „Android“ SDK pavyzdys
-          href: engagement-insights/androidsdk-sample.md
-        - name: „iOS“ SDK mokymo priemonė
-          href: engagement-insights/get-started-ios.md
-        - name: „iOS SDK" pavyzdys
-          href: engagement-insights/iossdk-sample.md
-    - name: Administracija
-      items:
-        - name: Vaidmenys ir teisės
-          href: engagement-insights/user-roles.md
-        - name: Valdyti aplinkas ir darbo aplinkas
-          href: engagement-insights/manage-environments-workspaces.md
-        - name: Valdyti slapukus ir vartotojo leidimą
-          href: engagement-insights/user-consent-storage.md
-    - name: Regionoinis pasiekiamumas
-      href: engagement-insights/regional-availability.md
-- name: Bendrinti duomenis tarp galimybių
-  items:
-    - name: Susieti įtraukimo įžvalgas su auditorijos įžvalgomis
-      href: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - name: Naudokite auditorijų įžvalgų segmentus įtraukimo įžvalgų ataskaitose
-      href: engagement-insights/integrate-audience-insights-segments.md
-    - name: Naudokite demografinius matmenis elgsenos duomenims išskaidyti
-      href: engagement-insights/curate-dimensions.md
+        - name: Prognozių kūrimas su sutikimo duomenimis
+          href: consent-management/predictions-consent-data.md
+- name: Įtraukimo įžvalgos (peržiūros versija)
+  href: engagement-insights/overview.md
 - name: Paslaugų apribojimai
   href: service-limits.md
 - name: DSR teisės ir užklausos
   href: dsr-rights-requests.md
+- name: Gaukite pagalbą
+  href: /power-platform/admin/get-help-support

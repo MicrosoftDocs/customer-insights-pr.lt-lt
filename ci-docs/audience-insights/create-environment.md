@@ -1,21 +1,23 @@
 ---
 title: Kurti aplinkas „Customer Insights“
 description: Veiksmai, norint kurti aplinkas su licencijuota „Dynamics 365 Customer Insights“.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088123"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354105"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Kurti aplinką publikos auditorijos įžvalgose
 
@@ -76,12 +78,14 @@ Jei sukuriate kelias „Customer Insights“ aplinkas ir pasirenkate įrašyti i
    
 Šis **Microsoft Dataverse** veiksmas leidžia „Customer Insights“ susieti su „Dataverse“ aplinka.
 
-Jei norite [naudoti iš anksto anksto prognozė modelius](predictions-overview.md#out-of-box-models) konfigūruokite duomenų bendrinimą su „Dataverse“. Arba galite įjungti duomenų nurijimas iš vietinis šaltinių, pateikdami jūsų „Microsoft Dataverse“ organizacijos administruojami aplinkos URL. Pasirinkite **Įjungti duomenų bendrinimą**, jei „Customer Insights“ išvesties duomenis norite bendrinti su „Dataverse“ valdomu „Data Lake“.
+Pateikite savo Microsoft Dataverse aplinką duomenims (profiliams ir įžvalgoms) bendrinti su verslo programomis, pagrįstomis Dataverse, pvz., "Dynamics 365 Marketing" arba modeliu pagrįstomis programomis Power Apps. Palikite šį lauką tuščią, jei neturite savo Dataverse aplinkos ir mes jums jį pateiksime.
+
+Prisijungimas prie jūsų Dataverse aplinkos taip pat leidžia [valgyti duomenis iš vietinis duomenų šaltinių naudojant Power Platform duomenų srautus ir šliuzus](data-sources.md#add-data-from-on-premises-data-sources). Taip pat galite naudoti [prognozė modelius](predictions-overview.md?tabs=b2c#out-of-box-models) prisijungę prie Dataverse aplinkos.
 
 > [!IMPORTANT]
 > "Customer Insights" ir Dataverse turi būti tame pačiame regione, kad būtų galima bendrinti duomenis.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="duomenų bendrinimas su Microsoft Dataverse automatiniu įgalinimas neto naujiems egzemplioriams.":::
 
 > [!NOTE]
 > Jūsų „Customer Insights“ aplinkos konfigūracija nepalaiko šių duomenų bendrinimo scenarijų:

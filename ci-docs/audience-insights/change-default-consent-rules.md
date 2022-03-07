@@ -1,40 +1,54 @@
 ---
-title: Tvarkyti numatytąsias segmentų sutikimo taisykles
-description: Turėdami sutikimo valdymo galimybę, galite išjungti arba pakeisti numatytąsias sutikimo taisykles, jei yra įgalinti nepaisymai.
-ms.date: 10/30/2021
-ms.service: customer-insights
+title: Tvarkyti numatytąsias sutikimo taisykles segmentuose
+description: Naudodami sutikimo valdymo galimybę, galite išjungti arba pakeisti numatytąsias sutikimo taisykles, jei įjungtas nepaisymas.
+ms.date: 12/01/2021
 mms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 358ec05d0f7b5fe4ef15d65054b66eaaad301626
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
-ms.translationtype: HT
+ms.openlocfilehash: 4eae4da67fd4c6e70800f495ba30366d4fc9a0dd
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790732"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228949"
 ---
 # <a name="disable-or-change-default-consent-rules"></a>Numatytųjų sutikimo taisyklių išjungimas arba keitimas
 
-Jei jūsų organizacijos naudoja [sutikimo valdymo funkciją](../consent-management/overview.md) kartu su auditorijos įžvalgomis, [administratoriai gali taikyti](activate-consent.md) segmentų sutikimo taisykles. 
+Jei jūsų organizacijos naudoja sutikimo [valdymo galimybes](../consent-management/overview.md) kartu su auditorijos įžvalgomis, [administratoriai gali vykdyti segmentų sutikimo taisykles](activate-consent.md). 
 
-Su priverstinio sutikimo taisyklėmis segmento srityje kiekvienas segmentas informuoja apie sutikimo tikrinimo būklę ir taisykles. Jei nepaisoma, konkrečių segmentų numatytosios sutikimo taisyklės išjungiamos. Kiekvienas segmento kūrėjas į tą segmentą gali įtraukti daugiau sutikimo taisyklių. 
+Su vykdomuoju sutikimo taisyklėmis segmento srityje kiekvienas segmentas informuoja apie sutikimo patikrinimo būklę ir taisykles. Jei leidžiami nepaisysimai, tam tikruose segmentuose išjungiamos numatytosios sutikimo taisyklės. Kiekvienas segmento kūrėjas gali įtraukti daugiau sutikimo taisyklių, papildančių numatytasias taisykles segmentui. 
 
-:::image type="content" source="../consent-management/media/consent-rules-segment.png" alt-text="Segmentų daryklė su sutikimo taisyklės parinktimis.":::
+## <a name="for-administrators"></a>Administratoriams
+
+:::image type="content" source="../consent-management/media/consent-rules-segment.png" alt-text="Segmento generatorius su sutikimo taisyklės parinktimis.":::
 
 **Norėdami išjungti numatytąsias sutikimo taisykles:**
 
-1. **Pranešime Sutikimo taisyklės** pasirinkite Žiūrėti išsamią informaciją **·**. 
+1. **Pranešime apie sutikimo taisykles** pasirinkite **Peržiūrėti išsamią informaciją**. 
 
-1. Nustatykite **numatytuosius sutikimo taisyklių** perjungimo į **Išjungta**.
+1. Nustatykite numatytasis **sutikimo taisykles** perjungti į **Išjungta**.
 
-**Norėdami įtraukti daugiau sutikimo taisyklių:**
+**Norėdami pridėti daugiau sutikimo taisyklių:**
 
-1. **Pranešime Sutikimo taisyklės** pasirinkite Žiūrėti išsamią informaciją **·**. 
+1. **Pranešime apie sutikimo taisykles** pasirinkite **Peržiūrėti išsamią informaciją**. 
 
-1. **Išplečiamajame** sąraše Sutikimo duomenų tipo pasirinkimas pasirinkite Įtraukti sutikimo taisykles ir pasirinkite **sutikimo** taisyklę.
+1. Pasirinkite **Įtraukti sutikimo taisykles** ir išplečiamajame išplečiamajame meniu Pasirinkti sutikimo duomenų tipą **pasirinkite** sutikimo taisyklę.
 
-1. Pasirinkite **·** Įrašyti, kad segmentui pritaikytumėte naują taisyklę.
+1. Pasirinkite **Įrašyti**, kad segmentui taikytumėte naują taisyklę.
+
+## <a name="for-contributors"></a>Bendraautoriai
+
+Norėdami sukurti segmentą be priverstinio sutikimo taisyklių, turite dirbti su administratoriumi, kad išjungtumėte juos savo segmente. Tačiau galite pridėti savo sutikimo taisykles prie segmentų, kuriuos valdote ir valdote.
+
+Tai trijų žingsnių procesas: 
+1. [Sukurkite segmentą](segments.md) auditorijos įžvalgose ir įrašykite jį. 
+
+1. Bendrinkite segmento pavadinimą su administratoriumi ir paprašykite, kad jis įgalintų [segmento](activate-consent.md) nepaisus. 
+
+1. Vėl atidarykite segmentus. **Pranešime apie sutikimo taisykles** pasirinkite **Peržiūrėti išsamią informaciją** ir įtraukti norimas taikyti sutikimo taisykles. **Tada įrašykite** ir **paleiskite** savo segmentą.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

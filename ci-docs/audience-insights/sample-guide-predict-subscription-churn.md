@@ -3,26 +3,28 @@ title: Prenumeratos atsisakymo prognozės pavyzdžio vedlys
 description: Naudokite šį pavyzdžio vedlį tam, kad bandytumėte nestandartinį prenumeravimo atsisakymo prognozės modelį.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306313"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355623"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Prenumeravimo atsisakymo prognozės (peržiūros) pavyzdžio vedlys
+# <a name="subscription-churn-prediction-sample-guide"></a>Prenumeratos atsisakymo prognozės pavyzdžio vedlys
 
 Praeisime kartu pro prenumeravimo nutraukimo prognozės pavyzdį nuo pradžios iki galo naudodami toliau pateiktus pavyzdžio duomenis. 
 
 ## <a name="scenario"></a>Scenarijus
 
-„Contoso” yra įmonė, kurianti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda savo „Contoso Coffee” svetainėje. Jie neseniai pradėjo prenumeravimo verslą savo klientams tam, kad jie reguliariai gautų kavos. Jų tikslas yra suprasti, kurie prenumeruojantys klientai gali atšaukti savo prenumeratą per kelis ateinančius mėnesius. Žinojimas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.
+„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jie neseniai pradėjo prenumeravimo verslą savo klientams tam, kad jie reguliariai gautų kavos. Jų tikslas yra suprasti, kurie prenumeruojantys klientai gali atšaukti savo prenumeratą per kelis ateinančius mėnesius. Žinojimas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -31,7 +33,7 @@ Praeisime kartu pro prenumeravimo nutraukimo prognozės pavyzdį nuo pradžios i
 
 ## <a name="task-1---ingest-data"></a>Užduotis 1 - Duomenų vartojimas
 
-Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [importuoti duomenų šaltinius naudojant „Power Query“ jungtis](connect-power-query.md) konkrečiai. Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės. 
+Peržiūrėkite straipsnius [apie duomenų nurijimas](data-sources.md) ir [duomenų šaltinių importavimą naudojant Power Query konkrečiai jungtis](connect-power-query.md). Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Kliento duomenų naudojimas iš e-komercijos platformos
 
@@ -168,7 +170,7 @@ Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** pro
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Užduotis 3 - Konfigūruoti prenumeravimo nutraukimo prognozę
 
-Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravimo nutraukimo prognozę. Išsamiems žingsniams, žr. [Prenumeravimo nutraukimo prognozė (peržiūra)](predict-subscription-churn.md) straipsnį. 
+Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravimo nutraukimo prognozę. Išsamius veiksmus rasite [straipsnyje Prenumerata prognozė](predict-subscription-churn.md). 
 
 1. Eikite į **Įžvalga** > **Atrasti** ir pasirinkite norėdami naudoti **Kliento nutraukimo modelį**.
 

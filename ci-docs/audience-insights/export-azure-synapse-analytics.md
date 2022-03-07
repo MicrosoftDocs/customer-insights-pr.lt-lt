@@ -1,22 +1,21 @@
 ---
-title: „Customer Insights“ duomenų eksportavimas į „Azure Synapse Analytics“
-description: Sužinokite, kaip sukonfigūruoti ryšį į „Azure Synapse Analytics”.
-ms.date: 04/12/2021
+title: "\"Customer Insights\" duomenų eksportavimas į Azure Synapse Analytics"
+description: Sužinokite, kaip konfigūruoti ryšį su Azure Synapse Analytics.
+ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
-ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
-ms.translationtype: HT
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "6327374"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231322"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Duomenų eksportavimas į „Azure Synapse Analytics” (Peržiūros versija)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Duomenų eksportavimas į Azure Synapse Analytics (Peržiūra)
 
 „Azure Synapse” yra analizės tarnyba, kuri paspartina duomenų sandėlių ir didelių duomenų sistemų įžvalgų atlikimo laiką. Galite įtraukti ir naudoti savo „Customer Insights” duomenis [„Azure Synapse](/azure/synapse-analytics/overview-what-is) tarnyboje.
 
@@ -49,9 +48,11 @@ Turite atitikti toliau pateiktas būtinąsias sąlygas, kad sukonfigūruotumėte
 
 ### <a name="configure-a-connection"></a>Ryšio konfigūravimas
 
+Norint sukurti ryšį, "Customer Insights" aptarnavimo vadovui ir vartotojo abonementui reikia **reader** teisių *išteklių grupėje*, kurioje yra "Synapse Analytics" darbo sritis. Be to, paslaugos vadovui ir "Synapse Analytics" darbo srities vartotojui reikia **"Synapse Administrator** " teisių. 
+
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Įtraukti ryšį** ir **„Azure Synapse Analytics”** arba pasirinkite **Nustatyti** plytelėje **„Azure Synapse Analytics”**, kad sukonfigūruotumėte ryšį.
+1. Pasirinkite **Įtraukti ryšį** ir pasirinkite **Azure Synapse Analytics** arba pasirinkite **Nustatyti** plytelėje, **Azure Synapse Analytics** kad sukonfigūruotumėte ryšį.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje Rodyti pavadinimą. Ryšio pavadinimas ir tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
@@ -63,17 +64,17 @@ Turite atitikti toliau pateiktas būtinąsias sąlygas, kad sukonfigūruotumėte
 
 ### <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos rasite [eksportavimo konfigūravimui reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Norėdami konfigūruoti eksportavimą naudojant bendrai naudojamą ryšį, programoje "Customer Insights" reikia bent jau **bendraautorių** teisių. Daugiau informacijos rasite [eksportavimo konfigūravimui reikalingi leidimai](export-destinations.md#set-up-a-new-export).
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
 1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti eksportavimą**.
 
-1. Lauke **Ryšys eksportavimui** pasirinkite ryšį iš **„Azure Synapse Analytics”** skyriaus. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo [ryšių](connections.md).
+1. **Lauke Ryšys eksportavimui** pasirinkite ryšį iš sekcijos **Azure Synapse Analytics**. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo [ryšių](connections.md).
 
 1. Savo eksportavimui pateikite atpažįstamą **Rodomą pavadinimą** ir **Duomenų bazės pavadinimą**.
 
-1. Pasirinkite objektus, kuriuos norite eksportuoti į „Azure Synapse Analytics”.
+1. Pasirinkite, į kuriuos objektus norite eksportuoti Azure Synapse Analytics.
    > [!NOTE]
    > Duomenų šaltiniai, pagrįsti [„Common Data Model” aplanku](connect-common-data-model.md) nėra palaikomi.
 
@@ -82,6 +83,8 @@ Turite atitikti toliau pateiktas būtinąsias sąlygas, kad sukonfigūruotumėte
 Eksportavimo įrašymas eksportavimo iš karto nevykdo.
 
 Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand).
+
+Norėdami pateikti užklausą duomenims, kurie buvo eksportuoti į "Synapse Analytics", reikia **saugyklos Blob duomenų skaitytuvo** prieigos prie paskirties saugyklos eksporto darbo srityje. 
 
 ### <a name="update-an-export"></a>Eksportavimo naujinimas
 

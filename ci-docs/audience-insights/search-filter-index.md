@@ -3,22 +3,24 @@ title: Ieškokite ir filtruokite kliento profilius
 description: Greitai raskite vieningų klientų profilių informaciją ir filtruokite nurodytus atributus.
 ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732044"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354519"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Klientų profiliai: ieškos ir filtro rodyklė
 
-Kliento duomenų suvienodinimo rezultatas yra kliento profilio objektas, kuris jūsų bendroje klientų bazėje teikia vieningą rodinį. Norėdami greitai [rasti informaciją apie tam tikrą klientą arba klientų grupę](customer-profiles.md), galite sukonfigūruoti [ieškos](customer-profiles.md) ir [filtro](customer-profiles.md) galimybes [klientų](customer-profiles.md) puslapyje. Skaitydami toliau sužinosite, kaip administratoriai gali redaguoti **ieškos ir filtrų rodyklės** puslapyje esančius atributus, pasiekiamus norint ieškoti ir filtruoti.
+Kliento duomenų suvienodinimo rezultatas yra kliento profilio objektas, kuris jūsų bendroje klientų bazėje teikia vieningą rodinį. Norėdami greitai [rasti informaciją apie tam tikrą klientą arba klientų grupę](customer-profiles.md), galite sukonfigūruoti **ieškos** ir **filtro** galimybes **klientų** puslapyje. Skaitydami toliau sužinosite, kaip administratoriai gali redaguoti **ieškos ir filtrų rodyklės** puslapyje esančius atributus, pasiekiamus norint ieškoti ir filtruoti.
 
    :::image type="content" source="media/search-filter.png" alt-text="Ieškos filtras":::
 

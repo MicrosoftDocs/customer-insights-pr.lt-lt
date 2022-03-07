@@ -1,24 +1,28 @@
 ---
 title: Visos duomenų dalys naudojančios prognozes
 description: Naudokite prognozes tam, kad užpildytumėte nepilnus kliento duomenis.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692537"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354013"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Dalinių duomenų papildymas naudojant prognozes
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Užpildykite dalinius duomenis prognozėmis (nebenaudojami)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Ši funkcija bus **nebenaudojama** nuo **2021 m. lapkričio 5 d**. Dabartiniai diegimai veiks tol, kol funkcija bus pašalinta, tačiau negalėsite kurti naujų integracijų naudodami toliau pateiktas instrukcijas.
 
 Prognozės leidžia lengvai kurti numatomas reikšmes, kurios gali pagerinti jūsų nusimanymą apie klientą. **Protingumas** > **Prognozės** puslapyje galite pasirinkti **Mano prognozės** tam, kad matytumėte prognozes, kurias sukonfigūravote kitose publikos įžvalgų dalyse ir leistumėte sau toliau jas tinkinti.
 
@@ -35,7 +39,7 @@ Tam, kad jūsų organizacija galėtų naudoti prognozių funkciją, įsitikinkit
 
 2. Jūsų auditorijos įžvalgų aplinka pridedama prie jūsų „Dataverse” egzemplioriaus.
 
-Jei [kuriate naują aplinką](get-started-paid.md), sukonfigūruokite ją dialogo lange **Kurti aplinką** ir pasirinkite **Išsamiau**. Jei jau sukūrėte aplinką, pereikite prie jos parametrų ir pasirinkite **Išsamiau**. Bet kuriuo būdu, **Naudoti prognozes** skyriuje eikite į „Dataverse“ elemento URL, prie kurio norite pridėti savo aplinką.
+Daugiau informacijos žiūrėkite [Naujos aplinkos kūrimas](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Sukurkite prognozę kliento objekte
 
@@ -60,6 +64,8 @@ Jei [kuriate naują aplinką](get-started-paid.md), sukonfigūruokite ją dialog
    > ![Lauko reikšmių, susietų į kategorijas, pavyzdys.](media/intelligence-categorymapping.png "Lauko reikšmių, susietų į kategorijas, pavyzdys")
 
 8. Pažymėkite **Atlikta** ir prognozė bus apdorota. Atsižvelgiant į duomenų dydį ir sudėtingumą, apdorojimas užtruks šiek tiek laiko. Rezultatai bus prieinami naujame objekte pagal sukurtos prognozės **išvesties objekto pavadinimą**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Prognozės kūrimas kuriant segmentą
 
@@ -110,7 +116,7 @@ Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus se
 
 ## <a name="edit-a-prediction"></a>Prognozės redagavimas
 
-Sukūrę prognozę, modelį galite tinkinti programoje „AI Builder“, kad padidintumėte modelio efektyvumą.  
+Sukūrę prognozė, galite tinkinti modelį, AI Builder kad padidintumėte modelio efektyvumą.  
 
 1. Publikos įžvalgose, eikite į **Protingumas** > **Prognozės** > **Mano prognozės**.
 
@@ -118,14 +124,14 @@ Sukūrę prognozę, modelį galite tinkinti programoje „AI Builder“, kad pad
 
 3. Pažymėkite elipsę stulpelyje **Veiksmai** ir pasirinkite **Peržiūrėti**.
 
-4. Pasirinkite **Tinkinti programoje „AI Builder“**.
+4. Pasirinkite **Tinkinti AI Builder**.
 
-5. Atnaujinkite modelį programoje „AI Builder“. [Sužinokite daugiau apie modelių valdymą programoje „AI Builder“](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Atnaujinkite savo modelį AI Builder. [Sužinokite daugiau apie modelių valdymą programoje „AI Builder“](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Kitame jūsų prognozės vykdyme bus naudojamas jūsų sukurtas atnaujintas modelis.
 
 > [!NOTE]
-> Nauji „AI Builder“ sukurti modeliai nebus rodomi publikos įžvalgos, nebent modelis buvo sukurtas iš toliau nurodytos patirties.
+> Nauji modeliai, sukurti naudojant AI Builder, nebus rodomi auditorijos įžvalgose, nebent modelis buvo sukurtas iš pirmiau išvardytų funkcijų.
 
 ## <a name="remove-a-prediction"></a>Prognozės pašalinimas
 

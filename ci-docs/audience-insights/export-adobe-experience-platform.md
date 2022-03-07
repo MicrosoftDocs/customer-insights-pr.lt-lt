@@ -3,18 +3,17 @@ title: "\"Customer Insights\" duomenų eksportavimas į Adobe Experience Platfor
 description: Sužinokite, kaip naudoti auditorijų įžvalgų segmentus naudojant "Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 9010af3c42823ce0dd8685bf71c109aef8d3f635
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032127"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227722"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>„Customer Insights“ segmentų naudojimas Adobe Experience Platform (peržiūra)
 
@@ -130,4 +129,4 @@ Sužinokite, kaip [naudoti segmento kurimo įrankį](https://experienceleague.ad
 
 Sukurkite el. pašto turinį ir tada [išbandykite ir išsiųskite](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) jūsų el. laišką.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="El. laiško su atnaujinimo pasiūlymu iš Adobe Campaign Standard" pavyzdys.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="El. laiško su atnaujinimo pasiūlymu iš Adobe Campaign Standard pavyzdys.":::

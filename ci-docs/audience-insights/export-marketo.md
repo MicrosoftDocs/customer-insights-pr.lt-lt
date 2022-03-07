@@ -1,76 +1,85 @@
 ---
 title: Eksportuoti „Customer Insights“ duomenis į „Marketo“
-description: Sužinokite, kaip konfigūruoti jungtį su „Marketo“.
-ms.date: 11/12/2020
-ms.reviewer: philk
-ms.service: customer-insights
+description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Marketo“.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 34ccee2894f1f2b552d0c6a88a6810e2dfc677a3
-ms.sourcegitcommit: 0b1d3ca11b8ba362a959da0eea15c37e9cdba084
-ms.translationtype: HT
+ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "4570413"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232001"
 ---
-# <a name="connector-for-marketo-preview"></a>Jungtis „Marketo“ (peržiūra)
+# <a name="export-segments-to-marketo-preview"></a>Segmentų eksportavimas į „Marketo“ (peržiūra)
 
 Eksportuokite suvienodintų klientų profilio segmentus siekiant sugeneruoti kampanijas, pateikti el. pašto reklamavimą ir naudoti konkrečias klientų grupes su „Marketo“.
 
-## <a name="prerequisites"></a>Būtinosios sąlygos
+## <a name="prerequisites-for-connection"></a>Būtinosios ryšio sąlygos
 
 -   Turite [„Marketo“ paskyrą](https://login.marketo.com/) ir atitinkančius administratoriaus prisijungimo duomenis.
 -   Yra esančių sąrašų „Marketo“ ir atitinkamų ID. Dėl daugiau informacijos, žr. [„Marketo“ sąrašus](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 -   Turite [konfigūruoti segmentus](segments.md).
 -   Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
-## <a name="connect-to-marketo"></a>Prisijunkite prie „Marketo“
+## <a name="known-limitations"></a>Žinomi apribojimai
 
-1. Eikite į **Administratorius** > **Eksportavimo paskirties vietos**.
+- Iki 1 milijono klientų profilių viename eksportavime į „Marketo".
+- Eksportavimas į „Marketo“ yra apribotas segmentais.
+- Iš viso 1 milijono klientų profilių segmentų eksportavimas gali trukti iki 3 valandų. 
+- Klientų profilių, kuriuos galite eksportuoti į „Marketo“, skaičius priklauso ir yra apribotas pagal sutartį su „Marketo“.
 
-1. Skyriuje **„Marketo“** pasirinkite **Nustatyti**.
+## <a name="set-up-connection-to-marketo"></a>Ryšio su „Marketo“ sąranka
 
-1. Nurodykite atpažįstamą eksportavimo paskirties vietos pavadinimą lauke **Rodomas pavadinimas**.
+1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Įveskite savo **[„Marketo“ kliento ID, Kliento saugų ir REST galutinio taško šeimininko pavadinimą](https://developers.marketo.com/rest-api/authentication/)**.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„Marketo“**, kad sukonfigūruotumėte ryšį.
 
-1. Įveskite savo **[„Marketo“ sąrašo ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
-1. Pasirinkite **Sutikti** siekiant patvirtinti **Duomenų privatumą ir atitiktį** ir pasirinkite **Sujungti** siekiant pradėti jungį su „Marketo“.
+1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Įveskite savo **[„Marketo“ kliento ID, kliento slapyvardį ir REST galutinio taško pagrindinio kompiuterio pavadinimą](https://developers.marketo.com/rest-api/authentication/)**. REST galinio punkto pagrindinio kompiuterio vardas yra tik pagrindinio kompiuterio vardas be `https://`. Pavyzdys:`xyz-abc-123.mktorest.com`. 
+
+1. Pasirinkite **Sutikti** siekiant patvirtinti **Duomenų privatumą ir atitiktį** ir pasirinkite **Sujungti** siekiant pradėti ryšį su „Marketo“.
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
-   :::image type="content" source="media/export-connect-marketo.png" alt-text="Eksportuoti momentinę nuotrauką „Marketo“ jungčiai":::
+1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį.
 
-1. Norėdami konfigūruoti eksportavimą, pasirinkite **Toliau**.
+## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-## <a name="configure-the-connector"></a>Jungties konfigūravimas
+Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
 
-1. **Duomenų atitikties** skyriuje **El. pašto** laukelyje, pasirinkite laukelį jūsų suvienodintame kliento profilyje, kuris rodo kliento el. pašto adresą. 
+1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Pasirinktinai, galite eksportuoti **Vardą**, **Pavardę**, **Miestą**, **Valstiją** ir **Šalį/Regioną**  kaip papildomus laukelius siekiant sukurti labiau suasmenintus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
+1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Marketo“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
+
+1. Įveskite savo **[„Marketo“ sąrašo ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. Sąrašo ID yra grynai skaitinė vertė. Pavyzdžiui, jei jūsų „Marketo” sąrašo ID yra ST12345A7, pašalinkite neskaitinius simbolius ir įveskite `12345`. 
+
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. 
+
+1. Taip pat galite eksportuoti **vardą**, **pavardę**, **miestą**, **valstiją** ir **šalį / regioną**, jei norite sukurti labiau personalizuotus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. Galite eksportuoti iki 1 milijono kliento profilių bendrai į „Marketo“.
 
-   :::image type="content" source="media/export-segment-marketo.png" alt-text="Pasirinkite laukelius ir segmentus eksportavimui į „Marketo“":::
-
 1. Pasirinkite **Įrašyti**.
 
-## <a name="export-the-data"></a>Duomenų eksportavimas
+Eksportavimo įrašymas eksportavimo iš karto nevykdo.
 
-Galite [eksportuoti duomenis pareikalavus](export-destinations.md). Eksportavimas taip pat bus vykdomas per kiekvieną [suplanuotą naujinimą](system.md#schedule-tab). „Marketo“ galite dabar surasti savo segmentus skyriuje [„Marketo“ sąrašus](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). „Marketo“ galite dabar surasti savo segmentus skyriuje [„Marketo“ sąrašus](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
-## <a name="known-limitations"></a>Žinomi apribojimai
-
-- Iki 1 milijono profilių vieno eksportavimo metu į „Marketo“.
-- Eksportavimas į „Marketo“ yra apribotas segmentais.
-- Eksportuojant segmentus su bendrai 1 milijonu profilių gali užimti iki 3 valandų. 
-- Profilių skaičius, kurį galite eksportuoti į „Marketo“ priklauso ir yra apribojtas jūsų sutartimi su „Marketo“.
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
-Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Marketo“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Marketo“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įpareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
+Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Marketo“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Marketo“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -3,18 +3,17 @@ title: „Customer Insights“ duomenų eksportavimas į "Adobe Campaign Standar
 description: Sužinokite, kaip naudoti auditorijų įžvalgų segmentus naudojant "Adobe Campaign Standard".
 ms.date: 03/29/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d301b4f0cb875303fb3d373b77177acd1c1f5219cd6f23c2a1d29ce67a222eab
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 6b90ee53236fdd601ecdfd8e6117a15269a08084
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032173"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227768"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>„Customer Insights“ segmentų naudojimas „Adobe Campaign Standard“ (peržiūra)
 
@@ -140,4 +139,4 @@ Kai duomenys importuoti į Adobe Campaign Standard, jūs [galite sukurti darbo e
 
 Sukurkite el. pašto turinį ir tada [išbandykite ir išsiųskite](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) jūsų el. laišką.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="El. laiško su atnaujinimo pasiūlymu iš Adobe Campaign Standard" pavyzdys.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="El. laiško su atnaujinimo pasiūlymu iš Adobe Campaign Standard pavyzdys.":::

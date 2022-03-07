@@ -1,92 +1,29 @@
 ### YamlMime:Landing
-title: Įtraukimo įžvalgų pajėgumas „Dynamics 365 Customer Insights” (peržiūros versija)
-summary: Rinkti duomenis apie jūsų susekamus duomenis. Interaktyviai suprasti bendravimą su klientais ir naudojimą jūsų svetainėse. Naudodami gilų įtraukimo įžvalgų ir auditorijos įžvalgų integravimą, savo elgsenos realiuoju laiku analizę papildyti klientų profilio ataskaitomis. Praturtinkite klientų profilius naudodami žiniatinklio veiklas, kad realiuoju laiku būtų galima naudoti svarbius klientų duomenis. Pakeiskite savo verslą, kad iš klientų duomenų tiesiogiai gautų naudos.
+title: Įtraukimo įžvalgų peržiūra baigiasi
+summary: Dynamics 365 Customer Insights Įtraukimo įžvalgų pajėgumų peržiūra baigėsi 2022 m. vasario 15 d. Šis pakeitimas reiškia, kad "Customer Insights" bandomoji patirtis nebeįeina galimybės kurti piltuvų ar kitų ataskaitų funkcijų. Kviečiame ištirti ir įvertinti daugelį kitų "Customer Insights", "Microsoft" klientų duomenų platformos (CDP), funkcijų. Jei kyla klausimų dėl galimybės peržiūros pabaigos, kreipkitės tiesiogiai į savo Microsoft abonemento komandą. Jūsų paskyros komanda jus rengs naujausiais paleidimais. Dėkojame!
 metadata:
   title: Įtraukimo įžvalgų (peržiūros versijos) dokumentacija
   description: Pagalbos telkinys su pagrindiniais įtraukimo įžvalgų saitais.
-  ms.service: customer-insights
   ms.subservice: engagement-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
   ms.date: 09/15/2021
-  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
-  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-  ms.translationtype: HT
+  ms.openlocfilehash: 99933c69c791da12815ebee3edb6413276b19b09
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.translationtype: MT
   ms.contentlocale: lt-LT
-  ms.lasthandoff: 09/15/2021
-  ms.locfileid: "7494194"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350509"
 landingContent:
-- title: Apie
+- title: Palaikykite ryšį
   linkLists:
   - linkListType: overview
     links:
-    - text: Pajėgumo pranašumai
-      url: overview.md
-    - text: Terminų žodynas
-      url: glossary.md
-    - text: Naujos ir atnaujintos funkcijos
-      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
-- title: Parengimas
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Pradėti
-      url: get-started.md
-    - text: Kurti darbo sritį
-      url: create-workspace.md
-    - text: Savo interneto svetainėje talpinkite instrumentus
-      url: instrument-website.md
-- title: Ataskaitos peržiūra ir filtravimas
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Peržiūrėti ataskaitas
-      url: view-reports.md
-    - text: Peržiūrėti suvienodintą profilių ataskaitą
-      url: profile-reports.md
-    - text: Naudoti auditorijos segmentus ataskaitoms filtruoti
-      url: integrate-audience-insights-segments.md
-- title: Analizuoti
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Kurti tunelio ataskaitas
-      url: funnel-reports.md
-    - text: Analizuoti elgsenos duomenis
-      url: curate-dimensions.md
-    - text: Kurti pasirinktines ataskaitas
-      url: custom-reports.md
-    - text: Kurti patikslintus įvykius
-      url: refined-events.md
-    - text: Eksportuoti įvykius
-      url: export-events.md
-- title: Kūrėjo ištekliai
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Kūrėjo ištekliai
-      url: developer-resources.md
-    - text: WebSDK pavyzdys
-      url: websdk-sample.md
-    - text: Išplėstiniai žiniatinklio SDK scenarijai
-      url: advanced-SDK-implementation.md
-    - text: „Android“ SDK pavyzdys
-      url: get-started-android.md
-    - text: „iOS SDK" pavyzdys
-      url: get-started-ios.md
-- title: Administracija
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Valdyti aplinkas ir darbo aplinkas
-      url: manage-environments-workspaces.md
-    - text: Prisijungti prie auditorijos įžvalgų
-      url: integrate-audience-insights-engagement-insights.md
-    - text: Valdyti slapukus ir vartotojo leidimą
-      url: user-consent-storage.md
-    - text: Panaikinti ir eksportuoti asmenis duomenis
-      url: delete-export-personal-data.md
-    - text: Paslaugų apribojimai
-      url: ../service-limits.md
+    - text: Prisijunkite prie „Dynamics 365“ bendruomenės
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Bendrinkite savo idėjas
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Pranešti apie problemą
+      url: https://go.microsoft.com/fwlink/?linkid=2079641

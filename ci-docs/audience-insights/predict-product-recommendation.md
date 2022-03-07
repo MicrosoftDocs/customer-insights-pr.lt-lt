@@ -1,22 +1,21 @@
 ---
 title: Produkto rekomendacijos prognozė
 description: Prognozuojami produktai, kuriuos klientas gali įsigyti arba su jais bendrauti.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494549"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355761"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Produkto rekomendacijos prognozė (apžvalga)
+# <a name="product-recommendation-prediction"></a>Produkto rekomendacijos prognozė
 
 Produktų rekomendacijų modelis sukuria prognozuojamų produktų rekomendacijų rinkinius. Rekomendacijos pagrįstos ankstesniu pirkimo elgsena ir klientais, kurie turi panašius pirkimo modelius. Puslapyje prognozės galite kurti naujas prognozes **Įžvalgos** > **Prognozių** puslapyje. Norėdami pamatyti kitas jūsų sukurtas prognozes pasirinkite **Mano prognozės**.
 
@@ -54,7 +53,7 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 
 > [!NOTE]
 > - Modeliui reikia jūsų klientų sandorių istorijos. Sandorio apibrėžtis yra gana lanksti. Bet kokie duomenys, apibūdinays naudotojo ir produkto sąveiką, gali veikti kaip įvestis. Pavyzdžiui, produkto įsigijimas, dalyvavimas pamokoje ar renginyje.
-> - Vienu metu galima sukonfigūruoti tik vieną sandorio istorijos objektą. Jei yra keli pirkimo objektai, sujunkite juos prieš panaikindami „Power Query“ duomenis.
+> - Vienu metu galima sukonfigūruoti tik vieną sandorio istorijos objektą. Jei yra keli pirkimo objektai, sujungkite Power Query juos prieš nurijus duomenis.
 > - Jei užsakymas ir užsakymo duomenys yra skirtingi objektai, prieš naudodami modelį juos sujunkite. Modelis objekte neveikia tik su užsakymo ID ar gavimo ID.
 
 
@@ -62,7 +61,7 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 
 1. Programoje „Customer Insights” eikite į **Įžvalga** > **Prognozės**.
 
-1. Rinkitės **Produkto rekomendacijų modelis (peržiūra)** plytelę ir rinkitės **Naudoti šį** modelį.
+1. Pasirinkite plytelę **Produkto rekomendacijos ir** pasirinkite **Naudoti šį modelį**.
    > [!div class="mx-imgBorder"]
    > ![Produkto rekomendacijų modelio plytelė su mygtuku Naudoti šį modelį.](media/product-recommendation-usethismodel.PNG "Produkto rekomendacijų modelio plytelė su mygtuku Naudoti šį modelį")
 
@@ -79,11 +78,11 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 1. Nustatykite **Produktų skaičių,** kurį norite rekomenduoti klientui. Ši reikšmė priklauso nuo to, kaip pristatymo metodas užpildo duomenis. Jei galite rekomenduojate tris produktus, atitinkamai nustatykite šią reikšmę.
    
    >[!TIP]
-   > **Įrašyti ir uždaryti** galite pasirinkti bet kuriuo metu, kad prognozė būtų išsaugota kaip juodraštis. Straipsnio juodraštį rasite prognozėje **Mano prognozės** skirtuke.
+   > Norėdami įrašyti prognozė kaip juodraštį, bet kuriuo metu galite pasirinkti **Įrašyti juodraštį**. Straipsnio juodraštį rasite prognozėje **Mano prognozės** skirtuke.
 
-1. Pasirinkite, jei norite **Siūlyti klientų neseniai įsigytus produktus**.
+1. Pasirinkite, ar norite įtraukti produktus, kuriuos pirkėjai neseniai įsigijo į lauką **Pakartotiniai numatomi** pirkimai.
 
-1. Jei pasirinkote *nerekomenduoti* neseniai įsigytų produktų, nustatykite langą **Peržiūrėti atgal**. Šis parametras nurodo laikotarpį, kurį modelis atsižvelgia prieš rekomenduodamas produktą vartotojui dar kartą. Pavyzdžiui, nurodykite, kad klientas perka nešiojamąjį kompiuterį kas dvejus metus. Šiame lange peržiūrėkite paskutinių dviejų metų pirkimo istoriją, o radus prekę ji bus filtruojama iš rekomendacijų.
+1. Nustatykite **langą** Žiūrėti atgal. Šis parametras nurodo laikotarpį, kurį modelis atsižvelgia prieš rekomenduodamas produktą vartotojui dar kartą. Pavyzdžiui, nurodykite, kad klientas perka nešiojamąjį kompiuterį kas dvejus metus. Šiame lange peržiūrėkite paskutinių dviejų metų pirkimo istoriją, o radus prekę ji bus filtruojama iš rekomendacijų.
 
 1. Pasirinkti **Toliau**
 

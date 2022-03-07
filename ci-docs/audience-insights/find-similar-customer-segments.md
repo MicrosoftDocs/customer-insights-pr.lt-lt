@@ -1,24 +1,29 @@
 ---
-title: Suraskite panašius klientus su „AI“
+title: Panašių klientų radimas naudojant DI (yra vaizdo įrašas)
 description: Raskite panašių klientų segmentų, naudodami dirbtinį intelektą.
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034553"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355255"
 ---
 # <a name="similar-customers-preview"></a>Panašūs klientai (peržiūros versija)
 
 Naudodamiesi šia funkcija, klientų bazėje rasite panašių klientų, naudodami dirbtinį intelektą. Norint naudotis šia funkcija, būtina sukurti bent vieną segmentą. Išplėtus esamo segmento kriterijus, bus lengviau rasti klientų, panašių į tą segmentą.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > Naudojant funkciją *Panašių klientų radimas*, taikomos automatinės priemonės duomenims įvertinti ir prognozėms pateikti remiantis minėtais duomenimis, todėl šią funkciją galima naudoti kaip profiliavimo metodą, apibrėžtą Bendrajame duomenų apsaugos reglamente („BDAR“). Jei klientas naudoja šią funkciją apdoroti duomenims, gali būti taikomi BDAR arba kiti įstatymai ir kiti teisės aktai. Esate atsakingas už užtikrinimą, kad naudojate „Dynamics 365 Customer Insights“, įskaitant prognozes, atitikimą su visais taikomais teisės aktais ir reglamentais, įskaitant teisės aktus susijusius su privatumu, asmens duomenimis, biometriniais duomenimis, duomenų apsauga ir bendravimo konfidencialumu.

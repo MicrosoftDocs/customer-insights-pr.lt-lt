@@ -3,20 +3,24 @@ title: Kliento gyvavimo ciklo (CLV) vertės prognozė
 description: Prognozuojamas aktyvių klientų pajamų potencialas ateityje.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035379"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355799"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Kliento gyvavimo ciklo vertės (CLV) prognozė (Apžvalga)
+# <a name="customer-lifetime-value-clv-prediction"></a>Kliento gyvavimo ciklo (CLV) vertės prognozė
 
 Prognozuojama potenciali reikšmė (pajamos), kurią atskiri aktyvūs klientai įves į jūsų verslą per apibrėžtą būsimą laikotarpį. Ši funkcija gali padėti pasiekti įvairius tikslus: 
 - Nustatykite didelės vertės klientus ir apdorokite šią įžvalgą
@@ -65,7 +69,7 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
     - Duomenų išbaigtumas: mažiau nei 20 % trūkstamų reikšmių privalomuose įvesties duomenų laukuose   
 
 > [!NOTE]
-> - Modeliui reikia jūsų klientų sandorių istorijos. Vienu metu galima sukonfigūruoti tik vieną sandorio istorijos objektą. Jei yra keli pirkimo/operacijos objektai, galite sujungti juos „Power Query“ modulyje prieš įtraukdami duomenis.
+> - Modeliui reikia jūsų klientų sandorių istorijos. Vienu metu galima sukonfigūruoti tik vieną sandorio istorijos objektą. Jei yra keli pirkimo / operacijų objektai, galite juos sujungti Power Query prieš nurijus duomenis.
 > - Tačiau papildomiems kliento duomenims (pasirinktiniems) galite įtraukti tiek kliento veiklos objektų, kiek norite, atsižvelgdami į modelį.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kurti kliento gyvavimo ciklo vertės prognozę
@@ -74,7 +78,7 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
 
 1. Rinkitės **Kliento gyvavimo ciklo vertės** plytelę ir rinkitės **Naudoti modelį**. 
 
-1. Juostoje **Kliento gyvavimo ciklo vertės (peržiūra)** rinkitės **Pradėti**.
+1. **Srityje Kliento gyvenimo trukmės vertė** pasirinkite **Pradėti**.
 
 1. **Pavadinkite šį modelį** ir **išvesties objekto pavadinimą** tam, kad kad atskirtumėte juos nuo kitų modelių ar objektų.
 

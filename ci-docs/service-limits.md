@@ -1,20 +1,19 @@
 ---
-title: Paslaugų apribojimai Dynamics 365 Customer Insights
+title: „Dynamics 365 Customer Insights“ aptarnavimo apribojimai
 description: Supraskite apribojimus ir suvaržymus.
 ms.date: 09/03/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
-ms.translationtype: HT
+ms.openlocfilehash: 9bf8f03b785fb3035e3fc979a3304d4e98fd8d28
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7791991"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350417"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>„Customer Insights“ galimybių aptarnavimo apribojimai
 
@@ -22,27 +21,25 @@ Straipsnis aprašo inkorporuotus apribojimus „Customer Insights“ paslaugoms,
 
 ## <a name="audience-insights"></a>Auditorijos įžvalgos
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Paslaugų apribojimai Dynamics 365 Customer Insights auditorijos įžvalgų galimybėse
-
 | Plotas  | Apribojimai  | Pastabos |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmentai, priemonės ir prognozės | 300  | Bendras [segmentų](audience-insights/segments.md), [matų ir prognozių skaičius](audience-insights/measures.md) kartu negali viršyti [...](audience-insights/predictions.md) 300.  |
+| Segmentai, priemonės ir prognozės | 300  | Bendras [segmentų](audience-insights/segments.md), [priemonių](audience-insights/measures.md) ir [prognozių](audience-insights/predictions.md) skaičius kartu negali viršyti 300.  |
 | Ryšiai | 20 gylio lygių santykiuose objektų keliuose. | Kuriant [segmentus](audience-insights/segments.md) ar [priemones](audience-insights/measures.md) naudojant kūrėjo sąsają, objekto keliai gali turėti iki 20 ryšių perėjimų tarp pradinio ir tikslinio objekto.  |
 
+<!--
+## Engagement insights
 
-## <a name="engagement-insights"></a>Įtraukimo įžvalgos
+### Workspace and event quotas
 
-### <a name="workspace-and-event-quotas"></a>Darbo srities ir įvykių kvotos
+Engagement insights is a highly scalable application that can support millions of events per second. During public preview, events have a volume threshold. There's also a limit to the number of workspaces in an organization.
 
-"Engagement" įžvalgos – tai labai keičiamo mastelio programa, kuri gali palaikyti milijonai įvykių per antrą. Viešosios peržiūros metu įvykiai turi ribinę apimtį. Taip pat ribojamas organizacijos darbo sričių skaičius.
+### Engagement insights limits
 
-### <a name="engagement-insights-limits"></a>Įtraukimo įžvalgos (apribojimai)
+- Maximum event volume per workspace  = 100 events per second
 
-- Maksimalus įvykio apimtis darbo srityje = 100 įvykių per antrą
+- Maximum number of workspaces per organization = 100
 
-- Maksimalus darbo sričių skaičius organizacijai = 100
-
-Kai įvykiai viršija ribinę verčių ribą, ataskaitose, pagrįstose tais įvykiais, gali būti prarasti duomenys. Galite [susisiekti su palaikymo tarnyba](https://go.microsoft.com/fwlink/?linkid=2145734), jei norite pateikti užklausą dėl garso padidinimo prieš viršydami apribojimus. Dirbsime su jumis, kad nustatytumėte, ar reikia padidinti kiekį ir palaikyti užklausą.
-
+When events exceed the threshold, it can lead to loss of data in reports based on those events. You can [contact support](https://go.microsoft.com/fwlink/?linkid=2145734) to request a volume increase before you exceed limits. We'll work with you to determine your need for a volume increase and support your request.
+-->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

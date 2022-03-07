@@ -1,24 +1,26 @@
 ---
-title: Padidėjimo paleidimas iš naujo „Power Query“ pagrįstiems duomenų šaltiniams
-description: Atnaujinkite naujus ir atnaujintus „Power Query“ pagrįstų didelių duomenų šaltinių duomenis.
+title: Laipsniškas duomenų šaltinių atnaujinimas Power Query
+description: Atnaujinti naujus ir atnaujintus duomenis dideliems duomenų šaltiniams pagal Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900278"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353692"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>„Power Query“ pagrįstų duomenų šaltinių papildantysis naujinimas
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Laipsniškas duomenų šaltinių atnaujinimas, pagrįstas Power Query
 
-Šiame straipsnyje aptariama, kaip konfigūruoti papildomą duomenų šaltinių atnaujinimą pagal "Power Query".
+Šiame straipsnyje aptariama, kaip konfigūruoti papildomą duomenų šaltinių atnaujinimą pagal Power Query.
 
 Papildantysis duomenų šaltinių naujinimas teikia toliau nurodytus privalumus.
 
@@ -28,13 +30,13 @@ Papildantysis duomenų šaltinių naujinimas teikia toliau nurodytus privalumus.
 
 ## <a name="configure-incremental-refresh"></a>Konfigūruoti papildantįjį naujinimą
 
-Publikos įžvalgos leidžia padidinti paleidimą iš naujo duomenų šaltiniams importuotiems per „Power Query“, kurie palaiko padidinimo suvartojimą. Pavyzdžiui, „Azure“ SQL duomenų bazių, kurių datos ir laiko laukuose nurodoma, kada paskutinį kartą buvo atnaujinti duomenų įrašai.
+Auditorijos įžvalgos leidžia palaipsniui atnaujinti duomenų šaltinius, importuotus per Power Query tą palaikymo padidėjimą. Pavyzdžiui, „Azure“ SQL duomenų bazių, kurių datos ir laiko laukuose nurodoma, kada paskutinį kartą buvo atnaujinti duomenų įrašai.
 
-1. [Kurkite „Power Query“ pagrįstą naują duomenų šaltinį](connect-power-query.md).
+1. [Sukurkite naują duomenų šaltinis pagal Power Query](connect-power-query.md).
 
-1. Nurodykite **duomenų** šaltinis pavadinimą.
+1. Pateikite **duomenų šaltinis pavadinimą**.
 
-1. Pasirinkite duomenų šaltinis, palaikančią papildomą atnaujinimą, pvz., ["Azure SQL" duomenų bazę](/power-query/connectors/azuresqldatabase).
+1. Pasirinkite duomenų šaltinis, palaikančią laipsnišką atnaujinimą, pvz [., "Azure SQL" duomenų bazę](/power-query/connectors/azuresqldatabase).
 
 1. Pažymėkite rinktinus objektus arba lenteles.
 

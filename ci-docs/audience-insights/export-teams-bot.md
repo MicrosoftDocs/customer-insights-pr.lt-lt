@@ -1,27 +1,26 @@
 ---
 title: Robotas „Microsoft Teams“
 description: Ieškokite suvienodintų tinkintų profilių „Microsoft Teams“ su roboto pagalba.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406410"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232112"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Komandų robotas „Dynamics 365 Customer Insights“ (peržiūra)
 
 Sujunkite su „Microsoft Teams“ norėdami leisti robotui ieškoti suvienodintų klientų profilių „Teams“ kanaluose.
 
 > [!div class="mx-imgBorder"]
-> ![„Teams“ roboto rodomas kliento įrašas](media/teams-bot.png "„Teams“ roboto rodomas kliento įrašas")
+> ![„Teams“ roboto rodomas kliento įrašas.](media/teams-bot.png "„Teams“ roboto rodomas kliento įrašas")
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -31,7 +30,10 @@ Norint nustatyti ir sukonfigūruoti robotą, turi būti įvykdytos šios būtino
 - [Sujungimo procesas](data-unification.md) yra baigtas.
 - Laukai yra įtraukti į [ieškos ir filtravimo rodyklę](search-filter-index.md).
 - „Customer Insights“ ir „Teams“ yra toje pačioje organizacijoje.
+- Jūsų aplinkoje pagrindinė tikslinė auditorija nustatyta atskiriems klientams. Verslo klientai nepalaikomi.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Roboto konfigūravimas
 
 1. Publikos įžvalgose, eikite į **Administravimas** > **Eksportavimo paskirties vietos**.
@@ -52,3 +54,6 @@ Robotas teikia sujungtų klientų profilių peržvalgos galimybes.
 - Jei jūsų organizacija išlaiko daugelį „Customer Insights“ aplinkų toje pačioje organizacijoje, galite įvesti **perjungti elementą** norėdami pasirinkti, kurią aplinką norite sujungti su robotu.
 
 - Įveskite **žinynas**, kad būtų rodomas galimų roboto komandų sąrašas.  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

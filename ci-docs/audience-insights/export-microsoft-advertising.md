@@ -1,20 +1,19 @@
 ---
 title: „Customer Insights“ duomenų eksportavimas į „Microsoft Advertising“
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Microsoft Advertising“.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
-ms.translationtype: HT
+ms.openlocfilehash: 8f009ed0258ded424340061e5320dd7df68c199f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124522"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226901"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Segmentų eksportavimas į „Microsoft Advertising“ (peržiūra)
 
@@ -29,9 +28,9 @@ Eksportuokite „Customer Insights” segmentus į „Microsoft Advertising”, 
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Vienu metu į „Microsoft Advertising“ galima eksportuoti iki 500 tūkstančių profilių.
+- Į „Microsoft Advertising‟ iš viso galima eksportuoti iki 500 000 eksportuojamų klientų profilių.
 - Eksportavimas į „Microsoft Advertising“ apsiriboja segmentais.
-- Iki 500 tūkstančių profilių eksportavimas į „Microsoft Advertising“ gali užtrukti iki 10 minučių. 
+- Iki 500 000 klientų profilių eksportavimas į „Microsoft Advertising" gali užtrukti iki 10 minučių. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Ryšio su „Microsoft Advertising” nustatymas
@@ -68,7 +67,7 @@ Eksportuokite „Customer Insights” segmentus į „Microsoft Advertising”, 
 
 1. Įveskite savo **„Microsoft Advertising” Kliento ID ir Paskyros ID**. Galite rasti Kliento ID (`cid`) ir Paskyros ID (`aid`) URL parametruose, kai esate prisijungę prie „Microsoft Advertising”.
 
-1. Skyriaus **Duomenų gretinimas** lauke **El. paštas** pasirinkite savo vieningojo kliento profilio lauką su kliento el. pašto adresu. To reikia norint eksportuoti segmentus į „Microsoft Advertising“.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** su kliento el. pašto adresu. To reikia norint eksportuoti segmentus į „Microsoft Advertising“.
 
 1. Pasirinkite **Įrašyti**.
 

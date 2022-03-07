@@ -1,20 +1,22 @@
 ---
 title: „Customer Insights“ duomenys „Microsoft Dataverse” platformoje
 description: Naudokite „Customer Insights” objektus kaip lenteles „Microsoft Dataverse” platformoje.
-ms.date: 10/14/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645228"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355439"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Dirbkite su „Customer Insights“ duomenimis „Microsoft Dataverse” platformoje
 
@@ -45,6 +47,7 @@ Kai kurie išvesties objektai iš auditorijos įžvalgų pateikiami kaip lentel�
 - [„CustomerMeasure”](#customermeasure)
 - [Papildymas](#enrichment)
 - [Prognozė](#prediction)
+- [Segmento narystė](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -120,4 +123,17 @@ Alternatyvaus rakto lentelėje yra suvienodinimo procese dalyvavusių objektų r
 | Modelis                | Eilutė      | Modelio pavadinimas                                                |
 | Reikšmės               | JSON Eilutė | Modelio sukurtų atributų sąrašas |
 | „msdynci_predictionid” | GUID        | Nustatantis GUID, sugeneruotas iš „msdynci_identifier” | 
-| „msdynci_identifier”   | Eilutė      |  `Model|ModelProvider|CustomerId`                      |
+| „msdynci_identifier”   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Segmento narystė
+
+Šioje lentelėje yra kliento profilių segmento narystės informacija.
+
+| Column        | Tipas | Aprašą                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | Kliento Profilio ID        |
+| SegmentProvider      | String       | Programa, kuri publikuoja segmentus. Numatytosios: auditorijos įžvalgos         |
+| SegmentMembershipType | String       | Kliento tipas šio segmento narystės įrašas. Palaiko kelis tipus, pvz., Klientą, Kontaktą arba Klientą. Numatytasis: klientas  |
+| Segmentai       | JSON Eilutė  | Unikalių segmentų, kurių narys yra kliento profilis, sąrašas      |
+| „msdynci_identifier”  | String   | Segmento narystės įrašo unikalusis identifikatorius. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | Deterministinis GUID, sukurtas iš`msdynci_identifier`          |

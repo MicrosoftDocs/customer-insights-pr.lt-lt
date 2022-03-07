@@ -3,26 +3,29 @@ title: Produkto rekomendacijų prognozės pavyzdžio gairės
 description: Šiame pavyzdyje pateiktame vadove išbandykite iš anksto pateiktą produkto prognozė modelį.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035195"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354657"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Produkto rekomendacijų prognozės (peržiūros) pavyzdžio gairės
+# <a name="product-recommendation-prediction-sample-guide"></a>Produkto rekomendacijų prognozės pavyzdžio gairės
 
 Paaiškinsime, kad galutinis produkto rekomendacijų pavyzdys pateiktas prognozė toliau pateiktą duomenų pavyzdį.
 
 ## <a name="scenario"></a>Scenarijus
 
-„Contoso” yra įmonė, kurianti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda savo „Contoso Coffee” svetainėje. Jų tikslas yra suprasti, kuriuos produktus jie turėtų rekomenduoja savo pasikartojantiems klientams. Žinodami, kokie klientai **labiau tikėtina,** kad juos įsigys, jie galės sutaupyti rinkodaros pastangų susitelkdami į konkrečius elementus.
+„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jų tikslas yra suprasti, kuriuos produktus jie turėtų rekomenduoja savo pasikartojantiems klientams. Žinodami, kokie klientai **labiau tikėtina,** kad juos įsigys, jie galės sutaupyti rinkodaros pastangų susitelkdami į konkrečius elementus.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -31,7 +34,7 @@ Paaiškinsime, kad galutinis produkto rekomendacijų pavyzdys pateiktas prognoz�
 
 ## <a name="task-1---ingest-data"></a>Užduotis 1 - Duomenų vartojimas
 
-Peržiūrėti straipsnius [apie duomenų vartojimą](data-sources.md) ir [importuoti duomenų šaltinius naudojant „Power Query“ jungtis](connect-power-query.md) konkrečiai. Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės.
+Peržiūrėkite straipsnius [apie duomenų nurijimas](data-sources.md) ir [duomenų šaltinių importavimą naudojant Power Query konkrečiai jungtis](connect-power-query.md). Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Kliento duomenų naudojimas iš e-komercijos platformos
 

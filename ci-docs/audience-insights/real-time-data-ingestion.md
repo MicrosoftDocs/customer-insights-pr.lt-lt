@@ -1,20 +1,22 @@
 ---
 title: Realaus laiko duomenų suvartojimas ir apribojimai
-description: Bendra informacija apie relaus laiko galimybes publikos įžvalgose.
+description: Bendra informacija apie realaus laiko galimybes publikos įžvalgose.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
-ms.translationtype: HT
+searchScope:
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689185"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355485"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Duomenų įtraukimas realiuoju laiku (peržiūra)
 
@@ -29,7 +31,7 @@ Realiojo laiko atnaujinimai turi galiojimo pabaigos laiką, po kurio jie daugiau
 - Profilio atnaujinimai bus saugomi 4 valandas
 - Veiklos bus saugomos 30 dienų
 
-Šios reikšmės yra API skambučių parametrai, kuriuos galite keisti. Jais siekiama užtikrinti, kad jūsų šaltinio duomenys išliktų patikimiausiu šaltiniu. Jei norite, kad realaus laiko naujinimai būtų įtraukti ilgesnį laikotarpį, jums reikia juso įtraukti į duomenų šaltinį taip, kad jie būtų paimami kito suplanuoto paleidimo iš naujo metu.
+Šios reikšmės yra API skambučių parametrai, kuriuos galite keisti. Jais siekiama užtikrinti, kad jūsų šaltinio duomenys išliktų patikimiausiu šaltiniu. Jei norite, kad realaus laiko naujinimai būtų įtraukti ilgesnį laikotarpį, jums reikia juos įtraukti į duomenų šaltinį taip, kad jie būtų paimami kito suplanuoto paleidimo iš naujo metu.
 
 ## <a name="real-time-update-of-the-unified-customer-profile-fields"></a>Sujungto kliento profilio laukų atnaujinimas realiuoju laiku
 
@@ -44,7 +46,7 @@ Kadangi realiojo laiko operacijos vykdomos po duomenų sujungimo, jos taikomos t
 
 ## <a name="real-time-creation-of-activities"></a>Veiklų kūrimas realiuoju laiku
 
-Realaus laiko API leidžia jums publikuoti naują veiklą iš jūsų šaltinio sistemos (atskiro šaltinio įrašo) į suvienodintą kliento profilį. Nauja veikla po kelių sekundžių bus pasiekiama kaip sujungta veikla to sujungto kliento profilio laiko planavimo juostoje. Galite matyti laiko jusotą kliento kortelės rodinyje ar bet kokią kitą laiko juostos integravimą, kurį sukonfigūravote.
+Realaus laiko API leidžia jums publikuoti naują veiklą iš jūsų šaltinio sistemos (atskiro šaltinio įrašo) į suvienodintą kliento profilį. Nauja veikla po kelių sekundžių bus pasiekiama kaip sujungta veikla to sujungto kliento profilio laiko planavimo juostoje. Galite matyti laiko juostą kliento kortelės rodinyje ar bet kokią kitą laiko juostos integravimą, kurį sukonfigūravote.
 
 > [!NOTE]
 >
@@ -54,7 +56,7 @@ Realaus laiko API leidžia jums publikuoti naują veiklą iš jūsų šaltinio s
 
 Yra du būdai sujungti realaus laiko API:
 
-- [netiesiogiai](#connect-via-the-dynamics-365-customer-insights-connector), naudojant [„Dynamics 365 Customer Insights“ jungtį](https://docs.microsoft.com/connectors/customerinsights/)
+- [netiesiogiai](#connect-via-the-dynamics-365-customer-insights-connector), naudojant [„Dynamics 365 Customer Insights connector“](/connectors/customerinsights/)
 - [tiesiogiai](#connect-directly-to-the-real-time-api), naudojant kodą.
 
 Abiems būdams taikomos toliau nurodytos būtinosios sąlygos.
@@ -64,15 +66,15 @@ Abiems būdams taikomos toliau nurodytos būtinosios sąlygos.
 - Sukonfigūruotos ir vykdytos veiklos
 - Dalyvio ar administratoriaus teisės jūsų klientui autentifikuoti
 
-## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Prijungimas naudojant „Dynamics 365 Customer Insights“ jungtį
+## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Prijungimas naudojant „Dynamics 365 Customer Insights connector“
 
-Realiojo laiko API gali gauti duomenis iš skirtosios „Power Platform“ jungties – [„Dynamics 365 Customer Insights“ jungties](https://docs.microsoft.com/connectors/customerinsights/) – ir nereikia kurti ir diegti jokio kodo.    
-Jungtis gali atlikti tuos pačius realiojo laiko veiksmus kaip API. Turite turėti galiojančią aukščiausios klasės jungčių licenciją. Daugiau informacijos žr. [DUK apie „Power Apps“ ir „Power Automate“ licencijas](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+Realiojo laiko API gali gauti duomenis iš skirtosios „Power Platform“ jungties – [„Dynamics 365 Customer Insights connector“](/connectors/customerinsights/) – ir nereikia kurti ir diegti jokio kodo.    
+Jungtis gali atlikti tuos pačius realiojo laiko veiksmus kaip API. Turite turėti galiojančią aukščiausios klasės jungčių licenciją. Daugiau informacijos žr. [DUK apie „Power Apps“ ir „Power Automate“ licencijas](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- „Power Platform“ [„Power Apps“ ir (arba) „Power Automate“](https://docs.microsoft.com/connectors/)
-- „Azure“ [„Logic Apps“](https://docs.microsoft.com/azure/connectors/apis-list)
+- „Power Platform“ [„Power Apps“ ir (arba) „Power Automate“](/connectors/)
+- „Azure“ [„Logic Apps“](/azure/connectors/apis-list)
 
-Išsamią informaciją apie srautų kūrimą žr. [„Power Automate“ dokumentuose](https://docs.microsoft.com/power-automate/).
+Išsamią informaciją apie srautų kūrimą žr. [„Power Automate“ dokumentuose](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Tiesioginis prisijungimas prie realiojo laiko API
 
@@ -83,6 +85,7 @@ Veiklą galite skelbti savo šaltinio sistemos arba „UnifiedActivity“ format
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Telemetrijos naudojimo realiuoju laiku supratimas
 
-Gaukite užklausų apimties apžvalgą realaus laiko API ir informacijai apie problemas, su kuriomis gali susidurti sistema. Galite [pasiekti realiojo laiko telemetriją](system.md#api-usage-tab) nuėję į **Administratorius** > **Sistema** > **API naudojimas**. **Operacijų** lentelėje, eilutės API veiksmams, kurios naudoja realaus laiko metodus turi mygtuką skirtą peržiūrėti realaus laiko API naudojimą.  Mygtukas yra rodomas su žiūronų simboliu. Pasirinkite mygtuką siekiant atidaryti šoninę juostą turinčią suvartojimo informaciją realaus laiko API naudojimui ir esamai aplinkai.
+Gaukite užklausų apimties apžvalgą realaus laiko API ir informacijai apie problemas, su kuriomis gali susidurti sistema. Galite [prieiti prie telemetrijos realiuoju laiku](system.md#api-usage-tab). 
 
-Naudokite išrinkiklį **Grupuoti pagal**, norėdami pasirinkti, kaip geriausia pristatyti realiojo laiko sąveikas laiko planavimo juostoje, kurios intervalas yra nuo paskutinių 24 valandų iki paskutinių 30 dienų. Duomenis galite grupuoti pagal API būdą, objekto apibrėžtą pavadinimą (įtrauktas objektas), kūrėją (įvykio šaltinis), rezultatą (sėkmė arba nesėkmė) arba klaidų kodus. Duomenys prieinami kaip retrospektyvos diagrama ir kaip lentelė.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
