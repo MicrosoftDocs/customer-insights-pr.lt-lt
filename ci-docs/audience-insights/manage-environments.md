@@ -1,26 +1,24 @@
 ---
 title: Aplinkų kūrimas ir valdymas
 description: Sužinokite, kaip prisijungti prie paslaugų ir kaip valdyti aplinkas.
-ms.date: 12/06/2021
+ms.date: 07/22/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-searchScope:
-- ci-system-about
-- customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 2f115269b9d07dd118ec18cc48b55de8aea9b5bb
+ms.sourcegitcommit: 98267da3f3eddbdfbc89600a7f54e5e664a8f069
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354289"
+ms.lasthandoff: 07/28/2021
+ms.locfileid: "6683483"
 ---
 # <a name="manage-environments"></a>Aplinkų valdymas
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 ## <a name="switch-environments"></a>Perjungti aplinką
 
@@ -28,7 +26,7 @@ Norėdami keisti aplinkas, viršutiniame dešiniajame puslapio kampe pasirinkite
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Aplinkų perjungimo valdiklio ekrano kopija.":::
 
-Administratoriai gali [kurti](create-environment.md) ir valdyti aplinkas.
+Administratoriai gali [kurti](get-started-paid.md) ir valdyti aplinkas.
 
 ## <a name="edit-an-existing-environment"></a>Esamos aplinkos redagavimas
 
@@ -38,25 +36,23 @@ Galite redaguoti kai kurią esamos aplinkos informaciją.
 
 2.  Pasirinkite **Redagavimo** piktogramą.
 
-3. Lauke **Redaguoti aplinką** galite atnaujinti aplinkos parametrus.
+3. Lauke **Redaguoti aplinką** galite atnaujinti aplinkos rodomą **Pavadinimą**, tačiau negalite keisti  **Regiono** arba **Tipo**.
 
-Daugiau informacijos apie aplinkos parametrus žr. [Naujos aplinkos kūrimas](create-environment.md).
+4. Jei aplinka sukonfigūruota duomenims saugoti „Azure Data Lake Storage“, galite atnaujinti **kliento raktą**. Tačiau negalite keisti **Paskyros pavadinimo** arba **Konteinerio** pavadinimo.
 
-## <a name="connect-to-microsoft-dataverse"></a>Prisijungti prie „Microsoft Dataverse“
+5. Pasirinktinai galite naujinti iš paskyros pagrindinių pagrįstų jungčių į resursais pagrįstą arba prenumeravimu pagrįstą jungtį. Jums atnaujinus negalėsite grįžti prie pagrindinės paskyros po naujinimo. Dėl daugiau informacijos, žr. [Sujungti publikos įžvalgas ir „Azure Data Lake Storage Gen2“ paskyrą „Azure“ pagrindinės paslaugas publikos įžvalgoms](connect-service-principal.md). Negalite keisti **Talpyklos** informacijos naujinant jungtį.
+
+6. Taip pat galite nurodytų Microsoft Dataverse aplinkos URL skiltyje **Duomenų bendrinimo su Microsoft Dataverse konfigūravimas ir papildomų galimybių įjungimas**. Į šias galimybes įeina duomenų bendrinimas su „Microsoft Dataverse” pagrįstomis programomis ir sprendimais, duomenų paėmimas iš vietinių duomenų šaltinių arba [prognozių](predictions.md) naudojimas. Pasirinkite **Įjungti duomenų bendrinimą**, jei „Customer Insights“ išvesties duomenis norite bendrinti su Microsoft Dataverse valdomu „Data Lake“.
+
+   > [!NOTE]
+   > - Duomenų bendrinimas Microsoft Dataverse su valdomasis duomenų telkiniais šiuo metu nepalaikomas, kai įrašote visus duomenis savo Azure Data Lake Storage.
+   > - [Trūkstamų objekto reikšmių prognozė](predictions.md) ir „PowerBI” įdėtosios ataskaitos auditorijos įžvalgose (jei įgalinta jūsų aplinkoje) šiuo metu nepalaikomos, kai įgalinate duomenų bendrinimą su „Microsoft Dataverse” valdomu „data lake”.
+
+   Įgalinus duomenų bendrinimą su „Microsoft Dataverse”, prasideda visiškas jūsų duomenų šaltinių atnaujinimas ir kiti procesai. Jei šiuo metu vykdomi procesai, nematysite duomenų bendrinimo su „Microsoft Dataverse” įjungimo parinkties. Palaukite, kol šie procesai bus užbaigti arba atšaukite juos, kad įgalintumėte duomenų bendrinimą. 
    
-Šis **Microsoft Dataverse** veiksmas leidžia „Customer Insights“ susieti su „Dataverse“ aplinka.
-
-Jei norite [naudoti iš anksto anksto prognozė modelius](predictions-overview.md#out-of-box-models) konfigūruokite duomenų bendrinimą su „Dataverse“. Arba galite įjungti duomenų nurijimas iš vietinis šaltinių, pateikdami jūsų „Microsoft Dataverse“ organizacijos administruojami aplinkos URL.
-
-> [!IMPORTANT]
-> "Customer Insights" ir Dataverse turi būti tame pačiame regione, kad būtų galima bendrinti duomenis.
-
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
-
-> [!NOTE]
-> Jūsų „Customer Insights“ aplinkos konfigūracija nepalaiko šių duomenų bendrinimo scenarijų:
-> - Jei visus duomenis įrašysite savo, negalėsite įjungti bendro duomenų bendrinimo su valdomojo „Azure Data Lake Storage“ duomenų „Dataverse“ sutvarkytas „Data Lake“.
-> - Įjungę duomenų bendrinimą su „Dataverse“, negalėsite kurti prognozuojamų [arba trūkstamų objekto reikšmių](predictions.md).
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
+   
+   Jums vykdant procesus, tokius kaip duomenų suvartojimas ar segmento sukūrimas, atitinkantys katalogai bus sukuriami talpinimo paskyroje, kurią nurodėte prieš tai. Atsižvelgiant į jūsų vykdomą procesą, duomenų failai ir model.json failai kuriami ir įtraukiami į atitinkamus antrinius aplankus.
 
 ## <a name="copy-the-environment-configuration"></a>Aplinkos konfigūracijos kopijavimas
 
@@ -85,8 +81,7 @@ Kopijuojami šie konfigūracijos parametrai:
 
 - Klientų profiliai.
 - Duomenų šaltinio kredencialai. Turėsite pateikti kiekvieno duomenų šaltinio kredencialus ir rankiniu būdu atnaujinti duomenų šaltinius.
-
-- Duomenų šaltiniai iš bendrojo duomenų modelio aplanko ir „Dataverse“ valdomo „data lake“. Šiuos duomenų šaltinius turėsite kurti rankiniu būdu tuo pačiu pavadinimu kaip ir šaltinio aplinka.
+- Duomenų šaltiniai iš „Common Data Model“ aplanko ir „Dataverse“ valdomojo duomenų „Data Lake". Šiuos duomenų šaltinius turėsite kurti rankiniu būdu tuo pačiu pavadinimu kaip ir šaltinio aplinka.
 
 Kai kopijuojate aplinką, pamatysite patvirtinimo pranešimą, kad sukurta nauja aplinka. Pasirinkite **Eiti į duomenų šaltinius**, kad peržiūrėtumėte duomenų šaltinių sąrašą.
 

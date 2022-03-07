@@ -1,19 +1,20 @@
 ---
 title: Bendrai naudojamos prognozės scenarijų užduotys
 description: Sužinokite, kaip valdyti, šalinti triktis ir tikslinti prognozes.
-ms.date: 11/01/2021
+ms.date: 05/17/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230802"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095732"
 ---
 # <a name="manage-predictions"></a>Prognozių valdymas
 
@@ -35,6 +36,9 @@ ms.locfileid: "8230802"
 
 Ataskaita yra pasiekiama atlikus modelio mokymo procesą. Ji sukuriama kiekvienam modeliui atskirai, neatsižvelgiant į tai, ar jis užbaigtas sėkmingai.
 
+> [!NOTE]
+> Šiuo metu ši funkcija veikia tik su Operacijų praradimo modeliu.
+
 ### <a name="view-the-input-data-usability-report"></a>Peržiūrėti įvesties duomenų naudojimo ataskaitą
 
 Užbaigę mokymo veiksmą visiškai parengtam modeliui, peržiūrėkite ataskaitą:
@@ -49,12 +53,12 @@ Toliau pateiktuose ataskaitos stulpeliuose yra naudingos informacijos apie tai, 
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Įvesties duomenų naudojimo ataskaitos, rodančios lentelę su klaidomis, įspėjimais ir rekomendacijomis, pavyzdys.":::
 
-- **Pavadinimas:** aprašomasis klaidos, įspėjimo ar rekomendacijos pavadinimas.
-- **Žingsnis:** modelio etapas, traukinys arba rezultatas, informacija nurodo.
-- **Būsena:** Informacijos sunkumas (klaida, įspėjimas, rekomendacija).
-- **Stulpelio pavadinimas:** objekto stulpelis, kurį reikia modifikuoti, kad būtų pagerintas modelio našumas.
-- **Objekto pavadinimas:** objekto, kurį reikia modifikuoti, kad būtų pagerintas modelio našumas, pavadinimas.
-- **Išsami informacija:** išsami informacija apie klaidą, įspėjimą ar rekomendaciją.
+- Pavadinimas: Aprašomasis klaidos, įspėjimo arba rekomendacijos pavadinimas.
+- Veiksmas: Modelio etapas, mokymas ar įvertinimas, nurodoma informacija.
+- Būsena: Informacijos svarba (klaida, įspėjimas, rekomendacija).
+- Stulpelio pavadinimas: Objekto, kurį reikia modifikuoti, kad būtų pagerintas modelio efektyvumas, stulpelis.
+- Objekto pavadinimas: Objekto, kurį reikia modifikuoti, kad būtų pagerintas modelio efektyvumas, pavadinimas.
+- Išsami informacija: Išsami informacija apie klaidą, įspėjimą arba rekomendaciją.
 
 ## <a name="refresh-a-prediction"></a>Prognozės atnaujinimas
 
@@ -65,8 +69,6 @@ Prognozės automatiškai atsinaujins tuo pačiu parametruose sukonfigūruotu [gr
 1. Pasirinkite vertikalius daugtaškius šalia norimos atnaujinti prognozės.
 
 1. Pasirinkite **Atnaujinti**.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Prognozės šalinimas
 

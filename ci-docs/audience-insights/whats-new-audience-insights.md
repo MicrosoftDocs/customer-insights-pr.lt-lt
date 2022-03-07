@@ -2,18 +2,19 @@
 title: Naujos ir būsimos funkcijos
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
 ms.date: 03/02/2022
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232668"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088295"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
 
@@ -66,7 +67,7 @@ Dėl daugiau informacijos, žr. [Nustatyti dublikavimo panaikinimą atitikties o
 
 #### <a name="custom-rules-for-matching"></a>Pasirinktinės derinimo taisyklės
 
-Yra atvejų, kai reikia nurodyti bendrųjų taisyklių išimtį, kad nesusilygtumėte su įrašais. Tai gali atsitikti, kai keli asmenys dalijasi pakankamai informacijos, kad sistema atitiktų juos kaip vieną asmenį. Pavyzdžiui, dvyniai su tuo pačiu pavardė, gyvena tame pačiame mieste ir dalijasi gimimo data.
+Yra atvejų, kai reikia nurodyti bendrųjų taisyklių išimtį, kad nesusilygtumėte su įrašais. Tai gali atsitikti, kai keli asmenys dalijasi pakankamai informacijos, kad sistema atitiktų juos kaip vieną asmenį. Pavyzdžiui, dvyniai, turintys tą pačią pavardė, gyvena tame pačiame mieste ir dalijasi gimimo data.
 
 Išimtys užtikrina, kad suvienijimo taisyklėse būtų galima spręsti neteisingo duomenų suvienijimo problemą. Į taisyklę galite įtraukti kelias išimtis.
 
@@ -121,7 +122,7 @@ Segmento generatorius leidžia kurti verslo sąskaitų segmentus, kuriuose pasir
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Išsaugokite savo verslo paskyras su giliomis įžvalgomis apie jų mušimo tendenciją
 
-Klientų prognozė modelis dabar taip pat palaiko verslo sąskaitas. Galite įvertinti ne tik sąskaitos, bet ir sąskaitos bei produkto ar paslaugos kategorijos, kurią jie perka iš jūsų, derinį. Šis papildymas padeda jums suprasti, ar paskyra yra labiau tikėtina, kad nustos pirkti iš jūsų apskritai, ar tik tam tikros kategorijos prekėms ar paslaugoms. Norėdami dar labiau padėti jums naudoti šį AI modelį, jame taip pat išvardytos priežastys, kodėl paskyra gali būti susmukdyta. Daugiau informacijos ieškokite [Transaction churn prognozė (preview)](predict-transactional-churn.md).
+Klientų mušimas prognozė modelis dabar taip pat palaiko verslo sąskaitas. Galite įvertinti ne tik sąskaitos, bet ir sąskaitos bei produkto ar paslaugos kategorijos, kurią jie perka iš jūsų, derinį. Šis papildymas padeda jums suprasti, ar paskyra yra labiau tikėtina, kad nustos pirkti iš jūsų apskritai, ar tik tam tikros kategorijos prekėms ar paslaugoms. Norėdami dar labiau padėti jums naudoti šį AI modelį, jame taip pat išvardytos priežastys, kodėl paskyra gali būti susmukdyta. Daugiau informacijos ieškokite [Transaction churn prognozė (preview)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Verslo abonemento kontaktų peržiūra kliento rodinyje
 
