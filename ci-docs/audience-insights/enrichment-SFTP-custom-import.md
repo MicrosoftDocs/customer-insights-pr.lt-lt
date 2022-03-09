@@ -3,18 +3,17 @@ title: Papildymas su SFTP kliento importavimu
 description: Bendra informacija apie SFTP tinkinto importavimo papildymą.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 9331cf8057850e2fbe03622831f388e73056d938
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6555409"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229648"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Praturtinkite klientų profilius su tinkintais duomenimis (peržiūra)
 
@@ -44,6 +43,8 @@ Siekiant sukonfigūruoti SFTP tinkintą importavimą, būtina atitikti tolesnes 
 1.  Pažymėkite **Kitas** ir įveskite **norimo** ir **Failo kelią** importuoti duomenų failo kelią ir failo vardą.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Ekrano nuotrauka įvedant duomenų vietą.":::
+
+1. Pažymėkite **Kitas** ir pasirinkite kliento duomenų rinkinį. Tai gali būti visi klientų profiliai arba segmentas.
 
 1. Pasirinkite **Toliau** ir pateikite papildymo pavadinimą bei išvesties objekto pavadinimą. 
 
@@ -121,8 +122,8 @@ Po papildymo proceso pabaigos, galėsite peržiūrėti jūsų naujai importuotus
 
 Išsamų kiekvieno papildyto profilio rodinį galite pasiekti pasirinkę **Peržiūrėti papildytus duomenis**.
 
-## <a name="next-steps"></a>Tolesni veiksmai
+## <a name="next-steps"></a>Kiti veiksmai
 
-Atlikite veiksmus su papildytais klientų duomenimis. Kurkite [segmentai](segments.md) ir [priemones](measures.md) bei net [eksportuokite duomenis,](export-destinations.md) kad klientams būtų galima teikti personalizuotas funkcijas.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

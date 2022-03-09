@@ -1,22 +1,30 @@
 ---
 title: Pasirinktiniai mašininio mokymo modeliai | „Microsoft Docs“
 description: Darbas su pasirinktiniais modeliais iš „Azure“ mašininio mokymosi „Dynamics 365 Customer Insights“.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305652"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355096"
 ---
 # <a name="custom-machine-learning-models"></a>Pasirinktiniai mašininio mokymo modeliai
+
+> [!NOTE]
+> Parama mašininis mokymas Studio (klasika) baigsis 2024 m. rugpjūčio 31 d. Rekomenduojame iki tos datos pereiti prie ["Azure mašininis mokymas](/azure/machine-learning/overview-what-is-azure-machine-learning)".
+>
+> Nuo 2021 m. gruodžio 1 d. negalėsite kurti naujų mašininis mokymas Studio "(klasikinių) išteklių. Iki 2024 m. rugpjūčio 31 d. galite toliau naudoti esamus mašininis mokymas Studio" (klasikinius) išteklius. Daugiau informacijos ieškokite [Perkelti į "Azure mašininis mokymas"](/azure/machine-learning/migrate-overview).
+
 
 **Įžvalga** > **Tinkinti modeliai** leidžia jums valdyti darbo eigas pagrįstas „Azure“ mašininio mokymosi modeliais. Darbo eigos padeda jums pasirinkti duomenis, iš kurių norite sukurti įžvalgas ir padaryti žemėlapių rezultatus į jūsų suvienodinto kliento duomenis. Dėl išsamesnės informacijos apie tinkintų ML modelių kūrimą, žr. [Naudoti „Azure“ mašininiu mokymusi pagrįstus modelius](azure-machine-learning-experiments.md).
 
@@ -26,7 +34,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- Šiuo metu ši funkcija palaiko žiniatinklio paslaugas publikuotas per [mašininio mokymosi studiją (įprastą versiją)](https://studio.azureml.net) ir [„Azure“ mašininio mokymosi bendrus vamzdynus](/azure/machine-learning/concept-ml-pipelines).
+- Ši funkcija palaiko žiniatinklio tarnybas, paskelbtas naudojant ["Azure mašininis mokymas" paketų vamzdynus](/azure/machine-learning/concept-ml-pipelines).
 
 - Jums reikia „Azure Data Lake Gen2“ talpinimo paskyros susietos su „Azure“ studijos elementu siekiant naudoti šią funkciją. Daugiau informacijos rasite [„Azure Data Lake Storage Gen2“ saugyklos abonemento kūrimas](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -35,6 +43,8 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
    > [!NOTE]
    > Duomenys perduodami tarp jūsų „Customer Insights” egzempliorių ir pasirinktų „Azure” žiniatinklio paslaugų arba srautų darbo eigoje. Kai perduodate duomenis į „Azure“ tarnybą, įsitikinkite, kad tarnyba sukonfigūruota taip, kad duomenų apdorojimas ir vieta atitiktų visus tokiems jūsų organizacijos duomenims taikomus teisinius arba norminius reikalavimus.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
+
 ## <a name="add-a-new-workflow"></a>Naujos darbo eigos įtraukimas
 
 1. Eikite į **Įžvalgą** > **Tinkinti modeliai** ir pasirinkite **Naują darbo eigą**.
@@ -42,40 +52,36 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 1. Pasirinktiniam modeliui suteikite atpažįstamą pavadinimą lauke **Pavadinimas**.
 
    > [!div class="mx-imgBorder"]
-   > ![Naujos darbo eigos srities ekrano kopija](media/new-workflowv2.png "Naujos darbo eigos srities ekrano kopija")
+   > ![Naujos darbo eigos srities ekrano kopija.](media/new-workflowv2.png "Naujos darbo eigos srities ekrano kopija")
 
 1. Pasirinkite organizaciją, kurioje **Nuomininkas, kuriame yra jūsų žiniatinklio tarnyba** yra žiniatinklio tarnyba.
 
 1. Jei jūsų „Azure Machine Learning“ prenumerata yra kitame nuomininke nei „Customer Insights“, pasirinktai organizacijai pasirinkite **Prisijungti** naudodami savo kredencialus.
 
-1. Pasirinkite **Darbo aplinkas** susietas su jūsų žiniatinklio paslaugomis. Esama dviejų išvardytų skyrių, „Azure“ mašininio mokymosi v1 (mašininio mokymosi studijos (įprastos versijos)) ir „Azure“ mašininio mokymosi v2 („Azure“ mašininio mokymosi). Jei nesate tikras, kuri darbo aplinka tinka jūsų mašininio mokymosi studijai (įprastos) versijos žiniatinklio paslaugoms, pasirinkite **Bet kuris**.
+1. Pasirinkite **Darbo aplinkas** susietas su jūsų žiniatinklio paslaugomis. 
 
-1. Pasirinkite mašininio mokymosi studijos (įprastos versijos) žiniatinklio paslaugas arba „Azure“ mašininio mokymosi vamzdyną **Žiniatinklio paslaugos, turinčios jūsų modelio** iškrentantį meniu. Tada pasirinkite **Toliau**.
-   - Sužinokite apie [žiniatinklio paslaugų publikavimą mašininio mokymosi studijoje (įprastoje versijoje)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Sužinokite apie [„Azure“ mašininio mokymosi vamzdyno publikavimą naudojant kūrimo įrankį](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ar [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsų vamzdynas turi būti publikuojamas skyriuje [vamzdyno galutinis taškas](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Pasirinkite "Azure mašininis mokymas" interneto tarnybos, kurioje yra jūsų modelio **išplečiamasis meniu, vamzdyną**. Tada pasirinkite **Toliau**.    
+   Sužinokite apie [„Azure“ mašininio mokymosi vamzdyno publikavimą naudojant kūrimo įrankį](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ar [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsų vamzdynas turi būti publikuojamas skyriuje [vamzdyno galutinis taškas](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Kiekvienai **Žiniatinklio paslaugos įvesčiai**, pasirinkite atitinkantį **Objektą** iš publikos įžvalgų ir pasirinkite **Kitas**.
    > [!NOTE]
    > Pasirinktinio modelio darbo eiga taisys atributus, kuriuos naudojant žiniatinklio tarnybos įvesties laukai bus susieti su objekto atributais pagal lauko pavadinimą ir duomenų tipą. Matysite klaidą, jei žiniatinklio tarnybos lauko negalima susieti su objektu.
 
    > [!div class="mx-imgBorder"]
-   > ![Darbo eigos konfigūravimas](media/intelligence-screen2-updated.png "Darbo eigos konfigūravimas")
+   > ![Darbo eigos konfigūravimas.](media/intelligence-screen2-updated.png "Darbo eigos konfigūravimas")
 
 1. **Modelio išvesties parametrų** žingsnyje nustatykite tolesnes ypatybes:
-   - Mašininio mokymosi studija (įprasta versija)
-      1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti žiniatinklio išvesties rezultatus.
-   - „Azure“ mašininis mokymas
       1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti vamzdyno išvestį.
       1. Pasirinkite jūsų bendro vamzdyno iš iškrentančio meniu **Išvesties duomenų talpinimo parametro pavadinimas**.
       1. Pasirinkite jūsų bendro vamzdyno iš iškrentančio meniu **Išvesties kelio parametro pavadinimas**.
 
       > [!div class="mx-imgBorder"]
-      > ![Modelio išvesties parametro juosta](media/intelligence-screen3-outputparameters.png "Modelio išvesties parametro juosta")
+      > ![Modelio išvesties parametro juosta.](media/intelligence-screen3-outputparameters.png "Modelio išvesties parametro juosta")
 
 1. Pasirinkite gretinimo atributą iš **Kliento ID rezultatuose** išplečiamojo sąrašo, kuris nustato klientus ir rinkitės **Įrašyti**.
 
    > [!div class="mx-imgBorder"]
-   > ![Susiekite rezultatus su kliento duomenų juosta](media/intelligence-screen4-relatetocustomer.png "Susiekite rezultatus su kliento duomenų juosta")
+   > ![Susiekite rezultatus su kliento duomenų juosta.](media/intelligence-screen4-relatetocustomer.png "Susiekite rezultatus su kliento duomenų juosta")
 
 1. Matysite ekraną **Darbo eiga įrašyta** su informacija apie darbo eigą.    
    Jei konfigūruojate darbo eigą „Azure“ mašininio mokymosi vamzdynui, publikos įžvalgos bus pridėtos prie darbo aplinkos, kuri turi vamzdyną. Publikos įžvalgos įgaus  **Prisidėjusiojo** vaidmenį „Azure“ darbo aplinkoje.
@@ -93,9 +99,6 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 1. Kiekvienai **Žiniatinklio paslaugos įvesčiai**, galite naujinti atitikties **Objektą** iš publikos įžvalgų. Tada pasirinkite **Toliau**.
 
 1. **Modelio išvesties parametrų** žingsnyje nustatykite tolesnes ypatybes:
-   - Mašininio mokymosi studija (įprasta versija)
-      1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti žiniatinklio išvesties rezultatus.
-   - „Azure“ mašininis mokymas
       1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti vamzdyno išvestį.
       1. Pasirinkite **Išvesties duomenų talpinimo parametro pavadinimą** jūsų bandymo vamzdynui.
       1. Pasirinkite **Išvesties kelio parametro pavadinimą** jūsų bandymo vamzdynui.

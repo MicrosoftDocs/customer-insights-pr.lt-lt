@@ -1,22 +1,31 @@
 ---
 title: „Customer Insights” duomenų eksportavimas į „Azure Data Lake Storage Gen2”
 description: Sužinokite, kaip konfigūruoti ryšį su „Azure Data Lake Storage Gen2”.
-ms.date: 03/03/2021
+ms.date: 10/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: c4408e52550b6648e2a001041dc0acdb5063d6a6ef1b8e4bba3321bf25fefcfc
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: cc0b3aac11a33facc366e9c57071d1fb8be4ecc4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031989"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231684"
 ---
-# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>Ryšio su Azure Data Lake Storage Gen2 nustatymas (peržiūra)
+# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Segmentų sąrašo ir kitų duomenų eksportavimas į „Azure Data Lake Storage Gen2" (peržiūra)
+
+Saugokite savo „Customer Insights“ duomenis saugykloje „Azure Data Lake Storage Gen2“ paskyros arba naudokite ją norėdami perkelti duomenis į kitas programas.
+
+## <a name="known-limitations"></a>Žinomi apribojimai
+
+1. Kai kuriate „Azure Data Lake Storage Gen2" duomenų saugyklos paskyrą, galite rinktis [ iš standartinės efektyvumo ir geriausio efektyvumo pakopos](/azure/storage/blobs/create-data-lake-storage-account). Jei pasirinksite geriausio efektyvumo pakopą, pažymėkite geriausio bloko didelių dvejetainių objektų kaip kliento tipą. 
+
+
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Nustatyti ryšį su „Azure Data Lake Storage Gen2“ 
+
 
 1. Eikite į **Administravimas** > **Ryšiai**.
 
