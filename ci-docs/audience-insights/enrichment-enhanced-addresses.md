@@ -1,5 +1,5 @@
 ---
-title: Adreso didinimo sodrinimas (yra vaizdo įrašas)
+title: Adreso stiprinimo sodrinimas (yra vaizdo įrašas)
 description: Papildykite ir normalizuokite klientų profilių adresų informaciją naudodami „Microsoft” modelius.
 ms.date: 01/19/2022
 ms.reviewer: mhart
@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353646"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376332"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientų profilių papildymas išplėstiniais adresais
 
 Adresai jūsų duomenyse gali būti nesusisteminti, neišsamūs arba neteisingi. Naudokite „Microsoft” modelius, kad normalizuotumėte ir papildytumėte savo adresus į [„Common Data Model” formatą](/common-data-model/schema/core/applicationcommon/address) geresniam tikslumui ir įžvalgoms.
+
+Taip pat [galite papildyti duomenų šaltinių](data-sources-enrichment.md) adresus, kad pagerintumėte duomenų suvienijimo proceso atitikimo tikslumą. 
 
 ## <a name="how-we-enhance-addresses"></a>Kaip išplečiame adresus
 
@@ -105,17 +107,17 @@ Norėdami pradėti papildymo procesą, komandų juostoje pasirinkite **Vykdyti**
 
 Pasibaigus papildymo procesui, galite peržiūrėti naujai papildytus klientų profilių duomenis dalyje **Mano papildymai**. Be to, rasite vėliausio naujinimo laiką ir papildytų profilių skaičių.
 
-Praturtintų duomenų pavyzdį galite pamatyti plytelėje **Praturtinti klientai**. Pasirinkite **Peržiūrėti daugiau** ir pasirinkite skirtuką **Duomenys**, kad pasiektumėte išsamų kiekvieno praturtinto profilio rodinį.
+Praturtintų duomenų pavyzdį galite pamatyti plytelėje **Praturtinti klientai peržiūrėti**. Pasirinkite **Žiūrėti daugiau** ir pasirinkite skirtuką **Duomenys,** kad pasiektumėte išsamų kiekvieno praturtinto profilio rodinį.
 
 ### <a name="overview-card"></a>Apžvalgos kortelė
 
 Apžvalgos kortelėje pateikiama išsami informacija apie sodrinimo aprėptį. 
 
-* **Apdoroti ir pakeisti** adresai: klientų profilių su sėkmingai praturtintais adresais skaičius.
+* **Apdoroti ir pakeisti** adresai: klientų profilių su adresais, kurie buvo sėkmingai praturtinti, skaičius.
 
-* **Adresai apdoroti ir nepakeisti**: klientų profilių su adresais, kurie buvo atpažinti, bet nepakeisti, skaičius. Paprastai tai atsitinka, kai įvesties duomenys galioja ir jų negalima pagerinti sodrinus.
+* **Apdoroti ir nepakeisti** adresai: klientų profilių su adresais, kurie buvo pripažinti, bet nepakeisti, skaičius. Paprastai tai atsitinka, kai įvesties duomenys yra tinkami ir jų negalima pagerinti sodrinus.
 
-* **Adresai neapdoroti ir nepakeisti**: profilių su neatpažintais adresais skaičius. Paprastai įvesties duomenims, kurie yra netinkami arba nepalaikomi sodrinimo.
+* **Adresai, kurie nebuvo apdoroti ir nekeičiami**: profilių su neatpažintais adresais skaičius. Paprastai įvesties duomenims, kurie yra neleistini arba nepalaikomi sodrinimo.
 
 ## <a name="next-steps"></a>Paskesni veiksmai
 

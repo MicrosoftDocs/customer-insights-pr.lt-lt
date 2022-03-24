@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355901"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376518"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Papildykite patys „Azure“ raktų saugykla (peržiūra)
 
@@ -31,7 +31,7 @@ Norint sukonfigūruoti saugyklą auditorijos įžvalgose, reikia įvykdyti šias
 
 - Turite turėti aktyvią „Azure“ prenumeratą.
 
-- Auditorijos įžvalgose turite [Administratoriaus](permissions.md#administrator) vaidmenį. Sužinokite daugiau apie [vartotojų teises auditorijos įžvalgose](permissions.md#assign-roles-and-permissions).
+- Auditorijos įžvalgose turite [Administratoriaus](permissions.md#admin) vaidmenį. Sužinokite daugiau apie [vartotojų teises auditorijos įžvalgose](permissions.md#assign-roles-and-permissions).
 
 - Turite [Bendradarbis](/azure/role-based-access-control/built-in-roles#contributor) ir [Vartotojo prieigos administratoriaus](/azure/role-based-access-control/built-in-roles#user-access-administrator) vaidmenis raktų saugykloje ar išteklių grupė, kuriai priklauso raktų saugykla. Norėdami gauti daugiau informacijos, eikite [Į „Azure" vaidmenų priskyrimų įtraukimas arba pašalinimas naudojant „Azure" portalą](/azure/role-based-access-control/role-assignments-portal). Jei raktų saugyklos vartotojo prieigos administratoriaus vaidmens neturite, turite atskirai nustatyti vaidmenimis pagrįstas prieigos valdymo teises, skirtas „Azure" „Dynamics 365 Customer Insights“ tarnybai. Norėdami naudoti pagrindinę [„Azure" paslaugą už raktų](connect-service-principal.md) saugyklą, kurią reikia susieti, atlikite šiuos veiksmus.
 

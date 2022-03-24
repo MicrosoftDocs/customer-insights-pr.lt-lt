@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 0bd2bfa7402ed19cb92ff1f35208b150cfec48c3
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353921"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455842"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>„Dynamics 365 Marketing“ segmentų naudojimas (peržiūra)
 
@@ -28,7 +28,7 @@ Jei naudojate naujas "Dynamics 365 Marketing" galimybes realiuoju klientų instr
 
 ## <a name="prerequisite-for-a-connection"></a>Būtinoji ryšio sąlygą
 
-- Kontaktų įrašai turi būti „Dynamics 365 Marketing”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Marketing”. Sužinokite daugiau, kaip pasiekti [„Dynamics 365 Marketing ”kontaktus naudojant „Microsoft Dataverse”](connect-power-query.md).
+- Kontaktų įrašai turi būti „Dynamics 365 Marketing”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Marketing”. Sužinokite daugiau, kaip pasiekti [„Dynamics 365 Marketing ”kontaktus naudojant „Microsoft Dataverse”](connect-dataverse-managed-lake.md).
 
   > [!NOTE]
   > Eksportuojant segmentus iš auditorijos įžvalgų į „Marketing” nebus sukurta naujų kontaktų įrašų rinkodaros egzemplioriuose. Kontaktų įrašai iš „Marketing” turi būti įtraukti į auditorijos įžvalgas ir naudojami duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.
@@ -47,7 +47,7 @@ Jei naudojate naujas "Dynamics 365 Marketing" galimybes realiuoju klientų instr
 
 1. Skyriuje **Serverio administratoriaus klientas** spustelėkite **Prisijungti** ir pasirinkite „Dynamics 365 Marketing“ klientą.
 
-1. Susieti kliento objekto kontaktinį ID su "Dynamics 365 Contact ID".
+1. Susiekite kliento objekto lauką Kontakto ID su "Dynamics 365" kontakto ID.
 
 1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį. 
 

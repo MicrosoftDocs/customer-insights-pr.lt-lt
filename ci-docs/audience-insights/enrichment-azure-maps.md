@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 2cc44f7b453d2aca328c397b14787c8a02c5e490
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226459"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376656"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Klientų profilių papildymas „Azure” žemėlapiais (peržiūros versija)
 
@@ -25,7 +25,7 @@ Norėdami sukonfigūruoti „Azure” žemėlapių duomenų papildymą turite į
 
 - Turite turėti aktyvią „Azure“ žemėlapių prenumeratą. Norėdami gauti prenumeratą galite [prisiregistruoti arba gauti nemokamą bandomąją versiją](https://azure.microsoft.com/services/azure-maps/).
 
-- „Azure” žemėlapių [ryšys](connections.md) yra galimas *arba* jūs turite [administratoriaus](permissions.md#administrator) teises ir aktyvų „Azure” žemėlapių API raktą.
+- „Azure” žemėlapių [ryšys](connections.md) yra galimas *arba* jūs turite [administratoriaus](permissions.md#admin) teises ir aktyvų „Azure” žemėlapių API raktą.
 
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 

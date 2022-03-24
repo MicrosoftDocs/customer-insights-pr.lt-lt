@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229974"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376702"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klientų profilių pagerinimo naudojant demografijas „Experian“ (peržiūra)
 
@@ -25,7 +25,7 @@ Norint konfigūruoti „Experian“, reikia įvykdyti šias būtinąsias sąlyga
 
 - Turite turėti aktyvią „Experian“ prenumeratą. Norėdami gauti prenumeratą, [kreipkitės„ Experian“](https://www.experian.com/marketing-services/contact) tiesiai. [Sužinokite daugiau apie „Experian“ duomenų praturtinimą](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- „Experian“ ryšį jau sukonfigūravo administratorius *arba* turite [administratoriaus](permissions.md#administrator) teises. Taip pat jums reikia sukurto jūsų SSH apsaugoto transportavimo (ST) abonemento vartotojo ID, šalies ID ir „Experian“ modelio numerio.
+- „Experian“ ryšį jau sukonfigūravo administratorius *arba* turite [administratoriaus](permissions.md#admin) teises. Taip pat jums reikia sukurto jūsų SSH apsaugoto transportavimo (ST) abonemento vartotojo ID, šalies ID ir „Experian“ modelio numerio.
 
 ## <a name="supported-countriesregions"></a>Palaikomos šalys ir (arba) regionai
 

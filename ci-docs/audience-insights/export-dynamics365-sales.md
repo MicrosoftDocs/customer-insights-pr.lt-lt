@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355027"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455872"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>„Dynamics 365 Sales“ segmentų naudojimas (peržiūra)
 
@@ -26,12 +26,12 @@ Naudokite savo klientų duomenis kurdami rinkodaros sąrašus, vykdydami darbo e
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Eksportas į "Dynamics 365 Sales" ribojamas iki 100 000 narių segmente.
-- Segmento eksportavimas į "Dynamics 365 Sales" gali užtrukti iki 3 valandų. 
+- Eksportas į "Dynamics 365 Sales" ribojamas iki 100 000 narių viename segmente.
+- Segmento eksportas į "Dynamics 365 Sales" gali užtrukti iki 3 valandų. 
 
 ## <a name="prerequisite-for-connection"></a>Būtinoji ryšio sąlyga
 
-1. Kontaktų įrašai turi būti „Dynamics 365 Sales”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Sales”. Sužinokite daugiau, kaip pasiekti [„Dynamics 365 Sales” kontaktus naudojant „Microsoft Dataverse”](connect-power-query.md).
+1. Kontaktų įrašai turi būti „Dynamics 365 Sales”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Sales”. Skaitykite daugiau apie tai, kaip nuryti kontaktus iš ["Dynamics 365 Sales" naudojant Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Eksportuojant segmentus iš auditorijos įžvalgų į „Sales” nebus sukurta naujų kontaktų įrašų pardavimo egzemplioriuose. Kontaktų įrašai iš „Sales” turi būti įtraukti į auditorijos įžvalgas ir naudojami kaip duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.

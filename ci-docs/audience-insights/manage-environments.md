@@ -1,7 +1,7 @@
 ---
 title: Aplinkų kūrimas ir valdymas
 description: Sužinokite, kaip prisijungti prie paslaugų ir kaip valdyti aplinkas.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354289"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376886"
 ---
 # <a name="manage-environments"></a>Aplinkų valdymas
-
-
 
 ## <a name="switch-environments"></a>Perjungti aplinką
 
@@ -49,7 +47,7 @@ Daugiau informacijos apie aplinkos parametrus žr. [Naujos aplinkos kūrimas](cr
 Jei norite [naudoti iš anksto anksto prognozė modelius](predictions-overview.md#out-of-box-models) konfigūruokite duomenų bendrinimą su „Dataverse“. Arba galite įjungti duomenų nurijimas iš vietinis šaltinių, pateikdami jūsų „Microsoft Dataverse“ organizacijos administruojami aplinkos URL.
 
 > [!IMPORTANT]
-> "Customer Insights" ir Dataverse turi būti tame pačiame regione, kad būtų galima bendrinti duomenis.
+> Klientų įžvalgos ir Dataverse turi būti tame pačiame regione, kad būtų galima dalytis duomenimis.
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
 
@@ -98,9 +96,29 @@ Atnaujinę duomenų šaltinius, eikite į **Duomenys** > **Suvienodinti**. Čia 
 
 Kai duomenų sujungimas baigtas, eikite į **Priemonės** ir **Segmentai**, kad jie būtų atnaujinti.
 
+## <a name="change-the-owner-of-an-environment"></a>Aplinkos savininko keitimas
+
+Nors keli vartotojai gali turėti administratoriaus teises "Customer Insights", tik vienas vartotojas yra aplinkos savininkas. Pagal numatytuosius nustatymus administratorius iš pradžių sukuria aplinką. Kaip aplinkos administratorius, galite priskirti nuosavybę kitam vartotojui, turinčiam administratoriaus teises.
+
+1. Programos antraštėje pasirinkite **Aplinkos** parinkėją.
+
+1. Pasirinkite **Redagavimo** piktogramą.
+
+1. Lauke Aplinkos redagavimas **eikite** **į veiksmą Pagrindinė informacija**.
+
+1. **Lauke Aplinkos savininko** keitimas pasirinkite naują aplinkos savininką.  
+
+1. Pasirinkite **Peržiūra ir pabaiga**, tada **Naujinti**, kad pritaikytumėte keitimus. 
+
+## <a name="claim-ownership-of-an-environment"></a>Reikalauti nuosavybės teisės į aplinką
+
+Jei aplinkos savininkas palieka organizaciją arba jo vartotojo abonementas panaikinamas, aplinka neturės savininko. Vartotojas, turintis administratoriaus teises, gali reikalauti nuosavybės teisių ir tapti nauju savininku. Jie gali ir toliau valdyti aplinką arba [pakeisti nuosavybę į kitą administratorių](#change-the-owner-of-an-environment). 
+
+Norėdami reikalauti nuosavybės, pasirinkite mygtuką **Paimti nuosavybę**, kuris rodomas kiekvieno "Customer Insights" puslapio viršuje, kai pradinis savininkas paliko organizaciją.
+
 ## <a name="reset-an-existing-environment"></a>Paleiskite iš naujo esamą aplinką
 
-Kaip administratorius galite iš naujo nustatyti aplinką į tuščią būseną, jei norite panaikinti visas konfigūracijas ir pašalinti prarytus duomenis.
+Kaip aplinkos savininkas, galite iš naujo nustatyti aplinką į tuščią būseną, jei norite panaikinti visas konfigūracijas ir pašalinti nurytus duomenis.
 
 1.  Programos antraštėje pasirinkite **Aplinkos** parinkėją. 
 
@@ -112,7 +130,7 @@ Kaip administratorius galite iš naujo nustatyti aplinką į tuščią būseną,
 
 ## <a name="delete-an-existing-environment"></a>Esamos aplinkos naikinimas
 
-Kaip administratorius galite panaikinti jūsų administruojamą aplinką.
+Kaip aplinkos savininkas, galite panaikinti savo administruojamą aplinką.
 
 1.  Programos antraštėje pasirinkite **Aplinkos** parinkėją.
 

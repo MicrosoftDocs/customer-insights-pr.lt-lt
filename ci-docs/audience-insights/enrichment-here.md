@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 1cbbad9bfe559bcb15b23894fc7475507aae8add
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230392"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376361"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Tinkintų profilių papildymas su „HERE Technologies“ (peržiūra)
 
@@ -25,7 +25,7 @@ Siekiant sukonfigūruoti „HERE Technologies“ papildymus, būtina atitikti to
 
 - Turite turėti „HERE Technologies“ prenumeratą. Norėdami gauti prenumeratą galite [prisijungti čia](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ar [susisiekti su „HERE Technologies“](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) tiesiogiai. [Sužinokite daugiau apie vietos papildymą su „HERE Technologies“.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- HERE [ryšys](connections.md) yra prieinamas *ar* turite [administratoriaus](permissions.md#administrator) teises ir „HERE Technologies“ API raktą.
+- HERE [ryšys](connections.md) yra prieinamas *ar* turite [administratoriaus](permissions.md#admin) teises ir „HERE Technologies“ API raktą.
 
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 

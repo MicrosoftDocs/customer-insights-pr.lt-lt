@@ -1,7 +1,7 @@
 ---
 title: Valdykite vartotojo leidimus
 description: Sužinokite apie leidimus ir vartotojo vaidmenis.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355947"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376748"
 ---
 # <a name="user-permissions"></a>Vartotojų teisės
 
@@ -48,7 +48,7 @@ Yra trys vaidmenų tipai:
 - Valdykite konfigūraciją ir papildykite klientų profilius iš puslapio **Papildymas** (tik pirmosios šalies papildymai).
 - Tvarkykite ir kurkite eksportavimus pagal su bendradarbiais bendrinamus ryšius. [Sužinokite daugiau apie tai, kaip administratoriai leidžia bendradarbiams naudoti ryšį eksportavimui](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administratorius
+## <a name="admin"></a>Administravimas
 
 - Dalyviui pasiekiamos visos teisės.
 - Pakeiskite nustatymus **Sistemos** puslapyje, įskaitant darbo kalbą ir atnaujinkite grafikus jūsų sistemos procesuose.
@@ -60,6 +60,12 @@ Yra trys vaidmenų tipai:
 - Įdiekite ir naudokite **Kliento kortelės papildinį**.
 - Įtraukite ir naudokite **„Power Apps“ jungtį**.
 - Įjunkite [„Customer Insights“ API naudojimą](apis.md).
+- [Priskirti aplinkos nuosavybę](manage-environments.md#change-the-owner-of-an-environment) kitam administratoriui.
+
+## <a name="admin-owner"></a>Administratorius (savininkas)
+
+- Visos administratoriaus turimos teisės.
+- [Iš naujo nustatykite ir panaikinkite](manage-environments.md#reset-an-existing-environment) aplinką.
 
 ## <a name="assign-roles-and-permissions"></a>Vaidmenų ir teisių priskyrimas
 

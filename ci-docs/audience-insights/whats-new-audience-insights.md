@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232668"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376472"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
-
-
 
 Džiaugiamės galėdami pranešti apie mūsų naujausius atnaujinimus! Šiame straipsnyje apibendrinamos viešos peržiūros versijos funkcijos, bendro pasiekiamumo patobulinimai ir funkcijų atnaujinimai. Norėdami peržiūrėti ilgalaikius funkcijų planus, peržiūrėkite [„Dynamics 365“ ir „Power Platform“ išleidimo planai](/dynamics365/release-plans/).
 
@@ -27,58 +25,114 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
 
+## <a name="february-2022-updates"></a>2022 m. vasario atnaujinimai
+
+2022 m. vasario mėn.
+
+### <a name="general-availability-for-prediction-models"></a>Bendras prognozė modelių prieinamumas
+
+"Out-of-the-box" prognozė modeliai, įskaitant **prenumeratos mušimą**, **operacijų srautą** ir **kliento gyvenimo trukmės vertę (CLV),** tampa visuotinai prieinami kaip "Customer Insights" dalis. 
+
+Daugiau informacijos ieškokite [Predictions overview](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nauji duomenų šaltinis: integracija su Azure Synapse Analytics (Peržiūra)
+
+Azure Synapse Analytics tai įmonės analizės paslauga, kuri pagreitina laiką įžvalgoms apie duomenų saugyklas ir didelių duomenų sistemas.
+
+Jei jūsų organizacija jau naudoja išplėstines analizės galimybes Azure Synapse Analytics ir saugo išvestį duomenų ežero duomenų bazėse, galite lengvai nuryti šiuos duomenis į "Customer Insights". Daugiau informacijos ieškokite [Connect a Azure Synapse duomenų šaltinis (Preview)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>LiveRamp sodrinimas (Peržiūra)
+
+"LiveRamp" teikia deterministinę autonominės tapatybės skiriamąją gebą ir klientų duomenų konsolidavimą. Galite susieti asmeninius identifikatorius savo klientų duomenyse su AbiliTec tapatybės grafiku ir gauti AbiliTec ID. Tada galite naudoti šiuos ID, kad geriau suvienodintumėte savo klientų duomenis.
+
+Daugiau informacijos ieškokite [Enrich customer profiles with identity data from LiveRamp (Preview)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Duomenų šaltinių sodrinimas (peržiūra)
+
+Naudokite duomenis iš tokių šaltinių kaip "Microsoft" ir kiti partneriai, kad praturtintumėte savo klientų duomenis prieš duomenų suvienodinimą. Duomenų šaltinis praturtėjimas padeda užtikrinti didesnį duomenų išsamumą ir kokybę, kuri gali padėti pasiekti geresnių rezultatų, kai suvienodinsite duomenis.
+
+Daugiau informacijos ieškokite [Enrichment for data sources (Preview)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Keisti aplinkos savininką
+
+Nors keli vartotojai gali turėti administratoriaus teises "Customer Insights", tik vienas vartotojas yra aplinkos savininkas. Patobulinta patirtis leidžia pakeisti aplinkos savininkus ir reikalauti nuosavybės, jei buvęs savininkas paliko organizaciją. 
+
+Daugiau informacijos ieškokite [Keisti aplinkos](manage-environments.md#change-the-owner-of-an-environment) savininką.
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Duomenų rengimo procesas išvardija sugadintų įrašų korupcijos priežastis
+
+Duomenų rengimo procesas dabar rodo visų laukų su sugadintais duomenimis individualiame įrašų lygyje, kad būtų lengviau identifikuoti, korupcijos priežastį. 
+
+Daugiau informacijos ieškokite [Corrupted data sources](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Įtraukimo įžvalgų galimybės ataskaitų funkcijų ataskaitų funkcijų peržiūros pabaiga
+
+Dynamics 365 Customer Insights Įtraukimo įžvalgų galimybių peržiūra baigėsi 2022 m. vasario 15 d.  
+Šis pakeitimas reiškia, kad "Customer Insights" bandomojoje patirtyje nebėra galimybės kurti piltuvus ar kitas ataskaitų teikimo funkcijas.
+
+Kviečiame ištirti ir įvertinti daugelį kitų "Customer Insights", "Microsoft" klientų duomenų platformos (CDP) funkcijų [...](https://dynamics.microsoft.com/ai/customer-insights/).    
+ 
+Pereinamuoju laikotarpiu esami peržiūros dalyviai vis dar turi prieigą prie kai kurių peržiūros galimybių ir funkcijų:
+
+- Gauti kodą žiniatinklio svetainei arba mobiliųjų įrenginių programėlei kurti 
+- Peržiūrėti įvykių ir įvykių ypatybes 
+- Padidinkite vieningus profilius su prarytais ir rafinuotais įvykiais, kad galėtumėte pasinaudoti visa klientų duomenų verte
+  
+Pereinamuoju laikotarpiu užfiksuoti įvykiai vis dar transliuojami į prijungtą Duomenų ežerą. Išjungus šią funkciją, duomenų bendrinimas tarp įtraukimo įžvalgų ir auditorijos įžvalgų bus sustabdytas ir į prijungtą saugyklą nebus siunčiami jokie nauji įvykiai.
+Jei turite klausimų apie galimybės peržiūros pabaigą, tiesiogiai susisiekite su savo "Microsoft" abonemento komanda. Jūsų paskyros komanda informuos jus apie būsimus paleidimus. 
+
 ## <a name="january-2022-updates"></a>2022 m. sausio mėn. naujinimai
 
-2022 m. sausio naujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų taisymus.
+2022 m. sausio mėnesio atnaujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų taisymus.
 
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Jūsų klientų atsiliepimų sentimentų analizė
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Jūsų kliento atsiliepimų sentimentų analizė
 
-"Customer Insights" suteikia naują AI varomą funkciją, skirtą sintetinti klientų nuotaikas ir nustatyti konkrečius verslo aspektus kaip tikslinių patobulinimų galimybes. Analizuodami savo klientų rašytinius atsiliepimus, galite gauti tikslių įžvalgų mažomis sąnaudomis. Sentimentų analizė, kurią maitina natūralios kalbos apdorojimo (NLP) modeliai, generuojantys dvi išvestines įžvalgas kiekvienam kliento ID. Sentimentų balas (nuo -5 iki 5) ir taikomų verslo aspektų sąrašas. 
+"Customer Insights" suteikia naują dirbtiniu intelektu pagrįstą funkciją, skirtą sintezuoti klientų nuotaikas ir nustatyti konkrečius verslo aspektus kaip tikslinių patobulinimų galimybes. Analizuodami savo klientų rašytinius atsiliepimus, galite gauti tikslių įžvalgų už mažą kainą. Sentimentų analizė, kurią įgalina natūralios kalbos apdorojimo (NLP) modeliai, generuojantys dvi išvestines įžvalgas kiekvienam kliento ID. Sentimentų balas (nuo -5 iki 5) ir taikomų verslo aspektų sąrašas. 
 
-Daugiau informacijos ieškokite [Analizuoti klientų atsiliepimų (Preview) jausmus](sentiment-analysis.md).
+Daugiau informacijos ieškokite [Analizuoti nuotaikas klientų atsiliepimuose (Peržiūra)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>2021 m. gruodžio mėn. naujinimai
 
-2021 m. gruodžio mėnesio naujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų taisymus.
+2021 m. gruodžio mėn.
 
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>"Customer Insights" žurnalų persiuntimai į "Azure Monitor"
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>"Customer Insights" žurnalų persiuntimas į "Azure Monitor"
 
-"Customer Insights" užtikrina tiesioginę integraciją su "Azure Monitor". Ši funkcija apima audito įvykius ir veiklos įvykius. "Azure Monitor" išteklių žurnalai leidžia stebėti ir siųsti žurnalus į "Azure Storage", "Azure Log Analytics" arba transliuoti juos į "Azure Event Hubs".
+"Customer Insights" užtikrina tiesioginį integraciją su "Azure Monitor". Ši funkcija apima audito įvykius ir veiklos įvykius. "Azure Monitor" išteklių žurnalai leidžia stebėti ir siųsti žurnalus į "Azure Storage", "Azure Log Analytics" arba transliuoti juos į "Azure Event Hubs".
 
-Daugiau informacijos ieškokite [Log forwarding Dynamics 365 Customer Insights in with Azure Monitor (Preview)](diagnostics.md).
+Daugiau informacijos ieškokite [Log forwarding in Dynamics 365 Customer Insights with Azure Monitor (Preview)](diagnostics.md).
 
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Klientų profilių praturtinti įtraukimo duomenimis
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Klientų profilių praturtinimas įtraukimo duomenimis
 
-Naudokite duomenis, kad Microsoft Office 365 papildytumėte savo klientų paskyros profilius įžvalgomis apie įtraukimus per Office 365 programas. Įtraukimo duomenis sudaro el. pašto ir susitikimo veikla, kuri kaupiama paskyros lygiu. Pavyzdžiui, el. laiškų iš verslo abonemento skaičius arba susitikimų su abonementu skaičius. Duomenys apie atskirus vartotojus nėra bendrinami. Šis praturtėjimas yra prieinamas šiuose regionuose: Jungtinėje Karalystėje, Europoje, Šiaurės Amerikoje.
+Naudokite duomenis iš Microsoft Office 365, kad praturtintumėte savo klientų abonementų profilius įžvalgomis apie įtraukimus per Office 365 programas. Įtraukimo duomenis sudaro el. pašto ir susitikimo veikla, kuri kaupiama paskyros lygiu. Pavyzdžiui, el. laiškų iš verslo paskyros skaičius arba susitikimų su paskyra skaičius. Jokie duomenys apie atskirus vartotojus nėra bendrinami. Šis praturtinimas yra prieinamas šiuose regionuose: Jungtinėje Karalystėje, Europoje, Šiaurės Amerikoje.
 
-Daugiau informacijos ieškokite [Praturtinkite klientų profilius įtraukimo duomenimis (Preview)](enrichment-office.md).
+Daugiau informacijos ieškokite [Enrich customer profiles with engagement data (Preview)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Išplėstinės duomenų suvienijimo funkcijos
 
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Įgalinti konfliktų sprendimo strategijas individualiame atributo lygyje
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Įgalinti konfliktų sprendimo strategijas atskiru atributo lygiu
 
-Kai kliento įrašai objekto dalyje, galbūt nenorite pasirinkti viso įrašo kaip nugalėtojo. Dabar leidžiame sujungti geriausius laukus iš įvairių įrašų pagal kiekvieno atributo taisykles. Pavyzdžiui, galite pasirinkti išlaikyti naujausią el. laišką IR išsamiausią adresą iš skirtingų įrašų. 
+Kai objekte norite gauti klientų įrašus, galbūt nenorite pasirinkti viso įrašo kaip laimėtojo. Dabar leidžiame sulieti geriausius laukus iš įvairių įrašų pagal kiekvieno atributo taisykles. Pavyzdžiui, galite pasirinkti išsaugoti naujausią el. laišką ir išsamiausią adresą iš skirtingų įrašų. 
 
-Dabar galite nustatyti atskiras atskirų atributų suliejimo taisykles, kai viename objekte buvo įrašų deduplicing ir suliejimo. Anksčiau leidome pasirinkti tik vieną suliejimo taisyklę (įrašų laikymas pagal recentcijos duomenų išsamumą) ir ši taisyklė buvo pritaikyta įrašo lygiu visiems atributams. Tai nėra idealu, kai kai kurie duomenys, kuriuos norite saugoti, randami įraše A ir kiti geri duomenys, rasti įraše B.
+Dabar galite nustatyti atskiras atskirų atributų suliejimo taisykles, kai viename objekte norite suaktyvinti ir sulieti įrašus. Anksčiau mes leidome jums pasirinkti tik vieną suliejimo taisyklę (įrašų laikymą pagal sąžiningumo duomenų išsamumą) ir ši taisyklė buvo taikoma įrašų lygiu visiems atributams. Tai nėra idealu, kai kai kurie duomenys, kuriuos norite išsaugoti, randami įraše A ir kiti geri duomenys, rasti įraše B.
 
 Dėl daugiau informacijos, žr. [Nustatyti dublikavimo panaikinimą atitikties objekte](match-entities.md#define-deduplication-on-a-match-entity).
 
-#### <a name="custom-rules-for-matching"></a>Pasirinktinės derinimo taisyklės
+#### <a name="custom-rules-for-matching"></a>Pasirinktinės gretinimo taisyklės
 
-Yra atvejų, kai reikia nurodyti bendrųjų taisyklių išimtį, kad nesusilygtumėte su įrašais. Tai gali atsitikti, kai keli asmenys dalijasi pakankamai informacijos, kad sistema atitiktų juos kaip vieną asmenį. Pavyzdžiui, dvyniai su tuo pačiu pavardė, gyvena tame pačiame mieste ir dalijasi gimimo data.
+Yra atvejų, kai reikia nurodyti bendrųjų taisyklių išimtį, kad nesutaptumėte su įrašais. Tai gali atsitikti, kai keli asmenys dalijasi pakankamai informacijos, kad sistema atitiktų juos kaip vieną asmenį. Pavyzdžiui, dvyniai, turintys tą pačią pavardė, gyvena tame pačiame mieste ir dalijasi gimimo data.
 
 Išimtys užtikrina, kad suvienijimo taisyklėse būtų galima spręsti neteisingo duomenų suvienijimo problemą. Į taisyklę galite įtraukti kelias išimtis.
 
-Daugiau informacijos ieškokite [Įtraukti išimtis į taisyklę](match-entities.md#add-exceptions-to-a-rule).
+Daugiau informacijos ieškokite [Add exception to a rule](match-entities.md#add-exceptions-to-a-rule).
 
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Teikti papildomas konfliktų sprendimo strategijas ir įgalinti atributų grupavimą
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Pateikite papildomas konfliktų sprendimo strategijas ir įgalinkite atributų grupavimą
 
-Ši funkcija leidžia laukų grupę traktuoti kaip vieną vienetą. Pavyzdžiui, kai mūsų įrašuose yra laukai Adresas1, Adresas2, Miestas, Valstija ir Zip. Tikriausiai nenorime susijungti į kito įrašo adresą2, manydami, kad tai padarys mūsų duomenis išsamesnius.
+Ši funkcija leidžia laukų grupę traktuoti kaip vieną vienetą. Pavyzdžiui, kai jei mūsų įrašuose yra laukų Adresas1, Adresas2, Miestas, Valstybė ir Zip. Mes tikriausiai nenorime sulieti į kito įrašo adresą2, manydami, kad tai padarys mūsų duomenis išsamesnius.
 
 Dabar galite sujungti susijusių laukų grupę ir grupei taikyti vieną suliejimo strategiją. 
 
-Daugiau informacijos ieškokite [Sujungti laukų](merge-entities.md#combine-a-group-of-fields) grupę.
+Daugiau informacijos ieškokite [Combine a group of fields](merge-entities.md#combine-a-group-of-fields).
 
 
 ## <a name="november-2021-updates"></a>2021 m. lapkričio mėn. naujinimai
@@ -87,9 +141,9 @@ Daugiau informacijos ieškokite [Sujungti laukų](merge-entities.md#combine-a-gr
 
 ### <a name="segment-membership-now-available-in-dataverse"></a>Segmento narystė dabar pasiekiama Dataverse
 
-Klientų profilių segmento narystės informacija dabar pasiekiama Dataverse kartu su klientų profiliais ir įžvalgomis. "Dynamics 365" veiksmų programos ir modeliu pagrįstos programos gali naudoti šiuos duomenis, ieškodamos segmento narystės informacijos tam tikram klientui.
+Klientų profilių segmento narystės informacija dabar pasiekiama Dataverse kartu su klientų profiliais ir įžvalgomis. "Dynamics 365" veiksmų programos ir modeliu pagrįstos programos gali naudoti šio duomenų paieškos segmento narystės informaciją konkrečiam klientui.
 
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>Verslo klientų veiklos palaikymo kontaktinio lygio informacija
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Veikla palaiko verslo sąskaitų kontakto lygio informaciją
 
 Dabar galite konfigūruoti, rodyti ir filtruoti kontaktų veiklas savo verslo abonemento veiklos laiko planavimo juostose, kad geriau suprastumėte, kurie abonemento kontaktai dalyvavo konkrečioje veikloje.
 
@@ -97,35 +151,35 @@ Dabar galite konfigūruoti, rodyti ir filtruoti kontaktų veiklas savo verslo ab
 
 2021 m. spalio mėn.
 
-### <a name="b-to-b"></a>Nuo B iki B
+### <a name="b-to-b"></a>B-to-B
 
-Nuo 2021 m. spalio galite dirbti su verslo klientais ir su su jų susijusiais kontaktais programoje "Customer Insights". Anksčiau programa buvo daugiausia pritaikyta individualiems vartotojams. Kelios funkcijų sritys buvo atnaujintos, kad būtų palaikomi B-to-B scenarijai, papildę naują aplinkos tipą. Norėdami peržiūrėti palaikomas B-to-B funkcijas, žr [...](work-with-business-accounts.md).
+Nuo 2021 m. spalio galite dirbti su verslo sąskaitomis ir su jomis susijusiais kontaktais programoje "Customer Insights". Anksčiau programa daugiausia buvo pritaikyta individualiems vartotojams. Kelios funkcijų sritys buvo atnaujintos, kad būtų palaikomi B-to-B scenarijai, be naujo aplinkos tipo. Palaikomų B-to-B funkcijų apžvalgos ieškokite [Darbas su verslo abonementais auditorijos įžvalgose](work-with-business-accounts.md).
 
-Tolesniuose skyriuose pabrėžiamos kai kurios pagrindinės sritys, kurios buvo pritaikytos verslo sąskaitoms ir atskiriems vartotojams remti.
+Tolesniuose skyriuose pabrėžiamos kai kurios pagrindinės sritys, kurios buvo pritaikytos verslo sąskaitoms ir atskiriems vartotojams palaikyti.
 
-#### <a name="export-segments-based-on-business-accounts"></a>Segmentų eksportavimas pagal verslo sąskaitas
+#### <a name="export-segments-based-on-business-accounts"></a>Eksportuoti segmentus pagal verslo sąskaitas
 
-Visas segmento eksportas auditorijos įžvalgose yra verslo sąskaitų kontekste. Daugumai segmentų eksportui reikia papildomos konfigūracijos ir [kontaktinės informacijos, kuri, kaip numatyta](segment-builder.md#create-a-new-segment) pagrindiniuose segmentuose, galioja verslo sąskaitoms. Daugiau informacijos ieškokite [Export segments](export-destinations.md#export-segments).
+Visas segmento eksportas auditorijos įžvalgose yra prieinamas verslo sąskaitų kontekste. Daugumai segmentų eksportui reikia papildomos konfigūracijos ir [kontaktinės informacijos, kuri](segment-builder.md#create-a-new-segment), kaip prognozuojama pagrindiniuose segmentuose, galiotų verslo sąskaitoms. Daugiau informacijos ieškokite [Export segments](export-destinations.md#export-segments).
 
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>"LinkedIn Ads" eksportavimo naudojimas su verslo sąskaitomis
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>"LinkedIn Ads" eksportavimo su verslo sąskaitomis naudojimas
 
-"LinkedIn Ads" eksportavimą dabar galima taikyti kontaktams ir įmonėms verslo paskyrų kontekste. Pasirinkdami įmonės taikymą kaip pagrindinį "LinkedIn" eksporto židinį, galite eksportuoti segmentus, sukurtus verslo paskyrose, neprojektuojant kontaktinės informacijos. Norėdami gauti daugiau informacijos, eikite į dokumentus apie ["LinkedIn Ads" eksportą](export-linkedin-ads.md) ir skirtumą tarp [kontaktų taikymo](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ir [įmonės taikymo](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+"LinkedIn Ads" eksportavimas dabar galimas kontaktams ir įmonės taikymui verslo paskyrų kontekste. Pasirinkę įmonės taikymą kaip pagrindinį "LinkedIn" eksporto židinį, galite eksportuoti segmentus, pagrįstus verslo sąskaitomis, neprojektuodami kontaktinės informacijos. Norėdami gauti daugiau informacijos, eikite į dokumentus apie ["LinkedIn Ads" eksportą](export-linkedin-ads.md) ir skirtumą tarp [kontaktų taikymo](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ir [įmonės taikymo](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Kurti priemones, pagrįstas verslo sąskaitomis ir jų hierarchija
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Kurti priemones pagal verslo sąskaitas ir jų hierarchiją
 
-Matų daryklė leidžia kurti priemones aplink verslo paskyras ir pasirinktinai naudoti hierarchijos informaciją. Hierarchijos informacija naudojama norint suvynioti matavimo skaičiavimą visoje sąskaitoje ir visose su ja susijusiose antrinėse sąskaitose. Pavyzdžiui, galite kurti tokius matus kaip bendros kiekvienos verslo sąskaitų grupės, nustatytos pagal jų hierarchiją, įplaukos. Dėl daugiau informacijos, žr. [Nustatyti ir valdyti priemones](measures.md).
+Matavimo daryklė leidžia kurti priemones, susijusias su verslo sąskaitomis, ir pasirinktinai naudoti hierarchijos informaciją. Hierarchijos informacija naudojama sąskaitos ir visų su juo susijusių antrinių sąskaitų matavimų skaičiavimui apibendrinti. Pavyzdžiui, galite kurti tokius matus kaip bendros pajamos kiekvienai verslo sąskaitų grupei, kurią identifikuoja jų hierarchija. Dėl daugiau informacijos, žr. [Nustatyti ir valdyti priemones](measures.md).
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Segmentų kūrimas pagal verslo sąskaitas ir jų hierarchiją
 
-Segmento generatorius leidžia kurti verslo sąskaitų segmentus, kuriuose pasirinktinai įtraukiama kiekvienos segmento paskyros kontaktinė informacija. Jei nustatote sąskaitų hierarchiją, segmento kūrime galite naudoti abonementų hierarchijos informaciją. Daugiau informacijos ieškokite [Kurti naują segmentą](segment-builder.md#create-a-new-segment).
+Segmento daryklė leidžia kurti verslo sąskaitų segmentus, kuriuose pasirinktinai įtraukiama kiekvieno segmento abonemento kontaktinė informacija. Jei nustatėte sąskaitų hierarchiją, segmento kūrime galite naudoti abonementų hierarchijos informaciją. Daugiau informacijos ieškokite [Create a new segment](segment-builder.md#create-a-new-segment).
 
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Išsaugokite savo verslo paskyras su giliomis įžvalgomis apie jų mušimo tendenciją
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Išsaugokite savo verslo sąskaitas su giliomis įžvalgomis apie jų tendenciją
 
-Klientų prognozė modelis dabar taip pat palaiko verslo sąskaitas. Galite įvertinti ne tik sąskaitos, bet ir sąskaitos bei produkto ar paslaugos kategorijos, kurią jie perka iš jūsų, derinį. Šis papildymas padeda jums suprasti, ar paskyra yra labiau tikėtina, kad nustos pirkti iš jūsų apskritai, ar tik tam tikros kategorijos prekėms ar paslaugoms. Norėdami dar labiau padėti jums naudoti šį AI modelį, jame taip pat išvardytos priežastys, kodėl paskyra gali būti susmukdyta. Daugiau informacijos ieškokite [Transaction churn prognozė (preview)](predict-transactional-churn.md).
+Klientų prognozė modelis dabar palaiko ir verslo sąskaitas. Galite įvertinti ne tik sąskaitos, bet ir sąskaitos bei produkto ar paslaugos kategorijos, kurią jie perka iš jūsų, derinį. Šis papildymas padeda suprasti, ar sąskaita yra labiau tikėtina, kad nustos pirkti iš jūsų apskritai, ar tik tam tikrai prekių ar paslaugų kategorijai. Norėdami dar labiau padėti jums naudoti šį AI modelį, jame taip pat išvardijamos priežastys, kodėl paskyra gali sulūžti. Daugiau informacijos ieškokite [Transaction churn prognozė (preview)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Verslo abonemento kontaktų peržiūra kliento rodinyje
 
-Jei verslo abonementai susieti su susijusiais abonementais, programa "Customer Insights" rodo šiuos susijusius kontaktus kaip išsamios kliento informacijos rodinio dalį. Daugiau informacijos ieškokite [Customer profiles](customer-profiles.md).
+Jei verslo abonementai susieti su susijusiais klientais, "Customer Insights" programėlė rodo šiuos susijusius kontaktus kaip kliento informacijos rodinio dalį. Daugiau informacijos ieškokite [Customer profiles](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>2021 m. rugsėjo mėn. naujinimai
