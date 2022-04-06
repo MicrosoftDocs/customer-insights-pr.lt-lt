@@ -1,7 +1,7 @@
 ---
 title: Naudokite duomenų šaltinius duomenų suvartojimui
 description: Sužinokite, kaip importuoti duomenis iš įvairių šaltinių.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354059"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464084"
 ---
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
@@ -27,7 +27,7 @@ Publikos įžvalgų galimybės „Dynamics 365 Customer Insights“ sujungia su 
 
 ## <a name="add-a-data-source"></a>Įtraukti duomenų šaltinį
 
-Peržiūrėkite išsamius straipsnius, kaip įtraukti duomenų šaltinis, atsižvelgiant į pasirinktą parinktį.
+Skaitykite išsamius straipsnius, kaip įtraukti duomenų šaltinis, atsižvelgiant į pasirinktą parinktį.
 
 Galite įtraukti šiuos duomenų šaltinius:
 
@@ -37,17 +37,28 @@ Galite įtraukti šiuos duomenų šaltinius:
 - [Azure Synapse Analytics Iš duomenų bazės](connect-synapse.md)
 
 > [!NOTE]
-> Jei naudojate bandomąją versiją, importavimo metodų skyriuje yra **"Customer Insights" duomenų bibliotekos** parinktis. Pasirinkite šią parinktį, jei norite pasirinkti duomenų rinkinio pavyzdį, prieinamą įvairioms pramonės šakoms. Daugiau informacijos rasite teisme [Dynamics 365 Customer Insights](../trial-signup.md).
+> Jei naudojate bandomąją versiją, importavimo metodų skyriuje yra **parinktis "Customer Insights" duomenų biblioteka**. Pasirinkite šią parinktį, jei norite pasirinkti duomenų rinkinio pavyzdį, prieinamą įvairioms pramonės šakoms. Norėdami gauti daugiau informacijos, žr [Dynamics 365 Customer Insights.](../trial-signup.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Duomenų įtraukimas iš vietinių duomenų šaltinių
 
-Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į „Microsoft Power Platform“ duomenų srautus. Duomenų srautus galite įgalinti "Customer Insights", nustatydami [aplinką pateikdami aplinkos URL Microsoft Dataverse.](create-environment.md)
+Duomenų tyrimas iš vietinių duomenų šaltinių „Audience Insights“ palaikomas atsižvelgiant į „Microsoft Power Platform“ duomenų srautus. Nustatydami aplinką galite įgalinti duomenų srautus "Customer Insights", nustatydami [aplinką pateikdami Microsoft Dataverse aplinkos URL](create-environment.md).
 
-Duomenų šaltiniai, sukurti susiedžius Dataverse aplinką su "Customer Insights", pagal numatytuosius nustatymus naudoja [Power Platform duomenų srautus](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Naudodami vietinis duomenų šliuzus, galite pašalinti ir iš naujo atkurti duomenų šaltinius, egzistavusius Dataverse prieš [susietą](/data-integration/gateway/service-gateway-app) aplinką.
+Duomenų šaltiniai, sukurti susiejus Dataverse aplinką su "Customer Insights", pagal numatytuosius nustatymus naudoja [Power Platform duomenų srautus](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Galite pašalinti ir atkurti duomenų šaltinius, buvusius prieš susiejant Dataverse [aplinką, naudodami vietinis duomenų šliuzus](/data-integration/gateway/service-gateway-app).
 
 Esamos Power BI arba Power Apps aplinkos duomenų tinklų sietuvai bus matomi ir galėsite pakartotinai naudoti „Customer Insights“. Duomenų šaltinių puslapyje rodomi saitai, kuriuos naudojant galima peržiūrėti ir konfigūruoti duomenų „Microsoft Power Platform“ vietinis aplinką.
 
+> [!IMPORTANT]
+> Įsitikinkite, kad šliuzai atnaujinti į naujausią versiją. Galite įdiegti naujinimą ir perkonfigūruoti šliuzą iš raginimo, tiesiogiai rodomo šliuzo ekrane, arba [atsisiųsti naujausią versiją](https://powerapps.microsoft.com/downloads/). Jei nenaudojate naujausios šliuzo versijos, duomenų srauto atnaujinimas nepavyksta su klaidų pranešimais, pvz. **, Raktinis žodis nepalaikomas: konfigūracijos ypatybės. Parametro pavadinimas: raktažodis**.
+
 ## <a name="review-ingested-data"></a>Įtrauktų duomenų peržiūra
+Jei jūsų aplinkoje yra Power Platform duomenų srautų, **puslapyje Duomenų šaltiniai** išvardijamos trys sekcijos: 
+- **Bendrinama**: duomenų šaltiniai, kuriuos gali valdyti visi "Customer Insights" administratoriai. Power BI duomenų srautai, jūsų saugyklos paskyra ir prisijungimas Dataverse prie valdomo duomenų telkinio yra bendrai naudojamų duomenų šaltinių pavyzdžiai.
+- **Valdo mane**: Power Platform duomenų srautai, sukurti ir gali būti valdomi tik jūsų. Kiti "Customer Insights" administratoriai gali tik peržiūrėti šiuos duomenų srautus, bet jų neredaguoti, neatnaujinti ar panaikinti.
+- **Valdo kiti**: Power Platform duomenų srautai, kuriuos sukūrė kiti administratoriai. Juos galite tik peržiūrėti. Jame išvardijamas duomenų srauto savininkas, į kurį reikia kreiptis dėl bet kokios pagalbos.
+> [!NOTE]
+> Visus objektus gali peržiūrėti ir naudoti kiti vartotojai. Vartotojo kontekstualumas taikomas tik duomenų šaltiniams, o ne objektams, kurie atsiranda dėl šių duomenų srautų.
+
+Jei duomenų srautai nenaudojami Power Platform, nematysite jokių grupių ar sekcijų. Puslapyje **Duomenų šaltiniai** yra tik visų duomenų šaltinių sąrašas.
 
 Matysite kiekvieno įtraukto duomenų šaltinio pavadinimą, jo būseną ir vėliausio to šaltinio duomenų atnaujinimo laiką. Galite rūšiuoti duomenų šaltinių sąrašą pagal kiekvieną stulpelį.
 

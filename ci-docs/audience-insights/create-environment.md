@@ -1,23 +1,23 @@
 ---
 title: Kurti aplinkas „Customer Insights“
 description: Veiksmai, norint kurti aplinkas su licencijuota „Dynamics 365 Customer Insights“.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354105"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491923"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Kurti aplinką publikos auditorijos įžvalgose
 
@@ -30,7 +30,7 @@ Organizacijos gali sukurti *dvi* aplinkas kiekvienai „Customer Insights“ lic
 
 ## <a name="create-a-new-environment"></a>Kurti naują aplinką
 
-Įsigijęs "Customer Insights" prenumeratos licenciją, nuomotojo Microsoft 365 visuotinis administratorius gauna el. laišką, kviečiantį kurti aplinką. Eikite į [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start), kad pradėtumėte. 
+Įsigijęs "Customer Insights" prenumeratos licenciją, visuotinis nuomotojo Microsoft 365 administratorius gauna el. laišką, kviečiantį kurti aplinką. Eikite į [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start), kad pradėtumėte. 
 
 Interaktyviuoju būdu galima atlikti visus veiksmus, kurių reikia norint surinkti visą reikiamą informaciją apie naują aplinką. Norint kurti [arba valdyti aplinkas](permissions.md), reikia administratoriaus teisių auditorijos įžvalgų srityje.
 
@@ -78,19 +78,21 @@ Jei sukuriate kelias „Customer Insights“ aplinkas ir pasirenkate įrašyti i
    
 Šis **Microsoft Dataverse** veiksmas leidžia „Customer Insights“ susieti su „Dataverse“ aplinka.
 
-Pateikite savo Microsoft Dataverse aplinką duomenims (profiliams ir įžvalgoms) bendrinti su verslo programomis, pagrįstomis Dataverse, pvz., "Dynamics 365 Marketing" arba modeliu pagrįstomis programomis Power Apps. Palikite šį lauką tuščią, jei neturite savo Dataverse aplinkos ir mes jums jį pateiksime.
+Pateikite savo Microsoft Dataverse aplinką duomenims (profiliams ir įžvalgoms) bendrinti su verslo programomis, pagrįstomis Dataverse, pvz., "Dynamics 365 Marketing" arba modeliu pagrįstomis programomis programoje Power Apps. Palikite šį lauką tuščią, jei neturite savo Dataverse aplinkos, ir mes ją suteiksime jums.
 
-Prisijungimas prie jūsų Dataverse aplinkos taip pat leidžia [valgyti duomenis iš vietinis duomenų šaltinių naudojant Power Platform duomenų srautus ir šliuzus](data-sources.md#add-data-from-on-premises-data-sources). Taip pat galite naudoti [prognozė modelius](predictions-overview.md?tabs=b2c#out-of-box-models) prisijungę prie Dataverse aplinkos.
+Prisijungimas prie savo Dataverse aplinkos taip pat leidžia nuryti [duomenis iš vietinis duomenų šaltinių, naudojant Power Platform duomenų srautus ir šliuzus](data-sources.md#add-data-from-on-premises-data-sources). Taip pat galite naudoti [prognozė modelius](predictions-overview.md?tabs=b2c#out-of-box-models) neprisijungdami prie Dataverse aplinkos.
 
 > [!IMPORTANT]
-> "Customer Insights" ir Dataverse turi būti tame pačiame regione, kad būtų galima bendrinti duomenis.
+> 1. Klientų įžvalgos ir Dataverse turi būti tame pačiame regione, kad būtų galima dalytis duomenimis.
+> 1. Aplinkoje turite atlikti pasaulinio administratoriaus Dataverse vaidmenį. Patikrinkite, ar ši [Dataverse aplinka susieta su](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) tam tikromis saugos grupėmis, ir įsitikinkite, kad esate įtraukti į tas saugos grupes.
+> 1. Jokia esama "Customer Insights" aplinka dar nėra susieta su šia Dataverse aplinka. Sužinokite, [kaip pašalinti esamą ryšį su Dataverse aplinka](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="duomenų bendrinimas su Microsoft Dataverse automatiniu įgalinimas neto naujiems egzemplioriams.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="duomenų bendrinimas su Microsoft Dataverse automatiniu įgalintu neto naujiems egzemplioriams.":::
 
-> [!NOTE]
-> Jūsų „Customer Insights“ aplinkos konfigūracija nepalaiko šių duomenų bendrinimo scenarijų:
-> - Jei visus duomenis įrašysite savo, negalėsite įjungti bendro duomenų bendrinimo su valdomojo „Azure Data Lake Storage“ duomenų „Dataverse“ sutvarkytas „Data Lake“.
-> - Įjungę duomenų bendrinimą su „Dataverse“, negalėsite kurti prognozuojamų [arba trūkstamų objekto reikšmių](predictions.md).
+Daugiau informacijos apie duomenų bendrinimo įgalinimą Microsoft Dataverse su savo Azure Data Lake Storage duomenimis ieškokite [Connect to Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
+
+Jūsų „Customer Insights“ aplinkos konfigūracija nepalaiko šių duomenų bendrinimo scenarijų:
+- Įjungę duomenų bendrinimą su „Dataverse“, negalėsite kurti prognozuojamų [arba trūkstamų objekto reikšmių](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>4 veiksmas: užbaikite nustatymus
 

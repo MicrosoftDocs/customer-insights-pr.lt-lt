@@ -1,7 +1,7 @@
 ---
 title: Papildykite suvienodintus kliento profilius
 description: Naudokite savybes siekiant papildyti jūsų kliento duomenis.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372729"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491969"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientų profilių papildymas (peržiūra)
 
@@ -42,13 +42,13 @@ Skirtuke **Atrasti** rasite visas palaikomas gerinimo parinktis.
 - [Tinkinti duomenys](enrichment-SFTP-custom-import.md) per „Secure File Transfer Protocol“ (SFTP) 
 - [„Azure” žemėlapiai](enrichment-azure-maps.md), kuriuos teikia „Microsoft”
 - [Vietos duomenys](enrichment-here.md) pateikti „HERE Technologies“ 
-- [Tapatybę](enrichment-liveramp.md) pateikė LiveRamp AbiliTec
+- ["LiveRamp AbiliTec" pateikta tapatybė](enrichment-liveramp.md)
 
 # <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
 
 - [Bendrovės duomenys](enrichment-leadspace.md) pateikti „Leadspace“
 - [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft” 
-- [Patobulinti įmonės duomenys](enrichment-enhanced-company-data.md), kuriuos pateikė "Microsoft"
+- [Patobulinti "Microsoft" pateikti įmonės duomenys](enrichment-enhanced-company-data.md)
 - [Vietos duomenys](enrichment-here.md) pateikti „HERE Technologies“ 
 - [Tinkinti duomenys](enrichment-SFTP-custom-import.md) per „Secure File Transfer Protocol“ (SFTP) 
 - [„Azure” žemėlapiai](enrichment-azure-maps.md), kuriuos teikia „Microsoft”
@@ -84,7 +84,7 @@ Objektas, kurį reikia papildyti, nurodomas papildymo konfigūracijoje, o tai ju
 
 ## <a name="enrich-data-sources-before-unification"></a>Duomenų šaltinių praturtinimas prieš suvienijimą
 
-Prieš suvienodinimą galite papildyti savo klientų duomenis, kad pagerintumėte duomenų atitikimo kokybę. Daugiau informacijos rasite [duomenų šaltinis sodrinimo](data-sources-enrichment.md).
+Galite praturtinti savo klientų duomenis prieš duomenų suvienodinimą, kad padidintumėte duomenų atitikimo kokybę. Daugiau informacijos ieškokite [duomenų šaltinis praturtėjimas](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Žiūrėti papildymo proceso eigą
 
@@ -97,5 +97,19 @@ Norėdami peržiūrėti papildymo būseną
 1. Srityje **Išsami eigos informacija** išplėskite **Papildymų** skyrių. 
 1. Po papildymu, kurio progresą norite peržiūrėti, pasirinkite **Žiūrėti išsamią informaciją**. 
 1. Srityje **Išsami užduoties informacija** pasirinkite **Rodyti išsamią informaciją**, kad peržiūrėtumėte procesus, kurie susiję su papildymų atnaujinimu ir jų būsena. 
+
+## <a name="enrichment-results"></a>Papildymo rezultatai
+
+Baigę sodrinimo vykdymą, galite peržiūrėti sodrinimo rezultatus.
+
+1. Eikite į **Duomenys** > **Papildymas**. 
+1. Pasirinkite papildymą, apie kurį norite gauti informacijos.
+
+Visuose sodrimuose rodoma pagrindinė informacija, pvz., praturtintų profilių skaičius, sugeneruoto sodrinimo objekto peržiūra ir praturtintų profilių skaičius laikui bėgant. Jei įmanoma, lauku **praturtintų** pirkėjų skaičius suteikia kiekvieno praturtinto lauko aprėptį.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Sodrinimo rezultatų puslapis.":::
+
+Kai kurie praturtėjimas taip pat rodo informaciją, būdingą praturtėjimo tipui. Norėdami gauti daugiau informacijos, peržiūrėkite atitinkamo sodrinimo dokumentus.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

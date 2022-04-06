@@ -1,7 +1,7 @@
 ---
 title: Jungtis prie lentelių „Microsoft Dataverse“
 description: Duomenų importavimas iš „Microsoft Dataverse“ valdomo duomenų telkinio.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,16 +11,14 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354152"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464105"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
-
-
 
 Šiame straipsnyje pateikiama informacija apie tai, kaip Dataverse vartotojai gali greitai prisijungti prie analitinių objektų valdomame Microsoft Dataverse ežere. 
 
@@ -29,7 +27,8 @@ ms.locfileid: "8354152"
 
 ## <a name="important-considerations"></a>Svarbi informacija
 
-Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Storage“, gali būti saugomi kitoje vietoje, kurioje duomenys yra apdorojami ar saugomi „Dynamics 365 Customer Insights“.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse paslaugose, sutinkate, kad duomenys gali būti perduodami ir saugomi su Dynamics 365 Customer Insights. [Sužinokite daugiau "Microsoft" patikimumo centre](https://www.microsoft.com/trust-center).
+1. Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Storage“, gali būti saugomi kitoje vietoje, kurioje duomenys yra apdorojami ar saugomi „Dynamics 365 Customer Insights“.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse paslaugose, jūs sutinkate, kad duomenys gali būti perduodami ir saugomi naudojant Dynamics 365 Customer Insights. [Sužinokite daugiau "Microsoft" patikimumo centre](https://www.microsoft.com/trust-center).
+2. Matomi tik Dataverse objektai, kurių [keitimų sekimas](/power-platform/admin/enable-change-tracking-control-data-synchronization) įjungtas. Šiuos objektus galima eksportuoti į valdomą duomenų ežerą Dataverse ir naudoti "Customer Insights". Lauko lentelėse pagal numatytuosius nustatymus Dataverse įgalintas keitimų stebėjimas. Turite įjungti pasirinktinių lentelių keitimų sekimą. Norėdami patikrinti, Dataverse ar lentelė įgalinta keitimų sekimui, eikite į [Power Apps](https://make.powerapps.com) > **DataTables** > **·**. Raskite dominančią lentelę ir pasirinkite ją. Eikite į **"SettingsAdvanced"** > **parinktis** ir peržiūrėkite parametrą **Sekti keitimus**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Prisijungimas prie „Dataverse” valdomojo telkinio
 

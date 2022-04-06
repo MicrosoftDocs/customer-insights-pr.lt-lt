@@ -1,7 +1,7 @@
 ---
 title: Auditorijos įžvalgų segmentai
 description: Segmentų apžvalga ir jų kūrimo bei valdymo informacija.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355993"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508576"
 ---
 # <a name="segments-overview"></a>Segmentų apžvalga
 
@@ -68,7 +68,9 @@ Pasirinkus segmentą pasiekiami toliau nurodyti veiksmai.
 
 ## <a name="refresh-segments"></a>Segmentų atnaujinimas
 
-Visus segmentus galite atnaujinti vienu metu pažymėdami **Atnaujinti viską** puslapyje **Segmentai** arba galite atnaujinti vieną ar kelis segmentus, kai juos pažymite ir parinktyse pasirenkate **Atnaujinti**. Taip pat galite sukonfigūruoti pasikartojantį atnaujinimą dalyje **Administravimas** > **Sistemas** > **Planuoti**.
+Visus segmentus galite atnaujinti vienu metu pažymėdami **Atnaujinti viską** puslapyje **Segmentai** arba galite atnaujinti vieną ar kelis segmentus, kai juos pažymite ir parinktyse pasirenkate **Atnaujinti**. Taip pat galite sukonfigūruoti pasikartojantį atnaujinimą dalyje **Administravimas** > **Sistemas** > **Planuoti**. Sukonfigūravus periodinį atnaujinimą, taikomos šios taisyklės:
+- Visi segmentai, kurių tipas **Dinaminis** arba **Išplėtimas**, bus automatiškai atnaujinti nustatytoje kadencijoje. Kai atnaujinimas baigtas, **būsena** nurodo, ar buvo kokių nors problemų atnaujinant segmentą. Paskutinis atnaujintas **rodo** paskutinio sėkmingo atnaujinimo laiko žymą. Jei įvyksta klaida, pasirinkite klaidą, kad pamatytumėte išsamią informaciją apie tai, kas nutiko.
+- Segmentai, kurių tipas **Statinis** *,* nebus automatiškai atnaujinami. Paskutinis atnaujintas **rodo** laiko žymą, kada paskutinį kartą statiniai segmentai buvo paleisti arba atnaujinti rankiniu būdu.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376426"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523679"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prisijungimo peradresavimas Dynamics 365 Customer Insights naudojant "Azure Monitor" (peržiūra)
 
@@ -230,7 +230,7 @@ Darbo eigos įvykiai turi šias ypatybes.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Taip      | Taip  | Visada `WorkflowEvent`, pažymėkite įvykį kaip darbo eigos įvykį.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Taip      | Taip  | Vykdomos darbo eigos identifikatorius. Visi darbo eigos ir užduočių įvykiai, susiję su darbo eigos vykdymu, yra vienodi `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Taip      | Taip  | Operacijos identifikatorius žr. [operacijų tipus].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Taip      | Taip  | Operacijos identifikatorius, žr [...](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Taip      | No   | Tik darbo eiga. Užduočių, kurias suaktyvina darbo eiga, skaičius.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Taip      | No   | Pasirenkama. Tik darbo eigos įvykiai. Vartotojo Azure Active Directory [...](/azure/marketplace/find-tenant-object-id#find-user-object-id), kuris suaktyvino darbo eigą, objektID taip pat `properties.workflowSubmissionKind` žr.                                   |
 | `properties.workflowType`                    | Taip      | No   | `full` arba `incremental` atnaujinti.                                                                                                                                                                                                                            |

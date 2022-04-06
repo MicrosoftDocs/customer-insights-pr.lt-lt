@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354891"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523738"
 ---
 # <a name="customer-profiles"></a>Klientų profiliai
 
 Klientų **puslapyje** rodomas bendras jūsų vieningų klientų profilių rodinys. Klientų profiliai pasiekiami sukūrus [vieningą kliento objektą](data-unification.md). Puslapyje galima ieškoti klientų ir apibrėžti tos ieškos rodyklę.
 
-Klientai gali būti asmenys arba organizacijos. Kiekvieno kliento profilį vaizduoja plytelė. Norėdami gauti daugiau įrašų, naudokite puslapių ieškos valdiklius. Šioje kortelės lauke rodomi kliento *objekto* laukai, apibrėžti **ieškos ir filtro rodyklėje**. Pasirinkite plytelę, kad specialiame puslapyje, pavadintame Kliento išsami informacija, būtų [peržiūrėti pasirinkto kliento duomenys](customer-profiles.md#customer-details-page).
+Klientai gali būti asmenys arba organizacijos. Kiekvieno kliento profilį vaizduoja plytelė. Norėdami gauti daugiau įrašų, naudokite puslapių ieškos valdiklius. Šioje kortelės lauke rodomi kliento *objekto* laukai, apibrėžti **ieškos ir filtro rodyklėje**. Kiekvienos kortelės laukų tvarką pasirenka sistema.
+
+Pasirinkite plytelę, kad specialiame puslapyje, pavadintame Kliento išsami informacija, būtų [peržiūrėti pasirinkto kliento duomenys](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Klientų puslapis, kuriame rodomos rezultatų plytelės](media/customers-page-result-tiles-B2C.png "Klientų puslapis, kuriame rodomos rezultatų plytelės")

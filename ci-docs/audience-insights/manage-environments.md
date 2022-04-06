@@ -1,22 +1,22 @@
 ---
 title: Aplinkų kūrimas ir valdymas
 description: Sužinokite, kaip prisijungti prie paslaugų ir kaip valdyti aplinkas.
-ms.date: 02/09/2022
+ms.date: 03/28/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
-author: NimrodMagen
-ms.author: nimagen
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
-ms.translationtype: HT
+ms.openlocfilehash: ba29bcd173e615e544bd10e69043f310c009eb47
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376886"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8492014"
 ---
 # <a name="manage-environments"></a>Aplinkų valdymas
 
@@ -42,23 +42,83 @@ Daugiau informacijos apie aplinkos parametrus žr. [Naujos aplinkos kūrimas](cr
 
 ## <a name="connect-to-microsoft-dataverse"></a>Prisijungti prie „Microsoft Dataverse“
    
-Šis **Microsoft Dataverse** veiksmas leidžia „Customer Insights“ susieti su „Dataverse“ aplinka.
+Šis **Microsoft Dataverse** veiksmas leidžia „Customer Insights“ susieti su „Dataverse“ aplinka. 
+
+Pateikite savo Microsoft Dataverse aplinką duomenims (profiliams ir įžvalgoms) bendrinti su verslo programomis, pagrįstomis Dataverse, pvz., "Dynamics 365 Marketing" arba modeliu pagrįstomis programomis programoje Power Apps.
 
 Jei norite [naudoti iš anksto anksto prognozė modelius](predictions-overview.md#out-of-box-models) konfigūruokite duomenų bendrinimą su „Dataverse“. Arba galite įjungti duomenų nurijimas iš vietinis šaltinių, pateikdami jūsų „Microsoft Dataverse“ organizacijos administruojami aplinkos URL.
 
+Įgalinus dalijimąsi Microsoft Dataverse duomenimis pažymėjus duomenų bendrinimo žymės langelį, bus suaktyvintas vienkartinis visiškas duomenų šaltinių ir visų kitų procesų atnaujinimas.
+
 > [!IMPORTANT]
-> Klientų įžvalgos ir Dataverse turi būti tame pačiame regione, kad būtų galima dalytis duomenimis.
+> 1. Klientų įžvalgos ir Dataverse turi būti tame pačiame regione, kad būtų galima dalytis duomenimis.
+> 1. Aplinkoje turite atlikti pasaulinio administratoriaus Dataverse vaidmenį. Patikrinkite, ar ši [Dataverse aplinka susieta su](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) tam tikromis saugos grupėmis, ir įsitikinkite, kad esate įtraukti į tas saugos grupes.
+> 1. Jokia esama "Customer Insights" aplinka dar nėra susieta su šia Dataverse aplinka. Sužinokite, [kaip pašalinti esamą ryšį su Dataverse aplinka](#remove-an-existing-connection-to-a-dataverse-environment).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
+:::image type="content" source="media/dataverse-enable-datasharing.png" alt-text="Konfigūravimo parinktys duomenų bendrinimui su Microsoft Dataverse įjungti.":::
 
-> [!NOTE]
-> Jūsų „Customer Insights“ aplinkos konfigūracija nepalaiko šių duomenų bendrinimo scenarijų:
-> - Jei visus duomenis įrašysite savo, negalėsite įjungti bendro duomenų bendrinimo su valdomojo „Azure Data Lake Storage“ duomenų „Dataverse“ sutvarkytas „Data Lake“.
-> - Įjungę duomenų bendrinimą su „Dataverse“, negalėsite kurti prognozuojamų [arba trūkstamų objekto reikšmių](predictions.md).
+### <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Įgalinti dalijimąsi Dataverse duomenimis iš savo Azure Data Lake Storage (Peržiūra)
+
+Jei jūsų aplinka sukonfigūruota naudoti savo Azure Data Lake Storage "Customer Insights" duomenims saugoti, įgalinkite dalijimąsi duomenimis su Microsoft Dataverse papildoma konfigūracija.
+
+1. Sukurkite dvi saugos grupes savo "Azure" prenumeratoje - vieną **skaitytuvo** saugos grupę ir vieną **bendraautorių** saugos grupę ir nustatykite Microsoft Dataverse paslaugą kaip abiejų saugos grupių savininką.
+2. Tvarkykite prieigos teisių sąrašą (ACL) "CustomerInsights" konteineryje savo saugyklos paskyroje per šias saugos grupes. Microsoft Dataverse Įtraukite paslaugą ir visas Dataverse pagrįstas verslo taikomąsias programas, pvz., "Dynamics 365 Marketing", į skaitytuvo **saugos** grupę, kurioje **yra tik** skaitymo teisės. Įtraukite *tik* "Customer Insights" taikomąją programą į **"Contributor"** saugos grupę, kad suteiktumėte **ir skaitymo, ir rašymo** teises rašyti profilius ir įžvalgas.
+   
+#### <a name="prerequisites"></a>Būtinosios sąlygos
+
+Norėdami vykdyti "PowerShell" scenarijus, turite importuoti šiuos tris modulius. 
+
+1. Įdiekite naujausią "PowerShell for Graph" versiją [Azure Active Directory](/powershell/azure/active-directory/install-adv2).
+   1. Savo kompiuteryje pasirinkite klaviatūroje pasirinkite "Windows" klavišą ir ieškokite **Windows PowerShell** bei pasirinkite **Paleisti kaip administratorių**.
+   1. „PowerShell“ atsivėrusiame lange įveskite `Install-Module AzureAD`.
+2. Importuokite tris modulius.
+    1. "PowerShell" lange įveskite `Install-Module -Name Az.Accounts` ir atlikite veiksmus. 
+    1. Pakartokite ir `Install-Module -Name Az.Resources``Install-Module -Name Az.Storage`.
+
+#### <a name="configuration-steps"></a>Konfigūravimo veiksmai
+
+1. Atsisiųskite du "PowerShell" scenarijus, kuriuos reikia paleisti iš mūsų inžinieriaus "GitHub" [repo](https://github.com/trin-msft/byol).
+    1. `CreateSecurityGroups.ps1`
+       - Norint paleisti šį "PowerShell" scenarijų, reikia *nuomotojo administratoriaus* teisių. 
+       - Šis "PowerShell" scenarijus sukuria dvi "Azure" prenumeratos saugos grupes. Vienas skirtas "Reader" grupei, o kitas - "Contributor" grupei ir tarnaus Microsoft Dataverse kaip abiejų šių saugos grupių savininkas.
+       - Vykdykite šį "PowerShell" scenarijų sistemoje "Windows PowerShell", pateikdami "Azure" prenumeratos ID, kuriame yra jūsų Azure Data Lake Storage. Atidarykite "PowerShell" scenarijų rengyklėje, kad peržiūrėtumėte papildomą informaciją ir įdiegtą logiką.
+       - Įrašykite abi šio scenarijaus sugeneruotas saugos grupės ID reikšmes, nes jas naudosime scenarijuje `ByolSetup.ps1`.
+       
+        > [!NOTE]
+        > Nuomotojo saugos grupės kūrimą galima išjungti. Tokiu atveju reikės rankinio nustatymo ir jūsų Azure AD administratorius turėtų įgalinti [saugos grupės kūrimą](/azure/active-directory/enterprise-users/groups-self-service-management).
+
+    2. `ByolSetup.ps1`
+        - Norint paleisti šį scenarijų, reikia *saugyklos blob duomenų savininko* teisių saugyklos abonemento / konteinerio lygiu arba šis scenarijus sukurs jums vieną. Sėkmingai paleidus scenarijų, vaidmenų priskyrimą galima pašalinti rankiniu būdu.
+        - Šis "PowerShell" scenarijus prideda reikiamą tarnybos ir bet kokių Microsoft Dataverse verslo programų prieigos kontrolę (RBAC).Dataverse Ji taip pat atnaujina prieigos teisių sąrašą (ACL) "CustomerInsights" konteineryje, skirtame saugos grupėms, sukurtoms naudojant scenarijų `CreateSecurityGroups.ps1`. Bendraautorių grupė turės *rwx* leidimą, o skaitytojų grupė turės *tik r-x* teises.
+        - Vykdykite šį "PowerShell" scenarijų sistemoje "Windows PowerShell" pateikdami "Azure" prenumeratos ID, kuriame yra jūsų Azure Data Lake Storage, saugyklos abonemento pavadinimas, išteklių grupės pavadinimas ir skaitytuvo bei bendraautorių saugos grupės ID reikšmės. Atidarykite "PowerShell" scenarijų rengyklėje, kad peržiūrėtumėte papildomą informaciją ir įdiegtą logiką.
+        - Sėkmingai paleidus scenarijų nukopijuokite išvesties eilutę. Išvesties eilutė atrodo taip: `https: //DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+        
+2. Įveskite išvesties eilutę, nukopijuotą iš viršaus, į **aplinkos konfigūravimo veiksmo, skirto**.Microsoft Dataverse
+
+:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Konfigūravimo parinktys, leidžiančios bendrinti duomenis iš savo Azure Data Lake Storage su Microsoft Dataverse.":::
+
+Jūsų „Customer Insights“ aplinkos konfigūracija nepalaiko šių duomenų bendrinimo scenarijų:
+- Įjungę duomenų bendrinimą su „Dataverse“, negalėsite kurti prognozuojamų [arba trūkstamų objekto reikšmių](predictions.md).
+- Jei įgalinsite duomenų bendrinimą, Dataverse negalėsite peržiūrėti jokių pasirinktinių "PowerBI Embedded" ataskaitų "Customer Insights" aplinkoje.
+
+### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Esamo ryšio su Dataverse aplinka šalinimas
+
+Jungiantis prie Dataverse aplinkos, klaidos pranešimas **Ši CDS organizacija jau pridėta prie kito "Customer Insights" egzemplioriaus**, o tai reiškia, kad Dataverse aplinka jau naudojama "Customer Insights" aplinkoje. Esamą ryšį galite pašalinti kaip visuotinį aplinkos administratorių Dataverse. Tai gali užtrukti kelias valandas užpildyti pakeitimus.
+
+1. Eikite į [Power Apps](https://make.powerapps.com).
+1. Pasirinkite aplinką iš aplinkos parinkiklio.
+1. Eikite į **sprendimus**
+1. Pašalinkite arba panaikinkite sprendimą, pavadintą **Dynamics 365 Customer Insights Kliento kortelės papildinys (Peržiūra)**.
+
+OR 
+
+1. Atverkite savo Dataverse aplinką.
+1. Eikite į **Išplėstiniai parametraiSolutions** > **·**.
+1. Pašalinkite **"CustomerInsightsCustomerCard"** sprendimą.
 
 ## <a name="copy-the-environment-configuration"></a>Aplinkos konfigūracijos kopijavimas
 
-Kurdami naują aplinką galite pasirinkti kopijuoti konfigūraciją iš esamos aplinkos. 
+Kaip administratorius galite pasirinkti kopijuoti konfigūraciją iš esamos aplinkos, kai kuriate naują. 
 
 :::image type="content" source="media/environment-settings-dialog.png" alt-text="Aplinkos parametrų parinkčių ekrano kopija.":::
 
@@ -79,12 +139,14 @@ Kopijuojami šie konfigūracijos parametrai:
 - Modelio valdymas
 - Vaidmenų priskyrimai
 
-Šie duomenys *nėra* kopijuojami:
+## <a name="set-up-a-copied-environment"></a>Nukopijuotos aplinkos nustatymas
+
+Kai kopijuojate aplinkos konfigūraciją, šie duomenys *nėra* kopijuojami:
 
 - Klientų profiliai.
 - Duomenų šaltinio kredencialai. Turėsite pateikti kiekvieno duomenų šaltinio kredencialus ir rankiniu būdu atnaujinti duomenų šaltinius.
-
 - Duomenų šaltiniai iš bendrojo duomenų modelio aplanko ir „Dataverse“ valdomo „data lake“. Šiuos duomenų šaltinius turėsite kurti rankiniu būdu tuo pačiu pavadinimu kaip ir šaltinio aplinka.
+- Ryšio paslaptys, naudojamos eksportui ir praturtėjimui. Jūs turite iš naujo pripažinti ryšius ir tada iš naujo suaktyvinti sodrinimą ir eksportą. 
 
 Kai kopijuojate aplinką, pamatysite patvirtinimo pranešimą, kad sukurta nauja aplinka. Pasirinkite **Eiti į duomenų šaltinius**, kad peržiūrėtumėte duomenų šaltinių sąrašą.
 
@@ -95,6 +157,8 @@ Visi duomenų šaltiniai rodys būseną **Reikia kredencialų**. Redaguokite duo
 Atnaujinę duomenų šaltinius, eikite į **Duomenys** > **Suvienodinti**. Čia rasite parametrus iš šaltinio aplinkos. Jei reikia, redaguokite juos arba pasirinkite **Vykdyti**, kad pradėtumėte duomenų sujungimo procesą ir sukurtumėte bendrąjį kliento objektą.
 
 Kai duomenų sujungimas baigtas, eikite į **Priemonės** ir **Segmentai**, kad jie būtų atnaujinti.
+
+Prieš iš naujo suaktyvindami eksportą ir sodrinimą, eikite į **"AdminConnections** > **·**", kad iš naujo patvirtintumėte ryšius naujoje aplinkoje.
 
 ## <a name="change-the-owner-of-an-environment"></a>Aplinkos savininko keitimas
 
@@ -139,6 +203,9 @@ Kaip aplinkos savininkas, galite panaikinti savo administruojamą aplinką.
 3. Pasirinkite parinktį **Naikinti**. 
 
 4.  Norėdami patvirtinti panaikinimą, įveskite aplinkos pavadinimą ir pasirinkite **Naikinti**.
+
+> [!NOTE]
+> Aplinkos naikinimas nepašalina susiejimo su Dataverse aplinka. Sužinokite, [kaip pašalinti esamą ryšį su Dataverse aplinka](#remove-an-existing-connection-to-a-dataverse-environment).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
