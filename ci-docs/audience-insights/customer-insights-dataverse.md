@@ -1,7 +1,7 @@
 ---
 title: „Customer Insights“ duomenys „Microsoft Dataverse” platformoje
 description: Naudokite „Customer Insights” objektus kaip lenteles „Microsoft Dataverse” platformoje.
-ms.date: 11/25/2021
+ms.date: 04/05/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: bbbbf2a7f5edb81ee75f6e33988cd4721134b6e7
+ms.sourcegitcommit: 0363559a1af7ae16da2a96b09d6a4a8a53a8cbb8
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355439"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "8547636"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Dirbkite su „Customer Insights“ duomenimis „Microsoft Dataverse” platformoje
 
-„Customer Insights” suteikia parinktį padaryti išvesties objektus prieinamus [„Microsoft Dataverse”](/powerapps/maker/data-platform/data-platform-intro.md). Šis integravimas leidžia lengvai bendrinti duomenis ir pasirinktinai kurti naudojant „mažai kodų” / „jokių kodų” principą. Išvesties objektai bus prieinami kaip „Dataverse” lentelės. Šios lentelės įgalina scenarijus, pavyzdžiui, [automatizuotas darbo eigas per „Power Automate”](/power-automate/getting-started), [modeliu pagrįstas programas](/powerapps/maker/model-driven-apps/) ir [drobės programas](/powerapps/maker/canvas-apps/) per „Power Apps”. Galite naudoti duomenis bet kuriai kitai taikomajai programai, pagrįstai „Dataverse” lentelėmis. Dabartinis diegimas daugiausia palaiko peržvalgas, kuriose duomenys iš prieinamų auditorijos įžvalgos objektų gali būti iškviečiami nurodytam kliento ID.
+„Customer Insights” suteikia parinktį padaryti išvesties objektus prieinamus [„Microsoft Dataverse”](/powerapps/maker/data-platform/data-platform-intro). Ši integracija leidžia lengvai dalytis duomenimis ir pasirinktinį kūrimą taikant žemo kodo / be kodo metodą. Išvesties [objektai](#output-entities) yra prieinami kaip lentelės aplinkoje Dataverse. Galite naudoti duomenis bet kuriai kitai programai pagal Dataverse lenteles. Šios lentelės įgalina scenarijus, pvz., automatizuotas darbo eigas arba Power Automate kuriant programas su Power Apps. Dabartinis diegimas daugiausia palaiko peržvalgas, kuriose galima gauti duomenis iš galimų "Customer Insights" objektų tam tikram kliento ID.
 
 ## <a name="attach-a-dataverse-environment-to-customer-insights"></a>„Dataverse” aplinkos pridėjimas prie „Customer Insights”
 
-**Organizacijos su esamomis „Dataverse” aplinkomis**
+**Esama organizacija**
 
-Organizacijos, kurios jau naudoja „Dataverse”, gali [naudoti vieną iš jų esamų „Dataverse” aplinkų](create-environment.md), kai administratorius nustato auditorijos įžvalgas. Pateikiant URL į „Dataverse” aplinką, jis pridedamas prie naujos auditorijos įžvalgų aplinkos. Norint užtikrinti geriausią galimą efektyvumą, „Customer Insights” ir „Dataverse” aplinkos turi būti nuomojamos tame pačiame regione.
+Administratoriai gali konfigūruoti "Customer Insights", kad [kurdami "Customer Insights" aplinką naudotų esamą Dataverse aplinką](create-environment.md). Pateikiant URL į „Dataverse” aplinką, jis pridedamas prie naujos auditorijos įžvalgų aplinkos. "Customer Insights" ir Dataverse "Environments" turi būti laikomos tame pačiame regione. 
+
+Jei nenorite naudoti esamos Dataverse aplinkos, sistema sukuria naują nuomotojo "Customer Insights" duomenų aplinką. 
+
+> [!NOTE]
+> Jei jūsų organizacijos jau naudoja „Dataverse” savo nuomotojui, svarbu prisiminti, kad [„Dataverse” aplinkos kūrimą valdo administratorius](/power-platform/admin/control-environment-creation). Pavyzdžiui, jei naudodami jūsų organizacijos abonementą nustatote naują auditorijos įžvalgų aplinką, o administratorius išjungė „Dataverse” bandomosios versijos aplinkų kūrimą visiems, išskyrus administratorius, naujos bandomosios aplinkos sukurti nepavyks.
+> 
+> „Customer Insights” sukurtose bandomosiose „Dataverse” aplinkose yra 3 GB saugykla, kuri neįskaičiuota į bendrą nuomotojo pajėgumą. Mokamos prenumeratos turi „Dataverse” teisę į 15 GB duomenų bazę ir 20 GB failų saugyklą.
 
 **Nauja organizacija**
 
-Jei kuriate naują organizaciją nustatydami „Customer Insights”, automatiškai gausite naują „Dataverse” aplinką.
-
-> [!NOTE]
-> Jei jūsų organizacijos jau naudoja „Dataverse” savo nuomotojui, svarbu prisiminti, kad [„Dataverse” aplinkos kūrimą valdo administratorius](/power-platform/admin/control-environment-creation.md). Pavyzdžiui, jei naudodami jūsų organizacijos abonementą nustatote naują auditorijos įžvalgų aplinką, o administratorius išjungė „Dataverse” bandomosios versijos aplinkų kūrimą visiems, išskyrus administratorius, naujos bandomosios aplinkos sukurti nepavyks.
-> 
-> „Customer Insights” sukurtose bandomosiose „Dataverse” aplinkose yra 3 GB saugykla, kuri neįskaičiuota į bendrą nuomotojo pajėgumą. Mokamos prenumeratos turi „Dataverse” teisę į 15 GB duomenų bazę ir 20 GB failų saugyklą.
+Jei nustatydami "Customer Insights" kuriate naują organizaciją, sistema automatiškai sukuria jums naują Dataverse aplinką jūsų organizacijoje.
 
 ## <a name="output-entities"></a>Išvesties objektai
 
@@ -127,13 +129,13 @@ Alternatyvaus rakto lentelėje yra suvienodinimo procese dalyvavusių objektų r
 
 ### <a name="segment-membership"></a>Segmento narystė
 
-Šioje lentelėje yra kliento profilių segmento narystės informacija.
+Šioje lentelėje yra klientų profilių segmento narystės informacija.
 
-| Column        | Tipas | Aprašą                        |
+| Column        | Tipas | Aprašą                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Kliento Profilio ID        |
-| SegmentProvider      | String       | Programa, kuri publikuoja segmentus. Numatytosios: auditorijos įžvalgos         |
-| SegmentMembershipType | String       | Kliento tipas šio segmento narystės įrašas. Palaiko kelis tipus, pvz., Klientą, Kontaktą arba Klientą. Numatytasis: klientas  |
-| Segmentai       | JSON Eilutė  | Unikalių segmentų, kurių narys yra kliento profilis, sąrašas      |
-| „msdynci_identifier”  | String   | Segmento narystės įrašo unikalusis identifikatorius. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| CustomerId        | String       | Kliento Profilio ID        |
+| SegmentProvider      | String       | Programa, kuri skelbia segmentus. Numatytoji: auditorijos įžvalgos         |
+| SegmentMembershipType | String       | Kliento tipas šis segmento narystės įrašas. Palaiko kelis tipus, pvz., Klientas, Kontaktas arba Klientas. Numatytasis: klientas  |
+| Segmentai       | JSON Eilutė  | Unikalių segmentų, kurių narys yra kliento profilis, sąrašas      |
+| „msdynci_identifier”  | String   | Segmento narystės įrašo unikalusis identifikatorius. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | Deterministinis GUID, sukurtas iš`msdynci_identifier`          |

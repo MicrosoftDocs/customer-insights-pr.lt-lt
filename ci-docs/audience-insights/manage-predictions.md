@@ -5,15 +5,15 @@ ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 8ff8d70ffb8489def072e5d8a6e43d062594141a
+ms.sourcegitcommit: 696ad9ab6e10046c00f1ac86a7e8fc37386e6fe7
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230802"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "8555323"
 ---
 # <a name="manage-predictions"></a>Prognozių valdymas
 
@@ -51,9 +51,9 @@ Toliau pateiktuose ataskaitos stulpeliuose yra naudingos informacijos apie tai, 
 
 - **Pavadinimas:** aprašomasis klaidos, įspėjimo ar rekomendacijos pavadinimas.
 - **Žingsnis:** modelio etapas, traukinys arba rezultatas, informacija nurodo.
-- **Būsena:** Informacijos sunkumas (klaida, įspėjimas, rekomendacija).
+- **Būsena:** informacijos sunkumas (klaida, įspėjimas, rekomendacija).
 - **Stulpelio pavadinimas:** objekto stulpelis, kurį reikia modifikuoti, kad būtų pagerintas modelio našumas.
-- **Objekto pavadinimas:** objekto, kurį reikia modifikuoti, kad būtų pagerintas modelio našumas, pavadinimas.
+- **Objekto pavadinimas:** objekto, kurį reikia modifikuoti, kad būtų pagerintas modelio veikimas, pavadinimas.
 - **Išsami informacija:** išsami informacija apie klaidą, įspėjimą ar rekomendaciją.
 
 ## <a name="refresh-a-prediction"></a>Prognozės atnaujinimas

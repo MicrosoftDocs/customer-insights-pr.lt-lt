@@ -6,12 +6,12 @@ ms.author: mhart
 ms.date: 07/30/2021
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 82b335388002158885fa55b61562db6c8370dc9d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350187"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560443"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Produkto apžvalga „Dynamics 365 Customer Insights“
 
@@ -19,7 +19,7 @@ ms.locfileid: "8350187"
 
 [Publikos įžvalgos](audience-insights/overview.md) padeda pertvarkyti savo verslą į klientą orientuotas organizacijas. Rinkodaros, pardavimo ir aptarnavimo profesionalai turi įžvalgų, kurių reikia norint asmeniniams poreikiams pritaikyti funkcijas. Prijunkite duomenis iš transaktyviųjų, elgsenos ir sąjunginių šaltinių, kad sukurtumėte 360 laipsnių klientų rodinį. Žr. rezultatus greičiau su CDP sukūrimu, skirtu pateikti įžvalgas, kurių pagrindu galima atlikti veiksmus. 
 
-[Įtraukimo įžvalgos buvo "Customer Insights](engagement-insights/overview.md) " peržiūros galimybė, kurioje daugiausia dėmesio skiriama žiniatinklio ir mobiliųjų įvykių rinkimui papildomoms įžvalgoms Peržiūra baigėsi 2022 m. vasario 15 d.
+[Įtraukimo įžvalgos buvo "Customer Insights](engagement-insights/overview.md) " peržiūros galimybė, orientuota į žiniatinklio ir mobiliųjų įvykių rinkimą papildomoms įžvalgoms gauti. Peržiūra baigėsi 2022 m. vasario 15 d.
  
 ## <a name="choose-a-capability"></a>Pasirinkite pajėgumą
 

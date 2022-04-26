@@ -1,23 +1,23 @@
 ---
-title: Panašių klientų radimas naudojant DI (yra vaizdo įrašas)
+title: Panašių klientų radimas naudojant AI (yra vaizdo įrašas)
 description: Raskite panašių klientų segmentų, naudodami dirbtinį intelektą.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355255"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561580"
 ---
 # <a name="similar-customers-preview"></a>Panašūs klientai (peržiūros versija)
 
@@ -36,6 +36,8 @@ Naudodamiesi šia funkcija, klientų bazėje rasite panašių klientų, naudodam
 
 1. Peržiūrėkite siūlomą naujo segmento pavadinimą ir, jei reikia, jį pakeiskite.
 
+1. Pasirinktinai įtraukite [žymes](work-with-tags-columns.md#manage-tags) į naują segmentą.
+
 1. Peržiūrėkite laukus, kuriuose apibrėžiamas naujas segmentas. Šiuose laukuose apibrėžiamas pagrindas, pagal kurį sistema bandys rasti į šaltinio segmentą panašių klientų. Sistema pagal numatytuosius nustatymus pasirenka rekomenduojamus laukus.
   Laukai, kurie gali gerokai sumažinti modelio veikimą, automatiškai neįtraukiami.
   
@@ -44,9 +46,9 @@ Naudodamiesi šia funkcija, klientų bazėje rasite panašių klientų, naudodam
 
 1. Pasirinkite, ar į naują segmentą turi būti įtraukti **Visi klientai**, ar tik klientai, esantys **Tam tikrame esamame segmente**.
 
-1. Pašalinkite šaltinio segmento klientus, pažymėdami žymės langelį **Neįtraukti šaltinio segmento klientų**.
-
 1. Pagal numatytuosius nustatymus sistema siūlo į išvestį įtraukti tik 20 % tikslinės auditorijos. Jei reikia, redaguokite šią ribinę vertę. Padidinus ribinę vertę, sumažės tikslumas.
+
+1. Įtraukite klientus į savo šaltinio segmentą pasirinkdami **žymės langelį Įtraukti narius iš šaltinio segmento, be klientų, turinčių panašių atributų**.
 
 1. Pasirinkite **Vykdyti** puslapio apačioje ir paleiskite dvejetainio klasifikavimo užduotį (mašininio mokymo metodą), kuria analizuojamas duomenų rinkinys.
 
@@ -67,7 +69,7 @@ Galite [naudoti panašaus segmento išvestį](segments.md) kaip ir kitų segment
 
 Jei norite atnaujinti panašų segmentą, pažymėkite jį puslapyje **Segmentai** ir veiksmų juostoje pasirinkite **Atnaujinti**.
 
-Redaguojant panašų segmentą, duomenys apdorojami iš naujo. Anksčiau sukurtas segmentas atnaujinamas įtraukiant atnaujintus duomenis.    
+Redaguojant panašų segmentą, duomenys apdorojami iš naujo. Anksčiau sukurtas segmentas atnaujinamas įtraukiant atnaujintus duomenis.
 Jei norite redaguoti panašų segmentą, pažymėkite jį puslapyje **Segmentai** ir veiksmų juostoje pasirinkite **Redaguoti**. Pritaikykite pakeitimus ir pasirinkite **Vykdyti**, kad pradėtumėte apdorojimą.
 
 ## <a name="delete-a-similar-segment"></a>Panašaus segmento naikinimas
@@ -84,6 +86,5 @@ Dvejetainio klasifikavimo mašininio mokymo modelyje panašaus segmento klientam
 - Panašumo įverčiai nuo 0,85 iki 1 yra klientai, kurie sistemoje klasifikuojami kaip *labai panašūs*
 
 Klientai, kurių panašumo įverčiai yra mažesni nei 0,4, į modelio išvestį neįtraukiami. Sistema nelaiko jų pakankamai panašiais į šaltinio segmentą.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

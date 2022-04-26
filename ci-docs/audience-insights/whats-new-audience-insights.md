@@ -1,19 +1,19 @@
 ---
 title: Naujos ir būsimos funkcijos
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 03/02/2022
+ms.date: 04/05/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
-ms.reviewer: midevane
+ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
-ms.translationtype: HT
+ms.openlocfilehash: 2f081306271a170cf3e250fc1a193cedb70aeec6
+ms.sourcegitcommit: 0363559a1af7ae16da2a96b09d6a4a8a53a8cbb8
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376472"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "8547682"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kas naujo publikos įžvalgų „Dynamics 365 Customer Insights“ pajėgumuose
 
@@ -23,6 +23,42 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="march-2022-updates"></a>2022 m. kovo mėn. atnaujinimai
+
+2022 m. kovo mėnesio atnaujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų taisymus.
+
+### <a name="liveramp-abilitec-enrichment-preview"></a>LiveRamp AbiliTec sodrinimas (Peržiūra)
+
+LiveRamp teikia tapatybės sprendimą ir klientų duomenų konsolidavimą. Galite susieti asmeninius identifikatorius savo klientų duomenyse su AbiliTec tapatybės grafiku ir gauti AbiliTec ID. Tada galite naudoti šiuos ID, kad geriau suvienodintumėte savo klientų duomenis.
+
+Daugiau informacijos ieškokite [Enrich customer profiles with identity data from LiveRamp (Preview)](enrichment-liveramp.md).
+
+### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Segmentų ir matų tvarkymas naudojant žymes ir filtrus
+Jei jūsų organizacija palaiko daug segmentų ar priemonių, rasti tinkamą kartais gali būti sudėtinga. Ši nauja funkcija leidžia tvarkyti sąrašus naudojant žymes ir stulpelius. Tai padeda greitai ir lengvai rasti duomenis ir tinkinti rodinius.
+
+Daugiau informacijos ieškokite [Work with tags and columns](work-with-tags-columns.md).
+
+### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Duomenų bendrinimo įgalinimas Dataverse naudojant savo saugyklos abonementą
+
+Jei jūsų aplinka naudoja Azure Data Lake Storage "Customer Insights" duomenims saugoti, dalijimasis duomenimis su Microsoft Dataverse reikia papildomos konfigūracijos.
+Anksčiau galėjote įgalinti dalijimąsi duomenimis tik tada Dataverse, kai jūsų duomenys buvo saugomi mūsų tvarkomame duomenų ežere. 
+
+Daugiau informacijos ieškokite [Įgalinti duomenų bendrinimą naudojant Dataverse iš savo Azure Data Lake Storage (Peržiūra)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+
+### <a name="new-export-destinations-iterable-and-braze"></a>Naujos eksporto paskirties vietos: "Iterable" ir "Braze"
+
+Mes ir toliau plečiame savo eksporto paskirties vietų ekosistemą naujais ryšiais. Dabar galite eksportuoti segmentus į "Iterable" ir "Braze", kad galėtumėte naudoti jų aktyvinimo paslaugas.
+
+Daugiau informacijos ieškokite [Eksportuoti segmentus į pasikartojančius (peržiūra)](export-iterable.md) ir [Eksportuoti segmentus į Brazę (peržiūra)](export-braze.md).
+
+### <a name="improvements-to-marketo-and-google-ads-export"></a>"Marketo" ir "Google Ads" eksporto patobulinimai
+
+Pakeitus API prijungtose tarnybose, jungčių naujinimai veikia patikimai ir sklandžiai. Išleidome keletą eksporto į "Marketo" ir "Google Ads" paslaugas atnaujinimų:
+
+- "Google Ads": nauja "Google Ads" eksportavimo jungties versija supaprastina autentifikavimo patirtį ir dabar leidžia automatiškai kurti naujas "Google Ads" auditorijas. 
+- "Marketo": naujoji "Marketo" eksporto jungties versija palaiko "Marketo ID", leidžiančią išvengti duomenų dubliavimosi, atnaujinti esamus įrašus ir kurti naujus įrašus "Marketo". 
 
 
 ## <a name="february-2022-updates"></a>2022 m. vasario atnaujinimai
@@ -39,11 +75,13 @@ Daugiau informacijos ieškokite [Predictions overview](predictions-overview.md).
 
 Azure Synapse Analytics tai įmonės analizės paslauga, kuri pagreitina laiką įžvalgoms apie duomenų saugyklas ir didelių duomenų sistemas.
 
-Jei jūsų organizacija jau naudoja išplėstines analizės galimybes Azure Synapse Analytics ir saugo išvestį duomenų ežero duomenų bazėse, galite lengvai nuryti šiuos duomenis į "Customer Insights". Daugiau informacijos ieškokite [Connect a Azure Synapse duomenų šaltinis (Preview)](connect-synapse.md).
+Organizacijos, kurios jau naudoja Azure Synapse Analytics, gali nuryti šiuos duomenis į "Customer Insights". 
+
+Daugiau informacijos ieškokite [Connect a Azure Synapse duomenų šaltinis (Preview)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>LiveRamp sodrinimas (Peržiūra)
 
-"LiveRamp" teikia deterministinę autonominės tapatybės skiriamąją gebą ir klientų duomenų konsolidavimą. Galite susieti asmeninius identifikatorius savo klientų duomenyse su AbiliTec tapatybės grafiku ir gauti AbiliTec ID. Tada galite naudoti šiuos ID, kad geriau suvienodintumėte savo klientų duomenis.
+LiveRamp teikia tapatybės sprendimą ir klientų duomenų konsolidavimą. Galite susieti asmeninius identifikatorius savo klientų duomenyse su AbiliTec tapatybės grafiku ir gauti AbiliTec ID. Tada galite naudoti šiuos ID, kad geriau suvienodintumėte savo klientų duomenis.
 
 Daugiau informacijos ieškokite [Enrich customer profiles with identity data from LiveRamp (Preview)](enrichment-liveramp.md).
 
@@ -61,7 +99,7 @@ Daugiau informacijos ieškokite [Keisti aplinkos](manage-environments.md#change-
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Duomenų rengimo procesas išvardija sugadintų įrašų korupcijos priežastis
 
-Duomenų rengimo procesas dabar rodo visų laukų su sugadintais duomenimis individualiame įrašų lygyje, kad būtų lengviau identifikuoti, korupcijos priežastį. 
+Duomenų rengimas dabar rodo visų laukų su sugadintais duomenimis korupcijos priežastį. Informacija pateikiama individualiu įrašų lygiu, kad būtų lengviau identifikuoti. 
 
 Daugiau informacijos ieškokite [Corrupted data sources](entities.md#corrupted-data-sources).
 
@@ -79,7 +117,7 @@ Pereinamuoju laikotarpiu esami peržiūros dalyviai vis dar turi prieigą prie k
 - Padidinkite vieningus profilius su prarytais ir rafinuotais įvykiais, kad galėtumėte pasinaudoti visa klientų duomenų verte
   
 Pereinamuoju laikotarpiu užfiksuoti įvykiai vis dar transliuojami į prijungtą Duomenų ežerą. Išjungus šią funkciją, duomenų bendrinimas tarp įtraukimo įžvalgų ir auditorijos įžvalgų bus sustabdytas ir į prijungtą saugyklą nebus siunčiami jokie nauji įvykiai.
-Jei turite klausimų apie galimybės peržiūros pabaigą, tiesiogiai susisiekite su savo "Microsoft" abonemento komanda. Jūsų paskyros komanda informuos jus apie būsimus paleidimus. 
+Jei turite klausimų apie galimybės peržiūros pabaigą, tiesiogiai kreipkitės į savo "Microsoft" abonemento komandą. Jūsų paskyros komanda informuos jus apie būsimus paleidimus. 
 
 ## <a name="january-2022-updates"></a>2022 m. sausio mėn. naujinimai
 
@@ -89,317 +127,7 @@ Jei turite klausimų apie galimybės peržiūros pabaigą, tiesiogiai susisiekit
 
 "Customer Insights" suteikia naują dirbtiniu intelektu pagrįstą funkciją, skirtą sintezuoti klientų nuotaikas ir nustatyti konkrečius verslo aspektus kaip tikslinių patobulinimų galimybes. Analizuodami savo klientų rašytinius atsiliepimus, galite gauti tikslių įžvalgų už mažą kainą. Sentimentų analizė, kurią įgalina natūralios kalbos apdorojimo (NLP) modeliai, generuojantys dvi išvestines įžvalgas kiekvienam kliento ID. Sentimentų balas (nuo -5 iki 5) ir taikomų verslo aspektų sąrašas. 
 
-Daugiau informacijos ieškokite [Analizuoti nuotaikas klientų atsiliepimuose (Peržiūra)](sentiment-analysis.md).
-
-
-## <a name="december-2021-updates"></a>2021 m. gruodžio mėn. naujinimai
-
-2021 m. gruodžio mėn.
-
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>"Customer Insights" žurnalų persiuntimas į "Azure Monitor"
-
-"Customer Insights" užtikrina tiesioginį integraciją su "Azure Monitor". Ši funkcija apima audito įvykius ir veiklos įvykius. "Azure Monitor" išteklių žurnalai leidžia stebėti ir siųsti žurnalus į "Azure Storage", "Azure Log Analytics" arba transliuoti juos į "Azure Event Hubs".
-
-Daugiau informacijos ieškokite [Log forwarding in Dynamics 365 Customer Insights with Azure Monitor (Preview)](diagnostics.md).
-
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Klientų profilių praturtinimas įtraukimo duomenimis
-
-Naudokite duomenis iš Microsoft Office 365, kad praturtintumėte savo klientų abonementų profilius įžvalgomis apie įtraukimus per Office 365 programas. Įtraukimo duomenis sudaro el. pašto ir susitikimo veikla, kuri kaupiama paskyros lygiu. Pavyzdžiui, el. laiškų iš verslo paskyros skaičius arba susitikimų su paskyra skaičius. Jokie duomenys apie atskirus vartotojus nėra bendrinami. Šis praturtinimas yra prieinamas šiuose regionuose: Jungtinėje Karalystėje, Europoje, Šiaurės Amerikoje.
-
-Daugiau informacijos ieškokite [Enrich customer profiles with engagement data (Preview)](enrichment-office.md).
-
-### <a name="advanced-data-unification-features"></a>Išplėstinės duomenų suvienijimo funkcijos
-
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Įgalinti konfliktų sprendimo strategijas atskiru atributo lygiu
-
-Kai objekte norite gauti klientų įrašus, galbūt nenorite pasirinkti viso įrašo kaip laimėtojo. Dabar leidžiame sulieti geriausius laukus iš įvairių įrašų pagal kiekvieno atributo taisykles. Pavyzdžiui, galite pasirinkti išsaugoti naujausią el. laišką ir išsamiausią adresą iš skirtingų įrašų. 
-
-Dabar galite nustatyti atskiras atskirų atributų suliejimo taisykles, kai viename objekte norite suaktyvinti ir sulieti įrašus. Anksčiau mes leidome jums pasirinkti tik vieną suliejimo taisyklę (įrašų laikymą pagal sąžiningumo duomenų išsamumą) ir ši taisyklė buvo taikoma įrašų lygiu visiems atributams. Tai nėra idealu, kai kai kurie duomenys, kuriuos norite išsaugoti, randami įraše A ir kiti geri duomenys, rasti įraše B.
-
-Dėl daugiau informacijos, žr. [Nustatyti dublikavimo panaikinimą atitikties objekte](match-entities.md#define-deduplication-on-a-match-entity).
-
-#### <a name="custom-rules-for-matching"></a>Pasirinktinės gretinimo taisyklės
-
-Yra atvejų, kai reikia nurodyti bendrųjų taisyklių išimtį, kad nesutaptumėte su įrašais. Tai gali atsitikti, kai keli asmenys dalijasi pakankamai informacijos, kad sistema atitiktų juos kaip vieną asmenį. Pavyzdžiui, dvyniai, turintys tą pačią pavardė, gyvena tame pačiame mieste ir dalijasi gimimo data.
-
-Išimtys užtikrina, kad suvienijimo taisyklėse būtų galima spręsti neteisingo duomenų suvienijimo problemą. Į taisyklę galite įtraukti kelias išimtis.
-
-Daugiau informacijos ieškokite [Add exception to a rule](match-entities.md#add-exceptions-to-a-rule).
-
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Pateikite papildomas konfliktų sprendimo strategijas ir įgalinkite atributų grupavimą
-
-Ši funkcija leidžia laukų grupę traktuoti kaip vieną vienetą. Pavyzdžiui, kai jei mūsų įrašuose yra laukų Adresas1, Adresas2, Miestas, Valstybė ir Zip. Mes tikriausiai nenorime sulieti į kito įrašo adresą2, manydami, kad tai padarys mūsų duomenis išsamesnius.
-
-Dabar galite sujungti susijusių laukų grupę ir grupei taikyti vieną suliejimo strategiją. 
-
-Daugiau informacijos ieškokite [Combine a group of fields](merge-entities.md#combine-a-group-of-fields).
-
-
-## <a name="november-2021-updates"></a>2021 m. lapkričio mėn. naujinimai
-
-2021 m. lapkričio mėn.
-
-### <a name="segment-membership-now-available-in-dataverse"></a>Segmento narystė dabar pasiekiama Dataverse
-
-Klientų profilių segmento narystės informacija dabar pasiekiama Dataverse kartu su klientų profiliais ir įžvalgomis. "Dynamics 365" veiksmų programos ir modeliu pagrįstos programos gali naudoti šio duomenų paieškos segmento narystės informaciją konkrečiam klientui.
-
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>Veikla palaiko verslo sąskaitų kontakto lygio informaciją
-
-Dabar galite konfigūruoti, rodyti ir filtruoti kontaktų veiklas savo verslo abonemento veiklos laiko planavimo juostose, kad geriau suprastumėte, kurie abonemento kontaktai dalyvavo konkrečioje veikloje.
-
-## <a name="october-2021-updates"></a>2021 m. spalio mėn. naujinimai
-
-2021 m. spalio mėn.
-
-### <a name="b-to-b"></a>B-to-B
-
-Nuo 2021 m. spalio galite dirbti su verslo sąskaitomis ir su jomis susijusiais kontaktais programoje "Customer Insights". Anksčiau programa daugiausia buvo pritaikyta individualiems vartotojams. Kelios funkcijų sritys buvo atnaujintos, kad būtų palaikomi B-to-B scenarijai, be naujo aplinkos tipo. Palaikomų B-to-B funkcijų apžvalgos ieškokite [Darbas su verslo abonementais auditorijos įžvalgose](work-with-business-accounts.md).
-
-Tolesniuose skyriuose pabrėžiamos kai kurios pagrindinės sritys, kurios buvo pritaikytos verslo sąskaitoms ir atskiriems vartotojams palaikyti.
-
-#### <a name="export-segments-based-on-business-accounts"></a>Eksportuoti segmentus pagal verslo sąskaitas
-
-Visas segmento eksportas auditorijos įžvalgose yra prieinamas verslo sąskaitų kontekste. Daugumai segmentų eksportui reikia papildomos konfigūracijos ir [kontaktinės informacijos, kuri](segment-builder.md#create-a-new-segment), kaip prognozuojama pagrindiniuose segmentuose, galiotų verslo sąskaitoms. Daugiau informacijos ieškokite [Export segments](export-destinations.md#export-segments).
-
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>"LinkedIn Ads" eksportavimo su verslo sąskaitomis naudojimas
-
-"LinkedIn Ads" eksportavimas dabar galimas kontaktams ir įmonės taikymui verslo paskyrų kontekste. Pasirinkę įmonės taikymą kaip pagrindinį "LinkedIn" eksporto židinį, galite eksportuoti segmentus, pagrįstus verslo sąskaitomis, neprojektuodami kontaktinės informacijos. Norėdami gauti daugiau informacijos, eikite į dokumentus apie ["LinkedIn Ads" eksportą](export-linkedin-ads.md) ir skirtumą tarp [kontaktų taikymo](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ir [įmonės taikymo](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
-
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Kurti priemones pagal verslo sąskaitas ir jų hierarchiją
-
-Matavimo daryklė leidžia kurti priemones, susijusias su verslo sąskaitomis, ir pasirinktinai naudoti hierarchijos informaciją. Hierarchijos informacija naudojama sąskaitos ir visų su juo susijusių antrinių sąskaitų matavimų skaičiavimui apibendrinti. Pavyzdžiui, galite kurti tokius matus kaip bendros pajamos kiekvienai verslo sąskaitų grupei, kurią identifikuoja jų hierarchija. Dėl daugiau informacijos, žr. [Nustatyti ir valdyti priemones](measures.md).
-
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Segmentų kūrimas pagal verslo sąskaitas ir jų hierarchiją
-
-Segmento daryklė leidžia kurti verslo sąskaitų segmentus, kuriuose pasirinktinai įtraukiama kiekvieno segmento abonemento kontaktinė informacija. Jei nustatėte sąskaitų hierarchiją, segmento kūrime galite naudoti abonementų hierarchijos informaciją. Daugiau informacijos ieškokite [Create a new segment](segment-builder.md#create-a-new-segment).
-
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Išsaugokite savo verslo sąskaitas su giliomis įžvalgomis apie jų tendenciją
-
-Klientų prognozė modelis dabar palaiko ir verslo sąskaitas. Galite įvertinti ne tik sąskaitos, bet ir sąskaitos bei produkto ar paslaugos kategorijos, kurią jie perka iš jūsų, derinį. Šis papildymas padeda suprasti, ar sąskaita yra labiau tikėtina, kad nustos pirkti iš jūsų apskritai, ar tik tam tikrai prekių ar paslaugų kategorijai. Norėdami dar labiau padėti jums naudoti šį AI modelį, jame taip pat išvardijamos priežastys, kodėl paskyra gali sulūžti. Daugiau informacijos ieškokite [Transaction churn prognozė (preview)](predict-transactional-churn.md).
-
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Verslo abonemento kontaktų peržiūra kliento rodinyje
-
-Jei verslo abonementai susieti su susijusiais klientais, "Customer Insights" programėlė rodo šiuos susijusius kontaktus kaip kliento informacijos rodinio dalį. Daugiau informacijos ieškokite [Customer profiles](customer-profiles.md).
-
-
-## <a name="september-2021-updates"></a>2021 m. rugsėjo mėn. naujinimai
-
-Į 2021 m. rugsėjo mėn. naujinimus įtrauktos naujos funkcijos, efektyvumo naujiniai ir klaidų taisymai.
-
-### <a name="activities"></a>Veiklos
-
-- **Veiklos laiko planavimo juostos** patobulinimai Išplėtė veiklos laiko planavimo juostos filtrus klientų profiliuose. Be to, naudodami naują filtro keptuvę galite filtruoti pagal veiklos tipą ir datą. Datas galima filtruoti naudojant skirtingas sąlygas. Daugiau informacijos žr. [Veiklos laiko planavimo juostų rodymas klientų profiliuose](activities.md#view-activity-timelines-on-customer-profiles).
-
-### <a name="relationships"></a>Ryšiai
-
-- **Kelių objektų ryšių palaikymas** Konfigūruodami veiklas ir apibrėždami objektų ryšius naudokite kelių objektų ryšius. Kelių objektų ryšiai naudoja išsamų objektą dviem objektams sujungti. Konfigūruodami veiklą galite naudoti kelių kanalų ryšį, kad susietumėte savo veiklos objektą su susiautinu objektu, o tada su kliento objektu. Galite derinti kelių eilučių ryšius su kelių maršrutų ryšiais. Daugiau informacijos rasite [kelių eilučių ryšys](relationships.md#multi-hop-relationship).
-
-- **Kelių kelių ryšių palaikymas** Konfigūruodami veiklas ir apibrėždami kelių ryšius naudokite kelių objektų ryšius. Kelių kelių maršrutų ryšiai šaltinio objektą sieja su daugiau nei vienu objektu. Konfigūruodami veiklą galite naudoti kelių kanalų kelią, kad susietumėte savo veiklos objektą su susiautinu objektu, o tada su daugiau nei vienu kliento objektu. Galite derinti kelių eilučių kelius su kelių maršrutų ryšiais. Daugiau informacijos rasite [kelių kelių ryšys](relationships.md#multi-path-relationship).
-
-## <a name="august-2021-updates"></a>2021 m. rugpjūčio mėn. naujinimai
-
-Į 2021 metų liepos ir rugpjūčio mėnesių naujinimus įtraukta nauja funkcija, efektyvumo patobulinimai ir klaidų taisymai.
-
-### <a name="extensibility"></a>Išplėtimas
-
-- **Eksportuoti segmentus į „Klaviyo”** Išplėtėme mūsų [eksportavimo paskirties vietas, kad būtų įtrauktas „Klaviyo”](export-klaviyo.md). Dabar galite eksportuoti segmentus, kad sukurtumėte kampanijas, vykdytumėte elektroninių laiškų rinkodarą ir naudotumėte konkrečias klientų grupes su „Klaviyo“. 
-
-
-## <a name="june-2021-updates"></a>2021 m. birželio mėn. naujinimai
-
-2021 m. birželio mėn. naujinimai apima keletą funkcijų, vykdymo pagerinimus ir klaidų ištaisymus.
-
-### <a name="data-ingestion"></a>Duomenų įsisavinimas
-
-- **Patobulinti duomenų suvienodinimo eigos naujinimai** Dabar galite peržiūrėti išsamesnius, patobulintus dinaminių būsenų atnaujinimus [duomenų suvienodinimo proceso](data-unification.md) veiksmuose. Ši funkcija leidžia jums sekti išsamią eigą, kad būtų galima suprasti procesų seką ir, jei reikia, imtis veiksmų.
-
-### <a name="extensibility"></a>Išplėtimas
-
-- **Eksportuoti segmentus ir kitus duomenis į „Salesforce Marketing Cloud”** Išplėtėme eksportavimo paskirties vietas, kad būtų įtrauktas [„Salesforce Marketing Cloud”](export-salesforce.md). Dabar galite eksportuoti segmentus ir kitų tipų duomenis į „Salesforce Marketing Cloud” per trumpąjį SFTP eksportavimą. Duomenų importavimą galima visiškai automatizuoti „Salesforce” ir naudoti norint kurti efektyvesnes rinkodaros kampanijas.  
- 
-- **Eksportuoti segmentus į „ActiveCampaign”** Išplėtėme eksportavimo paskirties vietas, kad būtų įtraukta [„ActiveCampaign”](export-active-campaign.md). Dabar galite eksportuoti segmentus, kad kurtumėte kampanijas, vykdytumėte elektroninių laiškų rinkodarą ir dirbtumėte su konkrečiomis klientų grupėmis „ActiveCampaign“.
- 
-- **Eksportuoti segmentus į „Sendinblue”** Išplėtėme eksportavimo paskirties vietas, kad būtų įtrauktas [„Sendinblue”](export-sendinblue.md). Dabar galite eksportuoti segmentus, kad kurtumėte kampanijas, vykdytumėte elektroninių laiškų rinkodarą ir dirbtumėte su konkrečiomis klientų grupėmis „Sendinblue“.
- 
-### <a name="ux-updates"></a>UX atnaujinimai 
-
-- **Naujas ir patobulintas Klientų puslapis ir profilio išsamios informacijos puslapis** Mes pertvarkėme Klientų puslapį ir išsamios profilių informacijos puslapius, kad pagerintumėte vartotojų patirtį ir efektyvumą. Šie pakeitimai jums leidžia peržiūrėti, rikiuoti, ieškoti ir filtruoti klientus. Filtrai dabar pateikiami URL, kad ieškos rezultatai būtų sklandžiai bendrinami su kitais vartotojais. Ieškos rezultatus taip pat galima įrašyti kaip segmentą.    
-  Dabar klientų profilių išsamios informacijos puslapyje duomenys grupuojami į įvairius poskyrius, pavyzdžiui, demografinius duomenis, ID ir kitus profilio atributus dėl patobulinto skaitomumo. Dabar kiti išsamios profilio informacijos puslapio skyriai yra interaktyvesni. Pavyzdžiui, dabar veiklų skyrius leidžia filtruoti ir rikiuoti.
-
-
-## <a name="may-2021-updates"></a>2021 m. gegužės mėn. naujinimai
-
-2021 m. gegužės mėnesio atnaujinimai apima kelias funkcijas, efektyvumo atnaujinimus bei klaidų taisymus.
-
-### <a name="data-ingestion"></a>Duomenų įsisavinimas
-
-- **Peržiūrėti arba modifikuoti metaduomenų ar objektų aprašus, kai pridedate duomenis iš savo „Azure Data Lake Storage”** Dabar galite peržiūrėti ir redaguoti metaduomenų ar objektų aprašus auditorijos įžvalgose, kai pridedate duomenis iš „Common Data Model” savo „Azure Data Lake Storage”. Ši galimybė pateikia atsiliepimus realiuoju laiku, modelio tikrinimą ir klaidų patikrinimą. Ji leis sklandžiai redaguoti tiek model.json, tiek manifest.json.
-
-### <a name="extensibility"></a>Išplėtimas
-
-- **Patobulintas segmentų eksportavimas, pasirinktinis grafikas ir dublikatų kūrimas** Dabar galite [matyti visus konkretaus segmento eksportavimus](export-destinations.md#view-exports-and-export-details) sąraše. Šis naujas rodinys padeda valdyti konkretaus segmento naudojimą ir pritaikyti esamą arba sukurti naują eksportavimą.    
-  Vienu metu [galite apibrėžti pasirinktinius atnaujinimo grafikus](export-destinations.md#schedule-and-run-exports) atskiriems arba keliems eksportavimams. Iki šiol visi eksportavimai būdavo vykdomi kaskart atnaujinus sistemą.    
-  Užuot sukūrę naują eksportavimą nuo nulio, galite pradėti dirbti pagal esamą, kad sutaupytumėte laiko.
-
-- **Segmentų eksportavimas į „Microsoft Advertising“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Microsoft Advertising“. Kurkite klientų atitikties auditorijas „Microsoft Advertising“ pasinaudodami vieningųjų klientų profilių duomenimis ir naudokite šias auditorijas savo reklamos kampanijoms. Daugiau informacijos rasite [Segmentų eksportavimas į „Microsoft Advertising”](export-microsoft-advertising.md).
-
-- **Segmentų eksportavimas į „LinkedIn Ads”** Išplėtėme mūsų eksportavimo paskirties vietas, kad būtų įtraukta „LinkedIn Ads” ir įgalintumėte jus atrakinti Taikymą pagal kontaktus bei Taikymą pagal kompaniją per „LinkedIn”, eksportuodami jūsų vieningojo kliento profilio duomenis. Daugiau informacijos rasite [Segmentų eksportavimas į „LinkedIn Ads”](export-linkedin-ads.md).
-
-
-- **Segmentų eksportavimas į „Omnisend“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Omnisend“. Naudodami auditorijos įžvalgose sukurtus segmentus, kurkite kampanijas, teikite rinkodaros el. laiškus ir naudokite konkrečias klientų grupes su „Omnisend“. Daugiau informacijos rasite [Segmentų eksportavimas į „Omnisend”](export-omnisend.md)
-
-### <a name="predictions"></a>Prognozės
-
-- **Įvesties duomenų naudojimo ataskaita** Įvesties duomenų naudojimo ataskaita pateikia klaidų ir įspėjimų, kuriuos gali sugeneruoti jūsų visiškai parengtos prognozės, apibendrintą rodinį. Joje taip pat pateikiama rekomendacijų, kaip pagerinti modelio efektyvumą.    
-  Ataskaita yra pasiekiama atlikus modelio mokymo procesą. Ji sukuriama kiekvienam modeliui atskirai, nepriklausomai nuo to, ar jis užbaigtas sėkmingai.
-  Šiuo metu ši funkcija yra galima tik su Operacijų praradimo modeliu. Daugiau informacijos rasite [Įvesties duomenų naudojimo ataskaita](manage-predictions.md#input-data-usability-report).
-
-### <a name="relationships"></a>Ryšiai
-
-- **Ryšių vizualizavimo priemonė** Ryšių vizualizavimo priemonė jums leidžia matyti visus esamus ryšius tarp objektų ir jų skaičių. Ryšiai dabar tvarkomi grupėmis: vartotojo sukurti, sistemos ir paveldėti ryšiai. Taip pat galite eksportuoti rodinį kaip vaizdą. Daugiau informacijos ieškokite [Peržiūrėti ryšius](relationships.md#view-relationships). 
-
-## <a name="april-2021-updates"></a>2021 m. balandžio mėn. naujinimai
-
-2021 m. balandžio mėnesio atnaujinimai apima kelias funkcijas, efektyvumo atnaujinimus bei klaidų taisymus.
-
-### <a name="data-unification"></a>Duomenų suvienodinimas
- 
-- **Patobulinta suliejimo patirtis duomenų suvienodinimui**    
-  
-   Dabar duomenų suvienodinimo proceso suliejimo konfigūracijoje suteikiame patobulintą vartotojo patirtį. Pakeitimai apima intuityvų sulietų laukų tvarkos nustatymą ir išsamią statistiką apie sujungtus ir pavienius laukus.
-
-- **Objektų pertvarkymas ir visų šaltinio įrašų konfigūravimas į Kliento objektą**  
-      
-   Dabar galite pertvarkyti ir pašalinti objektus iš esamo suliejimo plano duomenų suvienodinimo procese. Tai suteikia lankstumo pertvarkyti objektus atitikties procese, atsižvelgiant į veiklos poreikius. Be to, į galutinį *Kliento* objektą leidžiame įtraukti visus nesugretinus įrašus, kurie jums leidžia apibrėžti kliento profilio duomenų rinkinį.
-
-### <a name="enrichments"></a>Papildymai
-
- - **Naujas papildymas: Išplėstiniai adresai**    
-  
-   Džiaugiamės galėdami pristatyti naują papildymą, skirtą išplėsti klientų duomenų adresams. Adresai jūsų duomenyse gali būti nesusisteminti, neišsamūs arba neteisingi. Ši funkcija naudoja „Microsoft” modelius, kad normalizuotų ir papildytų jūsų adresus į „Common Data Model” formatą geresniam tikslumui ir įžvalgoms.
- 
-   Daugiau informacijos rasite [Klientų profilių papildymas išplėstiniais adresais](enrichment-enhanced-addresses.md).
-
-- **Interaktyvioji papildymų konfigūravimo patirtis**    
-  
-   Mes padarėme papildymų konfigūravimo patirtį paprasta ir interaktyvia. Dabar galite naudoti aiškų ir išsamų papildymų kūrimo ir redagavimo procesą.
- 
-   Be to, atskyrėme trečiųjų šalių papildymų ryšių konfigūraciją, kad tą patį ryšį galėtų naudoti keli papildymai. Naujus ryšius gali konfigūruoti tik administratoriai, tačiau sukurti ryšiai pasiekiami ir administratoriams, ir bendraautoriams.    
-
-   Daugiau informacijos rasite [Ryšių apžvalga](connections.md).
-
-- **Keli to paties tipo papildymai**    
-  
-   Dabar vartotojams leidžiame kurti ir valdyti kelis to paties tipo papildymus. Pavyzdžiui, dabar galite sukurti du atskirus adreso papildymus, kad papildytumėte du skirtingus klientų segmentus. Yra taikomi apribojimai, kiek to paties tipo papildymų galima sukurti ir skirtis, priklausomai nuo papildymo tipo.
-  
-   Daugiau informacijos žr. [Klientų profilių papildymas](enrichment-hub.md).
-
-## <a name="march-2021-updates"></a>2021 m. kovo mėn. atnaujinimai
-
-2021 m. kovo mėnesio atnaujinimai apima kelias funkcijas, efektyvumo atnaujinimus bei klaidų taisymus.
-
-### <a name="activities"></a>Veiklos
-
-- **Veiklos vedlys ir semantiniai tipai**
-
-   Patobulinome ir atnaujinome savo veiklos susiejimo patirtį, kad padėtume kurti ir supaprastintumėme veiklos susiejimą. Šiame naujame procese naudotojai gauna interaktyviąją galimybę, kad galėtų atlikti kiekvieną proceso veiksmą. Atliekant veiklos žymėjimo veiksmą, be kelių veiklos tipų pasirinkimo naudotojas gali pasirinkti semantiškai žymėti duomenis *prenumeratai* ir (arba) *„SalesOrderLine“* pagal pramonės standarto schemas, kurias galima naudoti tolesniam vartojimui.   
-
-   Norėdami gauti daugiau informacijos, žr. [Klientų veiklos](activities.md).
-
-### <a name="data-ingestion"></a>Duomenų įsisavinimas
-
-- **Prisijunkite prie vietinių duomenų šaltinių, naudodami Power Platform duomenų srautus ir tinklų sietuvus** Su malonumu pranešame apie Power Platform duomenų srautų ir vietinio jungiamumo naudojant tinklų sietuvus su „Customer Insights“ peržiūrą su siejama Power Platform arba Dataverse aplinka. Visi nauji duomenų šaltiniai, sukurti „Customer Insights“ su susieta Dataverse aplinka bus numatytieji Power Platform duomenų srautai, užtikrinantys vietinį duomenų ryšį ir išsamų jungčių bei transformavimo galimybių rinkinį.
-
-### <a name="extensibility"></a>Išplėtimas
-
-- **Eksportavimai, tvarkomi ryšiuose ir eksportavimuose** Pakeitėme puslapio **Eksportavimo paskirties vietos** pavadinimą į **Ryšiai** ir pridėjome atskirą puslapį **Eksportavimai**. Kaip šio naujinimo dalį pekelsime esamus eksportavimus į ryšio poras bei į eksportavimą, naudojant tą ryšį. Administratoriai dabar turi daugiau aiškumas dėl siunčiamų duomenų puslapyje **Ryšiai**. Visų vaidmenų naudotojai turi prieigą prie puslapio **Eksportavimai**, tačiau tik administratoriai gali rinktis bendradarbiams leisti redaguoti konkrečius eksportavimus su bendrai naudojamais ryšiais.     
-  Daugiau informacijos žr. [Ryšių apžvalga](connections.md) ir [Eksportavimų apžvalga](export-destinations.md).
-
-- **Segmentų eksportavimas į „Campaign Monitor“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Campaign Monitor“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „Campaign Monitor“ sąrašus ir juos naudoti kaip jūsų rinkodaros kampanijų pagrindą.    
-   Daugiau informacijos žr. [Eksportavimas į „Campaign Monitor“](export-campaign-monitor.md).
-
-- **Segmentų eksportavimas į „Constant Contact“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Constant Contact“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „Constant Contact“ sąrašus ir juos naudoti kaip jūsų rinkodaros kampanijų pagrindą.   
-   Daugiau informacijos žr. [Eksportavimas į „Constant Contact“](export-constant-contact.md).
-
-- **Segmentų eksportavimas į „RollWorks“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „RollWorks“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „RollWorks" auditorijas ir naudoti juos kaip bazinę B2B reklamos dalį.    
-   Daugiau informacijos žr. [Eksportavimas į „RollWorks“](export-rollworks.md).
-
-- **Segmentų eksportavimas į „Snapchat“** Išplėtėme savo eksportavimo paskirties vietas ir įtraukėme „Snapchat“. Dabar galite eksportuoti segmentus iš „Customer Insights“ į „Snapchat“ auditorijas ir juos naudoti kaip jūsų reklamą.     
-   Daugiau informacijos žr. [Eksportavimas į „Snapchat“](export-snapchat.md).
-
-### <a name="predictions"></a>Prognozės
-
-- **Produktų filtrų naudojimas prognozuojamose produktų rekomendacijose** Pridėjome galimybę naudoti produktų filtrus mūsų produktų rekomendacijų modelyje. Dabar galite sukurti prognozę, kuri naudoja tik antrinius jūsų produktų rinkinius.    
-   Daugiau informacijos žr. [Produktų filtrų konfigrūavimas](predict-product-recommendation.md#configure-product-filters).
-
-- **Segmentų kūrimas iš modelių prognozių** Pridėjome greitą būdą segmentams kurit, naudojant prognozės modelio rezultatus. Modelio rezultatų puslapyje galima lengvai sukurti naują segmentą, pasirenkant naują parinktį **Kurti segmentą**.    
-  Daugiau informacijos žr. [Segmento kūrimas pagal prognozės modelį](prediction-based-segment.md).
-
-- **Produktų rekomendacijų paaiškinimai** Pridėjome informaciją, aiškinančią pagrindinius veiksnius, kuriuos išmoko AI modelis produktų rekomendacijoms generuoti ir tai, kiek šie faktoriai daro įtakos produktų rekomendacijoms. Ši informacija įtraukiama į modelio rezultatų ekraną.    
-   Dėl išsamesnės informacijos, žr. [Peržiūrėti prognozės būseną ir rezultatus](predict-product-recommendation.md#review-a-prediction-status-and-results).
-
-## <a name="february-2021-updates"></a>2021 m. vasario atnaujinimai
-
-2021 m. vasario naujinimuose yra kelios funkcijos, efektyvumo plėtotės ir klaidų taisymai.
-
-#### <a name="extensibility"></a>Išplėtimas
-
-- **Eksportuoti segmentus į „AdRoll”**
-
-  Mes išplėtėme eksportavimo paskirties vietas įtraukdami „AdRoll”. Dabar galite eksportuoti segmentus iš „Customer Insights” į „AdRoll” auditorijas ir naudoti juos kaip reklamos bazinę liniją. Daugiau informacijos rasite [Jungtis, skirta „AdRoll“](export-adroll.md).
-
-#### <a name="segments"></a>Segmentai
- 
-- **Dubliuoti segmentą**
-  
-  Norėdami sukurti naują segmentą remiantis esamu, dabar galite dubliuoti segmentą ir redaguoti dubliuojamą segmentą jo tolesniam patobulinimui. 
-
-- **Įtraukti papildomus atributus į segmentą**
-
-  Dabar galite įtraukti atributus į jūsų segmento išvestį, net jei šie atributai nėra kliento profilio dalis. Pavyzdžiui, įtraukite prenumeratos ID į segmentą, net jei jis yra dalis prenumeratos objekto, turinčio M:1 ryšį su kliento objektu. Tol, kol atributas priklauso su kliento objektu susijusiam objektui, galite įtraukti šiuos atributus.  
-
-#### <a name="predictions"></a>Prognozės
-
-- **Kurkite numatomas produkto rekomendacijas**
-
-  Supratimas, ką klientai domisi pirkti, yra vienas iš pirmųjų žingsnių, reikalingų didinti verslo pajamoms didinti ir skatinti klientų lojalumui didinti naudojant personalizavimą ir įtraukimą. Pateikiant jūsų kliento interesų neatitinkančių produktų rekomendacijas gali atsirasti atotrūkio tarp kliento ir jūsų verslo jausmas ir dėl to galiausiai bus apribotos potencialios pajamos ir kliento patirtis. 
-
-  Naudodami savo duomenis, dabar galite kurti prognozes, kokius produktus klientai, tikėtina, įsigys ateityje. Daugiau informacijos rasite [Produkto rekomendacijos prognozė](predict-product-recommendation.md).
-
-#### <a name="system-administration"></a>Sistemos administravimas
-
-- **Aplinkos kopijavimas palaiko daugiau duomenų šaltinių tipų**
-
-  Administratoriai gali kopijuoti aplinkos konfigūracijas į naują aplinką toje pačioje organizacijoje. Ši funkcija išplečia aplinkos kopijavimo funkcijas atvejams, kai naudojami duomenų šaltiniai, pagrįsti „Microsoft Dataverse” valdomu „data lake” arba „Common Data Model” aplanku.
-
-## <a name="january-2021-updates"></a>2021 m. sausio mėn. naujinimai
-
-2021 m. sausio naujinimuose yra kelios funkcijos, efektyvumo naujiniai ir klaidų taisymai.
-
-#### <a name="extensibility"></a>Išplėtimas
-
-- **Išplėstinės funkcijos ir didesnis SFPP eksportavimo efektyvumas** Dabar galite eksportuoti visus išvesties objektus iš „Customer Insights” į SFPP pagrindinį kompiuterį. Anksčiau buvo eksportuojama tik į segmento objektus. Be to, SFTP eksportavimo efektyvumas leidžia daugiau duomenų apimties per mažiau laiko, tai priklauso nuo jūsų SFTP pagrindinio kompiuterio efektyvumo.    
-  Daugiau informacijos žr. [SFTP jungtis (peržiūra)](export-sftp.md).  
-
-#### <a name="segments"></a>Segmentai
-
-- **Mašininis mokymas siūlomus segmentus metrikos tobulinimui** – naujas būdas atrasti ir kurti segmentus. Sistema naudoja AI modelį, kad galėtų pasiūlyti segmentų, kurie gali padėti tobulinti KPI (priemonę), kurią jau stebite. Rodome atributų, kuriuos pažymite priemonei ar kitam pirminiam atributui, įtaką. Ši informacija padeda rasti potencialių segmentų, kurie pateikia galimybes.    
-  Daugiau informacijos žr. [Siūlomi segmentai (peržiūra)](suggested-segments.md).
-
-#### <a name="data-unification"></a>Duomenų susijungimas
-
-- **Patobulintas gretinimas duomenų** suvienodinimo srityje gretinimas buvo atnaujintas. Ji leidžia konfigūruoti ir peržiūrėti gretinimo taisykles, įskaitant išsamią statistiką, kurioje išsamiau paaiškinta, kaip veikia gretinimas. Yra parinkčių, kaip išjungti atitikties taisyklę, kad išsamus konfigūraciją ji nebeaktyvūs, nuvilktumėte ir numestumėte atitikties taisykles bei kt.
-  Dėl daugiau informacijos, žr. [Atitikti objektus](match-entities.md).
-
-- **Gretinimo proceso dublikatų naikinimo išvestį galima naudoti kaip objekto** dublikatų naikinimo proceso išvestį iš gretinimo proceso, kad būtų galima tolesnei analizei atlikti. Šį objektą sudaro papildomo dublikavimo procese naudojami laukai ir laimėtojui skirtas įrašas bei atitinkami pakaitiniai įrašai, kurie suliejami su laimėto asmens įrašu.
-  Dėl daugiau informacijos žr. [Papildomo dublikavimo išvestį kaip objektą](match-entities.md#deduplication-output-as-an-entity).
-
-#### <a name="system-administration"></a>Sistemos administravimas
-
-- **Sklandžiai bendrinkite duomenis su „Microsoft Dataverse“** „Customer Insights” rezultatais su programomis „Microsoft Dataverse“ naudodami „Microsoft Dataverse“ sutvarkyto „Data Lake” funkciją. Susieję aplinką „Dataverse“ su „Customer Insights”, galėsite įjungti duomenų bendrinimą.
-  Daugiau informacijos žr. [Aplinkų valdymas](manage-environments.md).
-
-
+Daugiau informacijos ieškokite [Analizuoti jausmus klientų atsiliepimuose (Peržiūra)](sentiment-analysis.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

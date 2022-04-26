@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508576"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529549"
 ---
 # <a name="segments-overview"></a>Segmentų apžvalga
 
@@ -47,24 +47,30 @@ Naują segmentą galima sukurti keliais būdais:
 
 ## <a name="manage-existing-segments"></a>Esamų segmentų tvarkymas
 
-Eikite į **Segmentų** puslapį, kad peržiūrėtumėte visus savo įrašytus segmentus ir juos valdytumėte.
+Eikite į **puslapį Segmentai**, kad peržiūrėtumėte visus įrašytus segmentus ir juos tvarkytumėte.
 
 Kiekvieną segmentą atitinka eilutė, kurioje pateikta papildoma informacija apie segmentą.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Pažymėtas segmentas su parinkčių išplečiamajame sąraše ir galimose parinktyse.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Pažymėtas segmentas su parinkčių išplečiamajame sąraše ir galimose parinktyse." lightbox="media/segments-selected-segment.png":::
 
-Pasirinkus segmentą pasiekiami toliau nurodyti veiksmai.
+Pasirinkus segmentą galimi šie veiksmai:
 
 - **Peržiūrėti** segmento išsamią informaciją, įskaitant narių skaičių, tendencijas ir segmento narių peržiūrą.
+- **Atsisiųsti** narių sąrašą kaip .CSV failą.
 - **Redaguoti** segmentą ir pakeisti jo ypatybes.
 - **Kurti dublikatą** segmentui. Galite iš karto pasirinkti redaguoti jo ypatybes arba tiesiog įrašyti dublikatą.
 - **Atnaujinti** segmentą, kad būtų įtraukti naujausi duomenys.
-- **Aktyvinti** arba **Išjungti** segmentą. Segmentai turi dvi galimas būsenas – aktyvią arba neaktyvią. Šios būsenos yra naudingos redaguojant segmentą. Neaktyvių segmentų aprašas yra, bet į jį dar neįtraukta klientų. Suaktyvinus segmentą, jo būsena keičiasi iš neaktyvios į aktyvią, ir jis pradeda ieškoti klientų, atitinkančių segmento aprašą. Jei [suplanuotas atnaujinimas](system.md#schedule-tab) yra sukonfigūruotas, neaktyvių segmentų **Būsena** nurodoma kaip **Praleista** – tai reiškia, kad net nebuvo bandyta atnaujinti. Suaktyvinus neaktyvų segmentą, jis bus atnaujintas ir įtrauktas į suplanuotus atnaujinimus.
+- **Aktyvinti** arba **Išjungti** segmentą. Neaktyvių segmentų aprašas yra, bet į jį dar neįtraukta klientų. Aktyvus segmentas ieško klientų, atitinkančių segmento apibrėžimą. Jei [suplanuotas atnaujinimas](system.md#schedule-tab) yra sukonfigūruotas, neaktyvių segmentų **Būsena** nurodoma kaip **Praleista** – tai reiškia, kad net nebuvo bandyta atnaujinti. Suaktyvinus neaktyvų segmentą, jis bus atnaujintas ir įtrauktas į suplanuotus atnaujinimus.
   Taip pat galite naudoti funkciją **Planuoti vėliau**, esančią iškleidžiamajame meniu **Aktyvinti / išjungti**, kad nurodytumėte būsimą datą ir laiką, kada reikia aktyvinti ir išjungti tam tikrą segmentą.
+- **[Raskite panašių klientų](find-similar-customer-segments.md)** iš segmento.
 - **Pervardyti** segmentą.
+- **Žymė** segmento [žymėms](work-with-tags-columns.md#manage-tags) valdyti.
 - **Atsisiųsti** narių sąrašą kaip .CSV failą.
 - **Valdykite eksportavimus**, kad pamatytumėte susijusius segmentus ir juos valdytumėte. [Sužinokite daugiau apie eksportavimus.](export-destinations.md)
 - **Naikinti** segmentą.
+- **Stulpeliai**, skirti [tinkinti rodomus stulpelius](work-with-tags-columns.md#customize-columns).
+- **Filtruoti**, kad filtruotumėte [žymes](work-with-tags-columns.md#filter-on-tags).
+- **Ieškos pavadinimas**, kurį reikia ieškoti pagal segmento pavadinimą.
 
 ## <a name="refresh-segments"></a>Segmentų atnaujinimas
 

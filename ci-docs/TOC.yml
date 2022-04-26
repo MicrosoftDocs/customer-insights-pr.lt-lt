@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Tyrinėkite auditorijos įžvalgas
           href: audience-insights/home.md
+        - name: Darbas su žymėmis ir stulpeliais
+          href: audience-insights/work-with-tags-columns.md
         - name: Darbas su veiklos paskyros
           href: audience-insights/work-with-business-accounts.md
     - name: Duomenų šaltiniai
@@ -180,7 +182,7 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: „Azure Data Lake Storage Gen2“
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: „Azure Synapse Analytics”
+            - name: Azure Synapse Analytics
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md

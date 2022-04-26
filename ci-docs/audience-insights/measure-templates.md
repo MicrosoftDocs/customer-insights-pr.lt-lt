@@ -1,26 +1,26 @@
 ---
 title: Kurti priemones iš šablonų
-description: Apibrėžti priemones, naudojant šablonus bendro naudojimo atvejams.
-ms.date: 02/28/2022
+description: Nustatyti priemones, naudojančias šablonus bendro naudojimo atvejams.
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359962"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529411"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Šablono naudojimas priemonei kurti
 
-Norėdami juos sukurti, galite naudoti iš anksto apibrėžtus dažniausiai naudojamų [priemonių](measures.md) šablonus. Išsamūs šablonų aprašymai ir interaktyvioji patirtis padeda efektyviai matuoti kūrimą. Šablonai kuriami pagal žymimys duomenis iš objekto *„Unified Activity“*. Prieš kurdami priemonę pagal šabloną įsitikinkite, kad sukonfigūravote [kleinto veiklą](activities.md).
+Norėdami juos sukurti, galite naudoti iš anksto nustatytus dažniausiai naudojamų [priemonių](measures.md) šablonus. Išsamūs šablonų aprašymai ir interaktyvioji patirtis padeda efektyviai matuoti kūrimą. Šablonai kuriami pagal žymimys duomenis iš objekto *„Unified Activity“*. Prieš kurdami priemonę pagal šabloną įsitikinkite, kad sukonfigūravote [kleinto veiklą](activities.md).
 
 Norėdami kurti pasirinktines priemones, žr [...](measure-builder.md).
 
@@ -39,7 +39,7 @@ Galimi priemonių šablonai:
 - Lojalumo narystės trukmė
 - Laikas nuo paskutinio pirkimo
 
-## <a name="build-a-new-measure-using-a-template"></a>Naujos priemonės kūrimas naudojant šabloną
+## <a name="build-a-new-measure-using-a-template"></a>Kurti naują priemonę naudojant šabloną
 
 1. Eikite į **priemones**.
 
@@ -51,7 +51,9 @@ Galimi priemonių šablonai:
 
 1. Peržiūrėkite reikiamus duomenis ir pasirinkite **Darbo pradžia**, jei turite visus duomenis.
 
-1. Srityje **Pavadinimo redagavimas** nustatykite savo priemonės pavadinimą ir išvesties objektą. 
+1. Pasirinkite **Redaguoti išsamią informaciją** šalia Matavimo pavadinimas. Pateikite priemonės pavadinimą. Pasirinktinai į priemonę pridėkite [žymes](work-with-tags-columns.md#manage-tags).
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Redaguoti išsamios informacijos dialogo langą.":::
 
 1. Pasirinkite **Atlikta**.
 
