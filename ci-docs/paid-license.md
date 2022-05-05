@@ -7,18 +7,18 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
-ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "8456008"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641864"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Darbo pradžia perkant „Customer Insights“
 
 Šiame straipsnyje paaiškinta, kaip atlikti pirmuosius veiksmus „Dynamics 365 Customer Insights“ jūsų organizacijai įsigius prenumeratą. Jei norėtumėte įsigyti „Customer Insights”, mūsų kontaktų parinktys išvardytos [„Dynamics 365 Customer Insights” svetainėje](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Įsigijęs "Customer Insights" prenumeratos licenciją, visuotinis nuomotojo Microsoft 365 administratorius gauna el. laišką, kviečiantį kurti aplinką. 
+Įsigijęs "Customer Insights" prenumeratos licenciją, visuotinis nuomotojo Microsoft 365 administratorius gauna el. laišką, kuris kviečia juos kurti aplinką. 
 
 "Customer Insights" licencijuotos vienam nuomotojui ir yra kelios galimybės. Norėdami padidinti numatytąją kvotą, galite įsigyti daugiau pajėgumų ir licencijų. 
 - [Įkainių apžvalga](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -34,9 +34,8 @@ Pirmojo paleidimo funkcija padeda su „Customer Insights“ iš pradžių sufok
 
 1. Eikite į [„Customer Insights“ programos URL](https://home.ci.ai.dynamics.com).
 1. Prisijunkite su savo mokyklos ar darbo paskyra. 
-1. Sutikite su aptarnavimo sąlygomis ir nustatykite savo „Customer Insights“ egzemplioriaus turinio nuostatas.
-1. Pasirinkite, į kurią galimybę norite susitelkti, kol pereisite į pažymėtos galimybės pradžios puslapį.
+1. Sutikite su paslaugų teikimo sąlygomis ir nustatykite "Customer Insights" aplinkos turinio nuostatas.
 
 ## <a name="create-your-own-environment"></a>Sukurkite savo aplinką
 
-Kai prisijungsite pirmą kartą, matysite aplinką su duomenų pavyzdžiais. Naudodami juos galite naršyti funkcijas ir susipažinti su programa. Norėdami naudoti savo duomenis, turite sukurti [aplinką](/dynamics365/customer-insights/audience-insights/create-environment).
+Kai prisijungsite pirmą kartą, matysite aplinką su duomenų pavyzdžiais. Naudodami juos galite naršyti funkcijas ir susipažinti su programa. Norėdami naudoti savo duomenis, turite sukurti [aplinką](create-environment.md).

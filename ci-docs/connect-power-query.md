@@ -1,0 +1,91 @@
+---
+title: Duomenų praryti per jungtį Power Query (yra vaizdo įrašas)
+description: Duomenų šaltinių jungtys, pagrįstos Power Query.
+ms.date: 12/06/2021
+ms.reviewer: mhart
+ms.subservice: audience-insights
+ms.topic: how-to
+author: adkuppa
+ms.author: adkuppa
+manager: shellyha
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- customerInsights
+ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.translationtype: MT
+ms.contentlocale: lt-LT
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8643363"
+---
+# <a name="connect-to-a-power-query-data-source"></a>Prisijungimas Power Query prie duomenų šaltinis
+
+Power Query siūlo platų jungčių rinkinį duomenims nuryti. Daugelį šių jungčių palaiko „Dynamics 365 Customer Insights“. 
+
+Duomenų šaltinių įtraukimas pagal Power Query jungtis paprastai atliekamas šiame skyriuje nurodytais veiksmais. Tačiau, atsižvelgiant į naudojamą jungtį, reikalinga kita informacija. Norėdami sužinoti daugiau, peržiūrėkite dokumentaciją apie atskiras jungtis jungties [Power Query nuorodoje](/power-query/connectors/).
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
+
+## <a name="create-a-new-data-source"></a>Sukurkite naują duomenų šaltinį
+
+1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
+
+1. Pasirinkite **Įtraukti duomenų šaltinį**.
+
+1. Pasirinkite **„Microsoft Power Query“**.
+
+1. Nurodykite duomenų šaltinio **Pavadinimas** ir pasirinkite **Toliau**, kad sukurtumėte duomenų šaltinį.
+
+1. Pasirinkite vieną iš [galimų jungčių](#available-power-query-data-sources). Šiame pavyzdyje pasirenkame **teksto / CSV** jungtį.
+
+1. Įveskite reikiamą pasirinktos jungties informaciją dalyje **Ryšio parametrai** ir pasirinkite **Toliau**, kad peržiūrėtumėte duomenis.
+
+1. Pasirinkite **Transformuoti duomenis**. Atlikę šį veiksmą, įtrauksite objektų į savo duomenų šaltinį. Objektai yra duomenų rinkiniai. Jei turite duomenų bazę, kurioje yra keletas duomenų rinkinių, kiekvienas duomenų rinkinys yra savo paties objektas.
+
+1. Dialogo **Power Query lange – užklausų** redagavimas – galite peržiūrėti ir patikslinti duomenis. Objektai, kuriuos sistema nustatė jūsų pasirinktame duomenų šaltinyje, rodomi kairiosios srities dalyje.
+
+   > [!div class="mx-imgBorder"]
+   > ![Užklausų dialogo lango redagavimas.](media/data-manager-configure-edit-queries.png "Užklausų redagavimo dialogo langas")
+
+1. Taip pat galite pertvarkyti savo duomenis. Pažymėkite objektą, kurį norite redaguoti arba pertvarkyti. Norėdami taikyti transformacijas, Power Query naudokite lango parinktis. Vis transformavimai išvardijami dalyje **Pritaikyti veiksmai**. Power Query suteikia daugybę iš anksto sukurtų transformacijos parinkčių. Daugiau informacijos ieškokite [Power Query Transformations](/power-query/power-query-what-is-power-query#transformations).
+
+   Rekomenduojame naudoti šias transformacijas:
+
+   - Jei duomenis įtraukiate iš CSV failo, pirmojoje eilutėje dažnai pateikiamos antraštės. Eikite į **Transformuoti** ir pasirinkite **Naudoti pirmąją eilutę kaip antraštes**.
+   - Užtikrinkite, kad tinkamai nustatytas duomenų tipas. Pavyzdžiui, datos laukuose pasirinkite datos tipą.
+
+1. Norėdami į duomenų šaltinis **įtraukti papildomų objektų dialogo lange Užklausų** redagavimas, eikite į **Pagrindinis** ir pasirinkite **Gauti duomenis**.
+
+1. Norėdami įrašyti transformacijas, **lango apačioje pasirinkite** Įrašyti Power Query. Įrašę, duomenų šaltinį rasite pasirinkę **Duomenys** > **Duomenų šaltiniai**.
+
+1. Puslapyje **Duomenų šaltiniai** pastebėsite, kad naujo duomenų šaltinio būsena yra **Atnaujinama**.
+
+## <a name="available-power-query-data-sources"></a>Galimi Power Query duomenų šaltiniai
+
+Peržiūrėkite [Power Query jungčių, kurias galite naudoti duomenims į "Customer Insights" importuoti, sąrašo jungties nuorodą](/power-query/connectors/). 
+
+Galima naudoti jungtis su varnele **stulpelyje Customer Insights (Dataflows),** kad būtų galima kurti naujus duomenų šaltinius pagal Power Query. Peržiūrėkite konkrečios jungties dokumentaciją ir sužinokite daugiau apie būtinąsias sąlygas, apribojimus ir kitą išsamią informaciją.
+
+## <a name="edit-power-query-data-sources"></a>Redaguoti Power Query duomenų šaltinius
+
+> [!NOTE]
+> Gali būti neįmanoma keisti duomenų šaltinius, kurie dabar yra naudojami viename iš programos procesų (pvz., *segmentavimo*, *sutapdinimo* arba *suliejimo*). 
+>
+> **Puslapyje Parametrai** galite stebėti kiekvieno aktyvaus proceso eigą. Kai procesas bus užbaigtas, galite grįžti į puslapį **Duomenų šaltiniai** ir atlikti pakeitimus.
+
+1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
+
+2. Pažymėkite vertikalią elešką šalia norimos duomenų šaltinis dalies ir **išplečiamajame** meniu pasirinkite Redaguoti.
+
+   > [!div class="mx-imgBorder"]
+   > ![Parinkties redagavimas.](media/edit-option-data-sources.png "Redagavimo parinktis")
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+   
+3. Pritaikykite keitimus ir transformacijas **Power Query dialogo lange – redaguoti užklausas**, kaip aprašyta [skyriuje Kurti naują duomenų šaltinis](#create-a-new-data-source).
+
+4. Baigę redagavimus pasirinkite **Įrašyti** Power Query, kad įrašytumėte keitimus.
+
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

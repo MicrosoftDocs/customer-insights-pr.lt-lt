@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229505"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641818"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Su „Dynamics 365 Customer Insights” bandomąja versija susiję DUK
 
@@ -23,7 +23,7 @@ ms.locfileid: "8229505"
 
 Ši programa yra debesies paslauga, kuriai nereikia jokios specialios programinės įrangos, išskyrus naujausią žiniatinklio naršyklės versiją, nors taikomi kai kurie apribojimai. Kad būtų geriausia bandomoji versija, stenkitės, kad inkognito režimu nebūtų galima pasiekti bandomosios versijos svetainės ir pasirinkite arčiausiai jūsų artimiausią bandomosios versijos vietą. [Sužinokite daugiau apie žiniatinklio programos reikalavimus.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kaip užsiregistruoti į teismą be nuomininko Microsoft 365?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kaip užsiregistruoti teismo procesui be nuomininko Microsoft 365?
 
 Galite įvesti ne darbo el. pašto adresą, o mes sukursime jums klientą ir nuomotoją.
 
@@ -42,7 +42,7 @@ Užsiregistravę bandomajai versijai gauti, gausite el. laišką su išsamia ban
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Kaip įtraukti daugiau vartotojų į bandomąją versiją?
 
-Norėdami įtraukti vartotojų, eikite į [„Microsoft 365” administravimo centrą](https://admin.microsoft.com) naudodami administratoriaus kliento bandomąją versiją. Vykdykite [administravimo centro nurodymus](/microsoft-365/admin/add-users/add-users), kad įtrauktumėte vartotojų į bandomosios versijos licencijos limitą. Jei vartotojas, kurį įtraukiate, jau turi abonementą Microsoft 365, priskirkite jam atitinkamą saugos vaidmuo bandomojoje orgijoje. Daugiau informacijos ieškokite [Priskirti vartotojui saugos vaidmuo](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Norėdami įtraukti vartotojų, eikite į [„Microsoft 365” administravimo centrą](https://admin.microsoft.com) naudodami administratoriaus kliento bandomąją versiją. Vykdykite [administravimo centro nurodymus](/microsoft-365/admin/add-users/add-users), kad įtrauktumėte vartotojų į bandomosios versijos licencijos limitą. Jei įtraukiamas vartotojas jau turi abonementą Microsoft 365, priskirkite jam atitinkamą saugos vaidmuo bandomojoje organizacijoje. Daugiau informacijos ieškokite [Assign a saugos vaidmuo to vartotojui](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Kiek vartotojų galiu įtraukti į bandomąją aplinką?
 
@@ -62,13 +62,13 @@ Galite išplėsti bandomąją versiją programoje tiesiogiai. Bandomąjį laikot
 
 Paprastai rekomenduojame pradėti su naujais duomenimis atnaujinus į mokamą „Customer Insights” versiją. 
 
-Pasirinktinai, jei naudojate tik auditorijos įžvalgas, galite nukopijuoti savo duomenis iš bandomosios versijos aplinkos, jei įsigysite „Customer Insights“. Norėdami perkelti parametrus iš bandomosios aplinkos į mokamą aplinką, turite būti "Customer Insights" bandomosios bandomosios sistemos administratorius ir nuomotojo Microsoft 365 visuotinis administratorius arba "Dynamics 365" administratorius. 
+Pasirinktinai, jei naudojate tik "Customer Insights", galite kopijuoti duomenis iš bandomosios aplinkos, jei perkate "Customer Insights". Turite būti "Customer Insights" bandomosios versijos administratorius ir visuotinis nuomotojo Microsoft 365 administratorius arba "Dynamics 365" administratorius savo organizacijoje, kad perkeltumėte parametrus iš bandomosios aplinkos į mokamą aplinką. 
 
-Pirmą kartą prisijungus prie savo apmokėto „Customer Insights” egzemplioriaus, jūsų bus paprašyta sukurti naują aplinką. Šiame procese jūs galite pasirinkti kopijuoti konfigūraciją iš esamos aplinkos ir perkelti daugumą parametrų. Jei jūs turite aukščiau minimas teises, šiame sąraše bus rodoma bandomosios versijos aplinka. Daugiau informacijos rasite [Aplinkos konfigūravimo kopijavimas](audience-insights/manage-environments.md#copy-the-environment-configuration).
+Pirmą kartą prisijungus prie savo apmokėto „Customer Insights” egzemplioriaus, jūsų bus paprašyta sukurti naują aplinką. Šiame procese jūs galite pasirinkti kopijuoti konfigūraciją iš esamos aplinkos ir perkelti daugumą parametrų. Jei jūs turite aukščiau minimas teises, šiame sąraše bus rodoma bandomosios versijos aplinka. Daugiau informacijos rasite [Aplinkos konfigūravimo kopijavimas](manage-environments.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Kokie yra bandomosios versijos apribojimai ir kvotos?
 
-- Savo „Azure Data Lake" talpinimo paskyros negalima naudoti išvesties duomenims saugoti naudojant auditorijos įžvalgų bandomąją versiją. Tačiau duomenis galite įtraukti iš „Data Lake storage” paskyros.
+- Negalite naudoti savo "Azure Data Lake" saugyklos abonemento išvesties duomenims saugoti bandomosios "Customer Insights" versijos metu. Tačiau duomenis galite įtraukti iš „Data Lake storage” paskyros.
 - Aplinkoje, kuri automatiškai pateikiama paleidus „Customer Insights" bandomąją versiją, galite saugoti iki 3 GB „Dataverse“ duomenų.
 
 ## <a name="customer-insights-specific-questions"></a>Su „Customer Insights“ susiję klausimai
@@ -81,7 +81,7 @@ Užsiregistravę bandomajai versijai gauti, būsite perkeltas į programos pagri
 
 Daugelį „Customer Insights“ galimybių funkcijų galima naudoti bandomojoje versiją.
 
-Šios funkcijos **nepasiekiomos**: 
+Šios funkcijos **nepasiekiamos**: 
 - Negalite kurti naujų aplinkoje, kurios naudoja jūsų „Azure Data Lake" talpinimo paskyrą.
 - Negalite panaikinti bandomosios aplinkos. 
 

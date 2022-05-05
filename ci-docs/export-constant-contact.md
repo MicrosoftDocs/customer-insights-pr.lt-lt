@@ -1,0 +1,84 @@
+---
+title: „Customer Insights“ duomenų eksportavimas į „Constant Contact“
+description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Constant Contact“.
+ms.date: 10/08/2021
+ms.reviewer: mhart
+ms.subservice: audience-insights
+ms.topic: conceptual
+author: pkieffer
+ms.author: philk
+manager: shellyha
+ms.openlocfilehash: 310de0355f71829346f0e35508487e5962d6e912
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.translationtype: MT
+ms.contentlocale: lt-LT
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8643793"
+---
+# <a name="export-segments-to-constant-contact-preview"></a>Segmentų eksportavimas į „Constant Contact“ (peržiūros versija)
+
+Eksportuokite vieningų klientų profilių segmentus į „Constant Contact“ ir naudokite juos rinkodaros veiklai. 
+
+## <a name="prerequisites-for-a-connection"></a>Būtinosios ryšio sąlygos
+
+-   Turite [„Constant Contact“ paskyros](https://www.constantcontact.com/account-home) ir atitinkamus administratoriaus kredencialus.
+-   Sukonfigūravote [segmentus](segments.md) programoje "Customer Insights".
+-   Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
+
+## <a name="known-limitations"></a>Žinomi apribojimai
+
+- Vienam eksportavimui galima eksportuoti iki 1 milijono profilių į „Constant Contact“.
+- Segmentų eksportavimas į „Constant Contact“ ribojamas.
+- Iki 1 milijono klientų profilių eksportavimas į „Constant Contact“ gali užtrukti iki 1 valandos. 
+- Klientų profilių, kuriuos galite eksportuoti į „Constant Contact“, skaičius priklauso ir yra apribotas pagal sutartį su „Constant Contact“.
+
+## <a name="set-up-connection-to-constant-contact"></a>Ryšio su „Constant Contact“ nustatymas
+
+1. Eikite į **Administravimas** > **Ryšiai**.
+
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„Constant Contact“**, kad sukonfigūruotumėte ryšį.
+
+1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
+
+1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Pasirinkę **Sutinku**, kad patvirtintumėte **Duomenų privatumą ir atitiktį**.
+
+1. Pasirinkite **Prisijungti** ir inicijuokite ryšį su „Constant Contact“.
+
+1. Pasirinkite **Autentifikuoti su „Constant Contact”** ir pateikite savo „Constant Contact” administratoriaus kredencialus. 
+
+1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
+
+1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį.
+
+## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
+
+Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+
+1. Eikite į **Duomenys** > **Eksportavimas**.
+
+1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Constant Contact“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
+
+1. Įveskite savo [**„Constant Contact“ sąrašo ID**](https://app.constantcontact.com/pages/contacts/ui#lists). Norėdami rasti URL sąrašo ID, atidarykite sąrašą „Constant Contact“.
+
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „Constant Contact“.
+
+1. Pasirinktinai, galite eksportuoti Vardą ir Pavardę kaip papildomus laukelius norėdami sukurti labiau suasmenintus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
+
+1. Pasirinkite segmentus, kuriuos norite eksportuoti.
+
+1. Pasirinkite **Įrašyti**.
+
+Eksportavimo įrašymas eksportavimo iš karto nevykdo.
+
+Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
+
+
+## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
+
+Kai sistemai Dynamics 365 Customer Insights leidžiate perduoti duomenis į „Constant Contact“, leidžiate perduoti duomenis už Dynamics 365 Customer Insights atitikties ribų, įskaitant galima neskelbtinus duomenis, pvz., asmens duomenis. „Microsoft“ tokius duomenis perduos jums leidus, tačiau jūs esate atsakingi už tai, kad užtikrintumėte, jog „Constant Contact“ atitinka galimai jūsų turimus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.

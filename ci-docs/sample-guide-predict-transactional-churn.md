@@ -1,0 +1,207 @@
+---
+title: Perlaidos nutraukimo prognozės pavyzdžio vedlys
+description: Naudokite šį pavyzdžio vedlį tam, kad pabandytumėte nestandartinį perlaidos nutraukimo prognozės modelį.
+ms.date: 11/19/2020
+ms.reviewer: mhart
+ms.subservice: audience-insights
+ms.topic: tutorial
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.translationtype: MT
+ms.contentlocale: lt-LT
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8643748"
+---
+# <a name="transactional-churn-prediction-sample-guide"></a>Perlaidos nutraukimo prognozės pavyzdžio vedlys
+
+Šis vedlys jus supažindins nuo pradžios iki galo su perlaidos nutraukimo prognozės pavyzdžiu tinkintose „Customer Insights“ naudojant toliau pateiktus duomenis. Visi šiame vedlyje naudojami duomenys nėra realūs kliento duomenys ir yra „Contoso“ duomenų rinkinio, esančio *Demonstracinėje* aplinkoje jūsų „Customer Insights“ prenumeratoje, dalis.
+
+## <a name="scenario"></a>Scenarijus
+
+„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jų tikslas yra sužinoti, kurie klientai dažniausiai įsigiję produktus reguliariai ir nustos būti aktyviais klientais per artimiausias 60 dienų. Žinojimas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.
+
+## <a name="prerequisites"></a>Būtinosios sąlygos
+
+- Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.
+- Rekomenduojame jums atlikti šiuos žingsnius [naujoje aplinkoje](manage-environments.md).
+
+## <a name="task-1---ingest-data"></a>Užduotis 1 - Duomenų vartojimas
+
+Peržiūrėkite straipsnius [apie duomenų nurijimą](data-sources.md) ir [duomenų šaltinių Power Query importavimą naudojant specialiai jungtis](connect-power-query.md). Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės. 
+
+### <a name="ingest-customer-data-from-ecommerce-platform"></a>Kliento duomenų naudojimas iš e-komercijos platformos
+
+1. Sukurkite duomenų šaltinį pavadinimu **e-komercija**, pasirinkite importavimo parinktį ir pasirinkite **Tekstas/CSV** jungtį.
+
+1. Įveskite URL e-komercijos kontaktams https://aka.ms/ciadclasscontacts.
+
+1. Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.
+
+1. Naujinti duomenų tipą toliau išvardytiems stulpeliams:
+
+   - **Gimimo data**: Data
+   - **Sukurta**: Data/Laikas/Zona
+
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Keisti gimimo dieną į datą.":::
+
+1. Lauke **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
+
+1. Įrašykite duomenų šaltinį.
+
+### <a name="ingest-online-purchase-data"></a>Vartokite internete įsigytus duomenis
+
+1. Įtraukite kitą duomenų rinkinį į **e-komercijos** duomenų šaltinį. Pasirinkite **Tekstas/CSV** jungtis dar kartą.
+
+1. Įveskite URL **Interneto įsigijimų** duomenis https://aka.ms/ciadclassonline.
+
+1. Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.
+
+1. Naujinti duomenų tipą toliau išvardytiems stulpeliams:
+
+   - **Įsigyta**: Data/Laikas
+   - **Bendra kaina**: Valiuta
+   
+1. Laukelyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos įsigijimai**.
+
+1. Įrašykite duomenų šaltinį.
+
+### <a name="ingest-customer-data-from-loyalty-schema"></a>Kliento duomenų naudojimas iš lojalumo schemos
+
+1. Sukurkite duomenų šaltinį pavadinimu **Lojalumo schema**, pasirinkite importavimo parinktį ir pasirinkite **Tekstas/CSV** jungtį.
+
+1. Įveskite URL e-komercijos kontaktams https://aka.ms/ciadclasscustomerloyalty.
+
+1. Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.
+
+1. Naujinti duomenų tipą toliau išvardytiems stulpeliams:
+
+   - **Gimimo data**: Data
+   - **Uždirbtitaškai**: Visas skaičius
+   - **Sukurta**: Data/Laikas
+
+1. Laukelyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **lojalūs klientai**.
+
+1. Įrašykite duomenų šaltinį.
+
+
+## <a name="task-2---data-unification"></a>Užduotis 2 - Duomenų suvienodinimas
+
+Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** procesą siekiant sukurti suvienodintą kliento profilį. Dėl daugiau informacijos, žr. [Duomenų suvienodinimas](data-unification.md).
+
+### <a name="map"></a>Schema
+
+1. Suvartojus duomenis, sudarykite kontaktų žemėlapį iš e-komercijos ir lojalumo duomenų į bendrus duomenų tipus. Eikite į **Duomenys** > **Suvienodinti** > **Žemėlapis**.
+
+1. Pasirinkite objektus, kurie rodo kliento profilį – **e-komercijoskontaktai** ir **lojalumoklientai**. 
+
+   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Suvienodinti e-komercijos ir lojalumo duomenų šaltinius.":::
+
+1. Pasirinkite **Kontakto ID** kaip pagrindinį raktą **e-komercijos kontaktus** ir **Lojalumo ID** kaip pirminį raktą **lojalumo klientams**.
+
+   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Suvienodinti lojalumo ID kaip pagrindinį raktą.":::
+
+### <a name="match"></a>Sugretinti
+
+1. Eikite į **Atitikties** skirtuką ir pasirinkite **Nustatyti užsakymą**.
+
+1. Pirminiame **išplečiamajame** sąraše pasirinkite **eCommerceContacts: el. prekyba** pirminis šaltinis ir įtraukite visus įrašus.
+
+1. Išplečiamajame sąraše **Objektas 2** pasirinkite **loyCustomers: LoyaltyScheme** įtraukite visus įrašus.
+
+   :::image type="content" source="media/unify-match-order.PNG" alt-text="Suvienodinti e-komercijos atitiktį ir lojalumą.":::
+
+1. Pasirinkite **Sukurkite naują taisyklę**
+
+1. Įtraukite savo pirmąją sąlygą naudodami visą pavadinimą.
+
+   * El. prekyboscontacts išplečiamajame sąraše pažymėkite **Visas vardas**.
+   * loyCustomers išplečiamajame sąraše pažymėkite **Visas vardas**.
+   * Pasirinkite **Normalizuoti** iškrentantį meniu ir pasirinkite **Tipas (Telefonas, Pavadinimas, Adresas, ...)**.
+   * Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
+
+1. Įveskite pavadinimą **Visas pavadinimas, El. paštas** naujai taisyklei.
+
+   * Įtraukite antrąją sąlygą el. pašto adresui pasirinkdami **Įtraukite sąlygą**
+   * Objekto "eCommerceContacts" **išplečiamajame sąraše** pasirinkite "El. paštas".
+   * Objekto loyCustomers **išplečiamajame sąraše** pasirinkite "El. paštas". 
+   * Palikite normalizavimą tuščią. 
+   * Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
+
+   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Suvienodinti atitikties taisyklę pavadinimui ir el. paštui.":::
+
+7. Pasirinkite **Įrašyti** ir **Vykdyti**.
+
+### <a name="merge"></a>Sulieti
+
+1. Eikite į **Sulieti** skirtuką.
+
+1. **Kontakto ID** skirtą **lojalių klientų** objekte, keiskite rodomą pavadinimą į **KontaktoIDlojalumas** tam, kad jis skirtųsi nuo kitų vartotų ID.
+
+   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="pervardykite kontakto ID iš lojalumo ID.":::
+
+1. Pasirinkite **Įrašyti** ir **Vykdyti** tam, kad pradėtumėte suliejimo procesą.
+
+
+
+## <a name="task-3---configure-transaction-churn-prediction"></a>Užduotis 3 - Konfigūruoti perlaidos nutraukimo prognozę
+
+Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravimo nutraukimo prognozę. Išsamių veiksmų ieškokite [straipsnyje Prenumerata prognozė](predict-subscription-churn.md). 
+
+1. Eikite į **Įžvalga** > **Atrasti** ir pasirinkite norėdami naudoti **Kliento nutraukimo modelį**.
+
+1. Pasirinkite **Perlaidos** parinktį ir rinkitės **Pradėti**.
+
+1. Įvardykite modelį **OOB e-komercijos perlaidos nutraukimo prognozė** ir išvesties objektą **„OOBeCommerceChurnPrediction“**.
+
+1. Nustatykite dvi sąlygas nutraukimo modeliui:
+
+   * **Prognozės langas**: **mažiausiai 60** dienų. Šis nustatymas nustato, kaip toli į ateitį norime prognozuoti kliento nutraukimą.
+
+   * **Nutraukimo sąvoka**: **mažiausiai 60** dienų. Trukmė be įsigijimo, po kurio klientas laikomas nutraukusiu paslaugas.
+
+     :::image type="content" source="media/model-levers.PNG" alt-text="Pasirinkite modelio išlyginimo prognozės langą ir nutraukimo sąvoką.":::
+
+1. Pasirinkite **Pirkimo retrospektyva (būtina)** ir pasirinkite **Įtraukti duomenis** pirkimo retrospektyvai.
+
+1. Įtraukite **e-komercijos įsigijimai : e-komerciją** objektą ir nustatykite laukelių žemėlapį iš e-komercijos į atitinkamus laukelius būtinus modeliui.
+
+1. Prisijunkite prie **e-komercijos įsigijimų : e-komercijos** objekto su **e-komercijos kontaktais : e-komercija**.
+
+   :::image type="content" source="media/model-purchase-join.PNG" alt-text="Prijunkite e-komercijos objektus.":::
+
+1. Pasirinkite **Kitas** tam, kad nustatytumėte modelio grafiką.
+
+   Modelis turi būti reguliariai bandomas siekiant išmokti naujas iškarpas, kai esama naujų vartojamų duomenų. Šiam pavyzdžiui, rinkitės **Kas mėnesį**.
+
+1. Peržiūrėję visą išsamią informaciją pasirinkite **Įrašyti ir vykdyti**.
+
+## <a name="task-4---review-model-results-and-explanations"></a>4 užduotis – Peržiūrėti modelio rezultatus ir paaiškinimus
+
+Leisti modeliui užbaigti mokymąsi ir duomenų vertinimą. Galite dabar peržiūrėti prenumeravimo atsisakymo modelio paaiškinimus. Dėl išsamesnės informacijos, žr. [Peržiūrėti prognozės būseną ir rezultatus](predict-subscription-churn.md#review-a-prediction-status-and-results).
+
+## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Užduotis 5 - Sukurti didelės atsisakymo rizikos klientų segmentą
+
+Gamybos modelio vykdymas sukurią naują objektą, kurį galite matyti **Duomenys** > **Objektai**.   
+
+Galite sukurti naują segmentą pagal modelio sukurtą objektą.
+
+1.  Eikite į **Segmentai**. Pasirinkite **Naujas** ir rinkitės **Sukurtas iš** > **Įžvalgos**. 
+
+   :::image type="content" source="media/segment-intelligence.PNG" alt-text="Sukurkite segmentą su modelio išvestimi.":::
+
+1. Pasirinkite **„OOBSubscriptionChurnPrediction“** galutinį tašką ir nustatykite segmentą: 
+   - Laukelis: Nutraukimo balas
+   - Operatorius: didesnis nei
+   - Vertė: 0,6
+   
+   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Nustatykite prenumeravimo atsisakymo segmentą.":::
+
+Dabar turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.
+
+Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).
+
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]
