@@ -1,8 +1,8 @@
 ---
 title: Prenumeratos atsisakymo prognozės pavyzdžio vedlys
 description: Naudokite šį pavyzdžio vedlį tam, kad bandytumėte nestandartinį prenumeravimo atsisakymo prognozės modelį.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643573"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741421"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Prenumeratos atsisakymo prognozės pavyzdžio vedlys
 
@@ -112,61 +112,7 @@ Peržiūrėkite straipsnius [apie duomenų nurijimą](data-sources.md) ir [duome
 
 ## <a name="task-2---data-unification"></a>Užduotis 2 - Duomenų suvienodinimas
 
-Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** procesą siekiant sukurti suvienodintą kliento profilį. Dėl daugiau informacijos, žr. [Duomenų suvienodinimas](data-unification.md).
-
-### <a name="map"></a>Schema
-
-1. Suvartojus duomenis, sudarykite kontaktų žemėlapį iš e-komercijos ir lojalumo duomenų į bendrus duomenų tipus. Eikite į **Duomenys** > **Suvienodinti** > **Žemėlapis**.
-
-1. Pasirinkite objektus, kurie rodo kliento profilį – **e-komercijoskontaktai** ir **lojalumoklientai**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Suvienodinti e-komercijos ir lojalumo duomenų šaltinius.":::
-
-1. Pasirinkite **Kontakto ID** kaip pagrindinį raktą **e-komercijos kontaktus** ir **Lojalumo ID** kaip pirminį raktą **lojalumo klientams**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Suvienodinti lojalumo ID kaip pagrindinį raktą.":::
-
-### <a name="match"></a>Sugretinti
-
-1. Eikite į **Atitikties** skirtuką ir pasirinkite **Nustatyti užsakymą**.
-
-1. Pirminiame **išplečiamajame** sąraše pasirinkite **eCommerceContacts: el. prekyba** pirminis šaltinis ir įtraukite visus įrašus.
-
-1. Išplečiamajame sąraše **Objektas 2** pasirinkite **loyCustomers: LoyaltyScheme** įtraukite visus įrašus.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Suvienodinti e-komercijos atitiktį ir lojalumą.":::
-
-1. Pasirinkite **Sukurkite naują taisyklę**
-
-1. Įtraukite savo pirmąją sąlygą naudodami visą pavadinimą.
-
-   * El. prekyboscontacts išplečiamajame sąraše pažymėkite **Visas vardas**.
-   * loyCustomers išplečiamajame sąraše pažymėkite **Visas vardas**.
-   * Pasirinkite **Normalizuoti** iškrentantį meniu ir pasirinkite **Tipas (Telefonas, Pavadinimas, Adresas, ...)**.
-   * Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
-
-1. Įveskite pavadinimą **Visas pavadinimas, El. paštas** naujai taisyklei.
-
-   * Įtraukite antrąją sąlygą el. pašto adresui pasirinkdami **Įtraukite sąlygą**
-   * Objekto "eCommerceContacts" **išplečiamajame sąraše** pasirinkite "El. paštas".
-   * Objekto loyCustomers **išplečiamajame sąraše** pasirinkite "El. paštas". 
-   * Palikite normalizavimą tuščią. 
-   * Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Suvienodinti atitikties taisyklę pavadinimui ir el. paštui.":::
-
-7. Pasirinkite **Įrašyti** ir **Vykdyti**.
-
-### <a name="merge"></a>Sulieti
-
-1. Eikite į **Sulieti** skirtuką.
-
-1. **Kontakto ID** skirtą **lojalių klientų** objekte, keiskite rodomą pavadinimą į **KontaktoIDlojalumas** tam, kad jis skirtųsi nuo kitų vartotų ID.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="pervardykite kontakto ID iš lojalumo ID.":::
-
-1. Pasirinkite **Įrašyti** ir **Vykdyti** tam, kad pradėtumėte suliejimo procesą.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Užduotis 3 - Konfigūruoti prenumeravimo nutraukimo prognozę
 

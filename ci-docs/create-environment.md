@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643098"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712912"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Aplinkos kūrimas "Customer Insights"
 
@@ -63,8 +63,7 @@ Galėsite pasirinkti dvi galimybes: **„Customer Insights" saugyklą** „Azure
 Įrašydami duomenis į, sutinkate, kad duomenys bus perduoti ir saugomi tinkamoje geografinėje to „Azure Data Lake Storage“ „Azure" saugyklos paskyros vietoje. Ši vieta gali skirtis nuo to, kurioje vietoje saugomi duomenys „Dynamics 365 Customer Insights“. Sužinokite daugiau [„Microsoft“ patikimumo centre](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> „Customer Insights“ dabar palaiko šiuos dalykus:
-> - Iš duomenų srautų, „Power BI“ saugomų valdomojoje „Microsoft Dataverse“ „Data Lake“ saugomų objektų.  
+> „Customer Insights“ dabar palaiko šiuos dalykus:  
 > - „Azure Data Lake Storage" paskyrų abonementai iš to paties „Azure" regiono, kurį pasirinkote kurdami aplinką.
 > - Azure Data Lake Storage abonementai, kurie yra Bendr2 ir kuriuose *įgalinta hierarchinė vardų sritis*. "Azure Data Lake Gen1" saugyklos abonementai nepalaikomi.
 
@@ -80,7 +79,7 @@ Jei sukuriate kelias „Customer Insights“ aplinkas ir pasirenkate įrašyti i
 
 Pateikite savo Microsoft Dataverse aplinką duomenims (profiliams ir įžvalgoms) bendrinti su verslo programomis, pagrįstomis Dataverse, pvz., "Dynamics 365 Marketing" arba modeliu pagrįstomis programomis programoje Power Apps. Palikite šį lauką tuščią, jei neturite savo Dataverse aplinkos, ir mes jums ją pateiksime.
 
-Prisijungimas prie savo Dataverse aplinkos taip pat leidžia jums nuryti [duomenis iš vietinis duomenų šaltinių naudojant Power Platform duomenų srautus ir šliuzus](data-sources.md#add-data-from-on-premises-data-sources). Taip pat galite naudoti ["out-of-box" prognozė modelius](predictions-overview.md?tabs=b2c#out-of-box-models), prisijungdami prie Dataverse aplinkos.
+Prisijungimas prie savo Dataverse aplinkos taip pat leidžia jums nuryti [duomenis iš vietinis duomenų šaltinių naudojant Power Platform duomenų srautus ir šliuzus](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. "Customer Insights" ir Dataverse turi būti tame pačiame regione, kad būtų galima bendrinti duomenis.

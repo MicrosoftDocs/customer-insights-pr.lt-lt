@@ -12,18 +12,18 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653578"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740913"
 ---
 # <a name="user-permissions"></a>Vartotojų teisės
 
 Puslapyje **Teisės** nustatysite vaidmenis ir teises, kaip naudoti "Customer Insights".
 
-Norėdami peržiūrėti puslapį, privalote turėti administratoriaus teises. Norėdami pasiekti teisių puslapį, eikite į **AdminSecurityUsers** > **·** > **·**.
+Norėdami peržiūrėti puslapį, privalote turėti administratoriaus teises. Norėdami pasiekti teisių puslapį, eikite į **Administratoriaus** > **saugos** > **vartotojai**.
 
 Yra trys vaidmenų tipai:
 
@@ -41,7 +41,7 @@ Yra trys vaidmenų tipai:
 
 - Žiūrinčiajam pasiekiamos visos teisės.
 - Įkelkite ir transformuokite duomenis naudodami **Duomenų šaltinių** puslapį.
-- Užbaikite *Duomenų suvienodinimo* skyrius (**Žemėlapis**, **Atitiktis** ir **Suliejimas**), kuris yra suvienodinto kliento profilio objekte.
+- Baigti ***Duomenų suvienijimą**, dėl kurio sukuriamas vieningas kliento profilio objektas.
 - Apibrėžkite **Ryšius** ir **Veiklas**.
 - Sukurkite segmentus naudodami **Segmentų** puslapį.
 - Kurkite matus naudodami puslapį **Matai**.
@@ -69,7 +69,7 @@ Yra trys vaidmenų tipai:
 
 ## <a name="assign-roles-and-permissions"></a>Vaidmenų ir teisių priskyrimas
 
-1. Eikite į **AdminSecurity** > **·** > **Users***.
+1. Eikite į **Administravimo** > **saugos** > **Vartotojai***.
 
 1. Pasirinkite **Įtraukite vartotojus** siekiant atverti **Įtraukti/Redaguoti leidimus** juostą.
 
@@ -79,7 +79,7 @@ Yra trys vaidmenų tipai:
 
 ## <a name="view-current-permissions"></a>Dabartinių teisių peržiūra
 
-Eikite į **AdminSecurityUsers** > **·** > **·**, kad sužinotumėte, kokios vaidmenų užduotys šiuo metu yra aktyvios.
+Eikite į **Administratoriaus** > **saugos** > **vartotojai**, kad sužinotumėte, kokie vaidmenų priskyrimai šiuo metu yra aktyvūs.
 
 - Stulpelyje **Tipas** nurodomas vienas vartotojas, grupė arba programa. Sistema palaiko atskirus vartotojus ir grupes.
 - Vaidmenys nurodomi stulpelyje **Vaidmuo**.

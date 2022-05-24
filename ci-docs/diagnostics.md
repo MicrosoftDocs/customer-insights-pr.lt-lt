@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643034"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755272"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prisijungimas persiunčiant naudojant Dynamics 365 Customer Insights "Azure Monitor" (peržiūra)
 
@@ -27,7 +27,7 @@ Dynamics 365 Customer Insights suteikia tiesioginę integraciją su "Azure Monit
 - **Audito įvykiai**
   - **APIEvent** - leidžia keitimų stebėjimą Dynamics 365 Customer Insights atlikti per vartotojo sąsają.
 - **Veiklos įvykiai**
-  - **WorkflowEvent** - Darbo eiga leidžia nustatyti [duomenų šaltinius](data-sources.md), [suvienyti ir](data-unification.md) praturtinti [ir](enrichment-hub.md) galiausiai [eksportuoti](export-destinations.md) duomenis į kitas sistemas. Visus šiuos veiksmus galima atlikti atskirai (pvz., pradėti vieną eksportą) arba organizuoti (pvz., duomenų atnaujinimas iš duomenų šaltinių, dėl kurių pradedamas suvienijimo procesas, kuris paskatins sustiprinimą, o atlikus jį bus galima papildomai praturtinti ir, kai tai bus padaryta, duomenis eksportuoti į kitą sistemą). Daugiau informacijos ieškokite [WorkflowEvent schema](#workflow-event-schema).
+  - **WorkflowEvent** – darbo eiga leidžia nustatyti [duomenų šaltinius](data-sources.md), suvienodinti, [praturtinti](data-unification.md) [ir](enrichment-hub.md) galiausiai [eksportuoti](export-destinations.md) duomenis į kitas sistemas. Visus šiuos veiksmus galima atlikti atskirai (pavyzdžiui, suaktyvinti vieną eksportą). Taip pat galima paleisti surežisuotą (pavyzdžiui, duomenų atnaujinimą iš duomenų šaltinių, kuris sukelia suvienijimo procesą, kuris pritrauks praturtinimus ir, kai tai bus padaryta, eksportuos duomenis į kitą sistemą). Daugiau informacijos ieškokite [WorkflowEvent schema](#workflow-event-schema).
   - **APIEvent** - visi API skambučiai klientų egzemplioriui į Dynamics 365 Customer Insights. Daugiau informacijos ieškokite [APIEvent schema.](#api-event-schema)
 
 ## <a name="set-up-the-diagnostic-settings"></a>Diagnostikos parametrų nustatymas
@@ -44,7 +44,7 @@ Norint konfigūruoti diagnostiką programoje "Customer Insights", turi būti įv
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnostikos nustatymas naudojant "Azure Monitor"
 
-1. "Customer Insights" pasirinkite **SystemDiagnostics** > **·**, kad pamatytumėte diagnostikos paskirties vietas, sukonfigūruotas šiuo egzemplioriumi.
+1. "Customer Insights" pasirinkite **Sistemos** > **diagnostika**, kad pamatytumėte diagnostikos paskirties vietas, sukonfigūruotas šiuo egzemplioriumi.
 
 1. Pasirinkite **Įtraukti paskirties vietą**.
 
@@ -55,7 +55,7 @@ Norint konfigūruoti diagnostiką programoje "Customer Insights", turi būti įv
 
 1. Pasirinkite **"Azure" prenumeratos nuomotoją** su paskirties ištekliais ir pasirinkite **prisijungti**.
 
-1. Pasirinkite ištekliaus **tipą** (saugyklos abonementas, įvykių telkinys arba žurnalo analizė).
+1. Pasirinkite išteklių **tipą** (saugyklos abonementas, įvykių koncentratorius arba žurnalo analizė).
 
 1. Pasirinkite **paskirties ištekliaus prenumeratą**.
 
@@ -69,7 +69,7 @@ Norint konfigūruoti diagnostiką programoje "Customer Insights", turi būti įv
 
 ### <a name="remove-a-destination"></a>Paskirties vietos šalinimas
 
-1. Eikite į **SystemDiagnostics** > **·**.
+1. Eikite į **sistemos** > **diagnostiką**.
 
 1. Sąraše pasirinkite diagnostikos paskirties vietą.
 
@@ -109,7 +109,7 @@ Atsižvelgiant į jūsų pasirinkimą pagal ištekliaus tipą, automatiškai bus
 
 ### <a name="log-analytics"></a>Žurnalo analizė
 
-"Customer Insights" tarnybos vykdytojas gauna ištekliaus **žurnalo analizės bendraautoriaus** teises. Žurnalai bus pasiekiami pasirinktos Log Analytics darbo srities dalyje **LogsTablesLog** > **·** > **Management**. Išplėskite žurnalo **valdymo** sprendimą ir raskite lenteles `CIEventsAudit` ir `CIEventsOperational` lenteles.
+"Customer Insights" tarnybos vykdytojas gauna ištekliaus **žurnalo analizės bendraautoriaus** teises. Žurnalus bus galima rasti pasirinktos "Log Analytics" darbo srities dalyje **Žurnalų** > **lentelių** > **žurnalo valdymas**. Išplėskite žurnalo **valdymo** sprendimą ir raskite lenteles `CIEventsAudit` ir `CIEventsOperational` lenteles.
 
 - `CIEventsAudit` kuriuose yra **audito įvykių**
 - `CIEventsOperational` su **veiklos įvykiais**
@@ -182,7 +182,7 @@ API įvykiai ir darbo eigos įvykiai turi bendrą struktūrą ir išsamią infor
 
 ### <a name="workflow-event-schema"></a>Darbo eigos įvykių schema
 
-Darbo eigoje yra keli veiksmai. [Duomenų šaltinių](data-sources.md) nurijimas, [duomenų suvienodinimas](data-unification.md), [praturtinimas](enrichment-hub.md) ir [eksportavimas](export-destinations.md). Visi šie veiksmai gali būti vykdomi atskirai arba organizuojami naudojant šiuos procesus. 
+Darbo eigoje yra keli veiksmai. [Duomenų šaltinių](data-sources.md) nurijimas, [duomenų suvienodinimas](data-unification.md), [praturtinimas](enrichment-hub.md) ir [eksportavimas](export-destinations.md). Visi šie veiksmai gali būti vykdomi atskirai arba organizuojami naudojant šiuos procesus.
 
 #### <a name="operation-types"></a>Operacijų tipai
 
@@ -215,7 +215,7 @@ Darbo eigoje yra keli veiksmai. [Duomenų šaltinių](data-sources.md) nurijimas
 | `time`          | Laiko žyma | Privalomas          | Renginio laiko žyma (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Privalomas          | Egzemplioriaus, išplatinusio įvykį, resourceId.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Privalomas          | Šio įvykio atstovaujamos operacijos pavadinimas. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Nuorodos ieškokite [Operations Types](#operation-types). | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Privalomas          | Renginio žurnalo kategorija. Visada `Operational` darbo eigos įvykiams                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Privalomas          | Renginio žurnalo kategorija. Visada `Operational` darbo eigos įvykiams                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Privalomas          | Įvykio būsena. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Ilgas      | Pasirinktinai          | Operacijos trukmė milisekundėmis.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Pasirinktinai          | JSON objektas, turintis daugiau savybių konkrečiai įvykių kategorijai.                                                                                        | Žiūrėkite poskyrį [Darbo eigos ypatybės](#workflow-properties-schema)                                                                                                       |

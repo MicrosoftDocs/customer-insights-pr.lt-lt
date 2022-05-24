@@ -1,7 +1,7 @@
 ---
 title: Peržiūrėti kliento profilius
 description: Gaukite bendrą jūsų suvienodintų kliento duomenų rodinį.
-ms.date: 09/30/2021
+ms.date: 05/13/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 45ef6abcd612178a097569825e32ff9ac779de01
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643074"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755792"
 ---
 # <a name="customer-profiles"></a>Klientų profiliai
 
@@ -29,7 +29,7 @@ Klientai gali būti asmenys arba organizacijos. Kiekvieno kliento profilį vaizd
 
 Pasirinkite plytelę, kad specialiame puslapyje, pavadintame Kliento išsami informacija, būtų [peržiūrėti pasirinkto kliento duomenys](customer-profiles.md#customer-details-page).
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Klientų puslapis, kuriame rodomos rezultatų plytelės](media/customers-page-result-tiles-B2C.png "Klientų puslapis, kuriame rodomos rezultatų plytelės")
 
 > [!NOTE]
@@ -37,13 +37,13 @@ Pasirinkite plytelę, kad specialiame puslapyje, pavadintame Kliento išsami inf
 
 ## <a name="search-for-customers"></a>Klientų paieška
 
-Klientų galite ieškoti, į paieškos laukelį įvesdami vardą ar kokį nors kitą atributą. Ieška veikia tik _kliento_ objektui, sukurtame suvienodinimo proceso metu.
+Klientų galite ieškoti, į paieškos laukelį įvesdami vardą ar kokį nors kitą atributą. Ieška veikia tik *kliento* objektui, sukurtame suvienodinimo proceso metu.
 
 Turėdami administratoriaus teises, galite konfigūruoti paieškai pasiekiamus atributus, naudodami puslapį **Ieškos ir filtro rodyklė**. Daugiau informacijos rasite apsilankę [Ieškos ir filtro rodyklės valdymas](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Filtruoti klientus
 
-Klientus galite filtruoti pagal objekto laukus _Klientas_. Panašiai kaip ir atliekant iešką, jūsų administratoriui pirmiausia reikės apibrėžti laukus kaip galimus filtruoti, naudojant puslapį **Ieškos ir filtro rodyklė**.
+Klientus galite filtruoti pagal objekto laukus *Klientas*. Panašiai kaip ir atliekant iešką, jūsų administratoriui pirmiausia reikės apibrėžti laukus kaip galimus filtruoti, naudojant puslapį **Ieškos ir filtro rodyklė**.
 
 1. Rinkitės **Rodyti filtrus** puslapyje **Klientai**.
 
@@ -55,24 +55,25 @@ Klientus galite filtruoti pagal objekto laukus _Klientas_. Panašiai kaip ir atl
 
 Pasirinkite bet kurias kliento plytas tam, kad atvertumėte **Kliento informacijos puslapį**. Šis rodinys apima suvienodintą informaciją pasirinktam klientui. Į išsamią kliento informaciją įtraukiamas šis turinys:
 
-**Kliento profilio plytelė**: šioje plytelėje rodomos kitos reikšmės nei vieningojo _kliento_ objektas. Jei lauke nėra pasirinkto kliento profilio reikšmės, jis nebus rodomas. Plytelę sudaro skyriai:  
-  - Pirmajame skyriuje rodomas iš anksto nustatytas laukų rinkinys, po kurio seka visi laukai, kurie yra ieškos &filtro rodyklės dalis. Visi su adresu susiję laukai sujungiami į vieną eilutę, jei profilyje yra tokių laukų. 
-  - **Šio kliento kontaktai**: verslo klientų aplinkose kaip antrą skyrių bus rodomi visi susiję šio kliento kontaktai. Kiekvienas kontaktas rodomas su jų laukais. Tušti laukai paslėpti.
-  - **Papildomi laukai**: rodomi likę pasirinkto kliento laukai, išskyrus TV. 
-  - **ID** : visų ID pateikiamas jų atitinkamo objekto pavadinimo sąrašas. Laukus kaip ID identifikuoja jų semantikos, o šie laukai skirstomi į kategorijas.
+**Kliento profilio plytelė**: šioje plytelėje rodomos kitos reikšmės nei vieningojo *kliento* objektas. Jei lauke nėra pasirinkto kliento profilio reikšmės, jis nebus rodomas. Plytelę sudaro skyriai:
+
+- Pirmajame skyriuje rodomas iš anksto nustatytas laukų rinkinys, po kurio seka visi laukai, kurie yra ieškos &filtro rodyklės dalis. Visi su adresu susiję laukai sujungiami į vieną eilutę, jei profilyje yra tokių laukų.
+- **Šio kliento kontaktai**: verslo klientų aplinkose kaip antrą skyrių bus rodomi visi susiję šio kliento kontaktai. Kiekvienas kontaktas rodomas su jų laukais. Tušti laukai paslėpti.
+- **Papildomi laukai**: rodomi likę pasirinkto kliento laukai, išskyrus TV.
+- **ID** : visų ID pateikiamas jų atitinkamo objekto pavadinimo sąrašas. Laukus kaip ID identifikuoja jų semantikos, o šie laukai skirstomi į kategorijas.
 
 **Veiklos laiko planavimo juosta**: rodomi duomenys, jei turite sukonfigūruotų veiklų. Laiko planavimo juostos rodinyje yra chronologiškai rūšiuotos pasirinkto kliento veiklos, pradedant naujausia veikla. Norėdami gauti daugiau informacijos, eikite į [Kliento veiksmai](activities.md).
 
-**įžvalgos**:  
-  - **Priemonės**: rodo, ar konfigūravote vieną ar daugiau priemonių, pagal kurias klientas atributų priemones. Jos apima apskaičiuotą KPI pagal jūsų klientus individualiu kliento lygmeniu. Daugiau informacijos rasite straipsnyje [Priemonių apibrėžimas ir valdymas](measures.md).
+**įžvalgos**:
 
-  - **Potencialūs susidomėjimas, galimi prekių ženklai**: rodo, ar sukonfigūravote prekės ženklą, ar dominamą susidomėjimą. Tai atitinka galimus prekių ženklų, pagrįstų kitais klientais, kurių profilis yra panašus į pasirinktą kliento profilį, interesą ir galimybes. Norėdami gauti daugiau informacijos, eikite į [Klientų profilių pagerinimo naudojant prekės ženklą ir susidomėjimo profilį](enrichment-microsoft.md).
+- **Priemonės**: rodo, ar konfigūravote vieną ar daugiau priemonių, pagal kurias klientas atributų priemones. Jos apima apskaičiuotą KPI pagal jūsų klientus individualiu kliento lygmeniu. Daugiau informacijos rasite straipsnyje [Priemonių apibrėžimas ir valdymas](measures.md).
+
+- **Potencialūs susidomėjimas, galimi prekių ženklai**: rodo, ar sukonfigūravote prekės ženklą, ar dominamą susidomėjimą. Tai atitinka galimus prekių ženklų, pagrįstų kitais klientais, kurių profilis yra panašus į pasirinktą kliento profilį, interesą ir galimybes. Norėdami gauti daugiau informacijos, eikite į [Klientų profilių pagerinimo naudojant prekės ženklą ir susidomėjimo profilį](enrichment-microsoft.md).
 
 Norėdami grįžti į klientų ieškos puslapį, pasirinkite **Atgal į klientus**.
 
 ## <a name="next-steps"></a>Kiti veiksmai
 
 [Įtraukite daugiau duomenų šaltinių](data-sources.md), [praturtinkite vieningus profilius](enrichment-hub.md) arba [kurkite segmentus](segments.md) tam, kad suvienytus klientų profilius būtų galima naudoti kitose taikomosiose programose.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

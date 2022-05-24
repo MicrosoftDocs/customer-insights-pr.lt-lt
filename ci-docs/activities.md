@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643278"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755508"
 ---
 # <a name="customer-activities"></a>Kliento veiklos
 
-Suderinkite kliento veiklą iš [įvairių duomenų šaltinių](data-sources.md) sistemoje Dynamics 365 Customer Insights, kad sukurtumėte laiko juostą, kurioje veiklos sąrašas pateikiamas chronologine tvarka. Laiko planavimo juostą įtraukite į „Dynamics 365“ programas naudodami sprendimą [Kliento kortelės priedas](customer-card-add-in.md) arba Power BI ataskaitų sritį.
+„Dynamics 365 Customer Insights“ sujunkite kliento veiklas iš [įvairių duomenų šaltinių](data-sources.md). Sukurkite laiko planavimo juostą, kurioje veikla būtų išvardijama chronologiškai. Įtraukite laiko planavimo juostą į "Dynamics 365" programas naudodami ["Customer Card" priedo](customer-card-add-in.md) sprendimą.
 
 ## <a name="define-an-activity"></a>Veiklos apibrėžimas
 
@@ -34,7 +34,7 @@ Jūsų duomenų šaltiniuose gali būti objektų su operacijų ir veiklos duomen
 
 Objekte turi būti bent vienas **Data** tipo atributas, kurį reikia įtraukti į kliento planavimo juostą; negalite įtraukti objektų be **Data** laukų. Valdiklis **Įtraukti veiklą** yra išjungtas, jei nerastas toks objektas.
 
-1. Eikite į **DataActivities** > **·**.
+1. Eikite į **duomenų** > **veiklas**.
 
 1. Pasirinkite **Pridėti veiklą**, jei norite pradėti valdomą patirtį veiklos nustatymo procesui.
 
@@ -78,7 +78,7 @@ Objekte turi būti bent vienas **Data** tipo atributas, kurį reikia įtraukti �
 
 1. Norėdami pereiti prie kito veiksmo, pasirinkite **Pirmyn**. Galite pažymėti **Baigti ir peržiūrėti**, kad veiklą įrašytumėte dabar, kai veiklos tipas nustatytas kaip **Kitas**. 
 
-1. Žingsnyje **Veiklos tipas** pasirinkite veiklos tipą ir pasirinktinai pažymėkite, ar norite po kelis veiklos tipus susieti ir naudoti kitose „Customer Insights“ srityse. Šiuo metu *Atsiliepimo*, *Lojalumo*, *Pardavimo užsakymo*, *Pardavimo užsakymo eilutės* ir *Prenumeratos* veiklos tipus galima semantiškai susieti po to, kai sutiksite susieti laukus. Jei veiklos tipas nėra aktualus naujai veiklai, galite pasirinkti *Kita* arba *Kurti naują* pasirinktinio veiklos tipo atveju.
+1. Žingsnyje **Veiklos tipas** pasirinkite veiklos tipą ir pasirinktinai pažymėkite, ar norite po kelis veiklos tipus susieti ir naudoti kitose „Customer Insights“ srityse. Šiuo metu atsiliepimų, *lojalumo*, *pardavimų užsakymo*, *SalesOrderLine* ir *Prenumeratos* veiklos tipai palaiko semantiką sutikus susieti laukus. *·* Jei veiklos tipas nėra aktualus naujai veiklai, galite pasirinkti *Kita* arba *Kurti naują* pasirinktinio veiklos tipo atveju.
 
 1. Norėdami pereiti prie kito veiksmo, pasirinkite **Pirmyn**. 
 
@@ -110,7 +110,7 @@ Sukonfigūrę klientų veiklas, veiklos konfigūracijoje pasirinkite **Rodyti ve
 
 Norėdami atidaryti kliento laiko planavimo juostą, eikite į **Klientai** ir pasirinkite norimą peržiūrėti kliento profilį.
 
-Jei klientas dalyvauja jūsų sukonfigūruotoje veikloje, ją rasite skyriuje **Veiklos laiko planavimo juosta**.
+Jei klientas dalyvavo sukonfigūruotoje veikloje, ją **rasite skyriuje Veiklos laiko planavimo juosta**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Peržiūrėkite sukonfigūruotas veiklas klientų profiliuose.":::
 

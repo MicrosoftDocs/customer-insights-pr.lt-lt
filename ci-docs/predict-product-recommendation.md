@@ -1,25 +1,25 @@
 ---
 title: Produkto rekomendacijos prognozė
 description: Prognozuojami produktai, kuriuos klientas gali įsigyti arba su jais bendrauti.
-ms.date: 01/13/2022
+ms.date: 05/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fe6c0e8ba8236243682a4105535a0026c4343c3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9b3e60c49d294d031f43ef0594cb69707bb64019
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643833"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762742"
 ---
 # <a name="product-recommendation-prediction"></a>Produkto rekomendacijos prognozė
 
 Produktų rekomendacijų modelis sukuria prognozuojamų produktų rekomendacijų rinkinius. Rekomendacijos pagrįstos ankstesniu pirkimo elgsena ir klientais, kurie turi panašius pirkimo modelius. Puslapyje prognozės galite kurti naujas prognozes **Įžvalgos** > **Prognozių** puslapyje. Norėdami pamatyti kitas jūsų sukurtas prognozes pasirinkite **Mano prognozės**.
 
-Produkto rekomendacijos gali būti taikomos pagal vietinius įstatymus ir reglamentus bei klientų lūkesčius, į kuriuos modelis nėra sukurtas atsižvelgti.  Kaip šios prognozuojančios galimybės naudotojas, **turite peržiūrėti rekomendacijas prieš pristatydamas jas savo klientams**, kad užtikrintumėte, jog vadovaujatės galiojančiais įstatymais ar reglamentais bei klientų lūkesčiais dėl galimų jūsų rekomendacijų. 
+Produkto rekomendacijos gali būti taikomos pagal vietinius įstatymus ir reglamentus bei klientų lūkesčius, į kuriuos modelis nėra sukurtas atsižvelgti.  Kaip šios prognozuojančios galimybės naudotojas, **turite peržiūrėti rekomendacijas prieš pristatydamas jas savo klientams**, kad užtikrintumėte, jog vadovaujatės galiojančiais įstatymais ar reglamentais bei klientų lūkesčiais dėl galimų jūsų rekomendacijų.
 
 Be to, iš šio modelio rezultatų gausite rekomendacijų, pagrįstų produkto ID. Jūsų pateikimo mechanizmas turės pažymėti prognozuojamus produkto ID su tinkamu turiniu, kad jūsų klientai galėtų atsižvelgti į lokalizavimą, vaizdų turinį ir kitą įmonei būdingą turinį arba elgseną.
 
@@ -33,29 +33,31 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 
 - Verslo žinių, kad būtų galima suprasti įvairius jūsų įmonės produktų tipus ir klientų bendravimą su jais. Palaikome produktų, kuriuos anksčiau įsigijo jūsų klientai, rekomendavimas arba naujų produktų rekomendacijos.
 
+- Jūsų aplinka turi būti sukonfigūruota individualiems vartotojams **pagrindinei** tikslinei auditorijai.
+
 - Duomenys apie operacijas, pirkinius ir jų retrospektyvą:
-    - Operacijų identifikatoriai, skirti pirkimams arba operacijoms.
-    - Klientų identifikatoriai, siejantys operacijas su klientais.
-    - Operacijos įvykio datos, nurodančios operacijos atlikimo datas.
-    - Operacijos produkto ID informacija.
-    - (Pasirinktinai) Produktų katalogo duomenų objektas produktų filtrui naudoti.
-    - (Pasirinktinis) Jei operacija yra grįžtamoji, ar ne.
-    - Semantinė duomenų schema reikalauja šios informacijos:
-        - **Perlaidos ID:** Unikalusis įsigijimo ar perlaidos identifikatorius.
-        - **Sandorio data:** sandorio arba įsigijimo data.
-        - **Operacijos reikšmė:** pirkimo arba operacijos skaitinė reikšmė.
-        - **Unikalus produkto ID:** įsigyto produkto arba aptarnavimo ID, jei duomenys yra eilutės elemento lygyje.
-        - (Pasirinktinai) **Pirkimas arba grąžinimas:** bulio logikos laukelis, kuriame reikšmė *teisinga* nustato, kad sandoris buvo grąžinimas. Jei pirkimo arba grąžinimo data nenurodytą, modelis ir **sandorio vertė** yra neigiama, mes taip pat naudosime šią informaciją grąžinimui numatyti.
+  - Operacijų identifikatoriai, skirti pirkimams arba operacijoms.
+  - Klientų identifikatoriai, siejantys operacijas su klientais.
+  - Operacijos įvykio datos, nurodančios operacijos atlikimo datas.
+  - Operacijos produkto ID informacija.
+  - (Pasirinktinai) Produktų katalogo duomenų objektas produktų filtrui naudoti.
+  - (Pasirinktinis) Jei operacija yra grįžtamoji, ar ne.
+  - Semantinė duomenų schema reikalauja šios informacijos:
+    - **Perlaidos ID:** Unikalusis įsigijimo ar perlaidos identifikatorius.
+    - **Sandorio data:** sandorio arba įsigijimo data.
+    - **Operacijos reikšmė:** pirkimo arba operacijos skaitinė reikšmė.
+    - **Unikalus produkto ID:** įsigyto produkto arba aptarnavimo ID, jei duomenys yra eilutės elemento lygyje.
+    - (Pasirinktinai) **Pirkimas arba grąžinimas:** bulio logikos laukelis, kuriame reikšmė *teisinga* nustato, kad sandoris buvo grąžinimas. Jei pirkimo arba grąžinimo data nenurodytą, modelis ir **sandorio vertė** yra neigiama, mes taip pat naudosime šią informaciją grąžinimui numatyti.
 - Siūlomos duomenų charakteristikos:
-    - Pakankami istoriniai duomenys: bent vieneri metai operacijos duomenų, geriausiai dveji ar treji metai, įskaitant sezoniškumą.
-    - Keli pirkimai vienam klientui: trys ar daugiau sandorių kiekvienam kliento ID
-    - Klientų skaičius: bent 100 klientų, geriausia daugiau nei 10 000 klientų. Modelio nepavyks naudoti turint mažiau nei 100 klientų.
+  - Pakankami istoriniai duomenys: bent vieneri metai operacijos duomenų, geriausiai dveji ar treji metai, įskaitant sezoniškumą.
+  - Keli pirkimai vienam klientui: trys ar daugiau sandorių kiekvienam kliento ID
+  - Klientų skaičius: bent 100 klientų, geriausia daugiau nei 10 000 klientų. Modelio nepavyks naudoti turint mažiau nei 100 klientų.
 
 > [!NOTE]
+>
 > - Modeliui reikia jūsų klientų sandorių istorijos. Sandorio apibrėžtis yra gana lanksti. Bet kokie duomenys, apibūdinays naudotojo ir produkto sąveiką, gali veikti kaip įvestis. Pavyzdžiui, produkto įsigijimas, dalyvavimas pamokoje ar renginyje.
 > - Vienu metu galima sukonfigūruoti tik vieną sandorio istorijos objektą. Jei yra keli pirkimo objektai, sujunkite juos Power Query prieš prarydami duomenis.
 > - Jei užsakymas ir užsakymo duomenys yra skirtingi objektai, prieš naudodami modelį juos sujunkite. Modelis objekte neveikia tik su užsakymo ID ar gavimo ID.
-
 
 ## <a name="create-a-product-recommendation-prediction"></a>Kurkite produkto rekomendacijos prognozę
 
@@ -76,7 +78,7 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 ### <a name="define-product-recommendation-configuration"></a>Produkto rekomendacijų konfigūracijos apibrėžimas
 
 1. Nustatykite **Produktų skaičių,** kurį norite rekomenduoti klientui. Ši reikšmė priklauso nuo to, kaip pristatymo metodas užpildo duomenis. Jei galite rekomenduojate tris produktus, atitinkamai nustatykite šią reikšmę.
-   
+
    >[!TIP]
    > Galite bet kada pasirinkti **Įrašyti juodraštį**, kad įrašytumėte prognozė kaip juodraštį. Straipsnio juodraštį rasite prognozėje **Mano prognozės** skirtuke.
 
@@ -98,14 +100,13 @@ Jei norėtumėte išbandyti šią funkciją, tačiau neturite duomenų toliau pa
 
    :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Puslapio parametro veiklos tipas.":::
 
-1. Susieję veiklą su atitinkamu semantiniu tipu, pažymėkite **Toliau**, kad tęstumėte 
- 
+1. Susieję veiklą su atitinkamu semantiniu tipu, pasirinkite **Pirmyn**, kad tęstumėte.
+
 1. Susiekite semantinius atributus su laukais, kurių reikia modeliui paleisti.
 
 1. Pasirinkite **Įrašyti**.
 
 1. Pasirinkite **Toliau**.
-
 
 ### <a name="configure-product-filters"></a>Produkto filtrų konfigūravimas
 
@@ -113,11 +114,11 @@ Kartais tik tam tikri produktai yra naudingi arba tinkami jūsų sukurtos progno
 
 1. Atlikdami veiksmą **Pridėti produkto informaciją** pridėkite produkto katalogą su kiekvienu produktu. Reikiamą informaciją pažymėkite ir pasirinkite **Toliau**.
 
-3. Atlikdami veiksmą **Produktų filtrai** rinkitės iš toliau nurodytų parinkčių.
+1. Atlikdami veiksmą **Produktų filtrai** rinkitės iš toliau nurodytų parinkčių.
 
-   * **Jokių filtrų**: naudokite visus produktus iš rekomenduojamų produktų prognozės.
+   - **Jokių filtrų**: naudokite visus produktus iš rekomenduojamų produktų prognozės.
 
-   * **Konkrečių produktų filtrų apibrėžimas**: naudokite konkrečius produktus produktų rekomendacijų prognozėje.
+   - **Konkrečių produktų filtrų apibrėžimas**: naudokite konkrečius produktus produktų rekomendacijų prognozėje.
 
 1. Pasirinkite **Toliau**.
 
@@ -126,7 +127,7 @@ Kartais tik tam tikri produktai yra naudingi arba tinkami jūsų sukurtos progno
    :::image type="content" source="media/product-filters-sidepane.png" alt-text="Šoninė sritis, kurioje rodomi produktų katalogo objekto atributai produktų filtrams pasirinkti.":::
 
 1. Pasirinkite, ar norite, kad produktų filtre būtų naudojamos jungtys **ir** ar **arba**, kad logiškai derintumėte atributų pasirinkimą iš produktų katalogo.
-   
+
    :::image type="content" source="media/product-filters-sample.png" alt-text="Produktų filtrų su loginėmis AND jungtimis konfigūravimo pavyzdys.":::
 
 1. Pasirinkite **Toliau**.
@@ -150,7 +151,7 @@ Kartais tik tam tikri produktai yra naudingi arba tinkami jūsų sukurtos progno
 1. Pasirinkite prognozę, kurią norite peržiūrėti.
    - **Prognozės pavadinimas:** kūrimo metu nurodytas prognozės pavadinimas.
    - **Prognozės tipas:** prognozei naudojamo modelio tipas
-   - **Išvesties objektas:** objekto, kuriame saugoma prognozės išvestis, pavadinimas. Objektą šiuo pavadinimu galite rasti **Duomenys** > **Objektai**.    
+   - **Išvesties objektas:** objekto, kuriame saugoma prognozės išvestis, pavadinimas. Objektą šiuo pavadinimu galite rasti **Duomenys** > **Objektai**.
       *Balai* išvesties objekte yra kiekybinė rekomendacijos priemonė. Modelis rekomenduoja produktus, kurių rezultatai geresni, o ne produktus, kurių rezultatai prastesni.
    - **Prognozavimo laukelis:** šis laukelis pildomas tik tam tikro tipo prognozėms ir nėra naudojamas produktų rekomendavimo prognozei.
    - **Būsena:** dabartinė prognozės vykdymo būsena.
@@ -171,28 +172,27 @@ Kartais tik tam tikri produktai yra naudingi arba tinkami jūsų sukurtos progno
             - **Modelis** bus laikomas **kokybišku, jei** „Sėkmės @ K” metrika bus bent 10 % daugiau nei pradinė. 
             - **B** Modelis laikomas **B** kokybės, jei „Success @ K“ metrika yra nuo 0 % iki 10 % didesnė nei pradinė vertė.
             - **C** Modelis laikomas **C** kokybės, jei „Success @ K“ metrika yra mažesnė nei pradinė vertė.
-               
+
                > [!div class="mx-imgBorder"]
                > ![Modelio efektyvumo rezultato rodinys.](media/product-recommendation-modelperformance.PNG "Modelio efektyvumo rezultato rodinys")
             - **Pradinis**: modelis atsižvelgia į svarbiausius rekomenduojamus produktus, kai perkant naudojami visi klientai ir, naudojant modelio nustatytas išmokintas taisykles, klientams nustatomas rekomendacijų rinkinys. Tada prognozės lyginamos su geriausiais produktais ir apskaičiuojamos pagal klientų, kurie įsigijo produktą, skaičių. Jei klientas savo rekomenduojamuose produktuose turi bent vieną produktą, kuris taip pat buvo matomas geriausiai įsigytuose produktuose, jis laikomas pradinės linijos dalimi. Jei 10 iš šių klientų būtų įsigiję rekomenduojamą produktą iš 100 bendro klientų, pradinis atskaitos skaičius būtų 10%.
             - **Sėkmė @ K**: naudojant operacijų laikotarpio tikrinimo rinkinį, visiems klientams kuriamos rekomendacijos ir jos lyginamos su operacijų tikrinimo rinkinys. Pavyzdžiui, 12 mėnesių laikotarpiu 12 mėnesį galima atidėti kaip duomenų tikrinimo rinkinį. Jei modelis numato bent vieną dalyką, kurį galėtumėte įsigyti 12 mėnesį pagal tai, ką jis išmoko iš ankstesnių 11 mėnesių, klientas padidins metriką „Sėkmė @ K”.
-    
+
     1. **Daugelis siūlomų produktų (su rezultatu):** penki pagrindiniai produktai, kurie buvo prognozuojami klientams.
        > [!div class="mx-imgBorder"]
        > ![Grafikas, kuriame rodomi 5 populiariausi produktai.](media/product-recommendation-topproducts.PNG "Grafikas, kuriame rodomi 5 populiariausi produktai")
-    
+
     1. **Pagrindiniai rekomendacijų veiksniai:** produktų rekomendacijoms teikti modelis naudoja klientų sandorių istoriją. Jis išmoksta modelius pagal paskutinius pirkimus ir rand panašumų tarp klientų ir produktų. Tada šie panašumai naudojami produktų rekomendacijoms generuoti.
-    Toliau nurodyti veiksniai, galintys turėti įtakos pagal modelį sugeneruotai produkto rekomendacijai. 
-        - **Ankstesni sandoriai**: praeityje pirkimo šablonus modelis naudojo produkto rekomendacijoms generuoti. Pavyzdžiui, modelis gali rekomenduoti _„Surface Arc Mouse“_, jei kas nors neseniai įsigijo _„Surface Book 3“_ ir _„Surface Pen“_. Atsižvelgdamas į istoriją modelis išmoko, kad daug klientų įsigijo _„Surface Arc Mouse“_ po to, kai įsigijo _„Surface Book 3“_ ir _„Surface Pen“_.
-        - **Kliento panašumas**: rekomenduojamą produktą istoriškai įsigijo kiti klientai, kurių pirkimo modeliai yra panašūs. Pavyzdžiui, Jonui buvo rekomenduojama įsigyti _„Surface Headphones 2“_, nes Joana ir Brunas neseniai įsigijo _„Surface Headphones 2“_. Modelis mano, kad Jonas yra panašus į Joaną ir Bruną, nes istoriškai jų pirkimo modeliai buvo panašūs.
-        - **Produktų panašumas**: rekomenduojamas produktas yra panašus į kitus produktus, kuriuos anksčiau pirko klientas. Modelis abu produktus laiko panašiais, jei jie buvo perkami kartu arba juos pirko panašūs klientai. Pavyzdžiui, žmogus gauna rekomendaciją įsigyti _USB talpyklą_, nes anksčiau jis įsigijo _USB-C ir USB adapterį_, todėl modelis mano, kad _USB talpykla_ yra panaši į _USB-C ir USB adapterį_, atsižvelgiant į istorinius pirkimo modelius.
+    Toliau nurodyti veiksniai, galintys turėti įtakos pagal modelį sugeneruotai produkto rekomendacijai.
+        - **Ankstesni sandoriai**: praeityje pirkimo šablonus modelis naudojo produkto rekomendacijoms generuoti. Pavyzdžiui, modelis gali rekomenduoti *„Surface Arc Mouse“*, jei kas nors neseniai įsigijo *„Surface Book 3“* ir *„Surface Pen“*. Atsižvelgdamas į istoriją modelis išmoko, kad daug klientų įsigijo *„Surface Arc Mouse“* po to, kai įsigijo *„Surface Book 3“* ir *„Surface Pen“*.
+        - **Kliento panašumas**: rekomenduojamą produktą istoriškai įsigijo kiti klientai, kurių pirkimo modeliai yra panašūs. Pavyzdžiui, Jonui buvo rekomenduojama įsigyti *„Surface Headphones 2“*, nes Joana ir Brunas neseniai įsigijo *„Surface Headphones 2“*. Modelis mano, kad Jonas yra panašus į Joaną ir Bruną, nes istoriškai jų pirkimo modeliai buvo panašūs.
+        - **Produktų panašumas**: rekomenduojamas produktas yra panašus į kitus produktus, kuriuos anksčiau pirko klientas. Modelis abu produktus laiko panašiais, jei jie buvo perkami kartu arba juos pirko panašūs klientai. Pavyzdžiui, žmogus gauna rekomendaciją įsigyti *USB talpyklą*, nes anksčiau jis įsigijo *USB-C ir USB adapterį*, todėl modelis mano, kad *USB talpykla* yra panaši į *USB-C ir USB adapterį*, atsižvelgiant į istorinius pirkimo modelius.
 
         Kiekvienai produkto rekomendacijosi įtakos turi vienas ar keli iš šių veiksnių. Rekomendacijų, kai kiekvienas įtakojantis veiksnys atliko tam tikrą vaidmenį, dalis procentais vaizduojama diagramoje. Toliau pateikiamme pavyzdyje 100 % rekomendacijų įtakos turėjo ankstesni sandoriai. Iš jų 60 % pagal klientų panašumą, o 22 % pagal produktų panašumą. Pelės žymeklį palaikykite virš diagramos juostų, kad peržiūrėtumėte procentinę įtaką darančių veiksnių dalį.
 
         > [!div class="mx-imgBorder"]
         > ![Pagrindiniai rekomendacijų veiksniai.](media/product-recommendation-keyrecommendationfactors.png "Pagrindiniai rekomendacijų veiksniai, kuriuos išmoksta modelis produktų rekomendacijoms generuoti")
-       
-     
+
    1. **Duomenų statistika**: apžvelgiamas operacijų, klientų ir produktų, į kuriuos atsižvelgė modelis, skaičius. Jis pagrįstas įvesties duomenimis, kurie buvo naudojami modeliams išmokti ir produkto rekomendacijoms generuoti.
 
       > [!div class="mx-imgBorder"]
@@ -208,6 +208,5 @@ Kartais tik tam tikri produktai yra naudingi arba tinkami jūsų sukurtos progno
 ## <a name="manage-predictions"></a>Prognozių valdymas
 
 Prognozes galima optimizuoti, šalinti jų triktis, atnaujinti arba panaikinti. Peržiūrėkite įvesties duomenų naudojimo ataskaitą ir sužinokite, kaip greičiau sukurti patikimesnę prognozę. Daugiau informacijos rasite [Prognozių valdymas](manage-predictions.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

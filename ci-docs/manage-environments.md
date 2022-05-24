@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643613"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741051"
 ---
 # <a name="manage-environments"></a>Aplinkų valdymas
 
@@ -113,7 +113,7 @@ Jungiantis prie Dataverse aplinkos, klaidos pranešimas **Ši KOMPAKTINIŲ disk�
 OR 
 
 1. Atidarykite savo Dataverse aplinką.
-1. Eikite į **Išplėstiniai parametraiSolutions** > **·**.
+1. Eikite į **Išplėstiniai nustatymų** > **sprendimai**.
 1. **Pašalinkite CustomerInsightsCustomerCard** sprendimą.
 
 ## <a name="copy-the-environment-configuration"></a>Aplinkos konfigūracijos kopijavimas
@@ -127,7 +127,7 @@ Matysite visų jūsų organizacijoje pasiekiamų aplinkų sąrašą, iš kurių 
 Kopijuojami šie konfigūracijos parametrai:
 
 - Įtrauktas / importuotas duomenų šaltinis
-- Duomenų sujungimo (susiejimo, atitikimo, suliejimo) konfigūracija
+- Duomenų suvienijimo konfigūracija
 - Segmentai
 - Matavimai
 - Ryšiai
@@ -158,7 +158,7 @@ Atnaujinę duomenų šaltinius, eikite į **Duomenys** > **Suvienodinti**. Čia 
 
 Kai duomenų sujungimas baigtas, eikite į **Priemonės** ir **Segmentai**, kad jie būtų atnaujinti.
 
-Prieš iš naujo suaktyvindami eksportą ir praturtinimus, eikite į **"AdminConnections** > **·**", kad iš naujo atkurtumėte ryšius naujoje aplinkoje.
+Prieš iš naujo suaktyvindami eksportą ir praturtinimus, eikite į **Administratoriaus** > **ryšiai**, kad iš naujo atkurtumėte ryšius naujoje aplinkoje.
 
 ## <a name="change-the-owner-of-an-environment"></a>Aplinkos savininko keitimas
 

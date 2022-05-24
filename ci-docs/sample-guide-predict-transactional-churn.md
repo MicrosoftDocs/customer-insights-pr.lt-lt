@@ -1,19 +1,19 @@
 ---
 title: Perlaidos nutraukimo prognozės pavyzdžio vedlys
 description: Naudokite šį pavyzdžio vedlį tam, kad pabandytumėte nestandartinį perlaidos nutraukimo prognozės modelį.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643748"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741329"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Perlaidos nutraukimo prognozės pavyzdžio vedlys
 
@@ -86,69 +86,13 @@ Peržiūrėkite straipsnius [apie duomenų nurijimą](data-sources.md) ir [duome
 
 1. Įrašykite duomenų šaltinį.
 
-
 ## <a name="task-2---data-unification"></a>Užduotis 2 - Duomenų suvienodinimas
 
-Po duomenų suvartojimo dabar pradėsime **Žemėlapis, Atitiktis, Sulieti** procesą siekiant sukurti suvienodintą kliento profilį. Dėl daugiau informacijos, žr. [Duomenų suvienodinimas](data-unification.md).
-
-### <a name="map"></a>Schema
-
-1. Suvartojus duomenis, sudarykite kontaktų žemėlapį iš e-komercijos ir lojalumo duomenų į bendrus duomenų tipus. Eikite į **Duomenys** > **Suvienodinti** > **Žemėlapis**.
-
-1. Pasirinkite objektus, kurie rodo kliento profilį – **e-komercijoskontaktai** ir **lojalumoklientai**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Suvienodinti e-komercijos ir lojalumo duomenų šaltinius.":::
-
-1. Pasirinkite **Kontakto ID** kaip pagrindinį raktą **e-komercijos kontaktus** ir **Lojalumo ID** kaip pirminį raktą **lojalumo klientams**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Suvienodinti lojalumo ID kaip pagrindinį raktą.":::
-
-### <a name="match"></a>Sugretinti
-
-1. Eikite į **Atitikties** skirtuką ir pasirinkite **Nustatyti užsakymą**.
-
-1. Pirminiame **išplečiamajame** sąraše pasirinkite **eCommerceContacts: el. prekyba** pirminis šaltinis ir įtraukite visus įrašus.
-
-1. Išplečiamajame sąraše **Objektas 2** pasirinkite **loyCustomers: LoyaltyScheme** įtraukite visus įrašus.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Suvienodinti e-komercijos atitiktį ir lojalumą.":::
-
-1. Pasirinkite **Sukurkite naują taisyklę**
-
-1. Įtraukite savo pirmąją sąlygą naudodami visą pavadinimą.
-
-   * El. prekyboscontacts išplečiamajame sąraše pažymėkite **Visas vardas**.
-   * loyCustomers išplečiamajame sąraše pažymėkite **Visas vardas**.
-   * Pasirinkite **Normalizuoti** iškrentantį meniu ir pasirinkite **Tipas (Telefonas, Pavadinimas, Adresas, ...)**.
-   * Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
-
-1. Įveskite pavadinimą **Visas pavadinimas, El. paštas** naujai taisyklei.
-
-   * Įtraukite antrąją sąlygą el. pašto adresui pasirinkdami **Įtraukite sąlygą**
-   * Objekto "eCommerceContacts" **išplečiamajame sąraše** pasirinkite "El. paštas".
-   * Objekto loyCustomers **išplečiamajame sąraše** pasirinkite "El. paštas". 
-   * Palikite normalizavimą tuščią. 
-   * Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Suvienodinti atitikties taisyklę pavadinimui ir el. paštui.":::
-
-7. Pasirinkite **Įrašyti** ir **Vykdyti**.
-
-### <a name="merge"></a>Sulieti
-
-1. Eikite į **Sulieti** skirtuką.
-
-1. **Kontakto ID** skirtą **lojalių klientų** objekte, keiskite rodomą pavadinimą į **KontaktoIDlojalumas** tam, kad jis skirtųsi nuo kitų vartotų ID.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="pervardykite kontakto ID iš lojalumo ID.":::
-
-1. Pasirinkite **Įrašyti** ir **Vykdyti** tam, kad pradėtumėte suliejimo procesą.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Užduotis 3 - Konfigūruoti perlaidos nutraukimo prognozę
 
-Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravimo nutraukimo prognozę. Išsamių veiksmų ieškokite [straipsnyje Prenumerata prognozė](predict-subscription-churn.md). 
+Turėdami vieningus klientų profilius, dabar galime paleisti operacijų prognozė. Išsamių veiksmų ieškokite [straipsnyje Transaction churn prognozė](predict-transactional-churn.md)." 
 
 1. Eikite į **Įžvalga** > **Atrasti** ir pasirinkite norėdami naudoti **Kliento nutraukimo modelį**.
 
@@ -180,7 +124,7 @@ Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravi
 
 ## <a name="task-4---review-model-results-and-explanations"></a>4 užduotis – Peržiūrėti modelio rezultatus ir paaiškinimus
 
-Leisti modeliui užbaigti mokymąsi ir duomenų vertinimą. Galite dabar peržiūrėti prenumeravimo atsisakymo modelio paaiškinimus. Dėl išsamesnės informacijos, žr. [Peržiūrėti prognozės būseną ir rezultatus](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Leisti modeliui užbaigti mokymąsi ir duomenų vertinimą. Dabar galite peržiūrėti "Churn" modelio paaiškinimus. Dėl išsamesnės informacijos, žr. [Peržiūrėti prognozės būseną ir rezultatus](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Užduotis 5 - Sukurti didelės atsisakymo rizikos klientų segmentą
 
@@ -192,14 +136,12 @@ Galite sukurti naują segmentą pagal modelio sukurtą objektą.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Sukurkite segmentą su modelio išvestimi.":::
 
-1. Pasirinkite **„OOBSubscriptionChurnPrediction“** galutinį tašką ir nustatykite segmentą: 
+1. **Pasirinkite OOBeCommerceChurnPrediction** galinį punktą ir apibrėžkite segmentą: 
    - Laukelis: Nutraukimo balas
    - Operatorius: didesnis nei
    - Vertė: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Nustatykite prenumeravimo atsisakymo segmentą.":::
 
-Dabar turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.
+Dabar turite dinamiškai atnaujinamą segmentą, kuris identifikuoja didelės rizikos klientus.
 
 Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).
 

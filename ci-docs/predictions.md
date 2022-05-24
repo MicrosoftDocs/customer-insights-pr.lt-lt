@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643608"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740729"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Užpildykite dalinius duomenis prognozėmis (nebenaudojamais)
 
@@ -37,13 +37,13 @@ Tam, kad jūsų organizacija galėtų naudoti prognozių funkciją, įsitikinkit
 
 1. Jūsų organizacijoje yra egzempliorius, kuris [nustatytas „Microsoft Dataverse”](/ai-builder/build-model#prerequisites) ir esantis toje pačioje organizacijoje kaip ir „Customer Insights”.
 
-2. Jūsų auditorijos įžvalgų aplinka pridedama prie jūsų „Dataverse” egzemplioriaus.
+2. Jūsų „Customer Insights“ aplinka prijungiama prie jūsų „Dataverse“ egzemplioriaus.
 
 Daugiau informacijos žiūrėkite [Naujos aplinkos kūrimas](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Sukurkite prognozę kliento objekte
 
-1. Eikite į **"DataEntities** > **"**.
+1. Eikite į **duomenų** > **objektus**.
 
 2. Pasirinkite objektą **Klientas**.
 
@@ -91,7 +91,7 @@ Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus se
 
 ## <a name="view-a-prediction"></a>Prognozės peržiūra
 
-1. Eikite į **"IntelligencePredictions** > **·** > **" Mano prognozės**.
+1. Eikite į **žvalgybos** > **·** > **prognozes Mano prognozės**.
 
 2. Pasirinkite prognozę, kurią norite peržiūrėti.
 
@@ -108,7 +108,7 @@ Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus se
 
 ## <a name="update-a-prediction"></a>Prognozės naujinimas
 
-1. Eikite į **"IntelligencePredictions** > **·** > **" Mano prognozės**.
+1. Eikite į **žvalgybos** > **·** > **prognozes Mano prognozės**.
 
 2. Pažymėkite norimą naujinti prognozę ir pasirinkite piktogramą **Naujinti**.
 
@@ -118,7 +118,7 @@ Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus se
 
 Sukūrę prognozė, galite tinkinti modelį AI Builder, kad padidintumėte modelio efektyvumą.  
 
-1. Eikite į **"IntelligencePredictions** > **·** > **" Mano prognozės**.
+1. Eikite į **žvalgybos** > **·** > **prognozes Mano prognozės**.
 
 2. Pažymėkite prognozę, kurią norite redaguoti.
 
@@ -135,7 +135,7 @@ Kitame jūsų prognozės vykdyme bus naudojamas jūsų sukurtas atnaujintas mode
 
 ## <a name="remove-a-prediction"></a>Prognozės pašalinimas
 
-1. Eikite į **"IntelligencePredictions** > **·** > **" Mano prognozės**.
+1. Eikite į **žvalgybos** > **·** > **prognozes Mano prognozės**.
 
 2. Pažymėkite norimą naikinti prognozę.
 

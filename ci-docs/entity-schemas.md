@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643368"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757442"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Objektų schemos „Common Data Model”
 
@@ -23,7 +23,7 @@ ms.locfileid: "8643368"
 
 Šis bendrinamas duomenų modulis leidžia programų ir duomenų integruotojams paprasčiau bendradarbiauti pateikiant vieningą duomenų apibrėžimą. „Common Data Model“ yra didžiulė metaduomenų sistema su standartiniais objektais, ryšiais, hierarchijomis, ypatybėmis ir daugiau. Jis kilo iš „Dynamics 365“ programų ir yra atvirojo kodo „GitHub“ su daugiau nei 260 standartinių objektų. Didelė vidinių ir išorinių partnerių sistema prie „Common Data Model“ prisideda su pramonės šaka konkrečiai susijusiomis koncepcijomis.
 
-Daug sistemų ir platformų šiandien įdiegia „Common Data Model“, įskaitant „Power BI“ duomenų srautus ir „Azure“ duomenų tarnybas. Tai jau palaikoma „Microsoft Dataverse”, „Dynamics 365”, „Power Apps”, „Power BI” ir būsimose „Azure” duomenų tarnybose, tiesiogiai kaupiant duomenis [Atvirų duomenų iniciatyvai](https://www.microsoft.com/open-data-initiative).
+Daug sistemų ir platformų šiandien įdiegia „Common Data Model“, įskaitant „Power BI“ duomenų srautus ir „Azure“ duomenų tarnybas. Tai jau palaikoma „Microsoft Dataverse”, „Dynamics 365”, „Power Apps”, „Power BI” ir būsimose „Azure” duomenų tarnybose, tiesiogiai kaupiant duomenis [Atvirų duomenų iniciatyvai](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>„Customer Insights” objektų schemos
 

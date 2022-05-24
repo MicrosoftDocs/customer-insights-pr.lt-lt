@@ -1,110 +1,83 @@
 ---
-title: Duomenų suvienodinimo objektų ir atributų susiejimas
-description: Pažymėkite objektus, atributus, pirminius raktus ir semantikus, kuriuos norite susieti duomenis su vieningu kliento profiliu.
-ms.date: 10/18/2020
+title: Pasirinkti duomenų suvienijimo šaltinio laukus
+description: Pirmasis suvienijimo proceso žingsnis yra objektų, atributų, pirminių raktų ir semantinių tipų pasirinkimas, kad duomenys būtų susieti su vieningu kliento profiliu.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643170"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741005"
 ---
-# <a name="map-entities-and-attributes"></a>Susiekite objektus ir atributus
+# <a name="select-source-fields-for-data-unification"></a>Pasirinkti duomenų suvienijimo šaltinio laukus
 
-**Žemėlapis** yra pirmasis duomenų suvienijimo proceso etapas. Susiejimą sudaro trys etapai:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Objekto pasirinkimas*: nustatykite suderinamus objektus, kurie nukreipia į duomenų rinkinį su išsamesne informacija apie jūsų klientus.
-- *Atributo pasirinkimas*: kiekvienam objektui nustatykite stulpelius, kuriuos norite sujungti ir suderinti *atitikimo* ir *sujungimo* etapuose. Šie stulpeliai yra vadinami *Atributais*.
-- *Pirminio rakto ir semantinio tipo pasirinkimas*: kiekvienam objektui nustatykite atributą, kurį norite apibrėžti kaip to objekto pirminį raktą, ir kiekvienam atributui nustatykite semantinį tipą, geriausiai apibūdinantį tą atributą.
+Pirmasis suvienijimo žingsnis yra objektų ir laukų pasirinkimas jūsų duomenų rinkiniuose, kuriuos norite suvienyti. Pasirinkite objektus, kuriuose yra su klientais susijusi informacija, pvz., vardas, adresas, telefono numeris ir el. paštas. Galite pasirinkti vieną ar daugiau objektų.
 
-Daugiau informacijos apie bendrą duomenų suvienodinimo srautą galite rasti čia [Suvienodinti](data-unification.md).
+## <a name="select-entities-and-fields"></a>Pasirinkti objektus ir laukus
 
-## <a name="select-the-first-entities"></a>Pasirinkti pirmus objektus
+1. Eikite į **"Data** > **Unify"**.
 
-1. Eikite į **Duomenys** > **Suvienodinti** > **Žemėlapis**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Pirmojo paleidimo patirties suliejimo ekrano nuotrauka, kurioje pažymėta darbo pradžia.":::
 
-2. Pradėkite schemos etapą pasirinkdami **Pasirinkti objektus**.
+1. Pasirinkite **Pradėti**.
 
-3. Pasirinkite objektus ir atributus, kuriuos norite naudoti *gretinimo* ir *suliejimo* etapuose. Reikiamus atributus galite pasirinkti atskirai iš objekto arba įtraukti visus objekto atributus pažymėdami žymės langelį **Įtraukti visus laukus** objekto lygyje. Rekomenduojame pasirinkti bent du objektus, kad duomenų suvienijimo procesas būtų naudingas.
+1. **Puslapyje Šaltinio laukai** pasirinkite **Pasirinkti objektus ir laukus**. Rodoma **sritis Pasirinkti objektus ir laukus**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Objektų įtraukimo pavyzdys.](media/data-manager-configure-map-add-entities-example.png "Įtraukti objektų pavyzdį")
+1. Pasirinkite bent vieną objektą.
 
-   Šiame pavyzdyje įtraukiame objektus **eCommerceContacts** ir **loyCustomers**. Pasirinkę šiuos objektus galite gauti įžvalgų apie tai, kurie internetinio verslo klientai yra lojalumo programos nariai.
-   
-   Galite ieškoti raktažodžių visuose atributuose ir objektuose, kad pasirinktumėte reikiamus atributus, kuriuos norite susieti.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Laukų ieškos pavyzdys.](media/data-manager-configure-map-search-fields-example.png "Laukų ieškos pavyzdys")
+1. Nurodykite kiekvieno pasirinkto objekto laukus, kuriuos norite naudoti, kad atitiktų kliento įrašus ir laukus, kuriuos norite įtraukti į vieningą profilį. Šie laukai vadinami *atributais*. Reikiamus atributus galite pasirinkti atskirai iš objekto arba įtraukti visus objekto atributus pažymėdami žymės langelį objekto lygiu. Galite ieškoti raktažodžių visuose atributuose ir objektuose, kad pasirinktumėte reikiamus atributus, kuriuos norite susieti.
 
-4. Pasirinkite **Taikyti**, kad patvirtintumėte pasirinkimus.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Pasirinktų objektų ir atributų ekrano nuotrauka.":::
+
+   Šiame pavyzdyje įtraukiame **objektus Kontaktai** ir **CustomerLoyalty**. Pasirinkę šiuos objektus galite gauti įžvalgų apie tai, kurie internetinio verslo klientai yra lojalumo programos nariai.
+
+1. Pasirinkite **Taikyti**, kad patvirtintumėte pasirinkimus. Rodomi pasirinkti objektai ir atributai.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Pirminio rakto ir atributų semantinio tipo pasirinkimas
 
-Pasirinkus objektus, puslapyje **Susieti** išvardijami pasirinkti objektai, kad galėtumėte juos peržiūrėti. Apibrėžkite objekto pirminį raktą ir nurodykite objekto atributo semantinį tipą.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Pasirinktų objektų, kurių pirminis raktas nepasirinktas, ekrano nuotrauka." lightbox="media/m3_select_primary.png":::
 
-- **Pirminis raktas**: kiekvienam savo objektui pasirinkite vieną atributą kaip pirminį raktą. Kad atributas būtų tinkamas pirminis raktas, jame neturėtų būti pasikartojančių reikšmių, trūkstamų reikšmių arba neapibrėžtų reikšmių. Eilutės, sveikojo skaičiaus ir GUID duomenų tipo atributai palaikomi kaip pirminiai raktai ir bus rodomi lauke, kad galėtumėte pasirinkti.
+Kiekvienam objektui atlikite šiuos veiksmus.
 
-- **Atributo semantinis tipas**: jūsų atributų kategorijos, pavyzdžiui, el. pašto adresas arba pavadinimas. Norėdami naudoti DI modelius išmaniojoje semantikos prognozėje, taupyti laiką ir pagerinti tikslumą, nustatykite parametro **Išmanusis susiejimas** parinktį **ĮJUNGTA**. Išmanusis susiejimas paryškina DI pagrįstą semantikos rekomendaciją lauke **Tipas**. Jei nustatysite parinktį **IŠJUNGTA**, matysite įprastas susiejimo rekomendacijas. Galite pasirinkti bet kurį semantinį tipą iš galimų parinkčių sąrašo ir perrašyti siūlomą žymėjimą.
+1. Pasirinkite pirminį **raktą**. Pirminis raktas yra atributas, unikalus objektui. Kad atributas būtų tinkamas pirminis raktas, jame neturėtų būti pasikartojančių reikšmių, trūkstamų reikšmių arba neapibrėžtų reikšmių. Eilutės, sveikojo skaičiaus ir GUID duomenų tipo atributai palaikomi kaip pirminiai raktai.
 
-> [!div class="mx-imgBorder"]
-> ![Atributo tipas ir semantinė prognozė.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Atributo tipas ir semantinė prognozė")
+1. Norėdami naudoti dirbtinio intelekto modelius išmaniesiems semantikos prognozė, sutaupyti laiko ir pagerinti tikslumą, įsitikinkite, kad įjungtas **išmanusis žemėlapis**. Išmanusis susiejimas paryškina DI pagrįstą semantikos rekomendaciją lauke **Tipas**. Galite nepaisyti siūlomo pasirinkimo pasirinkdami bet kurį semantinį tipą iš galimo parinkčių sąrašo.
 
-Taip pat galima pridėti pasirinktinį semantinį tipą. Pasirinkite šiam atributui skirtą lauko tipą ir įrašykite savo pasirinktą semantinio tipo pavadinimą. Tokiu būdu taip pat galite pakeisti atributų tipus, kurie buvo identifikuoti sistemos.
+1. Kiekvienam atributui pasirinkite semantinį **tipą**, kuris geriausiai apibūdina tą atributą, pvz., vardą, miestą arba el. pašto adresą.
 
-Visi atributai, kuriems automatiškai nustatomas semantinis tipas, sugrupuojami skyriuje **Susietų laukų peržiūra**. Peržiūrėkite šiuos atributus ir jų semantinius tipus, nes jie bus naudojami jūsų objektams sulieti duomenų sujungimo proceso suliejimo etape.
+   > [!NOTE]
+   > Vienas laukas turi būti susietas su semantiniu tipu *Person.FullName*, kad pirkėjo kortelėje būtų užpildytas pirkėjo vardas. Priešingu atveju kliento kortelės bus be vardo.
 
-Atributai, kurie automatiškai nesusiejami su semantiniu tipu, sugrupuojami skyriuje **Nesusietų laukų duomenų apibrėžimas**. Pasirinkite nesusietų atributų semantinio tipo lauką arba įveskite pasirinktinį atributo tipo pavadinimą.
+   1. Norėdami pakeisti sistemos identifikuotą atributo tipą, pasirinkite kitą tipą. Jei tipo nėra, sukurkite pasirinktinį semantinį tipą pasirinkdami **atributo lauką Tipas** ir įvesdami pasirinktinį semantinio tipo pavadinimą.
 
-> [!div class="mx-imgBorder"]
-> ![Pirminio rakto ir atributo tipas.](media/data-manager-configure-map-add-attributes.png "Pirminio rakto ir atributo tipas")
+   1. Norėdami įtraukti atributą, kuriame yra URL, į viešai prieinamus profilio vaizdus ar logotipus, pasirinkite objektą ir lauką, kuriame yra URL. Lauke **Tipas** įveskite:
+      - Asmuo: Person.ProfileImage
+      - Organizacija: Organization.LogoImage
 
-> [!NOTE]
-> Vienas laukas turi būti susiejamas su semantiniu tipu Person.FullName, kad kliento pavardė būtų automatiškai įvesta kliento kortelėje. Priešingu atveju kliento kortelės bus be vardo. 
+   1. Sąskaitos pavadinimo atributui lauke Tipas **įveskite**"Organization.Name".
 
-## <a name="add-and-remove-attributes-and-entities"></a>Atributų ir objektų įtraukimas bei šalinimas
+1. Peržiūrėkite atributus, kuriuose semantinis tipas identifikuojamas automatiškai. Šie atributai išvardyti dalyje **Peržiūrėti susietus laukus**. Veiksme **Vieningas klientas laukuose** galima derinti tik to paties tipo atributus. Semantiniai tipai naudojami automatiškai siūlyti įžvalgas. Įsitikinkite, kad jūsų pasirinkti tipai yra nuoseklūs visuose pasirinktuose objektuose.
 
-1. Dalyje **Sujungti** > **Susieti** pasirinkite **Redaguoti laukus**.
+1. Atributams, kurie nėra automatiškai susieti su semantiniu tipu, pasirinkite semantinio tipo lauką, įveskite pasirinktinį atributo tipo pavadinimą arba palikite juos nesusietus. Šie atributai išvardyti dalyje **Apibrėžti duomenis nesusietuose laukuose**.
 
-2. Srityje **Redaguoti laukus** įtraukite arba pašalinkite atributus ir objektus. Naudokite iešką arba slinkite, kad rastumėte ir pažymėtumėte dominančius atributus ir objektus. Jei atributas ar objektas jau sugretintas, jų pašalinti negalima.
+1. Atlikę kiekvieno objekto veiksmus, pasirinkite **Įrašyti šaltinio laukus**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Įtraukti arba ištrinti atributus.](media/configure-data-map-edit.png "Įtraukti arba ištrinti atributus")
+1. Pasirinkite **Toliau**.
 
-3. Pasirinkite **Taikyti**.
-
-## <a name="add-images-to-profiles"></a>Vaizdų įtraukimas į profilius
-
-Jei objekte yra viešai prieinamų profilio vaizdų ar logotipų URL, galite juos įtraukti į sujungtą kliento profilį.
-
-Pasirinkite objektą ir raskite lauką, kuriame yra profilio vaizdo URL. Įvesties lauke **Tipas** rankiniu būdu įveskite toliau nurodytą reikšmę. 
-- Asmuo: Person.ProfileImage
-- Organizacija: Organization.LogoImage
-
-Atlikite kitus sujungimo veiksmus ir įsitikinkite, kad atributas, kuriame yra vaizdo URL, taip pat įtraukiamas į veiksmą [Sulieti](merge-entities.md).
-
-## <a name="set-attributes-for-organizations"></a>Nustatyti atributus organizacijoms
-
-Organizacijoms (peržiūra) atributo tipas turi būti susietas su „Organization.Name“
-> [!div class="mx-imgBorder"]
-> ![Pirminis raktas ir atributo tipas B2B.](media/configure-data-map-edit-b2b.png "Pirminis raktas ir atributo tipas B2B")
-
-## <a name="next-step"></a>Kitas veiksmas
-
-Duomenų suvienijimo proceso metu nueikite į **suderinimo** puslapį. Aplankykite [**suderinti**](match-entities.md) norėdami sužinoti apie šį etapą.
-
-> [!TIP]
-> Peržiūrėkite šį vaizdo įrašą: [Pradžia: vieningo kliento profilio sukūrimas](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Kitas žingsnis: dublikatų šalinimas](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

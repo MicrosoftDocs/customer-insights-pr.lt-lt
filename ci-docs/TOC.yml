@@ -66,12 +66,18 @@
   items:
     - name: Duomenų suvienodinimo apžvalga
       href: data-unification.md
-    - name: Susiekite objektus ir atributus
+    - name: Pasirinkti šaltinio laukus
       href: map-entities.md
-    - name: Susiekite objektus
+    - name: Šalinti pasikartojančius įrašus
+      href: remove-duplicates.md
+    - name: Rungtynių sąlygos
       href: match-entities.md
-    - name: Suliekite objektus
+    - name: Suvienodinti kliento laukus
       href: merge-entities.md
+    - name: Peržiūrėti duomenų suvienijimą
+      href: review-unification.md
+    - name: Atnaujinti suvienijimo parametrus
+      href: data-unification-update.md
 - name: Duomenų papildymas
   items:
     - name: Papildyti klientų profilius
@@ -282,6 +288,8 @@
       href: apis.md
     - name: API nuorodos
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: OData užklausų pavyzdžiai
+      href: odata-examples.md
 - name: Sutikimo valdymas (peržiūra)
   items:
     - name: Pagalbos centras

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643693"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741189"
 ---
 # <a name="power-automate-connector-preview"></a>„Power Automate“ jungtis (peržiūra)
 
@@ -25,14 +25,14 @@ Nustatykite, kad konkretūs įvykiai būtų automatiškai vykdomi pasikeitus duo
 
 ## <a name="power-automate-triggers"></a>„Power Automate“ paleidikliai
 
-Naudokite paleidinius debesies srautams kurti ir pasikartojančioms užduotims, pvz.: pranešimams ar išplėstiniams veiksmams, automatizuoti. 
+Naudokite paleidinius debesies srautams kurti ir pasikartojančioms užduotims, pvz.: pranešimams ar išplėstiniams veiksmams, automatizuoti.
 
-- Paleidiklis, kai nepavyksta atnaujinti duomenų šaltinio. 
+- Paleidiklis, kai nepavyksta atnaujinti duomenų šaltinio.
 - Paleidiklis, kai pavyksta atnaujinti duomenų šaltinį.
 - Paleidiklis, pasiekus segmento ribinę reikšmę. Paleidiklis taikomas tik ribinės vertės viršijimui.
 - Paleidiklis, pasiekus verslo mato ribinę reikšmę. Palaikomi tik verslo matai be dimensijos. Paleidiklis taikomas tik ribinės vertės viršijimui.
 - Paleidimas, kai visas paleidimas iš naujo (duomenų šaltinių, segmentų, priemonių, ...) yra pabaigtas.
-- Suaktyvinamas baigus sujungimo proceso (susiejimas, sutapdinimas, suliejimas) atnaujinimą.
+- Suaktyvinkite, kai baigiamas suvienijimo proceso atnaujinimas.
 
 [Paleidiklių konfigūravimas „Power Automate“.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

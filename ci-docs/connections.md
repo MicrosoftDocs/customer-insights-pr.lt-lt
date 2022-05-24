@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643332"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755319"
 ---
 # <a name="connections-preview-overview"></a>Ryšių (peržiūros) apžvalga
 
@@ -24,15 +24,15 @@ Ryšiai yra pagrindinis duomenų bendrinimo į „Customer Insights“ ir iš jo
 
 Eikite į **Administravimas** > **Ryšiai** ir kurkite bei peržiūrėkite ryšius.
 
-Skirtuke **Ryšiai** rodomi visi aktyvūs ryšiai. Sąraše rodoma kiekvieno ryšio eilutė. 
+Skirtuke **Ryšiai** rodomi visi aktyvūs ryšiai. Sąraše rodoma kiekvieno ryšio eilutė.
 
 Greitai peržiūrėkite, gaukite aprašą ir sužinokite, ką galite daryti su kiekviena išplėtimo parinktimi skirtuke **Atrasti**.
 
-### <a name="exports"></a>Eksportavimai
+## <a name="exports"></a>Eksportavimai
 
 Naujus ryšius gali konfigūruoti tik administratoriai, tačiau jie gali suteikti prieigą prie bendraautorių, kad galėtų naudoti esamus ryšius. Administratoriai valdo, kur gali būti perkeliami duomenys, bendradarbiai apibrėžia jų poreikius pagal apkrovą ir dažnumą. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Papildymai
+## <a name="enrichments"></a>Papildymai
 
 Naujus ryšius gali konfigūruoti tik administratoriai, bet sukurti ryšiai visada pasiekiami ir administratoriams, ir bendradarbiams. Administratoriai valdo kredencialus ir sutinka, kad duomenys būtų perduoti. Tada administratoriai ir bendradarbiai ryšius gali naudoti papildymams.
 
@@ -46,9 +46,9 @@ Norėdami įtraukti ryšius, turite turėti [administratoriaus teises](permissio
 
 1. Norėdami sukurti naują ryšį, pasirinkite **Pridėti ryšį**. Išplečiamajame meniu pasirinkite, kokio tipo ryšį norite sukurti.
 
-1. Srityje **Nustatyti ryšį** pateikite reikiamą informaciją. 
+1. Srityje **Nustatyti ryšį** pateikite reikiamą informaciją.
    1. **Rodomas pavadinimas** ir ryšio tipas apibūdina ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas šio ryšio tikslas ir paskirtis.
-   1. Tikslūs laukeliai priklauso nuo to, prie kokios paslaugos jungiatės. Apie konkretaus ryšio tipo duomenis galite sužinoti straipsnyje apie tikslinę paslaugą.
+   1. Tikslūs laukai priklauso nuo to, prie kokios paslaugos jungiatės. Apie konkretaus ryšio tipo duomenis galite sužinoti straipsnyje apie tikslinę paslaugą.
    1. Jei [naudojate savo „Key Vault“](use-azure-key-vault.md) slaptai saugoti, suaktyvinkite **naudoti Key Vault** ir sąraše pasirinkite slaptą parinktį.
 
 1. Jei norite sukurti ryšį, pasirinkite **Įrašyti**.
@@ -59,7 +59,7 @@ Taip pat galite pasirinkti **Nustatyti** plytelėje, esančioje skirtuke **Atras
 
 Nustatę arba redaguodami eksportavimo ryšį pasirenkate, kuriems naudotojams bus leidžiama naudoti šį konkretų ryšį [eksportavimui](export-destinations.md) apibrėžti. Pagal numatytuosius nustatymus ryšys prieinamas naudotojams, kuriems priskirtas administratoriaus vaidmuo. Šį parametrą galite keisti dalyje **Pasirinkite, kas gali naudoti šį ryšį** ir leisti šiuo ryšiu naudotis naudotojams, kuriems priskirtas bendradarbio vaidmuo.
 
-- Bendradarbiai negalės peržiūrėti ar redaguoti ryšio. Rodomas pavadinimas ir jo tipas bus rodomi tik kuriant eksportavimą.
+- Bendradarbiai negalės peržiūrėti ar redaguoti ryšio. Jie matys tik rodomą pavadinimą ir jo tipą kurdami eksportavimą.
 - Bendrindami ryšį leidžiate bendradarbiams naudoti ryšį. Nustatydami eksportavimą, bendradarbiai matys bendrai naudojamus ryšius. Jie gali valdyti kiekvieną eksportavimą, kuris naudoja šį konkretų ryšį.
 - Šį parametrą galima keisti išlaikant eksportavimą, kurį jau yra nustatę bendradarbiai.
 
@@ -77,7 +77,7 @@ Nustatę arba redaguodami eksportavimo ryšį pasirenkate, kuriems naudotojams b
 
 ## <a name="remove-a-connection"></a>Ryšio pašalinimas
 
-Jei ryšys, kurį šalinate, naudojamas praturtinant ar eksportuojant, pirmiausia turite juos atsieti arba pašalinti. Šalinimo dialogas padės atlikti svarbius papildymus arba eksportavimą. 
+Jei ryšį, kurį pašalinate, naudoja sodrinimas arba eksportas, pirmiausia turite juos atskirti arba pašalinti. Šalinimo dialogas padės atlikti svarbius papildymus arba eksportavimą.
 
 Atsieti papildymai ir eksportavimai tampa neaktyvūs. Iš naujo suaktyvinate juos prie jų pridėdami kitą ryšį puslapyje [Papildymai](enrichment-hub.md) arba [Eksporavimai](export-destinations.md).
 
@@ -91,7 +91,7 @@ Atsieti papildymai ir eksportavimai tampa neaktyvūs. Iš naujo suaktyvinate juo
 
    1. Jei naudojant šį ryšį atliekami papildymai ar eksportavimai, pažymėkite mygtuką, kad pamatytumėte, kas naudoja ryšį.
       - **Eksportavimai:** galite pasirinkti pašalinti arba atjungti eksportavimą, kad galėtumėte pašalinti ryšį. Norėdami atjungti eksportavimą, administratoriai gali naudoti veiksmą **Atjungti**. Šį veiksmą galima naudoti pavieniam arba keliems pasirinktiems eksportavimams. Atjungdami išlaikote eksportavimo konfigūraciją, tačiau ji nebus vykdoma, kol prie jos nebus pridėtas kitas ryšys.
-      - **Papildymai:** galite pasirinkti pašalinti arba atjungti papildymus, kad galėtumėte pašalinti ryšį. 
+      - **Papildymai:** galite pasirinkti pašalinti arba atjungti papildymus, kad galėtumėte pašalinti ryšį.
    1. Kai ryšys nebeturi priklausomybių, grįžkite į **Administravimas** > **Ryšiai** ir dar kartą pabandykite pašalinti ryšį.
 
 1. Jei norite patvirtinti trynimą, pasirinkite **Šalinti**.

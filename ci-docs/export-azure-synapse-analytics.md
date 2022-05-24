@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643165"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741513"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Eksportuoti duomenis į Azure Synapse Analytics (Peržiūra)
 
@@ -34,7 +34,7 @@ Turite atitikti toliau pateiktas būtinąsias sąlygas, kad sukonfigūruotumėte
 
 - Aktyvi „Azure“ prenumerata.
 
-- Jei naudojate naują Azure Data Lake Storage "Gen2" abonementą *, "Customer Insights"* aptarnavimo principui reikia **saugyklos BLOB duomenų teikėjo** teisių. Sužinokite daugiau skyriuje [prisijungimas prie „Azure Data Lake Storage Gen2” kliento su pagrindine auditorijos įžvalgų „Azure” tarnyba](connect-service-principal.md). „Data Lake Storage Gen2“ **privalo turėti** įjungtą [hierarchinę vardų sritį](/azure/storage/blobs/data-lake-storage-namespace).
+- Jei naudojate naują Azure Data Lake Storage "Gen2" abonementą *, "Customer Insights"* aptarnavimo principui reikia **saugyklos BLOB duomenų teikėjo** teisių. Sužinokite daugiau apie [prisijungimą prie "Gen2" abonemento Azure Data Lake Storage su "Azure" aptarnavimo pagrindine programa, skirta "Customer Insights"](connect-service-principal.md). „Data Lake Storage Gen2“ **privalo turėti** įjungtą [hierarchinę vardų sritį](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Išteklių grupėje, kurioje Azure Synapse yra darbo sritis, tarnybos vadovui *ir* vartotojui, turinčiam administratoriaus teises programoje "Customer Insights"*Azure AD,* turi būti priskirtos bent **skaitytojo** teisės. Daugiau informacijos rasite [„Azure” vaidmenų priskyrimas naudojant „Azure” portalą](/azure/role-based-access-control/role-assignments-portal).
 

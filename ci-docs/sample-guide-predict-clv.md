@@ -1,19 +1,19 @@
 ---
 title: Klientų ciklo reikšmės prognozės pavyzdinis vadovas
 description: Naudokite šį pavyzdinį vadovą, kad išbandytumėte klientų ciklo reikšmės prognozės modelį.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643593"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740821"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Klientų ciklo reikšmės (CLV) prognozės pavyzdinis vadovas
 
@@ -102,64 +102,7 @@ Peržiūrėkite straipsnius [apie duomenų nurijimą](data-sources.md) ir [duome
 
 ## <a name="task-2---data-unification"></a>Užduotis 2 - Duomenų suvienodinimas
 
-Įtraukę duomenis mes pradedame duomenų suvienodinimo procesą, kad sukurtumėte vieningąjį kliento profilį. Dėl daugiau informacijos, žr. [Duomenų suvienodinimas](data-unification.md).
-
-### <a name="map"></a>Schema
-
-1. Suvartojus duomenis, sudarykite kontaktų žemėlapį iš e-komercijos ir lojalumo duomenų į bendrus duomenų tipus. Eikite į **Duomenys** > **Suvienodinti** > **Žemėlapis**.
-
-1. Pasirinkite objektus, kurie rodo kliento profilį – **e-komercijoskontaktai** ir **lojalumoklientai**. Tada pasirinkite **Taikyti**.
-
-   ![suvienodinti e-komercijos ir lojalumo duomenų šaltinius.](media/unify-ecommerce-loyalty.png)
-
-1. Pasirinkite **Kontakto ID** kaip pagrindinį raktą **e-komercijos kontaktus** ir **Lojalumo ID** kaip pirminį raktą **lojalumo klientams**.
-
-   ![Suvienodinkite lojalumo ID kaip pagrindinį raktą.](media/unify-loyaltyid.png)
-
-1. Pasirinkite **Įrašyti**.
-
-### <a name="match"></a>Sugretinti
-
-1. Eikite į **Atitikties** skirtuką ir pasirinkite **Nustatyti užsakymą**.
-
-1. Pirminiame **išplečiamajame** sąraše pasirinkite **eCommerceContacts: el. prekyba** pirminis šaltinis ir įtraukite visus įrašus.
-
-1. Išplečiamajame sąraše **Objektas 2** pasirinkite **loyCustomers: LoyaltyScheme** įtraukite visus įrašus.
-
-   ![Suvienodinti e-komercijos atitiktį ir lojalumą.](media/unify-match-order.png)
-
-1. Pasirinkite **Įtraukti taisyklę**
-
-1. Įtraukite savo pirmąją sąlygą naudodami visą pavadinimą.
-
-   - El. prekyboscontacts išplečiamajame sąraše pažymėkite **Visas vardas**.
-   - loyCustomers išplečiamajame sąraše pažymėkite **Visas vardas**.
-   - Pažymėkite **normalizuoti** išplečiamąjį sąrašą ir pasirinkite **Tipas (Telefonas, Vardas, Adresas, ...)**.
-   - Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
-
-1. Įveskite pavadinimą **Visas pavadinimas, El. paštas** naujai taisyklei.
-
-   - Įtraukite antrąją sąlygą el. pašto adresui pasirinkdami **Įtraukite sąlygą**
-   - Objekto "eCommerceContacts" **išplečiamajame sąraše** pasirinkite "El. paštas".
-   - Objekto loyCustomers **išplečiamajame sąraše** pasirinkite "El. paštas".
-   - Palikite normalizavimą tuščią.
-   - Nustatykite **Preciziškumo lygis**: **Pagrindinis** ir **Vertė**: **Aukštas**.
-
-   ![Suvienodinkite atitikties taisyklę pavadinimui ir el. paštui.](media/unify-match-rule.png)
-
-1. Pasirinkite **Atlikta**.
-
-1. Pasirinkite **Įrašyti** ir **Vykdyti**.
-
-### <a name="merge"></a>Sulieti
-
-1. Eikite į **Sulieti** skirtuką.
-
-1. **Kontakto ID** skirtą **lojalių klientų** objekte, keiskite rodomą pavadinimą į **KontaktoIDlojalumas** tam, kad jis skirtųsi nuo kitų vartotų ID.
-
-   ![pervardykite kontakto ID iš lojalumo ID.](media/unify-merge-contactid.png)
-
-1. Pasirinkite **Įrašyti** ir **Vykdyti suliejimo ir užbaigimo procesus**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>3 užduotis – Klientų ciklo reikšmės prognozės konfigūravimas
 

@@ -1,19 +1,19 @@
 ---
 title: Naujos ir būsimos funkcijos
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 04/05/2022
+ms.date: 05/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 25c6e2897d836854408871b2c74afa16ecba7435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: HT
+ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
+ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643728"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "8700947"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Kas nauja programoje „Dynamics 365 Customer Insights“
 
@@ -24,6 +24,28 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="april-2022-updates"></a>2022 m. balandžio mėn. naujinimai
+
+2022 m. balandžio mėnesio naujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų taisymus.
+
+### <a name="dun--bradstreet-enrichment-preview"></a>Dun & Bradstreet sodrinimas (Peržiūra)
+
+"Dun & Bradstreet" teikia komercinius duomenis, analizę ir įžvalgas įmonėms. Tai leidžia klientams su vieningais įmonių klientų profiliais papildyti savo duomenis. Sodrinimas apima tokius atributus kaip DUNS numeris, įmonės dydis, vieta, pramonė ir kt.
+
+Daugiau informacijos ieškokite [Enrichment of companies profiles with Dun & Bradstreet (Preview)](enrichment-dnb.md).
+
+### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Nustatyti matavimo tipą kuriant naują matą
+
+Dabar galite atskirti atskirų profilių ir priemonių priemones visame versle. Nors verslo priemonės rodomos pagrindiniame "Customer Insights" puslapyje, klientų rodikliai atskleidžiami išsamiuose klientų rodiniuose.
+
+Norėdami gauti daugiau informacijos, žr [...](measure-builder.md).
+
+### <a name="consolidation-of-customer-insights-documentation"></a>"Customer Insights" dokumentacijos konsolidavimas
+
+Peržiūrėjome savo dokumentacijos straipsnius ir pašalinome įtraukimo įžvalgų ir auditorijos įžvalgų galimybių paminėjimus. Rašydami apie pagrindines programos funkcijas, nuosekliai remsimės produkto pavadinimu "Customer Insights". Šis pakeitimas taip pat lemia reikšmingą turinio, URL struktūros ir failų kelių restruktūrizavimą pagrindinėje dokumentų saugykloje. Visos jūsų žymelės arba esami saitai toliau veikia ir nukreipiami į atnaujintus URL.
+
+Jei norite mums pranešti, kaip suvokiate šį pokytį arba pastebite kažką neveikiančio taip, kaip tikėtasi, pasakykite mums pateikdami [atsiliepimus apie šį puslapį](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>2022 m. kovo mėn. atnaujinimai
 

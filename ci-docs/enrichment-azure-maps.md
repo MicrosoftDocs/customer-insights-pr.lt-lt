@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643014"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755364"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Klientų profilių papildymas „Azure” žemėlapiais (peržiūros versija)
 
@@ -51,7 +51,7 @@ Norėdami sukonfigūruoti „Azure” žemėlapių duomenų papildymą turite į
 
 1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
 
-1. Įvertinkite, ar norite modifikuoti **Išplėstinius parametrus**. Jie bus teikiami tam, kad būtų galima kuo lanksčiau tvarkyti išplėstinio naudojimo atvejus, tačiau numatytosios reikšmės daugeliu atvejų bus tinkamos:
+1. Įvertinkite, ar norite modifikuoti **Išplėstinius parametrus**. Šie nustatymai pateikiami taip, kad būtų užtikrintas maksimalus lankstumas tvarkant išplėstinio naudojimo atvejus, tačiau daugeliu atvejų numatytosios vertės bus tinkamos:
    - **Adresų tipas**: Numatytasis veikimas yra tas, kad papildymas grąžins geriausią adreso atitikmenį, net jei jis neužbaigtas. Jei norite gauti tik pilnus adresus&mdash;pavyzdžiui, adresus, kuriuose yra namų numeris&mdash;išvalykite visus žymės langelius, išskyrus **Taškų adresus**. 
    - **Kalba**: Pagal numatytuosius nustatymus adresai yra grąžinami regiono, kuriam nustatytas adresas, kalba. Jei norite taikyti standartizuotą adreso kalbą, pasirinkite kalbą iš išplečiamojo meniu. Pavyzdžiui, pasirinkus **Anglų** kalbą bus sugrąžinta **„Copenhagen, Denmark”**, o ne **„København, Danmark”**.
 
@@ -89,7 +89,7 @@ Išsamų kiekvieno papildyto profilio rodinį galite pasiekti pasirinkę **Perž
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
-Kai įgalinate „Dynamics 365 Customer Insights“ perduoti duomenis „Azure” žemėlapiams, leidžiate perduoti duomenis už „Dynamics 365 Customer Insights“ atitikties ribos, įskaitant galimai jautrius duomenis, pavyzdžiui, Asmens. „Microsoft" tokius duomenis perkels jūsų nurodymu, tačiau esate atsakingas už tai, kad būtų užtikrinta „Azure“ žemėlapių privatumo arba saugos reikalavimai. Daugiau informacijos pateikta [„Microsoft” privatumo nuostatose](https://go.microsoft.com/fwlink/?linkid=396732).
+Kai įgalinate „Dynamics 365 Customer Insights“ perduoti duomenis „Azure” žemėlapiams, leidžiate perduoti duomenis už „Dynamics 365 Customer Insights“ atitikties ribos, įskaitant galimai jautrius duomenis, pavyzdžiui, Asmens. "Microsoft" perduos tokius duomenis jūsų nurodymu, tačiau jūs esate atsakingi už tai, kad "Azure" žemėlapiai atitiktų visus privatumo ar saugos įsipareigojimus, kuriuos galite turėti. Daugiau informacijos pateikta [„Microsoft” privatumo nuostatose](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

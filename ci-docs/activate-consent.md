@@ -1,23 +1,22 @@
 ---
 title: Segmentų sutikimo taisyklių aktyvinimas
 description: Atlikite šiuos veiksmus, kad susietumėte sutikimo duomenis ir suaktyvintumėte sutikimo patikrinimus Dynamics 365 Customer Insights. Administratorius taip pat gali išjungti sutikimo patikrinimus.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643116"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755180"
 ---
 # <a name="activate-consent-rules"></a>Aktyvinti sutikimo taisykles
 
-Sutikimo [centras (peržiūra)](consent-management/overview.md) padeda suderinti sutikimo duomenis iš įvairių šaltinių. Naudokite vieningą *sutikimo* objektą, kad pritaikytumėte numatytuosius sutikimo patikrinimus. Importavus sutikimo duomenis į sutikimo centrą ir konfigūravus duomenų taisykles, sutikimo *objektas* automatiškai sinchronizuojamas su Dynamics 365 Customer Insights.
+Sutikimo [centras (peržiūra)](consent-management/overview.md) padeda suderinti sutikimo duomenis iš įvairių šaltinių. Naudokite vieningą *sutikimo* objektą, kad pritaikytumėte numatytuosius sutikimo patikrinimus. Importavus sutikimo duomenis ir konfigūravus žemėlapio *taisykles, objektas Sutikimas* automatiškai sinchronizuojamas su Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Įjungti sutikimų tikrinimus
 

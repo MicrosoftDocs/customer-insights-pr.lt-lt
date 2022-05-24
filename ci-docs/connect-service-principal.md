@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643350"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739172"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Prisijunkite prie Azure Data Lake Storage paskyros naudodami pagrindinę "Azure" tarnybą
 
@@ -40,7 +40,7 @@ Prieš kurdami naują "Customer Insights" aptarnavimo pagrindinį direktorių, p
 
 3. Skyriuje **Valdyti**, pasirinkite **Įmonės programos**.
 
-4. Ieškokite "Microsoft" programos ID `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` su pavadinimu `Dynamics 365 AI for Customer Insights`.
+4. Įtraukite filtrą, skirtą **programos ID pradėti**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` nuo pavadinimo `Dynamics 365 AI for Customer Insights` arba ieškoti jo.
 
 5. Jei randate sutampantį įrašą, tai reiškia, kad pagrindinė paslauga jau yra. 
    

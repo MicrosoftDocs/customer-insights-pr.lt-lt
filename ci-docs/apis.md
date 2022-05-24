@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643273"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755460"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbas su „Customer Insights“ API
 
@@ -25,7 +25,7 @@ ms.locfileid: "8643273"
 > [!IMPORTANT]
 > Šių API išsami informacija yra išvardyta [„Customer Insights“ API nuorodoje](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Jie apima papildomą informaciją apie operacijas, parametrus ir atsakymus.
 
-Šiame straipsnyje aprašoma, kaip pasiekti „Customer Insights" API, sukurti „Azure" programos registravimą ir pradėti dirbti su galimų klientų bibliotekomis.
+Šiame straipsnyje aprašoma, kaip pasiekti "Customer Insights" API, sukurti "Azure" programų registraciją ir pradėti dirbti su klientų bibliotekomis.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Pradėkite bandyti „Customer Insights“ API
 
@@ -83,13 +83,13 @@ Galite naudoti programos/kliento ID šios programos registracijai su „Microsof
 
 Daugiau informacijos apie MSAL, rasite [„Microsoft“ autentifikavimo bibliotekos (MSAL) apžvalga](/azure/active-directory/develop/msal-overview).
 
-Daugiau informacijos apie programos registravimą „Azure" [žr. Taikomosios programos registravimas](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Daugiau informacijos apie programos registravimą „Azure" [žr. Taikomosios programos registravimas](/graph/auth-register-app-v2).
 
 Informacijos apie API naudojimas mūsų klientų bibliotekose ieškokite [„Customer Insights“ klientų bibliotekose](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Serveris su serveriu programos teisės
 
-[Programos registracijos skyrius](#create-a-new-app-registration-in-the-azure-portal) nurodo, kaip registruoti programą, kuriai reikia, kad vartotojas prisijungtų autentifikavimui. Sužinokite, kaip sukurti programos registraciją, kuriai nereikia, kad vartotojas sąveikautų ir ją būtų galima vykdyti serveryje.
+[Programos registracijos skyrius](#create-a-new-app-registration-in-the-azure-portal) nurodo, kaip registruoti programą, kuriai reikia, kad vartotojas prisijungtų autentifikavimui. Sužinokite, kaip sukurti programos registraciją, kuriai nereikia vartotojo sąveikos ir kurią galima paleisti serveryje.
 
 1. Programos registracijoje „Azure“ portale eikite į **API teisės**.
 
@@ -112,6 +112,10 @@ Informacijos apie API naudojimas mūsų klientų bibliotekose ieškokite [„Cus
    Atverkite „Customer Insights“, eikite į **Administratorius** > **Leidimai** ir pasirinkite **Įtraukti vartotoją**.
 
 1. Ieškokite savo programos registracijos pavadinimo, pasirinkite iš paieškos rezultatų ir rinkitės **Įrašyti**.
+
+## <a name="sample-queries"></a>Užklausų pavyzdžiai
+
+Sudarėme trumpą "OData" pavyzdinių užklausų sąrašą, kad galėtume dirbti su API: ["OData" užklausų pavyzdžiais](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>„Customer Insights“ kliento bibliotekos
 
@@ -137,7 +141,7 @@ Sužinokite, kaip pradėti naudojant C# kliento bibliotekas iš NuGet.org. Dėl 
 
 1. Naudokite [„Microsoft“ autentifikavimo biblioteką (MSAL)](/azure/active-directory/develop/msal-overview) tam, kad gautumėte `AccessToken` naudodami esančią savo [„Azure“ programos registraciją](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Sėkmingai autentifikuoti ir įsigiję atpažinimo ženklą, sukurkite naują arba naudokite esamą `HttpClient` su papildomais **DefaultRequestHeaders "Authorization", nustatytais kaip**"Prieigos atpažinimo ženklas" ir **"Ocp-Apim-Subscription-Key"** **, nustatytas kaip** prenumeratos raktas [**iš jūsų "Customer Insights"** aplinkos](#get-started-trying-the-customer-insights-apis).   
+1. Sėkmingai autentizavę ir įsigiję atpažinimo ženklą, sukurkite naują arba naudokite esamą `HttpClient` su **DefaultRequestHeaders "Authorization", nustatytu kaip** Bearer "prieigos atpažinimo ženklas"**ir** Ocp-Apim-Subscription-Key **,** nustatytu kaip prenumeratos raktas [**iš "Customer Insights"** aplinkos](#get-started-trying-the-customer-insights-apis).   
  
    Paleiskite iš naujo **autorizavimo** antraštę, kai būtina. Pavyzdžiui, kai žyma baigė galioti.
 
@@ -147,7 +151,7 @@ Sužinokite, kaip pradėti naudojant C# kliento bibliotekas iš NuGet.org. Dėl 
 
 1. Atlieka skambučius su klientu „plėtinio metodams“, pavyzdžiui  `GetAllInstancesAsync`. Jei norite prieiti prie po juo esančiu `Microsoft.Rest.HttpOperationResponse`, naudokite „http žinutės metodai”, pavyzdžiui `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Atsakymas greičiausiai bus `object` objekto tipo, nes metodas gali grįžti į keletą tipų (pavyzdžiui, `IList<InstanceInfo>` ir `ApiErrorResult`). Norėdami patikrinti grįžimo tipą, galite saugiai sudėlioti objektus į atsakymų tipus nurodytus [API išsamios informacijos puslapis](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) veikimui.    
+1. Atsakymas greičiausiai bus `object` objekto tipo, nes metodas gali grįžti į keletą tipų (pavyzdžiui, `IList<InstanceInfo>` ir `ApiErrorResult`). Norėdami patikrinti grąžinimo tipą, naudokite tos operacijos ATSAKYMŲ TIPŲ, nurodytų [API išsamios informacijos puslapyje](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights), nurodytus atsakymų tipų objektus.    
    
    Jei reikia daugiau informacijos, naudokite **http pranešimo metodus** tam, kad prieitumėte prie neapdoroto atsakymo objekto.
 
