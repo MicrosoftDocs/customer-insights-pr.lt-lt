@@ -1,19 +1,19 @@
 ---
 title: Duomenų šaltinis praturtėjimas
 description: Praturtinkite duomenų šaltinius prieš pradėdami duomenų suvienijimo procesą.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755696"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800291"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Duomenų šaltinių praturtinimas (peržiūra)
 
@@ -27,7 +27,7 @@ Norėdami kurti arba redaguoti praturtinimus, turite turėti bendraautoriaus arb
 
 1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
 
-1. Pasirinkite vertikalią elipsę šalia duomenų šaltinis norite praturtinti, ir pasirinkite **Praturtinti**.
+1. Pasirinkite vertikalią elipsę (&vellip;) šalia duomenų šaltinis norite praturtinti, ir pasirinkite **Praturtinti**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Duomenų šaltinių praturtinimo puslapis.":::
 
@@ -41,11 +41,12 @@ Norėdami kurti arba redaguoti praturtinimus, turite turėti bendraautoriaus arb
 
 - [Išplėstiniai adresai](enrichment-enhanced-addresses.md)
 - [Išplėstiniai įmonės duomenys](enrichment-enhanced-company-data.md)
+- [Tapatybės duomenys iš "LiveRamp"](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Valdykite esamus duomenų šaltinis praturtinimus
 
 Eikite į skirtuką **Mano papildymai**, kad pamatytumėte visus sukonfigūruotus papildymus.
 
-Norėdami peržiūrėti galimas parinktis, pažymėkite papildymą. Taip pat galite pažymėti elipsę (...) sąrašo elemente ir peržiūrėti parinktis. Jei sukonfigūravote kelis papildymus, galite naudoti ieškos lauką, kad greitai juos rastumėte.
+Norėdami peržiūrėti galimas parinktis, pažymėkite papildymą. Taip pat galite pasirinkti vertikalią elipsę (&vellip;) sąrašo elemente, kad pamatytumėte parinktis. Jei sukonfigūravote kelis papildymus, galite naudoti ieškos lauką, kad greitai juos rastumėte.
 
 Galite peržiūrėti, redaguoti, paleisti arba panaikinti duomenų šaltinis sodrinimą. Daugiau informacijos ieškokite [Manage existing enrichgs](enrichment-hub.md).

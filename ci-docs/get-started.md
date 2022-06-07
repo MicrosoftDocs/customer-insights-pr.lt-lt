@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: HT
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741143"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833585"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Darbo su „Dynamics 365 Customer Insights“ pradžia
 
@@ -25,21 +25,21 @@ ms.locfileid: "8741143"
 
 ## <a name="step-1-create-an-environment"></a>1 veiksmas: Aplinkos kūrimas
 
-Pirmiausia turite sukurti aplinką, kurioje dirbsite. Jei jūsų organizacija jau įsigijo licenciją, žr. [Aplinkos kūrimas](create-environment.md). Norėdami pradėti bandomąją "Customer Insights" versiją, žr [...](trial-signup.md).
+Pirma, sukurkite aplinką, kurioje galėtumėte dirbti. Jei jūsų organizacija jau įsigijo licenciją, žr. [Aplinkos kūrimas](create-environment.md). Norėdami pradėti bandomąją "Customer Insights" versiją, žr [...](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>2 veiksmas: susipažinkite su klientų įžvalgomis
 
-Pirmą kartą prisijungę prie "Customer Insights", galite konfigūruoti parametrus ir naršyti produktą.
+Kai pirmą kartą prisijungiate prie "Customer Insights", konfigūruojate parametrus ir tyrinėjate produktą.
 
 1. [prisijunkite prie "Customer Insights](https://home.ci.ai.dynamics.com) " naudodami savo "Microsoft" Azure Active Directory (AAD) vartotojo abonementą.
 
-1. [Pakeiskite aplinką](manage-environments.md#switch-environments), kad pamatytumėte demonstracinius duomenis ir [ištirtumėte "Customer Insights"](home.md).
+1. Pakeiskite aplinką, kad pamatytumėte demonstracinius duomenis ir [ištirtumėte "Customer Insights"](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>3 veiksmas: duomenų įtraukimas suvienodinimas ir ryšių nustatymas
 
-Vieningieji profiliai yra pamatai, per kuriuos galima gauti įžvalgų ir atlikti veiksmus su duomenimis. Galite perkelti duomenis iš įvairių šaltinių ir vykdyti duomenų suvienodinimo procesą, kad būtų suderinti vieningieji profiliai. Nurodykite ryšius tarp įterptų objektų naudojamų papildymo funkcijų, kad į profilius įtrauktumėte informaciją.
+Vieningieji profiliai yra pamatai, per kuriuos galima gauti įžvalgų ir atlikti veiksmus su duomenimis. Galite perkelti duomenis iš įvairių šaltinių ir vykdyti duomenų suvienodinimo procesą, kad būtų suderinti vieningieji profiliai. Nurodykite ryšius tarp prarytų objektų ir naudokite sodrinimo funkcijas, kad įtrauktumėte informaciją į profilius.
 
-1. Įtraukite duomenis sukurdami duomenų šaltinius iš kelių parinkčių. Pasirinkite jungtis [Power Query](connect-power-query.md), aplanką [...](connect-common-data-model.md)"Common Data Model" arba [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
+1. Įtraukite duomenis sukurdami duomenų šaltinius iš kelių parinkčių. Pasirinkite jungtis [Power Query](connect-power-query.md), aplanką [...](connect-common-data-model.md)"Common Data Model" arba [Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
 1. Paleiskite [duomenų suvienijimo procesą](data-unification.md) identifikuodami [šaltinio laukus](map-entities.md), pašalindami [dublikatus](remove-duplicates.md), [gretindami sąlygas](match-entities.md) ir [suvienodindami laukus](merge-entities.md).
 
@@ -47,7 +47,7 @@ Vieningieji profiliai yra pamatai, per kuriuos galima gauti įžvalgų ir atlikt
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>4 veiksmas: patobulinkite vieninguosius profilius naudodami prognozes, veiklas ir priemones
 
-Nustatę vieninguosius profilius galite papildyti savo duomenis ir toliau didinti jų teikiamą informaciją.
+Nustačius vieningus profilius, patobulinkite savo duomenis ir dar labiau padidinkite jų teikiamą informaciją.
 
 1. Pasirinkite iš besiplečiančios papildymo teikėjų bibliotekos, kad [papildytumėte savo klientų duomenis](enrichment-hub.md).
 
@@ -59,7 +59,7 @@ Nustatę vieninguosius profilius galite papildyti savo duomenis ir toliau didint
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>5 veiksmas: kurkite segmentus ir aktyvinkite duomenis naudodami įvairias eksportavimo parinktis
 
-Dabar, kai jūsų duomenys yra baigti ir juose yra daug informacijos apie jūsų klientus, laikas ieškoti būdų atlikti veiksmus su tais duomenimis.
+Dabar, kai jūsų duomenys yra išsamūs ir juose yra daug informacijos apie jūsų klientus, ieškokite būdų, kaip imtis veiksmų dėl šių duomenų.
 
 1. [Kurkite segmentus](segments.md), savo klientų bazės antrinius rinkinius, kad užtikrintumėte, jog jūsų veiksmai tinka tiksliniams klientams.
 

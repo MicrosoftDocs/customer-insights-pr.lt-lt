@@ -1,7 +1,7 @@
 ---
 title: Prisijunkite prie Azure Data Lake Storage paskyros naudodami pagrindinę tarnybą
 description: Norėdami prisijungti prie savo duomenų telkinio, naudokite pagrindinę "Azure" tarnybą.
-ms.date: 04/26/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,22 +11,23 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739172"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833395"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Prisijunkite prie Azure Data Lake Storage paskyros naudodami pagrindinę "Azure" tarnybą
 
-Šiame straipsnyje aptariama, kaip prisijungti prie Dynamics 365 Customer Insights Azure Data Lake Storage paskyros naudojant "Azure" tarnybos pagrindinę direktorę, o ne saugyklos abonemento raktus. 
+Šiame straipsnyje aptariama, kaip prisijungti prie Dynamics 365 Customer Insights Azure Data Lake Storage paskyros naudojant "Azure" tarnybos pagrindinę direktorę, o ne saugyklos abonemento raktus.
 
 Automatizuoti įrankiai, naudojantys „Azure“ paslaugas visada turėtų turėti apribotus leidimus. Vietoje programų prisijungimo kaip vartotojui su teisėmis, „Azure“ siūlo pagrindines paslaugas. Galite naudoti aptarnavimo principus, kad saugiai [įtrauktumėte arba redaguotumėte aplanką "Common Data Model" kaip duomenų šaltinis](connect-common-data-model.md) arba [sukurtumėte arba atnaujintumėte aplinką](create-environment.md).
 
 > [!IMPORTANT]
+>
 > - Duomenų ežero saugyklos abonementas, kuriame bus naudojamas pagrindinis paslaugos vykdytojas, turi būti Gen2 ir turi turėti [hierarchinę vardų sritį](/azure/storage/blobs/data-lake-storage-namespace). "Azure Data Lake Gen1" saugyklos abonementai nepalaikomi.
-> - Norint sukurti pagrindinį paslaugų direktorių, reikia "Azure" prenumeratos administratoriaus teisių.
+> - Jums reikia administratoriaus teisių, kad "Azure" klientas sukurtumėte pagrindinį paslaugų teikėją.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Pagrindinės "Customer Insights" "Azure" tarnybos kūrimas
 
@@ -38,29 +39,15 @@ Prieš kurdami naują "Customer Insights" aptarnavimo pagrindinį direktorių, p
 
 2. Iš **Azure paslaugos**, pasirinkite **Azure Active Directory**.
 
-3. Skyriuje **Valdyti**, pasirinkite **Įmonės programos**.
+3. Dalyje **Tvarkyti** pasirinkite **"Microsoft" taikomoji programa**.
 
 4. Įtraukite filtrą, skirtą **programos ID pradėti**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` nuo pavadinimo `Dynamics 365 AI for Customer Insights` arba ieškoti jo.
 
-5. Jei randate sutampantį įrašą, tai reiškia, kad pagrindinė paslauga jau yra. 
-   
+5. Jei randate sutampantį įrašą, tai reiškia, kad pagrindinė paslauga jau yra.
+
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Ekrano kopija rodo esamą pagrindinę paslaugą.":::
-   
-6. Jei negaunama jokių rezultatų sukurkite naujas pagrindines paslaugas.
 
-### <a name="create-a-new-service-principal"></a>Sukurkite naujas pagrindines paslaugas
-
-1. Įdiekite naujausią Azure Active Directory versiją PowerShell Graph. Norėdami gauti daugiau informacijos, eikite [Įdiegti Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
-
-   1. Savo kompiuteryje pasirinkite klaviatūroje pasirinkite "Windows" klavišą ir ieškokite **Windows PowerShell** bei pasirinkite **Paleisti kaip administratorių**.
-   
-   1. „PowerShell“ atsivėrusiame lange įveskite `Install-Module AzureAD`.
-
-2. Naudodami Azure AD „PowerShell“ modulį sukurkite pagrindinę Customer Insights.
-
-   1. „PowerShell“ atsivėrusiame lange įveskite `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Pakeiskite *[savo katalogo ID]* faktiniu "Azure" prenumeratos katalogo ID, kuriame norite sukurti pagrindinį paslaugų teikėją. Aplinkos pavadinimo parametras, `AzureEnvironmentName` yra pasirinktinis.
-  
-   1. Įveskite `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Ši komanda sukuria "Customer Insights" aptarnavimo pagrindinę priemonę pasirinktoje "Azure" prenumeratoje. 
+6. Jei rezultatai negrąžinami, galite [sukurti naują aptarnavimo vykdytoją](#create-a-new-service-principal). Daugeliu atvejų jis jau egzistuoja ir jums tereikia suteikti leidimus pagrindinei tarnybos vykdytojui, kad galėtumėte pasiekti saugyklos paskyrą.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Suteikite leidimus pagrindinėms paslaugoms, kad jos prieitų prie talpinimo paskyros
 
@@ -77,9 +64,9 @@ Eikite į "Azure" portalą, kad suteiktumėte teises aptarnavimo pagrindinei dir
 1. Srityje **Įtraukti vaidmenų priskyrimą** nustatykite šias ypatybes:
    - Vaidmuo: **„Storage Blob Data Contributor“**
    - Priskirkite prieigą prie: **Vartotojo, grupės ar pagrindinių paslaugų**
-   - Pasirinkite narius: **"Dynamics 365" AI, skirtą "Customer Insights"** (aptarnavimo vadovas, [kurį](#create-a-new-service-principal) sukūrėte anksčiau šioje procedūroje)
+   - Pasirinkite narius: **"Dynamics 365" AI, skirtą "Customer Insights"** (aptarnavimo vykdytojas [,](#create-a-new-service-principal) kurio ieškojote anksčiau šioje procedūroje)
 
-1.  Pasirinkite **Peržiūra + priskyrimas**.
+1. Pasirinkite **Peržiūra + priskyrimas**.
 
 Gali užtrukti iki 15 minučių, kol keitimai bus atlikti.
 
@@ -91,7 +78,7 @@ Galite pridėti "Data Lake Storage" abonementą "Customer Insights", kad išsaug
 
 1. Eikite į [„Azure“ administratoriaus portalą](https://portal.azure.com) ir prisijunkite prie savo prenumeratos ir atverkite talpinimo paskyrą.
 
-1. Kairiojoje srityje eikite į **Parametrų** > **Ypatybės**.
+1. Kairiojoje srityje eikite į **Parametrų** > **galiniai punktai**.
 
 1. Kopijuokite talpinimo paskyros išteklių ID vertę.
 
@@ -115,5 +102,18 @@ Galite pridėti "Data Lake Storage" abonementą "Customer Insights", kad išsaug
 
 1. Tęskite likusius "Customer Insights" veiksmus, kad pridėtumėte saugyklos abonementą.
 
+### <a name="create-a-new-service-principal"></a>Sukurkite naujas pagrindines paslaugas
+
+1. Įdiekite naujausią Azure Active Directory versiją PowerShell Graph. Norėdami gauti daugiau informacijos, eikite [Įdiegti Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
+
+   1. Kompiuteryje paspauskite klaviatūros klavišą "Windows", ieškokite **"Windows PowerShell"** ir pasirinkite **Vykdyti administratoriaus teisėmis**.
+
+   1. „PowerShell“ atsivėrusiame lange įveskite `Install-Module AzureAD`.
+
+2. Naudodami Azure AD „PowerShell“ modulį sukurkite pagrindinę Customer Insights.
+
+   1. „PowerShell“ atsivėrusiame lange įveskite `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Pakeiskite *[savo katalogo ID]* faktiniu "Azure" prenumeratos katalogo ID, kuriame norite sukurti pagrindinį paslaugų teikėją. Aplinkos pavadinimo parametras, `AzureEnvironmentName` yra pasirinktinis.
+  
+   1. Įveskite `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Ši komanda sukuria "Customer Insights" aptarnavimo pagrindinę priemonę pasirinktoje "Azure" prenumeratoje.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

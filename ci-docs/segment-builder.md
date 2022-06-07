@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643553"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800106"
 ---
 # <a name="create-segments"></a>Kurti segmentus
 
@@ -134,8 +134,9 @@ Kurdami segmentą, jūs galite įrašyti juodraštį. Juodraščio etapo segment
 > - Nustatant sąlygų operatorius, segmentų kūrimo priemonė nesiūlys galiojančių objektų reikšmių. Galite eiti į **Duomenis** > **Objektai** ir atsisiųsti objekto duomenis, kad pamatytumėte, kurios reikšmės yra galimos.
 > - Datomis pagrįstos sąlygos leidžia jums perjungti tarp fiksuotų datų ir slankiojo kablelio datų intervalo.
 > - Jei turite kelias segmento taisykles, redaguojate taisyklę šalia jos yra vertikali mėlyna linija.
-> - Taisykles ir sąlygas galite perkelti į kitas segmento aprašo vietas. Pasirinkite [...] šalia taisyklės arba sąlygos ir pasirinkite, kaip ir kur ją perkelti.
+> - Taisykles ir sąlygas galite perkelti į kitas segmento aprašo vietas. Pasirinkite vertikalią daugtaškį (&vellip;) šalia taisyklės ar sąlygos ir pasirinkite, kaip ir kur ją perkelti.
 > - Naudojant komandų juostoje valdiklius **Anuliuoti** ir Perdaryti galima **atšaukti** keitimus.
+> - Sukūrus segmentą, kai kurie segmentai leidžia stebėti [segmento](segments.md#track-usage-of-a-segment) naudojimą.
 
 ## <a name="quick-segments"></a>Spartieji segmentai
 

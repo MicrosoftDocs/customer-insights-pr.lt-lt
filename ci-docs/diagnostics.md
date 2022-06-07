@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755272"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807591"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prisijungimas persiunčiant naudojant Dynamics 365 Customer Insights "Azure Monitor" (peržiūra)
 
@@ -38,7 +38,7 @@ Norint konfigūruoti diagnostiką programoje "Customer Insights", turi būti įv
 
 - Turite aktyvią ["Azure" prenumeratą](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - [Turite administratoriaus](permissions.md#admin) teises "Customer Insights".
-- "Azure" **paskirties ištekliuose yra bendraautoriaus** ir **vartotojo prieigos administratoriaus** vaidmuo. Išteklius gali būti "Azure Storage" abonementas, "Azure Event Hub" arba "Azure Log Analytics" darbo sritis. Daugiau informacijos ieškokite ["Azure" vaidmenų priskyrimų įtraukimas arba šalinimas naudojant "Azure" portalą](/azure/role-based-access-control/role-assignments-portal).
+- "Azure" **paskirties ištekliuose yra bendraautoriaus** ir **vartotojo prieigos administratoriaus** vaidmuo. Išteklius gali būti abonementas Azure Data Lake Storage, "Azure" įvykių centras arba "Azure Log Analytics" darbo sritis. Daugiau informacijos ieškokite ["Azure" vaidmenų priskyrimų įtraukimas arba šalinimas naudojant "Azure" portalą](/azure/role-based-access-control/role-assignments-portal). Ši teisė yra būtina konfigūruojant diagnostikos parametrus "Customer Insights", ją galima pakeisti po sėkmingo sąrankos nustatymo.
 - [Įvykdyti "Azure Storage", "Azure Event Hub" arba "Azure Log Analytics" paskirties vietos reikalavimai](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements).
 - Išteklių grupėje, kuriai priklauso išteklius, turite bent **skaitytojo** vaidmenį.
 

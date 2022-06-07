@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
-ms.translationtype: MT
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700947"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833640"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Kas nauja programoje „Dynamics 365 Customer Insights“
 
@@ -58,6 +58,7 @@ Jei norite mums pranešti, kaip suvokiate šį pokytį arba pastebite kažką ne
 Daugiau informacijos ieškokite [Enrich customer profiles with identity data from LiveRamp (Preview)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Segmentų ir matų tvarkymas su žymėmis ir filtrais
+
 Jei jūsų organizacija palaiko daug segmentų ar priemonių, rasti tinkamą kartais gali jaustis sudėtinga. Ši nauja funkcija leidžia tvarkyti sąrašus naudojant žymes ir stulpelius. Tai padeda greitai ir lengvai rasti duomenis ir pritaikyti rodinius.
 
 Daugiau informacijos ieškokite [Work with tags and columns](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Daugiau informacijos ieškokite [Work with tags and columns](work-with-tags-colu
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Duomenų bendrinimo Dataverse įgalinimas naudojant savo saugyklos paskyrą
 
 Jei jūsų aplinka naudoja Azure Data Lake Storage "Customer Insights" duomenims saugoti, duomenų bendrinimui su Microsoft Dataverse reikia papildomos konfigūracijos.
-Anksčiau duomenų bendrinimą galėjote įjungti tik tada Dataverse, kai jūsų duomenys buvo saugomi mūsų tvarkomame duomenų ežere. 
+Anksčiau duomenų bendrinimą galėjote įjungti tik tada Dataverse, kai jūsų duomenys buvo saugomi mūsų tvarkomame duomenų ežere.
 
-Daugiau informacijos ieškokite [Enable data sharing with from Dataverse your own Azure Data Lake Storage (Preview)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Daugiau informacijos ieškokite [Enable data sharing with from Dataverse your own Azure Data Lake Storage (Preview)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Naujos eksporto paskirties vietos: Iterable ir Braze
 
@@ -81,7 +82,6 @@ Pakeitus API prijungtose tarnybose, jungiamės jungtys gali veikti patikimai ir 
 
 - "Google Ads": nauja "Google Ads" eksportavimo jungties versija supaprastina autentifikavimo patirtį ir dabar leidžia automatiškai kurti naujas "Google Ads" auditorijas. 
 - "Marketo": naujoji "Marketo" eksporto jungties versija palaiko "Marketo ID", leidžiančią išvengti duomenų dubliavimosi, atnaujinti esamus įrašus ir kurti naujus įrašus "Marketo". 
-
 
 ## <a name="february-2022-updates"></a>2022 m. vasario atnaujinimai
 

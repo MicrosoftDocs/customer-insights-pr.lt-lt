@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653533"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800615"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Klientų profilių papildymas (peržiūra)
 
@@ -27,7 +27,7 @@ Naudokite duomenis iš tolių šaltinių kaip „Microsoft“ ar kiti partneriai
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Papildymo telkinio puslapis.":::
 
-Eikite į **"DataEnrichment** > **·**", kad dirbtumėte su sodrinimo galimybėmis.  
+Eikite į **"Data** > **Enrichment** ", kad dirbtumėte su sodrinimo galimybėmis.  
 
 Norėdami kurti arba redaguoti papildymus, turite turėti dalyvio arba administratoriaus teises. Daugiau informacijos žr. [Teisės](permissions.md).
 
@@ -63,7 +63,7 @@ Skirtuke **Mano papildymai** galite matyti sukonfigūruotus papildymus ir redagu
 
 Eikite į skirtuką **Mano papildymai**, kad pamatytumėte visus sukonfigūruotus papildymus. Kiekvienas papildymas atvaizduotas kaip eilutė su papildoma informacija apie papildymą.
 
-Norėdami peržiūrėti galimas parinktis, pažymėkite papildymą. Taip pat galite pažymėti elipsę (...) sąrašo elemente ir peržiūrėti parinktis. Jei sukonfigūravote kelis papildymus, galite naudoti ieškos lauką, kad greitai juos rastumėte.
+Norėdami peržiūrėti galimas parinktis, pažymėkite papildymą. Taip pat galite pasirinkti vertikalią elipsę (&vellip;) sąrašo elemente, kad pamatytumėte parinktis. Jei sukonfigūravote kelis papildymus, galite naudoti ieškos lauką, kad greitai juos rastumėte.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Papildymų tvarkymo parinktys papildymų sąraše.":::
 

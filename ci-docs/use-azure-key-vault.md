@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653487"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763589"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Papildykite patys „Azure“ raktų saugykla (peržiūra)
 
@@ -37,11 +37,11 @@ Norint konfigūruoti "Customer Insights" raktų saugyklą, reikia laikytis šių
 
 - „Key Vault“ turi būti išjungta raktų saugyklos **užkarda**.
 
-- Raktų saugykla yra toje pačioje ["Azure" vietoje](https://azure.microsoft.com/global-infrastructure/geographies/#overview) kaip ir "Customer Insights" aplinka. "Customer Insights" aplinkos regionas pateikiamas dalyje **AdminSystemAboutRegion** > **·** > **·** > **·**.
+- Raktų saugykla yra toje pačioje ["Azure" vietoje](https://azure.microsoft.com/global-infrastructure/geographies/#overview) kaip ir "Customer Insights" aplinka. "Customer Insights" aplinkos regionas pateikiamas dalyje **Administravimo** > **sistema** > **apie** > **regioną**.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Susieti raktų saugyklą su aplinka
 
-1. Eikite į **AdminSecurity** > **·**, tada pasirinkite skirtuką **Rakto saugykla**.
+1. Eikite į **Administratoriaus** > **sauga**, tada pasirinkite skirtuką **Raktų saugykla**.
 1. **Key Vault** plytelėje pažymėkite **Nustatymas**.
 1. Pasirinkite **prenumeratą**.
 1. Pasirinkite raktų saugyklą išplečiamajame sąraše **Key Vault**. Jei rodoma per daug raktų saugyklų, pažymėkite išteklių grupę, kad apribodami ieškos rezultatus.
@@ -89,9 +89,9 @@ Palaikomi šie [eksportavimo](export-destinations.md) ryšiai:
 
 | Tipas        | Teisės          |
 | ----------- | -------------------- |
-| Klavišas         | [Gauti raktus](/rest/api/keyvault/get-keys), [gauti raktą](/rest/api/keyvault/get-key)                                 |
-| Slaptasis raktas      | [Gauti raktus](/rest/api/keyvault/get-secrets), [gauti raktą](/rest/api/keyvault/get-secret)                     |
-| Sertifikatas | [Gauti sertifikatą](/rest/api/keyvault/get-certificates), [gauti sertifikatą](/rest/api/keyvault/get-certificate) |
+| Klavišas         | [Gauti raktus](/rest/api/keyvault/keys/get-keys/get-keys), [gauti raktą](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Slaptasis raktas      | [Gauti raktus](/rest/api/keyvault/secrets/get-secrets/get-secrets), [gauti raktą](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Sertifikatas | [Gauti sertifikatą](/rest/api/keyvault/certificates/get-certificates/get-certificates), [gauti sertifikatą](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Ankstesnės reikšmės yra minimalios, kad būtų galima išvardyti ir skaityti vykdymo metu.
 

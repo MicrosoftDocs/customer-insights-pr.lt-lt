@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Mokymosi katalogas
   items:
-    - name: Pradėti
+    - name: Sertifikuoti kaip "Microsoft" klientų duomenų platformos specialistą
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Pradėkite darbą su „Customer Insights”
       href: /learn/modules/get-started-customer-data-platform/
     - name: Duomenų suvartojimas
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: Pradėkite nuo apmokėtos licencijos
       href: paid-license.md
-    - name: Kurti naują aplinką
-      href: create-environment.md
     - name: Susipažinkite su klientų įžvalgomis
       href: home.md
     - name: Darbas su žymėmis ir stulpeliais
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: „Constant Contact“
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: „DotDigital“
           href: export-dotdigital.md
         - name: „Dynamics 365 Marketing“
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Objektų schemų peržiūra „Common Data Model”
       href: entity-schemas.md
-    - name: „Customer Insights“ duomenys „Dataverse” platformoje
-      href: customer-insights-dataverse.md
     - name: Kurkite ryšius ir sujungtus objektus
       href: relationships.md
     - name: Nustatyti semantinius susiejimus
       href: semantic-mappings.md
+- name: Aplinkos
+  items:
+    - name: Kurti naują aplinką
+      href: create-environment.md
+    - name: Prisijungti prie „Microsoft Dataverse“
+      href: customer-insights-dataverse.md
+    - name: Naudokite savo Azure Data Lake Storage
+      href: own-data-lake-storage.md
+    - name: Aplinkos parametrų valdymas
+      href: manage-environments.md
+    - name: Prisijungimas prie saugyklos abonemento naudojant tarnybos pagrindinį
+      href: connect-service-principal.md
 - name: Administracija
   items:
     - name: Nustatykite sistemos konfigūraciją
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Vartotojo teisių priskyrimas
       href: permissions.md
-    - name: Ryšių apžvalga
-      href: connections.md
-    - name: Valdykite kelias aplinkas
-      href: manage-environments.md
     - name: Papildykite patys „Key Vault“
       href: use-azure-key-vault.md
-    - name: Prisijungimas prie saugyklos abonemento naudojant tarnybos pagrindinį
-      href: connect-service-principal.md
     - name: Eksportuoti diagnostikos žurnalus
       href: diagnostics.md
-    - name: Paslaugų apribojimai
-      href: service-limits.md
-    - name: DSR teisės ir užklausos
-      href: dsr-rights-requests.md
+    - name: Ryšių apžvalga
+      href: connections.md
 - name: API
   items:
     - name: Dirbkite su API
@@ -324,5 +328,9 @@
       items:
         - name: Prognozių kūrimas naudojant sutikimo duomenis
           href: consent-management/predictions-consent-data.md
+- name: Paslaugų apribojimai
+  href: service-limits.md
+- name: DSR teisės ir užklausos
+  href: dsr-rights-requests.md
 - name: Gaukite pagalbą
   href: /power-platform/admin/get-help-support

@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643111"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800183"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
 
@@ -28,7 +28,7 @@ ms.locfileid: "8643111"
 ## <a name="important-considerations"></a>Svarbi informacija
 
 1. Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Storage“, gali būti saugomi kitoje vietoje, kurioje duomenys yra apdorojami ar saugomi „Dynamics 365 Customer Insights“.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse paslaugose, jūs sutinkate, kad duomenys gali būti perduodami ir saugomi su Dynamics 365 Customer Insights. [Sužinokite daugiau "Microsoft" patikimumo centre](https://www.microsoft.com/trust-center).
-2. Matomi tik Dataverse objektai, kuriuose [įgalintas keitimų stebėjimas](/power-platform/admin/enable-change-tracking-control-data-synchronization). Šiuos objektus galima eksportuoti į valdomų duomenų ežerą Dataverse ir naudoti "Customer Insights". Pagal numatytuosius nustatymus lentelėse Dataverse yra įgalintas keitimų stebėjimas. Turite įjungti pasirinktinių lentelių keitimų sekimą. Norėdami patikrinti, Dataverse ar lentelė įgalinta keitimų stebėjimui, eikite į [Power Apps](https://make.powerapps.com) > **DataTables** > **·**. Raskite jus dominančią lentelę ir pasirinkite ją. Eikite į **"SettingsAdvanced** > **" parinktis** ir peržiūrėkite parametrą **Sekti keitimus**.
+2. Matomi tik Dataverse objektai, kuriuose [įgalintas keitimų stebėjimas](/power-platform/admin/enable-change-tracking-control-data-synchronization). Šiuos objektus galima eksportuoti į valdomų duomenų ežerą Dataverse ir naudoti "Customer Insights". Pagal numatytuosius nustatymus lentelėse Dataverse yra įgalintas keitimų stebėjimas. Turite įjungti pasirinktinių lentelių keitimų sekimą. Norėdami patikrinti, Dataverse ar lentelė įgalinta keitimų stebėjimui, eikite į [Power Apps](https://make.powerapps.com) > **Duomenų** > **lenteles**. Raskite jus dominančią lentelę ir pasirinkite ją. Eikite į **"Settings** > **Advanced" parinktis** ir peržiūrėkite parametrą **Sekti keitimus**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Prisijungimas prie „Dataverse” valdomojo telkinio
 
@@ -62,7 +62,7 @@ Norėdami prisijungti prie kito „Dataverse data lake”, [sukurkite naują duo
 
 1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
 
-2. Šalia norimo atnaujinti duomenų šaltinio pasirinkite daugtaškį.
+2. Šalia duomenų šaltinis norite atnaujinti, pasirinkite vertikalią elipsę (&vellip;).
 
 3. Sąraše pasirinkite **Redaguoti**.
 

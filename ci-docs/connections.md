@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755319"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800382"
 ---
 # <a name="connections-preview-overview"></a>Ryšių (peržiūros) apžvalga
 
@@ -69,7 +69,7 @@ Nustatę arba redaguodami eksportavimo ryšį pasirenkate, kuriems naudotojams b
 
 1. Eikite į skirtuką **Ryšiai**.
 
-1. Pažymėkite norimo redaguoti ryšio vertikalią elipsę.
+1. Pasirinkite norimo redaguoti ryšio vertikalią elipsę (&vellip;) .
 
 1. Pasirinkite **Redaguoti**.
 
@@ -85,7 +85,7 @@ Atsieti papildymai ir eksportavimai tampa neaktyvūs. Iš naujo suaktyvinate juo
 
 1. Eikite į skirtuką **Ryšiai**.
 
-1. Pažymėkite norimo pašalinti ryšio vertikalią elipsę.
+1. Pasirinkite norimo pašalinti ryšio vertikalią elipsę (&vellip;) .
 
 1. Išskleidžiamajame meniu pasirinkite **Pašalinti**. Rodomos patvirtinimo dialogas.
 

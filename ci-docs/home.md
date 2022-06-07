@@ -11,34 +11,34 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
-ms.translationtype: HT
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743423"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768360"
 ---
 # <a name="explore-customer-insights"></a>Susipažinkite su klientų įžvalgomis
 
 Galite pasiekti [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) šį URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-Pagrindiniame **puslapyje** rodoma pagrindinių funkcijų konfigūravimo proceso vadovė ir pateikiama segmentų, matų ir sodrinimo duomenų apžvalga.
+Pagrindiniame **puslapyje** pateikiama pagrindinių funkcijų konfigūravimo proceso apžvalga ir pateikiama segmentų, matų ir sodrinimo duomenų apžvalga.
 
 :::image type="content" source="media/home-page.png" alt-text="Pagrindinio ekrano, kuriame rodomi įžvalgų pavyzdžiai, ekrano kopija.":::
 
 ## <a name="left-side-pane"></a>Kairioji šoninė sritis
 
-Naudokite kairiąją sritį, jei norite naršyti tarp skirtingų sričių "Customer Insights". 
+Naudokite kairiąją sritį, jei norite naršyti tarp skirtingų "Customer Insights" sričių.
 
-Jei dirbate su verslo paskyromis ir atskirais vartotojais, galite pasirinkti savo pagrindinę auditoriją, kad atitinkamai nustatytumėte savo dėmesį. 
+Jei dirbate su verslo paskyromis ir atskirais vartotojais, galite pasirinkti savo pagrindinę auditoriją, kad atitinkamai nustatytumėte savo dėmesį.
 
 ## <a name="application-header"></a>Programos antraštė
 
-Aplinkos **parinkiklis** rodo aplinką, kurioje dirbate, ir leidžia kurti arba valdyti aplinkas kaip administratorius.
+Aplinkos **parinkiklis** rodo aplinką, kurioje dirbate, ir leidžia kurti arba tvarkyti aplinkas kaip administratoriui.
 
 Šypsenėlės veido piktograma yra grįžtamojo ryšio **valdiklis**. Pasirinkite jį, kad papasakotumėte mums apie savo patirtį naudojant "Customer Insights". Mes aktyviai klausomės jūsų atsiliepimų ir iš anksto dėkojame, kad leidome mums žinoti, kas jums patinka ir kaip galime tobulėti.
 
-Parametrų **valdiklis**, kurį vaizduoja krumpliaračio piktograma, leidžia rinkti "Customer Insights" seanso informaciją ir konfigūruoti visuotinius profilio Microsoft 365 parametrus. 
+Parametrų **valdiklis**, kurį vaizduoja krumpliaračio piktograma, leidžia rinkti "Customer Insights" seanso informaciją ir konfigūruoti visuotinius profilio Microsoft 365 parametrus.
 
 **Žinyno** parinktys, vizualizuotos su klaustuko piktograma, pateikia kontekstinius žinyno saitus ir kitus naudingus išteklius.
 
@@ -46,7 +46,7 @@ Jūsų profilio **nuotrauka atidaro jūsų** profilio paskyros tvarkytuvą Micro
 
 ## <a name="getting-started-with-customer-insights-section"></a>Darbo su "Customer Insights" skyriumi pradžia
 
-Šiame skyriuje yra kortelių, padedančių atlikti "Customer Insights" aplinkos nustatymo procesą. 
+Šiame skyriuje yra kortelių, padedančių atlikti "Customer Insights" aplinkos nustatymo procesą.
 
 1. Duomenų įtraukimo **kortelė** padeda importuoti duomenis. "Customer Insights" palaiko [kelias parinktis duomenims apie klientus](data-sources.md) pateikti. Norėdami pradėti, pasirinkite **Įtraukti duomenų šaltinius**.
 1. Kai pradinis duomenų importavimas bus sėkmingai baigtas, galite naudoti **duomenų** kortelę "Unify", kad suderintumėte duomenis ir [sukurtumėte vieningus klientų profilius](data-unification.md) iš skirtingų šaltinių. 

@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740729"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800660"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Užpildykite dalinius duomenis prognozėmis (nebenaudojamais)
 
@@ -95,7 +95,7 @@ Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus se
 
 2. Pasirinkite prognozę, kurią norite peržiūrėti.
 
-3. Pažymėkite elipsę stulpelyje **Veiksmai** ir pasirinkite **Peržiūrėti**.
+3. Stulpelyje Veiksmai&vellip; pasirinkite vertikalią daugtaškį **(**) ir pasirinkite **Rodinys**.
 
 4. Peržiūrint prognozę matysite duomenų taškų skaičių.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Sukūrę prognozė, galite tinkinti modelį AI Builder, kad padidintumėte model
 
 2. Pažymėkite prognozę, kurią norite redaguoti.
 
-3. Pažymėkite elipsę stulpelyje **Veiksmai** ir pasirinkite **Peržiūrėti**.
+3. Stulpelyje Veiksmai&vellip; pasirinkite vertikalią daugtaškį **(**) ir pasirinkite **Rodinys**.
 
 4. Pasirinkite **Tinkinti naudojant AI Builder**.
 
@@ -139,7 +139,7 @@ Kitame jūsų prognozės vykdyme bus naudojamas jūsų sukurtas atnaujintas mode
 
 2. Pažymėkite norimą naikinti prognozę.
 
-3. Pažymėkite elipsę stulpelyje **Veiksmai** ir pasirinkite **Naikinti**.
+3. Stulpelyje Veiksmai&vellip; pasirinkite vertikalią daugtaškį **(**) ir pasirinkite **Naikinti**.
 
 4. Patvirtinkite naikinimą.
 
@@ -153,7 +153,7 @@ Jei dėl klaidos negalite baigti „Dataverse“ pridėjimo proceso, procesą ga
 - Programos leidimai nėra suteikti.
     1. Eikite į [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Pasirinkti **Aplinkos**.
-    1. Pažymėkite elipsę šalia aplinkos, į kurią norite įtraukti leidimą, ir pasirinkite **Parametrai**.
+    1. Pasirinkite vertikalią daugtaškį (&vellip;) šalia aplinkos, į kurią norite įtraukti teises, ir pasirinkite **Parametrai**.
     1. Išplėskite **Vartotojai ir teisės** ir pasirinkite **Vartotojai**.
     1. Pasirinkite **+ Naujas**, tada – **Vartotojas**.
     1. Pasirinkite **Programos vartotojas**, jei programos vartotojas dar nepasirinktas, ir įveskite toliau nurodytą informaciją.

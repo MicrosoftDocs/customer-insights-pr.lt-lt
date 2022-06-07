@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641526"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808571"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Duomenų subjekto teisių (DSR) prašymai pagal BDAR
 
@@ -39,9 +39,9 @@ Teisė naikinti asmens duomenis iš įmonės klientų duomenų bazės buvo įtvi
 „Customer Insights“ administratorius gali atlikti šiuos veiksmus ir pašalinti kliento duomenis, kurie buvo panaikinti duomenų šaltinyje:
 
 1. Prisijunkite prie Dynamics 365 Customer Insights.
-2. Eikite į **DataData** > **šaltinius**
+2. Eiti į **duomenų** > **šaltinius**
 3. Kiekvienam duomenų šaltiniui sąraše, kuriame yra panaikintų kliento duomenų:
-   1. Pasirinkite (...), tada pasirinkite **Atnaujinti**.
+   1. Pasirinkite vertikalią daugtaškį (&vellip;) ir pasirinkite **Atnaujinti**.
    2. Patikrinkite duomenų šaltinio būseną dalyje **Būsena**. Varnelė reiškia, kad atnaujinti pavyko. Įspėjamasis trikampis reiškia, kad įvyko klaida. Jei rodomas įspėjamasis trikampis, kreipkitės į D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Teisė naikinti asmens duomenis iš įmonės klientų duomenų bazės buvo įtvi
 Norėdamas naikinti „Customer Insights” vartotojų duomenis, „Customer Insights” administratorius gali atlikti šiuos veiksmus:
 
 1. Prisijunkite prie Dynamics 365 Customer Insights.
-2. Eikite į **AdminPermissions** > **·**.
+2. Eikite į **Administratoriaus** > **·** > **saugos** teisės.
 3. Pažymėkite vartotojo, kurį norite naikinti, žymės langelį.
 4. Pasirinkite **Šalinti**.
 

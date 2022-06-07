@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 8022563f8994400b88389c20d7d661d9ea82bab1
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740913"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833732"
 ---
 # <a name="user-permissions"></a>Vartotojų teisės
 
@@ -65,7 +65,7 @@ Yra trys vaidmenų tipai:
 ## <a name="admin-owner"></a>Administratorius (savininkas)
 
 - Visos administratoriaus pasiekiamos teisės.
-- [Iš naujo nustatykite ir panaikinkite](manage-environments.md#reset-an-existing-environment) aplinką.
+- [Iš naujo nustatykite ir panaikinkite](manage-environments.md#reset-an-existing-environment-preview) aplinką.
 
 ## <a name="assign-roles-and-permissions"></a>Vaidmenų ir teisių priskyrimas
 

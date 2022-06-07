@@ -1,19 +1,19 @@
 ---
 title: API OData pavyzdžiai Dynamics 365 Customer Insights
 description: Dažniausiai naudojami atvirųjų duomenų protokolo (OData) pavyzdžiai, kaip pateikti užklausą "Customer Insights" API, kad būtų galima peržiūrėti duomenis.
-ms.date: 05/10/2022
+ms.date: 05/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 007278e1330e1a8e64d524ded8496acaf83b874c
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740071"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808471"
 ---
 # <a name="odata-query-examples"></a>OData užklausų pavyzdžiai
 
@@ -33,16 +33,15 @@ Turite modifikuoti užklausų pavyzdžius, kad jie veiktų tikslinėse aplinkose
 
 Šioje lentelėje yra kliento objekto užklausų pavyzdžių *rinkinys*.
 
-
 |Užklausos tipas |Pavyzdžiui  | Pastaba.  |
 |---------|---------|---------|
 |Vieno kliento ID     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Alternatyvusis raktas    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}' `         |  Alternatyvūs raktai išlieka vieningame kliento objekte       |
+|Alternatyvusis raktas    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Alternatyvūs raktai išlieka vieningame kliento objekte       |
 |Pažymėti   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Po    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
 |Alternatyvusis raktas + In   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Paieška  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Pateikia 10 geriausių ieškos eilutės rezultatų      |
-|Segmento narystė  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10  `     | Grąžina iš anksto nustatytą segmentavimo objekto eilučių skaičių.      |
+|Segmento narystė  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Grąžina iš anksto nustatytą segmentavimo objekto eilučių skaičių.      |
 
 ## <a name="unified-activity"></a>Vieninga veikla
 
@@ -53,7 +52,7 @@ Turite modifikuoti užklausų pavyzdžius, kad jie veiktų tikslinėse aplinkose
 |CID veikla     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | Išvardija konkretaus kliento profilio veiklas |
 |Veiklos laikotarpis    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Kliento profilio veikla per tam tikrą laikotarpį       |
 |Veiklos tipas    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
-|Veikla pagal rodomą pavadinimą     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’ `        | |
+|Veikla pagal rodomą pavadinimą     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |
 |Veiklos rūšiavimas    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  Veiklos rūšiavimas didėjimo tvarka arba mažėjimo tvarka       |
 |Veikla išplėsta nuo segmento narystės  |   `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId eq '{CID}'`     |         |
 
@@ -67,3 +66,13 @@ Turite modifikuoti užklausų pavyzdžius, kad jie veiktų tikslinėse aplinkose
 |Praturtinti CID prekių ženklai    | `{serviceRoot}/BrandShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`  |       |
 |Praturtinti CID interesai    |   `{serviceRoot}/InterestShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`       |         |
 |Sąlyga + išplėsti     | `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId in ('{CID}', '{CID}')`         | |
+
+## <a name="not-supported-odata-queries"></a>Nepalaikomos OData užklausos
+
+"Customer Insights" nepalaiko šių užklausų:
+
+- `$filter` prarytuose šaltinio objektuose. Galite vykdyti tik $filter užklausas sistemos objektuose, kuriuos sukuria "Customer Insights".
+- `$expand``$search` iš užklausos. Pavyzdys: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
+- `$expand` iš `$select`, jei pasirinktas tik atributų poaibis. Pavyzdys: `Customer?$select=CustomerId,FullName&$expand=UnifiedActivity&$filter=CustomerId eq '{CID}'`
+- `$expand` praturtintas prekės ženklas ar pomėgiai konkrečiam klientui. Pavyzdys: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
+- Užklausti prognozė modelio išvesties objektų naudojant alternatyvusis raktas. Pavyzdys: `OOBModelOutputEntity?$filter=HotelCustomerID eq '{AK}'`

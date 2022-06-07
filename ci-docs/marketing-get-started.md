@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653820"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833318"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Darbas su vieningais klientų profiliais programoje "Dynamics 365 Marketing"
 
@@ -23,7 +23,6 @@ Prijungę "Customer Insights" duomenis su "Marketing", galite atlikti toliau nur
 - Dinaminį turinį (pvz., suasmenintus žetonus) grįskite el. laiškuose, SMS žinutėse ir "push" pranešimuose apie tokias priemones kaip lojalumo būsena, prenumeratos atnaujinimo data, pirminis klientas ar bet kuri kita priemonė, kurią užfiksavote vieningame "Customer Insights" profilyje.
 - Įkelkite duomenis iš "Marketing" į "Customer Insights" ir sujunkite juos su klientų duomenimis iš kitų šaltinių.
 - Taikykite "Customer Insights" duomenų valymo, sodrinimo ir neaiškių atitikimo įrankių įrankius.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Turtingų klientų profilių naudojimas rinkodaroje realiuoju laiku
 
@@ -41,4 +40,4 @@ Sužinokite daugiau: [Segmentų naudojimas naudojant Dynamics 365 Customer Insig
 
 Neapsiribosite debesies saugykla, jei norite naudoti "Customer Insights" duomenis naudodami "Marketing". Jei jau turite savo Azure Data Lake Storage sąranką, galite prisijungti prie "Customer Insights", tada bendrinti duomenis su "Marketing" programa taip pat, kaip ir naudodami debesies sąranką.
 
-Sužinokite daugiau: [Įgalinti duomenų bendrinimą su Dataverse savo Azure Data Lake Storage](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Sužinokite daugiau: [Įgalinti duomenų bendrinimą su Dataverse savo Azure Data Lake Storage](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

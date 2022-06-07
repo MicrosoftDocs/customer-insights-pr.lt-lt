@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739218"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800476"
 ---
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
@@ -76,7 +76,7 @@ Norėdami paleisti iš naujo duomenų šaltinį pagal poreikį, atlikite šiuos 
 
 1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
 
-2. Pažymėkite vertikalią elešką šalia norimos duomenų naujinti dalies ir **Naujinti** meniu pasirinkite Redaguoti.
+2. Pasirinkite vertikalią daugtaškį (&vellip;) šalia duomenų šaltinis norite atnaujinti, ir išplečiamajame sąraše pasirinkite **Atnaujinti**.
 
 3. Šis duomenų šaltinis dabar yra įjungtas rankiniam paleidimui iš naujo. Atnaujinus duomenų šaltinį bus atnaujinta ir objekto schema, ir duomenys, skirti visiems duomenų šaltinyje nurodytiems objektams.
 
@@ -86,7 +86,7 @@ Norėdami paleisti iš naujo duomenų šaltinį pagal poreikį, atlikite šiuos 
 
 1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
 
-2. Pažymėkite vertikalią elešką šalia norimos duomenų naikinti dalies ir **Naikinti** meniu pasirinkite Redaguoti.
+2. Pasirinkite vertikalią daugtaškį (&vellip;) šalia duomenų šaltinis norite pašalinti, ir išplečiamajame meniu pasirinkite **Naikinti**.
 
 3. Patvirtinkite šį naikinimą.
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 04ae4ffd303a47add15044f313c96a23e5efcd76
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0d23a74b5ca68162ee21307705b1f781a7eb97e
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643713"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800569"
 ---
 # <a name="work-with-tags-and-columns"></a>Darbas su žymėmis ir stulpeliais
 
@@ -37,7 +37,7 @@ Galite peržiūrėti, pridėti ir pašalinti žymes iš elemento. Įtraukite žy
 
 1. Pasirinkite elementą, kurio žymes norite tvarkyti.
 
-1. Pasirinkite **Rodyti daugiau (...)** ir pasirinkite **Žymė**.
+1. Pasirinkite vertikalią daugtaškį (&vellip;) ir pasirinkite **Žyma**.
 
    :::image type="content" source="media/segments_list_tag.png" alt-text="Pažymėtas segmentas su parinkčių išplečiamajame sąraše ir galimose parinktyse."lightbox="media/segments_list_tag.png":::
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643363"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800167"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Prisijungimas Power Query prie duomenų šaltinis
 
@@ -76,7 +76,7 @@ Galima naudoti jungtis su varnele **stulpelyje Customer Insights (Dataflows),** 
 
 1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
 
-2. Pažymėkite vertikalią elešką šalia norimos duomenų šaltinis dalies ir **išplečiamajame** meniu pasirinkite Redaguoti.
+2. Pasirinkite vertikalią elipsę (&vellip;) šalia duomenų šaltinis norite keisti, ir išplečiamajame meniu pasirinkite **Redaguoti**.
 
    > [!div class="mx-imgBorder"]
    > ![Parinkties redagavimas.](media/edit-option-data-sources.png "Redagavimo parinktis")

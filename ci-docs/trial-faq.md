@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641818"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833778"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Su „Dynamics 365 Customer Insights” bandomąja versija susiję DUK
 
@@ -62,9 +62,9 @@ Galite išplėsti bandomąją versiją programoje tiesiogiai. Bandomąjį laikot
 
 Paprastai rekomenduojame pradėti su naujais duomenimis atnaujinus į mokamą „Customer Insights” versiją. 
 
-Pasirinktinai, jei naudojate tik "Customer Insights", galite kopijuoti duomenis iš bandomosios aplinkos, jei perkate "Customer Insights". Turite būti "Customer Insights" bandomosios versijos administratorius ir visuotinis nuomotojo Microsoft 365 administratorius arba "Dynamics 365" administratorius savo organizacijoje, kad perkeltumėte parametrus iš bandomosios aplinkos į mokamą aplinką. 
+Pasirinktinai, jei naudojate tik "Customer Insights", galite kopijuoti duomenis iš bandomosios aplinkos, jei perkate "Customer Insights". Turite būti "Customer Insights" bandomosios versijos administratorius ir visuotinis nuomotojo Microsoft 365 administratorius arba "Dynamics 365" administratorius savo organizacijoje, kad perkeltumėte parametrus iš bandomosios aplinkos į mokamą aplinką.
 
-Pirmą kartą prisijungus prie savo apmokėto „Customer Insights” egzemplioriaus, jūsų bus paprašyta sukurti naują aplinką. Šiame procese jūs galite pasirinkti kopijuoti konfigūraciją iš esamos aplinkos ir perkelti daugumą parametrų. Jei jūs turite aukščiau minimas teises, šiame sąraše bus rodoma bandomosios versijos aplinka. Daugiau informacijos rasite [Aplinkos konfigūravimo kopijavimas](manage-environments.md#copy-the-environment-configuration).
+Pirmą kartą prisijungus prie savo apmokėto „Customer Insights” egzemplioriaus, jūsų bus paprašyta sukurti naują aplinką. Šiame procese jūs galite pasirinkti kopijuoti konfigūraciją iš esamos aplinkos ir perkelti daugumą parametrų. Jei jūs turite aukščiau minimas teises, šiame sąraše bus rodoma bandomosios versijos aplinka. Daugiau informacijos rasite [Aplinkos konfigūravimo kopijavimas](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Kokie yra bandomosios versijos apribojimai ir kvotos?
 
@@ -81,9 +81,10 @@ Užsiregistravę bandomajai versijai gauti, būsite perkeltas į programos pagri
 
 Daugelį „Customer Insights“ galimybių funkcijų galima naudoti bandomojoje versiją.
 
-Šios funkcijos **nepasiekiamos**: 
+Šios funkcijos **nepasiekiamos**:
+
 - Negalite kurti naujų aplinkoje, kurios naudoja jūsų „Azure Data Lake" talpinimo paskyrą.
-- Negalite panaikinti bandomosios aplinkos. 
+- Negalite panaikinti bandomosios aplinkos.
 
 ### <a name="how-long-does-the-trial-last"></a>Kiek laiko galioja bandomoji versija?
 

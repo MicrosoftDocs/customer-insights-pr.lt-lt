@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755460"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808516"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbas su „Customer Insights“ API
 
@@ -31,11 +31,11 @@ ms.locfileid: "8755460"
 
 1. [Prisijunkite](https://home.ci.ai.dynamics.com) prie „Customer Insights“. Jei dar neturite prenumeravimo, [prisiregistruokite „Customer Insights“ bandymui](https://aka.ms/tryci).
 
-1. Norėdami įjungti API jūsų „Customer Insights“ aplinkoje, eikite į **Administravimas** > **Leidimai**. Jums reikės administravimo teisių, kad tą atliktumėte.
+1. Norėdami įgalinti API savo "Customer Insights" aplinkoje, eikite į **Administratoriaus** > **sauga**. Jums reikės administravimo teisių, kad tą atliktumėte.
 
 1. Eikite į **API** skirtuką ir pasirinkite **Įjungti** mygtuką.    
  
-   API įjungimas sukuria pirmąjį ir antrąjį prenumeravimo raktą jūsų elementui, kuris yra naudojamas API prašymų. Galite sukurti iš naujo raktus pasirinkdami **Sukurti iš naujo pirminį** ar **Sukurti iš naujo antrinį** skyriuose **Administratorius** > **Teisės** > **API**.
+   API įjungimas sukuria pirmąjį ir antrąjį prenumeravimo raktą jūsų elementui, kuris yra naudojamas API prašymų. Raktus galite regeneruoti pasirinkdami administratoriaus saugos API regeneruoti pirminį **arba** regeneruoti **antrinį**.**·** > **·** > **·**
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ HTTP atsakas greitai pasirodys apačioje.
 1. Kairiojoje pusėje pasirinkite **Programos registracijos**.
 
 1. Rinkitės **Nauja registracija** tam, kad suteiktumėte programai pavadinimą ir pasirinktumėte paskyros tipą.
- 
+
    Pasirinktinai įtraukite nukreipiantį URL. http://localhost yra pakankamas programos kūrimui jūsų vietiniame kompiuteryje.
 
 1. Jūsų naujos programos registracijoje eikite į **API teisės**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Rinkitės **Įtraukti teisę** ir pasirinkite **„Customer Insights“** šoninėje juostoje.
+1. Pasirinkite **Įtraukti teises** ir šoninėje srityje pasirinkite **"Dynamics 365 AI for Customer Insights** ".
 
 1. Jei **tai teisės** tipas, pažymėkite **Išsamūs leidimai**, tada pažymėkite **user_impersonation** teisę.
 
@@ -109,7 +107,7 @@ Informacijos apie API naudojimas mūsų klientų bibliotekose ieškokite [„Cus
 
 1. Siekiant užbaigti, įtraukėme programos registracijos pavadinimą kaip vartotoją į „Customer Insights“.  
    
-   Atverkite „Customer Insights“, eikite į **Administratorius** > **Leidimai** ir pasirinkite **Įtraukti vartotoją**.
+   Atidarykite "Customer Insights", eikite į **Administratoriaus** > **sauga** ir pasirinkite **Įtraukti vartotoją**.
 
 1. Ieškokite savo programos registracijos pavadinimo, pasirinkite iš paieškos rezultatų ir rinkitės **Įrašyti**.
 

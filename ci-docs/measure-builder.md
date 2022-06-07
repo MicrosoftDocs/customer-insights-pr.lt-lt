@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643768"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800336"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Naudokite matavimo generatorių, kad sukurtumėte priemones nuo nulio
 
@@ -88,7 +88,7 @@ Galite kurti priemones atskirų pirkėjų lygiu (kliento atributas, kliento mata
 
 1. Jei norite įtraukti daugiau matavimo skaičiavimų, pažymėkite  **Naujas skaičiavimas**. Norėdami atlikti naujus skaičiavimus, galite naudoti tik objektus tame pačiame objekto kelyje. naujų skaičiavimų rezultatai bus rodomi kaip stulpeliai.
 
-1. Pažymėkite **...** skaičiavimuose, kad **Duplikuotumėte**, **Pervardykite** arba **Pašalinkite**  skaičiavimą iš priemonės.
+1. Skaičiavime pasirinkite vertikalią daugtaškį (&vellip;) į **Dubliuoti**, **Pervardyti** arba **Pašalinti** skaičiavimą iš matavimo.
 
 1. **Peržiūros** srityje matysite išvesties objekto matavimo duomenų schemą, įskaitant filtrus ir dimensijas. Peržiūra dinamiškai keičiasi ir pasikeičia konfigūracija.
 
@@ -158,7 +158,7 @@ Galite kurti priemones atskirų sąskaitų (kliento mato) arba visų sąskaitų 
    1. Pažymėkite **ryšio kelią** ir pasirinkite objekto kelią, kurį reikėtų naudoti jūsų priemonei identifikuoti. Jei yra tik vienas kelias į *Kliento* objektą, šis valdiklis nebus rodomas.
    1. Pasirinkite **Atlikta**, kad pritaikytumėte savo pasirinkimą.
 
-1. Pažymėkite **...** skaičiavimuose, kad **Duplikuotumėte**, **Pervardykite** arba **Pašalinkite**  skaičiavimą iš priemonės.
+1. Skaičiavime pasirinkite vertikalią daugtaškį (&vellip;) į **Dubliuoti**, **Pervardyti** arba **Pašalinti** skaičiavimą iš matavimo.
 
 1. **Peržiūros** srityje matysite išvesties objekto matavimo duomenų schemą, įskaitant filtrus ir dimensijas. Peržiūra dinamiškai keičiasi ir pasikeičia konfigūracija.
 

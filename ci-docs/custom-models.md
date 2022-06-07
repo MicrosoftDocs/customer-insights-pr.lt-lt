@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643201"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800430"
 ---
 # <a name="custom-machine-learning-models"></a>Pasirinktiniai mašininio mokymo modeliai
 
@@ -92,7 +92,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
 ## <a name="edit-a-workflow"></a>Darbo eigos redagavimas
 
-1. Puslapyje **Pasirinktiniai modeliai** pasirinkite vertikalią elipsę stulpelyje **Veiksmai** prie jūsų anksčiau sukurtos darbo eigos ir pasirinkite **Redaguoti**.
+1. **Puslapyje Pasirinktiniai modeliai** pasirinkite vertikalią daugtaškį (&vellip;) **stulpelyje Veiksmai** šalia anksčiau sukurtos darbo eigos ir pasirinkite **Redaguoti**.
 
 1. Galite naujinti jūsų darbo eigos atpažįstamą pavadinimą **Rodomo pavadinimo** laukelyje, bet jūs negalite keisti konfigūruoto žiniatinklio paslaugų ar vamzdyno. Pasirinkite **Toliau**.
 
@@ -108,7 +108,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
 ## <a name="run-a-workflow"></a>Darbo eigos vykdymas
 
-1. Puslapyje **Pasirinktiniai modeliai** pasirinkite vertikalią elipsę stulpelyje **Veiksmai** prie jūsų anksčiau sukurtos darbo eigos.
+1. **Puslapyje Pasirinktiniai modeliai** pasirinkite &vellip; vertikalią daugtaškį (**) stulpelyje Veiksmai** šalia anksčiau sukurtos darbo eigos.
 
 1. Pasirinkite **Vykdyti**.
 
@@ -116,7 +116,7 @@ Jūsų darbo eiga taip pat vykdoma automatiškai kartu su visais suplanuotais at
 
 ## <a name="delete-a-workflow"></a>Darbo eigos naikinimas
 
-1. Puslapyje **Pasirinktiniai modeliai** pasirinkite vertikalią elipsę stulpelyje **Veiksmai** prie jūsų anksčiau sukurtos darbo eigos.
+1. **Puslapyje Pasirinktiniai modeliai** pasirinkite &vellip; vertikalią daugtaškį (**) stulpelyje Veiksmai** šalia anksčiau sukurtos darbo eigos.
 
 1. Pasirinkite **Naikinti** ir patvirtinkite naikinimo veiksmą.
 
