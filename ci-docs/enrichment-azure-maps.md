@@ -1,95 +1,95 @@
 ---
 title: Papildykite klientų profilius vietos duomenimis iš „Azure” žemėlapių
 description: Bendroji informacija apie „Azure“ žemėlapių pirmosios šalies papildymą.
-ms.date: 08/31/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755364"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953638"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Klientų profilių papildymas „Azure” žemėlapiais (peržiūros versija)
 
-„Azure” žemėlapiai teikia į vietą orientuotus duomenis ir paslaugas, kad būtų galima teikti funkcijas, pagrįstas erdviniais duomenimis naudojant įtaisytąją vietos įžvalgą. „Azure” žemėlapių duomenų papildymo paslaugos pagerina vietos informacijos apie klientus tikslumą. Taip teikiamos funkcijos, pavyzdžiui, adreso normalizavimas ir platumos ir ilgumos išskleidimas į „Dynamics 365 Customer Insights”.
+"Azure Maps" teikia į vietovę orientuotus duomenis ir paslaugas, kad būtų galima teikti patirtį, pagrįstą geoerdviniais duomenimis, naudojant įmontuotą vietos nustatymo informaciją. „Azure” žemėlapių duomenų papildymo paslaugos pagerina vietos informacijos apie klientus tikslumą. Taip teikiamos funkcijos, pavyzdžiui, adreso normalizavimas ir platumos ir ilgumos išskleidimas į „Dynamics 365 Customer Insights”.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-Norėdami sukonfigūruoti „Azure” žemėlapių duomenų papildymą turite įvykdyti šias būtinąsias sąlygas:
+- Aktyvi "Azure Maps" prenumerata. Norėdami gauti prenumeratą, [prisiregistruokite arba gaukite nemokamą bandomąją versiją](https://azure.microsoft.com/services/azure-maps/).
 
-- Turite turėti aktyvią „Azure“ žemėlapių prenumeratą. Norėdami gauti prenumeratą galite [prisiregistruoti arba gauti nemokamą bandomąją versiją](https://azure.microsoft.com/services/azure-maps/).
-
-- „Azure” žemėlapių [ryšys](connections.md) yra galimas *arba* jūs turite [administratoriaus](permissions.md#admin) teises ir aktyvų „Azure” žemėlapių API raktą.
-
-## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
-
-1. Eikite į **Duomenys** > **Papildymas**. 
-
-1. Plytelėje **Vieta** pažymėkite **Papildyti mano duomenis**.
-
-   :::image type="content" source="media/azure-maps-tile.png" alt-text="Azure žemėlapių raktas.":::
-
-1. Pasirinkite [ryšį](connections.md) iš iškrentančiojo sąrašo. Jei „Azure” žemėlapių ryšys pasiekiamas, kreipkitės į administratorių. Jei esate administratorius, galite [sukonfigūruoti „Azure” žemėlapių ryšį](#configure-the-connection-for-azure-maps). 
-
-1. Pasirinkite **Toliau** pasirinkimo patvirtinimui.
-
-1. Pasirinkite **Kliento duomenų rinkinį**, kurį norite papildyti vietos duomenimis iš „Azure” žemėlapių. Galite pažymėti objektą **Klientas**, kad papildytumėte visus jūsų suvienytus klientų profilius, arba pažymėti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.
-
-    :::image type="content" source="media/enrichment-azure-maps-configuration-customer-data-set.png" alt-text="Ekrano kopija klientų duomenų rinkinio pasirinkimo momentu.":::
-
-1. Pasirinkite, ar norite susieti laukus su pirminiu ir (arba) antriniu adresu. Galite nurodyti laukų susiejimą abiems adresams ir papildyti abiejų adresų profilius atskirai&mdash;pavyzdžiui, namų adreso ir verslo adreso. Pasirinkite **Toliau**.
-
-1. Nustatykite, kuriuos jūsų vieningųjų profilių laukus naudoti vietos duomenų atitikimui iš „Azure” žemėlapių. Laukai **Gatvė 1** ir **Zip/Pašto kodo** laukai yra būtini pažymėtam pirminiam arba antriniam adresui. Norėdami užtikrinti aukštesnį atitikties tikslumą, galite įtraukti daugiau laukų.
-
-   :::image type="content" source="media/enrichment-azure-maps-configuration.png" alt-text="Azure žemėlapių papildymo konfigūravimo puslapis.":::
-
-1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
-
-1. Įvertinkite, ar norite modifikuoti **Išplėstinius parametrus**. Šie nustatymai pateikiami taip, kad būtų užtikrintas maksimalus lankstumas tvarkant išplėstinio naudojimo atvejus, tačiau daugeliu atvejų numatytosios vertės bus tinkamos:
-   - **Adresų tipas**: Numatytasis veikimas yra tas, kad papildymas grąžins geriausią adreso atitikmenį, net jei jis neužbaigtas. Jei norite gauti tik pilnus adresus&mdash;pavyzdžiui, adresus, kuriuose yra namų numeris&mdash;išvalykite visus žymės langelius, išskyrus **Taškų adresus**. 
-   - **Kalba**: Pagal numatytuosius nustatymus adresai yra grąžinami regiono, kuriam nustatytas adresas, kalba. Jei norite taikyti standartizuotą adreso kalbą, pasirinkite kalbą iš išplečiamojo meniu. Pavyzdžiui, pasirinkus **Anglų** kalbą bus sugrąžinta **„Copenhagen, Denmark”**, o ne **„København, Danmark”**.
-
-1. Nurodykite papildymo pavadinimą.
-
-1. Peržiūrėkite savo pasirinkimus ir pasirinkite **Įrašyti papildymą**.
+- "Azure Maps" [ryšį](connections.md)[konfigūruoja](#configure-the-connection-for-azure-maps) administratorius.
 
 ## <a name="configure-the-connection-for-azure-maps"></a>„Azure” žemėlapių ryšio konfigūravimas
 
-Norėdami konfigūruoti ryšius, turite būti "Customer Insights" administratorius. Pasirinkite **Įtraukti ryšį** kai konfigūruojate papildymą arba eikite į **Administratorius** > **Ryšiai** ir pasirinkite **Nustatyti**, esantį „Azure“ žemėlapių plytelėje.
+Turite būti ["Customer Insights" administratorius](permissions.md#admin) ir turėti aktyvų "Azure Maps" API raktą.
 
-1. Lauke **Rodomas pavadinimas** įveskite ryšio pavadinimą.
+1. Pasirinkite **Įtraukti ryšį** kai konfigūruojate papildymą arba eikite į **Administratorius** > **Ryšiai** ir pasirinkite **Nustatyti**, esantį „Azure“ žemėlapių plytelėje.
 
-1. Pateikti galiojantį „Azure” žemėlapių API raktą.
+   :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Azure žemėlapių ryšio konfigūravimo puslapis.":::
 
-1. Peržiūrėkite ir pateikite sutikimą dėl **Duomenų privatumo ir atitikties** pažymėdami žymės langelį **Sutinku**
+1. Įveskite ryšio pavadinimą ir galiojantį "Azure Maps" API raktą.
 
-1. Pažymėkite **Patvirtinti**, kad patvirtintumėte konfigūraciją.
+1. Pasirinkdami Sutinku, peržiūrėkite [ir pateikite savo sutikimą dėl](#data-privacy-and-compliance) duomenų privatumo ir sąlygų **sutinku**.
 
-1. Baigę patikrinimą pasirinkite **Išsaugoti**.
+1. Pasirinkite **Tikrinti**, kad patikrintumėte konfigūraciją, tada pasirinkite **Įrašyti**.
 
-:::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Azure žemėlapių ryšio konfigūravimo puslapis.":::
-
-## <a name="enrichment-results"></a>Papildymo rezultatai
-
-Norėdami pradėti papildymo procesą, komandų juostoje pasirinkite **Vykdyti**. Taip pat galite leisti sistemai vykdyti papildymą automatiškai kaip [suplanuoto atnaujinimo](system.md#schedule-tab) dalį. Apdorojimo laikas priklausys nuo kliento duomenų dydžio ir API atsako laiko.
-
-Užbaigę papildymo procesą, galite peržiūrėti naujai papildytų klientų profilių duomenis dalyje **Mano papildymai**. Be to, rasite vėliausio naujinimo laiką ir papildytų profilių skaičių.
-
-Išsamų kiekvieno papildyto profilio rodinį galite pasiekti pasirinkę **Peržiūrėti papildytus duomenis**.
-
-## <a name="next-steps"></a>Kiti veiksmai
-
-[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
+### <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
 Kai įgalinate „Dynamics 365 Customer Insights“ perduoti duomenis „Azure” žemėlapiams, leidžiate perduoti duomenis už „Dynamics 365 Customer Insights“ atitikties ribos, įskaitant galimai jautrius duomenis, pavyzdžiui, Asmens. "Microsoft" perduos tokius duomenis jūsų nurodymu, tačiau jūs esate atsakingi už tai, kad "Azure" žemėlapiai atitiktų visus privatumo ar saugos įsipareigojimus, kuriuos galite turėti. Daugiau informacijos pateikta [„Microsoft” privatumo nuostatose](https://go.microsoft.com/fwlink/?linkid=396732).
 Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
+
+## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
+
+1. Pasirinkite **Duomenys** > **Papildymas** ir pasirinkite skirtuką **Atrasti**.
+
+1. Plytelėje Vieta **iš žemėlapių** pasirinkite **Praturtinti mano duomenis** Microsoft Azure.
+
+   :::image type="content" source="media/azure-maps-tile.png" alt-text="Azure žemėlapių raktas.":::
+
+1. Peržiūrėkite apžvalgą ir pasirinkite **Pirmyn**.
+
+1. Pasirinkite ryšį. Jei ryšio nėra, kreipkitės į administratorių.
+
+1. Pasirinkite **Toliau**.
+
+1. **Pasirinkite kliento duomenų rinkinį** ir pasirinkite profilį arba segmentą, kurį norite praturtinti "Microsoft" duomenimis. Kliento *subjektas* praturtina visus jūsų klientų profilius, o segmentas praturtina tik tame segmente esančius klientų profilius.
+
+1. Nurodykite, kokio tipo laukus iš vieningų profilių naudoti gretinimui: pirminį ir (arba) antrinį adresą. Laukelių žymėjimą galima nurodyti abiem adresams ir papildyti profilius abiems adresams atskirai. Pavyzdžiui, namų adresui ir įmonės adresui. Pasirinkite **Toliau**.
+
+1. Susiekite laukus su vietos duomenimis iš "Azure" žemėlapių. **Gatvė 1** ir **Pašto/Zip kodas** laukeliai yra būtini pasirinktam priminiam ir (arba) antrinį adresą. Jei norite didesnio rungtynių tikslumo, pridėkite daugiau laukų.
+
+   :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Azure Maps atributų susiejimas.":::
+
+1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
+
+1. Peržiūrėkite **išplėstinius nustatymus**, kurie suteikia maksimalų lankstumą, kad būtų galima tvarkyti išplėstinio naudojimo atvejus. Tačiau šių numatytųjų reikšmių paprastai keisti nereikia.
+
+   - **Adresų** tipas: geriausios adreso atitikties deklaracijos, net jei jos neišsamios. Jei norite gauti tik pilnus adresus&mdash;pavyzdžiui, adresus, kuriuose yra namų numeris&mdash;išvalykite visus žymės langelius, išskyrus **Taškų adresus**.
+   - **Kalba**: adresai grąžinami kalba pagal adreso sritį. Jei norite taikyti standartizuotą adreso kalbą, pasirinkite kalbą iš išplečiamojo meniu. Pavyzdžiui, pasirinkus **anglų kalbą** grąžinama **Kopenhaga, Danija**, o ne **København, Danmark**.
+   - **Maksimalus rezultatų** skaičius: rezultatų skaičius pagal adresą.
+
+1. Pasirinkite **Toliau**.
+
+1. **Pateikite sodrinimo pavadinimą** ir išvesties objekto **pavadinimą**.
+
+1. Peržiūrėję pasirinkimus pasirinkite **Išsaugoti papildymą**.
+
+1. Pasirinkite **Vykdyti**, kad pradėtumėte sodrinimo procesą, arba beveik, kad grįžtumėte į **puslapį Praturtinimai**.
+
+## <a name="enrichment-results"></a>Papildymo rezultatai
+
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
+
+Klientų **, praturtintų pagal lauką**, skaičius suteikia detalizuotą kiekvieno praturtinto lauko aprėptį.
+
+## <a name="next-steps"></a>Paskesni veiksmai
+
+[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

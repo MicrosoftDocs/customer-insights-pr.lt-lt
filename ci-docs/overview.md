@@ -6,22 +6,22 @@ ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641910"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947102"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Produkto apžvalga „Dynamics 365 Customer Insights“
 
 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) yra "Microsoft" klientų duomenų platforma (CDP), padedanti teikti suasmenintą klientų patirtį. Programa suteikia holistinį požiūrį į klientus, turinčius neprilygstamą laiką įžvalgoms. Gaukite išsamiausią savo klientų vaizdą, sujungdami klientų duomenis su veiklos ir daiktų interneto duomenimis realiuoju laiku. Praturtinkite klientų profilius pirmosios ir trečiosios šalies duomenų šaltiniais. 
 
 "Customer Insights" padeda paversti savo verslą į į klientą orientuota organizacija, suteikdama rinkodaros, pardavimo ir aptarnavimo specialistams galimybę pritaikyti 1: 1 sąveiką. Raktų integravimas su "Microsoft" ir trečiųjų šalių programomis gali būti naudojamas įžvalgoms realiuoju laiku suaktyvinti, kad būtų galima atlikti prasmingus veiksmus.
- 
+
 Prijunkite duomenis iš sandorių, elgsenos ir demografinių duomenų šaltinių, kad sukurtumėte 360 laipsnių klientų rodinius. Gaukite įžvalgų iš anksto parengtus AI modelius arba greitai kurkite, išbandykite ir įdiekite pasirinktinius AI / ML modelius naudodami pažangius analizės sprendimus neribotu mastu.
 
-Išlaikykite visišką klientų duomenų kontrolę, kad užtikrintumėte aukščiausio lygio duomenų valdymą ir atitiktį savitarnos, įmonės lygio CDP Microsoft Azure. Remti Bendrąjį duomenų apsaugos reglamentą (BDAR) ir kitus teisės aktų reikalavimus bei pramonės standartus naudojant integruotas privatumo, saugumo ir valdymo bei sutikimo valdymo priemones.
+Išlaikykite visišką klientų duomenų kontrolę, kad užtikrintumėte aukščiausio lygio duomenų valdymą ir atitiktį savitarnos, įmonės lygio CDP Microsoft Azure. Remti Bendrąjį duomenų apsaugos reglamentą (BDAR) ir kitus teisės aktų reikalavimus bei pramonės standartus naudojant integruotas privatumo, saugumo ir valdymo priemones.
 
 ## <a name="pricing-and-licensing"></a>Kainodara ir licencijavimas
 "Customer Insights" yra licencijuota vienam nuomotojui ir apima tiek "verslas vartotojui" (B2C), tiek "verslas verslui" (B2B) galimybes. Galite įsigyti papildomų pajėgumų su papildomomis licencijomis, kad padidintumėte profilių ir paskyrų skaičių.

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833395"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011851"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Prisijunkite prie Azure Data Lake Storage paskyros naudodami pagrindinę "Azure" tarnybą
 
@@ -51,7 +51,13 @@ Prieš kurdami naują "Customer Insights" aptarnavimo pagrindinį direktorių, p
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Suteikite leidimus pagrindinėms paslaugoms, kad jos prieitų prie talpinimo paskyros
 
-Eikite į "Azure" portalą, kad suteiktumėte teises aptarnavimo pagrindinei direktorei saugyklos abonementui, kurį norite naudoti "Customer Insights".
+Eikite į "Azure" portalą, kad suteiktumėte teises aptarnavimo pagrindinei direktorei saugyklos abonementui, kurį norite naudoti "Customer Insights". Saugojimo sąskaitai arba konteineriui turi būti priskirtas vienas iš šių vaidmenų:
+
+|Kredencialų|Reikalavimai|
+|----------|------------|
+|Šiuo metu prisijungęs vartotojas|**Vaidmuo**: saugyklos BLOB duomenų skaitytuvas, saugyklos BLOB bendraautoris arba saugyklos BLOB savininkas.<br>**Lygis**: teisės gali būti suteikiamos saugojimo paskyroje arba konteineryje.</br>|
+|"Customer Insights Service" pagrindinis elementas –<br>Naudojimas Azure Data Lake Storage kaip duomenų šaltinis</br>|1 parinktis<ul><li>**Vaidmuo**: saugyklos BLOB duomenų skaitytuvas, saugyklos BLOB duomenų bendraautoris arba saugyklos BLOB duomenų savininkas.</li><li>**Lygis**: teisės turėtų būti suteikiamos saugojimo paskyroje.</li></ul>2 *galimybė (nebendrinant pagrindinės paslaugos prieigos prie saugyklos paskyros)*<ul><li>**1** vaidmuo: saugyklos BLOB duomenų skaitytuvas, saugyklos BLOB duomenų bendraautoris arba saugyklos BLOB duomenų savininkas.</li><li>**Lygis**: Leidimai turi būti suteikti konteineriui.</li><li>**2** vaidmuo: saugyklos BLOB duomenų delegatas.</li><li>**Lygis**: teisės turėtų būti suteikiamos saugojimo paskyroje.</li></ul>|
+|"Customer Insights Service" pagrindinis elementas – <br>Naudojimas Azure Data Lake Storage kaip išvestis arba paskirties vieta</br>|1 parinktis<ul><li>**Vaidmuo**: saugyklos BLOB duomenų bendraautoris arba saugyklos BLOB savininkas.</li><li>**Lygis**: teisės turėtų būti suteikiamos saugojimo paskyroje.</li></ul>2 *galimybė (nebendrinant pagrindinės paslaugos prieigos prie saugyklos paskyros)*<ul><li>**Vaidmuo**: saugyklos BLOB duomenų bendraautoris arba saugyklos BLOB savininkas.</li><li>**Lygis**: Leidimai turi būti suteikti konteineriui.</li><li>**2** vaidmuo: saugyklos BLOB delegatorius.</li><li>**Lygis**: teisės turėtų būti suteikiamos saugojimo paskyroje.</li></ul>|
 
 1. Eikite į [„Azure“ administratoriaus portalą](https://portal.azure.com) ir prisijunkite prie savo organizacijos.
 
@@ -62,7 +68,7 @@ Eikite į "Azure" portalą, kad suteiktumėte teises aptarnavimo pagrindinei dir
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Ekrano kopija rodo Azure portalą, kai pridedamas vaidmens priskyrimas.":::
 
 1. Srityje **Įtraukti vaidmenų priskyrimą** nustatykite šias ypatybes:
-   - Vaidmuo: **„Storage Blob Data Contributor“**
+   - Vaidmuo: saugyklos BLOB duomenų skaitytuvas, saugyklos BLOB bendraautoris arba saugyklos BLOB savininkas pagal pirmiau išvardytus kredencialus.
    - Priskirkite prieigą prie: **Vartotojo, grupės ar pagrindinių paslaugų**
    - Pasirinkite narius: **"Dynamics 365" AI, skirtą "Customer Insights"** (aptarnavimo vykdytojas [,](#create-a-new-service-principal) kurio ieškojote anksčiau šioje procedūroje)
 

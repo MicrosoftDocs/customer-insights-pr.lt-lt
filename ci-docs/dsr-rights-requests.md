@@ -1,19 +1,19 @@
 ---
 title: Duomenų subjekto teisių (DSR) prašymai pagal BDAR | „Microsoft Docs”
 description: Atsakymas į duomenų subjekto prašymus programoje „Dynamics 365 Customer Insights”.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808571"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947378"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Duomenų subjekto teisių (DSR) prašymai pagal BDAR
 
@@ -77,11 +77,5 @@ Nuomotojas administratorius gali vadovautis šiais veiksmais duomenims perkelti:
 1. Siųsti el. laišką D365CI@microsoft.com prašyme nurodant vartotojo el. pašto adresą. „Customer Insights“ komanda nusiųs el. laišką į registruoto nuomotojo administravimo el. laiško adresą prašydama patvirtinti eksportavimo duomenis.
 2. Patvirtins vartotojo, dėl kurio buvo pateiktas prašymas, duomenų eksportavimo patvirtinimą.
 3. Gaus eksportuotus duomenis, naudodamasis nuomotojo administratoriaus el. pašto adresu.
-
-## <a name="consent-management-preview"></a>Sutikimo valdymas (peržiūra)
-
-Sutikimo valdymo galimybė tiesiogiai nerenka vartotojo duomenų. Ji importuoja ir apdoroja tik sutikimo duomenis, kuriuos naudotojai pateikia kitose programose.
-
-Norėdami pašalinti sutikimo duomenis apie konkrečius naudotojus, pašalinkite juos duomenų šaltiniuose, prarytuose pagal sutikimo valdymo galimybę. Atnaujinus duomenų šaltinis, pašalinti duomenys bus ištrinti ir sutikimo centre. Programos, naudojančios sutikimo objektą, taip pat ištrins duomenis, kurie buvo pašalinti šaltinyje po [atnaujinimo](system.md#refresh-processes). Rekomenduojame greitai atnaujinti duomenų šaltinius, kai atsakoma į duomenų subjekto užklausą pašalinti vartotojo duomenis iš visų kitų procesų ir programų.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

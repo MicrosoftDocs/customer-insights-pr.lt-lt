@@ -1,7 +1,7 @@
 ---
 title: Atnaujinti suvienijimo parametrus
 description: Atnaujinkite pasikartojančias taisykles, gretinimo taisykles arba vieningus suvienijimo parametrų laukus.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755600"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844050"
 ---
 # <a name="update-the-unification-settings"></a>Atnaujinti suvienijimo parametrus
 
@@ -43,8 +43,9 @@ Norėdami peržiūrėti arba pakeisti visus suvienijimo parametrus, kai sukuriam
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Puslapio Duomenų suvienodinimas su paryškintomis parinktimis &quot;Unify&quot; ekrano nuotrauka.":::
 
-   - Norėdami atnaujinti vieningą kliento profilį (su priklausomybėmis arba be jų), žr [...](#run-updates-to-the-unified-customer-profile).
-   - Norėdami įvertinti atitikimo sąlygų kokybę neatnaujindami vieningo profilio, žr [...](#run-matching-conditions). Parinktis **Vykdyti gretinimo sąlygas nerodoma tik** vienam objektui.
+   - [Paleiskite atitikimo sąlygas](#run-matching-conditions), kad greitai įvertintumėte savo atitikimo sąlygų kokybę (deduplication ir atitikties taisykles), neatnaujindami vieningo profilio. Parinktis **Vykdyti gretinimo sąlygas nerodoma tik** vienam objektui.
+   - [Suvienodinkite klientų profilius](#run-updates-to-the-unified-customer-profile), kad būtų vykdomos gretinimo sąlygos, ir atnaujinkite vieningą kliento profilio objektą nedarydami poveikio priklausomybėms (pvz., sodrinimui, segmentams ar matams). Priklausomi procesai nevykdomi, bet bus atnaujinti, kaip [nurodyta atnaujinimo grafike](system.md#schedule-tab).
+   - [Suvienodinti klientų profilius ir priklausomybes](#run-updates-to-the-unified-customer-profile), kad būtų vykdomos gretinimo sąlygos, ir atnaujinti vieningą kliento profilio objektą bei visas priklausomybes (pvz., sodrinimą, segmentus ar priemones). Visi procesai paleidžiami automatiškai.
 
 ## <a name="edit-source-fields"></a>Redaguoti šaltinio laukus
 
@@ -135,11 +136,13 @@ Galite konfigūruoti iš naujo ir tiksliai nustatyti daugumą atitikties paramet
 
 ## <a name="run-matching-conditions"></a>Vykdyti gretinimo sąlygas
 
+Vykdyti gretinimo sąlygas vykdomos tik deduplication ir atitikties taisyklės ir atnaujinami *objektai Deduplication_** ir *ConflationMatchPair*.
+
 1. **Puslapyje Duomenų** > **suvienodinimas** pasirinkite **Vykdyti tik** gretinimo sąlygas.
 
-   Žymėse **Dubliuoti įrašus** ir **Gretinti sąlygas** rodomos **eilėje** arba **Atnaujinimas**.
+   Plytelėse **Dubliuoti įrašus** ir **Gretinti sąlygas** rodoma **eilėje** arba **Atnaujinimo** būsena.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Kai atitikimo procesas bus baigtas, plytelėje **Gretinimo sąlygos** pasirinkite **Redaguoti**.
 
@@ -153,10 +156,12 @@ Galite konfigūruoti iš naujo ir tiksliai nustatyti daugumą atitikties paramet
 
 1. **Puslapyje Duomenų** > **suvienodinimas** pasirinkite:
 
-   - **Suvienodinti klientų profilius**: atnaujina vieningą kliento profilio objektą nedarant poveikio priklausomybėms (pvz., sodrinimui, segmentams ar priemonėms). Priklausomi procesai nevykdomi, bet bus atnaujinti, kaip [nurodyta atnaujinimo grafike](system.md#schedule-tab).
+   - **Suvienodinti klientų profilius**: paleidžia gretinimo sąlygas ir atnaujina vieningą kliento profilio objektą nedarydami poveikio priklausomybėms (pvz., sodrinimui, segmentams ar priemonėms). Priklausomi procesai nevykdomi, bet bus atnaujinti, kaip [nurodyta atnaujinimo grafike](system.md#schedule-tab).
 
-   - **Suvienodinti klientų profilius ir priklausomybes**: atnaujinamas vieningas profilis ir visos priklausomybės. Visi procesai paleidžiami automatiškai. Pasibaigus visiems tolesniems procesams, kliento profilis atspindi atnaujintus duomenis.
+   - **Suvienykite klientų profilius ir priklausomybes**: paleidžia gretinimo sąlygas ir atnaujina vieningą profilį bei visas priklausomybes. Visi procesai paleidžiami automatiškai. Pasibaigus visiems tolesniems procesams, kliento profilis atspindi atnaujintus duomenis.
 
-   Plytelėse Dubliuoti **įrašus**, **Gretinimo sąlygas** ir **Vieningą kliento lauką** rodoma **eilėje** arba **Atnaujinimas**.
+   Plytelėse **Įrašų dublikatai**, **Gretinimo sąlygos** ir **Vieningi klientų laukai** rodomi **eilėje** arba **atnaujinimo** būsena.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Sėkmingo vykdymo rodymo **puslapyje "Unify** " rezultatai, rodantys vieningų klientų profilių skaičių.

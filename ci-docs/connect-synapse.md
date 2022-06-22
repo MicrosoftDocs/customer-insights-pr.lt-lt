@@ -1,7 +1,7 @@
 ---
 title: Duomenų praryti iš Azure Synapse Analytics
 description: Naudokite duomenų bazę Azure Synapse kaip duomenų šaltinis programoje Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643345"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011437"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>Duomenų šaltinis prijungimas Azure Synapse (peržiūra)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Duomenų šaltinis prijungimas Azure Synapse Analytics (peržiūra)
 
 Azure Synapse Analytics yra įmonės analizės paslauga, kuri pagreitina laiką iki įžvalgų duomenų sandėliuose ir didelių duomenų sistemose. Azure Synapse Analytics sujungia geriausias SQL technologijas, naudojamas įmonių duomenų sandėliavimui, "Spark" technologijas, naudojamas dideliems duomenims, "Data Explorer" žurnalų ir laiko eilučių analizei, duomenų integravimo ir ETL / ELT vamzdynus ir gilią integraciją su kitomis "Azure" paslaugomis, tokiomis kaip Power BI, ir " Cosmos DB AzureML".
 
@@ -24,16 +24,14 @@ Daugiau informacijos rasite [Azure Synapse apžvalgoje](/azure/synapse-analytics
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-Norint konfigūruoti ryšį iš Dynamics 365 Customer Insights Azure Synapse.
-
 > [!IMPORTANT]
 > Įsitikinkite, kad nustatėte visus **vaidmenų priskyrimus**, kaip aprašyta.  
 
-## <a name="prerequisites-in-customer-insights"></a>Būtinosios „Customer Insights“ sąlygos
+**"Customer Insights"**:
 
 * "Customer Insights" atlieka **administratoriaus** vaidmenį. Sužinokite daugiau apie [vartotojo teises "Customer Insights"](permissions.md#assign-roles-and-permissions).
 
-„Azure“ tarnyboje: 
+**In Azure**:
 
 - Aktyvi „Azure“ prenumerata.
 
@@ -47,7 +45,7 @@ Norint konfigūruoti ryšį iš Dynamics 365 Customer Insights Azure Synapse.
 
 - Azure Synapse Darbo srityje *"Customer Insights"* aptarnavimo vadovui reikia **priskirti "Synapse" administratoriaus** vaidmenį. Daugiau informacijos rasite [Kaip nustatyti prieigos valdiklį savo „Synapse” darbo sričiai](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>Prisijungimas prie duomenų telkinių duomenų bazių Azure Synapse Analytics
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Prisijungimas prie duomenų telkinio duomenų bazės Azure Synapse Analytics
 
 1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
 
@@ -55,14 +53,16 @@ Norint konfigūruoti ryšį iš Dynamics 365 Customer Insights Azure Synapse.
 
 1. Pasirinkite **Azure Synapse Analytics (peržiūros)** metodą.
 
-1. Nurodykite duomenų šaltinio **Pavadinimas** ir pasirinkite **Toliau**, kad sukurtumėte duomenų šaltinį. 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="Dialogo langas prisijungti prie &quot;Synapse Analytics&quot; duomenų":::
+  
+1. Įveskite **duomenų šaltinis pavadinimą** ir pasirinktinį **aprašą**.
 
 1. [Pasirinkite galimą ryšį arba](connections.md)Azure Synapse Analytics sukurkite naują.
 
-1. **Pasirinkite ežero duomenų bazę** iš darbo srities, prijungtos pasirinktu Azure Synapse Analytics ryšiu, ir pasirinkite **Pirmyn**.
+1. **Pasirinkite Duomenų bazę** iš darbo srities, prijungtos pasirinktu Azure Synapse Analytics ryšiu, ir pasirinkite **Pirmyn**.
 
-1. Pasirinkite objektus, kuriuos norite nuryti iš prijungtos duomenų bazės. 
+1. Pasirinkite objektus, kuriuos norite nuryti iš prijungtos duomenų bazės, ir pasirinkite **Pirmyn**.
 
-1. Pasirinktinai pasirinkite duomenų objektus, kuriuose leidžiamas duomenų profiliavimas. 
+1. Pasirinktinai pasirinkite duomenų objektus, kuriuose leidžiamas duomenų profiliavimas.
 
-1. Pasirinkite **Įrašyti**, kad pritaikytumėte pasirinkimą ir pradėtumėte nuryti duomenis iš naujai sukurto duomenų šaltinis susieto su ežero duomenų bazės lentelėmis Azure Synapse Analytics.
+1. Pasirinkite **Įrašyti**, kad pritaikytumėte pasirinkimą ir pradėtumėte nuryti duomenis iš naujai sukurto duomenų šaltinis susieto su ežero duomenų bazės lentelėmis Azure Synapse Analytics. Atsidarys **puslapis Duomenų šaltiniai**, kuriame rodoma nauja duomenų šaltinis atnaujinimo **būsenoje**.

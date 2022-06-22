@@ -1,7 +1,7 @@
 ---
 title: Adreso išplėtimas (yra vaizdo įrašas)
 description: Papildykite ir normalizuokite klientų profilių adresų informaciją naudodami „Microsoft” modelius.
-ms.date: 01/19/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b4fef3b5e30e1cac4e5cb4401498f2f0981a409e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642999"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953821"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Klientų profilių papildymas išplėstiniais adresais
 
@@ -53,17 +53,17 @@ Adreso informacija gali būti non pavadinimo formatu ir jame yra rašybos klaid�
 
 ### <a name="limitations"></a>Apribojimai
 
-Išplėstiniai adresai veikia tik su tomis reikšmėmis, kurios jau yra jūsų įtrauktų adresų duomenyse. Modelis neatlieka šių veiksmų: 
+Patobulinti adresai veikia tik su reikšmėmis, kurios jau yra jūsų suvartotuose adreso duomenyse. Modelis neatlieka šių veiksmų:
 
 1. Netikrina, ar adresas yra tinkamas.
 2. Netikrina, ar konkrečios reikšmės, pavyzdžiui, pašto kodai ar gatvių pavadinimai, yra tinkami.
 3. Nekeičia reikšmių, kurių neatpažįsta.
 
-Siekiant papildyti adresus, modelis naudoja mašininio mokymo metodus. Nors modeliui pakeičiant įvesties reikšmę taikoma aukšta ribinė reikšmė, kaip ir naudojant mašininį mokomosios sistemos modelį, 100 procentų tikslumas nėra tarpusavio tikslumas.
+Siekiant papildyti adresus, modelis naudoja mašininio mokymo metodus. Kaip ir bet kuriam mašininiam mokymuisi pagrįstam modeliui, 100 procentų tikslumas nėra garantuotas.
 
 ## <a name="supported-countries-or-regions"></a>Palaikomos šalys arba regionai
 
-Šiuo metu palaikome adresų papildymus šiose šalyse ar regionuose: 
+Šiuo metu palaikome adresų papildymus šiose šalyse ar regionuose:
 
 - Australija
 - Kanada
@@ -74,50 +74,46 @@ Siekiant papildyti adresus, modelis naudoja mašininio mokymo metodus. Nors mode
 - Jungtinė Karalystė
 - Jungtinės Valstijos
 
-Adresuose turi būti šalies/regiono reikšmė. Mes neapdorojame nepalaikomų šalių ar regionų adresų ir tų adresų, kuriems nepateikta šalis arba regionas.
-
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 
-1. Eikite į **Duomenys** > **Papildymas**.
+1. Pasirinkite **Duomenys** > **Papildymas** ir pasirinkite skirtuką **Atrasti**.
 
 1. Pasirinkite **Papildyti mano duomenis** plytelėje **Papildyti adresai**.
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Papildytų adresų plytelės vaizdas.":::
 
-1. Pažymėkite **Kliento duomenų rinkinį** ir pasirinkite objektą, kuriame yra norimi papildyti adresai. Galite pasirinkti *Kliento* objektą, kad adresai būtų papildyti visuose jūsų klientų profiliuose, arba pasirinkti segmento objektą, kad adresai būtų papildyti tik to segmento klientų profiliuose.
+1. Peržiūrėkite apžvalgą ir pasirinkite **Pirmyn**.
+
+1. **Pasirinkite kliento duomenų rinkinį** ir pasirinkite profilį arba segmentą, kurį norite praturtinti. Kliento *subjektas* praturtina visus jūsų klientų profilius, o segmentas praturtina tik tame segmente esančius klientų profilius.
 
 1. Pasirinkite, kaip jūsų duomenų rinkinyje yra formatuojami adresai. Pasirinkite **Adresas su vienu atributu**, jei jūsų duomenų adresuose naudojamas vienas laukas. Pasirinkite **Adresas su keliais atributais**, jei jūsų duomenų adresuose naudojamas daugiau nei vienas duomenų laukas.
+
+1. Pasirinkite **Pirmyn** ir susiekite adreso laukus iš savo vieningo kliento objekto.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Išplėstinio adreso laukų susiejimo puslapis.":::
 
    > [!NOTE]
    > Šalis / regionas privalomai nurodomas ir vieno, ir kelių atributų adresuose. Adresai, kuriuose nėra galiojančių arba palaikomų šalies/regiono reikšmių, nebus papildyti.
 
-1.  Susiekite adreso laukus iš jūsų vieningojo kliento objekto.
-
-    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Išplėstinio adreso laukų susiejimo puslapis.":::
-
 1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
 
-1. Pateikite papildymo ir išvesties objekto pavadinimus.
+1. **Pateikite sodrinimo ir išvesties objekto** **pavadinimą**.
 
 1. Peržiūrėję pasirinkimus pasirinkite **Išsaugoti papildymą**.
 
 ## <a name="enrichment-results"></a>Papildymo rezultatai
 
-Norėdami pradėti papildymo procesą, komandų juostoje pasirinkite **Vykdyti**. Taip pat galite leisti sistemai vykdyti papildymą automatiškai kaip [suplanuoto atnaujinimo](system.md#schedule-tab) dalį. Apdorojimo laikas priklauso nuo jūsų kliento duomenų dydžio.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Pasibaigus papildymo procesui, galite peržiūrėti naujai papildytus klientų profilių duomenis dalyje **Mano papildymai**. Be to, rasite vėliausio naujinimo laiką ir papildytų profilių skaičių.
-
-Praturtintų duomenų pavyzdį galite pamatyti padidintų **klientų peržiūros** plytelėje. Pasirinkite **Peržiūrėti daugiau** ir pasirinkite skirtuką **Duomenys**, kad pasiektumėte išsamų kiekvieno papildyto profilio rodinį.
+Klientų **, praturtintų pagal lauką**, skaičius suteikia detalizuotą kiekvieno praturtinto lauko aprėptį.
 
 ### <a name="overview-card"></a>Apžvalgos kortelė
 
-Apžvalgos kortelėje pateikiama išsami informacija apie sodrinimo aprėptį. 
+Klientų **keitimo peržiūros** kortelėje rodoma išsami informacija apie sodrinimo aprėptį:
 
-* **Apdoroti ir pakeisti** adresai: klientų profilių su adresais, kurie buvo sėkmingai praturtinti, skaičius.
-
-* **Apdoroti ir nepakeisti** adresai: klientų profilių su adresais, kurie buvo pripažinti, bet nepakeisti, skaičius. Paprastai tai atsitinka, kai įvesties duomenys yra tinkami ir jų negalima pagerinti praturtinant.
-
-* **Adresai neapdoroti ir nepakeisti**: profilių su neatpažintais adresais skaičius. Paprastai įvesties duomenims, kurie yra neleistini arba nepalaikomi praturtinimo.
+- **Apdoroti ir pakeisti** adresai: klientų profilių su adresais, kurie buvo sėkmingai praturtinti, skaičius.
+- **Apdoroti ir nepakeisti** adresai: klientų profilių su adresais, kurie buvo pripažinti, bet nepakeisti, skaičius. Paprastai tai atsitinka, kai įvesties duomenys yra tinkami ir jų negalima pagerinti praturtinant.
+- **Adresai neapdoroti ir nepakeisti**: profilių su neatpažintais adresais skaičius. Paprastai įvesties duomenims, kurie yra neleistini arba nepalaikomi praturtinimo.
 
 ## <a name="next-steps"></a>Paskesni veiksmai
 

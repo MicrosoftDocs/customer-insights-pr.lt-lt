@@ -48,14 +48,14 @@
   items:
     - name: Duomenų šaltinių apžvalga
       href: data-sources.md
+    - name: Jungtis prie duomenų „Azure Data Lake Storage“
+      href: connect-common-data-model.md
+    - name: Prisijungimas prie „Azure Synapse Analytics“
+      href: connect-synapse.md
+    - name: Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
+      href: connect-dataverse-managed-lake.md
     - name: Duomenų šaltinių įtraukimas per Power Query jungtis
       href: connect-power-query.md
-    - name: Pridėkite „Common Data Model“ aplanką kaip duomenų šaltinį
-      href: connect-common-data-model.md
-    - name: Įtraukite „Dataverse“ valdomą duomenų telkinį
-      href: connect-dataverse-managed-lake.md
-    - name: „Azure Synapse Analytics“ įtraukimas
-      href: connect-synapse.md
     - name: Duomenų šaltinių praturtinimas
       href: data-sources-enrichment.md
     - name: Duomenų šaltinių papildantysis naujinimas
@@ -82,27 +82,27 @@
   items:
     - name: Papildyti klientų profilius
       href: enrichment-hub.md
+    - name: Paskyros iš Office 365 duomenų
+      href: enrichment-office.md
     - name: Prekių ženklai ir pomėgiai
       href: enrichment-microsoft.md
+    - name: Įmonės duomenys iš Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Įmonių duomenys iš „Leadspace“
+      href: enrichment-leadspace.md
+    - name: Demografija su Experian
+      href: enrichment-experian.md
     - name: Išplėstiniai adresai
       href: enrichment-enhanced-addresses.md
     - name: Išplėstiniai įmonės duomenys
       href: enrichment-enhanced-company-data.md
-    - name: Papildykite su „Azure”„” žemėlapiais
-      href: enrichment-azure-maps.md
-    - name: Praturtinkite "Dun & Bradstreet"
-      href: enrichment-dnb.md
-    - name: Papildykite su „HERE Technologies“
-      href: enrichment-here.md
-    - name: Papildymas „Leadspace”
-      href: enrichment-leadspace.md
-    - name: Praturtinkite "LiveRamp"
+    - name: Tapatybė naudojant "LiveRamp"
       href: enrichment-liveramp.md
-    - name: Praturtinkite su „Experian“
-      href: enrichment-experian.md
-    - name: Office 365 Praturtinkite duomenimis
-      href: enrichment-office.md
-    - name: Papildykite su SFTP kliento importavimu
+    - name: Vieta iš "Azure Maps"
+      href: enrichment-azure-maps.md
+    - name: Vieta iš „HERE Technologies“
+      href: enrichment-here.md
+    - name: SFTP pasirinktinis importavimas
       href: enrichment-SFTP-custom-import.md
 - name: Vieningieji profiliai
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Apibrėžti kliento veiklą
       href: activities.md
+    - name: '"Customer Insights" sutikimo valdymas'
+      href: consent-management.md
 - name: Segmentai
   items:
     - name: Segmentų apžvalga
@@ -190,7 +192,7 @@
           href: export-azure-synapse-analytics.md
         - name: Adobe Campaign Standard
           href: export-adobe-campaign-standard.md
-        - name: „Adobe Experience Platform”
+        - name: Adobe Experience Platform
           href: export-adobe-experience-platform.md
         - name: Braze
           href: export-braze.md
@@ -248,7 +250,7 @@
           href: export-power-apps.md
         - name: Power Automate
           href: export-power-automate.md
-        - name: „Power BI“
+        - name: Power BI
           href: export-power-bi.md
 - name: Objektai
   items:
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: OData užklausų pavyzdžiai
       href: odata-examples.md
-- name: Sutikimo valdymas (peržiūra)
-  items:
-    - name: Pagalbos centras
-      href: consent-management/index.yml
-    - name: Galimybių apžvalga
-      href: consent-management/overview.md
-    - name: Pradėti
-      items:
-        - name: Pradėti
-          href: consent-management/get-started.md
-        - name: Sąvokos ir terminologija
-          href: consent-management/glossary.md
-    - name: Importuoti sutikimo duomenis
-      items:
-        - name: Importuoti sutikimo duomenis
-          href: consent-management/import-consent-data.md
-        - name: Nustatyti sutikimo duomenis ir taikyti sutikimo nuostatas
-          href: consent-management/set-consent-rules.md
-    - name: Tvarkyti sutikimo duomenis
-      items:
-        - name: Įgalinti sutikimo taisykles "Customer Insights"
-          href: activate-consent.md
-        - name: Numatytųjų sutikimo taisyklių valdymas "Customer Insights" segmentuose
-          href: change-default-consent-rules.md
-    - name: Parametrų ir vartotojų valdymas
-      items:
-        - name: Konfigūruoti sistemos parametrus
-          href: consent-management/system-settings.md
-        - name: Vartotojų ir teisių valdymas
-          href: consent-management/manage-users.md
-    - name: Naudoti sutikimo duomenis
-      items:
-        - name: Prognozių kūrimas naudojant sutikimo duomenis
-          href: consent-management/predictions-consent-data.md
 - name: Paslaugų apribojimai
   href: service-limits.md
 - name: DSR teisės ir užklausos

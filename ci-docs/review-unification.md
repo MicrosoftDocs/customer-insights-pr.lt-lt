@@ -1,7 +1,7 @@
 ---
 title: Peržiūrėti duomenų suvienijimą
 description: Peržiūrėkite duomenų suvienijimo veiksmus, sukurkite vieningus klientų profilius ir peržiūrėkite rezultatus
-ms.date: 05/04/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4c709dfb55bf079dd2fe99e41adb4c77c2bece4b
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8743035"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844096"
 ---
 # <a name="review-data-unification"></a>Peržiūrėti duomenų suvienijimą
 
@@ -32,11 +32,13 @@ ms.locfileid: "8743035"
 
 1. Pasirinkite **Redaguoti** bet kuriame duomenų suvienijimo veiksme, kad peržiūrėtumėte ir atliktumėte bet kokius pakeitimus.
 
-1. Jei jus tenkina pasirinkimai, pasirinkite **Kurti klientų profilius**. Puslapis " **Suvienyti** " rodomas kuriant vieningą kliento profilį. Suvienijimo algoritmui užbaigti reikia šiek tiek laiko ir jūs negalite pakeisti konfigūracijos, kol ji nebus baigta.
+1. Jei jus tenkina pasirinkimai, pasirinkite **Kurti klientų profilius**. Puslapis " **Suvienyti** " rodomas kuriant vieningą kliento profilį. Visose plytelėse, išskyrus **šaltinio laukus**, rodoma **eilėje** arba **atnaujinimo** būsena.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Puslapio &quot;Unify&quot; su plytelėmis, kuriose rodoma eilėje arba atnaujinama, ekrano nuotrauka.":::
 
-Kai suvienijimo procesas baigiamas, vieningas kliento profilio objektas, vadinamas *Klientu*, pateikiamas **sekcijos** Profiliai **puslapyje Objektai**. Pirmasis sėkmingas suvienijimo vykdymas sukuria vieningą *kliento* objektą. Visi vėlesni paleidimai išplečia tą objektą.
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Suvienijimo algoritmui užbaigti reikia šiek tiek laiko ir jūs negalite pakeisti konfigūracijos, kol ji nebus baigta. Kai suvienijimo procesas baigiamas, vieningas kliento profilio objektas, vadinamas *Klientu*, pateikiamas **sekcijos** Profiliai **puslapyje Objektai**. Pirmasis sėkmingas suvienijimo vykdymas sukuria vieningą *kliento* objektą. Visi vėlesni paleidimai išplečia tą objektą.
 
 ## <a name="review-the-results-of-data-unification"></a>Peržiūrėti duomenų suvienijimo rezultatus
 

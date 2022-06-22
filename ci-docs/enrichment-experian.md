@@ -1,101 +1,92 @@
 ---
 title: Papildymas trečiųjų šalių pratinimas „Experian“
 description: Bendroji informacija apie „Experian“ trečiosios šalies pratinimą.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f5aa45316b9e0e99c7ba4389353063e9d3ce06c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642979"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954097"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klientų profilių pagerinimo naudojant demografijas „Experian“ (peržiūra)
 
 „Experian“ yra visuotinis vartotojų ir verslo kredito ataskaitų ir rinkodaros paslaugų lyderis. Savo duomenų gerinimo paslaugomis galite geriau suprasti savo klientus, praturtindami savo klientų profilius demografiniais duomenimis, pvz., dėl demografinių duomenų, pvz., dėl demografinių priežasčių dydžio, pajamų ir „Experian“ kt.
 
-## <a name="prerequisites"></a>Būtinosios sąlygos
-
-Norint konfigūruoti „Experian“, reikia įvykdyti šias būtinąsias sąlygas:
-
-- Turite turėti aktyvią „Experian“ prenumeratą. Norėdami gauti prenumeratą, [kreipkitės„ Experian“](https://www.experian.com/marketing-services/contact) tiesiai. [Sužinokite daugiau apie „Experian“ duomenų praturtinimą](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-
-- „Experian“ ryšį jau sukonfigūravo administratorius *arba* turite [administratoriaus](permissions.md#admin) teises. Taip pat jums reikia sukurto jūsų SSH apsaugoto transportavimo (ST) abonemento vartotojo ID, šalies ID ir „Experian“ modelio numerio.
-
 ## <a name="supported-countriesregions"></a>Palaikomos šalys ir (arba) regionai
 
 Šiuo metu palaikome tik Jungtinių Amerikos Valstijų klientų profilių gerinimo palaikymą.
+
+## <a name="prerequisites"></a>Būtinosios sąlygos
+
+- Aktyvi Experian prenumerata. Norėdami gauti prenumeratą, [kreipkitės„ Experian“](https://www.experian.com/marketing-services/contact) tiesiai. [Sužinokite daugiau apie „Experian“ duomenų praturtinimą](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
+
+- Ryšį Experian [...](connections.md)[konfigūruoja](#configure-the-connection-for-experian) administratorius.
+
+- Experian Vartotojo ID, šalies ID ir modelio numeris jūsų SSH palaikančiai saugaus transporto (ST) paskyrai, kuri Experian buvo sukurta jums.
+
+## <a name="configure-the-connection-for-experian"></a>Ryšio konfigūravimas „Experian“
+
+Turite būti "Customer Insights" administratorius [ir](permissions.md#admin) turėti Experian vartotojo ID, šalies ID ir modelio numerį.
+
+1. Konfigūruodami sodrinimą pasirinkite **Įtraukti ryšį** arba eikite į **Administravimo** > **ryšiai** ir plytelėje **pasirinkite** Nustatyti Experian.
+
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian ryšio konfigūravimo juosta.":::
+
+1. Įveskite ryšio pavadinimą ir galiojantį saugaus transporto abonemento vartotojo ID, šalies ID ir modelio numerį Experian.
+
+1. Pasirinkdami Sutinku, peržiūrėkite [ir pateikite savo sutikimą dėl](#data-privacy-and-compliance) duomenų privatumo ir sąlygų **sutinku**.
+
+1. Pasirinkite **Tikrinti**, kad patikrintumėte konfigūraciją, tada pasirinkite **Įrašyti**.
+
+### <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
+
+Kai leidžiate perduoti duomenis į, leidžiate perduoti duomenis už tos sienos ribų, įskaitant galimai slaptus duomenis, „Dynamics 365 Customer Insights“ ir „Experian“ bei „Dynamics 365 Customer Insights“ pvz., Asmeninius duomenis. „Microsoft" tokius duomenis perims jūsų nurodymu, tačiau esate atsakingas už tai, kad būtų užtikrinta „Experian“ privatumo arba saugos apsauga. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732). Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 
 1. Pasirinkite **Duomenys** > **Papildymas** ir pasirinkite skirtuką **Atrasti**.
 
-1. Plytelėje pažymėkite **Papildyti mano**, kuris yra „Experian“ duomenis.
+1. Plytelėje **pasirinkite** Praturtinti mano duomenis **demografinėje** Experian raidėje.
 
-   > [!div class="mx-imgBorder"]
-   > ![„Experian” plytelė.](media/experian-tile.png "Experian tile")
-   > 
+   :::image type="content" source="media/experian-tile.png" alt-text="Experian plytelė sodrinimo apžvalgos puslapyje.":::
 
-1. Pasirinkite [ryšį](connections.md) iš iškrentančiojo sąrašo. Jei ryšio nėra, kreipkitės į administratorių. Jei esate administratorius, galite sukurti ryšį pasirinkdami **Įtraukti ryšį** ir „Experian“ pasirinkdami iš išplečiamojo sąrašo. 
+1. Peržiūrėkite apžvalgą ir pasirinkite **Pirmyn**.
 
-1. Pasirinkite **Prisijungti ir Experian** patvirtinkite pasirinktą ryšį.
+1. Pasirinkite ryšį. Jei jo nėra, kreipkitės į administratorių.
 
-1.  Pasirinkite **Kitas** ir rinkitės **Kliento duomenų rinkinys** , kurį norite papildyti demografiniais duomenimis iš „Experian“. Galite pažymėti objektą **Klientas**, kad pagerintumėte visus jūsų klientų profilius, arba pasirinkti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.
+1. Pasirinkite **Toliau**.
+
+1. **Pasirinkite kliento duomenų rinkinį** ir pasirinkite profilį arba segmentą, kurį norite praturtinti demografiniais duomenimis iš Experian. Kliento *subjektas* praturtina visus jūsų klientų profilius, o segmentas praturtina tik tame segmente esančius klientų profilius.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Klientų duomenų rinkinio pasirinkimo momentas.":::
 
-1. Pažymėkite **Kitas** ir apibrėžkite, kokio tipo laukus iš vieningųjų profilių reikia naudoti, kad būtų ieškoma sutampančių demografinių duomenų iš „Experian“. Būtina užpildyti bent vieną iš šių laukelių: **Vardas, pavardė ir adresas**, **Telefonas** arba **El. paštas**. Kad tikslumas būtų didesnis, galima pridėti iki dviejų kitų laukelių. Šis pasirinkimas turės įtakos žymėjimo laukeliams, prie kurių turite prieigą atlikdami kitą veiksmą.
+1. Nurodykite, kokio tipo laukus iš vieningų profilių naudoti demografiniams duomenims iš Experian. Būtina užpildyti bent vieną iš šių laukelių: **Vardas, pavardė ir adresas**, **Telefonas** arba **El. paštas**. Jei norite didesnio rungtynių tikslumo, pridėkite kitų laukų. Pasirinkite **Toliau**.
 
-    > [!TIP]
-    > Daugiau pagrindinių identifikatoriaus atributų, siunčiamų „Experian“ taip, kad atitikties lygis tikriausiai būtų didesnis.
+1. Susiekite laukus su demografiniais duomenimis iš Experian.
 
-1. Norėdami pradėti laukelių žymėjimą, pasirinkite **Toliau**.
+1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
 
-1. Nustatykite laukus ir apibrėžkite, kokio tipo laukus iš vieningųjų profilių reikia naudoti, kad būtų ieškoma sutampančių demografinių duomenų iš „Experian“. Laukeliai, kuriuos būtina užpildyti, pažymėti.
-
-1. Pateikite papildymo pavadinimą ir išvesties objekto pavadinimą.
+1. **Pateikite sodrinimo pavadinimą** ir išvesties objekto **pavadinimą**.
 
 1. Peržiūrėję pasirinkimus pasirinkite **Išsaugoti papildymą**.
 
-## <a name="configure-the-connection-for-experian"></a>Ryšio konfigūravimas „Experian“ 
-
-Jei norite konfigūruoti ryšius, turite būti administratorius. Rinkitės **Įtraukti ryšį** kai konfigūruojate papildymą *ar* eikite į **Administratorius** > **ryšiai** ir rinkitės **Nustatyti** esantį „Experian“ plytelėje.
-
-1. Pasirinkite **Darbo pradžia**.
-
-1. Laukelyje **Rodomas pavadinimas** įveskite ryšio pavadinimą.
-
-1. Įveskite galiojantį apsaugoto transportavimo abonemento vartotojo ID, šalies ID „Experian“ ir modelio numerį.
-
-1. Pasirinkdami Sutinku, peržiūrėkite **ir pateikite savo sutikimą dėl** duomenų privatumo ir sąlygų **sutinku**.
-
-1. Pažymėkite **Patvirtinti**, kad patvirtintumėte konfigūraciją.
-
-1. Baigę patikrinimą pasirinkite **Išsaugoti**.
-   
-   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian ryšio konfigūravimo juosta.":::
+1. Pasirinkite **Vykdyti**, kad pradėtumėte sodrinimo procesą, arba beveik, kad grįžtumėte į **puslapį Praturtinimai**.
 
 ## <a name="enrichment-results"></a>Papildymo rezultatai
 
-Norėdami pradėti papildymo procesą, komandų juostoje pasirinkite **Vykdyti**. Taip pat galite leisti sistemai vykdyti papildymą automatiškai kaip [suplanuoto atnaujinimo](system.md#schedule-tab) dalį. Apdorojimo laikas priklauso nuo kliento duomenų dydžio ir jūsų klientui nustatytų gerinimo „Experian“ procesų.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Pasibaigus papildymo procesui, galite peržiūrėti naujai papildytus klientų profilių duomenis dalyje **Mano papildymai**. Be to, rasite vėliausio naujinimo laiką ir papildytų profilių skaičių.
+Klientų **, praturtintų pagal lauką**, skaičius suteikia detalizuotą kiekvieno praturtinto lauko aprėptį.
 
-Išsamų kiekvieno papildyto profilio rodinį galite pasiekti pasirinkę **Peržiūrėti papildytus duomenis**.
-
-## <a name="next-steps"></a>Kiti veiksmai
+## <a name="next-steps"></a>Paskesni veiksmai
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Kai leidžiate perduoti duomenis į, leidžiate perduoti duomenis už tos sienos ribų, įskaitant galimai slaptus duomenis, „Dynamics 365 Customer Insights“ ir „Experian“ bei „Dynamics 365 Customer Insights“ pvz., Asmeninius duomenis. „Microsoft" tokius duomenis perims jūsų nurodymu, tačiau esate atsakingas už tai, kad būtų užtikrinta „Experian“ privatumo arba saugos apsauga. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

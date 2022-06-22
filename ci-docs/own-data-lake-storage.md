@@ -3,17 +3,17 @@ title: Naudokite savo Azure Data Lake Storage "Gen2" paskyrą
 author: mukeshpo
 description: Sužinokite apie reikalavimus naudoti savo Azure Data Lake Storage abonementą "Customer Insights" duomenims saugoti.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833950"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011943"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Naudokite savo Azure Data Lake Storage "Gen2" paskyrą
 
@@ -37,6 +37,7 @@ Kurdami naują aplinką įsitikinkite, kad yra duomenų ežero saugyklos paskyra
 1. Pasirinkite, **kaip prijungti saugyklą**. Galite pasirinkti iš ištekliais pagrįstos parinkties ir prenumerata pagrįstos autentifikavimo parinkties. Norėdami gauti daugiau informacijos, žr [.Azure Data Lake Storage](connect-service-principal.md)
    - Jei naudojate **"Azure" prenumeratą**, pasirinkite **prenumeratą**, **išteklių grupę** ir **saugyklos abonementą**, kuriame yra konteineris`customerinsights`.
    - Paskyros **raktui** **pateikite "Data Lake Storage" paskyros abonemento pavadinimą** ir **abonemento raktą.** Šio autentifikavimo metodo naudojimas reiškia, kad esate informuotas, jei jūsų organizacija pasuks raktus. Pasukę aplinkos konfigūraciją [turite](manage-environments.md#edit-an-existing-environment) atnaujinti nauju raktu.
+1. Pasirinkite, ar norite naudoti "Azure Private Link", kad prisijungtumėte prie saugyklos abonemento ir [sukurtumėte ryšį su "Private Link](security-overview.md#private-links-tab) " atlikdami dviejų etapų procesą.
 
 Kai sistemos procesai, pvz., duomenų nurijimas, yra baigti, sistema sukuria atitinkamus aplankus saugojimo abonemente. Duomenų failai ir *model.json* failai yra kuriami ir įtraukiami į aplankus pagal proceso pavadinimą.
 

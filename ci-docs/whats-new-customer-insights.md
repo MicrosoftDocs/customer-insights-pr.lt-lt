@@ -1,19 +1,19 @@
 ---
-title: Naujos ir būsimos funkcijos
+title: Naujos ir atnaujintos funkcijos
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833640"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843357"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Kas nauja programoje „Dynamics 365 Customer Insights“
 
@@ -24,6 +24,37 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>2022 m. gegužės mėn. naujinimai
+
+2022 m. gegužės mėnesio naujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų taisymus.
+
+### <a name="updated-data-unification-experience"></a>Atnaujinta duomenų suvienijimo patirtis
+
+ Duomenų suvienijimas leidžia sujungti vieną kartą skirtingus duomenų šaltinius į vieną pagrindinį duomenų rinkinį, kuris suteikia vieningą tų duomenų rodinį. Duomenys gali būti suvienodinti viename objekte arba keliuose objektuose. Pirmiausia pasirenkate objektus ir šaltinio laukus [,](map-entities.md) pašalinate pasikartojančius įrašus [, nurodote sąlygų](remove-duplicates.md) atitikimo [taisykles ir apibrėžiate](match-entities.md), kuriuos [laukus įtraukti į vieningus klientų profilius](merge-entities.md).
+
+Daugiau informacijos ieškokite [Data suvienijimo apžvalga](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Atnaujintas pagrindinis puslapis "Customer Insights"
+
+**"Home"** padės jums atlikti pagrindinių funkcijų konfigūravimo procesą ir pateiks segmentų, matų ir sodrinimo duomenų apžvalgą. Atnaujinome patirtį, kad iš pirmo žvilgsnio pateiktume aktualesnę informaciją.
+
+Daugiau informacijos ieškokite [Explore Customer Insights](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Segmento naudojimo sekimas
+
+Dabar [galite stebėti segmento](segments.md#track-usage-of-a-segment) naudojimą programose, pagrįstose Dataverse organizacija, susijusia su "Customer Insights". " [Customer Insights" segmentams, naudojamiems "Dynamics 365 Marketing"](/dynamics365/marketing/real-time-marketing-ci-profile) klientų kelionėse, sistema informuoja apie to segmento naudojimą.
+
+### <a name="export-to-criteo"></a>Eksportas į Criteo
+
+"Criteo" yra internetinė platforma, padedanti vartotojams valdyti skaitmeninę reklamą. Dabar galite eksportuoti vieningų klientų profilių segmentus, kad sugeneruotumėte kampanijas, pateiktumėte el. pašto rinkodarą ir naudodami "Criteo" naudotų konkrečias klientų grupes.
+
+Daugiau informacijos ieškokite [Export segments to Criteo (preview)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Patobulinta dokumentacijos struktūra aplinkos kūrimui
+
+Peržiūrėjome žinyno dokumentus, susijusius su "Customer Insights" aplinkos kūrimu ir valdymu. Straipsniai dabar sugrupuoti pagal turinio mazgą Aplinka. Restruktūrizuoti straipsniai suteikia daugiau gairių įvairiems aplinkos kūrimo būdams ir turi aiškesnę struktūrą. Jei turite atsiliepimų, kuriuos norite bendrinti, praneškite mums per valdiklius pagalbos straipsnių pabaigoje.
+
+Daugiau informacijos ieškokite [How to: Create a new environment](create-environment.md).
 
 ## <a name="april-2022-updates"></a>2022 m. balandžio mėn. naujinimai
 
@@ -39,7 +70,7 @@ Daugiau informacijos ieškokite [Enrichment of companies profiles with Dun & Bra
 
 Dabar galite atskirti atskirų profilių ir priemonių priemones visame versle. Nors verslo priemonės rodomos pagrindiniame "Customer Insights" puslapyje, klientų rodikliai atskleidžiami išsamiuose klientų rodiniuose.
 
-Norėdami gauti daugiau informacijos, žr [...](measure-builder.md).
+Norėdami gauti daugiau informacijos, žr [.](measure-builder.md)
 
 ### <a name="consolidation-of-customer-insights-documentation"></a>"Customer Insights" dokumentacijos konsolidavimas
 

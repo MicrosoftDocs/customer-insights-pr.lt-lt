@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833686"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011538"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Dirbkite su „Customer Insights“ duomenimis „Microsoft Dataverse” platformoje
 
 "Customer Insights" suteikia galimybę išvesties objektus padaryti pasiekiamus kaip [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Ši integracija leidžia lengvai dalytis duomenimis ir pasirinktinai kurti naudojant mažo kodo / ne kodo metodą. Išvesties [objektai](#output-entities) yra pasiekiami kaip aplinkos lentelės Dataverse. Galite naudoti duomenis bet kuriai kitai programai, pagrįstai Dataverse lentelėmis. Šios lentelės įgalina scenarijus, pvz., automatizuotas darbo eigas naudojant Power Automate arba kuriant programas su Power Apps.
 
-Prisijungimas prie savo Dataverse aplinkos taip pat leidžia jums nuryti [duomenis iš vietinis duomenų šaltinių naudojant Power Platform duomenų srautus ir šliuzus](data-sources.md#add-data-from-on-premises-data-sources).
+Prisijungimas prie savo Dataverse aplinkos taip pat leidžia jums nuryti [duomenis iš vietinis duomenų šaltinių naudojant Power Platform duomenų srautus ir šliuzus](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -57,7 +57,7 @@ Norint įgalinti duomenų bendrinimą, kai Microsoft Dataverse jūsų aplinka [n
 Naudojant su savo Dataverse paskyra yra du apribojimai Azure Data Lake Storage:
 
 - Yra organizacijos ir Dataverse paskyros susiejimas vienas su Azure Data Lake Storage vienu. Dataverse Kai organizacija yra prijungta prie saugyklos abonemento, ji negali prisijungti prie kito saugyklos abonemento. Šis apribojimas neleidžia užpildyti Dataverse kelių saugojimo paskyrų.
-- Duomenų bendrinimas neveiks, jei norint pasiekti "Azure Data Lake" saugyklos abonementą reikia "Azure Private Link" sąrankos, nes ji yra už užkardos. Dataverse šiuo metu nepalaiko ryšio su privačiais galiniais punktais per "Private Link".
+- Duomenų bendrinimas neveiks, jei norint pasiekti paskyrą Azure Data Lake Storage reikia "Azure Private Link" sąrankos, nes ji yra už užkardos. Dataverse šiuo metu nepalaiko ryšio su privačiais galiniais punktais per "Private Link".
 
 ### <a name="set-up-powershell"></a>"PowerShell" nustatymas
 

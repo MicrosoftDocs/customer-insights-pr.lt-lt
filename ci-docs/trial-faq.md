@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833778"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011897"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Su „Dynamics 365 Customer Insights” bandomąja versija susiję DUK
 
@@ -68,7 +68,7 @@ Pirmą kartą prisijungus prie savo apmokėto „Customer Insights” egzemplior
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Kokie yra bandomosios versijos apribojimai ir kvotos?
 
-- Negalite naudoti savo "Azure Data Lake" saugyklos abonemento išvesties duomenims saugoti bandomosios "Customer Insights" versijos metu. Tačiau duomenis galite įtraukti iš „Data Lake storage” paskyros.
+- Negalite naudoti savo Azure Data Lake Storage abonemento išvesties duomenims saugoti bandomosios "Customer Insights" versijos metu. Tačiau galite nuryti duomenis iš "Data Lake Storage" paskyros.
 - Aplinkoje, kuri automatiškai pateikiama paleidus „Customer Insights" bandomąją versiją, galite saugoti iki 3 GB „Dataverse“ duomenų.
 
 ## <a name="customer-insights-specific-questions"></a>Su „Customer Insights“ susiję klausimai
@@ -83,7 +83,7 @@ Daugelį „Customer Insights“ galimybių funkcijų galima naudoti bandomojoje
 
 Šios funkcijos **nepasiekiamos**:
 
-- Negalite kurti naujų aplinkoje, kurios naudoja jūsų „Azure Data Lake" talpinimo paskyrą.
+- Negalite sukurti naujų aplinkų, naudojančių jūsų Azure Data Lake Storage paskyrą.
 - Negalite panaikinti bandomosios aplinkos.
 
 ### <a name="how-long-does-the-trial-last"></a>Kiek laiko galioja bandomoji versija?

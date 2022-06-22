@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833585"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011989"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Darbo su „Dynamics 365 Customer Insights“ pradžia
 
@@ -39,7 +39,7 @@ Kai pirmą kartą prisijungiate prie "Customer Insights", konfigūruojate parame
 
 Vieningieji profiliai yra pamatai, per kuriuos galima gauti įžvalgų ir atlikti veiksmus su duomenimis. Galite perkelti duomenis iš įvairių šaltinių ir vykdyti duomenų suvienodinimo procesą, kad būtų suderinti vieningieji profiliai. Nurodykite ryšius tarp prarytų objektų ir naudokite sodrinimo funkcijas, kad įtrauktumėte informaciją į profilius.
 
-1. Įtraukite duomenis sukurdami duomenų šaltinius iš kelių parinkčių. Pasirinkite jungtis [Power Query](connect-power-query.md), aplanką [...](connect-common-data-model.md)"Common Data Model" arba [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Įtraukite duomenis sukurdami duomenų šaltinius iš kelių parinkčių. Pasirinkite, [Azure Data Lake Storage įskaitant "Common Data Model"](connect-common-data-model.md), [Azure Synapse Analytics](connect-synapse.md)[Microsoft Dataverse](connect-dataverse-managed-lake.md) arba [Power Query jungtis](connect-power-query.md).
 
 1. Paleiskite [duomenų suvienijimo procesą](data-unification.md) identifikuodami [šaltinio laukus](map-entities.md), pašalindami [dublikatus](remove-duplicates.md), [gretindami sąlygas](match-entities.md) ir [suvienodindami laukus](merge-entities.md).
 

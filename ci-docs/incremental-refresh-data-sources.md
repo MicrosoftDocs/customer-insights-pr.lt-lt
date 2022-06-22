@@ -1,26 +1,26 @@
 ---
-title: Laipsniškas duomenų šaltinių atnaujinimas Power Query
-description: Atnaujinti naujus ir atnaujintus didelių duomenų šaltinių duomenis pagal Power Query.
-ms.date: 12/06/2021
-ms.reviewer: mhart
+title: Papildomas atnaujinimas, skirtas Power Query "Azure Data Lake" duomenų šaltiniams
+description: Atnaujinkite naujus ir atnaujintus didelių duomenų šaltinių duomenis pagal Power Query arba "Azure" duomenų ežero duomenų šaltinius.
+ms.date: 05/30/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 3d21baf9804f300802b066df0183fc8f01abba9a
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643668"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9012035"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Papildomas duomenų šaltinių atnaujinimas, pagrįstas Power Query
+# <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Papildomas atnaujinimas, skirtas Power Query "Azure Data Lake" duomenų šaltiniams
 
-Šiame straipsnyje aptariama, kaip konfigūruoti papildomą duomenų šaltinių atnaujinimą pagal Power Query.
+Šiame straipsnyje aptariama, kaip konfigūruoti papildomą duomenų šaltinių atnaujinimą pagal Power Query "Azure Data Lake" arba "Azure Data Lake".
 
 Papildantysis duomenų šaltinių naujinimas teikia toliau nurodytus privalumus.
 
@@ -28,15 +28,13 @@ Papildantysis duomenų šaltinių naujinimas teikia toliau nurodytus privalumus.
 - **Didesnis patikimumas** – vykdant smulkesnius atnaujinimus, nereikia ilgai palaikyti ryšių su nepastoviomis šaltinių sistemomis, taip sumažinant ryšio problemų pavojų.
 - **Sumažintas išteklių suvartojimas** – atnaujinant tik dalį visų duomenų, skaičiavimo ištekliai naudojami efektyviau ir sumažinamas poveikis aplinkai.
 
-## <a name="configure-incremental-refresh"></a>Papildančiojo naujinimo konfigūravimas
+## <a name="configure-incremental-refresh-for-data-sources-based-on-power-query"></a>Konfigūruoti papildomą duomenų šaltinių atnaujinimą pagal Power Query
 
 "Customer Insights" leidžia palaipsniui atnaujinti duomenų šaltinius, importuotus naudojant Power Query tą palaiko laipsnišką nurijimą. Pavyzdžiui, „Azure“ SQL duomenų bazių, kurių datos ir laiko laukuose nurodoma, kada paskutinį kartą buvo atnaujinti duomenų įrašai.
 
 1. [Sukurkite naują duomenų šaltinis pagal Power Query](connect-power-query.md).
 
-1. **Pateikite duomenų šaltinis pavadinimą**.
-
-1. Pasirinkite duomenų šaltinis, palaikantį laipsnišką atnaujinimą, pvz [., "Azure SQL" duomenų bazę](/power-query/connectors/azuresqldatabase).
+1. Pasirinkite duomenų šaltinis, palaikantį papildomą atnaujinimą, pvz [., "Azure SQL" duomenų bazę](/power-query/connectors/azuresqldatabase).
 
 1. Pažymėkite rinktinus objektus arba lenteles.
 
@@ -48,7 +46,7 @@ Papildantysis duomenų šaltinių naujinimas teikia toliau nurodytus privalumus.
 
 1. Pasirinkę **Papildančiojo naujinimo parametrai**, sukonfigūruojate papildantįjį naujinimą visiems objektams, kuriuos pasirinkote kurdami duomenų šaltinį.
 
-   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Objektų konfigūravimas duomenų šaltinyje norint atlikti papildantįjį atnaujinimą.":::
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Konfigūruokite papildančius atnaujinimo parametrus.":::
 
 1. Pažymėkite objektą ir nurodykite toliau pateikiamą informaciją.
 
@@ -58,5 +56,31 @@ Papildantysis duomenų šaltinių naujinimas teikia toliau nurodytus privalumus.
 
 1. Pasirinkite **Įrašyti**, kad užbaigtumėte duomenų šaltinio kūrimą. Pradinio duomenų naujinimo metu bus atnaujinti visi duomenys. Paskui papildantysis duomenų naujinimas vykdomas pagal ankstesnio veiksmo metu nustatytus parametrus.
 
+## <a name="configure-incremental-refresh-for-azure-data-lake-data-sources"></a>Konfigūruoti papildomą "Azure Data Lake" duomenų šaltinių atnaujinimą
+
+"Customer Insights" leidžia palaipsniui atnaujinti duomenų šaltinius, prijungtus prie Azure Data Lake Storage. Norėdami naudoti papildomą objekto nurijimą ir atnaujinimą, konfigūruokite tą objektą įtraukdami "Azure Data Lake" duomenų šaltinis arba vėlesnę versiją redaguodami duomenų šaltinis. Objekto duomenų aplanke turi būti šie aplankai:
+
+- **FullData**: aplankas su duomenų failais, kuriuose yra pradinių įrašų
+- **IncrementalData**: aplankas su datos / laiko hierarchijos aplankais **yyyy / mm / dd / hh** formatu, kuriame yra papildomi naujinimai. **hh** nurodo atnaujinimų UTC valandą ir yra **aplankai Upserts** ir **Deletes**. **"Upserts** " yra duomenų failų su esamų įrašų arba naujų įrašų naujinimais. **Naikinamuose yra duomenų failų su įrašais**, kuriuos reikia pašalinti.
+
+1. Įtraukdami arba redaguodami duomenų šaltinis, eikite į objekto **sritį Atributai**.
+
+1. Peržiūrėkite atributus. Įsitikinkite, kad sukurtas arba paskutinis atnaujintas datos atributas nustatytas su *dateTime* **duomenų formatu** ir *Calendar.Date* **semantiniu tipu**. Jei reikia, redaguokite atributą ir pasirinkite **Atlikta**.
+
+1. **Srityje Pasirinkti objektus** redaguokite objektą. Pažymėtas žymės langelis **Papildomas nurijimas**.
+
+   :::image type="content" source="media/ADLS_inc_refresh.png" alt-text="Objektų konfigūravimas duomenų šaltinyje norint atlikti papildantįjį atnaujinimą.":::
+
+   1. Raskite šakninį aplanką, kuriame yra .csv arba .parquet failai, kad gautumėte išsamius duomenis, papildomus duomenų papildymus ir papildomus duomenų naikinimus.
+   1. Įveskite visų duomenų plėtinį ir abu papildomus failus (\. csv arba \. parketą).
+   1. Pasirinkite **Įrašyti**.
+
+1. Dalyje **Paskutinis atnaujintas** pasirinkite datos laiko žymos atributą.
+
+1. Jei pirminis **raktas** nepasirinktas, pasirinkite pirminį raktą. Pirminis raktas yra atributas, unikalus objektui. Kad atributas būtų tinkamas pirminis raktas, jame neturėtų būti pasikartojančių reikšmių, trūkstamų reikšmių arba neapibrėžtų reikšmių. Eilutės, sveikojo skaičiaus ir GUID duomenų tipo atributai palaikomi kaip pirminiai raktai.
+
+1. Pasirinkite **Uždaryti**, kad įrašytumėte ir uždarytumėte sritį.
+
+1. Toliau pridėkite arba redaguokite duomenų šaltinis.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

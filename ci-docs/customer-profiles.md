@@ -1,7 +1,7 @@
 ---
 title: Peržiūrėti kliento profilius
 description: Gaukite bendrą jūsų suvienodintų kliento duomenų rodinį.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755792"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947056"
 ---
 # <a name="customer-profiles"></a>Klientų profiliai
 
@@ -55,9 +55,9 @@ Klientus galite filtruoti pagal objekto laukus *Klientas*. Panašiai kaip ir atl
 
 Pasirinkite bet kurias kliento plytas tam, kad atvertumėte **Kliento informacijos puslapį**. Šis rodinys apima suvienodintą informaciją pasirinktam klientui. Į išsamią kliento informaciją įtraukiamas šis turinys:
 
-**Kliento profilio plytelė**: šioje plytelėje rodomos kitos reikšmės nei vieningojo *kliento* objektas. Jei lauke nėra pasirinkto kliento profilio reikšmės, jis nebus rodomas. Plytelę sudaro skyriai:
+**Kliento profilio plytelė**: šioje plytelėje rodomos kitos reikšmės nei vieningojo *kliento* objektas. Jei laukas neturi pasirinkto kliento profilio vertės, jis nebus rodomas, išskyrus adreso lauką. Plytelę sudaro skyriai:
 
-- Pirmajame skyriuje rodomas iš anksto nustatytas laukų rinkinys, po kurio seka visi laukai, kurie yra ieškos &filtro rodyklės dalis. Visi su adresu susiję laukai sujungiami į vieną eilutę, jei profilyje yra tokių laukų.
+- Pirmajame skyriuje rodomas iš anksto nustatytas laukų rinkinys, po kurio seka visi laukai, kurie yra ieškos &filtro rodyklės dalis. Visi su adresu susiję laukai sujungiami į vieną eilutę, kuri rodo, net jei profilyje nėra adreso informacijos.
 - **Šio kliento kontaktai**: verslo klientų aplinkose kaip antrą skyrių bus rodomi visi susiję šio kliento kontaktai. Kiekvienas kontaktas rodomas su jų laukais. Tušti laukai paslėpti.
 - **Papildomi laukai**: rodomi likę pasirinkto kliento laukai, išskyrus TV.
 - **ID** : visų ID pateikiamas jų atitinkamo objekto pavadinimo sąrašas. Laukus kaip ID identifikuoja jų semantikos, o šie laukai skirstomi į kategorijas.

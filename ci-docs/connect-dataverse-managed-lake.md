@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800183"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011713"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
 
-Šiame straipsnyje pateikiama informacija apie tai, kaip Dataverse vartotojai gali greitai prisijungti prie analitinių subjektų valdomame Microsoft Dataverse ežere. 
+Microsoft Dataverse vartotojai gali greitai prisijungti prie analitinių subjektų valdomame Microsoft Dataverse ežere.
 
 > [!NOTE]
 > Turite būti organizacijos administratorius, Dataverse kad galėtumėte tęsti ir peržiūrėti valdomo ežero objektų sąrašą.
@@ -32,40 +32,34 @@ ms.locfileid: "8800183"
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Prisijungimas prie „Dataverse” valdomojo telkinio
 
-1. „Customer Insights“ eikite į **Duomenys** > **Duomenų šaltiniai**.
+1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
 
-2. Pasirinkite **Įtraukti duomenų šaltinį**.
+1. Pasirinkite **Įtraukti duomenų šaltinį**.
 
-3. Pasirinkite **Microsoft Dataverse** ir pasirinkite **Pirmyn**.
+1. Pažymėkite **Microsoft Dataverse**.
 
-4. Įveskite duomenų šaltinio **Pavadinimą** ir pasirinkite **Pirmyn**. 
+1. Įveskite **duomenų šaltinis pavadinimą** ir pasirinktinį **aprašą**.
 
-5. Nurodykite „Dataverse” organizacijos **Serverio adresą** ir pasirinkite **Prisijungti**.
+1. Nurodykite „Dataverse” organizacijos **Serverio adresą** ir pasirinkite **Prisijungti**.
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="Duomenų įtraukimo veiksmo ekranas, kuriame vartotojas gali įvesti Dataverse aplinkos URL.":::
-
-6. Iš galimo sąrašo pasirinkite lenteles, kurias norite praryti kaip objektus į "Customer Insights".    
+1. Iš galimo sąrašo pasirinkite lenteles, kurias norite nuryti kaip objektus "Customer Insights".
 
    > [!NOTE]
    > Jei kai kurios lentelės jau pažymėtos, jas gali naudoti kitos „Dynamics 365” programos (pavyzdžiui, „Dynamics 365 Sales Insights” arba „Customer Service Insights”). Šio pasirinkimo keisti negalima. Šios lentelės bus prieinamos kaip objektai sukūrus duomenų šaltinį.
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dialogo langas, kuriame rodomas Dataverse aplinkos objektų sąrašas.":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dialogo langas, kuriame rodomas Dataverse aplinkos objektų sąrašas.":::
 
-7. Įrašykite savo pasirinkimą, kad pradėtumėte sinchronizuoti pasirinktas lenteles iš „Dataverse”. Puslapyje **Duomenų šaltiniai** rasite naujai pridėtą ryšį. Jis bus atnaujinimo eilėje ir rodys objektų skaičių kaip 0 iki tol, kol bus susinchronizuotos visos pažymėtos lentelės.
+1. Įrašykite savo pasirinkimą, kad pradėtumėte sinchronizuoti pasirinktas lenteles iš „Dataverse”. Puslapyje **Duomenų šaltiniai** rasite naujai pridėtą ryšį. Jis bus atnaujinimo eilėje ir rodys objektų skaičių kaip 0 iki tol, kol bus susinchronizuotos visos pažymėtos lentelės.
 
 Tik vienas aplinkos duomenų šaltinis gali vienu metu naudoti tą patį „Dataverse“sutvarkytą ežerą.
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>„Dataverse” valdomojo telkinio duomenų šaltinio redagavimas
 
-Sukūrus duomenų šaltinį galite redaguoti tik objekto pasirinkimą. Pavyzdžiui, jei į „Dataverse“ buvo įtraukti papildomi objektai ir norite importuoti ir juos.    
+Sukūrus duomenų šaltinį galite redaguoti tik objekto pasirinkimą. Pavyzdžiui, jei į „Dataverse“ buvo įtraukti papildomi objektai ir norite importuoti ir juos.
 Norėdami prisijungti prie kito „Dataverse data lake”, [sukurkite naują duomenų šaltinį](#connect-to-a-dataverse-managed-lake).
 
 1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
 
-2. Šalia duomenų šaltinis norite atnaujinti, pasirinkite vertikalią elipsę (&vellip;).
+1. Šalia duomenų šaltinis, kurį norite atnaujinti, pasirinkite **Redaguoti**.
 
-3. Sąraše pasirinkite **Redaguoti**.
-
-4. Pažymėkite papildomus objektus iš galimų objektų sąrašo ir pasirinkite **Įrašyti**.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Pažymėkite papildomus objektus iš galimų objektų sąrašo ir pasirinkite **Įrašyti**.

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643255"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947240"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Segmentų sąrašo ir kitų duomenų eksportavimas į „Azure Data Lake Storage Gen2" (peržiūra)
 
@@ -21,11 +21,9 @@ Saugokite savo „Customer Insights“ duomenis saugykloje „Azure Data Lake St
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-1. Kai kuriate „Azure Data Lake Storage Gen2" duomenų saugyklos paskyrą, galite rinktis [ iš standartinės efektyvumo ir geriausio efektyvumo pakopos](/azure/storage/blobs/create-data-lake-storage-account). Jei pasirinksite geriausio efektyvumo pakopą, pažymėkite geriausio bloko didelių dvejetainių objektų kaip kliento tipą. 
+1. Kai kuriate „Azure Data Lake Storage Gen2" duomenų saugyklos paskyrą, galite rinktis [ iš standartinės efektyvumo ir geriausio efektyvumo pakopos](/azure/storage/blobs/create-data-lake-storage-account). Jei pasirinksite geriausio efektyvumo pakopą, pažymėkite geriausio bloko didelių dvejetainių objektų kaip kliento tipą.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Nustatyti ryšį su „Azure Data Lake Storage Gen2“ 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Nustatyti ryšį su „Azure Data Lake Storage Gen2“
 
 1. Eikite į **Administravimas** > **Ryšiai**.
 
@@ -39,7 +37,7 @@ Saugokite savo „Customer Insights“ duomenis saugykloje „Azure Data Lake St
     - Norėdami sužinoti, kaip sukurti saugyklos paskyrą su „Azure Data Lake Storage Gen2”, žr. [Saugyklos paskyros kūrimas](/azure/storage/blobs/create-data-lake-storage-account). 
     - Jei norite sužinoti daugiau apie „Azure Data Lake Gen2“ talpyklos paskyros pavadinimą ir paskyros raktą, žr. [Talpyklos paskyros nuostatų valdymas „Azure“ portale](/azure/storage/common/storage-account-manage).
 
-1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį. 
+1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį.
 
 ## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
@@ -57,8 +55,12 @@ Saugokite savo „Customer Insights“ duomenis saugykloje „Azure Data Lake St
 
 Eksportavimo įrašymas eksportavimo iš karto nevykdo.
 
-Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
+Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab).
+Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand).
 
-Eksportuoti duomenys saugomi jūsų sukonfigūruotoje „Azure Data Lake Gen 2“ talpyklos saugykloje. 
+Eksportuoti duomenys saugomi jūsų sukonfigūruotoje „Azure Data Lake Gen 2“ talpyklos saugykloje.
+
+> [!TIP]
+> Objektų, kuriuose yra daug duomenų, eksportavimas gali sukelti kelis CSV failus tame pačiame aplanke kiekvienam eksportavimui. Eksporto skaidymas vyksta dėl našumo priežasčių, kad būtų sumažintas laikas, kurio reikia eksportui užbaigti.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

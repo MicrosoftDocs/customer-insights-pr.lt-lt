@@ -1,5 +1,5 @@
 ---
-title: Klientų profilių papildymas naudojant „Microsoft“ duomenis
+title: Klientų profilių praturtinimas prekių ženklais ir pomėgių duomenimis iš "Microsoft"
 description: Naudokite "Microsoft" nuosavybinius duomenis, kad praturtintumėte savo klientų duomenis giminystės ryšiais ir balso bendrinimu.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,25 +12,16 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c016a394fdf485057a190d03bfed9ce5481f435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643291"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953775"
 ---
 # <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Praturtinkite klientų profilius giminystės ryšiais ir balso dalimi (peržiūra)
 
 Naudokite "Microsoft" nuosavybinius duomenis, kad praturtintumėte savo klientų duomenis prekės ženklo ryšiais, pomėgiais ir balso dalimi (SoV). Šie panašumai ir SoV yra pagrįsti žmonių, kurių demografija panaši į jūsų klientų, duomenimis. Ši informacija padeda geriau suprasti ir segmentuoti savo klientus pagal jų panašumus arba SoV į konkrečius prekės ženklus ir interesus.
-
-Norėdami konfigūruoti ir peržiūrėti praturtinimus, eikite į **DataEnrichment** > **·**.[...](enrichment-hub.md)
-
-Norėdami konfigūruoti prekės ženklo panašumus ir SoV soV sodrinimą, eikite į skirtuką **Atrasti** ir plytelėje **Prekės ženklai** pasirinkite **Praturtinti mano duomenis**.
-
-Norėdami konfigūruoti pomėgių sąsajas ir SoV sodrinimą, eikite į skirtuką **Atrasti** ir plytelėje Pomėgiai **pasirinkite** Praturtinti mano **duomenis**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Prekės ženklų ir interesų plytelės.](media/BrandsInterest-tile-Hub.png "Prekės ženklai ir interesų plytelės")
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Kaip mes nustatome giminystės ryšius ir SoV
 
@@ -45,7 +36,6 @@ Mes naudojame "Microsoft" internetinės paieškos duomenis, kad rastume panašum
 Kiekviename praturtintame kliento profilyje teikiame dvi susijusias reikšmes – priskyrimo lygį ir balą. Šios reikšmės padeda nustatyti, koks yra šio profilio demografinio segmento susidomėjimas tam tikrą prekės ženklą ar susidomėjimą, palyginti su kitais demografiniais segmentais.
 
 *Priskyrimo lygį* sudaro keturi lygiai, o *priskyrimo balas* apskaičiuojamas 100 balų skalėje, kuri susieta su priskyrimo lygiais.
-
 
 |Priskyrimo lygis |Patrauklumo balas  |
 |---------|---------|
@@ -64,78 +54,65 @@ Mes apskaičiuojame SoV pagal 100 taškų skalę. Bendras SoV visuose prekės ž
 
 Šiuo metu palaikomos šių šalių ir (arba) regionų parinktys: Australija, Kanada (anglų k.), Prancūzija, Vokietija, Jungtinė Karalystė arba Jungtinės Amerikos Valstijos (anglų k.).
 
-Norėdami pažymėti šalį arba regioną, atidarykite **Prekės ženklų praturtinimas** arba **Intereso praturtinimas** ir pasirinkite **Keisti** šalia **Šalis/regionas**. Srityje **Šalies ir (arba) regiono parametrai** pasirinkite parinktį ir pasirinkite **Taikyti**.
+## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 
-### <a name="implications-related-to-country-selection"></a>Padariniai, susiję su šalies pasirinkimu
+1. Pasirinkite **Duomenys** > **Papildymas** ir pasirinkite skirtuką **Atrasti**.
 
-- Kai [pasirenkate savo prekių ženklus, ](#define-your-brands-or-interests), sistema teikia pasiūlymus pagal pasirinktą šalį arba regioną.
+   - Norėdami konfigūruoti prekės ženklo giminingumą ir SoV sodrinimą, plytelėje **Prekės ženklai** pasirinkite **Praturtinti mano duomenis**.
 
-- Pasirinkę [pramonės šaką](#define-your-brands-or-interests), gausite svarbiausius prekės ženklus arba susiesite pagal pasirinktą šalį arba regioną.
+   - Norėdami konfigūruoti pomėgių giminingumą ir SoV sodrinimą, plytelėje Pomėgiai pasirinkite **Praturtinti mano duomenis** **.**
 
-- Praturtindami [profilius praturtinsime](#refresh-enrichment), visus klientų profilius, pagal kuriuos gauname duomenis apie pasirinktus prekių ženklus ir interesams, įskaitant ne pasirinktos šalies ar regiono profilius. Pvz., jei pasirinkote Vokietiją, papildysime JAV esančius duomenis, jei gausime duomenų apie pasirinktus prekių ženklus ir pomėgius JAV.
+   > [!div class="mx-imgBorder"]
+   > ![Prekės ženklų ir interesų plytelės.](media/BrandsInterest-tile-Hub.png "Prekės ženklai ir interesų plytelės")
 
-## <a name="configure-enrichment"></a>Praturtinimo konfigūravimas
+1. Peržiūrėkite apžvalgą ir pasirinkite **Pirmyn**.
 
-Vedama patirtis leidžia peržiūrėti konfigūraciją ir papildymus. 
+1. Norėdami pakeisti savo šalį ar regioną, pasirinkite **Keisti** šalia **Šalies / regiono**. **Srityje Šalies / regiono parametrai** pasirinkite palaikomą šalį / regioną [ir](#supported-countriesregions) pasirinkite **Taikyti**.
 
-### <a name="define-your-brands-or-interests"></a>Prekių ženklų arba pomėgių apibrėžimas
+   > [!NOTE]
+   > Kai pasirenkate savo prekių ženklus, , sistema teikia pasiūlymus pagal pasirinktą šalį arba regioną. Pasirinkę pramonės šaką, gausite svarbiausius prekės ženklus arba susiesite pagal pasirinktą šalį arba regioną.
 
-Pasirinkite ne daugiau kaip penkis prekių ženklus ar pomėgius naudodami vieną iš šių parinkčių arba jas abi:
+1. Pasirinkite ne daugiau kaip penkis prekių ženklus ar pomėgius naudodami vieną iš šių parinkčių arba jas abi:
 
-- **Pramonės šaka**: išplečiamajame sąraše pasirinkite pramonės šaką ir pasirinkite iš geriausių tos pramonės šakų markių arba domina.
-- **Pasirinkite savo**: Įveskite jūsų organizacijai aktualų prekės ženklą arba pomėgį, o tada išsirinkite iš atitinkančių pasiūlymų. Jei jūsų ieškomo prekių ženklo ar pomėgio nėra, atsiųskite mums atsiliepimą naudodami nuorodą **Pasiūlyti**.
+   - **Pramonės šaka**: išplečiamajame sąraše pasirinkite pramonės šaką ir pasirinkite iš geriausių tos pramonės šakų markių arba domina.
+   - **Pasirinkite savo**: Įveskite jūsų organizacijai aktualų prekės ženklą arba pomėgį, o tada išsirinkite iš atitinkančių pasiūlymų. Jei jūsų ieškomo prekių ženklo ar pomėgio nėra, atsiųskite mums atsiliepimą naudodami nuorodą **Pasiūlyti**.
 
-### <a name="review-enrichment-preferences"></a>Papildymo nuostatos
+1. Pasirinkite **Pirmyn** ir peržiūrėkite numatytąsias sodrinimo nuostatas ir, jei reikia, atnaujinkite jas.
 
-Peržiūrėkite numatytąsias pratinimo nuostatas ir prireikus atnaujinkite jas.
+   :::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Pratinimo nuostatų lango papildymas.":::
 
-:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Pratinimo nuostatų lango papildymas.":::
+1. Pasirinkite **Toliau**.
 
-### <a name="select-entity-to-enrich"></a>Pasirinkti objektą susiejimui
+1. **Pasirinkite kliento duomenų rinkinį** ir pasirinkite profilį arba segmentą, kurį norite praturtinti "Microsoft" duomenimis. Kliento *subjektas* praturtina visus jūsų klientų profilius, o segmentas praturtina tik tame segmente esančius klientų profilius.
 
-Pasirinkite **Praturtintas objektas** ir pasirinkite duomenų rinkinį, kurį norite praturtinti "Microsoft" duomenimis. Galite pažymėti objektą Klientas, kad pagerintumėte visus jūsų klientų profilius, arba pasirinkti segmento objektą, kad būtų papildyti tik to segmento klientų profiliai.
+1. Pasirinkite **Toliau**.
 
-### <a name="map-your-fields"></a>Susiekite savo laukus
+1. Susiekite laukus iš vieningo kliento objekto į "Microsoft" duomenis.
 
-Susiekite laukus iš vieningojo kliento objekto ir apibrėžkite demografinį segmentą, kurį sistema turėtų naudoti savo klientų duomenims papildyti. Susiekite šalį / regioną ir bent gimimo datą arba lyties atributus. Turite susieti šalį / regioną. Taip pat turite susieti bent vieną miestą (ir rajoną / apskritį) arba pašto indeksą. Pasirinkite **Redaguoti**, norėdami apibrėžti laukų susiejimą, ir baigę pasirinkite **Taikyti**. Spustelėkite **Įrašyti**, kad baigtumėte susieti laukus.
+   > [!NOTE]
+   > Reikia bent jau gimimo datos arba lyties požymių. Reikalingi šalies / regiono ir bent jau miesto (ir valstijos / provincijos) arba pašto kodo. Rekomenduojame, kad prarijus duomenis gimimo data būtų konvertuota į DateTime tipą. Arba tai gali būti eilutė [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)f ormatu "yyyy-MM-dd" arba "yyyy-MM-ddTHH:mm:ss".
 
-Palaikomi toliau nurodyti formatai ir reikšmės (reikšmėse didžiosios ir mažosios raidės neskiriamos).
+1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
 
-- **Gimimo data**: rekomenduojama, kad duomenų įtraukimo metu gimimo data būtų konvertuota į „DateTime“ formatą. Arba tai gali būti eilutė [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)f ormatu "yyyy-MM-dd" arba "yyyy-MM-ddTHH:mm:ss".
-- **Lytis**: vyras, moteris, nežinoma.
-- **Pašto indeksas**: Penkių skaitmenų Pašto indeksai, skirti Jungtinėms Amerikos Valstijoms, standartinis pašto indeksas kas daugiau.
-- **Miestas**: miesto pavadinimas anglų k.
-- **Valstija / provincija**: dviejų raidžių santrumpa JAV ir Kanadoje. Dviejų ar trijų raidžių santrumpa Australijoje. Netaikoma Prancūzijai, Vokietijai ir JK.
-- **Šalis / regionas**:
+1. Nurodykite papildymo pavadinimą. Išvesties **objekto pavadinimas** pasirenkamas automatiškai.
 
-  - JAV: Jungtinės Amerikos Valstijos, Jungtinės Valstijos, JAV, Amerika
-  - CA: Kanada, CA
-  - GB: Jungtinė Karalystė, JK, Didžioji Britanija, GB, Jungtinė Didžiosios Britanijos ir Šiaurės Airijos Karalystė, Jungtinė Didžiosios Britanijos Karalystė
-  - AS: Australia, AU, Australijos Bendrijoje
-  - FR: Prancūzija, FR, Prancūzijos Respublika
-  - DE: Vokietija, vokiečių, Deutschland, DE, Vokietijos Federacinė Respublika, Vokietijos Respublika
+   :::image type="content" source="media/enrichment-interests-summary.png" alt-text="Pomėgių peržiūros ir pavadinimo suteikimo puslapis.":::
 
-## <a name="review-and-name-the-enrichment"></a>Papildymo peržiūra ir pavadinimas
+1. Peržiūrėję pasirinkimus pasirinkite **Išsaugoti papildymą**.
 
-Galiausiai galite peržiūrėti informaciją ir nurodyti papildymo pavadinimą.
+1. Pasirinkite **Vykdyti**, kad pradėtumėte sodrinimo procesą, arba beveik, kad grįžtumėte į **puslapį Praturtinimai**.
 
-:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Pomėgių peržiūros ir pavadinimo suteikimo puslapis.":::
-
-## <a name="refresh-enrichment"></a>Papildymo atnaujinimas
-
-Papildymą vykdykite sukonfigūravę prekių ženklus, pomėgius ir demografinių duomenų laukų susiejimą. Norėdami pradėti procesą, prekės ženklo arba pomėgio konfigūravimo puslapyje pasirinkite **Vykdyti**. Be to, galite leisti sistemai automatiškai vykdyti papildymą, kai vykdomas suplanuotas atnaujinimas.
-
-Priklausomai nuo jūsų klientų duomenų apimties, papildymas gali užtrukti kelias minutes.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+   Praturtindami profilius praturtinsime, visus klientų profilius, pagal kuriuos gauname duomenis apie pasirinktus prekių ženklus ir interesams, įskaitant ne pasirinktos šalies ar regiono profilius. Pvz., jei pasirinkote Vokietiją, papildysime JAV esančius duomenis, jei gausime duomenų apie pasirinktus prekių ženklus ir pomėgius JAV.
 
 ## <a name="enrichment-results"></a>Papildymo rezultatai
 
-Įvykdę papildymo procesą, eikite į **Mano papildymai** ir peržiūrėkite bendrą papildytų klientų skaičių bei prekių ženklų arba pomėgių pasiskirstymą papildytuose klientų profiliuose.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Rezultatų peržiūra atlikus papildymo procesą.":::
 
-Rasite diagramą su praturtintų klientų profilių skaičiumi laikui bėgant ir praturtintų subjektų peržiūromis. Peržiūrėkite papildytus duomenis pasirinkdami **Matyti daugiau** diagramose **"Affinity Level"** arba **"Share of Voice"**. Praturtinti prekių ženklų duomenys atitenka **"BrandAffinityFromMicrosoft"** ir **"BrandShareOfVoiceFromMicrosoft"** subjektams. Interesų duomenys yra **"InterestAffinityFromMicrosoft"** ir **"InterestShareOfVoiceFromMicrosoft"** subjektuose. Šiuos objektus taip pat rasite grupėje **Papildymas**, esančioje **Duomenys** > **Objektai**.
+Rezultatai apima **afiniteto lygį** arba **balso** bendrinimo diagramas.
+
+Objektai, sukurti iš sodrinimo, yra įtraukti į **duomenų** subjektų **sodrinimo** > **grupę**. Praturtinti prekių ženklų duomenys atitenka **"BrandAffinityFromMicrosoft"** ir **"BrandShareOfVoiceFromMicrosoft"** subjektams. Interesų duomenys yra **"InterestAffinityFromMicrosoft"** ir **"InterestShareOfVoiceFromMicrosoft"** subjektuose.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Žr. papildymo duomenis kliento kortelėje
 

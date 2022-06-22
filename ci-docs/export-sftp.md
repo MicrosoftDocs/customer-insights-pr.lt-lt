@@ -1,19 +1,19 @@
 ---
 title: Eksportuoti "Customer Insights" duomenis į SFTP pagrindinius kompiuterius (yra vaizdo įrašas)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į SFTP vietą.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643237"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947194"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmentų ir kitų duomenų eksportavimas į SFTP (peržiūros versija)
 
@@ -28,8 +28,8 @@ Savo kliento duomenis trečiųjų šalių programose naudokite eksportuodami juo
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
 - SFTP paskirties vietos užkardų šiuo metu nepalaikomos. 
-- Eksportavimo trukmė priklauso nuo sistemos efektyvumo. Kaip minimalią serverio konfigūraciją rekomenduojame naudoti du procesorius IR 1 GB atminties. 
-- Objektų, kurių klientų profiliai yra iki 100 milijonų, eksportavimas gali užtrukti 90 minučių naudojant rekomenduojamą minimalią dviejų procesorių IR 1 GB atminties konfigūraciją. 
+- Eksportavimo trukmė priklauso nuo sistemos efektyvumo. Kaip minimalią serverio konfigūraciją rekomenduojame naudoti du procesorius IR 1 GB atminties.
+- Objektų, kurių klientų profiliai yra iki 100 milijonų, eksportavimas gali užtrukti 90 minučių naudojant rekomenduojamą minimalią dviejų procesorių IR 1 GB atminties konfigūraciją.
 
 ## <a name="set-up-connection-to-sftp"></a>Ryšio su SFTP nustatymas
 
@@ -64,13 +64,17 @@ Savo kliento duomenis trečiųjų šalių programose naudokite eksportuodami juo
 1. Pažymėkite objektus, pvz.: segmentus, kuriuos norite eksportuoti.
 
    > [!NOTE]
-   > Eksportavus, kiekvienas pažymėtas objektas padalijamas į penkis išvesties failus. 
+   > Eksportavus, kiekvienas pažymėtas objektas padalijamas į penkis išvesties failus.
 
 1. Pasirinkite **Įrašyti**.
 
 Eksportavimo įrašymas eksportavimo iš karto nevykdo.
 
-Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
+Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab).
+Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> Objektų, kuriuose yra daug duomenų, eksportavimas gali sukelti kelis CSV failus tame pačiame aplanke kiekvienam eksportavimui. Eksporto skaidymas vyksta dėl našumo priežasčių, kad būtų sumažintas laikas, kurio reikia eksportui užbaigti.
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
