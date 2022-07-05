@@ -1,5 +1,5 @@
 ---
-title: Eksportuoti „Customer Insights“ duomenis į „Marketo“
+title: Segmentų eksportavimas į „Marketo“ (peržiūra)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Marketo“.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7354b0aeafbe95e60d172b16c26d83c5dc25fb96
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8cd24cf436bd5fdfd4ec3834d35baa1495e37ca4
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643953"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053215"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmentų eksportavimas į „Marketo“ (peržiūra)
 
@@ -63,7 +63,7 @@ Eksportuokite suvienodintų klientų profilio segmentus siekiant sugeneruoti kam
 
 1. Įveskite savo **[„Marketo“ sąrašo ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. Sąrašo ID yra grynai skaitinė vertė. Pavyzdžiui, jei jūsų „Marketo” sąrašo ID yra ST12345A7, pašalinkite neskaitinius simbolius ir įveskite `12345`. 
 
-1. Skyriuje Duomenų atitikimas **pasirinkite** bent vieną lauką, nurodantį kliento el. pašto adresą arba kliento "Marketo ID". 
+1. Sekcijoje **Duomenų atitikimas** pasirinkite bent vieną lauką, kuris nurodo kliento el. pašto adresą arba kliento Marketo ID. 
 
 1. Taip pat galite eksportuoti **vardą**, **pavardę**, **miestą**, **valstiją** ir **šalį / regioną**, jei norite sukurti labiau personalizuotus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
 

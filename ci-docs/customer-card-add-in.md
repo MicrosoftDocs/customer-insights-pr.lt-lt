@@ -1,6 +1,6 @@
 ---
-title: "\"Dynamics 365\" taikomųjų programų \"Customer Card\" papildinys (yra vaizdo įrašo)"
-description: Rodyti kliento profilio duomenis iš "Customer Insights" "Dynamics 365" programose su šiuo priedu.
+title: "\"Dynamics 365\" programų (peržiūros versija) kliento kortelės papildinys (jame yra vaizdo įrašas)"
+description: Rodyti klientų profilio duomenis iš "Customer Insights" "Dynamics 365" programose su šiuo papildiniu.
 ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755646"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082138"
 ---
-# <a name="customer-card-add-in-preview"></a>Papildinys Kliento kortelė (peržiūra)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Kliento kortelės papildinys, skirtas "Dynamics 365" programoms (peržiūra)
 
 Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ programose. Įdiegę kliento kortelės papildinį palaikomoje „Dynamics 365" programoje, galite pasirinkti rodyti klientų profilio laukus, įžvalgas ir veiklos laiko planavimo juostą. Papildinyje duomenys bus nuskaityti iš „Customer Insights” nepaveikiant duomenų prijungtoje „Dynamics 365” programoje.
 
@@ -29,14 +29,14 @@ Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ prog
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Papildinys veikia tik su „Dynamics 365” modeliu pagrįstomis programomis, pavyzdžiui, „Sales” arba „Customer Service” 9.0 arba naujesne versija.
-- Kad jūsų "Dynamics 365" duomenys būtų susieti su "Customer Insights" [klientų profiliais, rekomenduojame juos nuryti naudojant "Dynamics 365" taikomąją programą naudojant Microsoft Dataverse jungtį](connect-power-query.md). Jei "Dynamics 365" kontaktams (arba abonementams) nuryti naudojate kitą metodą, turite įsitikinti `contactid`, kad laukas (arba`accountid`) yra nustatytas kaip [pagrindinis to duomenų šaltinis raktas duomenų suvienijimo proceso žemėlapio žingsnyje](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
-- Visi "Dynamics 365" kliento kortelės priedo vartotojai turi būti [įtraukti kaip vartotojai](permissions.md) programoje "Customer Insights", kad matytų duomenis.
-- [Norint, kad duomenų peržvalga veiktų, reikia sukonfigūruotų "Customer Insights" ieškos ir filtravimo galimybių](search-filter-index.md).
-- Kiekvienas priedo valdiklis remiasi konkrečiais "Customer Insights" duomenimis. Kai kuriuos duomenis ir valdiklius galima naudoti tik konkrečių tipų aplinkose. Priedo konfigūracija informuos jus, jei valdiklis nepasiekiamas dėl pasirinkto aplinkos tipo. Sužinokite daugiau apie [aplinkos naudojimo atvejus](work-with-business-accounts.md).
+- Kad jūsų "Dynamics 365" duomenys būtų susieti su "Customer Insights" klientų profiliais, rekomenduojame juos [nuryti iš "Dynamics 365" programos naudojant jungtį Microsoft Dataverse](connect-power-query.md). Jei naudojate kitą metodą, kad nurytumėte "Dynamics 365" kontaktus (arba abonementus), turite įsitikinti, kad `contactid` laukas (arba `accountid`) yra nustatytas kaip [pagrindinis raktas tam duomenų šaltinis duomenų suvienijimo proceso susiejimo veiksme](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Visi "Dynamics 365" kliento kortelės papildinio vartotojai turi būti [įtraukti kaip "Customer Insights" vartotojai](permissions.md), kad matytų duomenis.
+- [Sukonfigūruotos ieškos ir filtravimo galimybės](search-filter-index.md) "Customer Insights" yra būtinos, kad duomenų peržvalga veiktų.
+- Kiekvienas papildinio valdiklis priklauso nuo konkrečių "Customer Insights" duomenų. Kai kuriuos duomenis ir valdiklius galima naudoti tik konkrečių tipų aplinkose. Papildinio konfigūracija informuos jus, jei valdiklis nepasiekiamas dėl pasirinkto aplinkos tipo. Sužinokite daugiau apie [aplinkos naudojimo atvejus](work-with-business-accounts.md).
   - **Matavimo valdiklis**: reikia [sukonfigūruotų kliento](measures.md) atributų tipo matų.
-  - **Duomenų valdymas**: reikia duomenų, sugeneruotų naudojant [prognozes arba pasirinktinius modelius](predictions-overview.md).
+  - **Įžvalgų valdymas**: reikia duomenų, generuojamų naudojant [prognozes arba pasirinktinius modelius](predictions-overview.md).
   - **Išsamios kliento informacijos valdymas**: visi profilio laukai pasiekiami vieningoje kliento profilyje.
-  - **Papildymo valdiklis**: reikalingi aktyvieji [papildymai](enrichment-hub.md) pritaikyti klientų profiliams. Kortelės priedas palaiko šiuos praturtinimus: ["Microsoft" teikiamus prekių ženklus](enrichment-microsoft.md), ["Microsoft" pateiktus interesus](enrichment-microsoft.md) ir ["Microsoft" pateiktus "Office" įtraukimo duomenis](enrichment-office.md).
+  - **Papildymo valdiklis**: reikalingi aktyvieji [papildymai](enrichment-hub.md) pritaikyti klientų profiliams. Kortelės papildinys palaiko šiuos papildymus: ["Microsoft" teikiami prekių ženklai](enrichment-microsoft.md), ["Microsoft" teikiami pomėgiai](enrichment-microsoft.md) ir ["Microsoft" pateikti "Office" įtraukimo duomenys](enrichment-office.md).
   - **Kontaktų valdiklis**: būtinas kontaktų tipo semantinio objekto aprašas.
   - **Laiko juostos valdymas**: Jam būtinos [konfigūruotos veiklos](activities.md).
 
@@ -77,7 +77,7 @@ Norint įdiegti sprendimą gali reikėti prisijungti naudojant „Dynamics 365�
 
 ## <a name="add-customer-card-controls-to-forms"></a>Įtraukite kliento kortelės valdiklius į formas
 
-Atsižvelgdami į savo scenarijų, galite įtraukti valdiklius į **Kontakto** formą ar **Kliento** formą. Jei jūsų "Customer Insights" aplinka skirta verslo abonementams, rekomenduojame įtraukti valdiklius į paskyros formą. Tokiu atveju toliau pateikiamuose žingsniuose pakeiskite „kontaktą" į „paskyrą."
+Atsižvelgdami į savo scenarijų, galite įtraukti valdiklius į **Kontakto** formą ar **Kliento** formą. Jei jūsų "Customer Insights" aplinka skirta verslo paskyroms, rekomendavome įtraukti valdiklius į formą Paskyra. Tokiu atveju toliau pateikiamuose žingsniuose pakeiskite „kontaktą" į „paskyrą."
 
 1. Norėdami kliento kortelės valdiklius įtraukti į savo kontakto formą, programoje „Dynamics 365“ eikite į **Parametrai** > **Tinkinimai**.
 
@@ -122,24 +122,24 @@ Kliento kortelės papildymas automatiškai neatsijungia. Norėdami atnaujinti į
 
 ## <a name="troubleshooting"></a>Trikčių šalinimas
 
-### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Valdikliai iš kliento kortelės priedo neranda duomenų
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Valdikliai iš kliento kortelės papildinio nerasti duomenų
 
 **Problema:**
 
-Net ir su teisingai sukonfigūruotais ID laukais valdikliai negali rasti duomenų jokiam klientui.  
+Net ir teisingai sukonfigūravus ID laukus, valdikliai negali rasti jokio kliento duomenų.  
 
 **Sprendimas.**
 
-1. Įsitikinkite, kad sukonfigūravote kortelės priedą pagal instrukcijas: [Konfigūruokite Pirkėjo kortelės priedą](#configure-the-customer-card-add-in)
+1. Įsitikinkite, kad sukonfigūravote kortelės papildinį pagal instrukcijas: [Kliento kortelės papildinio konfigūravimas](#configure-the-customer-card-add-in)
 
-1. Peržiūrėkite duomenų nurijimo konfigūraciją. Redaguokite "Dynamics 365" sistemos, kurioje yra kontakto ID GUID, duomenų šaltinis. Jei rengyklėje Power Query rodomas kontakto ID GUID su didžiosiomis raidėmis, pabandykite atlikti šiuos veiksmus:
-    1. Redaguokite duomenų šaltinis, kad atidarytumėte duomenų šaltinis rengyklėje Power Query.
-    1. Pasirinkite kontakto ID stulpelį.
+1. Peržiūrėkite duomenų gavimo konfigūraciją. Redaguokite "Dynamics 365" sistemos, kurioje yra kontakto ID GUID, duomenų šaltinis. Jei kontakto ID GUID redaktoriuje Power Query rodomas didžiosiomis raidėmis, pabandykite atlikti šiuos veiksmus:
+    1. Redaguokite duomenų šaltinis, kad atidarytumėte duomenų šaltinis redaktoriuje Power Query.
+    1. Pasirinkite kontaktų ID stulpelį.
     1. Antraštės juostoje pasirinkite **Transformuoti**, kad pamatytumėte galimus veiksmus.
-    1. Pasirinkite **mažąsias raides**. Patikrinkite, ar lentelės GUID dabar yra mažieji.
+    1. Pasirinkite **mažąsias raides**. Patikrinkite, ar lentelėje esantys GUID dabar rašomi mažosiomis raidėmis.
     1. Įrašykite duomenų šaltinį.
-    1. Paleiskite duomenų nurijimo, suvienijimo ir vartotojų grandies procesus, kad būtų galima platinti GUID pakeitimus.
+    1. Paleiskite duomenų nurijimo, suvienijimo ir pasroviui procesus, kad skleistumėte GUID pakeitimus.
 
-Sistemai baigus visiškai atnaujinti, kliento kortelės priedo valdikliai turėtų rodyti laukiamus duomenis.
+Kai sistema baigs visą atnaujinimą, kliento kortelės papildinio valdikliuose turėtų būti rodomi laukiami duomenys.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,5 +1,5 @@
 ---
-title: "\"Customer Insights\" duomenų eksportavimas į Facebook skelbimų tvarkytuvą (yra vaizdo įrašo)"
+title: Segmentų eksportavimas į Facebook skelbimų tvarkytuvę (peržiūra) (yra vaizdo įrašų)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į Facebook „Ads Manager“.
 ms.date: 04/15/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f610ab1af83bfd512ec1861e7dc76ebb2eecfcbb
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643788"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082978"
 ---
-# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Segmentų sąrašo eksportavimas į Facebook „Ads Manager“ (peržiūra)
+# <a name="export-segments-to-facebook-ads-manager-preview"></a>Segmentų eksportavimas į Facebook skelbimų tvarkytuvę (peržiūra)
 
 Eksportuokite sujungtų klientų profilių segmentus į „Facebook“ reklamos tvarkytuvą, kad sukurtumėte kampanijas „Facebook“ ir „Instagram“.
 

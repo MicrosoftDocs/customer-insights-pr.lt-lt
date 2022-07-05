@@ -1,5 +1,5 @@
 ---
-title: „Power Apps“ jungtis
+title: „Power Apps“ jungtis (peržiūra)
 description: Susijunkite su „Power Apps“ ir „Power Automate“.
 ms.date: 10/01/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e99d7d4f231eb2ade67f27c9e52c61af3a21b99d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 0b71f723d1e491d422d24b1be6616d2f33c95d40
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643948"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055270"
 ---
-# <a name="microsoft-power-apps-connector-preview"></a>„Microsoft Power Apps“ jungtis (peržiūra)
+# <a name="power-apps-connector-preview"></a>„Power Apps“ jungtis (peržiūra)
 
-Perkelkite sujungtus klientų profilius į individualizuotas programas naudodami „Power Apps“.
+Perkelkite sujungtus klientų profilius į individualizuotas programas naudodami „Microsoft Power Apps“.
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Susijunkite su „Power Apps“ ir „Dynamics 365 Customer Insights“
 
@@ -31,15 +31,15 @@ Perkelkite sujungtus klientų profilius į individualizuotas programas naudodami
 
 - **Klientas**: norėdami naudoti duomenis iš  [sujungto kliento profilio](customer-profiles.md).
 - **UnifiedActivity** : programoje rodoma [veiklos laiko planavimo](activities.md) juosta.
-- **ContactProfile** : rodyti kliento kontaktus. Šis objektas pasiekiamas tik verslo klientų įžvalgų aplinkose.
+- **ContactProfile** : rodyti kliento kontaktus. Šis objektas pasiekiamas tik verslo paskyrų "Customer Insights" aplinkose.
 
 ## <a name="limitations"></a>Apribojimai
 
 ### <a name="retrievable-entities"></a>Gaunamieji objektai
 
-Per jungtį galite nuskaityti **Klientas**, **UnifiedActivity**, **Segmentai**, ir **ContactProfile** laukus per „Power Apps“ jungtį. ContactProfile galimas tik "Customer Insights" verslo klientų egzemplioriuje. Kiti objektai rodomi, nes pagrindinė jungtis juos palaiko per „Power Automate“ paleidiklius.
+Per jungtį galite nuskaityti **Klientas**, **UnifiedActivity**, **Segmentai**, ir **ContactProfile** laukus per „Power Apps“ jungtį. "ContactProfile" pasiekiamas tik "Customer Insights" egzemplioriuje, skirtame verslo paskyroms. Kiti objektai rodomi, nes pagrindinė jungtis juos palaiko per „Power Automate“ paleidiklius.
 
-Galite atlikti ne daugiau kaip 100 skambučių per 60 sekundžių. Naudodami parametrą $skip, API galinį punktą galite skambinti kelis kartus. [Sužinokite daugiau apie $skip parametrą](/connectors/customerinsights/#get-items-from-an-entity).
+Galite atlikti ne daugiau kaip 100 skambučių per 60 sekundžių. Api galinį punktą galite iškviesti kelis kartus naudodami parametrą $skip. [Sužinokite daugiau apie parametrą $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Perdavimas
 
@@ -47,7 +47,7 @@ Perdavimo funkcija veikia su objektais **Klientas** ir **Sujungta veikla**.
 
 - **Kliento** objekto perdavimas: Šio objekto perdavimo naudojimui, laukeliai turi būti sužymėti [Paieškos ir filtravimo turinyje](search-filter-index.md).  
 - **UnifiedActivity** perdavimas: šiame objekte perdavimo funkcija veikia tik su laukais **ActivityId** ir **CustomerId**.  
-- **ContactProfile** perdavimas: šio objekto indų indavimas veikia tik laukuose **ContactId** ir **CustomerId**. ContactProfile galimas tik verslo klientų "Customer Insights" aplinkose.
+- **ContactProfile** perdavimas: šio objekto indų indavimas veikia tik laukuose **ContactId** ir **CustomerId**. "ContactProfile" pasiekiamas tik verslo paskyrų "Customer Insights" aplinkose.
 
 Norėdami gauti daugiau informacijos apie pervaldavimą, [„Power Apps“ eikite į deavaluojamas funkcijas ir operacijas](/powerapps/maker/canvas-apps/delegation-overview). 
 

@@ -1,5 +1,5 @@
 ---
-title: Eksportuoti „Customer Insights“ duomenis į „Dynamics 365 Sales“
+title: Segmentų eksportavimas į "Dynamics 365 Sales" (peržiūra)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Dynamics 365 Sales“.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -11,30 +11,28 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 987690283090ec83ca75f50bf8f3cd8da9295887
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8e756313ca037dca41cb25587229808f0c584c9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643314"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082390"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>„Dynamics 365 Sales“ segmentų naudojimas (peržiūra)
-
-
+# <a name="export-segments-to-dynamics-365-sales-preview"></a>Segmentų eksportavimas į "Dynamics 365 Sales" (peržiūra)
 
 Naudokite savo klientų duomenis kurdami rinkodaros sąrašus, vykdydami darbo eigas ir siųsdami pasiūlymus su „Dynamics 365 Sales“.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Eksportavimas į "Dynamics 365 Sales" ribojamas iki 100 000 narių kiekviename segmente.
-- Segmento eksportavimas į "Dynamics 365 Sales" gali užtrukti iki 3 valandų. 
+- Eksportavimas į "Dynamics 365 Sales" ribojamas iki 100 000 narių viename segmente.
+- Segmentų eksportavimas į "Dynamics 365 Sales" gali užtrukti iki 3 valandų. 
 
 ## <a name="prerequisite-for-connection"></a>Būtinoji ryšio sąlyga
 
-1. Kontaktų įrašai turi būti „Dynamics 365 Sales”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Sales”. Skaitykite daugiau apie tai, kaip nuryti kontaktus iš ["Dynamics 365 Sales" naudojant Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Kontaktų įrašai turi būti „Dynamics 365 Sales”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Sales”. Skaitykite daugiau apie tai, kaip praryti kontaktus iš ["Dynamics 365 Sales" naudojant Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
-   > Segmentų eksportavimas iš "Customer Insights" į "Sales" nesukurs naujų kontaktų įrašų pardavimo egzemplioriuose. Kontaktų įrašai iš Pardavimų turi būti praryti "Customer Insights" ir naudojami kaip duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.
+   > Segmentų eksportavimas iš "Customer Insights" į "Sales" nesukurs naujų kontaktų įrašų pardavimo egzemplioriuose. Kontaktų įrašai iš "Sales" turi būti praryti "Customer Insights" ir naudojami kaip duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.
 
 ## <a name="set-up-the-connection-to-sales"></a>„Sales“ ryšio sąranka
 

@@ -1,5 +1,5 @@
 ---
-title: Prisijunkite nemokamam bandymui - Dynamics 365 Customer Insights
+title: Registracija norint naudoti „Dynamics 365 Customer Insights” nemokamą bandomąją versiją
 description: Sužinokite, kaip greitai užsiregistruoti ir pradėti nemokamai naudotis „Customer Insights“ bandomąja versija. Susipažinkite su programa naudodami apžvalgas ir vaizdo įrašus bei raskite papildomų mokymosi išteklių.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641726"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082495"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Registracija norint naudoti „Dynamics 365 Customer Insights” nemokamą bandomąją versiją
 
@@ -21,7 +21,7 @@ Siūloma nemokama 30 dienų „Customer Insights“ bandomoji versija. Greitai u
 
 **Norėdami užsiregistruoti bandomajai versijai gauti**:
 
-1. Eikite į bandomąjos [peržiūros puslapį](https://dynamics.microsoft.com/ai/customer-insights/) ir pasirinkite **Nemokamai išbandyti "Customer Insights"**.
+1. Eikite [į bandomosios versijos apžvalgos puslapį](https://dynamics.microsoft.com/ai/customer-insights/) ir pasirinkite **Išbandyti "Customer Insights" nemokamai**.
 1. Vykdykite ekrane pateikiamus nurodymus ir įveskite [el. pašto adresą, susietą su jūsų „Microsoft” abonementu,](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa) bei kontaktinę informaciją.
 1. Pažymėkite ir pasirinkite, į kurią galimybę norite susitelkti, kol pereisite į pažymėtos galimybės pradžios puslapį.
 
@@ -31,7 +31,7 @@ Bandomoji versija įkeliama keletą minučių ir tada galite pradėti naudoti pr
 
 Bandomosios versijos aplinkoje yra daug tų pačių funkcijų kaip ir mokamoje versijoje. Pasinaudodami toliau nurodytais saitais, galite sužinoti daugiau apie kai kurias iš pagrindinių funkcijų.
 
-- [Pradėkite nuo "Customer Insights".](get-started.md)
+- [Pradėkite naudoti "Customer Insights".](get-started.md)
 - [Įtraukite daugiau vartotojų ir priskirkite teises.](permissions.md)
 - [Įtraukite savo duomenų šaltinius](data-sources.md) ir paleiskite juos per [duomenų suvienodinimo procesą](data-unification.md), kad gautumėte [suvienodintus klientų profilius](customer-profiles.md).
 - [Papildykite vieninguosius klientų profilius](enrichment-hub.md) arba [paleiskite numatomus modelius](predictions-overview.md).

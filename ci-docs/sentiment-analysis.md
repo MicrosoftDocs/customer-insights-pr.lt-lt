@@ -1,6 +1,6 @@
 ---
-title: Klientų atsiliepimų nuotaikų analizė
-description: Sužinokite, kaip naudoti jausmų analizės modelį klientų atsiliepimams programoje Dynamics 365 Customer Insights.
+title: Klientų atsiliepimų nuotaikų analizavimas (peržiūra)
+description: Sužinokite, kaip naudoti nuotaikų analizės modelį klientų atsiliepimuose Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -8,36 +8,36 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e51225bbfcd445180b12661cba12256c3f042045
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af1afd3eff8a795a9e199b1c1d411b79dc2841b4
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643528"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055546"
 ---
-# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Klientų atsiliepimų nuotaikų analizė (Peržiūra)
+# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Klientų atsiliepimų nuotaikų analizavimas (peržiūra)
 
-Šiais laikais klientai tikisi aukštos kokybės produktų, paslaugų ir patirties. Ypač klientams, kurie dalijasi savo atsiliepimais. Organizacijoms labai sunku analizuoti didėjantį duomenų kiekį, nesumažinant tikslumo ir didesnių darbo sąnaudų. Dynamics 365 Customer Insights siūlo klientų atsiliepimų sentimentų analizės modelį, kuris leidžia organizacijoms tiksliau ir mažesnėmis sąnaudomis analizuoti savo duomenis.
+Šiais laikais klientai tikisi aukštos kokybės produktų, paslaugų ir potyrių. Ypač klientai, kurie dalijasi savo atsiliepimais. Organizacijoms labai sudėtinga analizuoti didėjantį duomenų kiekį nesumažinant tikslumo ir didesnių darbo sąnaudų. Dynamics 365 Customer Insights siūlo klientų atsiliepimų nuotaikų analizės modelį, leidžiantį organizacijoms tiksliau ir mažesnėmis sąnaudomis analizuoti savo duomenis.
 
-Sentimentų analizė leidžia sintetinti klientų nuotaikas ir nustatyti verslo aspektus kaip tobulėjimo galimybes. Ši "Customer Insights" funkcija padeda suprasti, kas gerai veikia ir ką reikia spręsti. Sutelkite dėmesį į svarbiausias ir įtakingiausias verslo sritis, kad pagerintumėte savo klientų patirtį. Galų gale, tai gali padėti jums vairuoti verslo veiksmus, kurie leidžia patirtį, kuri lemia didelį klientų pasitenkinimą ir lojalumą.
+Nuotaikų analizė leidžia susintetinti klientų nuotaikas ir nustatyti verslo aspektus kaip tobulėjimo galimybes. Ši "Customer Insights" funkcija padeda suprasti, kas veikia gerai ir į ką reikia atkreipti dėmesį. Sutelkite dėmesį į aktualiausias ir paveikiausias verslo sritis, kad pagerintumėte savo klientų patirtį. Galų gale tai gali padėti jums paskatinti verslo veiksmus, kurie įgalina patirtį, užtikrinančią didelį klientų pasitenkinimą ir lojalumą.
 
 ## <a name="overview"></a>Apžvalga
 
-Sentimentų analizės funkcija generuoja dvi išvestines įžvalgas pagal kliento ID. Sentimentų balas (nuo -5 iki 5) ir taikomų verslo aspektų (verslo sričių) sąrašas kartu padeda geriau suprasti klientų atsiliepimus. 
+Nuotaikų analizės funkcija generuoja dvi išvestines įžvalgas pagal kliento ID. Nuotaikų balas (nuo -5 iki 5) ir taikomų verslo aspektų (verslo sričių) sąrašas kartu padeda geriau suprasti klientų atsiliepimus. 
 
 Ši informacija gali padėti pasiekti šiuos rezultatus: 
-- Gaukite klientų nuotaikų apie prekės ženklą ar organizaciją apžvalgą
-- Nustatykite klientus, turinčius neigiamų nuotaikų, kad sutelktumėte kampanijas ir užduotis bei optimizuotumėte didesnę grąžą  
+- Gaukite klientų nuotaikų prekės ženklui ar organizacijai apžvalgą
+- Identifikuokite klientus, turinčius neigiamų nuotaikų, kad sutelktumėte kampanijas ir įtraukimus ir optimizuotumėte, kad gautumėte didesnę grąžą  
 - Nustatykite verslo aspektus su klientų nurodytomis problemomis  
-- Segmentuoti klientus pagal jų nuotaikas vykdyti suasmenintas kampanijas su tiksliniais pardavimais, rinkodara ir palaikymo pastangomis
-- Optimizuoti verslo operacijas sprendžiant klientų paminėtas susirūpinimą keliančias sritis ar galimybes
-- Pripažinkite verslo aspektus, kuriems sekasi gerai, ir apdovanokite laimingus klientus per lojalumo ir reklamos programas
+- Segmentuokite klientus pagal jų norą vykdyti suasmenintas kampanijas su tiksliniais pardavimais, rinkodara ir palaikymo pastangomis
+- Optimizuokite verslo operacijas, spręsdami klientų paminėtas susirūpinimą keliančias ar galimybes
+- Pripažinkite verslo aspektus, kuriems sekasi gerai, ir apdovanokite laimingus klientus per lojalumo ir skatinimo programas
 
-Siekdami užtikrinti, kad galėtumėte pasitikėti modelių rezultatais, teikiame skaidrią informaciją apie tai, kaip modeliai priima sprendimus. Gausite žodžių, kurie turėjo įtakos modelių sprendimui priskirti tam tikrą sentimentų balą ar verslo aspektą atsiliepimų komentarams, sąrašą.  
+Siekdami užtikrinti, kad galėtumėte pasitikėti modelių rezultatais, teikiame skaidrią informaciją apie tai, kaip modeliai priima sprendimus. Gausite sąrašą žodžių, kurie turėjo įtakos modelių sprendimui priskirti tam tikrą nuotaikos balą arba verslo aspektą atsiliepimų komentarams.  
 
-Mes naudojame du **natūralios kalbos apdorojimo (NLP) modelius**: pirmasis priskiria kiekvienam atsiliepimų komentarui sentimento balą. Antrasis modelis susieja kiekvieną grįžtamąjį ryšį su visais taikomais verslo aspektais. Modeliai yra mokomi apie viešuosius duomenis iš šaltinių socialinėje žiniasklaidoje, mažmeninėje prekyboje, restoranuose, vartojimo produktuose ir automobilių pramonėje.    
+Mes naudojame du **natūralios kalbos apdorojimo (NLP) modelius**: pirmasis kiekvienam grįžtamojo ryšio komentarui priskiria sentimentų balą. Antrasis modelis susieja kiekvieną atsiliepimą su visais taikomais verslo aspektais. Modeliai mokomi pagal viešus duomenis iš šaltinių socialinėje žiniasklaidoje, mažmeninėje prekyboje, restoranuose, vartojimo produktuose ir automobilių pramonėje.    
   
-Iš anksto nustatyti modelio verslo aspektai, susieti su grįžtamojo ryšio duomenimis, apima:
+Iš anksto apibrėžti verslo aspektai, kuriuos modelis susieja su grįžtamojo ryšio duomenimis, yra šie:
 -   Klientų valdymas
 -   Pirkimo užbaigimas ir apmokėjimas
 -   Klientų aptarnavimas
@@ -53,60 +53,60 @@ Iš anksto nustatyti modelio verslo aspektai, susieti su grįžtamojo ryšio duo
 -   Svetainės / programos kokybė
 
 > [!NOTE]
-> Šiuo metu mes palaikome tik Anglijos klientų atsiliepimų nuotaikų analizę. Ateityje bus palaikoma daugiau kalbų. Jei grįžtamasis ryšys kitomis kalbomis bus įkeltas, modelis vis tiek grąžins rezultatus. Tačiau šie rezultatai nebus tikslūs. 
+> Šiuo metu mes palaikome tik anglų kalbos klientų atsiliepimų nuotaikų analizę. Ateityje bus palaikoma daugiau kalbų. Jei įkeliami atsiliepimai kitomis kalbomis, modelis vis tiek pateiks rezultatus. Tačiau šie rezultatai nebus tikslūs. 
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-Sentimentų analizė grindžiama tekstinio grįžtamojo ryšio duomenimis, kurie praėjo duomenų [suvienijimo procesą](data-unification.md). Labai rekomenduojame [iš anksto sukonfigūruoti atsiliepimų duomenų objektus kaip semantinio tipo veiklos objektus](map-entities.md#select-primary-key-and-semantic-type-for-attributes) (atsiliepimo tipas). 
+Nuotaikų analizė pagrįsta teksto grįžtamojo ryšio duomenimis, kurie išgyveno [duomenų suvienijimo procesą](data-unification.md). Labai rekomenduojame [iš anksto sukonfigūruoti atsiliepimų duomenų objektus kaip semantinio tipo veiklos objektus](map-entities.md#select-primary-key-and-semantic-type-for-attributes) (atsiliepimų tipą). 
 
-Norėdami konfigūruoti jausmų analizės modelį, turite bent jau [bendraautoriaus teises](permissions.md).
+Norint sukonfigūruoti nuotaikų analizės modelį, jums reikia bent bendraautorio [teisių](permissions.md).
 
-"Customer Insights" gali apdoroti iki 10 milijonų atsiliepimų įrašų vienam modeliui paleisti. Modelis gali analizuoti atsiliepimų komentarus iki 128 žodžių. Jei atsiliepimų komentaras yra ilgesnis, analizėje atsižvelgiama tik į pirmuosius 128 žodžius.
+"Customer Insights" gali apdoroti iki 10 milijonų atsiliepimų įrašų vienam vykdomam modeliui. Modelis gali analizuoti atsiliepimų komentarus iki 128 žodžių. Jei grįžtamojo ryšio komentaras yra ilgesnis, analizėje atsižvelgiama tik į pirmuosius 128 žodžius.
 
 ### <a name="data-requirements"></a>Duomenų reikalavimai
   
 Reikalingi šie duomenų atributai:
-- Vieningas kliento ID (UCID), kad tekstinio grįžtamojo ryšio duomenų įrašai atitiktų atskirą klientą. Šis ID yra duomenų suvienijimo [proceso](data-unification.md) rezultatas.
+- Vieningasis kliento ID (UCID), skirtas susieti tekstinių atsiliepimų duomenų įrašus su atskiru klientu. Šis ID yra duomenų suvienijimo [proceso](data-unification.md) rezultatas.
 - Atsiliepimo ID
-- Grįžtamojo ryšio laiko žyma
+- Atsiliepimų laiko žyma
 - Atsiliepimo tekstas   
 
 > [!TIP]
-> Sentimentų analizė reikalauja jūsų klientų teksto atsiliepimų. Šiuo metu galima konfigūruoti tik vieną grįžtamojo ryšio objektą. Jei yra keli grįžtamojo ryšio objektai, galite juos Power Query susieti prieš pradedant duomenų nurijimą.
+> Nuotaikų analizei reikia jūsų klientų teksto atsiliepimų. Šiuo metu galima konfigūruoti tik vieną atsiliepimų objektą. Jei yra keli grįžtamojo ryšio objektai, galite juos sujungti prieš pradėdami Power Query duomenų įsisavinimą.
 
-## <a name="configure-a-sentiment-analysis"></a>Jausmų analizės konfigūravimas 
+## <a name="configure-a-sentiment-analysis"></a>Nuotaikų analizės konfigūravimas 
 
 1. Programoje „Customer Insights” eikite į **Įžvalga** > **Prognozės**.
 
-1. Plytelėje **Kliento jausmų analizė** pasirinkite **Naudoti modelį**.
+1. Plytelėje **Kliento nuotaikų analizė** pasirinkite **Naudoti modelį**.
 
-1. **Srityje Klientų sentimentų analizė (peržiūra)** pasirinkite **Pradėti**.
+1. **Srityje Klientų nuotaikų analizė (peržiūra)** pasirinkite **Darbo pradžia**.
 
-1. Žingsnyje **Modelio pavadinimas** pateikite **analizės pavadinimą**. 
+1. Atlikdami veiksmą Modelio pavadinimas pateikite **analizės pavadinimą**.**·** 
 
-1. Pateikite verslo aspekto **išvesties objekto pavadinimą** ir sentimentų balo **išvesties objekto pavadinimą**, tada pasirinkite **Pirmyn**.
+1. Pateikite verslo aspekto **išvesties objekto pavadinimą** ir nuotaikos balo išvesties objekto **pavadinimą**, tada pasirinkite **Pirmyn**.
 
-1. Žingsnyje **Būtini duomenys** pasirinkite **Įtraukti duomenis**.
+1. Atlikdami veiksmą **Privalomieji duomenys** pasirinkite **Įtraukti duomenis**.
 
-   :::image type="content" source="media/sentiment-add-data.png" alt-text="Įtraukite duomenų srautą į sentimentų analizės modelį.":::
+   :::image type="content" source="media/sentiment-add-data.png" alt-text="Įtraukite duomenų srautą į nuotaikų analizės modelį.":::
 
 1. **Srityje Įtraukti duomenis** iš sąrašo pasirinkite semantinį tipą **Atsiliepimai**.
 
-   :::image type="content" source="media/sentiment-add-feedback-activities.png" alt-text="Konfigūravimo veiksmas, skirtas pasirinkti grįžtamojo ryšio veiklas jausmų analizei.":::
+   :::image type="content" source="media/sentiment-add-feedback-activities.png" alt-text="Konfigūracijos veiksmas, skirtas pasirinkti atsiliepimų veiklą nuotaikų analizei.":::
 
-1. Pasirinkite veiklas, kurios bus naudojamos šiai jausmų analizei, tada pasirinkite **Pirmyn**.
+1. Pasirinkite veiklas, kurias norite naudoti šiai nuotaikų analizei, tada pasirinkite **Pirmyn**.
  
-1. Susiekite duomenų atributus su modelio atributais. Pasirinkite **Įrašyti**, kad pritaikytumėte pasirinkimus. 
+1. Susiekite atributus savo duomenyse su modelio atributais. Pasirinkite **Išsaugoti**, kad pritaikytumėte savo pasirinkimus. 
 
 1. Matote duomenų susiejimo būseną. Norėdami tęsti, spustelėkite **Pirmyn**. 
 
-1. Žingsnyje **Peržiūrėti išsamią modelio informaciją** patvirtinkite sentimentų analizės konfigūraciją. Galite grįžti į bet kurią prognozė konfigūracijos dalį. Pasirinkite Įrašyti ir **paleiskite**, kad pradėtumėte analizę. 
+1. Atlikdami veiksmą **Peržiūrėti išsamią modelio informaciją**, patvirtinkite nuotaikų analizės konfigūraciją. Galite grįžti į bet kurią prognozė konfigūracijos dalį. Pasirinkite **Įrašyti ir paleiskite**, kad pradėtumėte analizę. 
 
-   :::image type="content" source="media/sentiment-model-review-config.png" alt-text="Sentimentų modelio, kuriame rodomi visi sukonfigūruoti elementai, peržiūros veiksmas.":::
+   :::image type="content" source="media/sentiment-model-review-config.png" alt-text="Nuotaikų modelio, kuriame rodomi visi sukonfigūruoti elementai, peržiūros veiksmas.":::
 
-1. Pasirinkite **Atlikta**, kad paliktumėte konfigūravimo patirtį. Procesas gali užtrukti kelias valandas, priklausomai nuo naudojamų duomenų kiekio. 
+1. Pasirinkite **Atlikta**, kad paliktumėte konfigūravimo patirtį. Procesas gali užtrukti kelias valandas, atsižvelgiant į naudojamų duomenų kiekį. 
 
-## <a name="review-analysis-status"></a>Peržiūrėti analizės būseną
+## <a name="review-analysis-status"></a>Peržiūros analizės būsena
 
 1.  Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
 2.  Pasirinkite prognozę, kurią norite peržiūrėti.
@@ -120,74 +120,74 @@ Reikalingi šie duomenų atributai:
   - **Nepavyko** : Prognozės vykdymas nepavyko. Peržiūrėkite įrašus dėl išsamesnės informacijos.
   - **Pavyko**: Prognozė pavyko. Pasirinkite Peržiūrėti po vertikaliomis elipsėmis prognozavimo rezultatų peržiūrai.
 - **Redaguota**: data, kai buvo pakeista prognozės konfigūracija.
-- **Paskutinį kartą atnaujinta**: data, kai prognozė atnaujino rezultatus išvesties objekte.
+- **Paskutinį kartą atnaujinta**: data, kada prognozė atnaujino rezultatus išvesties objekte.
 
-## <a name="manage-sentiment-analysis"></a>Valdyti jausmų analizę
+## <a name="manage-sentiment-analysis"></a>Nuotaikų analizės valdymas
 
-Galite optimizuoti, šalinti triktis, atnaujinti arba naikinti prognozes. Peržiūrėkite įvesties duomenų naudojimo ataskaitą ir sužinokite, kaip greičiau sukurti patikimesnę prognozę. Daugiau informacijos rasite [Prognozių valdymas](manage-predictions.md).
+Galite optimizuoti, šalinti triktis, atnaujinti arba naikinti numatymus. Peržiūrėkite įvesties duomenų naudojimo ataskaitą ir sužinokite, kaip greičiau sukurti patikimesnę prognozę. Daugiau informacijos rasite [Prognozių valdymas](manage-predictions.md).
 
-## <a name="review-analysis-results"></a>Peržiūrėti analizės rezultatus
+## <a name="review-analysis-results"></a>Peržiūrėkite analizės rezultatus
  
 1. Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką. 
-1. Pasirinkite prognozė, kurio rezultatus norite peržiūrėti, pavadinimą. Tokiu atveju pasirinkite jausmų analizę, kurią norite peržiūrėti. 
+1. Pasirinkite prognozė, kurio rezultatus norite peržiūrėti, pavadinimą. Tokiu atveju pasirinkite nuotaikų analizę, kurią norite peržiūrėti. 
 
 ### <a name="summary-tab"></a>Skirtukas Suvestinė
 
-Rezultatų puslapyje yra keturi pagrindiniai duomenų skyriai. 
+Rezultatų puslapyje yra keturios pagrindinės duomenų dalys. 
 
-- **Vidutinis sentimentų balas**: padeda suprasti bendrą visų klientų nuotaiką. Sentimentų balai skirstomi į tris kategorijas: 
+- **Vidutinis nuotaikų balas**: padeda suprasti bendrą visų klientų nuotaiką. Nuotaikų balai sugrupuoti į tris kategorijas: 
   1.    Neigiamas (-5 > 2)
   2.    Neutralus (-1 > 1)
   3.    Teigiamas (2 > 5) 
   
-  :::image type="content" source="media/overall-customer-sentiment.png" alt-text="Vizualus bendro klientų jausmo vaizdas.":::
+  :::image type="content" source="media/overall-customer-sentiment.png" alt-text="Vizualinis bendrų klientų nuotaikų vaizdavimas.":::
 
-- **Klientų pasiskirstymas pagal sentimentų balus**: Klientai skirstomi į neigiamas, neutralias ir teigiamas grupes pagal jų sentimentų balus. Užveskite pelės žymeklį virš histogramos juostų, kad pamatytumėte klientų skaičių ir vidutinį sentimentų balą kiekvienoje grupėje. Šie duomenys gali padėti jums [sukurti klientų](segments.md) segmentus pagal jų sentimentų balus.  
+- **Klientų pasiskirstymas pagal nuotaikų balą**: klientai skirstomi į neigiamas, neutralias ir teigiamas grupes pagal jų nuotaikų balus. Užveskite pelės žymeklį virš histogramos juostų, kad pamatytumėte klientų skaičių ir vidutinį nuotaikų balą kiekvienoje grupėje. Šie duomenys gali padėti [kurti klientų](segments.md) segmentus pagal jų nuotaikų balus.  
 
-  :::image type="content" source="media/distribution-customer-sentiment.png" alt-text="Juostinė diagrama, rodanti klientų nuotaikas visose trijose jausmų grupėse.":::
+  :::image type="content" source="media/distribution-customer-sentiment.png" alt-text="Juostinė diagrama, rodanti klientų nuotaikas trijose nuotaikų grupėse.":::
 
-- **Vidutinis sentimentų balas laikui bėgant**: klientų nuotaikos laikui bėgant gali pasikeisti. Mes pateikiame jūsų klientų nuotaikų tendencijas pagal jūsų duomenų laiko intervalą. Šis rodinys gali padėti įvertinti sezoninių akcijų, produktų pristatymo ar kitų laiko intervencijų poveikį klientų nuotaikoms. Peržiūrėkite grafiką pasirinkdami dominančius metus iš išplečiamojo meniu. 
+- **Vidutinis nuotaikų balas laikui** bėgant: klientų nuotaikos laikui bėgant gali keistis. Mes teikiame jūsų klientų nuotaikų tendencijas pagal jūsų duomenų laiko intervalą. Šis rodinys gali padėti įvertinti sezoninių reklamų, produktų pristatymų ar kitų per nustatytą laiką atliekamų intervencijų poveikį klientų nuotaikoms. Peržiūrėkite diagramą išskleidžiamajame meniu pasirinkdami dominančius metus. 
 
-  :::image type="content" source="media/sentiment-score-over-time.png" alt-text="Istorijos diagrama, kurios sentimentų balas laikui bėgant vaizduojamas kaip eilutė.":::
+  :::image type="content" source="media/sentiment-score-over-time.png" alt-text="Istorijos diagrama, kurioje nuotaikų balas laikui bėgant pateikiamas kaip eilutė.":::
  
-- **Nuotaikos visuose verslo aspektuose**: šioje lentelėje išvardijamos vidutinės nuotaikos visais verslo aspektais. Tai gali padėti jums įvertinti, kurie jūsų verslo aspektai jau tenkina klientus ar aspektus, kuriems reikia daugiau dėmesio. Grįžtamojo ryšio įrašai, kurie nesutampa su jokiais palaikomais verslo aspektais, skirstomi į kategorijas dalyje **Kita**. Lentelė pagal numatytuosius nustatymus rūšiuojama abėcėlės tvarka. Rūšiavimą galite modifikuoti pasirinkdami lentelės antraštę.
+- **Nuotaikos tarp verslo aspektų**: šioje lentelėje pateikiamos vidutinės nuotaikos visuose verslo aspektuose. Tai gali padėti įvertinti, kurie jūsų verslo aspektai jau tenkina klientus ar aspektus, kuriems reikia daugiau dėmesio. Atsiliepimų įrašai, kurie nesutampa su jokiais palaikomais verslo aspektais, priskiriami kategorijai **Kita**. Pagal numatytuosius nustatymus lentelė yra surūšiuota abėcėlės tvarka. Rūšiavimą galite modifikuoti pasirinkdami lentelės antraštę.
 
-  :::image type="content" source="media/sentiment-across-business-aspects.png" alt-text="Verslo aspektų sąrašas su susijusia sentimentų verte ir ją paminėjusių klientų skaičiumi.":::
+  :::image type="content" source="media/sentiment-across-business-aspects.png" alt-text="Verslo aspektų sąrašas su susijusia sentimentų verte ir ją mininčių klientų skaičiumi.":::
  
-  Pasirinkite verslo aspekto pavadinimą, kad pamatytumėte papildomos informacijos, kaip modelis identifikuoja verslo aspektą. Šioje srityje yra dvi dalys: 
+  Pasirinkite verslo aspekto pavadinimą, kad pamatytumėte papildomą informaciją, kaip pagal modelį identifikuojamas verslo aspektas. Šioje srityje yra dvi dalys: 
 
-  - **Įtakingi žodžiai**: rodo geriausius žodžius, kurie turėjo įtakos AI modelio verslo aspekto nustatymui klientų atsiliepimuose. 
-    **Rodyti įžeidžiančius žodžius**: leidžia į sąrašą įtraukti įžeidžiančius žodžius iš pradinių klientų atsiliepimų duomenų. Pagal numatytuosius nustatymus jis išjungtas.  Įžeidžiantis žodžių maskavimas yra maitinamas AI modeliu ir gali neaptikti visų įžeidžiančių žodžių. Mes ir toliau iteruojame ir mokome klasifikatorių optimaliam našumui. Jei aptiksite įžeidžiantį žodį, kuris nebuvo filtruojamas taip, kaip tikėtasi, praneškite mums. 
+  - **Įtakingi žodžiai**: rodo svarbiausius žodžius, kurie turėjo įtakos dirbtinio intelekto modelio verslo aspekto nustatymui klientų atsiliepimuose. 
+    **Rodyti įžeidžiančius žodžius**: leidžia į sąrašą įtraukti įžeidžiančius žodžius iš pradinių klientų atsiliepimų duomenų. Pagal numatytuosius nustatymus jis išjungtas.  Įžeidžiantis žodžių maskavimas yra varomas dirbtinio intelekto modeliu ir gali neaptikti visų įžeidžiančių žodžių. Mes tęsiame kartojimą ir treniruojame klasifikatorių, kad jis veiktų optimaliai. Jei aptinkate įžeidžiantį žodį, kuris nebuvo filtruotas taip, kaip tikėtasi, praneškite mums. 
     
-    :::image type="content" source="media/offensive-words-sentiment.png" alt-text="Įtakingų žodžių sąrašas su perjungimu, kad būtų rodomi arba paslėpti įžeidžiantys žodžiai.":::
+    :::image type="content" source="media/offensive-words-sentiment.png" alt-text="Įtakingų žodžių sąrašas su perjungimu, kad būtų rodomi arba slepiami įžeidžiantys žodžiai.":::
  
-  - **Atsiliepimų pavyzdžiai**: rodo faktinius atsiliepimų įrašus jūsų duomenyse. Žodžiai koduojami spalvomis pagal jų įtaką verslo aspekto identifikavimui. 
+  - **Atsiliepimų pavyzdžiai**: jūsų duomenyse rodomi faktiniai atsiliepimų įrašai. Žodžiai koduojami spalvomis pagal jų įtaką verslo aspekto identifikavimui. 
 
 
 ### <a name="influential-words-analysis-tab"></a>Įtakingas žodžių analizės skirtukas
 
-Yra trys papildomos informacijos skyriai, paaiškinantys, kaip veikia jausmų modelis.
+Yra trys papildomos informacijos skyriai, paaiškinantys, kaip veikia nuotaikos modelis.
   
-1. **Geriausi žodžiai, prisidedantys prie teigiamų nuotaikų**: rodo geriausius žodžius, kurie turėjo įtakos AI modelio teigiamų nuotaikų nustatymui klientų atsiliepimuose.  
-2. **Populiariausi žodžiai, prisidedantys prie neigiamų nuotaikų**: rodo geriausius žodžius, kurie turėjo įtakos AI modelio neigiamų nuotaikų nustatymui klientų atsiliepimuose.  
-3. **Grįžtamojo ryšio pavyzdžiai**: rodo faktinius grįžtamojo ryšio įrašus, vieną su neigiamu jausmu ir vieną su teigiamu jausmu. Žodžiai atsiliepimų įrašuose paryškinami pagal jų indėlį į priskirtą sentimentų balą. Žodžiai, kurie prisideda prie teigiamo sentimentų balo, yra paryškinti žalia spalva. Žodžiai, prisidedantys prie neigiamo balo, paryškinami raudonai.
-   Pasirinkite **Peržiūrėti daugiau**, kad įkeltumėte daugiau atsiliepimų pavyzdžių, kuriuose pateikiama daugiau informacijos ir konteksto, kaip veikia sentimentų modelis.
+1. **Populiariausi žodžiai, prisidedantys prie teigiamų nuotaikų**: rodo svarbiausius žodžius, kurie turėjo įtakos dirbtinio intelekto modelio teigiamų nuotaikų nustatymui klientų atsiliepimuose.  
+2. **Populiariausi žodžiai, prisidedantys prie neigiamų nuotaikų**: rodo svarbiausius žodžius, kurie turėjo įtakos dirbtinio intelekto modelio neigiamų nuotaikų nustatymui klientų atsiliepimuose.  
+3. **Atsiliepimų pavyzdžiai**: rodomi faktiniai atsiliepimų įrašai, vienas su neigiamomis nuotaikomis ir teigiamas. Žodžiai atsiliepimų įrašuose paryškinami pagal jų indėlį į priskirtą nuotaikų balą. Žodžiai, prisidedantys prie teigiamo sentimentų balo, paryškinami žaliai. Žodžiai, prisidedantys prie neigiamo balo, paryškinami raudonai.
+   Pasirinkite **Žiūrėti daugiau**, kad įkeltumėte daugiau atsiliepimų pavyzdžių, kuriuose pateikiama daugiau informacijos ir konteksto, kaip veikia nuotaikų modelis.
    
-   :::image type="content" source="media/sentiment-feedback-samples.png" alt-text="Klientų atsiliepimų nuotaikų analizės pavyzdžiai.":::
+   :::image type="content" source="media/sentiment-feedback-samples.png" alt-text="Klientų atsiliepimų nuotaikos analizės pavyzdžiai.":::
  
-**Rodyti įžeidžiančius žodžius**: leidžia į sąrašą įtraukti įžeidžiančius žodžius iš pradinių klientų atsiliepimų duomenų. Pagal numatytuosius nustatymus jis išjungtas.  Įžeidžiantis žodžių maskavimas yra maitinamas AI modeliu ir gali neaptikti visų įžeidžiančių žodžių. Mes ir toliau iteruojame ir mokome klasifikatorių optimaliam našumui. Jei aptiksite įžeidžiantį žodį, kuris nebuvo filtruojamas taip, kaip tikėtasi, praneškite mums. 
+**Rodyti įžeidžiančius žodžius**: leidžia į sąrašą įtraukti įžeidžiančius žodžius iš pradinių klientų atsiliepimų duomenų. Pagal numatytuosius nustatymus jis išjungtas.  Įžeidžiantis žodžių maskavimas yra varomas dirbtinio intelekto modeliu ir gali neaptikti visų įžeidžiančių žodžių. Mes tęsiame kartojimą ir treniruojame klasifikatorių, kad jis veiktų optimaliai. Jei aptinkate įžeidžiantį žodį, kuris nebuvo filtruotas taip, kaip tikėtasi, praneškite mums. 
 
 ## <a name="act-on-analysis-results"></a>Analizės rezultatų aktas
 
-Galite lengvai pradėti kurti naujus klientų segmentus iš sentimentų analizės rezultatų puslapio, modelio rezultatų puslapio viršuje pasirinkdami **Kurti segmentus**.
+Galite lengvai pradėti kurti naujus klientų segmentus nuotaikų analizės rezultatų puslapyje modelio **rezultatų puslapio viršuje pasirinkę Kurti segmentus**.
 
-:::image type="content" source="media/create-segment-model.png" alt-text="Komandų juosta su prognozė modelių parinktimis.":::
+:::image type="content" source="media/create-segment-model.png" alt-text="Komandų juosta su parinktimis prognozė modeliuose.":::
  
 ## <a name="potential-bias"></a>Galimas šališkumas
 
-Kaip ir bet kuriai funkcijai, kuri naudoja nuspėjamąjį dirbtinį intelektą, turėtumėte žinoti apie galimą šališkumą duomenyse, kuriuos naudojate klientų nuotaikoms prognozuoti. Pavyzdžiui, jei atsiliepimus renkate tik skaitmeniniu būdu, galite praleisti atsiliepimus iš klientų, kurie pirmiausia vykdo verslą su jumis asmeniškai, o tai gali turėti įtakos funkcijos išvestimi.
+Kaip ir naudojant bet kurią funkciją, kuri naudoja nuspėjamąjį dirbtinį intelektą, turėtumėte žinoti apie galimą duomenų, kuriuos naudojate klientų nuotaikoms prognozuoti, šališkumą. Pavyzdžiui, jei atsiliepimus renkate tik skaitmeniniu būdu, galite praleisti klientų, kurie pirmiausia vykdo verslą su jumis asmeniškai, atsiliepimų, o tai gali turėti įtakos funkcijos išvestims.
 
-Kadangi ši funkcija naudoja automatizuotas priemones duomenims įvertinti ir prognozėms, pagrįstoms tais duomenimis, daryti, ji gali būti naudojama kaip profiliavimo metodas, kaip šis terminas apibrėžtas Bendrajame duomenų apsaugos reglamente (BDAR). Jūsų duomenų naudojantis šia funkcija siekiant tvarkyti duomenis gali būti taikomos BDAR ar kitų teisės aktų nuostatos. Jūs esate atsakingas už tai, kad jūsų naudojimasis, įskaitant jausmų Dynamics 365 Customer Insights analizę, atitiktų visus taikomus įstatymus ir kitus teisės aktus, įskaitant įstatymus, susijusius su privatumu, asmens duomenimis, biometriniais duomenimis, duomenų apsauga ir pranešimų konfidencialumu.
+Kadangi ši funkcija naudoja automatizuotas priemones duomenims įvertinti ir prognozėms, pagrįstoms tais duomenimis, daryti, ji gali būti naudojama kaip profiliavimo metodas, nes šis terminas apibrėžtas Bendrajame duomenų apsaugos reglamente (toliau – BDAR). Jūsų duomenų naudojantis šia funkcija siekiant tvarkyti duomenis gali būti taikomos BDAR ar kitų teisės aktų nuostatos. Jūs esate atsakingi už tai, kad užtikrintumėte, jog jūsų naudojimas, įskaitant nuotaikų Dynamics 365 Customer Insights analizę, atitiktų visus galiojančius įstatymus ir kitus teisės aktus, įskaitant įstatymus, susijusius su privatumu, asmens duomenimis, biometriniais duomenimis, duomenų apsauga ir pranešimų konfidencialumu.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
 

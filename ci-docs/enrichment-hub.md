@@ -1,6 +1,6 @@
 ---
-title: Papildykite suvienodintus kliento profilius
-description: Naudokite savybes siekiant papildyti jūsų kliento duomenis.
+title: Duomenų papildymo (peržiūros) apžvalga
+description: Naudokite "Microsoft" ir kitų trečiųjų šalių tarnybų galimybes, kad praturtintumėte savo klientų duomenis.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,112 +14,108 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954051"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053890"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>Klientų profilių papildymas (peržiūra)
+# <a name="data-enrichment-preview-overview"></a>Duomenų papildymo (peržiūros) apžvalga
 
-Naudokite duomenis iš tolių šaltinių kaip „Microsoft“ ar kiti partneriai, kad papildytumėte kliento duomenis.
+Naudokite duomenis iš tolių šaltinių kaip „Microsoft“ ar kiti partneriai, kad papildytumėte kliento duomenis. Trečiosios šalies papildymai konfigūruojami naudojant [ryšius](connections.md), kuriuos administratorius nustato su kredencialais ir pateikia sutikimą duomenims perduoti. Ryšiai gali būti naudojami administratorių ir prie konfigūracijos papildinių prisidedančių subjektų.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Keli to paties tipo papildymai
+
+Objektas, kurį reikia papildyti, nurodomas papildymo konfigūracijoje, o tai jums leidžia papildyti tik antrinį jūsų profilių rinkinį. Pavyzdžiui, duomenis papildyti galima tik konkrečiame segmente. Galite konfigūruoti kelis to paties tipo papildymus ir pakartotinai naudoti tą patį ryšį. Kai kuriems papildymams bus ribojamas to paties tipo sukuriamų papildymų skaičius. Apribojimus ir dabartinį naudojimą galima pamatyti kiekvienoje plytelėje, esančioje **papildymo** **puslapio skirtuke Atrasti**.
+
+## <a name="enrich-data-sources-before-unification"></a>Praturtinkite duomenų šaltinius prieš suvienijimą
+
+Galite papildyti savo klientų duomenis prieš suvienodindami duomenis, kad pagerintumėte duomenų atitikties kokybę. Daugiau informacijos rasite [duomenų šaltinis sodrinimas](data-sources-enrichment.md).
+
+## <a name="create-an-enrichment"></a>Kurti papildymą
+
+Turite turėti bendraautorio arba administratoriaus [teises](permissions.md), kad galėtumėte kurti arba redaguoti papildymus.
+
+Eikite į **Duomenys** > **Papildymas**. Skirtuke Atrasti **rodomos** visos palaikomos papildymo parinktys.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Papildymo telkinio puslapis.":::
 
-Eikite į **"Data** > **Enrichment** ", kad dirbtumėte su sodrinimo galimybėmis.  
-
-Norėdami kurti arba redaguoti papildymus, turite turėti dalyvio arba administratoriaus teises. Daugiau informacijos žr. [Teisės](permissions.md).
-
-Skirtuke **Atrasti** rasite visas palaikomas gerinimo parinktis.
-
 # <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
 
-- [AbiliTec identity](enrichment-liveramp.md) pateikė LiveRamp AbiliTec
+- ["AbiliTec" tapatybę](enrichment-liveramp.md) teikia "LiveRamp AbiliTec"
 - [Rūšys](enrichment-microsoft.md), kurias teikia „Microsoft“
 - [Demografiniai](enrichment-experian.md) duomenys pateikti „Experian“
 - [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft”
 - [Pomėgiai](enrichment-microsoft.md), kuriuos teikia „Microsoft“
-- [Žemėlapių pateikti](enrichment-azure-maps.md) vietos nustatymo duomenys Microsoft Azure
+- [Žemėlapių teikiami](enrichment-azure-maps.md) vietos duomenys Microsoft Azure
 - [Vietos duomenys](enrichment-here.md) pateikti „HERE Technologies“
 - [SFTP pasirinktiniai duomenys](enrichment-SFTP-custom-import.md) per saugaus failų perdavimo protokolą (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
 
-- ["Microsoft" pateikti abonemento įtraukimo duomenys](enrichment-office.md)
-- [Įmonės duomenys](enrichment-dnb.md), kuriuos pateikė Dun & Bradstreet
+- ["Microsoft" pateikti įtraukimo į paskyrą duomenys](enrichment-office.md)
+- [Įmonės duomenis](enrichment-dnb.md) pateikė Dun & Bradstreet
 - [Bendrovės duomenys](enrichment-leadspace.md) pateikti „Leadspace“
 - [Išplėstiniai adresai](enrichment-enhanced-addresses.md), kuriuos teikia „Microsoft”
-- [Patobulinti "Microsoft" pateikti įmonės duomenys](enrichment-enhanced-company-data.md)
-- [Žemėlapių pateikti](enrichment-azure-maps.md) vietos nustatymo duomenys Microsoft Azure
+- [Patobulinti įmonės duomenys](enrichment-enhanced-company-data.md), kuriuos teikia "Microsoft"
+- [Žemėlapių teikiami](enrichment-azure-maps.md) vietos duomenys Microsoft Azure
 - [Vietos duomenys](enrichment-here.md) pateikti „HERE Technologies“
 - [SFTP pasirinktiniai duomenys](enrichment-SFTP-custom-import.md) per saugaus failų perdavimo protokolą (SFTP)
 
 ---
 
-Skirtuke **Mano papildymai** galite matyti sukonfigūruotus papildymus ir redaguoti jų ypatybes. Taip pat galite sukurti [segmentus](segments.md) ar [priemones](measures.md) iš sodrinimo.
-
 ## <a name="manage-existing-enrichments"></a>Esamų papildymų tvarkymas
 
-Eikite į skirtuką **Mano papildymai**, kad pamatytumėte visus sukonfigūruotus papildymus. Kiekvienas papildymas atvaizduotas kaip eilutė su papildoma informacija apie papildymą.
+Eikite į **Duomenys** > **Papildymas**. Skirtuke **Mano papildymai** peržiūrėkite sukonfigūruotus papildymus, jų būseną, papildytų klientų skaičių ir paskutinį kartą, kai duomenys buvo atnaujinti. Galite rūšiuoti papildymų sąrašą pagal bet kurį stulpelį arba naudoti ieškos lauką, kad rastumėte norimą tvarkyti papildymą.
 
-Norėdami peržiūrėti galimas parinktis, pažymėkite papildymą. Taip pat galite pasirinkti vertikalią elipsę (&vellip;) sąrašo elemente, kad pamatytumėte parinktis. Jei sukonfigūravote kelis papildymus, galite naudoti ieškos lauką, kad greitai juos rastumėte.
+Pasirinkite papildymą, kad peržiūrėtumėte galimus veiksmus.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Papildymų tvarkymo parinktys papildymų sąraše.":::
 
 - **Peržiūrėkite** papildymo informaciją su papildytų klientų profilių skaičiumi.
 - **Redaguokite** papildymo konfigūraciją.
-- **Vykdykite** papildymą ir atnaujinkite klientų profilius naujausiais duomenimis.
-- **Išjunkite** esamą papildymą, kad jis nebebūtų automatiškai atnaujinamas per kiekvieną suplanuotą atnaujinimą. Paskutinio sėkmingo atnaujinimo duomenys išliks prieinami. **Aktyvinkite** neaktyvų papildymą, jei norite iš naujo paleisti automatinį atnaujinimą su kiekvienu suplanuotu atnaujinimu.
+- [**Vykdykite**](#run-or-refresh-enrichments) papildymą, kad atnaujintumėte klientų profilius naujausiais duomenimis. Vykdykite kelis papildymus vienu metu, pasirinkdami juos sąraše.
+- **Suaktyvinkite** arba **išjunkite** papildymą. Neaktyvus papildymas nebus atnaujintas per suplanuotą [atnaujinimą](system.md#schedule-tab).
 - **Panaikinkite** papildymą.
 
-Vienu metu paleiskite arba išjunkite kelis papildymus pažymėdami juos sąraše. Peržiūros ir redagavimo parinktys negalimos kaip masinis veiksmas. Jos veikia tik vienam papildymui vienu metu.
+Taip pat galite kurti [segmentus arba](segments.md) matus [iš](measures.md) sodrinimo.
 
-## <a name="enrichments-and-connections"></a>Papildymai ir ryšiai
+## <a name="run-or-refresh-enrichments"></a>Papildymų vykdymas arba atnaujinimas
 
-Trečiosios šalies papildymai konfigūruojami naudojant [ryšius](connections.md), kuriuos administratorius nustato su kredencialais ir pateikia sutikimą duomenims perduoti. Ryšiai gali būti naudojami administratorių ir prie konfigūracijos papildinių prisidedančių subjektų.  
+Paleidus papildymus, juos galima atnaujinti automatiniu grafiku arba atnaujinti rankiniu būdu pagal poreikį.
 
-## <a name="multiple-enrichments-of-the-same-type"></a>Keli to paties tipo papildymai
+1. Norėdami rankiniu būdu atnaujinti vieną ar daugiau papildymų, pažymėkite juos ir pasirinkite **Vykdyti**. Norėdami [suplanuoti automatinį atnaujinimą](system.md#schedule-tab), eikite į **Administratoriaus** > **sistemos** > **tvarkaraštis**. Apdorojimo laikas priklauso nuo jūsų kliento duomenų dydžio.
 
-Objektas, kurį reikia papildyti, nurodomas papildymo konfigūracijoje, o tai jums leidžia papildyti tik antrinį jūsų profilių rinkinį. Pavyzdžiui, duomenis papildyti galima tik konkrečiame segmente. Galite konfigūruoti kelis to paties tipo papildymus ir pakartotinai naudoti tą patį ryšį. Kai kuriems papildymams bus ribojamas to paties tipo sukuriamų papildymų skaičius. Apribojimus ir dabartinį naudojimą galima pamatyti kiekvienoje plytelėje **puslapio Sodrinimas skirtuke** Atrasti **·**.
+1. Pasirinktinai [žiūrėkite sodrinimo proceso eigą](#see-the-progress-of-the-enrichment-process).
 
-## <a name="enrich-data-sources-before-unification"></a>Duomenų šaltinių praturtinimas prieš suvienijimą
+1. Kai papildymo procesas bus baigtas, eikite į **Mano papildymai** ir peržiūrėkite naujai papildytų klientų profilių duomenis, paskutinio atnaujinimo laiką ir papildytų profilių skaičių.
 
-Galite praturtinti savo klientų duomenis prieš duomenų suvienijimą, kad padėtumėte pagerinti duomenų atitikties kokybę. Daugiau informacijos rasite [duomenų šaltinis sodrinimą](data-sources-enrichment.md).
-
-## <a name="run-or-refresh-enrichments"></a>Vykdyti arba atnaujinti sodrinimą
-
-1. Norėdami pradėti sodrinimo procesą, pasirinkite **Vykdyti**. Arba leiskite sistemai automatiškai paleisti sodrinimą kaip suplanuoto [atnaujinimo](system.md#schedule-tab) dalį. Apdorojimo laikas priklauso nuo jūsų kliento duomenų dydžio.
-
-1. Pasirinktinai [žiūrėkite sodrinimo proceso](#see-the-progress-of-the-enrichment-process) eigą.
-
-1. Pasibaigus sodrinimo procesui, eikite į **"My enrichments"**, kad peržiūrėtumėte naujai praturtintus klientų profilių duomenis, paskutinio atnaujinimo laiką ir praturtintų profilių skaičių.
-
-1. Pasirinkite sodrinimą, kad pamatytumėte [sodrinimo rezultatus](#enrichment-results).
+1. Pasirinkite papildymą, kad pamatytumėte [papildymo rezultatus](#view-enrichment-results).
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Žiūrėti papildymo proceso eigą
 
 Galite rasti informacijos apie papildymo apdorojimą, įskaitant jo būseną ir galimas problemas jį atnaujinant arba pasibaigus atnaujinimui. Sužinokite, kurie procesai naudojami norint atnaujinti papildymą ir procesų vykdymo trukmes. Papildymo būseną palaiko „Experian”, „Leadspace”, HERE Technologijos, SFTP Importavimas ir „Azure” žemėlapiai.
 
 1. Eikite į **Duomenys** > **Papildymas**.
-1. Skirtuke **Mano sodrinimas** pasirinkite sodrinimo būseną, kad atidarytumėte šoninę sritį.
+1. Skirtuke **Mano papildymai** pasirinkite papildymo būseną, kad atidarytumėte šoninę sritį.
 1. Srityje **Išsami eigos informacija** išplėskite **Papildymų** skyrių.
 1. Po papildymu, kurio progresą norite peržiūrėti, pasirinkite **Žiūrėti išsamią informaciją**.
 1. Srityje **Išsami užduoties informacija** pasirinkite **Rodyti išsamią informaciją**, kad peržiūrėtumėte procesus, kurie susiję su papildymų atnaujinimu ir jų būsena.
 
-## <a name="enrichment-results"></a>Papildymo rezultatai
+## <a name="view-enrichment-results"></a>Papildymo rezultatų peržiūra
 
-Baigę sodrinimo ciklą, peržiūrėkite sodrinimo rezultatus.
+Baigę papildymo eigą, peržiūrėkite papildymo rezultatus.
 
 1. Eikite į **Duomenys** > **Papildymas**.
-1. Skirtuke **Mano praturtinimai** pasirinkite praturtinimą, apie kurį norite gauti informacijos.
+1. Skirtuke **Mano papildymai** pasirinkite papildymą, kurį norite peržiūrėti.
 
-Visi praturtinimai rodo pagrindinę informaciją, pvz., Praturtintų profilių skaičių ir praturtintų profilių skaičių laikui bėgant. Plytelėje Praturtinti **klientai rodomi** sugeneruoto sodrinimo objekto pavyzdys. Norėdami pamatyti išsamų rodinį, pasirinkite **Peržiūrėti daugiau** ir pasirinkite skirtuką **Duomenys**.
+Visuose papildymuose pateikiama pagrindinė informacija, pvz., praturtintų profilių skaičius ir papildytų profilių skaičius laikui bėgant. Papildytų **klientų peržiūros** plytelėje rodomas sugeneruoto papildymo objekto pavyzdys. Norėdami peržiūrėti išsamų rodinį, pasirinkite **Peržiūrėti daugiau** ir pasirinkite skirtuką **Duomenys**.
 
-:::image type="content" source="media/enrichments-results.png" alt-text="Sodrinimo rezultatų puslapis.":::
+:::image type="content" source="media/enrichments-results.png" alt-text="Papildymo rezultatų puslapis.":::
 
-Jei įmanoma, **lauke** praturtintų klientų skaičius suteikia išsamią informaciją apie kiekvieno praturtinto lauko aprėptį.
+Jei įmanoma, pagal lauką **praturtintų** klientų skaičius leidžia detalizuoti kiekvieno praturtinto lauko aprėptį.
 
-Kai kurie sodrinimas taip pat rodo informaciją, būdingą sodrinimo tipui. Daugiau informacijos rasite susijusiuose dokumentuose.
+Kai kurie sodrinimo būdai taip pat rodo informaciją, būdingą sodrinimo tipui. Daugiau informacijos ieškokite susijusioje dokumentacijoje.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

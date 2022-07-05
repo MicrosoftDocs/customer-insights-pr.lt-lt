@@ -1,7 +1,7 @@
 ---
-title: Jungtis prie lentelių „Microsoft Dataverse“
+title: Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
 description: Duomenų importavimas iš „Microsoft Dataverse“ valdomo duomenų telkinio.
-ms.date: 03/18/2022
+ms.date: 05/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,16 +11,16 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 9ae0b964d8d39835715b7ddadc712e2338b855af
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011713"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082159"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
 
-Microsoft Dataverse vartotojai gali greitai prisijungti prie analitinių subjektų valdomame Microsoft Dataverse ežere.
+Microsoft Dataverse vartotojai gali greitai prisijungti prie analitinių objektų valdomame Microsoft Dataverse ežere.
 
 > [!NOTE]
 > Turite būti organizacijos administratorius, Dataverse kad galėtumėte tęsti ir peržiūrėti valdomo ežero objektų sąrašą.
@@ -28,7 +28,7 @@ Microsoft Dataverse vartotojai gali greitai prisijungti prie analitinių subjekt
 ## <a name="important-considerations"></a>Svarbi informacija
 
 1. Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Storage“, gali būti saugomi kitoje vietoje, kurioje duomenys yra apdorojami ar saugomi „Dynamics 365 Customer Insights“.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse paslaugose, jūs sutinkate, kad duomenys gali būti perduodami ir saugomi su Dynamics 365 Customer Insights. [Sužinokite daugiau "Microsoft" patikimumo centre](https://www.microsoft.com/trust-center).
-2. Matomi tik Dataverse objektai, kuriuose [įgalintas keitimų stebėjimas](/power-platform/admin/enable-change-tracking-control-data-synchronization). Šiuos objektus galima eksportuoti į valdomų duomenų ežerą Dataverse ir naudoti "Customer Insights". Pagal numatytuosius nustatymus lentelėse Dataverse yra įgalintas keitimų stebėjimas. Turite įjungti pasirinktinių lentelių keitimų sekimą. Norėdami patikrinti, Dataverse ar lentelė įgalinta keitimų stebėjimui, eikite į [Power Apps](https://make.powerapps.com) > **Duomenų** > **lenteles**. Raskite jus dominančią lentelę ir pasirinkite ją. Eikite į **"Settings** > **Advanced" parinktis** ir peržiūrėkite parametrą **Sekti keitimus**.
+2. Matomi tik Dataverse objektai, kurių [keitimų sekimas](/power-platform/admin/enable-change-tracking-control-data-synchronization) įjungtas. Šiuos objektus galima eksportuoti į valdomų duomenų ežerą Dataverse ir naudoti "Customer Insights". Nebenaudojamose Dataverse lentelėse pagal numatytuosius nustatymus įjungtas pakeitimų sekimas. Turite įjungti pasirinktinių lentelių pakeitimų sekimą. Norėdami patikrinti, Dataverse ar lentelėje įgalintas keitimų sekimas, eikite į [Power Apps](https://make.powerapps.com) > **Duomenų** > **lentelės**. Raskite jus dominančią lentelę ir pasirinkite ją. Eikite į **"Settings Advanced"** > **parinktis** ir peržiūrėkite **nustatymą Sekti keitimus**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Prisijungimas prie „Dataverse” valdomojo telkinio
 
@@ -38,11 +38,11 @@ Microsoft Dataverse vartotojai gali greitai prisijungti prie analitinių subjekt
 
 1. Pažymėkite **Microsoft Dataverse**.
 
-1. Įveskite **duomenų šaltinis pavadinimą** ir pasirinktinį **aprašą**.
+1. **Įveskite duomenų šaltinis pavadinimą** ir pasirinktinį **aprašą**.
 
 1. Nurodykite „Dataverse” organizacijos **Serverio adresą** ir pasirinkite **Prisijungti**.
 
-1. Iš galimo sąrašo pasirinkite lenteles, kurias norite nuryti kaip objektus "Customer Insights".
+1. Iš galimų sąrašų pasirinkite lenteles, kurias norite praryti kaip "Customer Insights" objektus.
 
    > [!NOTE]
    > Jei kai kurios lentelės jau pažymėtos, jas gali naudoti kitos „Dynamics 365” programos (pavyzdžiui, „Dynamics 365 Sales Insights” arba „Customer Service Insights”). Šio pasirinkimo keisti negalima. Šios lentelės bus prieinamos kaip objektai sukūrus duomenų šaltinį.

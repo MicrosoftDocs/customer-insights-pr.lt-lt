@@ -1,5 +1,5 @@
 ---
-title: Eksportuoti "Customer Insights" duomenis į SFTP pagrindinius kompiuterius (yra vaizdo įrašas)
+title: Duomenų eksportavimas į SFTP pagrindinius kompiuterius (peržiūra) (yra vaizdo įrašas)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į SFTP vietą.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947194"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082768"
 ---
-# <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmentų ir kitų duomenų eksportavimas į SFTP (peržiūros versija)
+# <a name="export-data-to-sftp-preview"></a>Duomenų eksportavimas į SFTP (peržiūra)
 
 Savo kliento duomenis trečiųjų šalių programose naudokite eksportuodami juos į saugiųjų failų perkėlimo protokolo (SFTP) vietą.
 
@@ -27,7 +27,7 @@ Savo kliento duomenis trečiųjų šalių programose naudokite eksportuodami juo
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- SFTP paskirties vietos užkardų šiuo metu nepalaikomos. 
+- SFTP paskirties vietos už ugniasienių šiuo metu nepalaikomos. 
 - Eksportavimo trukmė priklauso nuo sistemos efektyvumo. Kaip minimalią serverio konfigūraciją rekomenduojame naudoti du procesorius IR 1 GB atminties.
 - Objektų, kurių klientų profiliai yra iki 100 milijonų, eksportavimas gali užtrukti 90 minučių naudojant rekomenduojamą minimalią dviejų procesorių IR 1 GB atminties konfigūraciją.
 
@@ -74,7 +74,7 @@ Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedul
 Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand).
 
 > [!TIP]
-> Objektų, kuriuose yra daug duomenų, eksportavimas gali sukelti kelis CSV failus tame pačiame aplanke kiekvienam eksportavimui. Eksporto skaidymas vyksta dėl našumo priežasčių, kad būtų sumažintas laikas, kurio reikia eksportui užbaigti.
+> Eksportavus objektus, kuriuose yra daug duomenų, tame pačiame aplanke kiekvienam eksportui gali atsirasti keli CSV failai. Eksporto padalijimas vyksta dėl našumo priežasčių, kad būtų sumažintas laikas, per kurį eksportavimas užbaigiamas.
 
 ## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 

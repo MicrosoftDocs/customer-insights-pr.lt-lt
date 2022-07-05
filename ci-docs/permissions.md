@@ -12,16 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 8022563f8994400b88389c20d7d661d9ea82bab1
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833732"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054886"
 ---
-# <a name="user-permissions"></a>Vartotojų teisės
+# <a name="manage-user-permissions"></a>Valdykite vartotojo leidimus
 
-Puslapyje **Teisės** nustatysite vaidmenis ir teises, kaip naudoti "Customer Insights".
+Teisių **puslapyje** nustatysite vaidmenis ir teises naudoti "Customer Insights".
 
 Norėdami peržiūrėti puslapį, privalote turėti administratoriaus teises. Norėdami pasiekti teisių puslapį, eikite į **Administratoriaus** > **saugos** > **vartotojai**.
 
@@ -41,7 +41,7 @@ Yra trys vaidmenų tipai:
 
 - Žiūrinčiajam pasiekiamos visos teisės.
 - Įkelkite ir transformuokite duomenis naudodami **Duomenų šaltinių** puslapį.
-- Baigti ***Duomenų suvienijimą**, dėl kurio sukuriamas vieningas kliento profilio objektas.
+- Užbaigti ***Duomenų suvienijimą**, dėl kurio gaunamas vieningas kliento profilio objektas.
 - Apibrėžkite **Ryšius** ir **Veiklas**.
 - Sukurkite segmentus naudodami **Segmentų** puslapį.
 - Kurkite matus naudodami puslapį **Matai**.
@@ -64,12 +64,12 @@ Yra trys vaidmenų tipai:
 
 ## <a name="admin-owner"></a>Administratorius (savininkas)
 
-- Visos administratoriaus pasiekiamos teisės.
-- [Iš naujo nustatykite ir panaikinkite](manage-environments.md#reset-an-existing-environment-preview) aplinką.
+- Visi administratoriaus turimi leidimai.
+- [Iš naujo nustatykite ir ištrinkite](manage-environments.md#reset-an-existing-environment-preview) aplinką.
 
 ## <a name="assign-roles-and-permissions"></a>Vaidmenų ir teisių priskyrimas
 
-1. Eikite į **Administravimo** > **saugos** > **Vartotojai***.
+1. Eikite į **administratoriaus** > **saugos** > **Vartotojai***.
 
 1. Pasirinkite **Įtraukite vartotojus** siekiant atverti **Įtraukti/Redaguoti leidimus** juostą.
 
@@ -79,7 +79,7 @@ Yra trys vaidmenų tipai:
 
 ## <a name="view-current-permissions"></a>Dabartinių teisių peržiūra
 
-Eikite į **Administratoriaus** > **saugos** > **vartotojai**, kad sužinotumėte, kokie vaidmenų priskyrimai šiuo metu yra aktyvūs.
+Eikite į **administratoriaus** > **saugos** > **vartotojai** ir sužinokite, kokie vaidmenų priskyrimai šiuo metu yra aktyvūs.
 
 - Stulpelyje **Tipas** nurodomas vienas vartotojas, grupė arba programa. Sistema palaiko atskirus vartotojus ir grupes.
 - Vaidmenys nurodomi stulpelyje **Vaidmuo**.

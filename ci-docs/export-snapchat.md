@@ -1,5 +1,5 @@
 ---
-title: „Customer Insights“ duomenų eksportavimas į „Snapchat“
+title: Segmentų eksportavimas į „Snapchat“ (peržiūros versija)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Snapchat“.
 ms.date: 06/08/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: abe04cd1464c3f7df969da3c769329382d603d7e
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947286"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051923"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Segmentų eksportavimas į „Snapchat“ (peržiūros versija)
 
@@ -21,8 +21,8 @@ Eksportuokite vieningų klientų profilių segmentus į „Snapchat“ ir naudok
 
 ## <a name="prerequisites-for-a-connection"></a>Būtinosios ryšio sąlygos
 
--   Turite [„Snapchat“ įmonės paskyrą](https://business.snapchat.com/), [„Snapchat Ads“ paskyrą](https://ads.snapchat.com/) ir atitinkamus administratoriaus kredencialus. YOu turi būti bent jau organizacijos paskyros narys ir konkrečios skelbimo paskyros duomenų valdytojas. 
--   Turite bent vieną auditoriją SAM tipo "Snapchat Audience Manager" ("Snap Audience Match"). 
+-   Turite [„Snapchat“ įmonės paskyrą](https://business.snapchat.com/), [„Snapchat Ads“ paskyrą](https://ads.snapchat.com/) ir atitinkamus administratoriaus kredencialus. Turite būti bent organizacijos paskyros narys ir konkrečios skelbimo paskyros duomenų valdytojas. 
+-   Turite bent vieną auditoriją "Snapchat Audience Manager", kurios tipas SAM ("Snap Audience Match"). 
 -   Sukonfigūravote [segmentus](segments.md) programoje "Customer Insights".
 -   Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
@@ -61,7 +61,7 @@ Eksportuokite vieningų klientų profilių segmentus į „Snapchat“ ir naudok
 
 1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Snapchat“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
 
-1. [**Įveskite "Snapchat" segmento / auditorijos ID**](https://businesshelp.snapchat.com/s/article/custom-audiences). Auditorijos ID galima rasti URL pasirinkus auditoriją "Snapchat Audience Manager". 
+1. Įveskite "Snapchat" segmento [**/ auditorijos ID**](https://businesshelp.snapchat.com/s/article/custom-audiences). Auditorijos ID galite rasti URL pasirinkus auditoriją "Snapchat Audience Manager". 
 
 1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „Snapchat“.
 

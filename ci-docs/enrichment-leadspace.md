@@ -1,5 +1,5 @@
 ---
-title: Bendrovės profilių praturtinimas su trečiosios šalies praturtinimo „Leadspace“
+title: Praturtinkite įmonės profilius naudodami "Leadspace" (peržiūra)
 description: Bendra informacija apie „Leadspace“ trečiosios šalies praturtinimą.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,36 +8,36 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954189"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082369"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Įmonių profilių papildymas su „Leadspace“ (peržiūra)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Praturtinkite įmonės profilius naudodami "Leadspace" (peržiūra)
 
 „Leadspace" yra duomenų šaltinių įmonė, kuri teikia B2B klientų duomenų platformą. Tai suteikia galimybę sąskaitoms papildyti naudojant vieningus klientų profilius, pagrįstus klientais. Praturtinkite *klientų profilius* atributais, pvz., įmonės dydžiu, vieta ar pramonės šaka. Praturtinkite *kontaktų profilius* naudodami atributus, pvz., pareigas, asmenį arba el. pašto tikrinimą.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Aktyvi "Leadspace" licencija.
-- [Vieningi klientų profiliai pagal sąskaitas](customer-profiles.md).
-- "Leadspace" [ryšį](connections.md)[konfigūruoja](#configure-the-connection-for-leadspace) administratorius. Norėdami gauti išsamios informacijos apie jų produktą, kreipkitės tiesiogiai į [„Leadspace“](https://www.leadspace.com/leadspace-microsoft-dynamics-365/).
+- [Vieningi klientų profiliai](customer-profiles.md), pagrįsti paskyromis.
+- "Leadspace" [ryšį](connections.md)[sukonfigūruoja](#configure-the-connection-for-leadspace) administratorius. Norėdami gauti išsamios informacijos apie jų produktą, kreipkitės tiesiogiai į [„Leadspace“](https://www.leadspace.com/leadspace-microsoft-dynamics-365/).
 
 ## <a name="configure-the-connection-for-leadspace"></a>„Leadspace“ ryšio konfigūravimas
 
-Turite būti ["Customer Insights" administratorius](permissions.md#admin) ir turėti "nuolatinį raktą" (vadinamą **"Leadspace" atpažinimo ženklu**).
+Turite būti ["Customer Insights" administratorius](permissions.md#admin) ir turėti "nuolatinį raktą" (vadinamą **"Leadspace" prieigos raktu**).
 
-1. Konfigūruodami sodrinimą pasirinkite **Įtraukti ryšį** arba eikite į **Administratoriaus** > **ryšiai** ir plytelėje Švino sritis pasirinkite **Nustatyti**.
+1. Konfigūruojant papildymą pasirinkite **Įtraukti ryšį** arba eikite į **Administratoriaus** > **ryšiai** ir **pasirinkite Nustatyti** "Leadspace" plytelėje.
 
    :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="„Leadspace“ ryšio konfigūravimo puslapis.":::
 
-1. Įveskite ryšio pavadinimą ir tinkamą švino srities atpažinimo ženklą.
+1. Įveskite ryšio pavadinimą ir galiojantį "Leadspace" prieigos raktą.
 
 1. Pasirinkdami Sutinku, peržiūrėkite [ir pateikite savo sutikimą dėl](#data-privacy-and-compliance) duomenų privatumo ir sąlygų **sutinku**.
 
-1. Pasirinkite **Tikrinti**, kad patikrintumėte konfigūraciją, tada pasirinkite **Įrašyti**.
+1. Pasirinkite **Tikrinti**, kad patvirtintumėte konfigūraciją, tada pasirinkite **Įrašyti**.
 
 ### <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
@@ -48,23 +48,23 @@ Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti š�
 
 1. Pasirinkite **Duomenys** > **Papildymas** ir pasirinkite skirtuką **Atrasti**.
 
-1. Pasirinkite **Praturtinti mano duomenis** **įmonės duomenų** iš "Leadspace" plytelės.
+1. Pasirinkite **Papildyti mano duomenis** įmonės duomenys **iš**"Leadspace" plytelės.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace plytos momentinė ekrano nuotrauka.":::
 
 1. Peržiūrėkite apžvalgą ir pasirinkite **Pirmyn**.
 
-1. Pasirinkite ryšį. Jei jo nėra, kreipkitės į administratorių.
+1. Pasirinkite ryšį. Kreipkitės į administratorių, jei jis nepasiekiamas.
 
 1. Pasirinkite **Toliau**.
 
-1. **Pasirinkite kliento duomenų rinkinį** ir pasirinkite profilį arba segmentą, kurį norite praturtinti įmonės duomenimis iš "Leadspace". Kliento *subjektas* praturtina visus jūsų klientų profilius, o segmentas praturtina tik tame segmente esančius klientų profilius.
+1. **Pasirinkite kliento duomenų rinkinį** ir pasirinkite profilį arba segmentą, kurį norite papildyti įmonės duomenimis iš "Leadspace". *Kliento* objektas praturtina visus jūsų klientų profilius, o segmentas praturtina tik tame segmente esančius klientų profilius.
 
     :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Klientų duomenų rinkinio pasirinkimo momentas.":::
 
-1. Nurodykite, kokio tipo laukus iš vieningų profilių naudoti gretinimui: pirminį ir (arba) antrinį adresą. Laukelių žymėjimą galima nurodyti abiem adresams ir papildyti profilius abiems adresams atskirai. Pavyzdžiui, namų adresui ir įmonės adresui. Pasirinkite **Toliau**.
+1. Apibrėžkite, kokio tipo laukus iš savo vieningųjų profilių naudoti atitikčiai: pirminį ir (arba) antrinį adresą. Laukelių žymėjimą galima nurodyti abiem adresams ir papildyti profilius abiems adresams atskirai. Pavyzdžiui, namų ir įmonės adreso atveju. Pasirinkite **Toliau**.
 
-1. Susiekite laukus su įmonės duomenimis iš "Leadspace". **Bendrovės pavadinimo** laukelis yra būtinas. Didesniam atitikties tikslumui, gali būti įtraukti ne daugiau du laukeliai **Bendrovės interneto svetainė** ir **Bendrovės vieta**.
+1. Susiekite savo laukus su įmonės duomenimis iš "Leadspace". **Bendrovės pavadinimo** laukelis yra būtinas. Didesniam atitikties tikslumui, gali būti įtraukti ne daugiau du laukeliai **Bendrovės interneto svetainė** ir **Bendrovės vieta**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace laukelio žemėlapio sukūrimo juosta.":::
 
@@ -76,13 +76,13 @@ Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti š�
 
 1. Pasirinkite **Toliau**.
 
-1. **Pateikite sodrinimo pavadinimą** ir išvesties objekto **pavadinimą**.
+1. **Pateikite papildymo pavadinimą** ir išvesties objekto **pavadinimą**.
 
 1. Peržiūrėję pasirinkimus pasirinkite **Išsaugoti papildymą**.
 
-1. Pasirinkite **Vykdyti**, kad pradėtumėte sodrinimo procesą, arba beveik, kad grįžtumėte į **puslapį Praturtinimai**.
+1. Pasirinkite **Vykdyti**, kad pradėtumėte papildymo procesą, arba uždarykite, kad grįžtumėte į **puslapį Papildymai**.
 
-## <a name="enrichment-results"></a>Papildymo rezultatai
+## <a name="view-enrichment-results"></a>Papildymo rezultatų peržiūra
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

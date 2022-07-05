@@ -1,5 +1,5 @@
 ---
-title: "\"Customer Insights\" segmentai"
+title: Segmentų apžvalga
 description: Segmentų apžvalga ir jų kūrimo bei valdymo informacija.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800752"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050957"
 ---
 # <a name="segments-overview"></a>Segmentų apžvalga
 
@@ -47,37 +47,37 @@ Naują segmentą galima sukurti keliais būdais:
 
 ## <a name="manage-existing-segments"></a>Esamų segmentų tvarkymas
 
-Eikite į **puslapį Segmentai**, kad peržiūrėtumėte visus išsaugotus segmentus ir juos valdytumėte.
+Eikite į **puslapį Segmentai**, kad peržiūrėtumėte visus išsaugotus segmentus ir juos tvarkytumėte.
 
 Kiekvieną segmentą atitinka eilutė, kurioje pateikta papildoma informacija apie segmentą.
 
 :::image type="content" source="media/segments-selected-segment.png" alt-text="Pažymėtas segmentas su parinkčių išplečiamajame sąraše ir galimose parinktyse." lightbox="media/segments-selected-segment.png":::
 
-Pasirinkus segmentą galima atlikti šiuos veiksmus:
+Pasirinkus segmentą, galimi šie veiksmai:
 
 - **Peržiūrėti** segmento išsamią informaciją, įskaitant narių skaičių, tendencijas ir segmento narių peržiūrą.
 - **Atsisiųsti** narių sąrašą kaip .CSV failą.
 - **Redaguoti** segmentą ir pakeisti jo ypatybes.
-- **Kurti dublikatą** segmentui. Galite iš karto pasirinkti redaguoti jo ypatybes arba įrašyti dublikatą.
+- **Kurti dublikatą** segmentui. Galite iš karto pasirinkti redaguoti jo ypatybes arba išsaugoti dublikatą.
 - **Atnaujinti** segmentą, kad būtų įtraukti naujausi duomenys.
 - **Aktyvinti** arba **Išjungti** segmentą. Neaktyvių segmentų aprašas yra, bet į jį dar neįtraukta klientų. Aktyvus segmentas ieško klientų, atitinkančių segmento apibrėžimą. Jei [suplanuotas atnaujinimas](system.md#schedule-tab) yra sukonfigūruotas, neaktyvių segmentų **Būsena** nurodoma kaip **Praleista** – tai reiškia, kad net nebuvo bandyta atnaujinti. Suaktyvinus neaktyvų segmentą, jis bus atnaujintas ir įtrauktas į suplanuotus atnaujinimus.
   Taip pat galite naudoti funkciją **Planuoti vėliau**, esančią iškleidžiamajame meniu **Aktyvinti / išjungti**, kad nurodytumėte būsimą datą ir laiką, kada reikia aktyvinti ir išjungti tam tikrą segmentą.
 - **[Raskite panašių klientų](find-similar-customer-segments.md)** iš segmento.
 - **Pervardyti** segmentą.
-- **Žyma**, skirta [segmento žymėms](work-with-tags-columns.md#manage-tags) tvarkyti.
+- **Žymė**, skirta [segmento žymoms](work-with-tags-columns.md#manage-tags) tvarkyti.
 - **Atsisiųsti** narių sąrašą kaip .CSV failą.
 - **Valdykite eksportavimus**, kad pamatytumėte susijusius segmentus ir juos valdytumėte. [Sužinokite daugiau apie eksportavimus.](export-destinations.md)
 - **Naikinti** segmentą.
 - **Stulpeliai**, skirti [tinkinti rodomus stulpelius](work-with-tags-columns.md#customize-columns).
-- **Filtruoti**, kad būtų galima [filtruoti žymes](work-with-tags-columns.md#filter-on-tags).
-- **Ieškoti pavadinimo**, kad būtų galima ieškoti pagal segmento pavadinimą.
+- **Filtruokite**, kad filtruotumėte [žymes](work-with-tags-columns.md#filter-on-tags).
+- **Ieškokite pavadinimo**, kad galėtumėte ieškoti pagal segmento pavadinimą.
 
 ## <a name="refresh-segments"></a>Segmentų atnaujinimas
 
-Visus segmentus galite atnaujinti vienu metu pažymėdami **Atnaujinti viską** puslapyje **Segmentai** arba galite atnaujinti vieną ar kelis segmentus, kai juos pažymite ir parinktyse pasirenkate **Atnaujinti**. Taip pat galite sukonfigūruoti pasikartojantį atnaujinimą dalyje **Administravimas** > **Sistemas** > **Planuoti**. Konfigūruojant pasikartojantį atnaujinimą, taikomos šios taisyklės:
+Visus segmentus galite atnaujinti vienu metu pažymėdami **Atnaujinti viską** puslapyje **Segmentai** arba galite atnaujinti vieną ar kelis segmentus, kai juos pažymite ir parinktyse pasirenkate **Atnaujinti**. Taip pat galite sukonfigūruoti pasikartojantį atnaujinimą dalyje **Administravimas** > **Sistemas** > **Planuoti**. Sukonfigūravus pasikartojantį atnaujinimą, taikomos šios taisyklės:
 
-- Visi segmentai, kurių tipas **dinaminis** arba **išplėtimas**, bus automatiškai atnaujinti nustatytu laiku. Kai atnaujinimas bus baigtas, **būsena** nurodo, ar buvo kokių nors problemų atnaujinant segmentą. Paskutinis **atnaujintas** rodo paskutinio sėkmingo atnaujinimo laiko žymą. Jei įvyksta klaida, pasirinkite klaidą, kad pamatytumėte išsamią informaciją apie tai, kas nutiko.
-- Statinio **tipo** *segmentai nebus* atnaujinami automatiškai. Atnaujintas **paskutinis** rodo laiko žymą, kada paskutinį kartą statiniai segmentai buvo paleisti arba atnaujinti neautomatiniu būdu.
+- Visi segmentai su dinaminio arba **išplėtimo** tipu **bus** automatiškai atnaujinti nustatytu dažniu. Kai atnaujinimas bus baigtas, **būsena** nurodo, ar buvo kokių nors problemų atnaujinant segmentą. Paskutinis **atnaujintas** rodo paskutinio sėkmingo atnaujinimo laiko žymą. Jei įvyksta klaida, pasirinkite klaidą, kad pamatytumėte išsamią informaciją apie tai, kas įvyko.
+- Segmentai, kurių tipas **Statinis** *, nebus* atnaujinami automatiškai. Paskutiniame **atnaujintame ekrane** rodoma paskutinio karto, kai statiniai segmentai buvo paleisti arba atnaujinti rankiniu būdu, laiko žyma.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
@@ -87,37 +87,37 @@ Galite eksportuoti segmentą iš segmentų arba [eksportavimo puslapio](export-d
 
 1. Eikite į puslapį **Segmentai**.
 
-1. Pasirinkite norimo eksportuoti segmento vertikalią daugtaškį (&vellip;) .
+1. Pasirinkite segmento, kurį norite eksportuoti, vertikalią daugtaškį (&vellip;).
 
 1. Veiksmų **išplečiamajame srąraše** pasirinkite Valdyti eksportą.
 
 1. Atidaromas **Segmento eksportavimai (peržiūra)** puslapis. Galite matyti visus sukonfigūruotus eksportus, sugrupuotus pagal tai, ar juose yra dabartinis segmentas, ar ne.
 
-   1. Jei pažymėtą segmentą norite įtraukti į eksportavimą, **redaguokite** atitinkamą eksportavimą, kad pažymėtumėte atitinkamą segmentą, tada įrašykite. Atskirų klientų aplinkose galite pasirinkti eksportavimą sąraše ir pasirinkti **Įtraukti segmentą**, kad pasiektumėte tą patį rezultatą.
+   1. Jei pažymėtą segmentą norite įtraukti į eksportavimą, **redaguokite** atitinkamą eksportavimą, kad pažymėtumėte atitinkamą segmentą, tada įrašykite. Atskirų klientų aplinkose galite pasirinkti eksportą sąraše ir pasirinkti **Įtraukti segmentą**, kad pasiektumėte tą patį rezultatą.
 
    1. Jei norite sukurti naują eksportavimą su pažymėtu segmentu, pasirinkite **Įtraukti eksportavimą**. Daugiau informacijos apie eksportavimo kūrimą rasite [Naujo eksportavimo nustatymas](export-destinations.md#set-up-a-new-export).
 
 1. Pasirinkite **Atgal**, kad grįžtumėte į pagrindinį segmentų puslapį.
 
-## <a name="track-usage-of-a-segment"></a>Segmento naudojimo sekimas
+## <a name="track-usage-of-a-segment"></a>Segmento naudojimo takelis
 
-Jei programose naudojate segmentus, pagrįstus ta pačia Microsoft Dataverse organizacija, kuri yra susieta su "Customer Insights", galite stebėti segmento naudojimą. " [Customer Insights" segmentams, naudojamiems "Dynamics 365 Marketing"](/dynamics365/marketing/real-time-marketing-ci-profile) klientų kelionėse, sistema informuoja apie to segmento naudojimą.
+Jei programose naudojate segmentus, pagrįstus ta pačia Microsoft Dataverse organizacija, kuri yra susieta su "Customer Insights", galite sekti segmento naudojimą. " [Customer Insights" segmentuose, naudojamuose "Dynamics 365 Marketing"](/dynamics365/marketing/real-time-marketing-ci-profile) klientų veiklos cikluose, sistema informuoja jus apie to segmento naudojimą.
 
-Redaguojant segmentą, kuris naudojamas "Customer Insights" aplinkoje arba "Marketing" klientų veiklos ciklas, segmento [daryklės](segment-builder.md) reklamjuostė informuoja jus apie priklausomybes. Priklausomybės informaciją galite patikrinti tiesiogiai iš reklamjuostės arba segmento daryklėje pasirinkdami **Naudojimas**.
+Redaguojant segmentą, kuris naudojamas "Customer Insights" aplinkoje arba "Marketing" klientų veiklos ciklas, segmento [kūrimo priemonės](segment-builder.md) reklamjuostė informuoja apie priklausomybes. Išsamią priklausomybės informaciją galite patikrinti tiesiai iš reklamjuostės arba segmento **kūrimo priemonėje pasirinkę Naudojimas**.
 
-Segmento **naudojimo** srityje rodoma išsami informacija apie šio segmento naudojimą programose, pagrįstose Dataverse programomis. Segmentuose, naudojamuose klientų kelionėse, rasite nuorodą, kad galėtumėte peržiūrėti kelionę programoje "Marketing", kurioje naudojamas šis segmentas. Jei turite teises pasiekti "Marketing" programą, čia galite pasiekti daugiau informacijos.
+Segmento **naudojimo** srityje rodoma išsami informacija apie šio segmento naudojimą programomis, pagrįstomis Dataverse programomis. Jei segmentai naudojami klientų veiklos cikluose, rasite saitą, kad galėtumėte patikrinti veiklos ciklą programoje "Marketing", kur naudojamas šis segmentas. Jei turite leidimus pasiekti programą "Marketing", daugiau informacijos galite pasiekti ten.
 
-:::image type="content" source="media/segment-usage-pane.png" alt-text="Šoninė sritis su išsamia segmento naudojimo segmento daryklėje informacija.":::
+:::image type="content" source="media/segment-usage-pane.png" alt-text="Šoninė sritis su išsamia informacija apie segmento naudojimą segmento kūrimo priemonėje.":::
 
-Sistema informuoja jus apie stebimo segmento naudojimą, kai bandote jį ištrinti. Jei segmentas, kurį ketinate ištrinti, naudojamas klientų veiklos ciklas programoje "Marketing", ši kelionė bus sustabdyta visiems segmento vartotojams. Jei kelionė yra rinkodaros kampanijos dalis, ištrynimas paveiks pačią kampaniją. Tačiau vis tiek galite ištrinti segmentą, nepaisant įspėjimų.
+Sistema informuoja jus apie stebimo segmento naudojimą, kai bandote jį ištrinti. Jei segmentas, kurį ketinate panaikinti, bus naudojamas klientų veiklos ciklas programoje "Marketing", ši kelionė bus sustabdyta visiems segmento vartotojams. Jei kelionė yra rinkodaros kampanijos dalis, ištrynimas turės įtakos pačiai kampanijai. Tačiau vis tiek galite ištrinti segmentą, nepaisant įspėjimų.
 
-:::image type="content" source="media/segment-usage-delete.png" alt-text="Dialogo langas, skirtas patvirtinti segmento naikinimą, kai segmentas Dataverse naudojamas programoje.":::
+:::image type="content" source="media/segment-usage-delete.png" alt-text="Dialogo langas, skirtas patvirtinti segmento naikinimą, kai segmentas naudojamas Dataverse programoje.":::
 
 ### <a name="supported-apps"></a>Palaikomos programos
 
 Naudojimas šiuo metu stebimas šiose Dataverse programose:
 
-- [Klientų kelionės naudojant "Dynamics 365 Marketing"](/dynamics365/marketing/real-time-marketing-ci-profile)
+- [Klientų veiklos ciklai programoje "Dynamics 365 Marketing"](/dynamics365/marketing/real-time-marketing-ci-profile)
 
 ## <a name="view-processing-history-and-segment-members"></a>Apdorojimo retrospektyvos ir segmento narių peržiūra
 

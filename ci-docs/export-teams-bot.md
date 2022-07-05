@@ -1,5 +1,5 @@
 ---
-title: Robotas „Microsoft Teams“
+title: Komandų robotas „Dynamics 365 Customer Insights“ (peržiūra)
 description: Ieškokite suvienodintų tinkintų profilių „Microsoft Teams“ su roboto pagalba.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 89a293d5b6f9f5452b2ccba495d2475002806019
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643908"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082600"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Komandų robotas „Dynamics 365 Customer Insights“ (peržiūra)
 
@@ -37,7 +37,7 @@ Norint nustatyti ir sukonfigūruoti robotą, turi būti įvykdytos šios būtino
 
 ## <a name="configure-the-bot"></a>Roboto konfigūravimas
 
-1. Eikite į **"AdminExport** > **Destinations"**.
+1. Eikite į **administratoriaus** > **eksportavimo paskirties vietas**.
 1. Plytelėje „Microsoft Teams“ pasirinkite **Nustatyti**.
 1. Būsite nukreiptas į „Teams“ sritį **Programos**. Taip pat galite atidaryti „Teams“ ir apatiniame kairiajame kampe pasirinkti **Programos** arba [jį atsisiųsti tiesiogiai iš „AppSource“](https://go.microsoft.com/fwlink/?linkid=2124104).
 1. Ieškokite **„Customer Insights“** ir pasirinkite programą.

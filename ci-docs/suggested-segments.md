@@ -1,5 +1,5 @@
 ---
-title: Mašininis mokymas siūlomų segmentų kūrimas
+title: Siūlomi segmentai (peržiūra)
 description: Leiskite mašininis mokymas rasti naujus ir suskirstytus segmentus, pagrįstus klientų atributais.
 ms.date: 10/15/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 5c7c6cc8231f758713b989bbe782aa03a4b78fa9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9229bef1c5df06de973aa671ca70c6c8462d51cf
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643508"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082747"
 ---
 # <a name="suggested-segments-preview"></a>Siūlomi segmentai (peržiūra)
 
@@ -29,7 +29,7 @@ Naudodami AI modelį, galite atrasti klientų klientus su susidavimo segmentais.
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Siūlomi segmentai KPI tobulinti
 
-Kaip "Customer Insights" vartotojas, tikriausiai turite sukurtų [priemonių seriją](measures.md), kuri padeda sekti pagrindinius našumo rodiklius (KPI). Svarbu suprasti, kaip tam tikri atributai daro įtaką šiam KPI, kad būtų galima kurti segmentus ir vykdyti itin tikslinę kampaniją.   
+Kaip "Customer Insights" naudotojas, tikriausiai esate sukūrę [keletą](measures.md) priemonių, kurios padeda sekti pagrindinius našumo indikatorius (KPI). Svarbu suprasti, kaip tam tikri atributai daro įtaką šiam KPI, kad būtų galima kurti segmentus ir vykdyti itin tikslinę kampaniją.   
 Pavyzdžiui, galite sekti priemonę, vadinamą *TotalSpendPerCustomer*. Kaip verslas, šis skaičius turėtų didėti. Pažymėsite priemonę kaip pirminį atributą, galėsite pažymėti atributus, kuriuos norite įvertinti dėl įtakos. Tarkime, narystės *pakopa, narystės* laikotarpis ir *esamų* žodžių *sutemimas*. Tada „Customer Insights” gali pasiūlyti segmentą, kuriame galima nurodyti, kas yra tos priemonės įtaka. Pavyzdžiui, *buhalteriai* esantys *Auksiniai* nariai ir kurie bent penkerius metus yra jūsų įmonėje, yra *mažiausiai penkerius metus* yra labiausiai lemiantys *TotalSpendPerCustomer* poveikio darytojai. Gausite įvertintą kiekvieno pasiūlymo segmento dydį. Šią informaciją galite naudoti tikslinėms auditorijoms kurti.
 
 ## <a name="understand-what-influences-a-customer-attribute"></a>Supraskite, kas daro įtaką kliento atributui

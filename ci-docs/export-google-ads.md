@@ -1,5 +1,5 @@
 ---
-title: Eksportuoti „Customer Insights“ duomenis į „Google Ads“
+title: Segmentų eksportavimas į „Google Ads“ (peržiūra)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Google Ads“.
 ms.date: 03/31/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3e0eb91be97d69a999e90708d29c572f0055527e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b7f08936d7d90322cb4e62396a2961fe06273b76
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643399"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082999"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentų eksportavimas į „Google Ads“ (peržiūra)
 
@@ -26,7 +26,7 @@ Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditor
 -   Atitinkate [„Customer Match Policy“ reikalavimus](https://support.google.com/adspolicy/answer/6299717).
 -   Atitinkate [pakartotinės rinkodaros sąrašo dydžių reikalavimus](https://support.google.com/google-ads/answer/7558048).
 -   Turite [konfigūruoti segmentus](segments.md).
--   Vieninguose klientų profiliuose eksportuotuose segmentuose yra laukų, nurodančių el. pašto adresą, telefoną, mobiliojo reklamuotojo ID, trečiosios šalies vartotojo ID arba adresą.
+-   Eksportuotuose segmentuose esančiuose vieninguose klientų profiliuose yra laukai, nurodantys el. pašto adresą, telefoną, reklamuotojo mobiliesiems ID, trečiosios šalies vartotojo ID arba adresą.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
@@ -64,9 +64,9 @@ Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditor
 
 1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Google Ads“. Jei šio skyriaus pavadinimo nematote, jums nėra jokių šio tipo ryšių.
 
-1. Jei norite sukurti naują auditoriją, palikite "Google Audience ID" lauką tuščią. Mes automatiškai sukursime naują auditoriją "Google Ads" paskyroje ir naudosime eksportuoto segmento pavadinimą. Jei norite atnaujinti esamą "Google Ads" auditoriją, įveskite ["Google Ads" auditorijos ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
+1. Jei norite sukurti naują auditoriją, palikite lauką "Google Audience ID" tuščią. Automatiškai sukursime naują auditoriją jūsų "Google Ads" paskyroje ir naudosime eksportuoto segmento pavadinimą. Jei norite atnaujinti esamą "Google Ads" auditoriją, įveskite ["Google Ads" auditorijos ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
 
-1. Sekcijoje **Duomenų atitikimas** pasirinkite vieną ar daugiau eksportuotinų duomenų laukų ir pasirinkite lauką, kuris nurodo atitinkamus "Customer Insights" duomenų laukus.
+1. Sekcijoje **Duomenų atitikimas** pasirinkite vieną ar daugiau duomenų laukų, kuriuos norite eksportuoti, ir pasirinkite lauką, kuris nurodo atitinkamus duomenų laukus "Customer Insights".
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. 
 

@@ -6,7 +6,7 @@
   href: whats-new-customer-insights.md
 - name: Mokymosi katalogas
   items:
-    - name: Sertifikuoti kaip "Microsoft" klientų duomenų platformos specialistą
+    - name: Sertifikuokite kaip "Microsoft" klientų duomenų platformos specialistą
       href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
     - name: Pradėkite darbą su „Customer Insights”
       href: /learn/modules/get-started-customer-data-platform/
@@ -16,7 +16,7 @@
       href: /learn/modules/unified-customer-profile/
     - name: Darbas su "Customer Insights"
       href: /learn/modules/working-with-customer-insights/
-    - name: Praturtinkite duomenis ir prognozuokite
+    - name: Praturtinkite duomenis ir darykite prognozes
       href: /learn/modules/enrich-data/
     - name: Išorinių ryšių valdymas
       href: /learn/modules/configure-third-party-connections/
@@ -54,9 +54,9 @@
       href: connect-synapse.md
     - name: Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
       href: connect-dataverse-managed-lake.md
-    - name: Duomenų šaltinių įtraukimas per Power Query jungtis
+    - name: Duomenų šaltinių įtraukimas naudojant Power Query jungtis
       href: connect-power-query.md
-    - name: Duomenų šaltinių praturtinimas
+    - name: Duomenų šaltinių papildymas
       href: data-sources-enrichment.md
     - name: Duomenų šaltinių papildantysis naujinimas
       href: incremental-refresh-data-sources.md
@@ -66,21 +66,21 @@
   items:
     - name: Duomenų suvienodinimo apžvalga
       href: data-unification.md
-    - name: Pasirinkti šaltinio laukus
+    - name: Pasirinkite šaltinio laukus
       href: map-entities.md
-    - name: Šalinti pasikartojančius įrašus
+    - name: Pasikartojančių įrašų šalinimas
       href: remove-duplicates.md
     - name: Rungtynių sąlygos
       href: match-entities.md
-    - name: Suvienodinti kliento laukus
+    - name: Klientų laukų suvienodinimas
       href: merge-entities.md
-    - name: Peržiūrėti duomenų suvienijimą
+    - name: Duomenų suvienijimo peržiūra
       href: review-unification.md
-    - name: Atnaujinti suvienijimo parametrus
+    - name: Suvienijimo parametrų naujinimas
       href: data-unification-update.md
 - name: Duomenų papildymas
   items:
-    - name: Papildyti klientų profilius
+    - name: Duomenų papildymo apžvalga
       href: enrichment-hub.md
     - name: Paskyros iš Office 365 duomenų
       href: enrichment-office.md
@@ -110,9 +110,9 @@
       href: customer-profiles.md
     - name: Filtruokite sujungtus kliento profilius
       href: search-filter-index.md
-    - name: Apibrėžti kliento veiklą
+    - name: Apibrėžkite klientų veiklą
       href: activities.md
-    - name: '"Customer Insights" sutikimo valdymas'
+    - name: Sutikimo valdymo naudojimas
       href: consent-management.md
 - name: Segmentai
   items:
@@ -132,9 +132,9 @@
   items:
     - name: Priemonių apžvalga
       href: measures.md
-    - name: Kurti naują matą
+    - name: Naujos priemonės kūrimas
       href: measure-builder.md
-    - name: Matavimo šablono naudojimas
+    - name: Priemonės šablono naudojimas
       href: measure-templates.md
 - name: Prognozės
   items:
@@ -150,7 +150,7 @@
           href: predict-subscription-churn.md
         - name: Nuspėti perdavimo praradimą
           href: predict-transactional-churn.md
-        - name: Analizuoti klientų atsiliepimų nuotaikas
+        - name: Analizuokite klientų atsiliepimų nuotaikas
           href: sentiment-analysis.md
         - name: Naudoti „Azure“ mašininio mokymo pasirinktinius modelius
           href: custom-models.md
@@ -212,7 +212,9 @@
           href: export-facebook.md
         - name: „Google Ads“
           href: export-google-ads.md
-        - name: Iterable
+        - name: '"InMobi"'
+          href: export-inmobi.md
+        - name: Iteruojamas
           href: export-iterable.md
         - name: '"Klaviyo"'
           href: export-klaviyo.md
@@ -272,19 +274,19 @@
       href: own-data-lake-storage.md
     - name: Aplinkos parametrų valdymas
       href: manage-environments.md
-    - name: Prisijungimas prie saugyklos abonemento naudojant tarnybos pagrindinį
+    - name: Prisijungimas prie saugyklos abonemento naudojant pagrindinę paslaugą
       href: connect-service-principal.md
 - name: Administracija
   items:
     - name: Nustatykite sistemos konfigūraciją
       href: system.md
-    - name: Konfigūruoti saugos parametrus
+    - name: Saugos parametrų konfigūravimas
       href: security-overview.md
     - name: Vartotojo teisių priskyrimas
       href: permissions.md
     - name: Papildykite patys „Key Vault“
       href: use-azure-key-vault.md
-    - name: Eksportuoti diagnostikos žurnalus
+    - name: Diagnostikos žurnalų eksportavimas
       href: diagnostics.md
     - name: Ryšių apžvalga
       href: connections.md
@@ -294,7 +296,7 @@
       href: apis.md
     - name: API nuorodos
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: OData užklausų pavyzdžiai
+    - name: '"OData" užklausų pavyzdžiai'
       href: odata-examples.md
 - name: Paslaugų apribojimai
   href: service-limits.md

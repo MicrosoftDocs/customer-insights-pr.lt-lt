@@ -1,5 +1,5 @@
 ---
-title: „Azure Machine Learning“ eksperimentai
+title: Naudokite „Azure Machine Learning“ pagrįstus modelius
 description: Naudokite „Azure Machine Learning“ pagrįstus modelius „Dynamics 365 Customer Insights“.
 ms.date: 12/02/2021
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cefd037a021b669e827f0593d63b938d452963f7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643260"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082285"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Naudokite „Azure Machine Learning“ pagrįstus modelius
 
@@ -34,7 +34,7 @@ Suvienodinti duomenys „Dynamics 365 Customer Insights“ yra šaltinis skirtas
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Dirbkite su „Azure Machine Learning“ kūrėju
 
-"Azure mašininis mokymas designer" pateikia vaizdinę drobę, kurioje galite vilkti ir numesti duomenų rinkinius ir modulius. Bendras vamzdynas sukurtas iš kūrėjo gali būti integruojamas į „Customer Insights“, jei jos yra atitinkamai sukonfigūruotos. 
+"Azure mašininis mokymas" dizaino įrankis suteikia vaizdinę drobę, kurioje galite vilkti ir mesti duomenų rinkinius ir modulius. Bendras vamzdynas sukurtas iš kūrėjo gali būti integruojamas į „Customer Insights“, jei jos yra atitinkamai sukonfigūruotos. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Darbas su „Azure Machine Learning“ SDK
 

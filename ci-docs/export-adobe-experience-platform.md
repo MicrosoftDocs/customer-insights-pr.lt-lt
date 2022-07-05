@@ -1,6 +1,6 @@
 ---
-title: "\"Customer Insights\" duomenų eksportavimas į Adobe Experience Platform"
-description: Sužinokite, kaip naudoti "Customer Insights" segmentus programoje Adobe Experience Platform.
+title: Segmentų eksportavimas į Adobe Experience Platform (peržiūra)
+description: Sužinokite, kaip naudoti "Customer Insights" segmentus Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 42a4e0c6bce67a63b449a541299620ef2f4a3259
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c29b8264019669ffd954a298ce3a633c852477fa
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643733"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052521"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>„Customer Insights“ segmentų naudojimas Adobe Experience Platform (peržiūra)
+# <a name="export-segments-to-adobe-experience-platform-preview"></a>Segmentų eksportavimas į Adobe Experience Platform (peržiūra)
 
-Kaip, galbūt Dynamics 365 Customer Insights sukūrėte segmentus, kad jūsų rinkodaros kampanijos būtų efektyvesnės taikant atitinkamas auditorijas. Norėdami naudoti segmentą iš "Customer Insights" Adobe Experience Platform ir taikomąsias programas, pvz.Adobe, kampanijos standartą, turite atlikti kelis šiame straipsnyje nurodytus veiksmus.
+Kaip naudotojas Dynamics 365 Customer Insights galbūt sukūrėte segmentus, kad rinkodaros kampanijos būtų efektyvesnės, taikydami pagal atitinkamas auditorijas. Norėdami naudoti segmentą iš "Customer Insights" Adobe Experience Platform ir tokių programų kaip Adobe "Campaign Standard", turite atlikti kelis šiame straipsnyje nurodytus veiksmus.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Apdoroti šiame straipsnyje aprašytų veiksmų diagramą.":::
 
@@ -30,7 +30,7 @@ Kaip, galbūt Dynamics 365 Customer Insights sukūrėte segmentus, kad jūsų ri
 
 ## <a name="campaign-overview"></a>Kampanijos apžvalga
 
-Norėdami geriau suprasti, kaip galite naudoti segmentus iš "Customer Insights", pažvelkime Adobe Experience Platform į fiktyvią pavyzdinę kampaniją.
+Jei norite geriau suprasti, kaip galite naudoti segmentus iš "Customer Insights Adobe Experience Platform", pažvelkime į fiktyvią pavyzdinę kampaniją.
 
 Tarkime, kad jūsų įmonė siūlo mėnesinę, prenumerata pagrįstą paslaugą jūsų klientams Jungtinėse Amerikos Valstijose. Norite nustatyti klientus, kurių prenumeratos turi būti atnaujintos per artimiausias aštuonias dienas, bet jie dar neatnaujino prenumeratos. Norėdami išlaikyti šiuos klientus, el. paštu išsiųskite reklaminį pasiūlymą, naudojantis Adobe Experience Platform.
 
@@ -38,9 +38,9 @@ Tarkime, kad jūsų įmonė siūlo mėnesinę, prenumerata pagrįstą paslaugą 
 
 ## <a name="identify-your-target-audience"></a>Atpažinkite savo tikslinę auditoriją
 
-Pagal mūsų scenarijų darome prielaidą, kad klientų el. pašto adresai yra prieinami "Customer Insights", o jų reklaminės nuostatos buvo išanalizuotos siekiant nustatyti segmento narius.
+Pagal mūsų scenarijų darome prielaidą, kad klientų el. pašto adresai pasiekiami "Customer Insights" ir jų reklaminės nuostatos buvo išanalizuotos siekiant identifikuoti segmento narius.
 
-Segmentas [, kurį apibrėžėte "Customer Insights"](segments.md), vadinamas " **ChurnProneCustomers"**, ir jūs planuojate siųsti šiems klientams el. pašto reklamą.
+Segmentas, [kurį apibrėžėte "Customer Insights",](segments.md) vadinamas **"ChurnProneCustomers"** ir planuojate siųsti šiems klientams el. pašto reklamą.
 
 :::image type="content" source="media/churn-prone-customers-segment.png" alt-text="Segmentų puslapio su sukurtu ChurnProneCustomers segmentu ekrano kopija.":::
 
@@ -48,7 +48,7 @@ Pasiūlymo el. laiške, kurį jūs norite išsiųsti, bus vardas, pavardė ir kl
 
 ## <a name="export-your-target-audience"></a>Eksportuokite savo tikslinę auditoriją
 
-Identifikavus tikslinę auditoriją, galime konfigūruoti eksportą iš "Customer Insights" į "Azure Blob Storage" paskyrą.
+Nustatę tikslinę auditoriją, galime sukonfigūruoti eksportavimą iš "Customer Insights" į "Azure Blob" saugyklos paskyrą.
 
 ### <a name="configure-a-connection"></a>Ryšio konfigūravimas
 
@@ -106,17 +106,17 @@ Pavyzdys: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-2
 
 ## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Patirties duomenų modelio (XDM) apibrėžimas Adobe Experience Platform
 
-Prieš naudodami Adobe Experience Platform eksportuotus duomenis iš "Customer Insights", turime apibrėžti patirties duomenų modelio schemą ir [sukonfigūruoti kliento profilio realiuoju laiku duomenis](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Kad eksportuotus duomenis iš "Customer Insights" būtų galima naudoti, Adobe Experience Platform turime apibrėžti "Experience Data Model" schemą ir [sukonfigūruoti realiojo laiko kliento profilio](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials) duomenis.
 
 Sužinokite, [kas yra XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) ir supraskite [schemos struktūros pagrindus](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
 ## <a name="import-data-into-adobe-experience-platform"></a>Duomenų importavimas į „Adobe Experience Platform“
 
-Dabar, kai viskas yra vietoje, turime importuoti paruoštus auditorijos duomenis iš "Customer Insights" į Adobe Experience Platform.
+Dabar, kai viskas yra savo vietose, turime importuoti paruoštus auditorijos duomenis iš "Customer Insights" į Adobe Experience Platform.
 
 Pirma, [sukurkite „Azure” didelių dvejetainių objektų saugyklos ryšį](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Apibrėžę šaltinio ryšį, konfigūruokite debesies saugyklos paketo ryšio duomenų srautą [,](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) kad importuotumėte segmento išvestį iš "Customer Insights" į Adobe Experience Platform.
+Apibrėžę šaltinio ryšį, sukonfigūruokite debesies saugyklos paketinio ryšio duomenų srautą [,](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) kad segmento išvestis būtų importuota iš "Customer Insights" į Adobe Experience Platform.
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Sukurkite auditoriją "Adobe Campaign Standard"
 

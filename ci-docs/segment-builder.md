@@ -1,6 +1,6 @@
 ---
-title: Kurkite segmentus naudodami segmentų kūrimo priemonę
-description: Kurkite klientų segmentus, kad jie būtų sugrupuoti pagal įvairius atributus.
+title: Kurti segmentus
+description: Kurkite klientų segmentus, kad sugrupuotumėte juos pagal įvairius atributus naudodami segmentų kūrimo priemonę arba sparčiuosius segmentus.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b99d9575d3b6af91758d80eb04170773b08cc9ab
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800106"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053982"
 ---
 # <a name="create-segments"></a>Kurti segmentus
 
@@ -64,7 +64,7 @@ Kurdami segmentą, jūs galite įrašyti juodraštį. Juodraščio etapo segment
 
 1. Segmento segmento apibrėžiate arba kuriate taisykles. Taisyklę sudaro viena ar daugiau sąlygų, apibrėžiaančių klientų rinkinį.
 
-1. **Skyriuje 1** taisyklė pasirinkite objekto, pagal kurį norite filtruoti klientus, atributą. Pasirinkti atributus galite dviem būdais:
+1. Sekcijoje **Taisyklė1** pasirinkite objekto, pagal kurį norite filtruoti klientus, atributą. Pasirinkti atributus galite dviem būdais:
    - Peržiūrėkite galimų objektų ir atributų sąrašą srityje **Įtraukti į taisyklę** ir pažymėkite **„+”** piktogramą šalia atributo, kurį norite įtraukti. Pasirinkite, ar norite įtraukti atributą į esamą taisyklę, ar naudoti jį naujai taisyklei kurti.
    - Norėdami peržiūrėti sutampančius pasiūlymus, taisyklės skyriuje įveskite atributo pavadinimą.
 
@@ -120,9 +120,9 @@ Kurdami segmentą, jūs galite įrašyti juodraštį. Juodraščio etapo segment
    > - Jei atributas, kurį norite įtraukti į projektą, yra daugiau nei vienas objekto klientas, kaip apibrėžta ryšio, šis atributas neturi būti rodomas kiekvienoje *kuriamos* segmento užklausos taisyklėje.
    > - **Suplanuoti atributai** yra įtraukiami naudojant rinkinio operatorius.
 
-1. Pasirinkite **Redaguoti išsamią informaciją** šalia segmento Be pavadinimo. Įveskite savo segmento pavadinimą ir atnaujinkite siūlomą **Išvesties objekto pavadinimą** segmentui. Pasirinktinai įtraukite aprašą ir [žymes](work-with-tags-columns.md#manage-tags) į segmentą.
+1. Pasirinkite **Redaguoti išsamią informaciją** šalia Segmentas Be pavadinimo. Įveskite savo segmento pavadinimą ir atnaujinkite siūlomą **Išvesties objekto pavadinimą** segmentui. Pasirinktinai prie segmento pridėkite aprašą ir [žymes](work-with-tags-columns.md#manage-tags).
 
-   :::image type="content" source="media/segments_edit_details.png" alt-text="Dialogo langas Išsamios informacijos redagavimas.":::
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Dialogo langas Redaguoti išsamią informaciją.":::
 
 1. Pasirinkite **Vykdyti**, kad įrašytumėte segmentą, jį suaktyvintumėte ir pradėkite apdoroti segmentą pagal visas taisykles ir sąlygas. Priešingu atveju jis bus įrašytas kaip neaktyvusis segmentas.
 
@@ -134,7 +134,7 @@ Kurdami segmentą, jūs galite įrašyti juodraštį. Juodraščio etapo segment
 > - Nustatant sąlygų operatorius, segmentų kūrimo priemonė nesiūlys galiojančių objektų reikšmių. Galite eiti į **Duomenis** > **Objektai** ir atsisiųsti objekto duomenis, kad pamatytumėte, kurios reikšmės yra galimos.
 > - Datomis pagrįstos sąlygos leidžia jums perjungti tarp fiksuotų datų ir slankiojo kablelio datų intervalo.
 > - Jei turite kelias segmento taisykles, redaguojate taisyklę šalia jos yra vertikali mėlyna linija.
-> - Taisykles ir sąlygas galite perkelti į kitas segmento aprašo vietas. Pasirinkite vertikalią daugtaškį (&vellip;) šalia taisyklės ar sąlygos ir pasirinkite, kaip ir kur ją perkelti.
+> - Taisykles ir sąlygas galite perkelti į kitas segmento aprašo vietas. Pasirinkite vertikalią daugtaškį (&vellip;) šalia taisyklės arba sąlygos ir pasirinkite, kaip ir kur ją perkelti.
 > - Naudojant komandų juostoje valdiklius **Anuliuoti** ir Perdaryti galima **atšaukti** keitimus.
 > - Sukūrus segmentą, kai kurie segmentai leidžia stebėti [segmento](segments.md#track-usage-of-a-segment) naudojimą.
 
@@ -157,7 +157,7 @@ Spartieji segmentai leidžia jums greitai sukurti paprastus segmentus naudojant 
 
    :::image type="content" source="media/quick-segment-name.png" alt-text="Sparčiojo segmento pavadinimas ir įvertinimas.":::
 
-5. Pateikite segmento **objekto** pavadinimą **ir** išvestį pavadinimą. Pasirinktinai pridėkite [žymes](work-with-tags-columns.md#manage-tags).
+5. Pateikite segmento **pavadinimo** ir **išvesties objekto pavadinimą**. Pasirinktinai pridėkite [žymų](work-with-tags-columns.md#manage-tags).
 
 6. Pasirinkite **Įrašyti**, kad sukurtumėte savo segmentą.
 

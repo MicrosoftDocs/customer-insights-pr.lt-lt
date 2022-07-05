@@ -21,14 +21,14 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: a7b10d985d5cba64b25595a3d7c101d6cb5c62a5
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643808"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082579"
 ---
-# <a name="relationships-between-entities"></a>Objektų ryšiai
+# <a name="relationships-between-entities-and-entity-paths"></a>Ryšiai tarp objektų ir objektų kelių
 
 Ryšiai jungia objektus ir apibrėžia jūsų duomenų grafą, kai objektai turi bendrą identifikatorių – išorinį raktą. Šis išorinis raktas gali būti nurodomas iš vieno objekto į kitą. Sujungti objektai įgalina segmentų ir matavimų apibrėžimus, remiantis keliais duomenų šaltiniais.
 
@@ -84,7 +84,7 @@ Ryšys susideda iš *šaltinio objekto*, kuriame yra išorinis raktas, ir *paski
 
 Aplinkos, sukonfigūruotos taip, kad verslo klientai būtų naudojami kaip pagrindinė tikslinė auditorija, gali konfigūruoti susijusių verslo paskyrų hierarchijas. Pavyzdžiui, įmonė, kuri turi atskirus verslo vienetus. 
 
-Organizacijos kuria abonementų hierarchijas, kad galėtų geriau valdyti abonementus ir jų ryšius tarpusavyje. "Customer Insights" palaiko pirminio ir antrinio kliento abonementų hierarchijas, kurios jau yra prarytuose kliento duomenyse. Pavyzdžiui, klientai iš „Dynamics 365 Sales". Šias hierarchijas galima konfigūruoti **puslapyje Ryšiai**.
+Organizacijos kuria abonementų hierarchijas, kad galėtų geriau valdyti abonementus ir jų ryšius tarpusavyje. "Customer Insights" palaiko tėvų ir antrinių paskyrų hierarchijas, kurios jau yra perpildytuose klientų duomenyse. Pavyzdžiui, klientai iš „Dynamics 365 Sales". Šias hierarchijas galima konfigūruoti **puslapyje Ryšiai**.
 
 1. Eikite į **Duomenys** > **Ryšiai**.
 1. Pasirinkti **Klientų hierarchija** skirtuką.

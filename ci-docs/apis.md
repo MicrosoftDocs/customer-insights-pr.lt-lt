@@ -1,5 +1,5 @@
 ---
-title: Dirbkite su API
+title: Darbas su „Customer Insights“ API
 description: Naudokite API ir supraskite apribojimus.
 ms.date: 05/10/2021
 ms.reviewer: wimohabb
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 8e8bd590d3bba9dc7b1644b6ff42b9fc53237ca9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808516"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054074"
 ---
 # <a name="work-with-customer-insights-apis"></a>Darbas su „Customer Insights“ API
 
@@ -25,17 +25,17 @@ ms.locfileid: "8808516"
 > [!IMPORTANT]
 > Šių API išsami informacija yra išvardyta [„Customer Insights“ API nuorodoje](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Jie apima papildomą informaciją apie operacijas, parametrus ir atsakymus.
 
-Šiame straipsnyje aprašoma, kaip pasiekti "Customer Insights" API, sukurti "Azure" programų registraciją ir pradėti dirbti su klientų bibliotekomis.
+Šiame straipsnyje aprašoma, kaip pasiekti "Customer Insights" API, sukurti "Azure App" registraciją ir pradėti naudotis klientų bibliotekomis.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Pradėkite bandyti „Customer Insights“ API
 
 1. [Prisijunkite](https://home.ci.ai.dynamics.com) prie „Customer Insights“. Jei dar neturite prenumeravimo, [prisiregistruokite „Customer Insights“ bandymui](https://aka.ms/tryci).
 
-1. Norėdami įgalinti API savo "Customer Insights" aplinkoje, eikite į **Administratoriaus** > **sauga**. Jums reikės administravimo teisių, kad tą atliktumėte.
+1. Norėdami įgalinti API savo "Customer Insights" aplinkoje, eikite į **administratoriaus** > **sauga**. Jums reikės administravimo teisių, kad tą atliktumėte.
 
 1. Eikite į **API** skirtuką ir pasirinkite **Įjungti** mygtuką.    
  
-   API įjungimas sukuria pirmąjį ir antrąjį prenumeravimo raktą jūsų elementui, kuris yra naudojamas API prašymų. Raktus galite regeneruoti pasirinkdami administratoriaus saugos API regeneruoti pirminį **arba** regeneruoti **antrinį**.**·** > **·** > **·**
+   API įjungimas sukuria pirmąjį ir antrąjį prenumeravimo raktą jūsų elementui, kuris yra naudojamas API prašymų. Galite atkurti raktus pasirinkdami Atkurti pirminį arba Atkurti antrinį **administratoriaus** **saugos** API **.** > **·** > **·**
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -67,7 +67,7 @@ HTTP atsakas greitai pasirodys apačioje.
 
 1. Jūsų naujos programos registracijoje eikite į **API teisės**.
 
-1. Pasirinkite **Įtraukti teises** ir šoninėje srityje pasirinkite **"Dynamics 365 AI for Customer Insights** ".
+1. Pasirinkite **Įtraukti leidimą** ir šoninėje srityje pasirinkite **"Dynamics 365 AI for Customer Insights** ".
 
 1. Jei **tai teisės** tipas, pažymėkite **Išsamūs leidimai**, tada pažymėkite **user_impersonation** teisę.
 
@@ -87,7 +87,7 @@ Informacijos apie API naudojimas mūsų klientų bibliotekose ieškokite [„Cus
 
 ### <a name="server-to-server-application-permissions"></a>Serveris su serveriu programos teisės
 
-[Programos registracijos skyrius](#create-a-new-app-registration-in-the-azure-portal) nurodo, kaip registruoti programą, kuriai reikia, kad vartotojas prisijungtų autentifikavimui. Sužinokite, kaip sukurti programos registraciją, kuriai nereikia vartotojo sąveikos ir kurią galima paleisti serveryje.
+[Programos registracijos skyrius](#create-a-new-app-registration-in-the-azure-portal) nurodo, kaip registruoti programą, kuriai reikia, kad vartotojas prisijungtų autentifikavimui. Sužinokite, kaip sukurti programos registraciją, kuriai nereikia vartotojo sąveikos ir kurią galima vykdyti serveryje.
 
 1. Programos registracijoje „Azure“ portale eikite į **API teisės**.
 
@@ -113,7 +113,7 @@ Informacijos apie API naudojimas mūsų klientų bibliotekose ieškokite [„Cus
 
 ## <a name="sample-queries"></a>Užklausų pavyzdžiai
 
-Sudarėme trumpą "OData" pavyzdinių užklausų sąrašą, kad galėtume dirbti su API: ["OData" užklausų pavyzdžiais](odata-examples.md).
+Sudarėme trumpą "OData" pavyzdinių užklausų sąrašą, kad galėtume dirbti su API: ["OData" užklausų pavyzdžiai](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>„Customer Insights“ kliento bibliotekos
 
@@ -139,7 +139,7 @@ Sužinokite, kaip pradėti naudojant C# kliento bibliotekas iš NuGet.org. Dėl 
 
 1. Naudokite [„Microsoft“ autentifikavimo biblioteką (MSAL)](/azure/active-directory/develop/msal-overview) tam, kad gautumėte `AccessToken` naudodami esančią savo [„Azure“ programos registraciją](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Sėkmingai autentizavę ir įsigiję atpažinimo ženklą, sukurkite naują arba naudokite esamą `HttpClient` su **DefaultRequestHeaders "Authorization", nustatytu kaip** Bearer "prieigos atpažinimo ženklas"**ir** Ocp-Apim-Subscription-Key **,** nustatytu kaip prenumeratos raktas [**iš "Customer Insights"** aplinkos](#get-started-trying-the-customer-insights-apis).   
+1. Sėkmingai autentifikavę ir įsigiję atpažinimo ženklą, sukurkite naują arba naudokite esamą `HttpClient` su **DefaultRequestHeaders "Autorizacija", nustatyta kaip** Bearer "prieigos atpažinimo ženklas"**ir** Ocp-Apim-Subscription-Key **, nustatytas kaip** prenumeratos raktas [**iš jūsų "Customer Insights"** aplinkos](#get-started-trying-the-customer-insights-apis).   
  
    Paleiskite iš naujo **autorizavimo** antraštę, kai būtina. Pavyzdžiui, kai žyma baigė galioti.
 
@@ -149,7 +149,7 @@ Sužinokite, kaip pradėti naudojant C# kliento bibliotekas iš NuGet.org. Dėl 
 
 1. Atlieka skambučius su klientu „plėtinio metodams“, pavyzdžiui  `GetAllInstancesAsync`. Jei norite prieiti prie po juo esančiu `Microsoft.Rest.HttpOperationResponse`, naudokite „http žinutės metodai”, pavyzdžiui `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Atsakymas greičiausiai bus `object` objekto tipo, nes metodas gali grįžti į keletą tipų (pavyzdžiui, `IList<InstanceInfo>` ir `ApiErrorResult`). Norėdami patikrinti grąžinimo tipą, naudokite tos operacijos ATSAKYMŲ TIPŲ, nurodytų [API išsamios informacijos puslapyje](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights), nurodytus atsakymų tipų objektus.    
+1. Atsakymas greičiausiai bus `object` objekto tipo, nes metodas gali grįžti į keletą tipų (pavyzdžiui, `IList<InstanceInfo>` ir `ApiErrorResult`). Norėdami patikrinti grąžinimo tipą, naudokite objektus atsakymų tipuose, nurodytuose tos [operacijos](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) PUSLAPYJE IŠSAMI API informacija.    
    
    Jei reikia daugiau informacijos, naudokite **http pranešimo metodus** tam, kad prieitumėte prie neapdoroto atsakymo objekto.
 

@@ -1,5 +1,5 @@
 ---
-title: Eksportuoti „Customer Insights“ duomenis į „Dynamics 365 Marketing“
+title: Segmentų eksportavimas į "Dynamics 365 Marketing" (peržiūra)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Dynamics 365 Marketing“.
 ms.date: 08/24/2021
 ms.reviewer: mhart
@@ -11,27 +11,25 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 7227f3f9e7699a9b5ad546789de5e568b56da579
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: fed4ae1b017cca2b6060c4dda155859cd77e0daf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642959"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054626"
 ---
-# <a name="use-segments-in-dynamics-365-marketing-preview"></a>„Dynamics 365 Marketing“ segmentų naudojimas (peržiūra)
-
-
+# <a name="export-segments-to-dynamics-365-marketing-preview"></a>Segmentų eksportavimas į "Dynamics 365 Marketing" (peržiūra)
 
 Naudokite [segmentus](segments.md) tam, kad sukurtumėte kampanijas ir susisiektumėte su konkrečiomis klientų grupėmis su „Dynamics 365 Marketing“. Daugiau informacijos žr. [Segmentų naudojimas iš „Dynamics 365 Customer Insights“ su „Dynamics 365 Marketing“](/dynamics365/marketing/customer-insights-segments).
 
-Jei naudojate naujas "Dynamics 365 Marketing" galimybes realiuoju klientų instrumentavimo ciklo metu Dataverse organizacijoje, jums nereikia kurti standartinio eksportavimo į "Dynamics 365 Marketing". "Customer Insights" kontaktai ir segmentai pasiekiami tiesiogiai "Dynamics 365 Marketing", prijungus "Marketing" ir "Customer Insights". Prieš panaikindami esamą eksportavimą, peržiūrėkite [dokumentaciją, kaip prijungti "Customer Insights" ir "Dynamics 365 Marketing" klientų veiklos ciklas orkestravimą](/dynamics365/marketing/real-time-marketing-ci-profile).
+Jei naudojate naujas "Dynamics 365 Marketing" galimybes realiuoju klientų instrumentavimo ciklo metu Dataverse organizacijoje, jums nereikia kurti standartinio eksportavimo į "Dynamics 365 Marketing". Kontaktai ir segmentai iš "Customer Insights" pasiekiami tiesiogiai "Dynamics 365 Marketing", prijungus "Marketing" ir "Customer Insights". Prieš panaikindami esamus eksportavimus, peržiūrėkite dokumentaciją [, kaip prijungti "Customer Insights" ir "Dynamics 365 Marketing" klientų veiklos ciklas orkestravimą](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Būtinoji ryšio sąlygą
 
 - Kontaktų įrašai turi būti „Dynamics 365 Marketing”, kad segmentą būtų galima eksportuoti iš „Customer Insights” į „Marketing”. Sužinokite daugiau, kaip pasiekti [„Dynamics 365 Marketing ”kontaktus naudojant „Microsoft Dataverse”](connect-dataverse-managed-lake.md).
 
   > [!NOTE]
-  > Segmentų eksportavimas iš "Customer Insights" į "Marketing" nesukurs naujų kontaktų įrašų "Marketing" egzemplioriuose. Kontaktų įrašai iš "Marketing" turi būti praryti "Customer Insights" ir naudojami kaip duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.
+  > Segmentų eksportavimas iš "Customer Insights" į "Marketing" nekurs naujų kontaktų įrašų "Marketing" egzemplioriuose. Kontaktų įrašai iš "Marketing" turi būti praryti programoje "Customer Insights" ir naudojami kaip duomenų šaltinis. Be to, juos reikia įtraukti į vieningą kliento objektą, kad būtų galima susieti klientų ID su kontaktų ID prieš eksportuojant segmentus.
 
 ## <a name="set-up-connection-to-marketing"></a>Ryšio su rinkodara sąranka
 
@@ -47,7 +45,7 @@ Jei naudojate naujas "Dynamics 365 Marketing" galimybes realiuoju klientų instr
 
 1. Skyriuje **Serverio administratoriaus klientas** spustelėkite **Prisijungti** ir pasirinkite „Dynamics 365 Marketing“ klientą.
 
-1. Susieti kliento objekto lauką Kontakto ID su "Dynamics 365" kontakto ID.
+1. Susiekite objekto Kliento kontakto ID lauką su "Dynamics 365" kontakto ID.
 
 1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį. 
 

@@ -1,5 +1,5 @@
 ---
-title: Power Automate jungtis | „Microsoft Docs“
+title: Power Automate jungtis (peržiūra) | "Microsoft" dokumentai
 description: Kurkite srautus „Microsoft Power Automate” platformoje iš „Dynamics 365 Customer Insights”.
 ms.date: 06/24/2021
 ms.reviewer: mhart
@@ -8,20 +8,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741189"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082453"
 ---
 # <a name="power-automate-connector-preview"></a>„Power Automate“ jungtis (peržiūra)
 
-Nustatykite, kad konkretūs įvykiai būtų automatiškai vykdomi pasikeitus duomenims ir tvarkykite sudėtingesnius srautus tiesiai programoje [„Power Automate“](https://flow.microsoft.com/).
+Nustatykite, kad konkretūs įvykiai būtų automatiškai vykdomi pasikeitus duomenims ir tvarkykite sudėtingesnius srautus tiesiai programoje [„Microsoft Power Automate“](https://flow.microsoft.com/).
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Galite atlikti ne daugiau kaip 100 skambučių per 60 sekundžių. Naudodami parametrą $skip, API galinį punktą galite skambinti kelis kartus. [Sužinokite daugiau apie $skip parametrą](/connectors/customerinsights/#get-items-from-an-entity).
+- Galite atlikti ne daugiau kaip 100 skambučių per 60 sekundžių. Api galinį punktą galite iškviesti kelis kartus naudodami parametrą $skip. [Sužinokite daugiau apie parametrą $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ## <a name="power-automate-triggers"></a>„Power Automate“ paleidikliai
 
@@ -32,7 +32,7 @@ Naudokite paleidinius debesies srautams kurti ir pasikartojančioms užduotims, 
 - Paleidiklis, pasiekus segmento ribinę reikšmę. Paleidiklis taikomas tik ribinės vertės viršijimui.
 - Paleidiklis, pasiekus verslo mato ribinę reikšmę. Palaikomi tik verslo matai be dimensijos. Paleidiklis taikomas tik ribinės vertės viršijimui.
 - Paleidimas, kai visas paleidimas iš naujo (duomenų šaltinių, segmentų, priemonių, ...) yra pabaigtas.
-- Suaktyvinkite, kai baigiamas suvienijimo proceso atnaujinimas.
+- Suaktyvinkite, kai baigsis suvienijimo proceso atnaujinimas.
 
 [Paleidiklių konfigūravimas „Power Automate“.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

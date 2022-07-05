@@ -1,5 +1,5 @@
 ---
-title: Apžvalga apie palaikomus prognozės scenarijus
+title: Prognozių apžvalga
 description: Prognozės scenarijų ir parinkčių, kuriuos apima „Dynamics 365 Customer Insights” taikomoji programa.
 ms.date: 03/24/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643933"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083104"
 ---
 # <a name="predictions-overview"></a>Prognozių apžvalga
 
@@ -29,7 +29,7 @@ Lengviausias būdas pradėti prognozuoti duomenis yra iš anksto nustatyti model
 - [Produkto rekomendacija](predict-product-recommendation.md): Pasiūlo numatytąsias produktų rekomendacijas pagal pirkimo elgseną ir klientus su panašiais pirkimo modeliais.
 - [Prenumeratų praradimas](predict-subscription-churn.md): Prognozuoja, ar yra rizika, kad klientas nebenaudos jūsų įmonės prenumeruojamų produktų ar paslaugų.
 - [Operacijų praradimas](predict-transactional-churn.md): Numato, ar klientas nebepirks jūsų produktų ar paslaugų tam tikru skirtuoju laiku.
-- [Sentimentų analizė](sentiment-analysis.md): Analizuokite klientų atsiliepimų nuotaikas ir nustatykite dažnai minimus verslo aspektus.
+- [Nuotaikų analizė](sentiment-analysis.md): analizuokite klientų atsiliepimų nuotaikas ir nustatykite dažnai minimus verslo aspektus.
 
 # <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
 
@@ -38,9 +38,9 @@ Lengviausias būdas pradėti prognozuoti duomenis yra iš anksto nustatyti model
 ---
 
 > [!TIP]
-> Rekomenduojame reguliariai atnaujinti "out-of-the-box" modelius su atnaujintais duomenimis, kad jie tiksliai informuotų jūsų įmonės naudojimo atvejį. Duomenys atnaujinami ad hoc, kai sistema praryja naujus arba atnaujintus duomenų šaltinius. Tačiau šiuo atveju modeliai tik iš naujo įvertins ir toliau naudos esamus mokymo duomenis.
+> Rekomenduojame reguliariai atnaujinti parengtus naudoti modelius su atnaujintais duomenimis, kad įsitikintumėte, jog jie tiksliai informuoja jūsų verslo naudojimo atvejį. Duomenys atnaujinami ad hoc, kai sistema praryja naujus arba atnaujintus duomenų šaltinius. Tačiau modeliai tik šiuo atveju bus atšaukti ir toliau naudos esamus mokymo duomenis.
 > 
-> Naujinimo grafiką **galite konfigūruoti** nustatydami modelio perkvalifikavimo grafiką konfigūravimo praktikoje. Modelis perkvalifikuos ir perkurs šį tvarkaraštį, kurį galite bet kada pakeisti.
+> Galite konfigūruoti **naujinimo tvarkaraštį** nustatydami modelio perkvalifikavimo tvarkaraštį konfigūravimo funkcijose. Modelis persikvalifikuos ir pakeis šį tvarkaraštį, kurį galėsite bet kada pakeisti.
 
 
 ## <a name="azure-machine-learning-integration"></a>„Azure“ mašininio mokymo integravimas

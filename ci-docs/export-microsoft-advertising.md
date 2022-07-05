@@ -1,5 +1,5 @@
 ---
-title: „Customer Insights“ duomenų eksportavimas į „Microsoft Advertising“
+title: Segmentų eksportavimas į „Microsoft Advertising“ (peržiūra)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Microsoft Advertising“.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 14479e915dd6ae76e018b59bee5980a600bb222d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ca37159ec6473ad5c331a0ce1aa8424d277529ff
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643913"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082810"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Segmentų eksportavimas į „Microsoft Advertising“ (peržiūra)
 
@@ -23,7 +23,7 @@ Eksportuokite „Customer Insights” segmentus į „Microsoft Advertising”, 
 
 -   [„Microsoft Advertising“ paskyra](https://ads.microsoft.com/) ir atitinkami administratoriaus kredencialai.
 -   Priėmėte „Customer Match” naudojimo sąlygas. 
--   [Sukonfigūruoti segmentai](segments.md) programoje "Customer Insights".
+-   [Sukonfigūruoti segmentai](segments.md) "Customer Insights".
 -   Vieningieji klientų profiliai, esantys eksportuotuose segmentuose, ir turintys lauką su el. pašto adresu.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai

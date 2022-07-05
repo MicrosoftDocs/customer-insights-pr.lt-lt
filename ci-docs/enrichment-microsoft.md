@@ -1,6 +1,6 @@
 ---
-title: Klientų profilių praturtinimas prekių ženklais ir pomėgių duomenimis iš "Microsoft"
-description: Naudokite "Microsoft" nuosavybinius duomenis, kad praturtintumėte savo klientų duomenis giminystės ryšiais ir balso bendrinimu.
+title: Praturtinkite klientų profilius prekių ženklais ir pomėgių duomenimis iš "Microsoft" (peržiūra)
+description: Naudokite patentuotus "Microsoft" duomenis, kad praturtintumėte savo klientų duomenis ryšiais ir balso bendrinimu.
 ms.date: 03/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -12,24 +12,24 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953775"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082705"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Praturtinkite klientų profilius giminystės ryšiais ir balso dalimi (peržiūra)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Praturtinkite klientų profilius prekių ženklais ir pomėgių duomenimis iš "Microsoft" (peržiūra)
 
-Naudokite "Microsoft" nuosavybinius duomenis, kad praturtintumėte savo klientų duomenis prekės ženklo ryšiais, pomėgiais ir balso dalimi (SoV). Šie panašumai ir SoV yra pagrįsti žmonių, kurių demografija panaši į jūsų klientų, duomenimis. Ši informacija padeda geriau suprasti ir segmentuoti savo klientus pagal jų panašumus arba SoV į konkrečius prekės ženklus ir interesus.
+Naudokite "Microsoft" patentuotus duomenis, kad praturtintumėte savo klientų duomenis prekės ženklo ryšiais, pomėgių giminystės ryšiais ir balso dalijimusi (SoV). Šie giminystės ryšiai ir SoV yra pagrįsti žmonių, kurių demografiniai rodikliai panašūs į jūsų klientų, duomenimis. Ši informacija padeda geriau suprasti ir segmentuoti klientus pagal jų giminystės ryšius arba SoV su konkrečiais prekių ženklais ir pomėgiais.
 
-## <a name="how-we-determine-affinities-and-sov"></a>Kaip mes nustatome giminystės ryšius ir SoV
+## <a name="how-we-determine-affinities-and-sov"></a>Kaip mes nustatome giminingumą ir SoV
 
-Mes naudojame "Microsoft" internetinės paieškos duomenis, kad rastume panašumų ir SoV prekių ženklams ir interesams įvairiuose demografiniuose segmentuose (apibrėžtuose pagal amžių, lytį ar vietą). Prekės ženklo ar palūkanų internetinės paieškos apimtis sudaro pagrindą nustatyti giminingumą arba SoV. Tačiau kiekvienas iš jų suteikia skirtingą požiūrį į savo klientų supratimą.
+Mes naudojame "Microsoft" internetinės ieškos duomenis, kad rastume bendrų interesų ir SoV prekių ženklams ir pomėgiams įvairiuose demografiniuose segmentuose (apibrėžiamuose pagal amžių, lytį ar vietą). Prekės ženklo ar pomėgio internetinės paieškos apimtis yra pagrindas nustatant giminingumą arba SoV. Tačiau kiekvienas iš jų suteikia skirtingą požiūrį į klientų supratimą.
 
-- Afinitetas yra lyginamasis įvairiuose demografiniuose segmentuose. Šią informaciją galite naudoti norėdami nustatyti demografinius segmentus, kurie turi didžiausią ryšį su tam tikru prekės ženklu ar interesais, palyginti su kitais segmentais.
+- Giminingumas yra lyginamasis demografinių segmentų palyginimas. Šią informaciją galite naudoti norėdami nustatyti demografinius segmentus, kurie turi didžiausią giminystės ryšį su tam tikru prekės ženklu ar pomėgiu, palyginti su kitais segmentais.
 
-- Balso dalis yra jūsų pasirinktų prekių ženklų ar interesų palyginimas. Šią informaciją galite naudoti norėdami nustatyti, kuris prekės ženklas ar interesas turi didžiausią balso dalį tam tikrame demografiniame segmente, palyginti su kitais pasirinktais prekių ženklais ar interesais.
+- Balso dalis yra jūsų pasirinktų prekių ženklų ar pomėgių palyginimas. Naudodami šią informaciją galite nustatyti, kuris prekės ženklas ar pomėgis turi didžiausią balso dalį tam tikrame demografiniame segmente, palyginti su kitais pasirinktais prekių ženklais ar pomėgiais.
 
 ## <a name="affinity-level-and-score"></a>Priskyrimo lygis ir balas
 
@@ -48,7 +48,7 @@ Priklausomai nuo to, kaip norite matuoti priskyrimą, galite naudoti arba prisky
 
 ## <a name="share-of-voice-sov"></a>Balso dalis (SoV)
 
-Mes apskaičiuojame SoV pagal 100 taškų skalę. Bendras SoV visuose prekės ženkluose ar pomėgiuose kiekvienam praturtintam kliento profiliui sudaro iki 100. Skirtingai nuo giminystės ryšių, SoV yra susijęs su pasirinktais prekių ženklais ir interesais. Pavyzdžiui, "Microsoft" soV reikšmės gali skirtis, jei pasirinkti prekių ženklai yra ("Microsoft", "GitHub") palyginti su "Microsoft", "LinkedIn").
+SoV apskaičiuojame 100 balų skalėje. Bendras soV visuose prekės ženkluose ar pomėgiuose kiekvienam praturtintam kliento profiliui prideda iki 100. Skirtingai nuo giminystės ryšių, SoV yra susijęs su jūsų pasirinktais prekių ženklais ir interesais. Pavyzdžiui, "Microsoft" SoV reikšmės gali skirtis, jei pasirinkti prekių ženklai yra ("Microsoft", "GitHub") ir ("Microsoft", "LinkedIn").
 
 ## <a name="supported-countriesregions"></a>Palaikomos šalys ir (arba) regionai
 
@@ -58,16 +58,16 @@ Mes apskaičiuojame SoV pagal 100 taškų skalę. Bendras SoV visuose prekės ž
 
 1. Pasirinkite **Duomenys** > **Papildymas** ir pasirinkite skirtuką **Atrasti**.
 
-   - Norėdami konfigūruoti prekės ženklo giminingumą ir SoV sodrinimą, plytelėje **Prekės ženklai** pasirinkite **Praturtinti mano duomenis**.
+   - Norėdami sukonfigūruoti prekės ženklo panašumus ir SoV praturtinimą, plytelėje **Prekės ženklai** pasirinkite **Praturtinti mano duomenis**.
 
-   - Norėdami konfigūruoti pomėgių giminingumą ir SoV sodrinimą, plytelėje Pomėgiai pasirinkite **Praturtinti mano duomenis** **.**
+   - Norėdami konfigūruoti pomėgių pomėgius ir SoV papildymą, plytelėje **Pomėgiai** pasirinkite **Praturtinti mano duomenis**.
 
    > [!div class="mx-imgBorder"]
    > ![Prekės ženklų ir interesų plytelės.](media/BrandsInterest-tile-Hub.png "Prekės ženklai ir interesų plytelės")
 
 1. Peržiūrėkite apžvalgą ir pasirinkite **Pirmyn**.
 
-1. Norėdami pakeisti savo šalį ar regioną, pasirinkite **Keisti** šalia **Šalies / regiono**. **Srityje Šalies / regiono parametrai** pasirinkite palaikomą šalį / regioną [ir](#supported-countriesregions) pasirinkite **Taikyti**.
+1. Norėdami pakeisti šalį ar regioną, pasirinkite **Keisti** šalia **Šalis / regionas**. **Srityje Šalies / regiono parametrai** pasirinkite palaikomą šalį / regioną [ir](#supported-countriesregions) pasirinkite **Taikyti**.
 
    > [!NOTE]
    > Kai pasirenkate savo prekių ženklus, , sistema teikia pasiūlymus pagal pasirinktą šalį arba regioną. Pasirinkę pramonės šaką, gausite svarbiausius prekės ženklus arba susiesite pagal pasirinktą šalį arba regioną.
@@ -77,20 +77,20 @@ Mes apskaičiuojame SoV pagal 100 taškų skalę. Bendras SoV visuose prekės ž
    - **Pramonės šaka**: išplečiamajame sąraše pasirinkite pramonės šaką ir pasirinkite iš geriausių tos pramonės šakų markių arba domina.
    - **Pasirinkite savo**: Įveskite jūsų organizacijai aktualų prekės ženklą arba pomėgį, o tada išsirinkite iš atitinkančių pasiūlymų. Jei jūsų ieškomo prekių ženklo ar pomėgio nėra, atsiųskite mums atsiliepimą naudodami nuorodą **Pasiūlyti**.
 
-1. Pasirinkite **Pirmyn** ir peržiūrėkite numatytąsias sodrinimo nuostatas ir, jei reikia, atnaujinkite jas.
+1. Pasirinkite **Pirmyn** ir peržiūrėkite numatytąsias papildymo nuostatas ir, jei reikia, atnaujinkite jas.
 
    :::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Pratinimo nuostatų lango papildymas.":::
 
 1. Pasirinkite **Toliau**.
 
-1. **Pasirinkite kliento duomenų rinkinį** ir pasirinkite profilį arba segmentą, kurį norite praturtinti "Microsoft" duomenimis. Kliento *subjektas* praturtina visus jūsų klientų profilius, o segmentas praturtina tik tame segmente esančius klientų profilius.
+1. **Pasirinkite kliento duomenų rinkinį** ir pasirinkite profilį arba segmentą, kurį norite papildyti "Microsoft" duomenimis. *Kliento* objektas praturtina visus jūsų klientų profilius, o segmentas praturtina tik tame segmente esančius klientų profilius.
 
 1. Pasirinkite **Toliau**.
 
-1. Susiekite laukus iš vieningo kliento objekto į "Microsoft" duomenis.
+1. Susiekite laukus iš vieningo kliento objekto su "Microsoft" duomenimis.
 
    > [!NOTE]
-   > Reikia bent jau gimimo datos arba lyties požymių. Reikalingi šalies / regiono ir bent jau miesto (ir valstijos / provincijos) arba pašto kodo. Rekomenduojame, kad prarijus duomenis gimimo data būtų konvertuota į DateTime tipą. Arba tai gali būti eilutė [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)f ormatu "yyyy-MM-dd" arba "yyyy-MM-ddTHH:mm:ss".
+   > Būtina bent jau gimimo data arba lyties požymiai. Šalis / regionas ir bent miestas (ir valstija / provincija) arba pašto kodas yra būtini. Rekomenduojame, kad duomenų nurijimo metu gimimo data būtų konvertuota į DateTime tipą. Arba tai gali būti eilutė [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)f ormatu "yyyy-MM-dd" arba "yyyy-MM-ddTHH:mm:ss".
 
 1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
 
@@ -100,23 +100,23 @@ Mes apskaičiuojame SoV pagal 100 taškų skalę. Bendras SoV visuose prekės ž
 
 1. Peržiūrėję pasirinkimus pasirinkite **Išsaugoti papildymą**.
 
-1. Pasirinkite **Vykdyti**, kad pradėtumėte sodrinimo procesą, arba beveik, kad grįžtumėte į **puslapį Praturtinimai**.
+1. Pasirinkite **Vykdyti**, kad pradėtumėte papildymo procesą, arba uždarykite, kad grįžtumėte į **puslapį Papildymai**.
 
    Praturtindami profilius praturtinsime, visus klientų profilius, pagal kuriuos gauname duomenis apie pasirinktus prekių ženklus ir interesams, įskaitant ne pasirinktos šalies ar regiono profilius. Pvz., jei pasirinkote Vokietiją, papildysime JAV esančius duomenis, jei gausime duomenų apie pasirinktus prekių ženklus ir pomėgius JAV.
 
-## <a name="enrichment-results"></a>Papildymo rezultatai
+## <a name="view-enrichment-results"></a>Papildymo rezultatų peržiūra
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Rezultatų peržiūra atlikus papildymo procesą.":::
 
-Rezultatai apima **afiniteto lygį** arba **balso** bendrinimo diagramas.
+Rezultatai apima **bendrų interesų lygį** arba **"Share of Voice"** diagramas.
 
-Objektai, sukurti iš sodrinimo, yra įtraukti į **duomenų** subjektų **sodrinimo** > **grupę**. Praturtinti prekių ženklų duomenys atitenka **"BrandAffinityFromMicrosoft"** ir **"BrandShareOfVoiceFromMicrosoft"** subjektams. Interesų duomenys yra **"InterestAffinityFromMicrosoft"** ir **"InterestShareOfVoiceFromMicrosoft"** subjektuose.
+Objektai, sukurti iš papildymų, yra išvardyti duomenų **objektų** **grupėje** > **Papildymas**. Praturtinti prekių ženklų duomenys patenka į **"BrandAffinityFromMicrosoft"** ir **"BrandShareOfVoiceF" iš "Microsoft"** subjektų. Interesų duomenys yra **"InterestAffinityFromMicrosoft"** ir **"InterestShareOfVoiceF" iš "Microsoft"** objektų.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Žr. papildymo duomenis kliento kortelėje
 
-Prekės ženklą ir susidomėjimą SoV taip pat galima peržiūrėti atskirose klientų kortelėse. Eikite į **Klientai** ir pasirinkite kliento profilį. Kliento kortelėje rasite prekės ženklo ar pomėgio "SoV" diagramas, pagrįstas to kliento demografinio profilio žmonėmis.
+Prekės ženklą ir susidomėjimą SoV taip pat galima peržiūrėti atskirose klientų kortelėse. Eikite į **Klientai** ir pasirinkite kliento profilį. Kliento kortelėje rasite prekės ženklo ar pomėgio SoV diagramas pagal to kliento demografinio profilio žmones.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Kliento kortelė su papildytais duomenimis.":::
 

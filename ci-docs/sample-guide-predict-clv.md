@@ -1,5 +1,5 @@
 ---
-title: Klientų ciklo reikšmės prognozės pavyzdinis vadovas
+title: Klientų ciklo reikšmės (CLV) prognozės pavyzdinis vadovas
 description: Naudokite šį pavyzdinį vadovą, kad išbandytumėte klientų ciklo reikšmės prognozės modelį.
 ms.date: 03/31/2022
 ms.reviewer: v-wendysmith
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 2013533ed225a396d21e51e63297d7608ce58ac6
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740821"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051647"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Klientų ciklo reikšmės (CLV) prognozės pavyzdinis vadovas
 
@@ -21,7 +21,7 @@ ms.locfileid: "8740821"
 
 ## <a name="scenario"></a>Scenarijus
 
-Contoso yra įmonė, gaminanti aukštos kokybės kavos ir kavos aparatus. Jie parduoda produktus per savo "Contoso Coffee" svetainę. Įmonė nori suprasti vertę (pajamas), kurią jų klientai gali sugeneruoti per artimiausius 12 mėnesių. Žinodama numatomą klientų vertę per artimiausius 12 mėnesių, įmonė galės nukreipti savo rinkodaros pastangas vertingiausiems klientams.
+Contoso yra įmonė, gaminanti aukštos kokybės kavos ir kavos aparatus. Jie parduoda produktus per savo Contoso Coffee" svetainę. Įmonė nori suprasti vertę (pajamas), kurią jų klientai gali sugeneruoti per artimiausius 12 mėnesių. Žinodama numatomą klientų vertę per artimiausius 12 mėnesių, įmonė galės nukreipti savo rinkodaros pastangas vertingiausiems klientams.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -30,7 +30,7 @@ Contoso yra įmonė, gaminanti aukštos kokybės kavos ir kavos aparatus. Jie pa
 
 ## <a name="task-1---ingest-data"></a>Užduotis 1 - Duomenų vartojimas
 
-Peržiūrėkite straipsnius [apie duomenų nurijimą](data-sources.md) ir [duomenų šaltinių importavimą naudojant Power Query jungtis](connect-power-query.md). Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės.
+Peržiūrėkite straipsnius [apie duomenų įsisavinimą](data-sources.md) ir [duomenų šaltinių importavimą naudojant Power Query jungtis](connect-power-query.md). Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Kliento duomenų naudojimas iš e-komercijos platformos
 
@@ -106,7 +106,7 @@ Peržiūrėkite straipsnius [apie duomenų nurijimą](data-sources.md) ir [duome
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>3 užduotis – Klientų ciklo reikšmės prognozės konfigūravimas
 
-Sutvarkę vieninguosius klientų profilius, galime vykdyti klientų ciklo reikšmės prognozę. Išsamių veiksmų ieškokite [Customer Lifetime Value prognozė](predict-customer-lifetime-value.md).
+Sutvarkę vieninguosius klientų profilius, galime vykdyti klientų ciklo reikšmės prognozę. Išsamių veiksmų ieškokite [kliento viso gyvenimo vertės prognozė](predict-customer-lifetime-value.md).
 
 1. Eikite į **Įžvalgos**  > **Prognozės** ir pasirinkite **Klientų ciklo reikšmės modelį**.
 

@@ -1,5 +1,5 @@
 ---
-title: „Customer Insights” duomenų eksportavimas į „Azure Data Lake Storage Gen2”
+title: Duomenų eksportavimas į Azure Data Lake Storage Gen2 (peržiūra)
 description: Sužinokite, kaip konfigūruoti ryšį su „Azure Data Lake Storage Gen2”.
 ms.date: 10/06/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: c2446fba425203d2910b82134b73543a73c7ecf8
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947240"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082663"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Segmentų sąrašo ir kitų duomenų eksportavimas į „Azure Data Lake Storage Gen2" (peržiūra)
+# <a name="export-data-to-azure-data-lake-storage-gen2-preview"></a>Duomenų eksportavimas į Azure Data Lake Storage Gen2 (peržiūra)
 
 Saugokite savo „Customer Insights“ duomenis saugykloje „Azure Data Lake Storage Gen2“ paskyros arba naudokite ją norėdami perkelti duomenis į kitas programas.
 
@@ -61,6 +61,6 @@ Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.
 Eksportuoti duomenys saugomi jūsų sukonfigūruotoje „Azure Data Lake Gen 2“ talpyklos saugykloje.
 
 > [!TIP]
-> Objektų, kuriuose yra daug duomenų, eksportavimas gali sukelti kelis CSV failus tame pačiame aplanke kiekvienam eksportavimui. Eksporto skaidymas vyksta dėl našumo priežasčių, kad būtų sumažintas laikas, kurio reikia eksportui užbaigti.
+> Eksportavus objektus, kuriuose yra daug duomenų, tame pačiame aplanke kiekvienam eksportui gali atsirasti keli CSV failai. Eksporto padalijimas vyksta dėl našumo priežasčių, kad būtų sumažintas laikas, per kurį eksportavimas užbaigiamas.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

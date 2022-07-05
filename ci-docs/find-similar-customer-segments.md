@@ -1,5 +1,5 @@
 ---
-title: Raskite panašių klientų su AI (yra vaizdo įrašas)
+title: Panašių klientų radimas naudojant AI (peržiūra) (yra vaizdo įrašas)
 description: Raskite panašių klientų segmentų, naudodami dirbtinį intelektą.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
@@ -12,14 +12,14 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 7877349817829f7486a63a1355a81361e1cb2c13
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643386"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054811"
 ---
-# <a name="similar-customers-preview"></a>Panašūs klientai (peržiūros versija)
+# <a name="find-similar-customers-with-ai-preview"></a>Panašių klientų radimas naudojant AI (peržiūra)
 
 Naudodamiesi šia funkcija, klientų bazėje rasite panašių klientų, naudodami dirbtinį intelektą. Norint naudotis šia funkcija, būtina sukurti bent vieną segmentą. Išplėtus esamo segmento kriterijus, bus lengviau rasti klientų, panašių į tą segmentą.
 
@@ -30,13 +30,13 @@ Naudodamiesi šia funkcija, klientų bazėje rasite panašių klientų, naudodam
 
 ## <a name="finding-similar-customers"></a>Panašių klientų radimas
 
-1. Eikite į **Segmentai** ir pasirinkite segmentą, kuriuo norite grįsti naują segmentą. Tai jūsų *šaltinio segmentas*.
+1. Eikite į **Segmentai** ir pasirinkite segmentą, kuriuo norite pagrįsti naują segmentą. Tai jūsų *šaltinio segmentas*.
 
 1. Veiksmų juostoje pažymėkite **Panašių klientų radimas**.
 
 1. Peržiūrėkite siūlomą naujo segmento pavadinimą ir, jei reikia, jį pakeiskite.
 
-1. Pasirinktinai įtraukite [žymes](work-with-tags-columns.md#manage-tags) į naują segmentą.
+1. Pasirinktinai pridėkite [žymų](work-with-tags-columns.md#manage-tags) prie naujo segmento.
 
 1. Peržiūrėkite laukus, kuriuose apibrėžiamas naujas segmentas. Šiuose laukuose apibrėžiamas pagrindas, pagal kurį sistema bandys rasti į šaltinio segmentą panašių klientų. Sistema pagal numatytuosius nustatymus pasirenka rekomenduojamus laukus.
   Laukai, kurie gali gerokai sumažinti modelio veikimą, automatiškai neįtraukiami.
@@ -48,7 +48,7 @@ Naudodamiesi šia funkcija, klientų bazėje rasite panašių klientų, naudodam
 
 1. Pagal numatytuosius nustatymus sistema siūlo į išvestį įtraukti tik 20 % tikslinės auditorijos. Jei reikia, redaguokite šią ribinę vertę. Padidinus ribinę vertę, sumažės tikslumas.
 
-1. Įtraukite klientus į šaltinio segmentą **pažymėdami žymės langelį Įtraukti narius iš šaltinio segmento, be klientų su panašiais atributais**.
+1. Įtraukite klientus į šaltinio segmentą pažymėdami žymimąjį laukelį **Įtraukti narius iš šaltinio segmento, be klientų su panašiais atributais**.
 
 1. Pasirinkite **Vykdyti** puslapio apačioje ir paleiskite dvejetainio klasifikavimo užduotį (mašininio mokymo metodą), kuria analizuojamas duomenų rinkinys.
 

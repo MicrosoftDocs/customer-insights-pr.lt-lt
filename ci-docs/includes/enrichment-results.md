@@ -1,11 +1,11 @@
 ---
-ms.openlocfilehash: 326c6b70f41c1c5b90bafca88681eadc6610cf59
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 3fcc70aca85a49d3882feffe934eeed70e403c43
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954245"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052107"
 ---
-Baigę sodrinimo [seriją](../enrichment-hub.md#run-or-refresh-enrichments), pasirinkite sodrinimą, kad peržiūrėtumėte [rezultatus](../enrichment-hub.md#enrichment-results). 
+Baigę papildymo [vykdymą](../enrichment-hub.md#run-or-refresh-enrichments), pasirinkite papildymą, kad peržiūrėtumėte [rezultatus](../enrichment-hub.md#view-enrichment-results). 
 
-Rezultatai rodo praturtintų profilių skaičių ir praturtintų profilių skaičių laikui bėgant. Praturtintų **klientų peržiūros** kortelėje rodomas sugeneruoto sodrinimo subjekto pavyzdys. Norėdami pamatyti išsamų rodinį, pasirinkite **Peržiūrėti daugiau** ir pasirinkite skirtuką **Duomenys**.
+Rezultatai rodo praturtintų profilių skaičių ir praturtintų profilių skaičių laikui bėgant. Papildytų **klientų peržiūros** kortelėje rodomas sugeneruoto papildymo objekto pavyzdys. Norėdami peržiūrėti išsamų rodinį, pasirinkite **Peržiūrėti daugiau** ir pasirinkite skirtuką **Duomenys**.

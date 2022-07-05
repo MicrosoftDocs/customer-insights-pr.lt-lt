@@ -1,6 +1,6 @@
 ---
-title: Peržiūrėti kliento profilius
-description: Gaukite bendrą jūsų suvienodintų kliento duomenų rodinį.
+title: Klientų profiliai
+description: Suvienodintų klientų duomenų peržiūra, įskaitant ieškos ir filtro naudojimą
 ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,18 +14,18 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 279c8e1291c6449005d593244f1979e871610a77
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947056"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052199"
 ---
 # <a name="customer-profiles"></a>Klientų profiliai
 
 Klientų **puslapyje** rodomas bendras jūsų vieningų klientų profilių rodinys. Klientų profiliai pasiekiami sukūrus [vieningą kliento objektą](data-unification.md). Puslapyje galima ieškoti klientų ir apibrėžti tos ieškos rodyklę.
 
-Klientai gali būti asmenys arba organizacijos. Kiekvieno kliento profilį vaizduoja plytelė. Norėdami gauti daugiau įrašų, naudokite puslapių ieškos valdiklius. Šioje kortelės lauke rodomi kliento *objekto* laukai, apibrėžti **ieškos ir filtro rodyklėje**. Kiekvienos kortelės laukų tvarką pasirenka sistema.
+Klientai gali būti asmenys arba organizacijos. Kiekvieno kliento profilį vaizduoja plytelė. Norėdami gauti daugiau įrašų, naudokite puslapių ieškos valdiklius. Šioje kortelės lauke rodomi kliento *objekto* laukai, apibrėžti **ieškos ir filtro rodyklėje**. Kiekvienos kortelės laukų tvarką parenka sistema.
 
 Pasirinkite plytelę, kad specialiame puslapyje, pavadintame Kliento išsami informacija, būtų [peržiūrėti pasirinkto kliento duomenys](customer-profiles.md#customer-details-page).
 
@@ -55,9 +55,9 @@ Klientus galite filtruoti pagal objekto laukus *Klientas*. Panašiai kaip ir atl
 
 Pasirinkite bet kurias kliento plytas tam, kad atvertumėte **Kliento informacijos puslapį**. Šis rodinys apima suvienodintą informaciją pasirinktam klientui. Į išsamią kliento informaciją įtraukiamas šis turinys:
 
-**Kliento profilio plytelė**: šioje plytelėje rodomos kitos reikšmės nei vieningojo *kliento* objektas. Jei laukas neturi pasirinkto kliento profilio vertės, jis nebus rodomas, išskyrus adreso lauką. Plytelę sudaro skyriai:
+**Kliento profilio plytelė**: šioje plytelėje rodomos kitos reikšmės nei vieningojo *kliento* objektas. Jei laukas neturi pasirinkto kliento profilio reikšmės, jis nebus rodomas, išskyrus adreso lauką. Plytelę sudaro skyriai:
 
-- Pirmajame skyriuje rodomas iš anksto nustatytas laukų rinkinys, po kurio seka visi laukai, kurie yra ieškos &filtro rodyklės dalis. Visi su adresu susiję laukai sujungiami į vieną eilutę, kuri rodo, net jei profilyje nėra adreso informacijos.
+- Pirmajame skyriuje rodomas iš anksto nustatytas laukų rinkinys, po kurio seka visi laukai, kurie yra ieškos &filtro rodyklės dalis. Visi su adresu susiję laukai sujungiami į vieną eilutę, kuri rodoma, net jei profilyje nėra adreso informacijos.
 - **Šio kliento kontaktai**: verslo klientų aplinkose kaip antrą skyrių bus rodomi visi susiję šio kliento kontaktai. Kiekvienas kontaktas rodomas su jų laukais. Tušti laukai paslėpti.
 - **Papildomi laukai**: rodomi likę pasirinkto kliento laukai, išskyrus TV.
 - **ID** : visų ID pateikiamas jų atitinkamo objekto pavadinimo sąrašas. Laukus kaip ID identifikuoja jų semantikos, o šie laukai skirstomi į kategorijas.

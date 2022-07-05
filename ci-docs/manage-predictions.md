@@ -1,5 +1,5 @@
 ---
-title: Bendrai naudojamos prognozės scenarijų užduotys
+title: Prognozių valdymas
 description: Sužinokite, kaip valdyti, šalinti triktis ir tikslinti prognozes.
 ms.date: 11/01/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: c4d269e1b542e84ade8c6e63c1dadace51ddde32
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643868"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082852"
 ---
 # <a name="manage-predictions"></a>Prognozių valdymas
 
@@ -49,12 +49,12 @@ Toliau pateiktuose ataskaitos stulpeliuose yra naudingos informacijos apie tai, 
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Įvesties duomenų naudojimo ataskaitos, rodančios lentelę su klaidomis, įspėjimais ir rekomendacijomis, pavyzdys.":::
 
-- **Pavadinimas:** aprašomasis klaidos, įspėjimo ar rekomendacijos pavadinimas.
-- **Žingsnis:** modelio etapas, traukinys ar rezultatas, nurodoma informacijoje.
-- **Būsena:** Informacijos sunkumas (klaida, įspėjimas, rekomendacija).
-- **Stulpelio pavadinimas:** objekto stulpelis, kurį reikia modifikuoti, kad būtų pagerintas modelio našumas.
+- **Pavadinimas:** aprašomasis klaidos, įspėjimo arba rekomendacijos pavadinimas.
+- **Žingsnis:** Modelio fazė, traukinys ar balas, informacija nurodo.
+- **Būsena:** informacijos rimtumas (klaida, įspėjimas, rekomendacija).
+- **Stulpelio pavadinimas:** stulpelis objekte, kurį reikia modifikuoti, kad būtų pagerintas modelio našumas.
 - **Objekto pavadinimas:** objekto, kurį reikia modifikuoti, kad būtų pagerintas modelio našumas, pavadinimas.
-- **Išsami informacija:** išsami informacija apie klaidą, įspėjimą ar rekomendaciją.
+- **Išsami informacija:** išsami informacija apie klaidą, įspėjimą arba rekomendaciją.
 
 ## <a name="refresh-a-prediction"></a>Prognozės atnaujinimas
 

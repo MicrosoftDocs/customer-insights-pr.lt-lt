@@ -1,5 +1,5 @@
 ---
-title: Duomenų eksportavimas iš „Customer Insights“
+title: Eksportavimų (peržiūros versija) apžvalga
 description: Tvarkykite duomenų bendrinimo eksportavimus.
 ms.date: 11/01/2021
 ms.reviewer: mhart
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9c3b35f1514adcc697672f09cabf593f936e4a82
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d983e84e713003610eb27dc9b3f911b62b01d522
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643404"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082915"
 ---
 # <a name="exports-preview-overview"></a>Eksportavimų (peržiūros versija) apžvalga
 
@@ -29,8 +29,8 @@ Eikite į **Duomenys** > **Eksportavimai**, kad peržiūrėtumėte eksportavimų
 
 Yra du pagrindiniai eksportuojami tipai:  
 
-- **Duomenų eksportavimas** leidžia eksportuoti bet kokio tipo objektą, pasiekiamą "Customer Insights". Jūsų pažymėti eksportuoti objektai eksportuojami su visais duomenų laukais, metaduomenimis, schemomis ir susiejimo informacija. 
-- **Segmento eksportavimas** leidžia eksportuoti segmento objektus iš "Customer Insights". Segmentai atitinka klientų profilių sąrašą. Konfigūruodami eksportavimą, pažymite įtrauktus duomenų laukus, atsižvelgiant į paskirties sistemą, į kurią eksportuojate duomenis. 
+- **Duomenų eksportavimas** leidžia eksportuoti bet kokio tipo objektus, pasiekiamus "Customer Insights". Jūsų pažymėti eksportuoti objektai eksportuojami su visais duomenų laukais, metaduomenimis, schemomis ir susiejimo informacija. 
+- **Segmentų eksportavimas** leidžia eksportuoti segmento objektus iš "Customer Insights". Segmentai atitinka klientų profilių sąrašą. Konfigūruodami eksportavimą, pažymite įtrauktus duomenų laukus, atsižvelgiant į paskirties sistemą, į kurią eksportuojate duomenis. 
 
 ### <a name="export-segments"></a>Eksportuokite segmentus
 

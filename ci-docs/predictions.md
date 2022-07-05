@@ -1,5 +1,5 @@
 ---
-title: Visos duomenų dalys naudojančios prognozes
+title: Dalinių duomenų papildymas naudojant prognozes
 description: Naudokite prognozes tam, kad užpildytumėte nepilnus kliento duomenis.
 ms.date: 11/01/2021
 ms.subservice: audience-insights
@@ -12,17 +12,17 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 7e93670007db27d13b84d7516f56830988da083e
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800660"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082516"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Užpildykite dalinius duomenis prognozėmis (nebenaudojamais)
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Užpildykite savo dalinius duomenis naudodami numatymus (nebenaudojami)
 
 > [!IMPORTANT]
-> Ši funkcija bus **nebenaudojama** nuo **lapkričio 5 d. 2021 m**. Dabartiniai diegimai veiks tol, kol funkcija bus pašalinta, tačiau negalėsite sukurti naujų integravimų naudodami toliau pateiktas instrukcijas.
+> Ši funkcija bus **nebenaudojama** nuo **5 m. lapkričio 2021 d**. Dabartiniai diegimai ir toliau veiks, kol funkcija bus pašalinta, tačiau negalėsite kurti naujų integracijų naudodami toliau pateiktas instrukcijas.
 
 Prognozės leidžia lengvai kurti numatomas reikšmes, kurios gali pagerinti jūsų nusimanymą apie klientą. Puslapyje **Duomenų rinkimas** > **Prognozės** pasirinkę **Mano prognozės**, pamatysite prognozes, kurias sukonfigūravote kitose „Customer Insights“ dalyse, ir galėsite toliau jas tinkinti.
 
@@ -43,7 +43,7 @@ Daugiau informacijos žiūrėkite [Naujos aplinkos kūrimas](create-environment.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Sukurkite prognozę kliento objekte
 
-1. Eikite į **duomenų** > **objektus**.
+1. Eikite į **Duomenų** > **objektai**.
 
 2. Pasirinkite objektą **Klientas**.
 
@@ -73,7 +73,7 @@ Kuriant segmentą taip pat galima prognozuoti trūkstamas konkretaus pasirinkto 
 
 Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus segmento pagrindas, pvz., kliento pasitenkinimą arba pirkinio sumą. Sukūrus segmentą, sistema pasiūlys trūkstamų šio atributo reikšmių prognozavimo metodą.
 
-1. Eikite į **Segmentai** ir pasirinkite plytelę **Profiliai**.
+1. Eikite į **Segmentai** ir pasirinkite **plytelę Profiliai**.
 
 2. Pasirinkite **lauką**, kad sukurtumėte segmentą, pasirinkite **operatorių**, tada – **Peržiūra**.
 
@@ -91,7 +91,7 @@ Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus se
 
 ## <a name="view-a-prediction"></a>Prognozės peržiūra
 
-1. Eikite į **žvalgybos** > **·** > **prognozes Mano prognozės**.
+1. Eikite į **Žvalgybos** > **prognozės** > **Mano prognozės**.
 
 2. Pasirinkite prognozę, kurią norite peržiūrėti.
 
@@ -108,7 +108,7 @@ Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus se
 
 ## <a name="update-a-prediction"></a>Prognozės naujinimas
 
-1. Eikite į **žvalgybos** > **·** > **prognozes Mano prognozės**.
+1. Eikite į **Žvalgybos** > **prognozės** > **Mano prognozės**.
 
 2. Pažymėkite norimą naujinti prognozę ir pasirinkite piktogramą **Naujinti**.
 
@@ -116,26 +116,26 @@ Vykdydami šią procedūrą, jūs pasirinksite konkretų atributą, kuris bus se
 
 ## <a name="edit-a-prediction"></a>Prognozės redagavimas
 
-Sukūrę prognozė, galite tinkinti modelį AI Builder, kad padidintumėte modelio efektyvumą.  
+Sukūrę prognozė, galite tinkinti modelį AI Builder, kad padidintumėte savo modelio efektyvumą.  
 
-1. Eikite į **žvalgybos** > **·** > **prognozes Mano prognozės**.
+1. Eikite į **Žvalgybos** > **prognozės** > **Mano prognozės**.
 
 2. Pažymėkite prognozę, kurią norite redaguoti.
 
 3. Stulpelyje Veiksmai&vellip; pasirinkite vertikalią daugtaškį **(**) ir pasirinkite **Rodinys**.
 
-4. Pasirinkite **Tinkinti naudojant AI Builder**.
+4. Pasirinkite **Tinkinti .AI Builder**
 
-5. Atnaujinkite savo modelį .AI Builder [Sužinokite daugiau apie modelių valdymą programoje „AI Builder“](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Atnaujinkite savo modelį AI Builder. [Sužinokite daugiau apie modelių valdymą programoje „AI Builder“](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Kitame jūsų prognozės vykdyme bus naudojamas jūsų sukurtas atnaujintas modelis.
 
 > [!NOTE]
-> Sukurti nauji modeliai AI Builder nebus rodomi "Customer Insights", nebent modelis buvo sukurtas naudojant pirmiau išvardytas funkcijas.
+> Nauji modeliai, sukurti programoje AI Builder "Customer Insights", nebus rodomi, nebent modelis buvo sukurtas iš anksčiau išvardytų funkcijų.
 
 ## <a name="remove-a-prediction"></a>Prognozės pašalinimas
 
-1. Eikite į **žvalgybos** > **·** > **prognozes Mano prognozės**.
+1. Eikite į **Žvalgybos** > **prognozės** > **Mano prognozės**.
 
 2. Pažymėkite norimą naikinti prognozę.
 
@@ -153,7 +153,7 @@ Jei dėl klaidos negalite baigti „Dataverse“ pridėjimo proceso, procesą ga
 - Programos leidimai nėra suteikti.
     1. Eikite į [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Pasirinkti **Aplinkos**.
-    1. Pasirinkite vertikalią daugtaškį (&vellip;) šalia aplinkos, į kurią norite įtraukti teises, ir pasirinkite **Parametrai**.
+    1. Pasirinkite vertikalią daugtaškį (&vellip;) šalia aplinkos, į kurią norite įtraukti leidimą, ir pasirinkite **Parametrai**.
     1. Išplėskite **Vartotojai ir teisės** ir pasirinkite **Vartotojai**.
     1. Pasirinkite **+ Naujas**, tada – **Vartotojas**.
     1. Pasirinkite **Programos vartotojas**, jei programos vartotojas dar nepasirinktas, ir įveskite toliau nurodytą informaciją.

@@ -1,5 +1,5 @@
 ---
-title: „Power BI“ jungtis
+title: „Power BI“ jungtis (peržiūra)
 description: Sužinokite, kaip naudoti „Dynamics 365 Customer Insights connector“ programoje „Power BI“.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643633"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051279"
 ---
-# <a name="connector-for-power-bi-preview"></a>„Power BI“ jungtis (peržiūra)
+# <a name="power-bi-connector-preview"></a>„Power BI“ jungtis (peržiūra)
 
-Sukurkite vizualizacija jūsų duomenims su „Power BI Desktop“. Generuokite papildomas įžvalgas ir kurkite ataskaitas naudodami sujungtus klientų duomenis.
+Kurkite duomenų vizualizacijas naudodami darbalaukį Microsoft Power BI. Generuokite papildomas įžvalgas ir kurkite ataskaitas naudodami sujungtus klientų duomenis.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -56,11 +56,11 @@ Apgalvokite darbą su jūsų duomenų papildomu rinkiniu. Pavyzdžiui, galite su
 
 ### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>„Customer Insights” aplinka, kuri nerodoma „Power BI”
 
-Aplinkos, turinčios daugiau nei vieną [ryšį, apibrėžtą](relationships.md) tarp dviejų identiškų "Customer Insights" objektų, Power BI jungtyje nebus pasiekiamos.
+Aplinkos, kuriose yra daugiau nei vienas [ryšys](relationships.md), apibrėžtas tarp dviejų identiškų objektų programoje "Customer Insights", nebus pasiekiamos jungtyje Power BI.
 
 Galite identifikuoti ir pašalinti dubliuotas ryšius.
 
-1. Eikite į **DataRelationships** > **apie** aplinką, kurioje trūksta Power BI.
+1. Eikite į **Duomenų** > **ryšiai** aplinkoje, kurios jums trūksta Power BI.
 2. Identifikuoti dubliuotus ryšius:
    - Patikrinkite, ar tarp tų pačių dviejų objektų yra daugiau nei vienas ryšys.
    - Patikrinkite, ar yra ryšys, sukurtas tarp dviejų objektų, kurie abu įtraukti į suvienodinimo procesą. Tarp visų į suvienodinimo procesą įtrauktų objektų nustatomas numanomas ryšys.
@@ -70,7 +70,7 @@ Pašalę dubliuotų ryšių bandykite dar kartą Power BI programoje sukonfigūr
 
 ### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Klaidos datos laukuose, kai įkeliami objektai „Power BI Desktop”
 
-Įkeliant objektus, kuriuose yra laukų su datos formatu kaip MM/DD/YYYY, galite susidurti su klaidomis dėl nesutampančių lokalės formatų. Šis neatitikimas įvyksta, kai failas Power BI Desktop nustatytas į kitą lokalę nei anglų (JAV), nes datos laukai "Customer Insights" įrašomi JAV formatu.
+Įkeliant objektus, kuriuose yra laukų su datos formatu kaip MM/DD/YYYY, galite susidurti su klaidomis dėl nesutampančių lokalės formatų. Šis neatitikimas įvyksta, kai failas Power BI Desktop nustatomas į kitą lokalę nei anglų (JAV), nes datos laukai "Customer Insights" įrašomi JAV formatu.
 
 „Power BI Desktop” faile yra vienas lokalės parametras, taikomas duomenims gauti. Tam, kad šie datos laukai būtų interpretuojami teisingai, nustatykite .BPI failo lokalę į anglų kalbą (Jungtinių Valstijų). [Sužinokite, kaip pakeisti „Power BI desktop” failo lokalę](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 

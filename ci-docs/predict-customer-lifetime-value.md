@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643828"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055224"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Kliento gyvavimo ciklo (CLV) vertės prognozė
 
-Prognozuojama potenciali reikšmė (pajamos), kurią atskiri aktyvūs klientai įves į jūsų verslą per apibrėžtą būsimą laikotarpį. Ši funkcija gali padėti pasiekti įvairius tikslus: 
+Prognozuojama potenciali reikšmė (pajamos), kurią atskiri aktyvūs klientai įves į jūsų verslą per apibrėžtą būsimą laikotarpį. Ši funkcija gali padėti pasiekti įvairius tikslus:
 - Nustatykite didelės vertės klientus ir apdorokite šią įžvalgą
 - Kurti strategines klientų segmentus, atsižvelgiant į jų potencialią vertę, kad suasmenintas kampanijas būtų galima vykdyti naudojant tikslinius pardavimo, rinkodaros ir palaikymo veiksmus
 - Vadovo produktų kūrimas susitelkus į funkcijas, kurios padidinti klientų vertę
@@ -69,16 +69,16 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
     - Duomenų išbaigtumas: mažiau nei 20 % trūkstamų reikšmių privalomuose įvesties duomenų laukuose   
 
 > [!NOTE]
-> - Modeliui reikia jūsų klientų sandorių istorijos. Vienu metu galima sukonfigūruoti tik vieną sandorio istorijos objektą. Jei yra keli pirkimo / operacijos objektai, galite juos Power Query susieti prieš prarydami duomenis.
+> - Modeliui reikia jūsų klientų sandorių istorijos. Vienu metu galima sukonfigūruoti tik vieną sandorio istorijos objektą. Jei yra keli pirkimo / operacijų objektai, galite juos sujungti prieš pradėdami Power Query naudoti duomenis.
 > - Tačiau papildomiems kliento duomenims (pasirinktiniems) galite įtraukti tiek kliento veiklos objektų, kiek norite, atsižvelgdami į modelį.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kurti kliento gyvavimo ciklo vertės prognozę
 
-1. Eikite į **"IntelligencePredictions** > **"**.
+1. Eikite į **"Intelligence Predictions"** > **·**.
 
 1. Rinkitės **Kliento gyvavimo ciklo vertės** plytelę ir rinkitės **Naudoti modelį**. 
 
-1. Reikšmių **srityje Kliento gyvenimo trukmė** pasirinkite **Pradėti**.
+1. **Srityje Kliento gyvenimo trukmės reikšmė** pasirinkite **Darbo pradžia**.
 
 1. **Pavadinkite šį modelį** ir **išvesties objekto pavadinimą** tam, kad kad atskirtumėte juos nuo kitų modelių ar objektų.
 
@@ -149,7 +149,7 @@ Pagrindiniai duomenų sąveikos su klientais veiksmai (pvz., žiniatinklis, klie
 
 ### <a name="set-update-schedule"></a>Nustatyti grafiko naujinimą
 
-1. **Duomenų naujinimo grafiko** žingsnyje pasirinkite dažnumą, kurį pagal naujausius duomenis norite perkvalifikuoti. Šis parametras yra svarbus norint atnaujinti prognozių tikslumą, nes nauji duomenys praryjami "Customer Insights". Dauguma įmonių gali apmokyti iš naujo kartą per mėnesį, kad prognozių tikslumas būtų geras.
+1. **Duomenų naujinimo grafiko** žingsnyje pasirinkite dažnumą, kurį pagal naujausius duomenis norite perkvalifikuoti. Šis parametras yra svarbus norint atnaujinti prognozių tikslumą, kai programoje "Customer Insights" praryjami nauji duomenys. Dauguma įmonių gali apmokyti iš naujo kartą per mėnesį, kad prognozių tikslumas būtų geras.
 
 1. Pasirinkite **Toliau**.
 

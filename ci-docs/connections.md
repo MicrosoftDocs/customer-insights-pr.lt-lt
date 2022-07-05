@@ -1,6 +1,6 @@
 ---
-title: Ryšiai su kitomis paslaugomis iš „Customer Insights“.
-description: Bendrinkite duomenis su kitomis paslaugomis.
+title: Ryšių (peržiūros) apžvalga
+description: Ryšiai su kitomis paslaugomis iš „Customer Insights“.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800382"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082096"
 ---
 # <a name="connections-preview-overview"></a>Ryšių (peržiūros) apžvalga
 
@@ -48,7 +48,7 @@ Norėdami įtraukti ryšius, turite turėti [administratoriaus teises](permissio
 
 1. Srityje **Nustatyti ryšį** pateikite reikiamą informaciją.
    1. **Rodomas pavadinimas** ir ryšio tipas apibūdina ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas šio ryšio tikslas ir paskirtis.
-   1. Tikslūs laukai priklauso nuo to, prie kokios paslaugos jungiatės. Apie konkretaus ryšio tipo duomenis galite sužinoti straipsnyje apie tikslinę paslaugą.
+   1. Tikslūs laukai priklauso nuo to, prie kokios tarnybos jungiatės. Apie konkretaus ryšio tipo duomenis galite sužinoti straipsnyje apie tikslinę paslaugą.
    1. Jei [naudojate savo „Key Vault“](use-azure-key-vault.md) slaptai saugoti, suaktyvinkite **naudoti Key Vault** ir sąraše pasirinkite slaptą parinktį.
 
 1. Jei norite sukurti ryšį, pasirinkite **Įrašyti**.
@@ -59,7 +59,7 @@ Taip pat galite pasirinkti **Nustatyti** plytelėje, esančioje skirtuke **Atras
 
 Nustatę arba redaguodami eksportavimo ryšį pasirenkate, kuriems naudotojams bus leidžiama naudoti šį konkretų ryšį [eksportavimui](export-destinations.md) apibrėžti. Pagal numatytuosius nustatymus ryšys prieinamas naudotojams, kuriems priskirtas administratoriaus vaidmuo. Šį parametrą galite keisti dalyje **Pasirinkite, kas gali naudoti šį ryšį** ir leisti šiuo ryšiu naudotis naudotojams, kuriems priskirtas bendradarbio vaidmuo.
 
-- Bendradarbiai negalės peržiūrėti ar redaguoti ryšio. Jie matys tik rodomą pavadinimą ir jo tipą kurdami eksportavimą.
+- Bendradarbiai negalės peržiūrėti ar redaguoti ryšio. Kurdami eksportavimą jie matys tik rodomą pavadinimą ir jo tipą.
 - Bendrindami ryšį leidžiate bendradarbiams naudoti ryšį. Nustatydami eksportavimą, bendradarbiai matys bendrai naudojamus ryšius. Jie gali valdyti kiekvieną eksportavimą, kuris naudoja šį konkretų ryšį.
 - Šį parametrą galima keisti išlaikant eksportavimą, kurį jau yra nustatę bendradarbiai.
 
@@ -69,7 +69,7 @@ Nustatę arba redaguodami eksportavimo ryšį pasirenkate, kuriems naudotojams b
 
 1. Eikite į skirtuką **Ryšiai**.
 
-1. Pasirinkite norimo redaguoti ryšio vertikalią elipsę (&vellip;) .
+1. Pasirinkite norimo redaguoti ryšio vertikalią daugtaškį (&vellip;).
 
 1. Pasirinkite **Redaguoti**.
 
@@ -77,7 +77,7 @@ Nustatę arba redaguodami eksportavimo ryšį pasirenkate, kuriems naudotojams b
 
 ## <a name="remove-a-connection"></a>Ryšio pašalinimas
 
-Jei ryšį, kurį pašalinate, naudoja sodrinimas arba eksportas, pirmiausia turite juos atskirti arba pašalinti. Šalinimo dialogas padės atlikti svarbius papildymus arba eksportavimą.
+Jei ryšį, kurį pašalinate, naudoja praturtinimai arba eksportavimas, pirmiausia turite juos atskirti arba pašalinti. Šalinimo dialogas padės atlikti svarbius papildymus arba eksportavimą.
 
 Atsieti papildymai ir eksportavimai tampa neaktyvūs. Iš naujo suaktyvinate juos prie jų pridėdami kitą ryšį puslapyje [Papildymai](enrichment-hub.md) arba [Eksporavimai](export-destinations.md).
 
@@ -85,7 +85,7 @@ Atsieti papildymai ir eksportavimai tampa neaktyvūs. Iš naujo suaktyvinate juo
 
 1. Eikite į skirtuką **Ryšiai**.
 
-1. Pasirinkite norimo pašalinti ryšio vertikalią elipsę (&vellip;) .
+1. Pasirinkite norimo pašalinti ryšio vertikalią daugtaškį (&vellip;).
 
 1. Išskleidžiamajame meniu pasirinkite **Pašalinti**. Rodomos patvirtinimo dialogas.
 

@@ -1,5 +1,5 @@
 ---
-title: LiveRamp tapatybės duomenų praturtinimas
+title: Praturtinkite klientų profilius tapatybės duomenimis iš "LiveRamp" (peržiūra)
 description: Praturtinkite klientų profilius "LiveRamp" duomenimis.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954005"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082201"
 ---
-# <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Klientų profilių praturtinimas tapatybės duomenimis iš "LiveRamp" (peržiūra)
+# <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Praturtinkite klientų profilius tapatybės duomenimis iš "LiveRamp" (peržiūra)
 
-LiveRamp teikia deterministinę autonominę tapatybės skiriamąją gebą ir kliento duomenų konsolidavimą. Galite susieti asmeninius identifikatorius savo kliento duomenyse su AbiliTec tapatybės grafiku ir gauti AbiliTec ID. Tada galite naudoti šiuos ID, kad geriau suvienodintumėte savo klientų duomenis.
+"LiveRamp" teikia deterministinę autonominės tapatybės skiriamąją gebą ir klientų duomenų konsolidavimą. Galite susieti asmeninius identifikatorius savo kliento duomenyse su "AbiliTec" tapatybės grafiku ir gauti "AbiliTec ID". Tada galite naudoti šiuos ID, kad geriau suvienodintumėte savo klientų duomenis.
 
 ## <a name="supported-countriesregions"></a>Palaikomos šalys ir (arba) regionai
 
@@ -25,69 +25,69 @@ LiveRamp teikia deterministinę autonominę tapatybės skiriamąją gebą ir kli
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- Aktyvi "LiveRamp" prenumerata. Norėdami gauti prenumeratą, susisiekite su "LiveRamp" abonemento komanda arba norėdami gauti [dynamics@liveramp.com](mailto:dynamics@liveramp.com) daugiau informacijos.
+- Aktyvi "LiveRamp" prenumerata. Norėdami gauti prenumeratą, susisiekite su savo "LiveRamp" paskyros komanda arba [dynamics@liveramp.com](mailto:dynamics@liveramp.com) norėdami gauti daugiau informacijos.
 
-- Aktyvi "AbiliTec" prenumerata su kliento ID ir slapta prieiga prie API. Daugiau informacijos ieškokite [AbiliTec API Developer Hub](https://developers.liveramp.com/abilitec-api/).
+- Aktyvi "AbiliTec" prenumerata su kliento ID ir slapta prieiga prie API. Daugiau informacijos rasite [AbiliTec API kūrėjų telkinyje](https://developers.liveramp.com/abilitec-api/).
 
-- "LiveRamp [" ryšį](connections.md)[konfigūruoja](#configure-the-connection-for-liveramp) administratorius.
+- "LiveRamp [" ryšį](connections.md)[sukonfigūruoja](#configure-the-connection-for-liveramp) administratorius.
 
-## <a name="configure-the-connection-for-liveramp"></a>Konfigūruoti "LiveRamp" ryšį
+## <a name="configure-the-connection-for-liveramp"></a>Konfigūruokite "LiveRamp" ryšį
 
-Turite būti ["Customer Insights" administratorius](permissions.md#admin) ir turėti aktyvų "LiveRamp" kliento ID ir paslaptį.
+Turite būti ["Customer Insights" administratorius](permissions.md#admin) ir turėti aktyvų "LiveRamp" kliento ID ir slaptą.
 
-1. Konfigūruodami sodrinimą pasirinkite **Įtraukti ryšį** arba eikite į **Administratoriaus** > **ryšiai** ir plytelėje LiveRamp pasirinkite **Nustatyti**.
+1. Konfigūruojant papildymą pasirinkite **Įtraukti ryšį** arba eikite į **Administratoriaus** > **ryšiai** ir **pasirinkite Nustatyti** "LiveRamp" plytelėje.
 
-   :::image type="content" source="media/liveramp-connection.png" alt-text="Konfigūracijos sritis, skirta nustatyti ryšį su LiveRamp AbiliTec tarnyba.":::
+   :::image type="content" source="media/liveramp-connection.png" alt-text="Konfigūracijos sritis, skirta nustatyti ryšį su &quot;LiveRamp AbiliTec&quot; paslauga.":::
 
 1. Įveskite ryšio pavadinimą ir galiojantį "LiveRamp" kliento ID bei paslaptį.
 
 1. Pasirinkdami Sutinku, peržiūrėkite [ir pateikite savo sutikimą dėl](#data-privacy-and-compliance) duomenų privatumo ir sąlygų **sutinku**.
 
-1. Pasirinkite **Tikrinti**, kad patikrintumėte konfigūraciją, tada pasirinkite **Įrašyti**.
+1. Pasirinkite **Tikrinti**, kad patvirtintumėte konfigūraciją, tada pasirinkite **Įrašyti**.
 
 ### <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
 
-Kai įgalinate Dynamics 365 Customer Insights perduoti duomenis "LiveRamp", leidžiate perduoti duomenis už atitikties ribos, įskaitant potencialiai neskelbtinus Dynamics 365 Customer Insights duomenis, pvz., asmens duomenis. "Microsoft" perduos tokius duomenis jūsų nurodymu, tačiau jūs esate atsakingi už tai, kad "LiveRamp" laikytųsi visų privatumo ar saugos įsipareigojimų, kuriuos galite turėti. Norėdami gauti daugiau informacijos, peržiūrėkite ["Microsoft" privatumo patvirtinimą](https://go.microsoft.com/fwlink/?linkid=396732). Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
+Kai leidžiate Dynamics 365 Customer Insights perduoti duomenis į "LiveRamp", leidžiate perduoti duomenis už atitikties ribos Dynamics 365 Customer Insights ribų, įskaitant galimai neskelbtinus duomenis, pvz., Asmens duomenis. "Microsoft" perduos tokius duomenis jūsų nurodymu, bet jūs esate atsakingi už tai, kad užtikrintumėte, jog "LiveRamp" laikytųsi visų privatumo ar saugos įsipareigojimų, kuriuos galite turėti. Norėdami gauti daugiau informacijos, peržiūrėkite ["Microsoft" privatumo patvirtinimą](https://go.microsoft.com/fwlink/?linkid=396732). Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 
 1. Pasirinkite **Duomenys** > **Papildymas** ir pasirinkite skirtuką **Atrasti**.
 
-1. Plytelėje **"LiveRamp**" pasirinkite **Praturtinti mano duomenis**.
+1. Pasirinkite **Papildyti mano duomenis** plytelėje **Tapatybė** iš "LiveRamp".
 
-   :::image type="content" source="media/liveramp-tile.png" alt-text="Tapatybės plytelė sodrinimo apžvalgos puslapyje.":::
+   :::image type="content" source="media/liveramp-tile.png" alt-text="Tapatybės plytelė papildymo apžvalgos puslapyje.":::
 
 1. Peržiūrėkite apžvalgą ir pasirinkite **Pirmyn**.
 
-1. Pasirinkite ryšį. Jei jo nėra, kreipkitės į administratorių.
+1. Pasirinkite ryšį. Kreipkitės į administratorių, jei jis nepasiekiamas.
 
 1. Pasirinkite **Toliau**.
 
-1. **Pasirinkite kliento duomenų rinkinį** ir pasirinkite profilį arba segmentą, kurį norite praturtinti tapatybės duomenimis iš "LiveRamp". Kliento *subjektas* praturtina visus jūsų klientų profilius, o segmentas praturtina tik tame segmente esančius klientų profilius.
+1. **Pasirinkite kliento duomenų rinkinį** ir pasirinkite profilį arba segmentą, kurį norite papildyti tapatybės duomenimis iš "LiveRamp". *Kliento* objektas praturtina visus jūsų klientų profilius, o segmentas praturtina tik tame segmente esančius klientų profilius.
 
-1. Nurodykite, kokio tipo laukus iš jūsų vieningų profilių naudoti derinant tapatybės duomenis iš "LiveRamp". Reikalingas bent vienas iš laukų **Pavadinimas ir adresas**, **El. paštas** arba **Telefonas**. Jei norite didesnio rungtynių tikslumo, pridėkite kitų laukų. Pasirinkite **Toliau**.
+1. Apibrėžkite, kokio tipo laukus iš savo vieningųjų profilių naudoti tapatybės duomenims iš "LiveRamp" suderinti. Reikia bent vieno iš laukų **Pavadinimas ir adresas**, **El. paštas** arba **Telefonas**. Norėdami gauti didesnį atitikties tikslumą, įtraukite kitus laukus. Pasirinkite **Toliau**.
 
 1. Susiekite laukus su identifikavimo duomenimis iš "LiveRamp".
 
-   :::image type="content" source="media/liveramp-data-mapping.png" alt-text="&quot;LiveRamp&quot; sodrinimo duomenų susiejimo parinktys.":::
+   :::image type="content" source="media/liveramp-data-mapping.png" alt-text="&quot;LiveRamp&quot; papildymo duomenų susiejimo parinktys.":::
 
 1. Norėdami baigti laukelių žymėjimą, pasirinkite **Toliau**.
 
-1. **Pateikite sodrinimo pavadinimą** ir išvesties objekto **pavadinimą**.
+1. **Pateikite papildymo pavadinimą** ir išvesties objekto **pavadinimą**.
 
 1. Peržiūrėję pasirinkimus pasirinkite **Išsaugoti papildymą**.
 
-1. Pasirinkite **Vykdyti**, kad pradėtumėte sodrinimo procesą, arba beveik, kad grįžtumėte į **puslapį Praturtinimai**.
+1. Pasirinkite **Vykdyti**, kad pradėtumėte papildymo procesą, arba uždarykite, kad grįžtumėte į **puslapį Papildymai**.
 
-## <a name="enrichment-results"></a>Papildymo rezultatai
+## <a name="view-enrichment-results"></a>Papildymo rezultatų peržiūra
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Klientų **, praturtintų pagal lauką**, skaičius suteikia detalizuotą kiekvieno praturtinto lauko aprėptį.
+Lauku **praturtintų** klientų skaičius leidžia detalizuoti kiekvieno praturtinto lauko aprėptį.
 
 ## <a name="next-steps"></a>Paskesni veiksmai
 
-Atlikite veiksmus su papildytais klientų duomenimis. Naudokite AbiliTec ID, kad konsoliduotumėte klientų profilius į asmenį pagrįstą rodinį.
+Atlikite veiksmus su papildytais klientų duomenimis. Naudokite "AbiliTec" ID, kad sujungtumėte klientų profilius į asmenį pagrįstą rodinį.
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

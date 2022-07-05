@@ -1,5 +1,5 @@
 ---
-title: „LiveRamp“ jungtis
+title: Segmentų eksportavimas į „LiveRamp“ (peržiūra)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „LiveRamp“.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 973f69c94c625fe4ec543ca5fb57289c4102ea97
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3e30a16dcb276fa6c951ad0b42ed0a4792f87ce3
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643888"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050773"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Segmentų eksportavimas į „LiveRamp&reg;“ (peržiūra)
 
