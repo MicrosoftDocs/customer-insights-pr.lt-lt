@@ -1,88 +1,82 @@
 ---
 title: Segmentų eksportavimas į „DotDigital“ (peržiūros versija)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „DotDigital“.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: af0cce4edb9d47247c79ae08491366349da98b1c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082936"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196082"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Segmentų eksportavimas į „DotDigital“ (peržiūros versija)
 
-Eksportuokite suvienodintų klientų profilio segmentus į „DotDigital“ adresų knygas ir naudokite juos kampanijos, el. pašto reklamavimui ir siekiant kurti tinkintus segmentus su „DotDigital“. 
+Eksportuokite suvienodintų klientų profilio segmentus į „DotDigital“ adresų knygas ir naudokite juos kampanijos, el. pašto reklamavimui ir siekiant kurti tinkintus segmentus su „DotDigital“.
 
-## <a name="prerequisites-for-a-connection"></a>Būtinosios ryšio sąlygos
+## <a name="prerequisites"></a>Būtinosios sąlygos
 
--   Turite [„DotDigital" paskyrą](https://dotdigital.com/) ir sukūrėte [API vartotoją](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Norėdami sukurti ryšį, turėsite naudoti API vartotojo kredencialus
--   Yra esančių adreso knygų „DotDigital“ ir atitinkamų ID. ID gali būti prieinamas URL, kurį pasirinkote ir atvėrėte adresų knygoje. Dėl daugiau informacijos, žr. [„DotDigital“ adresų knygos](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
--   Sukonfigūravote [segmentus](segments.md) programoje "Customer Insights".
--   Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
+- " [DotDigital" paskyra](https://dotdigital.com/) ir [API vartotojas](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user).
+- "DotDigital" ID iš [naujos](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) arba esamos adresų knygelės "DotDigital". ID gali būti prieinamas URL, kurį pasirinkote ir atvėrėte adresų knygoje.
+- [Sukonfigūruoti segmentai](segments.md) "Customer Insights".
+- Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono klientų profilių viename eksportavime į „DotDigital".
-- Eksportavimas į „DotDigital“ yra apribotas segmentais.
-- Dėl paslaugų teikėjų apribojimų segmentai, kuriuose iš viso yra 1 milijono klientų profilių, gali trukti iki 3 valandų. 
-- Klientų profilių, kuriuos galite eksportuoti į „DotDigital“, skaičius priklauso ir yra apribotas pagal sutartį su „DotDigital“.
+- Iki 1 milijono klientų profilių vienam eksportui į DotDigital, o tai gali užtrukti iki trijų valandų dėl apribojimų teikėjo pusėje. Klientų profilių, kuriuos galite eksportuoti į DotDigital, skaičius priklauso nuo jūsų sutarties su DotDigital.
+- Tik segmentai.
 
 ## <a name="set-up-connection-to-dotdigital"></a>„DotDigital“ ryšio sąranka
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„DotDigital“**, kad sukonfigūruotumėte ryšį.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **DotDigital**.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
-1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Įveskite savo **„DotDigital“ API vartotojo vardą ir slaptažodį**. 
+1. Įveskite savo **„DotDigital“ API vartotojo vardą ir slaptažodį**.
 
-1. Įveskite savo **[„DotDigital“ adreso knygos ID](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
+1. Įveskite savo **DotDigital adresų knygelės ID**.
 
-1. Pasirinkę **Sutinku**, kad patvirtintumėte **Duomenų privatumą ir atitiktį**.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
-1. Pasirinkite **Sujungti** siekiant pradėti sujungimą su „DotDigital“.
+1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
-1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį. 
+1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį.
 
 ## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+1. Pasirinkite **Pridėti eksportavimą**.
 
-1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „DotDigital“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „DotDigital“. Jei ryšio nėra, kreipkitės į administratorių.
 
+1. Įveskite eksportavimo pavadinimą.
 
-1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. Pakartokite tuos pačius žingsnius kitiems pasirenkamiems laukeliams, tokius kaip **Vardas**, **Pavardė**, **Vardas ir pavardė**, **Lytis** ir **Pašto kodas**.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą.
 
-1. Pasirinkite segmentus, kuriuos norite eksportuoti. Galite eksportuoti iki 1 milijono kliento profilių bendrai į „DotDigital“.
+1. Pasirinktinai eksportuokite **vardas**, **pavardė**, vardą ir pavardę, **lytį** **ir** **pašto kodą**.
+
+1. Pasirinkite segmentus, kuriuos norite eksportuoti.
 
 1. Pasirinkite **Įrašyti**.
 
-Eksportavimo įrašymas eksportavimo iš karto nevykdo.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
- 
-„DotDigital“ galite dabar surasti savo segmentus skyriuje [„DotDigital“ adresų knygose](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
-
-
-## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „DotDigital“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „DotDigital“ reklamos atitinka visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
-
+DotDigital raskite savo segmentus DotDigital adresų [knygose](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

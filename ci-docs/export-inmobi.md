@@ -1,37 +1,41 @@
 ---
 title: "\"Customer Insights\" duomenų eksportavimas į \"InMobi\""
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į "InMobi".
-ms.date: 06/27/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8261c8adfe231792e70fc85432237cf73d5cd5a7
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ef486ad6786ef01be977f3d6bda69ce8a2b081c7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9059614"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195898"
 ---
-# <a name="export-segment-list-and-other-data-to-inmobi-preview"></a>Segmentų sąrašo ir kitų duomenų eksportavimas į "InMobi" (peržiūra)
+# <a name="export-customer-insights-data-to-inmobi-preview"></a>"Customer Insights" duomenų eksportavimas į "InMobi" (peržiūra)
 
 Eksportuokite segmentų sąrašus ar kitus duomenis iš "Customer Insights" egzemplioriaus į ["InMobi"](https://www.inmobi.com/).
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-1. Turite ["InMobi" paskyrą](https://www.inmobi.com/) ir administratoriaus kredencialus.
-1. Turite "Azure Blob" saugyklos paskyros pavadinimą ir atitinkamą paskyros raktą. Daugiau informacijos ieškokite [Saugyklos abonemento parametrų valdymas "Azure" portale](/azure/storage/common/storage-account-manage). Saugojimo paskyroje yra konteineris, į kurį galima eksportuoti "Mobi" duomenis. Daugiau informacijos ieškokite [Konteinerio kūrimas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
-1. "InMobi" sukurs tiesioginį ryšį su jūsų "Blob" saugykla ir sukonfigūruos automatinį jūsų duomenų importavimą į "InMobi". Susisiekite su savo "InMobi" atstovu, kad pradėtumėte procesą.
+- ["InMobi" paskyra](https://www.inmobi.com/) ir administratoriaus kredencialai.
+- " [Azure Blob" saugyklos paskyros](/azure/storage/blobs/create-data-lake-storage-account) pavadinimas ir paskyros raktas. Norėdami rasti pavadinimą ir raktą, žiūrėkite ["Azure" portalo saugyklos abonemento parametrų valdymas](/azure/storage/common/storage-account-manage).
+- " [Azure Blob Storage" konteineris](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container), skirtas eksportuoti "InMobi" duomenis į.
+- "InMobi" sukurs tiesioginį ryšį su jūsų "Blob" saugykla ir sukonfigūruos automatinį jūsų duomenų importavimą į "InMobi". Susisiekite su savo "InMobi" atstovu, kad pradėtumėte procesą.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-1. "Azure" didelių dvejetainių objektų saugykloje galite pasirinkti standartinį [našumą ir "Premium" našumo pakopą](/azure/storage/blobs/storage-blob-performance-tiers). Jei pasirinksite geriausio efektyvumo pakopą, pažymėkite [geriausio bloko didelių dvejetainių objektų kaip kliento tipą](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+- Jei naudojate "Azure" didelių dvejetainių objektų saugyklą, pasirinkite standartinį [našumą ir "Premium" našumo pakopą](/azure/storage/blobs/storage-blob-performance-tiers). Jei pasirinksite geriausio efektyvumo pakopą, pažymėkite [geriausio bloko didelių dvejetainių objektų kaip kliento tipą](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 
-## <a name="set-up-the-connection-to-azure-blob-storage-and-configure-an-export"></a>Ryšio su "Azure" didelių dvejetainių objektų saugykla nustatymas ir eksportavimo konfigūravimas
+## <a name="set-up-connection-to-azure-blob-storage"></a>Ryšio su "Azure Blob Storage" nustatymas
 
-1. Vykdykite instrukcijas, kad nustatytumėte [ryšį su "Azure" didelių dvejetainių objektų saugykla](export-azure-blob-storage.md).
-2. Vykdykite eksportavimo konfigūravimo [instrukcijas](export-azure-blob-storage.md#configure-an-export).
+[Nustatykite ryšį su "Azure" didelių dvejetainių objektų saugykla](export-azure-blob-storage.md).
+
+## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
+
+[Konfigūruokite eksportavimą](export-azure-blob-storage.md#configure-an-export).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

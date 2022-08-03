@@ -1,28 +1,56 @@
 ---
 title: Kas nauja programoje „Dynamics 365 Customer Insights“
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054028"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114256"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Kas nauja programoje „Dynamics 365 Customer Insights“
 
 Džiaugiamės galėdami pranešti apie mūsų naujausius atnaujinimus! Šiame straipsnyje apibendrinamos viešos peržiūros versijos funkcijos, bendro pasiekiamumo patobulinimai ir funkcijų atnaujinimai. Norėdami peržiūrėti ilgalaikius funkcijų planus, peržiūrėkite [„Dynamics 365“ ir „Power Platform“ išleidimo planai](/dynamics365/release-plans/).
 
-Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkcijas prieš kitus. Jei nenurodyta kitaip, jums nereikia imtis jokių veiksmų ir mes automatiškai atnaujinsime programą be prastovų.
+Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkcijas prieš kitus. Jei nenurodyta kitaip, jums nereikia imtis jokių veiksmų, mes automatiškai atnaujinsime programą be prastovų.
 
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>2022 m. birželio mėn. naujinimai
+
+2022 m. birželio mėnesio atnaujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų pataisymus.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Atnaujinta naudotojų patirtis, susijusi su duomenų šaltiniais ir duomenų įsisavinimu
+
+Duomenų importavimas iš įvairių duomenų šaltinių yra pagrindas konsoliduoti klientų duomenis Dynamics 365 Customer Insights. Peržiūrėjome duomenų šaltinių importavimo ir prijungimo naudotojų patirtį. Šiuo naujinimu siekiama, kad jums būtų lengviau nuryti duomenis iš "Customer Insights".
+
+Daugiau informacijos ieškokite [Duomenų šaltinių apžvalga](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Eksportavimas į "InMobi"
+
+"InMobi" padeda prekių ženklams suprasti, identifikuoti, sudominti ir įsigyti vartotojų. Segmentus ir kitus duomenis į "InMobi" paslaugą galite eksportuoti naudodami "Azure Blob Storage" paskyras.
+
+Daugiau informacijos ieškokite [Eksportavimas į "InMobi" (peržiūra)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>"Lockbox" palaikymas "Customer Insights"
+
+"Customer Lockbox" suteikia sąsają, leidžiančią peržiūrėti ir patvirtinti (arba atmesti) prieigos prie duomenų užklausas. Šios užklausos atsiranda, kai norint išspręsti palaikymo atvejį, reikalinga prieiga prie klientų duomenų.
+
+Daugiau informacijos ieškokite [Saugiai pasiekite klientų duomenis naudodami "Customer Lockbox" (peržiūra)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Prisijungimas prie savo duomenų naudojant "Azure Private Link"
+
+"Azure Private Link" leidžia "Customer Insights" prisijungti prie jūsų Azure Data Lake Storage paskyros per privatų virtualaus tinklo galinį punktą. Duomenims, esantiems saugojimo paskyroje, kuri nėra viešajame internete, "Private Link" įgalina ryšį su tuo apribotu tinklu.
+
+Daugiau informacijos ieškokite [Privataus saito naudojimas programoje "Customer Insights](security-overview.md#private-links-tab)".
 
 ## <a name="may-2022-updates"></a>2022 m. gegužės mėn. naujinimai
 
@@ -30,7 +58,7 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 ### <a name="updated-data-unification-experience"></a>Atnaujinta duomenų suvienijimo patirtis
 
- Duomenų suvienijimas leidžia suvienodinti vieną kartą skirtingus duomenų šaltinius į vieną pagrindinį duomenų rinkinį, kuris pateikia vieningą tų duomenų rodinį. Duomenis galima suvienodinti viename objekte arba keliuose objektuose. Pirmiausia pasirenkate objektus ir šaltinio laukus [, pašalinate pasikartojančius įrašus](map-entities.md), nurodote sąlygų atitikimo [taisykles](remove-duplicates.md) ir apibrėžiate [, kuriuos](match-entities.md) laukus įtraukti į vieningus klientų [profilius](merge-entities.md).
+ Duomenų suvienijimas leidžia suvienodinti vieną kartą skirtingus duomenų šaltinius į vieną pagrindinį duomenų rinkinį, kuris pateikia vieningą tų duomenų rodinį. Duomenis galima suvienodinti viename objekte arba keliuose objektuose. Pirmiausia pasirenkate objektus ir šaltinio laukus [, pašalinate pasikartojančius įrašus](map-entities.md), nurodote sąlygų atitikimo [taisykles](remove-duplicates.md) ir apibrėžiate [, kuriuos](match-entities.md) laukus įtraukti į vieningus klientų profilius [.](merge-entities.md)
 
 Daugiau informacijos ieškokite [Duomenų suvienijimo apžvalga](data-unification.md).
 

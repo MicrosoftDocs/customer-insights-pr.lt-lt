@@ -1,19 +1,19 @@
 ---
 title: Power Automate jungtis (peržiūra) | "Microsoft" dokumentai
 description: Kurkite srautus „Microsoft Power Automate” platformoje iš „Dynamics 365 Customer Insights”.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082453"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196128"
 ---
 # <a name="power-automate-connector-preview"></a>„Power Automate“ jungtis (peržiūra)
 
@@ -21,18 +21,18 @@ Nustatykite, kad konkretūs įvykiai būtų automatiškai vykdomi pasikeitus duo
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Galite atlikti ne daugiau kaip 100 skambučių per 60 sekundžių. Api galinį punktą galite iškviesti kelis kartus naudodami parametrą $skip. [Sužinokite daugiau apie parametrą $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- Ne daugiau kaip 100 skambučių per 60 sekundžių. Naudokite [parametrą](/connectors/customerinsights/#get-items-from-an-entity) $skip, kad kelis kartus iškviestumėte API galinį punktą.
 
 ## <a name="power-automate-triggers"></a>„Power Automate“ paleidikliai
 
-Naudokite paleidinius debesies srautams kurti ir pasikartojančioms užduotims, pvz.: pranešimams ar išplėstiniams veiksmams, automatizuoti.
+Naudokite paleidinius debesies srautams kurti ir pasikartojančioms užduotims, pvz.: pranešimams ar išplėstiniams veiksmams, automatizuoti. Naudokite paleidiklius, kai:
 
-- Paleidiklis, kai nepavyksta atnaujinti duomenų šaltinio.
-- Paleidiklis, kai pavyksta atnaujinti duomenų šaltinį.
-- Paleidiklis, pasiekus segmento ribinę reikšmę. Paleidiklis taikomas tik ribinės vertės viršijimui.
-- Paleidiklis, pasiekus verslo mato ribinę reikšmę. Palaikomi tik verslo matai be dimensijos. Paleidiklis taikomas tik ribinės vertės viršijimui.
-- Paleidimas, kai visas paleidimas iš naujo (duomenų šaltinių, segmentų, priemonių, ...) yra pabaigtas.
-- Suaktyvinkite, kai baigsis suvienijimo proceso atnaujinimas.
+- Nepavyksta atnaujinti duomenų šaltinis.
+- Duomenų šaltinis atnaujinimas pavyksta.
+- Segmente peržengiama riba. Paleidiklis taikomas tik ribinės vertės viršijimui.
+- Verslo priemonėje peržengiama riba. Palaikomi tik verslo matai be dimensijos. Paleidiklis taikomas tik ribinės vertės viršijimui.
+- Baigtas visas suplanuotas atnaujinimas. Šis paleidiklis neveikia rankiniu būdu pradėtiems atnaujinimams.
+- Baigiamas suvienijimo proceso atnaujinimas.
 
 [Paleidiklių konfigūravimas „Power Automate“.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Naudokite paleidinius debesies srautams kurti ir pasikartojančioms užduotims, 
 
 ## <a name="create-a-power-automate-flow"></a>Kurti Power Automate srautą
 
-1. Eikite į **Administratorius** > **Eksportavimo paskirties vietos**.
+1. Eikite į **Administravimas** > **Ryšiai**.
 
 1. Plytelėje **„Power Automate”** pasirinkite **Nustatyti**.
 
@@ -53,7 +53,5 @@ Naudokite paleidinius debesies srautams kurti ir pasikartojančioms užduotims, 
 Pavyzdžiai, kaip naudoti srautus: 
 - Jei nepavyksta atnaujinti duomenų šaltinio kanale, praneškite Microsoft Teams kanale. 
 - Duomenų savininkams nusiuntus ribinę segmento ribinę vertę, el. laišką siųskite duomenų savininkams.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cc65314f1b083694b60ac0a2625bea906be7272b
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054764"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183503"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Objektų schemos „Common Data Model”
 
@@ -39,9 +39,8 @@ Daugiau informacijos žr. dokumentuose apie [„Customer Insights“ objektų sc
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Objektų peržiūra naudojant „Common Data Model“ objekto naršyklę
 
-Galite peržiūrėti objektus [„Common Data Model“ objekto naršyklėje](https://microsoft.github.io/CDM/). Norėdami gauti "Customer Insights" objektų ir jų aprašų sąrašą, pasirinkite objektą iš skyriaus "Insights Application".
-> [!div class="mx-imgBorder"]
-> ![CDM objektų naršyklė, rodanti „CustomerActivity” objektą.](media/CDM-entity-navigator.png "CDM objektų naršyklė, rodanti „CustomerActivity” objektą")
+Peržiūrėkite objektus ["Common Data Model" objektų žvalgyklėje](https://microsoft.github.io/CDM/). Norėdami gauti "Customer Insights" objektų ir jų aprašų sąrašą, pasirinkite objektą iš skyriaus "Insights Application".
 
+:::image type="content" source="media/CDM-entity-navigator.png" alt-text="CDM objektų naršyklė, rodanti „CustomerActivity” objektą.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

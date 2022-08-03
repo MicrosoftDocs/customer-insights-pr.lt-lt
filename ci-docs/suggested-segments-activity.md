@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: df4f5f4b5c9a3ad66d57a6b349e18a0d714aff62
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054350"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170599"
 ---
-# <a name="suggested-segments-based-on-activity-data-preview"></a>Siūlomi segmentai, pagrįsti veiklos duomenimis (peržiūros versija)
+# <a name="suggested-segments-based-on-activity-preview"></a>Siūlomi segmentai pagal veiklą (peržiūra)
 
 Atraskite jūsų klientų įdomius segmentus pagal klientų veiklos duomenis, įtrauktus į „Customer Insights”. Veiklos duomenų pavyzdžiai yra operacijos, palaikymo skambučio trukmė, pirkimai ar grąžinimai. Siekiant pasiūlyti segmentus, veiklos duomenys yra analizuojami pagal naujumą, dažnumą ir piniginę vertę (arba trukmę). Taip pat galite sugeneruoti [siūlomus segmentus, kad pagerintumėte priemonę, ar geriau suprastumėte, kas sąlygoja atributą](suggested-segments.md).
 
@@ -35,33 +35,31 @@ Naudodami [veiklos duomenis](activities.md), pasiekiamus „Customer Insights”
 - klientai, kurie dažnai sąveikauja su jūsų verslu  
 
 Jei turite mažmeninės prekybos įmonę, galite sužinoti, kurie klientai sugeneruoja daugiausia pajamų ir apdovanoti juos kuponu. Taip pat, galite identifikuoti nenuolatinius klientus ir pasiūlyti jiems prisijungti prie apdovanojimų programos, kad jie dažniau lankytų jūsų įmonę.
-Jei jūs esate sveikatos priežiūros versle ir suteikiate visuomenės sveikatos priežiūrą, o jūsų tikslas yra sumažinti atskirų pacientų išlaidas. Būdas tai padaryti galėtų būti sumažinti vizitų dažnumą suteikiant geriausią įmanomą priežiūrą per kiek įmanoma mažiau vizitų. Tokiu atveju jūsų tikslas yra išlaikyti žemą vizitų dažnumą ir sumažinti pasikartojančias pacientų išlaidas. Taip pat galite nustatyti pacientų, turinčių dažnus vizitus ir dideles pasikartojančias išlaidas, segmentus bei išanalizuoti tuos atvejus, kad patobulintumėte asmeninį gydymą. 
+Jei teikiate viešąsias sveikatos priežiūros paslaugas ir jūsų tikslas yra sumažinti atskirų pacientų išlaidas, galite pabandyti sumažinti pasikartojančių apsilankymų skaičių teikdami geriausią įmanomą priežiūrą per kuo mažiau apsilankymų. Tokiu atveju jūsų tikslas yra išlaikyti žemą vizitų dažnumą ir sumažinti pasikartojančias pacientų išlaidas. Taip pat galite nustatyti pacientų, turinčių dažnus vizitus ir dideles pasikartojančias išlaidas, segmentus bei išanalizuoti tuos atvejus, kad patobulintumėte asmeninį gydymą.
 
 ## <a name="required-data"></a>Būtini duomenys
 
-Pasiūlymai yra generuojami pagal pasirinktus įvesties duomenis. 
+Pasiūlymai yra generuojami pagal pasirinktus įvesties duomenis.
 
-- Klientų profiliai: Visi klientai arba konkretaus segmento nariai. 
+- Klientų profiliai: Visi klientai arba konkretaus segmento nariai.
 
 - Laikotarpis: Pastarasis mėnuo, Pastarieji metai arba bet kuris kitas pasirinktinis skirtasis laikas.
 
 - Veiklos tipas: Pirkimai, mažmeninės prekybos operacijos, internetinės operacijos, klientų palaikymo atvejai, prenumeratos ir kita.  
 
-- „Customer Insights” objektas, kuriame yra veiklos duomenys: Suvienodintos arba konkrečios veiklos objektas. 
+- „Customer Insights” objektas, kuriame yra veiklos duomenys: Suvienodintos arba konkrečios veiklos objektas.
 
 - Įtrauktinos dimensijos: Naujumo, dažnumo arba piniginė dimensija, priklausomai nuo jūsų veiklos reikalavimų.
 
 ## <a name="generate-suggested-segments"></a>Kurti siūlomus segmentus
 
-1. Eikite į **Segmentai**.
+1. Eikite į **Segmentai** ir pasirinkite skirtuką **Pasiūlymai (peržiūra).**
 
-1. Pažymėkite skirtuką **Pasiūlymai**.
-
-1. Pažymėkite **Rasti naujus pasiūlymus** ir pasirinkite **Peržiūrėti arba numatyti klientų elgesį**. Pažymėkite **Pradėti**, kad būtų vykdoma interaktyvioji patirtis.
+1. Pažymėkite **Rasti naujus pasiūlymus** ir pasirinkite **Peržiūrėti arba numatyti klientų elgesį**. Pasirinkite **Pradėti**.
 
    :::image type="content" source="media/suggested-segments-activity-wizard.png" alt-text="Pirmasis veikla pagrįsto segmento konfigūravimo vedlio veiksmas.":::
 
-1. Pateikite reikiamus įvesties duomenis ir pažymėkite **Toliau**, kad tęstumėte.
+1. Pateikite reikiamus įvesties duomenis ir pasirinkite **Pirmyn**.
 
    - Klientų pasirinkimas: Įtraukite visus klientus arba konkretų segmentą.
    - Veiklos pasirinkimas: Pažymėkite veiklos tipą ir veiklą apibūdinančius objektus.
@@ -69,32 +67,17 @@ Pasiūlymai yra generuojami pagal pasirinktus įvesties duomenis.
 
 1. Peržiūrėkite savo įvestį ir pasirinkite **Vykdyti**, kad paleistumėte modelį ir sugeneruotumėte pasiūlymus.
 
-1. Priklausomai nuo klientų profilių ir pasirinktų veiklų skaičiaus, tai gali užtrukti kelias minutes. 
+Priklausomai nuo klientų profilių ir pasirinktų veiklų skaičiaus, tai gali užtrukti kelias minutes.
 
-Sugeneravę pasiūlymus, galite juos filtruoti pagal labiausiai dominantį aspektą arba reikšmę. 
+Sugeneravę pasiūlymus, galite juos filtruoti pagal labiausiai dominantį aspektą arba reikšmę.
 
-## <a name="view-details-of-a-suggested-segment"></a>Peržiūrėkite siūlomo segmento informaciją
+## <a name="manage-suggested-segments"></a>Siūlomų segmentų tvarkymas
 
-Sugeneruoti pasiūlymai bus pateikti parinktyse **Segmentai** > **Pasiūlymai (peržiūros versija)**, esančiose **Veikla pagrįsti pasiūlymai** skyriuje.
+Eikite į **Segmentai** ir pasirinkite skirtuką **Pasiūlymai (peržiūra).** **Skiltyje Veikla pagrįsti pasiūlymai** pasirinkite siūlomą segmentą, kad peržiūrėtumėte galimus veiksmus.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Išplėstinė šoninė sritis, rodanti išsamius siūlomo segmento duomenis.":::
-
-Siūlomam segmentui pasirinkite **Peržiūrėti pasiūlymą**, kad peržiūrėtumėte to segmento išsamią informaciją. Šoninėje srityje pateikiama išsami informacija, pavyzdžiui, kiekvienos dimensijos apimtis, palyginus su tiksline grupe. Be to, joje akcentuojamas potencialių segmento narių skaičius ir atitinkama visų klientų procentinė dalis. Jei pasiūlymą norite išsaugoti kaip segmentą, pažymėkite **Kurti segmentą**.    
-
-## <a name="save-a-suggestion-as-a-segment"></a>Įrašykite siūlymą kaip segmentą
-
-1. Eikite į **Segmentai** > **Pasiūlymai (peržiūra)**.
-
-1. Pasirinkite norimą įrašyti segmentą. 
-
-1. Šoninėje srityje pasirinkite **Kurti segmentą**. 
-
-1. Įrašius segmentą, jis bus rodomas segmentų sąraše, esančiame **Visų segmentų** skirtuke ir dabar jį galima [atnaujinti arba panaikinti kaip ir bet kurį kitą segmentą](segments.md). Jūs negalite redaguoti segmento išsamios informacijos. Tačiau galite pakeisti pasiūlymų įvesties kriterijus ir sugeneruoti skirtingus pasiūlymus.
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Pasiūlymų rinkinio atnaujinimas arba redagavimas
-
-1. Eikite į **Segmentai** > **Pasiūlymai (peržiūros versija)** ir ieškokite segmento skyriuje **Veikla pagrįsti pasiūlymai**.
-
-1. Pasirinkite **Atnaujinti pasiūlymus,** kad išlikdami sukonfigūruoti atributai būtų atnaujinti pasiūlymus. Taip pat galite pasirinkti **Redaguoti pasiūlymus**, jei norite modifikuoti sukonfigūruotus atributus. Sistema iš naujo paleis procesą, sugeneruos segmentų pasiūlymus pagal naujausius duomenis, ir pakeis dabartinius pasiūlymus.
+- **Peržiūrėkite pasiūlymą** peržiūrėti išsamią to segmento informaciją, pvz., kiekvieno aspekto mastą, palyginti su tiksline grupe. Be to, joje akcentuojamas potencialių segmento narių skaičius ir atitinkama visų klientų procentinė dalis.
+- **Sukurkite segmentą**, kad išsaugotumėte siūlomą kaip segmentą. Jis rodomas skirtuke **Visi segmentai** ir gali būti [atnaujintas arba ištrintas](segments.md). Jūs negalite redaguoti segmento išsamios informacijos. Tačiau galite pakeisti pasiūlymų įvesties kriterijus ir sugeneruoti skirtingus pasiūlymus.
+- **Redaguokite pasiūlymus** modifikuoti sukonfigūruotus atributus, kurie pakeis dabartinius pasiūlymus.
+- **Atnaujinkite pasiūlymus**, kad atnaujintumėte pasiūlymus, išlaikydami sukonfigūruotus atributus.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

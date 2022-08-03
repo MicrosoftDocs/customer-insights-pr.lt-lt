@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083146"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183641"
 ---
 # <a name="semantic-mappings-preview"></a>Semantiniai susiejimai (peržiūros versija)
 
@@ -32,21 +32,21 @@ Naudojant semantiniai susiejimai leidžia susieti ne veiklos duomenis su iš ank
 
 1. Atlikdami objekto **duomenų žingsnį**, nustatykite šių laukų reikšmes:
 
-   - **Semantinio objekto susiejimo pavadinimas**: suteikite savo semantinio objekto susiejimo pavadinimą.
-   - **Šaltinio objektas**: pažymėkite objektą, kuriame yra kontaktų duomenys.
-   - **Pirminis raktas**: pažymėkite lauką, kuris unikaliai nustato kontakto įrašą. Jame neturėtų būti jokių pasikartojančių reikšmių, tuščių reikšmių arba trūkstamų reikšmių.
+   - **Semantinio objekto susiejimo pavadinimas**: semantinio objekto susiejimo pavadinimas.
+   - **Šaltinio objektas**: objektas, apimantis kontaktinius duomenis.
+   - **Pirminis raktas**: laukas, kuris unikaliai identifikuoja kontakto įrašą. Jame neturėtų būti jokių pasikartojančių reikšmių, tuščių reikšmių arba trūkstamų reikšmių.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard1.png" alt-text="Nustatykite semantinio objekto susiejimą su pavadinimu, šaltinio objektu ir pirminiu raktu.":::
 
-1. Norėdami tęsti, spustelėkite **Pirmyn**.
+1. Pasirinkite **Toliau**.
 
 1. Ryšių **žingsnyje** konfigūruokite išsamią informaciją, kad kontaktiniai duomenys būtų susieti su atitinkamo kliento įrašu. Šiuo veiksmu vaizduojamas objektų ryšys.  
 
    Galima įgyvendinti du ryšių maršrutų tipus: **Tiesioginius ryšius** ir **Išsamūs ryšiai**. Norėdami gauti daugiau informacijos, eikite į [Tiesioginius ir persodinamus ryšio maršrutus](relationships.md#relationship-paths).
 
-   1. Pažymėkite **Įtraukti ryšį**, konfigūruokite ryšį.
+   1. Pasirinkite **Įtraukti ryšį**, kad sukonfigūruotumėte ryšį.
    1. Pasirinkite atributą iš šaltinio objekto, prijungiančių jūsų kontakto objektą su kitu objektu.
-   1. Pasirinkite objektą, prie kurio norite prijungti kontaktinį objektą. Objektą galite pasirinkti iš **Abonemento objektų** ar **Tarpinio objekto** sprendimas". Jei pažymėsite, kad objektas yra nuosaikus, turite apibrėžti antrą ryšį, kad galėtumėte prisijungti prie tikslinio kliento objekto.
+   1. Pasirinkite objektą, prie kurio norite prijungti kontaktinį objektą. Pasirinkite objektą iš sekcijos **Kliento objektai** arba Tarpinis **objektas**. Jei pasirinksite tarpinį objektą, apibrėžkite antrą ryšį, kad prisijungtumėte prie tikslinio abonemento objekto.
 
       :::image type="content" source="media/Semantic_Mapping_Wizard2.png" alt-text="Pažymėkite kliento objektą arba objektą Tarpinis.":::
 
@@ -55,43 +55,38 @@ Naudojant semantiniai susiejimai leidžia susieti ne veiklos duomenis su iš ank
 
    > [!NOTE]
    > Galite konfigūruoti daugiau ryšių tarp kontakto objekto ir kitų kliento objektų su integuojainiais objektais.
-   >  :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="Įvairių ryšių vizualizavimas jungia kontaktų objektus su kliento objektais.":::
+   
+     :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="Įvairių ryšių vizualizavimas jungia kontaktų objektus su kliento objektais.":::
 
-1. Baigę **konfigūruoti** ryšį, pažymėkite Kitas.
+1. Pasirinkite **Toliau**.
 
 1. Norėdami **nustatyti semantinio tipo** žingsnį, pasirinkite **semantinio tipo**. Šiuo metu yra vienas **semantinis tipas** vadinamas *ContactProfile*.
 
-1. Susiekite savo duomenis su *ContactProfile* **semantinio tipo** rodomais laukais.
-   - Būtinas laukas: Kontakto ID
-   - Pasirinktiniai laukai: vardas, pavardė, gimimo data, lytis, pagrindinis el. pašto adresas ir pagrindinis telefonas
+1. Susiekite savo kontaktinį ID su *ContactProfile* semantinio tipo **kontakto ID**. Pasirinktinai susiekite kitus laukus, pvz., vardas, pavardė, lytį ar el. paštą.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard5.png" alt-text="Susiekite kontaktų duomenų atributus su pateikiamais reikiamais ir pasirinktiniais laukais.":::
 
-1. Norėdami tęsti, spustelėkite **Pirmyn**.
+1. Pasirinkite **Toliau**.
 
-1. Peržiūros **žingsnyje** peržiūrėkite semantinio susiejimo konfigūraciją. Pasirinkite **Redaguoti** atitinkamą skyrių, kad būtų atlikti pakeitimai.
+1. Atlikdami **peržiūrą** peržiūrėkite semantinio susiejimo konfigūraciją. Norėdami atlikti pakeitimus, **pasirinkite Redaguoti** atitinkamoje sekcijoje.
 
-1. Pažymėkite **Įrašyti**, kad įrašytumėte naują **semantinio susiejimo** parinktį.
+1. Pasirinkite **Įrašyti**.
 
-1. Įrašę galite pažymėti **Vykdyti** procesų sekantį susiejimą arba galite pažymėti **Uždaryti** kad įrašytumėte savo semantinį susiejimą jo neap apdorojimo.
-
-1. Norėdami vėliau paleisti semaninį susiejimą, pažymėkite semaninį susiejimą ir **atnaujinkite**.
+1. Norėdami apdoroti semantinį susiejimą, pasirinkite **Vykdyti**. Arba pasirinkite **Uždaryti**, kad išsaugotumėte semantinį susiejimą jo neapdorodami. Norėdami jį paleisti vėliau, pasirinkite semantinį susiejimą ir pasirinkite **Atnaujinti**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Valdyti esamus semaninius susiejimus
 
-**Duomenų** > **semantikų susiejimuose (peržiūroje)** galite peržiūrėti visus įrašytus semaninius susiejimus ir juos valdyti. Kiekvieną semaninį susiejimą nurodo atskira eilutė. Rasite išsamią informaciją apie šaltinio objektą, semaninį tipą, susiejimo tipą ir jo būseną.
+Eikite į **Duomenų** > **semantiniai susiejimai (peržiūra),** kad peržiūrėtumėte išsaugotus semantinius susiejimus, jų šaltinio objektą, semantinį tipą, susiejimo tipą ir būseną.
 
 :::image type="content" source="media/semantic-mapping-options.png" alt-text="Semantinio susiejimo valdymo parinktys.":::
 
-- Peržiūros **Redaguoti** Atverkite semantinio susiejimo nustatymo peržiūros veiksmo konfigūraciją. Galite pakeisti dabartinę konfigūraciją. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus.
-
-- **Atnaujinti**: atnaujina pažymėtą semaninį susiejimą su naujausiais objektų, kurie yra konfigūracijos dalis, duomenimis. Atnaujinus bet kurį nurodytą semaninį susiejimą bus atnaujinti visi to paties tipo semantiniai susiejimai.
-
-- **Pervardykite**: atidaromas dialogas, kuriame galite įvesti kitą pažymėto semantinio susiejimo pavadinimą. Pasirinkite **Įrašyti**, kad pritaikytumėte keitimus.
-
-- **Naikinti**: atidaro dialogą, kad patvirtintų pažymėto semantinio susiejimo naikinimą. Taip pat vienu metu galite panaikinti daugiau nei vieną semaninį susiejimą pažymėdami semaninius susiejimus ir naikinimo piktogramą. Pasirinkite **Naikinti** naikinimo patvirtinimui.
+Pasirinkite semantinį susiejimą, kad peržiūrėtumėte galimus veiksmus.
+- **Redaguokite** dabartinę konfigūraciją. Pasirinkite **Įrašyti** ir **Vykdyti**, kad apdorotumėte pakeitimus.
+- **Atnaujinkite** semantinį susiejimą, kad įtrauktumėte naujausius duomenis. Atnaujinus bet kurį nurodytą semaninį susiejimą bus atnaujinti visi to paties tipo semantiniai susiejimai.
+- **Pervardykite** semantinį susiejimą. Pasirinkite **Įrašyti**.
+- **Panaikinkite** semantinį susiejimą. Norėdami ištrinti daugiau nei vieną semantinį susiejimą vienu metu, pasirinkite semantinius susiejimus ir ištrynimo piktogramą. Pasirinkite **Naikinti** naikinimo patvirtinimui.
 
 ## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>"ContactProfile" semantinio objekto susiejimo naudojimas kontakto lygio veiklai kurti
 
@@ -100,7 +95,7 @@ Sukūrę *"ContactProfile* " semantinio objekto susiejimą, galite užfiksuoti k
    > [!NOTE]
    > Kad kontakto lygio veikla veiktų, veiklos duomenyse turite turėti **ir kliento ID,** ir **contactID** atributus kiekvienam įrašui.
 
-1. [Apibrėžkite *"ContactProfile* " semantinio objekto susiejimą.](#define-a-contactprofile-semantic-entity-mapping) Ir paleiskite semantinį atvaizdavimą.
+1. [Apibrėžkite *"ContactProfile* " semantinio objekto susiejimą](#define-a-contactprofile-semantic-entity-mapping) ir paleiskite semantinį susiejimą.
 
 1. Eikite į **Duomenų** > **veikla**.
 
@@ -119,14 +114,14 @@ Sukūrę *"ContactProfile* " semantinio objekto susiejimą, galite užfiksuoti k
 
 1. Paleiskite veiklos susiejimas.
 
-1. Jūsų kontakto lygio veikla dabar bus matoma kliento laiko juostoje.
+1. Paleidę kontakto lygio veiklos susiejimą, pasirinkite **Klientai**. Kontakto lygio veikla rodoma jūsų kliento laiko juostoje.
 
    :::image type="content" source="media/Contact_Activities2.png" alt-text="Galutinis rezultatas sukonfigūravus kontaktinę veiklą":::
 
 ### <a name="contact-level-activity-timeline-filtering"></a>Kontakto lygio veiklos laiko planavimo juostos filtravimas
 
-Sukonfigūravus kontakto lygio veiklos susiejimą ir jį paleidus, jūsų klientų veiklos laiko juosta bus atnaujinta. Tai apima jų ID arba pavadinimus, atsižvelgiant į jūsų *"ContactProfile* " konfigūraciją, skirtą veiklai, kurią jie veikė. Laiko planavimo juostoje galite filtruoti veiklą pagal kontaktus, kad pamatytumėte konkrečius jus dominančius kontaktus. Be to, galite matyti visas veiklas, kurios nepriskirtos konkrečiam kontaktui, pasirinkdami **Veikla, nesusieta su kontaktu**.
+Jūsų klientų veiklos laiko juostoje yra jų ID arba vardai, atsižvelgiant į jūsų *ContactProfile* konfigūraciją, skirti veiklai, kurią jie veikė. Filtruokite veiklas pagal kontaktus laiko planavimo juostoje, kad pamatytumėte konkrečius jus dominančius kontaktus. Norėdami peržiūrėti visas veiklas, kurios nepriskirtos konkrečiam kontaktui, pasirinkite **Veikla, nesusieta su kontaktu**.
 
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Galimos kontakto lygio veiklos filtravimo parinktys.":::
+:::image type="content" source="media/Contact_Activities3.png" alt-text="Galimos kontakto lygio veiklos filtravimo parinktys.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

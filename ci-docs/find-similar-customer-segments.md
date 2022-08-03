@@ -12,69 +12,59 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 09fe36a4da45d114cbfccf8dad1e7b80b4b7e320
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054811"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170737"
 ---
 # <a name="find-similar-customers-with-ai-preview"></a>Panašių klientų radimas naudojant AI (peržiūra)
 
-Naudodamiesi šia funkcija, klientų bazėje rasite panašių klientų, naudodami dirbtinį intelektą. Norint naudotis šia funkcija, būtina sukurti bent vieną segmentą. Išplėtus esamo segmento kriterijus, bus lengviau rasti klientų, panašių į tą segmentą.
+Raskite panašių klientų savo klientų bazėje naudodami dirbtinį intelektą. Norint naudoti šią funkciją, jums reikia bent vieno sukurto segmento. Esamo segmento kriterijų išplėtimas padeda rasti klientų, panašių į tą segmentą.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> Naudojant funkciją *Panašių klientų radimas*, taikomos automatinės priemonės duomenims įvertinti ir prognozėms pateikti remiantis minėtais duomenimis, todėl šią funkciją galima naudoti kaip profiliavimo metodą, apibrėžtą Bendrajame duomenų apsaugos reglamente („BDAR“). Jei klientas naudoja šią funkciją apdoroti duomenims, gali būti taikomi BDAR arba kiti įstatymai ir kiti teisės aktai. Esate atsakingas už užtikrinimą, kad naudojate „Dynamics 365 Customer Insights“, įskaitant prognozes, atitikimą su visais taikomais teisės aktais ir reglamentais, įskaitant teisės aktus susijusius su privatumu, asmens duomenimis, biometriniais duomenimis, duomenų apsauga ir bendravimo konfidencialumu.
+> *Rasti panašius klientus* naudoja automatizuotas priemones duomenims įvertinti ir pagal tuos duomenis prognozuoti. Todėl jis gali būti naudojamas kaip profiliavimo metodas, nes šis terminas apibrėžtas Bendrajame duomenų apsaugos reglamente (toliau – BDAR). Jei klientas naudoja šią funkciją apdoroti duomenims, gali būti taikomi BDAR arba kiti įstatymai ir kiti teisės aktai. Esate atsakingas už užtikrinimą, kad naudojate „Dynamics 365 Customer Insights“, įskaitant prognozes, atitikimą su visais taikomais teisės aktais ir reglamentais, įskaitant teisės aktus susijusius su privatumu, asmens duomenimis, biometriniais duomenimis, duomenų apsauga ir bendravimo konfidencialumu.
 
-## <a name="finding-similar-customers"></a>Panašių klientų radimas
+## <a name="find-similar-customers"></a>Rasti panašių klientų
 
 1. Eikite į **Segmentai** ir pasirinkite segmentą, kuriuo norite pagrįsti naują segmentą. Tai jūsų *šaltinio segmentas*.
 
-1. Veiksmų juostoje pažymėkite **Panašių klientų radimas**.
+1. Pasirinkite **Rasti panašių klientų**.
 
 1. Peržiūrėkite siūlomą naujo segmento pavadinimą ir, jei reikia, jį pakeiskite.
 
 1. Pasirinktinai pridėkite [žymų](work-with-tags-columns.md#manage-tags) prie naujo segmento.
 
-1. Peržiūrėkite laukus, kuriuose apibrėžiamas naujas segmentas. Šiuose laukuose apibrėžiamas pagrindas, pagal kurį sistema bandys rasti į šaltinio segmentą panašių klientų. Sistema pagal numatytuosius nustatymus pasirenka rekomenduojamus laukus.
+1. Peržiūrėkite laukus, kuriuose apibrėžiamas naujas segmentas. Šiuose laukuose apibrėžiamas pagrindas, pagal kurį sistema bandys rasti į šaltinio segmentą panašių klientų. Sistema pagal numatytuosius nustatymus pasirenka rekomenduojamus laukus. Jei reikia, pridėkite daugiau laukų.
   Laukai, kurie gali gerokai sumažinti modelio veikimą, automatiškai neįtraukiami.
   
    - Laukai, kurių duomenų tipai yra: StringType, BooleanType, CharType, LongType, IntType, DoubleType, FloatType, ShortType
    - Laukai, kurių svarba (lauko elementų skaičius) yra mažesnis nei 2 arba didesnis nei 30
 
-1. Pasirinkite, ar į naują segmentą turi būti įtraukti **Visi klientai**, ar tik klientai, esantys **Tam tikrame esamame segmente**.
+1. Pasirinkite, ar norite įtraukti **visus klientus**, išskyrus šaltinio segmentą, ar tik klientus **kitame** segmente į naują segmentą.
 
 1. Pagal numatytuosius nustatymus sistema siūlo į išvestį įtraukti tik 20 % tikslinės auditorijos. Jei reikia, redaguokite šią ribinę vertę. Padidinus ribinę vertę, sumažės tikslumas.
 
 1. Įtraukite klientus į šaltinio segmentą pažymėdami žymimąjį laukelį **Įtraukti narius iš šaltinio segmento, be klientų su panašiais atributais**.
 
-1. Pasirinkite **Vykdyti** puslapio apačioje ir paleiskite dvejetainio klasifikavimo užduotį (mašininio mokymo metodą), kuria analizuojamas duomenų rinkinys.
+1. Puslapio apačioje pasirinkite **Vykdyti**, kad pradėtumėte dvejetainę [klasifikavimo užduotį](#about-similarity-scores) (mašininis mokymas metodą), kuri analizuoja duomenų rinkinį.
 
 ## <a name="view-the-similar-segment"></a>Panašaus segmento peržiūra
 
-Apdoroję panašų segmentą, naują segmentą rasite puslapyje **Segmentai**.
+Apdoroję panašų segmentą, puslapyje Segmentai rasite naują segmentą **su plėtinio tipu** **.**
 
-> [!div class="mx-imgBorder"]
-> ![Panašių klientų segmentas.](media/expanded-segment.png "Panašių klientų segmentas")
+Pasirinkite **Peržiūrėti**, kad segmento narių peržiūroje pamatytumėte rezultatų pasiskirstymą panašumo [baluose](#about-similarity-scores) ir panašumo balo **reikšmes**.
 
-Norėdami atidaryti išsamią informaciją apie segmentą, veiksmų juostoje pasirinkite **Peržiūra**. Šiame rodinyje pateikiama informacija apie rezultatų paskirstymą remiantis [panašumo įverčiais](#about-similarity-scores). Panašumo įverčių reikšmes taip pat rasite pasirinkę **Segmento narių peržiūra**.
+:::image type="content" source="media/expanded-segment.png" alt-text="Panašių klientų segmentas.":::
 
-## <a name="use-the-output-of-a-similar-segment"></a>Panašaus segmento išvesties naudojimas
+## <a name="manage-a-similar-segment"></a>Panašaus segmento valdymas
 
-Galite [naudoti panašaus segmento išvestį](segments.md) kaip ir kitų segmentų išvestis. Pavyzdžiui, eksportuokite segmentą arba sukurkite priemonę.
+[Dirbkite su panašiu segmentu](segments.md#manage-existing-segments) ir jį valdykite kaip ir su kitais segmentais. Pavyzdžiui, eksportuokite segmentą arba sukurkite priemonę.
 
-## <a name="refresh-and-edit-a-similar-segment"></a>Panašaus segmento atnaujinimas ir redagavimas
-
-Jei norite atnaujinti panašų segmentą, pažymėkite jį puslapyje **Segmentai** ir veiksmų juostoje pasirinkite **Atnaujinti**.
-
-Redaguojant panašų segmentą, duomenys apdorojami iš naujo. Anksčiau sukurtas segmentas atnaujinamas įtraukiant atnaujintus duomenis.
-Jei norite redaguoti panašų segmentą, pažymėkite jį puslapyje **Segmentai** ir veiksmų juostoje pasirinkite **Redaguoti**. Pritaikykite pakeitimus ir pasirinkite **Vykdyti**, kad pradėtumėte apdorojimą.
-
-## <a name="delete-a-similar-segment"></a>Panašaus segmento naikinimas
-
-Pažymėkite segmentą puslapyje **Segmentai** ir veiksmų juostoje pasirinkite **Naikinti**. Paskui patvirtinkite naikinimą.
+Redaguokite, atnaujinkite, pervardykite, atsisiųskite ir panaikinkite panašų segmentą. Redaguojant panašų segmentą iš naujo apdorojami jūsų duomenys. Anksčiau sukurtas segmentas atnaujinamas įtraukiant atnaujintus duomenis.
 
 ## <a name="about-similarity-scores"></a>Apie panašumo įverčius
 

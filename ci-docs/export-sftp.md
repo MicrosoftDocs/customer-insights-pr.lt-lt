@@ -1,84 +1,89 @@
 ---
 title: Duomenų eksportavimas į SFTP pagrindinius kompiuterius (peržiūra) (yra vaizdo įrašas)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į SFTP vietą.
-ms.date: 06/09/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b12d25ecbd2e5fb31d7d5a6bb775dc3e7c1bf007
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082768"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207239"
 ---
-# <a name="export-data-to-sftp-preview"></a>Duomenų eksportavimas į SFTP (peržiūra)
+# <a name="export-data-to-sftp-hosts-preview"></a>Duomenų eksportavimas į SFTP pagrindinius kompiuterius (peržiūra)
 
 Savo kliento duomenis trečiųjų šalių programose naudokite eksportuodami juos į saugiųjų failų perkėlimo protokolo (SFTP) vietą.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
-## <a name="prerequisites-for-connection"></a>Būtinosios ryšio sąlygos
+## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - SFTP pagrindinio kompiuterio ir atitinkamų kredencialų pasiekiamumas.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- SFTP paskirties vietos už ugniasienių šiuo metu nepalaikomos. 
+- SFTP paskirties vietos už ugniasienių šiuo metu nepalaikomos.
 - Eksportavimo trukmė priklauso nuo sistemos efektyvumo. Kaip minimalią serverio konfigūraciją rekomenduojame naudoti du procesorius IR 1 GB atminties.
-- Objektų, kurių klientų profiliai yra iki 100 milijonų, eksportavimas gali užtrukti 90 minučių naudojant rekomenduojamą minimalią dviejų procesorių IR 1 GB atminties konfigūraciją.
+- Iki 100 milijonų klientų profilių, o tai gali užtrukti 90 minučių, kai naudojama rekomenduojama minimali dviejų procesoriaus branduolių ir 1 Gb atminties konfigūracija.
+- Jei autentifikavimui naudojate SSH raktą, įsitikinkite, kad sukūrėte [privatų raktą](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) kaip PEM arba SSH.COM formatą. Jei naudojate "Putty", konvertuokite privatų raktą eksportuodami kaip "Open SSH". Palaikomi šie privataus rakto formatai:
+  - RSA OpenSSL PEM ir ssh.com formatu
+  - DSA OpenSSL PEM ir ssh.com formatu
+  - ECDSA 256/384/521 OpenSSL PEM formatu
+  - ED25519 ir RSA OpenSSH rakto formatu
 
 ## <a name="set-up-connection-to-sftp"></a>Ryšio su SFTP nustatymas
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **SFTP**, kad sukonfigūruotumėte ryšį.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **SFTP**.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
-1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Savo SFDRE paskyroje pateikite **vartotojo vardą**, **slaptažodį**, **pagrindinio kompiuterio pavadinimą** ir **eksportavimo aplanką**.
+1. Pasirinkite, ar norite autentifikuoti naudodami SSH, ar vartotojo vardą / slaptažodį savo ryšiui, ir pateikite reikiamą informaciją. Jei autentifikavimui naudojate SSH raktą, įsitikinkite, kad sukūrėte [privatų raktą](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) kaip PEM arba SSH.COM formatą. Jei naudojate "Putty", konvertuokite privatų raktą eksportuodami kaip "Open SSH". Palaikomi šie privataus rakto formatai:
+   - RSA OpenSSL PEM ir ssh.com formatu
+   - DSA OpenSSL PEM ir ssh.com formatu
+   - ECDSA 256/384/521 OpenSSL PEM formatu
+   - ED25519 ir RSA OpenSSH rakto formatu
 
 1. Pasirinkite **Tikrinti**, kad išbandytumėte jungtį.
 
-1. Pasirinkite, ar savo duomenis norite eksportuoti kaip **Gzipped** arba **Unzipped**, ir pasirinkite eksportuotų failų **laukelio skyriklį**.
-
-1. Pasirinkę **Sutinku**, kad patvirtintumėte **Duomenų privatumą ir atitiktį**.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
 1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį.
 
 ## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+1. Pasirinkite **Pridėti eksportavimą**.
 
-1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje SFTP. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje SFTP. Jei ryšio nėra, kreipkitės į administratorių.
 
-1. Pažymėkite objektus, pvz.: segmentus, kuriuos norite eksportuoti.
+1. Įveskite eksportavimo pavadinimą.
+
+1. Pasirinkite, ar savo duomenis norite eksportuoti kaip **Gzipped** arba **Unzipped**, ir pasirinkite eksportuotų failų **laukelio skyriklį**.
+
+1. Pasirinkite objektus, pvz., segmentus, kuriuos norite eksportuoti.
 
    > [!NOTE]
-   > Eksportavus, kiekvienas pažymėtas objektas padalijamas į penkis išvesties failus.
+   > Eksportuojant kiekvienas pasirinktas objektas bus padalintas į ne daugiau kaip penkis išvesties failus.
 
 1. Pasirinkite **Įrašyti**.
 
-Eksportavimo įrašymas eksportavimo iš karto nevykdo.
-
-Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab).
-Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand).
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!TIP]
 > Eksportavus objektus, kuriuose yra daug duomenų, tame pačiame aplanke kiekvienam eksportui gali atsirasti keli CSV failai. Eksporto padalijimas vyksta dėl našumo priežasčių, kad būtų sumažintas laikas, per kurį eksportavimas užbaigiamas.
-
-## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į per SFTP, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad eksportavimo paskirties vieta atitiks visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

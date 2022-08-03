@@ -1,7 +1,7 @@
 ---
 title: Dirbkite su „Customer Insights“ duomenimis „Microsoft Dataverse” platformoje
-description: Sužinokite, kaip prijungti "Customer Insights" ir Microsoft Dataverse suprasti išvesties objektus, eksportuojamus į Dataverse.
-ms.date: 05/30/2022
+description: Sužinokite, kaip prijungti "Customer Insights" ir Microsoft Dataverse suprasti išvesties objektus, kurie eksportuojami į Dataverse.
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,107 +11,119 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011538"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153414"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Dirbkite su „Customer Insights“ duomenimis „Microsoft Dataverse” platformoje
 
-"Customer Insights" suteikia galimybę išvesties objektus padaryti pasiekiamus kaip [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Ši integracija leidžia lengvai dalytis duomenimis ir pasirinktinai kurti naudojant mažo kodo / ne kodo metodą. Išvesties [objektai](#output-entities) yra pasiekiami kaip aplinkos lentelės Dataverse. Galite naudoti duomenis bet kuriai kitai programai, pagrįstai Dataverse lentelėmis. Šios lentelės įgalina scenarijus, pvz., automatizuotas darbo eigas naudojant Power Automate arba kuriant programas su Power Apps.
+"Customer Insights" suteikia galimybę išvesties objektus padaryti pasiekiamus kaip [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Ši integracija leidžia lengvai dalytis duomenimis ir pasirinktinai kurti naudojant žemo kodo / kodo nebuvimo metodą. Išvesties [objektai](#output-entities) galimi kaip lentelės aplinkoje Dataverse. Duomenis galite naudoti bet kuriai kitai programai, pagrįstoms Dataverse lentelėmis. Šiose lentelėse įgalinami tokie scenarijai kaip automatizuotos darbo eigos arba Power Automate programų kūrimas naudojant Power Apps.
 
-Prisijungimas prie savo Dataverse aplinkos taip pat leidžia jums nuryti [duomenis iš vietinis duomenų šaltinių naudojant Power Platform duomenų srautus ir šliuzus](connect-power-query.md#add-data-from-on-premises-data-sources).
+Prisijungę prie savo Dataverse aplinkos taip pat galite nuryti [duomenis iš vietinis duomenų šaltinių naudodami Power Platform duomenų srautus ir šliuzus](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- "Customer Insights" ir Dataverse aplinkos turi būti talpinamos tame pačiame regione.
-- Turite atlikti visuotinį administratoriaus vaidmenį Dataverse aplinkoje. Patikrinkite, ar ši [Dataverse aplinka susieta su](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) tam tikromis saugos grupėmis, ir įsitikinkite, kad esate įtraukti į tas saugos grupes.
-- Jokia kita "Customer Insights" aplinka dar nesusieta su aplinka, Dataverse prie kurios norite prisijungti. Sužinokite, kaip pašalinti [esamą ryšį su Dataverse aplinka](#remove-an-existing-connection-to-a-dataverse-environment).
-- Aplinka Microsoft Dataverse gali prisijungti tik prie vieno saugyklos abonemento. Jis taikomas tik tuo atveju, jei konfigūruojate aplinką, kad galėtumėte [naudoti savo Azure Data Lake Storage](own-data-lake-storage.md).
+- Klientų įžvalgos ir Dataverse aplinkos turi būti priglobtos tame pačiame regione.
+- Aplinkoje turite atlikti visuotinio administratoriaus vaidmenį Dataverse. Patikrinkite, ar ši [Dataverse aplinka susieta su](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) tam tikromis saugos grupėmis, ir įsitikinkite, kad esate įtraukti į tas saugos grupes.
+- Jokia kita "Customer Insights" aplinka dar nėra susieta su aplinka, Dataverse prie kurios norite prisijungti. Sužinokite, [kaip pašalinti esamą ryšį su Dataverse aplinka](#remove-an-existing-connection-to-a-dataverse-environment).
+- Aplinka Microsoft Dataverse gali prisijungti tik prie vienos saugyklos paskyros. Tai taikoma tik tuo atveju, jei sukonfigūruojate aplinką, kad ji [naudotų jūsų Azure Data Lake Storage](own-data-lake-storage.md).
+
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse saugojimo pajėgumų teisė
+
+"Customer Insights" prenumerata suteikia jums teisę į papildomą pajėgumą, susijusį su jūsų organizacijos esama [Dataverse saugyklos talpa](/power-platform/admin/capacity-storage). Pridėta talpa priklauso nuo jūsų prenumeratos naudojamų profilių skaičiaus.
+
+**Pavyzdys:**
+
+Darant prielaidą, kad gausite 15 GB duomenų bazės saugyklą ir 20 GB failų saugyklą 100 000 klientų profilių. Jei jūsų prenumeratoje yra 300 000 klientų profilių, bendra saugyklos talpa bus 45 GB (3 x 15 GB) duomenų bazės saugykla ir 60 GB failų saugykla (3 x 20 GB). Panašiai, jei turite B2B prenumeratą su 30K paskyromis, bendra saugyklos talpa būtų 45 GB (3 x 15 GB) duomenų bazės saugykla ir 60 GB failų saugykla (3 x 20 GB).
+
+Jūsų organizacijoje žurnalo pajėgumas nėra laipsniškas ir fiksuotas.
+
+Daugiau informacijos apie išsamias pajėgumo teises rasite ["Dynamics 365" licencijavimo vadove](https://go.microsoft.com/fwlink/?LinkId=866544).
 
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Aplinkos prijungimas Dataverse prie "Customer Insights"
 
-Šis **Microsoft Dataverse** veiksmas leidžia susieti "Customer Insights" su Dataverse aplinka kuriant ["Customer Insights" aplinką](create-environment.md).
+Šis **Microsoft Dataverse** veiksmas leidžia susieti "Customer Insights" su aplinka Dataverse kuriant ["Customer Insights" aplinką](create-environment.md).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="duomenų bendrinimas su Microsoft Dataverse automatiniu įgalinimu naujoms grynosioms aplinkoms.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="duomenų bendrinimas su Microsoft Dataverse automatiškai įgalinta naujų internetinių aplinkų funkcija.":::
 
-Administratoriai gali konfigūruoti "Customer Insights", kad prijungtų esamą Dataverse aplinką. Pateikdamas URL Dataverse aplinkai, jis pridedamas prie naujos "Customer Insights" aplinkos.
+Administratoriai gali konfigūruoti "Customer Insights", kad sujungtų esamą Dataverse aplinką. Pateikdamas URL Dataverse aplinkai, jis prisijungia prie naujos "Customer Insights" aplinkos. Nustatę ryšį tarp "Customer Insights" ir Dataverse, nekeiskite organizacijos aplinkos pavadinimo Dataverse. Organizacijos pavadinimas naudojamas URL, Dataverse o pakeistas pavadinimas nutraukia ryšį su "Customer Insights".
 
 Jei nenorite naudoti esamos Dataverse aplinkos, sistema sukuria naują nuomotojo "Customer Insights" duomenų aplinką. [Power Platform administratoriai gali valdyti, kas gali kurti aplinkas](/power-platform/admin/control-environment-creation). Kai nustatote naują "Customer Insights" aplinką ir administratorius išjungė aplinkų Dataverse kūrimą visiems, išskyrus administratorius, gali būti, kad negalėsite sukurti naujos aplinkos.
 
-**Įgalinkite duomenų bendrinimą** pažymėdami Dataverse žymės langelį Duomenų bendrinimas.
+**Įgalinkite duomenų bendrinimą** su Dataverse pasirinkdami žymimąjį laukelį duomenų bendrinimas.
 
-Jei naudojate savo duomenų ežero saugyklos paskyrą, jums taip pat reikia **teisių identifikatoriaus**. Norėdami gauti daugiau informacijos, kaip gauti teisių identifikatorių, peržiūrėkite šį skyrių.
+Jei naudojate savo "Data Lake Storage" paskyrą, jums taip pat reikia leidimų **identifikatoriaus**. Jei reikia daugiau informacijos, kaip gauti leidimo identifikatorių, peržiūrėkite šį skyrių.
 
-## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Įgalinti duomenų bendrinimą su Dataverse savo Azure Data Lake Storage (Peržiūra)
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Įgalinkite duomenų bendrinimą su Dataverse savo Azure Data Lake Storage (peržiūra)
 
-Norint įgalinti duomenų bendrinimą, kai Microsoft Dataverse jūsų aplinka [naudoja jūsų paskyrą Azure Data Lake Storage,](own-data-lake-storage.md) reikia papildomos konfigūracijos. Vartotojas, nustatantis "Customer Insights" aplinką, turi turėti bent **saugyklos BLOB duomenų skaitytuvo** teises *kliento kliento konteineryje* CustomerInsights Azure Data Lake Storage.
+Norint įgalinti duomenų bendrinimą su Microsoft Dataverse tuo, kai aplinka [naudoja jūsų paskyrą Azure Data Lake Storage,](own-data-lake-storage.md) reikia papildomos konfigūracijos. Vartotojas, nustatantis "Customer Insights" aplinką, turi turėti bent **"Storage Blob Data Reader"** teises *paskyros "CustomerInsights"* konteineryje Azure Data Lake Storage.
 
-1. "Azure" prenumeratoje sukurkite dvi saugos grupes – vieną **"Reader"** saugos grupę ir vieną **bendraautorių** saugos grupę ir nustatykite paslaugą Microsoft Dataverse kaip abiejų saugos grupių savininkę.
-2. Tvarkykite "Access Control List" (ACL) savo saugyklos abonemento konteineryje CustomerInsights per šias saugos grupes. Įtraukite paslaugą Microsoft Dataverse ir visas Dataverse verslo programas, pvz., "Dynamics 365 Marketing", į **"Reader"** saugos grupę su **tik** skaitymo teisėmis. Įtraukite *tik* "Customers Insights" taikomąją programą į bendraautorių **saugos** grupę, kad suteiktumėte ir **skaitymo, ir rašymo** teises rašyti profilius ir įžvalgas.
+1. "Azure" prenumeratoje sukurkite dvi saugos grupes – vieną **skaitytuvo** saugos grupę ir vieną **bendraautorių** saugos grupę ir nustatykite paslaugą Microsoft Dataverse kaip abiejų saugos grupių savininkę.
+2. Tvarkykite prieigos kontrolės sąrašą (ACL), esantį "CustomerInsights" konteineryje savo saugyklos paskyroje, naudodami šias saugos grupes. Įtraukite paslaugą Microsoft Dataverse ir visas Dataverse verslo programas, pvz., "Dynamics 365 Marketing", **į skaitytuvo** saugos grupę su **tik** skaitymo teisėmis. Į bendraautorių *saugos grupę įtraukite* **tik** programą "Customer Insights", kad suteiktumėte **skaitymo ir rašymo** teises rašyti profilius ir įžvalgas.
 
 ### <a name="limitations"></a>Apribojimai
 
-Naudojant su savo Dataverse paskyra yra du apribojimai Azure Data Lake Storage:
+Naudojant su Dataverse savo Azure Data Lake Storage paskyra taikomi du apribojimai:
 
-- Yra organizacijos ir Dataverse paskyros susiejimas vienas su Azure Data Lake Storage vienu. Dataverse Kai organizacija yra prijungta prie saugyklos abonemento, ji negali prisijungti prie kito saugyklos abonemento. Šis apribojimas neleidžia užpildyti Dataverse kelių saugojimo paskyrų.
-- Duomenų bendrinimas neveiks, jei norint pasiekti paskyrą Azure Data Lake Storage reikia "Azure Private Link" sąrankos, nes ji yra už užkardos. Dataverse šiuo metu nepalaiko ryšio su privačiais galiniais punktais per "Private Link".
+- Yra asmeninis susiejimas tarp Dataverse organizacijos ir Azure Data Lake Storage paskyros. Kai organizacija prijungiama Dataverse prie saugyklos abonemento, ji negali prisijungti prie kito saugyklos abonemento. Šis apribojimas neleidžia, kad a Dataverse neužpildytų kelių saugyklos paskyrų.
+- Duomenų bendrinimas neveiks, jei norint pasiekti paskyrą Azure Data Lake Storage reikia "Azure Private Link" sąrankos, nes ji yra už užkardos. Dataverse šiuo metu nepalaiko ryšio su privačiais galiniais taškais per "Private Link".
 
 ### <a name="set-up-powershell"></a>"PowerShell" nustatymas
 
 Norėdami vykdyti "PowerShell" scenarijus, pirmiausia turite atitinkamai nustatyti "PowerShell".
 
-1. Įdiekite naujausią "PowerShell for Graph [Azure Active Directory" versiją](/powershell/azure/active-directory/install-adv2).
+1. Įdiekite naujausią "PowerShell for Graph"[Azure Active Directory versiją](/powershell/azure/active-directory/install-adv2).
    1. Savo kompiuteryje pasirinkite klaviatūroje pasirinkite "Windows" klavišą ir ieškokite **Windows PowerShell** bei pasirinkite **Paleisti kaip administratorių**.
    1. „PowerShell“ atsivėrusiame lange įveskite `Install-Module AzureAD`.
 2. Importuokite tris modulius.
     1. "PowerShell" lange įveskite `Install-Module -Name Az.Accounts` ir atlikite veiksmus.
-    1. `Install-Module -Name Az.Resources` Pakartokite ir `Install-Module -Name Az.Storage`.
+    1. Pakartokite ir `Install-Module -Name Az.Resources``Install-Module -Name Az.Storage`.
 
 ### <a name="configuration-steps"></a>Konfigūravimo veiksmai
 
-1. Atsisiųskite du "PowerShell" scenarijus, kuriuos reikia paleisti iš mūsų inžinieriaus "GitHub" [repo](https://github.com/trin-msft/byol).
+1. Atsisiųskite du "PowerShell" scenarijus, kuriuos turite paleisti iš mūsų inžinieriaus ["GitHub" atpirkimo sandorio](https://github.com/trin-msft/byol).
     1. `CreateSecurityGroups.ps1`
-       - Norint paleisti šį "PowerShell" scenarijų, reikia *nuomotojo administratoriaus* teisių.
-       - Šis "PowerShell" scenarijus sukuria dvi saugos grupes "Azure" prenumeratoje. Vienas skirtas "Reader" grupei, o kitas – bendraautorių grupei ir teiks Microsoft Dataverse paslaugas kaip abiejų šių saugos grupių savininkas.
-       - Vykdykite šį "PowerShell" scenarijų naudodami "Windows PowerShell" pateikdami "Azure" prenumeratos ID, kuriame yra jūsų Azure Data Lake Storage. Atidarykite "PowerShell" scenarijų redaktoriuje, kad peržiūrėtumėte papildomą informaciją ir įdiegtą logiką.
-       - Įrašykite abi saugos grupės ID reikšmes, sugeneruotas šio scenarijaus, nes jas naudosime scenarijuje `ByolSetup.ps1`.
+       - Jums reikia *nuomotojo administratoriaus* teisių, kad galėtumėte paleisti šį "PowerShell" scenarijų.
+       - Šis "PowerShell" scenarijus sukuria dvi saugos grupes jūsų "Azure" prenumeratoje. Vienas skirtas skaitytojų grupei, o kitas – bendraautorių grupei ir teiks Microsoft Dataverse paslaugas kaip abiejų šių saugos grupių savininkas.
+       - Vykdykite šį "PowerShell" scenarijų sistemoje "Windows PowerShell", pateikdami "Azure" prenumeratos ID, kuriame yra jūsų Azure Data Lake Storage. Atidarykite "PowerShell" scenarijų redaktoriuje, kad peržiūrėtumėte papildomą informaciją ir įdiegtą logiką.
+       - Įrašykite abi saugos grupės ID reikšmes, sugeneruotas naudojant šį scenarijų, nes naudosime jas scenarijuje `ByolSetup.ps1`.
 
         > [!NOTE]
-        > Saugos grupės kūrimas gali būti išjungtas nuomotoje. Tokiu atveju reikės neautomatinės sąrankos, o jūsų Azure AD administratorius turėtų įgalinti [saugos grupės kūrimą](/azure/active-directory/enterprise-users/groups-self-service-management).
+        > Saugos grupės kūrimas gali būti išjungtas jūsų nuomotojuje. Tokiu atveju reikės rankinio nustatymo, o jūsų Azure AD administratorius turėtų įjungti [saugos grupės kūrimą](/azure/active-directory/enterprise-users/groups-self-service-management).
 
     2. `ByolSetup.ps1`
-        - Norint paleisti šį scenarijų, reikia *saugyklos BLOB duomenų savininko* teisių saugyklos abonemento / konteinerio lygiu, arba šis scenarijus sukurs jums. Sėkmingai paleidus scenarijų, jūsų vaidmens priskyrimą galima pašalinti rankiniu būdu.
-        - Šis "PowerShell" scenarijus prideda reikiamą "tole" pagrįstą prieigos kontrolę (RBAC) paslaugai Microsoft Dataverse ir visoms Dataverse verslo programoms. Ji taip pat atnaujina su scenarijumi sukurtų saugos grupių prieigos kontrolės sąrašą (ACL) kliento duomenų saugyklų `CreateSecurityGroups.ps1` konteineryje CustomerInsights. Bendraautorių grupė turės *rwx* leidimą, o skaitytojų grupė turės *tik r-x* teises.
-        - Vykdykite šį "PowerShell" scenarijų sistemoje "Windows PowerShell" pateikdami "Azure" prenumeratos ID, kuriame yra jūsų Azure Data Lake Storage, saugyklos abonemento pavadinimas, išteklių grupės pavadinimas ir skaitytuvo bei bendraautoriaus saugos grupės ID reikšmės. Atidarykite "PowerShell" scenarijų redaktoriuje, kad peržiūrėtumėte papildomą informaciją ir įdiegtą logiką.
-        - Sėkmingai paleidę scenarijų nukopijuokite išvesties eilutę. Išvesties eilutė atrodo taip: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+        - Jums reikia *"Storage Blob Data Owner"* leidimų saugyklos abonemento / konteinerio lygiu, kad galėtumėte paleisti šį scenarijų, kitaip šis scenarijus sukurs jums vieną. Sėkmingai paleidus scenarijų, jūsų vaidmens priskyrimą galima pašalinti rankiniu būdu.
+        - Šis "PowerShell" scenarijus prideda reikiamą vaidmenimis pagrįstą prieigos valdiklį Microsoft Dataverse paslaugai ir visoms Dataverse verslo programoms. Ji taip pat atnaujina su scenarijumi sukurtų `CreateSecurityGroups.ps1` saugos grupių prieigos valdymo sąrašą (ACL) konteineryje CustomerInsights. Bendraautorių grupė turės *rwx* leidimą, o skaitytojų grupė turės *tik r-x* leidimą.
+        - Vykdykite šį "PowerShell" scenarijų "Windows PowerShell" pateikdami "Azure" prenumeratos ID, kuriame yra jūsų Azure Data Lake Storage, saugyklos abonemento pavadinimas, išteklių grupės pavadinimas ir "Reader" bei "Contributor" saugos grupės ID reikšmės. Atidarykite "PowerShell" scenarijų redaktoriuje, kad peržiūrėtumėte papildomą informaciją ir įdiegtą logiką.
+        - Nukopijuokite išvesties eilutę sėkmingai paleidę scenarijų. Išvesties eilutė atrodo taip: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 
-2. Įveskite išeigos eilutę, nukopijuotą iš viršaus, **į** aplinkos konfigūravimo veiksmo, skirto Microsoft Dataverse.
+2. Įveskite iš viršaus nukopijuotą išvesties eilutę į **aplinkos konfigūravimo veiksmo** lauką Leidimų identifikatorius Microsoft Dataverse.
 
-:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Konfigūracijos parinktys, skirtos įgalinti duomenų bendrinimą iš savo Azure Data Lake Storage su Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Konfigūravimo parinktys, leidžiančios įgalinti duomenų bendrinimą iš savo Azure Data Lake Storage su Microsoft Dataverse.":::
 
 ### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Esamo ryšio su Dataverse aplinka šalinimas
 
-Jungiantis prie Dataverse aplinkos, klaidos pranešimas **Ši KOMPAKTINIŲ diskų organizacija jau pridėta prie kito "Customer Insights" egzemplioriaus** reiškia, kad Dataverse aplinka jau naudojama "Customer Insights" aplinkoje. Galite pašalinti esamą ryšį kaip visuotinį aplinkos administratorių Dataverse. Tai gali užtrukti kelias valandas, kad būtų galima užpildyti pakeitimus.
+Jungiantis prie Dataverse aplinkos, klaidos pranešimas **Ši CDS organizacija jau prijungta prie kito "Customer Insights" egzemplioriaus** reiškia, kad Dataverse aplinka jau naudojama "Customer Insights" aplinkoje. Esamą ryšį galite pašalinti kaip visuotinis aplinkos administratorius Dataverse. Pakeitimų užpildymas gali užtrukti kelias valandas.
 
 1. Eikite į [Power Apps](https://make.powerapps.com).
 1. Pasirinkite aplinką iš aplinkos parinkiklio.
-1. Eikite į **sprendimus**
-1. Pašalinkite arba panaikinkite sprendimą, pavadintą **Dynamics 365 Customer Insights Kliento kortelės priedu (peržiūra)**.
+1. Eikite į **"Sprendimai"**
+1. Pašalinkite arba panaikinkite sprendimą, pavadintą **Dynamics 365 Customer Insights Kliento kortelės papildinys (peržiūra)**.
 
 OR
 
 1. Atidarykite savo Dataverse aplinką.
 1. Eikite į **Išplėstiniai nustatymų** > **sprendimai**.
-1. **Pašalinkite CustomerInsightsCustomerCard** sprendimą.
+1. Pašalinkite **"CustomerInsightsCustomerCard"** sprendimą.
 
-Jei ryšio pašalinimas nepavyksta dėl priklausomybių, taip pat turite pašalinti priklausomybes. Daugiau informacijos ieškokite [Remove dependencies](/power-platform/alm/removing-dependencies).
+Jei ryšio pašalinimas nepavyksta dėl priklausomybių, turite pašalinti ir priklausomybes. Norėdami gauti daugiau informacijos, žiūrėkite [Priklausomybių](/power-platform/alm/removing-dependencies) šalinimas.
 
 ## <a name="output-entities"></a>Išvesties objektai
 
-Kai kurie "Customer Insights" išvesties objektai pasiekiami kaip lentelės.Dataverse Toliau aprašomos numatomos šių lentelių schemos.
+Kai kurie išvesties objektai iš "Customer Insights" pasiekiami kaip lentelės Dataverse. Toliau aprašomos numatomos šių lentelių schemos.
 
 - [CustomerProfile](#customerprofile)
 - [„AlternateKey”](#alternatekey)
@@ -132,7 +144,7 @@ Alternatyvaus rakto lentelėje yra suvienodinimo procese dalyvavusių objektų r
 |Stulpelis  |Tipas  |Aprašymas  |
 |---------|---------|---------|
 |„DataSourceName”    |Eilutė         | Duomenų šaltinio pavadinimas. Pavyzdžiui: `datasource5`.        |
-|EntityName        | String        | "Customer Insights" objekto pavadinimas. Pavyzdžiui: `contact1`.        |
+|EntityName        | String        | Objekto pavadinimas programoje "Customer Insights". Pavyzdžiui: `contact1`.        |
 |„AlternateValue”    |String         |Alternatyvusis ID, susietas su kliento ID. Pavyzdys: `cntid_1078`         |
 |„KeyRing”           | Kelių eilučių Tekstas        | JSON reikšmė  </br> Pavyzdys: [{„dataSourceName”:„ datasource5 ”,</br>„entityName”:„ contact1”,</br>„preferredKey”:„ cntid_1078”,</br>„keys”:[„ cntid_1078”]}]       |
 |CustomerId         | Eilutė        | Vieningojo kliento profilio ID.         |
@@ -198,16 +210,16 @@ Alternatyvaus rakto lentelėje yra suvienodinimo procese dalyvavusių objektų r
 
 ### <a name="segment-membership"></a>Segmento narystė
 
-Šioje lentelėje yra klientų profilių segmento narystės informacija.
+Šioje lentelėje pateikiama klientų profilių segmento narystės informacija.
 
 | Column        | Tipas | Aprašą                        |
 |--------------------|--------------|-----------------------------|
 | CustomerId        | String       | Kliento Profilio ID        |
-| SegmentProvider      | String       | Programa, kuri publikuoja segmentus.      |
-| SegmentMembershipType | String       | Kliento šio segmento narystės įrašo tipas. Palaiko kelis tipus, pvz., klientą, kontaktą arba klientą. Numatytasis: klientas  |
+| Segmentprovider      | String       | Programa, skelbianti segmentus.      |
+| SegmentasMembershipType | String       | Kliento tipas šio segmento narystės įrašas. Palaiko kelių tipų, pvz., Klientas, Kontaktas arba Paskyra. Numatytasis nustatymas: klientas  |
 | Segmentai       | JSON Eilutė  | Unikalių segmentų, kurių narys yra kliento profilis, sąrašas      |
-| „msdynci_identifier”  | String   | Segmento narystės įrašo unikalusis identifikatorius. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministinis GUID, sukurtas iš`msdynci_identifier`          |
+| „msdynci_identifier”  | String   | Unikalus segmento narystės įrašo identifikatorius. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | Deterministinis GUID, sugeneruotas iš`msdynci_identifier`          |
 
 <!--
 ## FAQ: Update existing environments to use Microsoft Dataverse

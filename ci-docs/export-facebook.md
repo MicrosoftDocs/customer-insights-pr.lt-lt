@@ -1,19 +1,19 @@
 ---
 title: Segmentų eksportavimas į Facebook skelbimų tvarkytuvę (peržiūra) (yra vaizdo įrašų)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į Facebook „Ads Manager“.
-ms.date: 04/15/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082978"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195024"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Segmentų eksportavimas į Facebook skelbimų tvarkytuvę (peržiūra)
 
@@ -21,31 +21,32 @@ Eksportuokite sujungtų klientų profilių segmentus į „Facebook“ reklamos 
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
-## <a name="prerequisites-for-connection"></a>Būtinosios ryšio sąlygos
+## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- Turite turėti reklamos paskyrą, [**Facebook Ads Account**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) apimančią [**Facebook Business Account**](https://business.facebook.com/).
-- Turite būti skelbimų paskyros [**Facebook Ads Account**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Skelbimų [Facebook paskyra](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), kurioje yra [Facebook verslo paskyra](https://business.facebook.com/).
+- Administratoriaus privilegijos skelbimų [Facebook paskyroje](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 10 milijonų klientų profilių viename eksportavime į „Facebook Ads Manager".
-- Eksportavimas į Facebook „Ads Manager“ ribojamas segmentais.
-- Sukurkite arba įkelkite pasirenkamas auditorijas tik Facebook tipo *klientų sąraše*.
-- Eksportuoti segmentus, kuriuose iš viso yra 10 miljonų klientų profilių, gali trukti iki 90 minučių.
+- Iki 10 milijonų klientų profilių vienam eksportavimui į Facebook "Ads Manager", o tai gali užtrukti iki 90 minučių.
+- Tik segmentai.
+- Facebook *klientų sąrašas* įveskite [tik pasirinktines auditorijas](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+  > [!NOTE]
+  > Kai kuriais atvejais išplečiamajame sąraše galite matyti skirtingų tipų tinkintas auditorijas. Jei pasirinksite kitą tipą nei *klientų sąrašas*, eksportuoti nepavyks.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Ryšio su Facebook „Ads Manager“ nustatymas
 
-Kad naudotojai galėtų sukurti eksportavimą, administratorius turi sukonfigūruoti ryšį su paslauga ir bendradarbiams leisti naudoti ryšį.
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **Facebook „Ads Manager“**, kad sukonfigūruotumėte ryšį.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **Facebook Skelbimų tvarkytuvė**.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
-1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. [Leiskite bendraautoriams naudoti ryšį eksportui](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Autentifikuoti naudojant Facebook reklamą: 
+1. Autentifikuoti naudojant Facebook reklamą:
 
    1. Pasirinkite **Tęsti su Facebook** kad prisiregistruotumėte prie savo „Facebook Ads" paskyros.
 
@@ -53,27 +54,25 @@ Kad naudotojai galėtų sukurti eksportavimą, administratorius turi sukonfigūr
 
    1. Pasirinkite **„Facebook“ reklamos klientą**, kurį norite naudoti.
 
-   1. Išplečiamajame **sąraše pažymėkite Esamą** pasirinktinę auditoriją arba sukurkite **naują pasirinktinę auditoriją**. Norėdami gauti daugiau informacijos, žr. [**„Facebook“ reklamos tvarkytuvo auditorijos**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
-      > [!NOTE]
-      > Su šiuo eksportavimu galima sukurti arba atnaujinti pasirenkamas auditorijas Facebook tipo *klientų sąraše*. Kai kuriais atvejais išplečiamajame sąraše matote skirtingų tipų pasirinktines auditorijas. Pasirinkus kitą tipą, o ne *klientų sąrašą*, eksportavimas bus nevykdomas. 
+   1. Išplečiamajame **sąraše pažymėkite Esamą** pasirinktinę auditoriją arba sukurkite **naują pasirinktinę auditoriją**.
 
-1. Peržiūrėkite **Duomenų privatumas ir suderinamumas** ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
 1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį.
 
 ## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**. 
+1. Pasirinkite **Pridėti eksportavimą**.
 
-1. Srityje **Eksportavimo ryšys** pasirinkite ryšį iš skilties **Facebook „Ads Manager“**. Jei šio skyriaus pavadinimo nematote, jums nėra jokių šio tipo ryšių.
+1. **Lauke Ryšys eksportui** pasirinkite ryšį iš skyriaus "Skelbimų Facebook tvarkytuvė". Jei ryšio nėra, kreipkitės į administratorių.
 
-1. Lauke **Pasirinkite rakto identifikatorių**, pasirinkite **El. paštas**, **Vardas ir adresas** arba **Telefonas**, siųstiną į „Facebook“ reklamos tvarkytuvą. 
+1. Įveskite eksportavimo pavadinimą.
 
-1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**.
+1. **Lauke Susieti duomenis** pasirinkite **El. paštas**, **Vardas ir adresas** arba **Telefonas**, kurį norite siųsti skelbimų tvarkytuvei Facebook.
 
 1. Susiekite atitinkamus pasirinkto pagrindinio identifikatoriaus atributus iš bendrojo kliento profilio.
    > [!TIP]
@@ -85,16 +84,6 @@ Kad naudotojai galėtų sukurti eksportavimą, administratorius turi sukonfigūr
 
 1. Pasirinkite **Įrašyti**.
 
-Eksportavimo įrašymas eksportavimo iš karto nevykdo.
-
-Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). 
-
-Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Facebook“ reklamos tvarkytuvą, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights“, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Facebook“ reklamos atitinka visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu, kad nutrauktų šios funkcijos naudojimą.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

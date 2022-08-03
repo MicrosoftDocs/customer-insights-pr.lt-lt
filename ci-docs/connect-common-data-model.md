@@ -1,7 +1,7 @@
 ---
 title: Jungimasis prie „Common Data Model” aplanko naudojant „Azure Data Lake” klientą
 description: Dirbkite su „Common Data Model“ duomenimis naudodami „Azure Data Lake Storage“.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082264"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207009"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Jungtis prie duomenų „Azure Data Lake Storage“
 
@@ -82,7 +82,7 @@ Prarykite duomenis, kad Dynamics 365 Customer Insights galėtumėte naudotis sav
    :::image type="content" source="media/ADLS_required.png" alt-text="Dialogo langas, kuriame rodomas būtinas pirminiam raktui":::
 
    > [!TIP]
-   > Norėdami redaguoti objektus JSON redagavimo sąsajoje, pasirinkite **Rodyti daugiau** > **Redaguoti schemos failą**. Atlikite pakeitimus ir pasirinkite **Įrašyti**.
+   > Norėdami redaguoti objektą JSON redagavimo sąsajoje, pasirinkite objektą ir tada **Redaguoti schemos failą**. Atlikite pakeitimus ir pasirinkite **Įrašyti**.
 
 1. Pasirinktiems objektams, kuriems reikalingas laipsniškas nurijimas, **būtina** rodyti dalyje **Laipsniškas atnaujinimas**. Apie kiekvieną iš šių objektų žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md).
 
@@ -101,6 +101,10 @@ Prarykite duomenis, kad Dynamics 365 Customer Insights galėtumėte naudotis sav
    1. Pasirinkite **Atlikta**.
 
 1. Pasirinkite **Įrašyti**. Atidaromas **puslapis Duomenų šaltiniai**, kuriame rodoma nauja atnaujinimo būsenos duomenų **šaltinis**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Duomenų įkėlimas gali užtrukti. Sėkmingai atnaujinus, nurijusius duomenis galima peržiūrėti puslapyje [**Objektai**](entities.md).
 
 ### <a name="create-a-new-schema-file"></a>Naujo schemos failo kūrimas
 
@@ -148,6 +152,9 @@ Prarykite duomenis, kad Dynamics 365 Customer Insights galėtumėte naudotis sav
 
 1. Pasirinkite **Įrašyti**. Atidaromas **puslapis Duomenų šaltiniai**, kuriame rodoma nauja atnaujinimo būsenos duomenų **šaltinis**.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Duomenų įkėlimas gali užtrukti. Sėkmingai atnaujinus, nurijusius duomenis galima peržiūrėti puslapyje [**Objektai**](entities.md).
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Duomenų šaltinis redagavimas Azure Data Lake Storage
 
@@ -179,8 +186,16 @@ Galite atnaujinti *parinktį Prisijungti prie saugyklos paskyros naudodami* pari
       > [!IMPORTANT]
       > Jei yra esamo modelio.json arba manifest.json failo ir objektų rinkinio priklausomybių, bus rodomas klaidos pranešimas, kuriame negalite pažymėti kito modelio.json arba manifest.json failo. Pašalinkite šias priklausomybes prieš keisdami failą model.json arba manifest.json arba sukurkite naują duomenų šaltinį naudodami failą model.json arba manifest.json, kad išvengtumėte priklausomybių pašalinimo.
    - Norėdami pakeisti duomenų failo vietą arba pirminį raktą, pasirinkite **Redaguoti**.
-   - Norėdami pakeisti laipsniško įsisavinimo duomenis, žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md)
+   - Norėdami pakeisti laipsniško įsisavinimo duomenis, žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md).
+   - Pakeiskite tik objekto pavadinimą, kad jis atitiktų objekto pavadinimą .json faile.
+
+     > [!NOTE]
+     > Visada laikykite objekto pavadinimą "Customer Insights" taip pat, kaip objekto pavadinimą model.json arba manifest.json faile po nurijimo. "Customer Insights" tikrina visus objektų pavadinimus su model.json arba manifest.json kiekvieno sistemos atnaujinimo metu. Jei objekto pavadinimas pakeičiamas "Customer Insights" arba už jos ribų, įvyksta klaida, nes "Customer Insights" negali rasti naujo objekto pavadinimo .json faile. Jei netyčia buvo pakeistas nurijusio objekto pavadinimas, redaguokite objekto pavadinimą programoje "Customer Insights", kad jis atitiktų .json failo pavadinimą.
 
 1. Pasirinkite **Atributai**, kad įtrauktumėte ar pakeistumėte atributus arba įgalintumėte duomenų profiliavimą. Tada pasirinkite **Atlikta**.
 
 1. Spustelėkite **Įrašyti**, kad pritaikytumėte pakeitimus ir grįžtumėte į **puslapį Duomenų šaltiniai**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

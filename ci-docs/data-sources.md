@@ -1,7 +1,7 @@
 ---
 title: Duomenų šaltinių apžvalga
 description: Sužinokite, kaip importuoti arba nuryti duomenis iš įvairių šaltinių.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051463"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207101"
 ---
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
 Dynamics 365 Customer Insights teikia ryšius, kad būtų galima gauti duomenis iš plataus šaltinių rinkinio. Prisijungimas prie duomenų šaltinio dažnai vadinamas *duomenų įtraukimo procesu*. Prariję duomenis, galite [suvienodinti](data-unification.md), generuoti įžvalgas ir suaktyvinti duomenis, kad sukurtumėte suasmenintas funkcijas.
 
-## <a name="add-data-sources"></a>Duomenų šaltinių įtraukimas
+## <a name="add-or-edit-data-sources"></a>Duomenų šaltinių įtraukimas arba redagavimas
 
-Duomenų šaltinius galite pridėti arba importuoti į "Customer Insights". Toliau pateiktose nuorodose pateikiamos duomenų šaltinių pridėjimo instrukcijos.
+Duomenų šaltinius galite pridėti arba importuoti į "Customer Insights". Toliau pateiktose nuorodose pateikiamos duomenų šaltinių pridėjimo ir redagavimo instrukcijos.
 
 **Pritvirtinkite duomenų šaltinis**
 
@@ -50,13 +50,18 @@ Jei jūsų aplinka buvo sukonfigūruota naudoti "Customer Insights" saugyklą ir
 
 Jei jūsų aplinka nenaudoja Power Platform duomenų srautų, **puslapyje Duomenų šaltiniai** yra tik visų duomenų šaltinių sąrašas. Nerodomi skyriai.
 
-Eikite į **Duomenų** > **duomenų šaltiniai**, kad peržiūrėtumėte kiekvieno praryto duomenų šaltinis pavadinimą, jo būseną ir paskutinį kartą, kai duomenys buvo atnaujinti tame šaltinyje. Galite rūšiuoti duomenų šaltinių sąrašą pagal kiekvieną stulpelį.
+## <a name="manage-existing-data-sources"></a>Esamų duomenų šaltinių valdymas
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Įtrauktas duomenų šaltinis.":::
+Eikite į **Duomenų** > **duomenų šaltiniai**, kad peržiūrėtumėte kiekvieno praryto duomenų šaltinis pavadinimą, jo būseną ir paskutinį kartą, kai duomenys buvo atnaujinti tame šaltinyje. Galite rūšiuoti duomenų šaltinių sąrašą pagal bet kurį stulpelį arba naudoti ieškos lauką, kad rastumėte duomenų šaltinis, kuriuos norite tvarkyti.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Pasirinkite duomenų šaltinis, kad peržiūrėtumėte galimus veiksmus.
 
-Duomenų įkėlimas gali užtrukti. Sėkmingai atnaujinus, galima peržiūrėti apdorotus duomenis puslapyje **Objektai**. Norėdami gauti daugiau informacijos, žr. [Objektai](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Įtrauktas duomenų šaltinis.":::
+
+- [**Redaguokite**](#add-or-edit-data-sources) duomenų šaltinis, kad pakeistumėte jo ypatybes.
+- [**Atnaujinkite**](#refresh-data-sources) duomenų šaltinis, kad įtrauktumėte naujausius duomenis.
+- [**Praturtinkite**](data-sources-enrichment.md) duomenų šaltinis prieš suvienijimą.
+- **Ištrinkite** duomenų šaltinis. Duomenų šaltinis galima panaikinti tik tuo atveju, jei duomenys nenaudojami jokiam apdorojimui, pvz., suvienijimui, įžvalgoms, aktyvinimui ar eksportui.
 
 ## <a name="refresh-data-sources"></a>Duomenų šaltinių atnaujinimas
 
@@ -64,23 +69,12 @@ Duomenų šaltiniai gali būti paleisti iš naujo automatiniu grafiku arba ranki
 
 Eikite į **administratoriaus** > **sistemos** > [**tvarkaraštį**](system.md#schedule-tab), kad sukonfigūruotumėte sistemos suplanuotus nurijusių duomenų šaltinių atnaujinimus.
 
-Norėdami paleisti iš naujo duomenų šaltinį pagal poreikį, atlikite šiuos veiksmus:
+Norėdami atnaujinti duomenų šaltinis pagal poreikį:
 
 1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
 
-1. Pasirinkite vertikalią daugtaškį (&vellip;) šalia duomenų šaltinis norite atnaujinti, ir išskleidžiamajame sąraše pasirinkite **Atnaujinti**. Šis duomenų šaltinis dabar yra įjungtas rankiniam paleidimui iš naujo. Atnaujinus duomenų šaltinį bus atnaujinta ir objekto schema, ir duomenys, skirti visiems duomenų šaltinyje nurodytiems objektams.
+1. Pasirinkite duomenų šaltinis norite atnaujinti, ir pasirinkite **Atnaujinti**. Šis duomenų šaltinis dabar yra įjungtas rankiniam paleidimui iš naujo. Atnaujinus duomenų šaltinį bus atnaujinta ir objekto schema, ir duomenys, skirti visiems duomenų šaltinyje nurodytiems objektams.
 
-1. Pasirinkite **Stabdyti paleidimą iš naujo** jei norite atšaukti esantį paleidimą iš naujo ir duomenų šaltinis grįš į paskutinę paleidimo iš naujo būseną.
-
-## <a name="delete-a-data-source"></a>Naikinti duomenų šaltinį
-
-Duomenų šaltinis galima panaikinti tik tuo atveju, jei duomenys nenaudojami jokiam apdorojimui, pvz., suvienijimui, įžvalgoms, aktyvinimui ar eksportui.
-
-1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
-
-2. Pasirinkite vertikalią daugtaškį (&vellip;) šalia duomenų šaltinis norite pašalinti, ir išskleidžiamajame meniu pasirinkite **Ištrinti**.
-
-3. Patvirtinkite šį naikinimą.
-
+1. Pasirinkite būseną, kad atidarytumėte **sritį Išsami informacija apie** pažangą, ir peržiūrėkite eigą. Norėdami atšaukti užduotį, srities apačioje pasirinkite **Atšaukti užduotį**.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

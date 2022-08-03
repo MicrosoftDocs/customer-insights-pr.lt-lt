@@ -1,51 +1,54 @@
 ---
 title: Segmentų eksportavimas į „Marketo“ (peržiūra)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Marketo“.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8cd24cf436bd5fdfd4ec3834d35baa1495e37ca4
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f57cdfbb24df8a8ffa1670b426d50dbba2c5f40f
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053215"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195254"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmentų eksportavimas į „Marketo“ (peržiūra)
 
 Eksportuokite suvienodintų klientų profilio segmentus siekiant sugeneruoti kampanijas, pateikti el. pašto reklamavimą ir naudoti konkrečias klientų grupes su „Marketo“.
 
-## <a name="prerequisites-for-connection"></a>Būtinosios ryšio sąlygos
+## <a name="prerequisites"></a>Būtinosios sąlygos
 
--   Turite [„Marketo“ paskyrą](https://login.marketo.com/) ir atitinkančius administratoriaus prisijungimo duomenis.
--   Yra esančių sąrašų „Marketo“ ir atitinkamų ID. Dėl daugiau informacijos, žr. [„Marketo“ sąrašus](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
--   Turite [konfigūruoti segmentus](segments.md).
--   Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
+- Marketo [paskyra](https://login.marketo.com/) ir atitinkami administratoriaus kredencialai.
+- " [Marketo" kliento ID, kliento paslaptis ir REST galinio punkto pagrindinio kompiuterio pavadinimas](https://developers.marketo.com/rest-api/authentication/).
+- [Esami Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) sąrašai ir atitinkami ID.
+- [Sukonfigūruoti segmentai](segments.md).
+- Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono klientų profilių viename eksportavime į „Marketo".
-- Eksportavimas į „Marketo“ yra apribotas segmentais.
-- Iš viso 1 milijono klientų profilių segmentų eksportavimas gali trukti iki 3 valandų. 
-- Klientų profilių, kuriuos galite eksportuoti į „Marketo“, skaičius priklauso ir yra apribotas pagal sutartį su „Marketo“.
+- Iki 1 milijono klientų profilių vienam eksportui į Marketo, o tai gali užtrukti iki 3 valandų. Klientų profilių, kuriuos galite eksportuoti į Marketo, skaičius priklauso nuo jūsų sutarties su Marketo.
+- Tik segmentai.
 
 ## <a name="set-up-connection-to-marketo"></a>Ryšio su „Marketo“ sąranka
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„Marketo“**, kad sukonfigūruotumėte ryšį.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **Marketo**.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
-1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Įveskite savo **[„Marketo“ kliento ID, kliento slapyvardį ir REST galutinio taško pagrindinio kompiuterio pavadinimą](https://developers.marketo.com/rest-api/authentication/)**. REST galinio punkto pagrindinio kompiuterio vardas yra tik pagrindinio kompiuterio vardas be `https://`. Pavyzdys:`xyz-abc-123.mktorest.com`. 
+1. Įveskite savo **Marketo kliento ID, Kliento slaptą ir REST Endpoint Hostname**. REST galinio punkto pagrindinio kompiuterio vardas yra tik pagrindinio kompiuterio vardas be https://. Pavyzdys: xyz-abc-123.mktorest.com.
 
-1. Pasirinkite **Sutikti** siekiant patvirtinti **Duomenų privatumą ir atitiktį** ir pasirinkite **Sujungti** siekiant pradėti ryšį su „Marketo“.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+
+1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
@@ -53,33 +56,28 @@ Eksportuokite suvienodintų klientų profilio segmentus siekiant sugeneruoti kam
 
 ## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+1. Pasirinkite **Pridėti eksportavimą**.
 
-1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Marketo“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Marketo“. Jei ryšio nėra, kreipkitės į administratorių.
 
-1. Įveskite savo **[„Marketo“ sąrašo ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. Sąrašo ID yra grynai skaitinė vertė. Pavyzdžiui, jei jūsų „Marketo” sąrašo ID yra ST12345A7, pašalinkite neskaitinius simbolius ir įveskite `12345`. 
+1. Įveskite eksportavimo pavadinimą.
 
-1. Sekcijoje **Duomenų atitikimas** pasirinkite bent vieną lauką, kuris nurodo kliento el. pašto adresą arba kliento Marketo ID. 
+1. Įveskite savo **Marketo sąrašo ID**. Sąrašo ID yra grynai skaitinė vertė. Pavyzdžiui, jei jūsų Marketo sąrašo ID yra ST12345A7, pašalinkite simbolį prieš ir po skaitmenų ir įveskite *12345*.
 
-1. Taip pat galite eksportuoti **vardą**, **pavardę**, **miestą**, **valstiją** ir **šalį / regioną**, jei norite sukurti labiau personalizuotus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
+1. Sekcijoje **Duomenų atitikimas** pasirinkite bent vieną lauką, kuris nurodo kliento el. pašto adresą arba kliento Marketo ID.
 
-1. Pasirinkite segmentus, kuriuos norite eksportuoti. Galite eksportuoti iki 1 milijono kliento profilių bendrai į „Marketo“.
+1. Pasirinktinai eksportuokite vardas, pavardė, miestą **,** **valstiją** ir **šalį / regioną**, kad sukurtumėte labiau suasmenintus el. laiškus.**·** **·** Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
+
+1. Pasirinkite segmentus, kuriuos norite eksportuoti.
 
 1. Pasirinkite **Įrašyti**.
 
-Eksportavimo įrašymas eksportavimo iš karto nevykdo.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). „Marketo“ galite dabar surasti savo segmentus skyriuje [„Marketo“ sąrašus](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
-
-
-## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Marketo“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Marketo“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
-
+"Marketo" raskite savo segmentus " [Marketo" sąrašuose](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

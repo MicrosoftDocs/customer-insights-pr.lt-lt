@@ -1,51 +1,51 @@
 ---
 title: Segmentų eksportavimas į „RollWorks“ (peržiūros versija)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „RollWorks“.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 83c3f2437b9822d29d1d2f99ead96815b1b0881a
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055178"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195622"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Segmentų eksportavimas į „RollWorks“ (peržiūros versija)
 
-Eksportuokite vieningų klientų profilių segmentus į „RollWorks“ ir naudokite juos reklamai. 
+Eksportuokite vieningų klientų profilių segmentus į „RollWorks“ ir naudokite juos reklamai.
 
-## <a name="prerequisites-for-a-connection"></a>Būtinosios ryšio sąlygos
+## <a name="prerequisites"></a>Būtinosios sąlygos
 
--   Turite [„RollWorks“ paskyros](https://www.rollworks.com/) ir atitinkamus administratoriaus kredencialus.
--   Sukonfigūravote [segmentus](segments.md) programoje "Customer Insights".
--   Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
+- " [RollWorks" paskyrą](https://www.rollworks.com/) ir atitinkamus administratoriaus kredencialus.
+- " [RollWorks" reklamuotojo ID](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+- [Sukonfigūruoti segmentai](segments.md) "Customer Insights".
+- Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Į „RollWorks‟ iš viso galima eksportuoti iki 250 000 eksportuojamų klientų profilių.
-- Į „RollWorks‟ negalite eksportuoti segmentų, kuriuose yra mažiau nei 100 klientų profilių. 
-- Segmentų eksportavimas į „RollWorks“ ribojamas.
-- Iki 250 000 klientų profilių eksportavimas į „RollWorks" gali užtrukti iki 10 minučių. 
-- Klientų profilių, kuriuos galite eksportuoti į „RollWorks“, skaičius priklauso ir yra apribotas pagal sutartį su „RollWorks“.
+- Iki 250 000 klientų profilių vienam eksportui į "RollWorks", o tai gali užtrukti iki 10 minučių. Klientų profilių, kuriuos galite eksportuoti į "RollWorks", skaičius priklauso nuo jūsų sutarties su "RollWorks".
+- Tik segmentai.
 
 ## <a name="set-up-connection-to-rollworks"></a>Ryšio su „RollWorks“ nustatymas
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„RollWorks“**, kad sukonfigūruotumėte ryšį.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **RollWorks**.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
-1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pasirinkite, kas gali naudoti šį ryšį.  Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Pasirinkę **Sutinku**, kad patvirtintumėte **Duomenų privatumą ir atitiktį**.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
-1. Pasirinkite **Prisijungti** ir inicijuokite ryšį su „RollWorks“.
+1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
 
 1. Pažymėkite **Autentifikuoti naudojant „RollWorks“** ir pateikite savo „RollWorks“ administratoriaus kredencialus.
 
@@ -55,29 +55,24 @@ Eksportuokite vieningų klientų profilių segmentus į „RollWorks“ ir naudo
 
 ## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+1. Pasirinkite **Pridėti eksportavimą**.
 
-1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „RollWorks“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „RollWorks“. Jei ryšio nėra, kreipkitės į administratorių.
 
-1. Įveskite savo **„RollWorks“ reklamuotojo ID** [„RollWorks“ reklama](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Įveskite eksportavimo pavadinimą.
 
-1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „RollWorks“.
+1. Įveskite " **RollWorks" reklamuotojo ID**.
 
-1. Pasirinkite segmentus, kuriuos norite eksportuoti. Pasirinkite segmentą, turintį mažiausiai 100 narių. Negalite eksportuoti mažesnių segmentų. Be to, didžiausias eksportuojamo segmento dydis yra 250'000 narių vienam eksportavimui. 
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą.
+
+1. Pasirinkite segmentus, kuriuos norite eksportuoti.
 
 1. Pasirinkite **Įrašyti**.
 
-Eksportavimo įrašymas eksportavimo iš karto nevykdo.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Kai sistemai Dynamics 365 Customer Insights leidžiate perduoti duomenis į „RollWorks“, leidžiate perduoti duomenis už Dynamics 365 Customer Insights atitikties ribų, įskaitant galima neskelbtinus duomenis, pvz., asmens duomenis. „Microsoft“ tokius duomenis perduos jums leidus, tačiau jūs esate atsakingi už tai, kad užtikrintumėte, jog „RollWorks“ atitinka galimai jūsų turimus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

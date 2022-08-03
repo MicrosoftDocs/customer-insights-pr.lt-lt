@@ -1,7 +1,7 @@
 ---
 title: Kliento gyvavimo ciklo (CLV) vertės prognozė
 description: Prognozuojamas aktyvių klientų pajamų potencialas ateityje.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055224"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186450"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Kliento gyvavimo ciklo (CLV) vertės prognozė
 
 Prognozuojama potenciali reikšmė (pajamos), kurią atskiri aktyvūs klientai įves į jūsų verslą per apibrėžtą būsimą laikotarpį. Ši funkcija gali padėti pasiekti įvairius tikslus:
+
 - Nustatykite didelės vertės klientus ir apdorokite šią įžvalgą
 - Kurti strategines klientų segmentus, atsižvelgiant į jų potencialią vertę, kad suasmenintas kampanijas būtų galima vykdyti naudojant tikslinius pardavimo, rinkodaros ir palaikymo veiksmus
 - Vadovo produktų kūrimas susitelkus į funkcijas, kurios padidinti klientų vertę
 - Pardavimo arba rinkodaros strategijos optimizavimas ir biudžeto skirstymas tiksliau klientų kampanijai
-- Vertingų klientų atpažinimas ir apdovanokite juos pasitelkdami apdovanodami arba pristatę apdovanojimų programas 
+- Vertingų klientų atpažinimas ir apdovanokite juos pasitelkdami apdovanodami arba pristatę apdovanojimų programas
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -35,7 +36,7 @@ Prieš pradėdami nurodykite, ką jūsų verslui reiškia CLV. Šiuo metu palaik
 
 Konfigūruodami ir paleisdami CLV modelį, galite sukurti kelis modelius su skirtingomis įvesties nuostatas ir palyginti modelio rezultatus, kad pamatytumėte, kuris modelio scenarijus geriausiai atitinka jūsų verslo reikmes.
 
-###  <a name="data-requirements"></a>Duomenų reikalavimai
+### <a name="data-requirements"></a>Duomenų reikalavimai
 
 Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomenduojama norint padidinti modelio efektyvumą. Kuo daugiau duomenų gali apdoroti modelis, tuo tikslesnė prognozė bus. Todėl raginame, jei įmanoma, suvartoti daugiau klientų veiklos duomenų.
 
@@ -52,11 +53,12 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
     - Žiniatinklio veiklos: svetainės lankytojų retrospektyva, el. laiškų retrospektyva
     - Lojalumo veiksmai: lojalumo atsilyginimo taškų apskaičiavimas ir panaudojimo istorija
     - Klientų aptarnavimas žurnalas, aptarnavimo skambutis, skundai ar grąžinimo istorija
+    - Kliento profilio informacija
 - Duomenys apie klientų veiklas (pasirinktiniai):
     - Veiklos identifikatoriai, padedantys atskirti to paties tipo veiklas
     - Klientų identifikatoriai, siejantys veiklas su klientais
     - Veiklos informacija, apimanti veiklos pavadinimą ir datą
-    - Semantinė veiklų duomenų schema yra: 
+    - Semantinė veiklų duomenų schema yra:
         - **Pirminis raktas**: unikalusis veiklos identifikatorius
         - **Laiko žyma**: pirminio rakto identifikuoto įvykio data ir laikas
         - **Įvykis (veiklos pavadinimas)**: norimo naudoti įvykio pavadinimas
@@ -66,7 +68,7 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
     - Pakankami istoriniai duomenys: mažiausiai vieneri operacijų duomenų metai. Pageidautina nuo dvejų iki trijų metų senumo operacijų duomenų, kad būtų galima prognozuoti CLV vieneriems metams.
     - Keli pirkiniai vienam klientui: idealiu atveju, bent dvi ar trys operacijos vienam klientui, pageidautina atliktos per skirtingas datas.
     - Klientų skaičius: bent 100 unikalių klientų, geriausia daugiau nei 10 000 klientų. Modelis neveiks su mažiau nei 100 klientų ir nepakankamais istoriniais duomenimis
-    - Duomenų išbaigtumas: mažiau nei 20 % trūkstamų reikšmių privalomuose įvesties duomenų laukuose   
+    - Duomenų išbaigtumas: mažiau nei 20 % trūkstamų reikšmių privalomuose įvesties duomenų laukuose
 
 > [!NOTE]
 > - Modeliui reikia jūsų klientų sandorių istorijos. Vienu metu galima sukonfigūruoti tik vieną sandorio istorijos objektą. Jei yra keli pirkimo / operacijų objektai, galite juos sujungti prieš pradėdami Power Query naudoti duomenis.
@@ -122,11 +124,11 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
 
 1. Pasirinkite **Toliau**.
 
-### <a name="add-optional-data"></a>Įtraukti pasirinktinius duomenis
+### <a name="add-optional-activity-data"></a>Pasirinktinių veiklos duomenų įtraukimas
 
-Pagrindiniai duomenų sąveikos su klientais veiksmai (pvz., žiniatinklis, klientų aptarnavimas ir įvykių žurnalai) įtraukia kontekstą į operacijų įrašus. Daugiau klientų veiklos duomenų modelių gali padidinti prognozių tikslumą. 
+Pagrindiniai duomenų sąveikos su klientais veiksmai (pvz., žiniatinklis, klientų aptarnavimas ir įvykių žurnalai) įtraukia kontekstą į operacijų įrašus. Daugiau klientų veiklos duomenų modelių gali padidinti prognozių tikslumą.
 
-1. Žingsnyje **Papildomi duomenys (pasirinktiniai)** rinkitės **Įtraukti duomenis**. Pasirinkite kliento veiklos objektą, kuris pateikia kliento veiklos informaciją, kaip nurodyta [būtinose sąlygose](#prerequisites).
+1. Atlikdami veiksmą **Papildomi duomenys (pasirinktinai)** pasirinkite **Pridėti duomenų** dalyje **Padidinti modelio įžvalgas su papildomais veiklos duomenimis**. Pasirinkite kliento veiklos objektą, kuris pateikia kliento veiklos informaciją, kaip nurodyta [būtinose sąlygose](#prerequisites).
 
 1. Sudarykite semantinių laukelių žemėlapį į atributus per jūsų kliento veiklos objektą ir pasirinkite **Kitas**.
 
@@ -135,15 +137,34 @@ Pagrindiniai duomenų sąveikos su klientais veiksmai (pvz., žiniatinklis, klie
 1. Pažymėkite veiklos tipą, atitinkantį kliento veiklos, kurią pridedate, tipą. Pasirinkite iš esamų veiklos tipų arba įtraukite naują veiklos tipą.
 
 1. Sukonfigūruokite ryšį iš savo kliento veiklos objekto *Kliento* objektą.
-    
+
     1. Pasirinkite laukelį, kuris nustato klientą kliento veiklos lentelėje. Jis gali būti tiesiogiai susietas su pagrindiniu jūsų kliento objekto ID jūsų *Kliento* objekte.
     1. Pasirinkite *kliento* atitinkantį pirminį *kliento* objektą.
     1. Įveskite pavadinimą, apibūdinantį ryšį.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Konfigūracijos srauto žingsnio vaizdas, norint įtraukti papildomų duomenų ir sukonfigūruoti veiklą su užpildomais pavyzdžiais.":::
 
-1. Pasirinkite **Įrašyti**.    
+1. Pasirinkite **Įrašyti**.
     Jei norite įtraukti kitas klientų veiklas, įtraukite daugiau duomenų.
+
+1. Įtraukite pasirinktinius kliento duomenis arba pasirinkite **Pirmyn**.
+
+### <a name="add-optional-customer-data"></a>Pasirinktinių kliento duomenų įtraukimas
+
+Pasirinkite iš 18 dažniausiai naudojamų kliento profilio atributų, kuriuos norite įtraukti kaip modelio įvestį. Šie atributai gali lemti labiau suasmenintus, aktualius ir veiksmingesnius modelio rezultatus jūsų verslo naudojimo atvejais.
+
+Pavyzdžiui: "Contoso Coffee" nori numatyti kliento viso gyvenimo vertę, kad nukreiptų į didelės vertės klientus su individualizuotu pasiūlymu, susijusiu su jų naujo espreso aparato pristatymu. Contoso naudoja CLV modelį ir prideda visus 18 klientų profilio atributų, kad sužinotų, kurie veiksniai daro įtaką jų didžiausios vertės klientams. Jie mano, kad kliento vieta yra įtakingiausias veiksnys šiems klientams.
+Turėdami šią informaciją, jie organizuoja vietinį renginį espreso aparato paleidimui ir bendradarbiauja su vietiniais pardavėjais dėl suasmenintų pasiūlymų ir ypatingos patirties renginyje. Neturėdami šios informacijos, Contoso galėjo siųsti tik bendruosius rinkodaros el. laiškus ir praleido galimybę suasmeninti šį vietinį savo didelės vertės klientų segmentą.
+
+1. Atlikdami veiksmą **Papildomi duomenys (pasirinktinai)** pasirinkite **Pridėti duomenų** dalyje **Dar labiau padidinti modelio įžvalgas su papildomais klientų duomenimis**.
+
+1. Objekte **pasirinkite** **Klientas: CustomerInsights**, kad pasirinktumėte vieningą kliento profilio lentelę, susiejančią su kliento atributų duomenimis. Norėdami gauti **kliento ID**, pasirinkite **System.Customer.CustomerId**.
+
+1. Susiekite daugiau laukų, jei duomenys pasiekiami jūsų vieninguose klientų profiliuose.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Kliento profilio duomenų susietų laukų pavyzdys.":::
+
+1. Pasirinkite **Įrašyti** susieję atributus, kuriuos modelis turėtų naudoti, kad padėtų numatyti kliento gyvavimo ciklo vertę.
 
 1. Pasirinkite **Toliau**.
 

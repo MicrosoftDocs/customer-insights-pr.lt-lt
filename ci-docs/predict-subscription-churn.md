@@ -1,5 +1,5 @@
 ---
-title: Prenumeratos prognozė (yra vaizdo įrašas)
+title: Prenumeratos atsisakymo prognozė (yra vaizdo įrašas)
 description: Prognozuokite, ar yra rizika, kad klientas nebenaudoti prenumeruojamų jūsų įmonės produktų ar paslaugų.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643813"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171059"
 ---
 # <a name="subscription-churn-prediction"></a>Prenumeratos praradimo prognozė
 
@@ -61,8 +61,8 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
 
 ## <a name="create-a-subscription-churn-prediction"></a>Prenumeratos praradimo prognozės kūrimas
 
-1. Eikite į **"IntelligencePredictions** > **"**.
-1. Pasirinkite plytelę **Prenumeratos churn modelio** plytelė ir pasirinkite **Naudoti šį modelį**.
+1. Eikite į **"Intelligence Predictions"** > **·**.
+1. **Pasirinkite plytelę Prenumeratos atsisakymo modelis** ir pasirinkite **Naudoti šį modelį**.
    > [!div class="mx-imgBorder"]
    > ![Prenumeratos praradimo modelio plytelė su mygtuku „Naudoti šį modelį“.](media/subscription-churn-usethismodel.PNG "Prenumeratos praradimo modelio plytelė su mygtuku „Naudoti šį modelį“")
 
@@ -76,7 +76,7 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
 1. Įveskite **Dienų skaičių nuo prenumeratos pabaigos**, kurį jūsų įmonė taikys prarastam klientui. Šis laikotarpis įprastai skirtas verslo veikloms, pvz., pasiūlymams ar kitoms rinkodaros pastangoms, siekiant išvengti kliento praradimo.
 1. Įveskite **dienų, kiek toli reikia prognozuoti klientų praradimą,** skaičių, kad nustatytumėte laikotarpį, kuriam reikia prognozuoti klientų praradimą. Pavyzdžiui, jei norite prognozuoti klientų praradimo riziką per 90 dienų laikotarpį tam, kad galėtumėte stengtis pritaikyti savo klientų išlaikymo rinkodaros priemones. Jei prognozuojama, kad ši riziką užtruks ilgiau ar trumpiau, gali būti sunkiau atsižvelgti į jūsų netekimų riziką, atsižvelgiant į konkrečius jūsų įmonės reikalavimus. Norėdami tęsti, spustelėkite **Pirmyn**
    >[!TIP]
-   > Galite bet kada pasirinkti **Įrašyti juodraštį**, kad įrašytumėte prognozė kaip juodraštį. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
+   > Galite bet kada pasirinkti **Išsaugoti juodraštį**, kad išsaugotumėte prognozė kaip juodraštį. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
 
 ### <a name="add-required-data"></a>Įtraukti būtinus duomenis
 
@@ -107,7 +107,7 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
 
 ### <a name="set-schedule-and-review-configuration"></a>Grafiko ir peržiūros konfigūravimo nustatymas
 
-1. Nustatykite modelio apmokymo iš naujo dažnumą. Šis parametras yra svarbus norint atnaujinti prognozių tikslumą, nes nauji duomenys praryjami "Customer Insights". Dauguma įmonių gali apmokyti iš naujo kartą per mėnesį, kad prognozių tikslumas būtų geras.
+1. Nustatykite modelio apmokymo iš naujo dažnumą. Šis parametras yra svarbus norint atnaujinti prognozių tikslumą, kai programoje "Customer Insights" praryjami nauji duomenys. Dauguma įmonių gali apmokyti iš naujo kartą per mėnesį, kad prognozių tikslumas būtų geras.
 1. Pasirinkite **Toliau**.
 1. Peržiūrėkite konfigūraciją. Prie bet kurios prognozės konfigūracijos dalies galite sugrįžti pažymėdami **Redaguoti** po rodoma reikšme. Arba galite pažymėti konfigūravimo veiksmą eigos indikatoriuje.
 1. Jei visos reikšmės sukonfigūruotos teisingai, pasirinkite **Įrašyti ir paleisti**, kad pradėtumėte prognozavimo procesą. Skirtuke **Mano prognozės** galite matyti savo prognozių būseną. Atsižvelgiant į prognozavimui naudojamų duomenų kiekį, procesas gali užtrukti kelias valandas.
@@ -121,7 +121,7 @@ Prenumeratos praradimo prognozavimo funkcija padeda prognozuoti, ar yra rizika, 
    - **Prognozės pavadinimas:** kūrimo metu nurodytas prognozės pavadinimas.
    - **Prognozės tipas:** prognozei naudojamo modelio tipas
    - **Išvesties objektas:** objekto, kuriame saugoma prognozės išvestis, pavadinimas. Objektą šiuo pavadinimu galite rasti **Duomenys** > **Objektai**.    
-     Resultato objekte *„ChurnScore“* yra prognozuojama netekimo tikimybė, o *„IsChurn“* yra dvejetainė žyma, pagrįsta *„ChurnScore“* su 0,5 ribine verte. Numatytoji ribinė vertė jūsų scenarijui gali neveikti. [Sukurkite naują segmentą](segments.md#create-a-new-segment) su jūsų pageidaujama ribine verte.
+     Resultato objekte *„ChurnScore“* yra prognozuojama netekimo tikimybė, o *„IsChurn“* yra dvejetainė žyma, pagrįsta *„ChurnScore“* su 0,5 ribine verte. Numatytoji ribinė vertė jūsų scenarijui gali neveikti. [Sukurkite naują segmentą](segments.md#create-a-segment) su jūsų pageidaujama ribine verte.
    - **Nuspėjamas laukas:** šis laukas užpildomas tik kai kurių tipų prognozėms ir nėra naudojamas prenumeratos praradimo prognozei.
    - **Būsena:** dabartinė prognozės vykdymo būsena.
         - **Eilėje:** prognozė šiuo metu laukia kitų vykdomų procesų.

@@ -1,19 +1,19 @@
 ---
 title: Segmentų eksportavimas į "ActiveCampaign"
 description: Sužinokite, kaip konfigūruoti ryšį ir eksportuoti į „ActiveCampaign“.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: eb6f2bb69bb30c319e17390562b3f33512f33ff1
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 178d2df8edf1abcec72664e19d73a88f2b97f12d
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054718"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195576"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Segmentų eksportavimas į „ActiveCampaign“ (peržiūra)
 
@@ -21,31 +21,34 @@ Eksportuokite vieningų klientų profilių segmentus į „ActiveCampaign" ir na
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- Turite [„ActiveCampaign“ abonementą](https://www.activecampaign.com/) ir atitinkamus administratoriaus kredencialus.
-- Sukonfigūravote [segmentus](segments.md) programoje "Customer Insights".
-- Vieningieji klientų profiliai, esantys eksportuotuose segmentuose, ir turintys lauką su el. pašto adresu.
+- ["ActiveCampaign" paskyrą](https://www.activecampaign.com/) ir atitinkamus administratoriaus kredencialus.
+- " [ActiveCampaign" sąrašo ID](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).
+- " [ActiveCampaign API Key"](https://help.activecampaign.com/hc/articles/207317590-Getting-started-with-the-API#how-to-obtain-your-activecampaign-api-url-and-key) ir "REST Endpoint Hostname".
+- [Sukonfigūruoti segmentai](segments.md) "Customer Insights".
+- Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Eksportuojant į „ActiveCampaign" galima eksportuoti iki 1 milijonai klientų profilių, o užbaigti gali trukti iki 90 minučių.
-- Eksportavimas į „ActiveCampaign“ ribojamas segmentais.
-- Klientų profilių, kuriuos galite eksportuoti į „ActiveCampaign", skaičius priklauso nuo sutarties su „ActiveCampaign".
+- Iki 1 milijono klientų profilių vienam eksportui į "ActiveCampaign", o tai gali užtrukti iki 90 minučių. Klientų profilių, kuriuos galite eksportuoti į „ActiveCampaign", skaičius priklauso nuo sutarties su „ActiveCampaign".
+- Tik segmentai.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Nustatyti ryšį su „ActiveCampaign“
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Įtraukti ryšį** ir pasirinkite **ActiveCampaign,** kad sukonfigūruotumėte ryšį.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **ActiveCampaign**.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
 1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Įveskite savo [„ActiveCampaign API" raktą ir REST galinių punktų pagrindinio kompiuterio pavadinimą](https://help.activecampaign.com/hc/articles/207317590-Getting-started-with-the-API#how-to-obtain-your-activecampaign-api-url-and-key). REST galinio punkto pagrindinio kompiuterio vardas yra tik pagrindinio kompiuterio vardas be https://. 
+1. Įveskite savo „ActiveCampaign API" raktą ir REST galinių punktų pagrindinio kompiuterio pavadinimą. REST galinio punkto pagrindinio kompiuterio vardas yra tik pagrindinio kompiuterio vardas be https://.
 
-1. Pasirinkę **Sutinku**, kad patvirtintumėte **Duomenų privatumą ir atitiktį**.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
-1. Pasirinkite **Prisijungti** siekiant pradėti jungį su „ActiveCampaign“.
+1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
@@ -53,27 +56,26 @@ Eksportuokite vieningų klientų profilių segmentus į „ActiveCampaign" ir na
 
 ## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-Galite sukonfigūruoti eksportavimą, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+1. Pasirinkite **Pridėti eksportavimą**.
 
-1. Lauke **Ryšys eksportavimui** pasirinkite ryšį iš skyriaus „ActiveCampaign“. Jei šio skyriaus pavadinimo nematote, nėra jums skirtų šio tipo ryšių.
+1. Lauke **Ryšys eksportavimui** pasirinkite ryšį iš skyriaus „ActiveCampaign“. Jei ryšio nėra, kreipkitės į administratorių.
 
-1. Įveskite savo [**ActiveCampaign sąrašo ID**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
+1. Įveskite eksportavimo pavadinimą.
 
-1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. Būtina eksportuoti segmentus į „ActiveCampaign“. Arba galite eksportuoti vardas, pavardė ir telefonas sukurtumėte labiau personalizuotus el. laiškus. Pasirinkite Įtraukti atributą siekiant sukurti šių laukelių žemėlapį.
+1. Įveskite savo **"ActiveCampaign" sąrašo ID**.
+
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą.
+
+1. Pasirinktinai eksportuokite **vardas**, **pavardė** ir **telefoną**, kad sukurtumėte labiau suasmenintus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
+
+1. Pasirinkite segmentus, kuriuos norite eksportuoti.
 
 1. Pasirinkite **Įrašyti**.
 
-Eksportavimo įrašymas eksportavimo iš karto nevykdo.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Kai leidžiate perduoti duomenis į „Dynamics 365 Customer Insights“ leidžiate perduoti duomenis už tos sienos ribų, įskaitant galimai slaptus duomenis „ActiveCampaign“, „Dynamics 365 Customer Insights“, įskaitant galimai jautrius, tokius kaip asmens. „Microsoft" tokius duomenis perims jūsų nurodymu, tačiau esate atsakingas už tai, kad būtų užtikrinta „ActiveCampaign“ privatumo arba saugos apsauga. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu, kad nutrauktų šios funkcijos naudojimą.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

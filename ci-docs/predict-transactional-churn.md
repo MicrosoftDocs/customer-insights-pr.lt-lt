@@ -1,5 +1,5 @@
 ---
-title: Operacijos prognozė (yra vaizdo įrašas)
+title: Operacijos nutraukimo prognozė (yra vaizdo įrašas)
 description: Prognozuokite, ar klientas yra rizikingas taip, kad daugiau nebepirks jūsų produktų ar paslaugų.
 ms.date: 01/13/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643973"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171105"
 ---
 # <a name="transaction-churn-prediction"></a>Operacijos praradimo nuspėjimas
 
@@ -24,7 +24,7 @@ Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepir
 Aplinkose, pagrįstose verslo klientais, galime prognozuoti kliento transakcijos chroną ir kliento derinį bei kitą informaciją, pvz., produktų kategoriją. Įtraukus sudėčių galima išsiaiškinti, kokia tikimybė, kad klientas „Contoso" nebesipirks produktų kategorijos „stacionarus biuras." Be to, verslo klientams galime naudoti AI ir sugeneruoti galimų priežasčių, kodėl klientas tikriausiai bus antrinės informacijos kategorijos klientas, sąrašą.
 
 > [!TIP]
-> Išbandykite operacijos churn prognozė pamoką naudodami duomenų pavyzdžius: [operacijų churn prognozė pavyzdžio vadovą](sample-guide-predict-transactional-churn.md).
+> Išbandykite operacijos nutraukimo prognozė mokymo programą naudodami duomenų pavyzdžius: [operacijų atsisakymas prognozė pavyzdinis vadovas](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
@@ -100,7 +100,7 @@ Aplinkose, pagrįstose verslo klientais, galime prognozuoti kliento transakcijos
 
 1. Programoje „Customer Insights” eikite į **Įžvalga** > **Prognozės**.
 
-1. Pasirinkite plytelę **Kliento churn modelio** plytelė ir pasirinkite **Naudoti šį modelį**.
+1. **Pasirinkite plytelę Kliento churn modelis** ir pasirinkite **Naudoti šį modelį**.
 
 1. Srityje **Kliento praradimo modelis** pasirinkite **Operacija** ir rinkitės **Pradėti**.
 
@@ -116,11 +116,11 @@ Aplinkose, pagrįstose verslo klientais, galime prognozuoti kliento transakcijos
 
 ### <a name="define-customer-churn"></a>Apibrėžkite kliento praradimą
 
-1. **Nustatykite prognozė langą**. Pavyzdžiui, prognozuoti jūsų klientų nutraukimo riziką kitoms 90 dienų siekiant suderinti su jūsų reklamos laikymo pastangomis. Nutraukimo rizikos prognozavimas ilgesniam ar trumpesniam laikotarpiui gali apsunkinti faktorių nustatymą jūsų atsisakymo rizikos profilyje, bet jis priklauso nuo konkrečių verslo reikalavimų.
+1. Nustatykite **prognozė langą**. Pavyzdžiui, prognozuoti jūsų klientų nutraukimo riziką kitoms 90 dienų siekiant suderinti su jūsų reklamos laikymo pastangomis. Nutraukimo rizikos prognozavimas ilgesniam ar trumpesniam laikotarpiui gali apsunkinti faktorių nustatymą jūsų atsisakymo rizikos profilyje, bet jis priklauso nuo konkrečių verslo reikalavimų.
    >[!TIP]
-   > Galite bet kada pasirinkti **Įrašyti juodraštį**, kad įrašytumėte prognozė kaip juodraštį. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
+   > Galite bet kada pasirinkti **Išsaugoti juodraštį**, kad išsaugotumėte prognozė kaip juodraštį. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
 
-1. Įveskite dienų skaičių, per kurį reikia apibrėžti churn apibrėžimo **lauką**. Pavyzdžiui, jei klientas nieko nenupirko per paskutines 30 dienų, jis gali būti laikomas atsisakęs jūsų verslo paslaugų. 
+1. Įveskite dienų skaičių, kad apibrėžtumėte praradimą **lauke Churn apibrėžimas**. Pavyzdžiui, jei klientas nieko nenupirko per paskutines 30 dienų, jis gali būti laikomas atsisakęs jūsų verslo paslaugų. 
 
 1. Norėdami tęsti, spustelėkite **Pirmyn**.
 
@@ -128,7 +128,7 @@ Aplinkose, pagrįstose verslo klientais, galime prognozuoti kliento transakcijos
 
 1. Pasirinkite **Įtraukti duomenis** ir pasirinkite veiklos tipą šoninėje srityje, kurioje yra reikiama operacijos arba pirkimo retrospektyvos informacija.
 
-1. Dalyje **Pasirinkti veiklas** pasirinkite konkrečias veiklas iš pasirinkto veiklos tipo, į kurį norite sutelkti dėmesį skaičiavime.
+1. Dalyje **Pasirinkti veiklą** pasirinkite konkrečias veiklas iš pasirinkto veiklos tipo, į kurį norite sutelkti dėmesį atlikdami skaičiavimus.
 
    :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Šoninė sritis, vaizduojanti semantikos tipo konkrečių veiklų pasirinkimą.":::
 
@@ -136,7 +136,7 @@ Aplinkose, pagrįstose verslo klientais, galime prognozuoti kliento transakcijos
 
 1. Susiekite semantinius atributus su laukais, kurių reikia modeliui paleisti. Jei laukeliai nėra užpildyti, konfigūruokite ryšius iš jūsų įsigijimo istorijos laukelio į *kliento* laukelį. Pasirinkite **Įrašyti**.
 
-1. Žingsnyje **Įtraukti reikiamus duomenis** pasirinkite **Pirmyn**, jei nenorite įtraukti daugiau veiklų.
+1. Atlikdami veiksmą Pridėti reikiamus **duomenis**, pasirinkite **Pirmyn**, kad tęstumėte, jei nenorite įtraukti daugiau veiklų.
 
 
 # <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
@@ -240,7 +240,7 @@ Sukonfigūruokite ryšį iš savo kliento veiklos objekto *Kliento* objektą.
    - **Prognozės pavadinimas**: Įvardykite prognozę jos kūrimo metu.
    - **Prognozės tipas**: Prognozei naudojamo modelio tipas
    - **Išvesties objektas**: objekto, kuriame saugoma prognozės išvestis, pavadinimas. Objektą šiuo pavadinimu galite rasti **Duomenys** > **Objektai**.
-     Resultato objekte *„ChurnScore“* yra prognozuojama netekimo tikimybė, o *„IsChurn“* yra dvejetainė žyma, pagrįsta *„ChurnScore“* su 0,5 ribine verte. Numatytoji ribinė vertė jūsų scenarijui gali neveikti. [Sukurkite naują segmentą](segments.md#create-a-new-segment) su jūsų pageidaujama ribine verte.
+     Resultato objekte *„ChurnScore“* yra prognozuojama netekimo tikimybė, o *„IsChurn“* yra dvejetainė žyma, pagrįsta *„ChurnScore“* su 0,5 ribine verte. Numatytoji ribinė vertė jūsų scenarijui gali neveikti. [Sukurkite naują segmentą](segments.md#create-a-segment) su jūsų pageidaujama ribine verte.
      Ne visi klientai būtinai yra aktyvūs klientai. Kai kurie ilgą laiką gali būti neturėję jokios veiklos ir jau yra laikomi perkeltais pagal perkėlimo apibrėžimą. Klientams, kurie jau yra susidomę, nėra naudinga prognozuoti riziką, nes jie nėra dominančios auditorijos.
    - **Prognozuotas laukelis**: Šis laukelis užpildomas keliems prognozių tipams ir nėra naudojamas nutraukimo prognozėje.
    - **Būsena:**: Prognozės vykdymo būsena.

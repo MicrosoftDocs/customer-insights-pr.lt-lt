@@ -1,7 +1,7 @@
 ---
 title: Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
 description: Duomenų importavimas iš „Microsoft Dataverse“ valdomo duomenų telkinio.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,24 +11,25 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 9ae0b964d8d39835715b7ddadc712e2338b855af
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082159"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206963"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
 
-Microsoft Dataverse vartotojai gali greitai prisijungti prie analitinių objektų valdomame Microsoft Dataverse ežere.
+Microsoft Dataverse vartotojai gali greitai prisijungti prie analitinių objektų valdomame Microsoft Dataverse ežere. Tik vienas aplinkos duomenų šaltinis gali vienu metu naudoti tą patį „Dataverse“sutvarkytą ežerą.
 
 > [!NOTE]
 > Turite būti organizacijos administratorius, Dataverse kad galėtumėte tęsti ir peržiūrėti valdomo ežero objektų sąrašą.
 
-## <a name="important-considerations"></a>Svarbi informacija
+## <a name="prerequisites"></a>Būtinosios sąlygos
 
-1. Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Storage“, gali būti saugomi kitoje vietoje, kurioje duomenys yra apdorojami ar saugomi „Dynamics 365 Customer Insights“.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse paslaugose, jūs sutinkate, kad duomenys gali būti perduodami ir saugomi su Dynamics 365 Customer Insights. [Sužinokite daugiau "Microsoft" patikimumo centre](https://www.microsoft.com/trust-center).
-2. Matomi tik Dataverse objektai, kurių [keitimų sekimas](/power-platform/admin/enable-change-tracking-control-data-synchronization) įjungtas. Šiuos objektus galima eksportuoti į valdomų duomenų ežerą Dataverse ir naudoti "Customer Insights". Nebenaudojamose Dataverse lentelėse pagal numatytuosius nustatymus įjungtas pakeitimų sekimas. Turite įjungti pasirinktinių lentelių pakeitimų sekimą. Norėdami patikrinti, Dataverse ar lentelėje įgalintas keitimų sekimas, eikite į [Power Apps](https://make.powerapps.com) > **Duomenų** > **lentelės**. Raskite jus dominančią lentelę ir pasirinkite ją. Eikite į **"Settings Advanced"** > **parinktis** ir peržiūrėkite **nustatymą Sekti keitimus**.
+- Duomenys, saugomi internetinėse tarnybose, pavyzdžiui, „Azure Data Lake Storage“, gali būti saugomi kitoje vietoje, kurioje duomenys yra apdorojami ar saugomi „Dynamics 365 Customer Insights“.Importuodami arba prisijungdami prie duomenų, saugomų internetinėse paslaugose, jūs sutinkate, kad duomenys gali būti perduodami ir saugomi su Dynamics 365 Customer Insights. [Sužinokite daugiau "Microsoft" patikimumo centre](https://www.microsoft.com/trust-center).
+
+- Matomi tik Dataverse objektai, kurių [keitimų sekimas](/power-platform/admin/enable-change-tracking-control-data-synchronization) įjungtas. Šiuos objektus galima eksportuoti į valdomų duomenų ežerą Dataverse ir naudoti "Customer Insights". Nebenaudojamose Dataverse lentelėse pagal numatytuosius nustatymus įjungtas pakeitimų sekimas. Turite įjungti pasirinktinių lentelių pakeitimų sekimą. Norėdami patikrinti, Dataverse ar lentelėje įgalintas keitimų sekimas, eikite į [Power Apps](https://make.powerapps.com) > **Duomenų** > **lentelės**. Raskite jus dominančią lentelę ir pasirinkite ją. Eikite į **"Settings Advanced"** > **parinktis** ir peržiūrėkite **nustatymą Sekti keitimus**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Prisijungimas prie „Dataverse” valdomojo telkinio
 
@@ -51,7 +52,9 @@ Microsoft Dataverse vartotojai gali greitai prisijungti prie analitinių objekt�
 
 1. Įrašykite savo pasirinkimą, kad pradėtumėte sinchronizuoti pasirinktas lenteles iš „Dataverse”. Puslapyje **Duomenų šaltiniai** rasite naujai pridėtą ryšį. Jis bus atnaujinimo eilėje ir rodys objektų skaičių kaip 0 iki tol, kol bus susinchronizuotos visos pažymėtos lentelės.
 
-Tik vienas aplinkos duomenų šaltinis gali vienu metu naudoti tą patį „Dataverse“sutvarkytą ežerą.
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Duomenų įkėlimas gali užtrukti. Sėkmingai atnaujinus, nurijusius duomenis galima peržiūrėti puslapyje [**Objektai**](entities.md).
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>„Dataverse” valdomojo telkinio duomenų šaltinio redagavimas
 
@@ -62,4 +65,10 @@ Norėdami prisijungti prie kito „Dataverse data lake”, [sukurkite naują duo
 
 1. Šalia duomenų šaltinis, kurį norite atnaujinti, pasirinkite **Redaguoti**.
 
-1. Pažymėkite papildomus objektus iš galimų objektų sąrašo ir pasirinkite **Įrašyti**.
+1. Pasirinkite papildomus objektus iš galimų objektų sąrašo.
+
+1. Spustelėkite **Įrašyti**, kad pritaikytumėte pakeitimus ir grįžtumėte į **puslapį Duomenų šaltiniai**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

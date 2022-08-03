@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: e90bdc523c3f8857c150ccba9d81f055d39f9feb
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccb33594a3a92e87d307f3300c77772ef8b4a82f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051601"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171013"
 ---
 # <a name="segment-insights-preview"></a>Segmentų įžvalgos (peržiūra)
 
@@ -43,26 +43,25 @@ Taip pat galite analizuoti, kaip kinta persidengimas tam tikriems atributams.
 
 ### <a name="view-and-optimize-an-overlap-analysis"></a>Persidengimo analizės peržiūra ir optimizavimas
 
-Užbaigę analizę, rasite išsamią informaciją apie šią įžvalgą skiltyje **Segmentai** > **Įžvalgos (peržiūra)**.
+1. Užbaigę analizę, rasite išsamią informaciją apie šią įžvalgą skiltyje **Segmentai** > **Įžvalgos (peržiūra)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Segmentų persidengimo įžvalgų išsami informacija.":::
+   :::image type="content" source="media/segment-overlap.png" alt-text="Segmentų persidengimo įžvalgų išsami informacija.":::
 
-Pasirinkite įžvalgą, kad pamatytumėte analizės rezultatus:
+1. Pasirinkite įžvalgą, kad pamatytumėte analizės rezultatus:
 
-- Narių skaičius, persidengiančių su analizei pažymėtais segmentais.
-- Narių, įtrauktų į vieną iš segmentų, bet ne likusiais segmentais, skaičius.
-- Jei pažymėjote laukus konfigūruodami persidengimo analizę, jas rasite atitinkamuose skirtukuose. Naudodami filtro išplečiamąjį sąrašą, galite pažymėti bet kokį dominantį atributo lygį, o apačioje esančioje lentelėje bus rodomi atitinkami duomenys.
+   - Narių skaičius, persidengiančių su analizei pažymėtais segmentais.
+   - Narių, įtrauktų į vieną iš segmentų, bet ne likusiais segmentais, skaičius.
+   - Jei pažymėjote laukus konfigūruodami persidengimo analizę, jas rasite atitinkamuose skirtukuose. Naudodami filtro išplečiamąjį sąrašą, galite pažymėti bet kokį dominantį atributo lygį, o apačioje esančioje lentelėje bus rodomi atitinkami duomenys.
 
 ## <a name="segment-differentiators"></a>Segmento diferenciatoriai
 
-Segmentų diferenciatoriai padeda sužinoti, kas atskiria segmentą nuo likusių klientų arba kito segmento. Tereikia pažymėti segmentą, o sistema nustatys profilio atributus ir priemones, atskiriančias pasirinktą segmentą.
+Segmentų diferenciatoriai padeda sužinoti, kas atskiria segmentą nuo likusių klientų arba kito segmento. Pasirinkite segmentą ir sistema identifikuoja profilio atributus ir matus, kurie išskiria pasirinktą segmentą.
 
 ### <a name="run-a-differentiator-analysis"></a>Diferenciatoriaus analizės vykdymas
 
 1. Eikite į **Segmentai** ir pasirinkite skirtuką **Įžvalgos (peržiūra)**.
 
-1. Pažymėkite **Naujas** ir pasirinkite parinktį **Persidengimas**, esančią srityje **Pasirinkti įžvalgų tipą**.
+1. Pasirinkite **Naujas** ir pasirinkite **parinktį Diferencialai** srityje Pasirinkti įžvalgos **tipą**.
 
 1. Pasirinkite norimą analizuoti segmentą kaip **Pirminį segmentą** ir pasirinkite **Kitas**.
 
@@ -70,29 +69,29 @@ Segmentų diferenciatoriai padeda sužinoti, kas atskiria segmentą nuo likusių
 
 1. Pasirinktinai pasirinkite vieną ar kelis dominančius laukus, kad sutelktumėte analizė ant tam tikrų atributų ir pasirinkite **Pirmyn**.
 
-1. Pateikite persidengimo analizės pavadinimą, pasirinktinį rodomą pavadinimą ir aprašą.
+1. Pateikite diferencijuotojo analizės pavadinimą, pasirinktinį rodomą pavadinimą ir aprašą.
 
-1. Norėdami pradėti analizę, pasirinkite **Įrašyti**. Persidengimo analizė yra paruošta, kai būsena pasikeičia iš „Atnaujinama“ į „Sėkmingai“.
+1. Norėdami pradėti analizę, pasirinkite **Įrašyti**. Diferencijavimo analizė yra paruošta, kai būsena pasikeičia iš Atnaujinimo į Sėkmingą.
 
 ### <a name="view-and-optimize-a-differentiators-analysis"></a>Diferenciatorių analizės peržiūra ir optimizavimas
 
-Užbaigę analizę, rasite išsamią informaciją apie šią įžvalgą skiltyje **Segmentai** > **Įžvalgos (peržiūra)**.
+1. Baigę analizę eikite į **Segmentų** > **įžvalgos (peržiūra)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Segmentų diferenciatoriaus įžvalgų išsami informacija.":::
+   :::image type="content" source="media/segment-differentiators.png" alt-text="Segmentų diferenciatoriaus įžvalgų išsami informacija.":::
 
-Pasirinkite įžvalgą, kad pamatytumėte analizės rezultatus. Diferenciatoriaus analizė įtraukia du skirtukus. Skirtuke **Atributai** išvardijami profilio atributai, kurie laikomi diferenciatoriais. Skirtuke **Priemonės** išvardijami diferenciatoriai. Kiekviename skirtuke yra ši išsami informacija:
+1. Pasirinkite įžvalgą, kad pamatytumėte analizės rezultatus. Diferenciatoriaus analizė įtraukia du skirtukus. Skirtuke **Atributai** išvardijami profilio atributai, kurie laikomi diferenciatoriais. Skirtuke **Priemonės** išvardijami diferenciatoriai. Kiekviename skirtuke yra ši išsami informacija:
 
-- Rangais suskirstytas diferenciatorių sąrašas, surūšiuotas pagal skirtumo balą.
-- **Skirtumo balas** kiekvienam diferenciatoriui. Skirtumo balas nurodo dviejų segmentų atributo skirtumo laipsnį. Kuo didesnis skirtumo balas, tuo daugiau atributų skiriasi tarp dviejų segmentų. Pasirinkite rezultatą, kad atidarytumėte sritį **Skirtumo balas** su to atributo reikšmių paskirstymais.
+   - Rangais suskirstytas diferenciatorių sąrašas, surūšiuotas pagal skirtumo balą.
+   - **Skirtumo balas** kiekvienam diferenciatoriui. Skirtumo balas nurodo dviejų segmentų atributo skirtumo laipsnį. Kuo didesnis skirtumo balas, tuo daugiau atributų skiriasi tarp dviejų segmentų. Pasirinkite rezultatą, kad atidarytumėte sritį **Skirtumo balas** su to atributo reikšmių paskirstymais.
 
 ## <a name="manage-segment-insights"></a>Segmentų įžvalgų valdymas
 
-Komandų juostoje galite naudoti šias įžvalgų parinktis:
+Eikite į **segmentų** > **įžvalgas (peržiūra),** kad peržiūrėtumėte segmentų įžvalgas ir jas tvarkytumėte. Pasirinkite segmento įžvalgą, kad peržiūrėtumėte galimus veiksmus.
 
-- **Atgal**, kad grįžtumėte į įžvalgų sąrašą
-- **Atnaujinti**, kad vėl paleistumėte analizę
-- **Panaikinti**, kad pašalintumėte šią įžvalgą
-
+- **Įžvalgų analizės peržiūra**
+- **Įžvalgos redagavimas**, kad pakeistumėte jos ypatybes
+- **Atnaujinkite** įžvalgą, kad dar kartą paleistumėte analizę
+- **Įžvalgos pervardijimas**
+- **Įžvalgos ištrynimas**
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

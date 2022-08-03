@@ -1,6 +1,6 @@
 ---
-title: Peržiūrėti duomenų suvienijimą
-description: Peržiūrėkite duomenų suvienijimo veiksmus, sukurkite vieningus klientų profilius ir peržiūrėkite rezultatus
+title: Duomenų suvienijimo peržiūra
+description: Peržiūrėkite duomenų suvienijimo veiksmus, kurkite vieningus klientų profilius ir peržiūrėkite rezultatus
 ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -13,48 +13,46 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
-ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
+ms.openlocfilehash: 20728ffaef9bb705410b3ac22d19868ffd5d1243
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8844096"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139594"
 ---
-# <a name="review-data-unification"></a>Peržiūrėti duomenų suvienijimą
+# <a name="review-data-unification"></a>Duomenų suvienijimo peržiūra
 
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
+Šis paskutinis suvienijimo proceso veiksmas rodo proceso veiksmų suvestinę ir suteikia galimybę atlikti pakeitimus prieš kuriant vieningąjį profilį.
 
-Šis paskutinis suvienijimo proceso veiksmas rodo proceso etapų santrauką ir suteikia galimybę atlikti pakeitimus prieš kuriant vieningą profilį.
+:::image type="content" source="media/m3_review.png" alt-text="Peržiūrėkite ir kurkite klientų profilius ekrano kopija.":::
 
-:::image type="content" source="media/m3_review.png" alt-text="Klientų profilių peržiūros ir kūrimo ekrano nuotrauka.":::
+## <a name="review-the-data-unification-steps"></a>Duomenų suvienijimo veiksmų peržiūra
 
-## <a name="review-the-data-unification-steps"></a>Peržiūrėti duomenų suvienijimo veiksmus
+1. Pasirinkite **Redaguoti** atliekant bet kurį duomenų suvienijimo veiksmą, kad peržiūrėtumėte ir atliktumėte bet kokius pakeitimus.
 
-1. Pasirinkite **Redaguoti** bet kuriame duomenų suvienijimo veiksme, kad peržiūrėtumėte ir atliktumėte bet kokius pakeitimus.
+1. Jei esate patenkinti savo pasirinkimais, pasirinkite **Kurti klientų profilius**. Puslapis " **Suvienodinti** " rodomas, kai kuriamas vieningas kliento profilis. Visose plytelėse, išskyrus **šaltinio laukus**, rodoma **būsena Eilė arba** **Atnaujinimas**.
 
-1. Jei jus tenkina pasirinkimai, pasirinkite **Kurti klientų profilius**. Puslapis " **Suvienyti** " rodomas kuriant vieningą kliento profilį. Visose plytelėse, išskyrus **šaltinio laukus**, rodoma **eilėje** arba **atnaujinimo** būsena.
-
-   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Puslapio &quot;Unify&quot; su plytelėmis, kuriose rodoma eilėje arba atnaujinama, ekrano nuotrauka.":::
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Puslapio &quot;Unify&quot; su plytelėmis, kuriose rodoma eilė arba atnaujinimas, ekrano nuotrauka.":::
 
    [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-Suvienijimo algoritmui užbaigti reikia šiek tiek laiko ir jūs negalite pakeisti konfigūracijos, kol ji nebus baigta. Kai suvienijimo procesas baigiamas, vieningas kliento profilio objektas, vadinamas *Klientu*, pateikiamas **sekcijos** Profiliai **puslapyje Objektai**. Pirmasis sėkmingas suvienijimo vykdymas sukuria vieningą *kliento* objektą. Visi vėlesni paleidimai išplečia tą objektą.
+Suvienijimo algoritmo užbaigimas užtrunka šiek tiek laiko ir jūs negalite pakeisti konfigūracijos, kol ji nebus baigta. Kai suvienijimo procesas baigiamas, suvienodintas kliento profilio objektas, vadinamas *Klientu, pateikiamas* sekcijos **Profiliai** puslapyje **Objektai**. Pirmasis sėkmingas suvienijimo vykdymas sukuria vieningą *kliento* objektą. Visi vėlesni važiavimai išplečia tą objektą.
 
-## <a name="review-the-results-of-data-unification"></a>Peržiūrėti duomenų suvienijimo rezultatus
+## <a name="review-the-results-of-data-unification"></a>Duomenų suvienijimo rezultatų peržiūra
 
-Po suvienijimo **puslapyje "Data** > **Unify** " rodomas vieningų klientų profilių skaičius. Kiekvieno suvienijimo proceso etapo rezultatai rodomi kiekvienoje plytelėje. Pavyzdžiui, **šaltinio laukuose** rodomas susietų atributų (laukų) skaičius, o **įrašų** dublikatų skaičius rodo rastų įrašų dublikatų skaičių.
+Suvienijimo puslapyje Duomenų **suvienodinimas** > **rodomas** suvienodintų klientų profilių skaičius. Kiekvieno suvienijimo proceso veiksmo rezultatai rodomi kiekvienoje plytelėje. Pavyzdžiui, **laukuose** Šaltinis rodomas susietų atributų (laukų) skaičius, o **Pasikartojančių įrašų** skaičius rodo rastų pasikartojančių įrašų skaičių.
 
-:::image type="content" source="media/m3_unified.png" alt-text="Puslapio Duomenų suvienodinimas po to, kai duomenys suvienijami, ekrano nuotrauka.":::
+:::image type="content" source="media/m3_unified.png" alt-text="Duomenų suvienodinimo puslapio ekrano kopija suvienodinus duomenis.":::
 
 > [!TIP]
-> Plytelė **Atitikimo sąlygos** rodoma tik tuo atveju, jei buvo pasirinkti keli objektai.
+> Plytelė Atitikimo **sąlygos** rodoma tik tada, jei buvo pasirinkti keli objektai.
 
-Rekomenduojame peržiūrėti rezultatus, ypač rungtynių [taisyklių](data-unification-update.md#manage-match-rules) kokybę, ir prireikus juos patobulinti.
+Rekomenduojame peržiūrėti rezultatus, ypač rungtynių taisyklių [kokybę](data-unification-update.md#manage-match-rules), ir, jei reikia, jas patikslinti.
 
 Jei reikia, [pakeiskite suvienijimo parametrus](data-unification-update.md) ir iš naujo paleiskite vieningą profilį.
 
 ## <a name="next-step"></a>Kitas veiksmas
 
-Konfigūruokite [veiklas](activities.md), [sodrinimą](enrichment-hub.md), [ryšius](relationships.md) ar [priemones](measures.md), kad gautumėte daugiau įžvalgų apie savo klientus.
+Konfigūruokite veiklą, papildymą [,](activities.md) ryšius [ar](enrichment-hub.md) priemones [, kad gautumėte daugiau įžvalgų apie savo klientus.](relationships.md)[...](measures.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

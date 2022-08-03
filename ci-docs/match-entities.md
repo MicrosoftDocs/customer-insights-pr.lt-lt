@@ -14,16 +14,14 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082411"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139713"
 ---
 # <a name="match-conditions-for-data-unification"></a>Duomenų suvienodinimo atitikties sąlygos
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Šis suvienijimo veiksmas apibrėžia atitikties tvarką ir kryžminio objekto atitikties taisykles. Šiam veiksmui atlikti reikia bent dviejų objektų.
 
@@ -98,7 +96,7 @@ Atitikties taisyklėse nurodoma logika, pagal kurią bus derinama konkreti objek
 
 1. Pasirinktinai [įtraukite daugiau taisyklių](#add-rules-to-a-match-pair).
 
-1. Spustelėkite **Pirmyn**.
+1. Spustelėti **Pirmyn**.
 
 > [!div class="nextstepaction"]
 > [Kitas veiksmas: suvienodinti laukus](merge-entities.md)

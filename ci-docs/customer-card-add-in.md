@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082138"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194933"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Kliento kortelės papildinys, skirtas "Dynamics 365" programoms (peržiūra)
 
@@ -28,21 +28,25 @@ Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ prog
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- Papildinys veikia tik su „Dynamics 365” modeliu pagrįstomis programomis, pavyzdžiui, „Sales” arba „Customer Service” 9.0 arba naujesne versija.
-- Kad jūsų "Dynamics 365" duomenys būtų susieti su "Customer Insights" klientų profiliais, rekomenduojame juos [nuryti iš "Dynamics 365" programos naudojant jungtį Microsoft Dataverse](connect-power-query.md). Jei naudojate kitą metodą, kad nurytumėte "Dynamics 365" kontaktus (arba abonementus), turite įsitikinti, kad `contactid` laukas (arba `accountid`) yra nustatytas kaip [pagrindinis raktas tam duomenų šaltinis duomenų suvienijimo proceso susiejimo veiksme](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- "Dynamics 365" modeliu pagrįstos programos, pvz., "Sales" arba "klientų aptarnavimas", 9.0 ir naujesnės versijos.
+- Kad jūsų "Dynamics 365" duomenys būtų susieti su "Customer Insights" klientų profiliais, rekomenduojame juos [nuryti iš "Dynamics 365" programos naudojant jungtį Microsoft Dataverse](connect-power-query.md). Jei naudojate kitą metodą, kad nurytumėte "Dynamics 365" kontaktus (arba abonementus), įsitikinkite, kad `contactid` laukas (arba `accountid`) nustatytas kaip [pagrindinis tos duomenų šaltinis raktas duomenų suvienijimo proceso metu](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Visi "Dynamics 365" kliento kortelės papildinio vartotojai turi būti [įtraukti kaip "Customer Insights" vartotojai](permissions.md), kad matytų duomenis.
-- [Sukonfigūruotos ieškos ir filtravimo galimybės](search-filter-index.md) "Customer Insights" yra būtinos, kad duomenų peržvalga veiktų.
+- [Sukonfigūruotos ieškos ir filtro galimybės](search-filter-index.md) „Customer Insights“.
 - Kiekvienas papildinio valdiklis priklauso nuo konkrečių "Customer Insights" duomenų. Kai kuriuos duomenis ir valdiklius galima naudoti tik konkrečių tipų aplinkose. Papildinio konfigūracija informuos jus, jei valdiklis nepasiekiamas dėl pasirinkto aplinkos tipo. Sužinokite daugiau apie [aplinkos naudojimo atvejus](work-with-business-accounts.md).
-  - **Matavimo valdiklis**: reikia [sukonfigūruotų kliento](measures.md) atributų tipo matų.
-  - **Įžvalgų valdymas**: reikia duomenų, generuojamų naudojant [prognozes arba pasirinktinius modelius](predictions-overview.md).
-  - **Išsamios kliento informacijos valdymas**: visi profilio laukai pasiekiami vieningoje kliento profilyje.
-  - **Papildymo valdiklis**: reikalingi aktyvieji [papildymai](enrichment-hub.md) pritaikyti klientų profiliams. Kortelės papildinys palaiko šiuos papildymus: ["Microsoft" teikiami prekių ženklai](enrichment-microsoft.md), ["Microsoft" teikiami pomėgiai](enrichment-microsoft.md) ir ["Microsoft" pateikti "Office" įtraukimo duomenys](enrichment-office.md).
-  - **Kontaktų valdiklis**: būtinas kontaktų tipo semantinio objekto aprašas.
-  - **Laiko juostos valdymas**: Jam būtinos [konfigūruotos veiklos](activities.md).
+  - **Matų kontrolei** reikia [sukonfigūruotų kliento atributų matų](measures.md).
+  - **Intelekto valdiklis** reikalauja duomenų, sugeneruotų naudojant [prognozes arba pasirinktinius modelius](predictions-overview.md).
+  - **Kliento išsamios informacijos valdiklis** rodo visus laukus iš profilio, pasiekiamo vieningame kliento profilyje.
+  - **Sodrinimo kontrolei** reikia aktyvių [papildymų](enrichment-hub.md), taikomų klientų profiliams. Kortelės papildinys palaiko šiuos papildymus: ["Microsoft" teikiami prekių ženklai](enrichment-microsoft.md), ["Microsoft" teikiami pomėgiai](enrichment-microsoft.md) ir ["Microsoft" pateikti "Office" įtraukimo duomenys](enrichment-office.md).
+  - **Kontaktų valdymui** reikalingas kontakto semantinio objekto tipas.
+  - **Laiko planavimo juostos valdymui** reikia [sukonfigūruotų veiklų](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Kliento kortelės papildinio diegimas
 
-Kliento kortelės papildinys yra sprendimas, skirtas „Dynamics 365” platformos „Customer Engagement” programoms. Norėdami įdiegti sprendimą, eikite į „AppSource“ ir ieškokite **„Dynamics“ kliento kortelės**. Pasirinkite [papildinį Kliento kortelė svetainėje „AppSource“](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) ir pasirinkite **Gauti dabar**.
+Kliento kortelės papildinys yra sprendimas, skirtas „Dynamics 365” platformos „Customer Engagement” programoms. Norėdami įdiegti sprendimą:
+
+1. Eikite į AppSource "Dynamics Customer Card" ir ieškokite **jos.**
+
+1. Pasirinkite [papildinį Kliento kortelė svetainėje „AppSource“](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) ir pasirinkite **Gauti dabar**.
 
 Norint įdiegti sprendimą gali reikėti prisijungti naudojant „Dynamics 365“ programos administratoriaus kredencialus. Sprendimo diegimas jūsų aplinkoje gali šiek tiek užtrukti.
 

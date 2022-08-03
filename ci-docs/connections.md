@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082096"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195184"
 ---
 # <a name="connections-preview-overview"></a>Ryšių (peržiūros) apžvalga
 
@@ -27,6 +27,12 @@ Eikite į **Administravimas** > **Ryšiai** ir kurkite bei peržiūrėkite ryši
 Skirtuke **Ryšiai** rodomi visi aktyvūs ryšiai. Sąraše rodoma kiekvieno ryšio eilutė.
 
 Greitai peržiūrėkite, gaukite aprašą ir sužinokite, ką galite daryti su kiekviena išplėtimo parinktimi skirtuke **Atrasti**.
+
+## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
+
+Kai leidžiate Dynamics 365 Customer Insights perduoti duomenis trečiosioms šalims ar kitiems "Microsoft" produktams, leidžiate perduoti duomenis už atitikties ribos Dynamics 365 Customer Insights ribų, įskaitant galimai slaptus duomenis, pvz., Asmeninius duomenis. "Microsoft" perduos tokius duomenis jūsų nurodymu, tačiau jūs esate atsakingi už tai, kad trečioji šalis laikytųsi visų jūsų privatumo ar saugos įsipareigojimų. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Jūsų Dynamics 365 Customer Insights administratorius gali bet kada pašalinti ryšį, kad nutrauktų funkcijų naudojimą.
 
 ## <a name="exports"></a>Eksportavimai
 
@@ -41,8 +47,6 @@ Naujus ryšius gali konfigūruoti tik administratoriai, bet sukurti ryšiai visa
 Norėdami įtraukti ryšius, turite turėti [administratoriaus teises](permissions.md). Jei prisijungsite prie kitų „Microsoft“ paslaugų, manysime, kad abi paslaugos teikiamos toje pačioje organizacijoje.
 
 1. Eikite į **Administravimas** > **Ryšiai (peržiūra)**.
-
-1. Eikite į skirtuką **Ryšiai**.
 
 1. Norėdami sukurti naują ryšį, pasirinkite **Pridėti ryšį**. Išplečiamajame meniu pasirinkite, kokio tipo ryšį norite sukurti.
 
@@ -99,3 +103,5 @@ Atsieti papildymai ir eksportavimai tampa neaktyvūs. Iš naujo suaktyvinate juo
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Ryšių su slaptais įrašais, kuriuos valdo jūsų „Key Vault“, nustatymas
 
 Kai kuriems ryšiams reikia slaptai pvz., API raktų arba slaptažodžius. Kai kurie ryšiai palaiko slaptas informacijas, saugomas jūsų saugykloje „Key Vault“. Sužinokite daugiau apie palaikomus ryšius ir kaip nustatyti [savo "Key Vault for Customer Insights"](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

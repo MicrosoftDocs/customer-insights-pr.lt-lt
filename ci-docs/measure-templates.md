@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051693"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170783"
 ---
 # <a name="create-measures-from-templates"></a>Priemonių kūrimas naudojant šablonus
 
-Norėdami juos sukurti, galite naudoti iš anksto nustatytus dažniausiai naudojamų [priemonių](measures.md) šablonus. Išsamūs šablonų aprašymai ir interaktyvioji patirtis padeda efektyviai matuoti kūrimą. Šablonai kuriami pagal žymimys duomenis iš objekto *„Unified Activity“*. Prieš kurdami priemonę pagal šabloną įsitikinkite, kad sukonfigūravote [kleinto veiklą](activities.md).
+Norėdami juos sukurti, naudokite iš anksto nustatytus dažniausiai naudojamų [matų](measures.md) šablonus. Šablonai kuriami pagal žymimys duomenis iš objekto *„Unified Activity“*. Prieš kurdami priemonę pagal šabloną įsitikinkite, kad sukonfigūravote [kleinto veiklą](activities.md).
 
-Norėdami sukurti pasirinktinius matus, žiūrėkite [Priemonių kūrimo priemonės naudojimas priemonėms kurti nuo pradžių](measure-builder.md).
+Matų šablonai palaikomi tik atskirų klientų **aplinkose**. Norėdami sukurti pasirinktinius matus arba kurti priemones nuo B iki B, žiūrėkite [Priemonių kūrimo priemonės naudojimas](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
-
-Galimi priemonių šablonai: 
+Galimi priemonių šablonai:
 - Vidutinė operacijų vertė (ATV)
 - Bendra operacijos vertė
 - Vidutinės dienos pajamos
+- Vidutinės mėnesio pajamos
 - Vidutinės metų pajamos
 - Operacijų skaičius
 - Gauti lojalumo taškai
@@ -57,21 +56,22 @@ Galimi priemonių šablonai:
 
 1. Pasirinkite **Atlikta**.
 
-1. Skiltyje **Laikotarpio nustatymas** apibrėžkite naudojamų duomenų laiko tarpą. Pasirinkite, ar norite, kad nauja priemonė apimtų visą duomenų rinkinį pažymėdami "Visas laikas" arba, jei norite, kad **priemonė sufokusuos** konkretų laiko **periodą**.
+1. Sekcijoje **Nustatyti laikotarpį** apibrėžkite duomenų laiko tarpą. Pasirinkite, ar norite, kad nauja priemonė apimtų visą duomenų rinkinį pažymėdami "Visas laikas" arba, jei norite, kad **priemonė sufokusuos** konkretų laiko **periodą**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Ekrano nuotrauka, kurioje rodoma laikotarpio skiltis konfigūruojant priemonę iš šablono.":::
 
 1. Kitoje skiltyje pasirinkite **Pridėti duomenis** ir pasirinkite veiklas bei pažymėkite attitinkamus duomenis iš savo objekto *Unified Activity*.
 
-    1. 1 veiksmas iš 2: skiltyje **Veiklos tipas** pasirinkite norimo naudoti objekto tipą. Skiltyje **Veiklos** pasirinkite objektus, kuriuos norite žymėti.
-    1. 2 veiksmas iš 2: pasirinkite formulės reikalaujamo komponento atributą iš objekto *Unified Activity*. Pvz., jei operacijos vertė vidutinė, tai operacijos vertę vaiduojantis atributas. **Veiklos laiko žymai** pasirinkite atributą iš objekto „Unified Activity“, kuriame vaizduojama veiklos data ir laikas.
-   
-1. Sėkmingai pažymėjė duomenis būseną galite matyti kaip **Baigta** kartu su pažymėtų veiklų ir atributų pavadinimu.
+    1. 1 veiksmas iš 2: skiltyje **Veiklos tipas** pasirinkite norimo naudoti objekto tipą. Dalyje **Veikla** pasirinkite objektus, kuriuos norite susieti, tada pasirinkite **Pirmyn**.
+    1. 2 veiksmas iš 2: pasirinkite formulės reikalaujamo komponento atributą iš objekto *Unified Activity*. Pvz., jei operacijos vertė vidutinė, tai operacijos vertę vaiduojantis atributas. Dalyje **Veiklos laiko žyma** pasirinkite atributą iš vieningosios veiklos *objekto*, kuris nurodo veiklos datą ir laiką.
+    1. Pasirinkite **Įrašyti**.
 
-1. Dabar galite pasirinkti **Vykdyti** ir apskaičiuoti priemonės rezultatus. Jei paiešką vėliau norėsite susiaurinti, pasirinkite **Išsaugoti juodarštį**.
+    Kai duomenų susiejimas sėkmingas, būsena rodo **Baigta** ir rodomas susietos veiklos ir atributų pavadinimas.
 
-# <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
+1. Pasirinkite **Vykdyti**, kad apskaičiuotumėte mato rezultatus. Pasirinkite **Įrašyti juodraštį**, jei norite išlaikyti dabartinę konfigūraciją ir paleisti matą vėliau. Rodomas **puslapis Matai**.
 
-Ši funkcija galima tik priemonėms, sukurtoms aplinkose su atskirais klientais kaip pirmine tiksline auditorija.
+## <a name="next-step"></a>Tolesnis veiksmas
 
----
+Naudokite esamas priemones, kad sukurtumėte [klientų segmentą](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

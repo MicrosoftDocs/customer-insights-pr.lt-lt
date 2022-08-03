@@ -1,85 +1,83 @@
 ---
 title: Segmentų eksportavimas į „Google Ads“ (peržiūra)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į „Google Ads“.
-ms.date: 03/31/2022
+ms.date: 07/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b7f08936d7d90322cb4e62396a2961fe06273b76
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082999"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196588"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentų eksportavimas į „Google Ads“ (peržiūra)
 
-Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditorijų sąrašą ir naudokite juos norėdami juos naudoti reklamuojant „Google" paiešką, „Gmail" „YouTube“ ir „Google Display Network". 
+Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditorijų sąrašą ir naudokite juos norėdami juos naudoti reklamuojant „Google" paiešką, „Gmail" „YouTube“ ir „Google Display Network".
 
+## <a name="prerequisites"></a>Būtinosios sąlygos
 
-## <a name="prerequisites-for-connection"></a>Būtinosios ryšio sąlygos
-
--   Turite [„Google Ads“ paskyrą](https://ads.google.com/) ir atitinkančius administratoriaus prisijungimo duomenis.
--   Atitinkate [„Customer Match Policy“ reikalavimus](https://support.google.com/adspolicy/answer/6299717).
--   Atitinkate [pakartotinės rinkodaros sąrašo dydžių reikalavimus](https://support.google.com/google-ads/answer/7558048).
--   Turite [konfigūruoti segmentus](segments.md).
--   Eksportuotuose segmentuose esančiuose vieninguose klientų profiliuose yra laukai, nurodantys el. pašto adresą, telefoną, reklamuotojo mobiliesiems ID, trečiosios šalies vartotojo ID arba adresą.
+- ["Google Ads" paskyra](https://ads.google.com/) ir atitinkami administratoriaus kredencialai.
+- ["Google Ads" kliento ID](https://support.google.com/google-ads/answer/1704344).
+- Tenkinami Klientų atitikties politikos [reikalavimai](https://support.google.com/adspolicy/answer/6299717).
+- Pakartotinės rinkodaros sąrašo [dydžių](https://support.google.com/google-ads/answer/7558048) reikalavimai yra įvykdyti.
+- [Sukonfigūruoti segmentai](segments.md).
+- Eksportuotuose segmentuose esančiuose vieninguose klientų profiliuose yra laukai, nurodantys el. pašto adresą, telefoną, reklamuotojo mobiliesiems ID, trečiosios šalies vartotojo ID arba adresą.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Eksportavimas į „Google Ads“ yra apribotas segmentais.
-- Dėl paslaugų teikėjų apribojimų segmentai, kuriuose iš viso yra 1 milijono klientų profilių, gali trukti iki 30 minučių. 
-- Suderinamumas „Google Ads“ gali trukti iki 48 valandų.
+- Eksportuokite iki 1 milijono klientų profilių vienam eksportui į "Google Ads", o tai gali užtrukti iki 30 minučių, nes paslaugų teikėjas turi apribojimų.
+- Tik segmentai.
+- Atitiktis sistemoje "Google Ads" gali trukti iki 48 valandų.
 
 ## <a name="set-up-connection-to-google-ads"></a>Ryšio su „Google Ads“ nustatymas
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **„Google Ads“**, kad sukonfigūruotumėte ryšį.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **Google Ads**.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
-1. Pasirinkite, kas gali naudoti šį ryšį. Jei jokio veiksmo neimsite, numatytasis parametras bus administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Įveskite savo **[„Google Ads“ kliento ID](https://support.google.com/google-ads/answer/1704344)**.
+1. Įveskite "Google Ads" kliento ID.
 
-1. Pasirinkę **Sutinku**, kad patvirtintumėte **Duomenų privatumą ir atitiktį**.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
 1. Pasirinkite **Autentifikuoti su „Google Ads“** ir pateikti savo „Google Ads“ prisijungimo duomenis.
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
-1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį. 
+1. Pasirinkite **Įrašyti**, kad užbaigtumėte ryšį.
 
 ## <a name="configure-an-export"></a>Eksportavimo konfigūravimas
 
-Šį eksportavimą galite sukonfigūruoti, jei turite prieigą prie šio tipo ryšio. Daugiau informacijos žr. [Eksportavimui konfigūruoti reikalingi leidimai](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Jei norite sukurti naują eksportavimą, pasirinkite **Pridėti paskirties vietą**.
+1. Pasirinkite **Pridėti eksportavimą**.
 
-1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Google Ads“. Jei šio skyriaus pavadinimo nematote, jums nėra jokių šio tipo ryšių.
+1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Google Ads“. Jei ryšio nėra, kreipkitės į administratorių.
 
-1. Jei norite sukurti naują auditoriją, palikite lauką "Google Audience ID" tuščią. Automatiškai sukursime naują auditoriją jūsų "Google Ads" paskyroje ir naudosime eksportuoto segmento pavadinimą. Jei norite atnaujinti esamą "Google Ads" auditoriją, įveskite ["Google Ads" auditorijos ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
+1. Įveskite eksportavimo pavadinimą.
+
+1. Pasirinkite, ar naudoti esamą auditoriją, ar kurti naują:
+   - Jei norite atnaujinti esamą "Google Ads" auditoriją, įveskite ["Google Ads" auditorijos ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns).
+   - Jei norite sukurti naują auditoriją, lauką "Google Audience ID" palikite tuščią. "Customer Insights" automatiškai sukurs naują auditoriją "Google Ads" paskyroje ir naudos eksportuoto segmento pavadinimą.
 
 1. Sekcijoje **Duomenų atitikimas** pasirinkite vieną ar daugiau duomenų laukų, kuriuos norite eksportuoti, ir pasirinkite lauką, kuris nurodo atitinkamus duomenų laukus "Customer Insights".
 
-1. Pasirinkite segmentus, kuriuos norite eksportuoti. 
+1. Pasirinkite segmentus, kuriuos norite eksportuoti.
 
-Eksportavimo įrašymas eksportavimo iš karto nevykdo.
+1. Pasirinkite **Įrašyti**.
 
-Eksportavimas vykdomas kiekvieno [suplanuoto atnaujinimo metu](system.md#schedule-tab). 
-
-Taip pat galite [eksportuoti duomenis pagal pareikalavimą](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Google Ads“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Google Ads“ reklamos atitinka visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šio eksportavimo paskirties vietą bet kuriuo metu, kad nutrauktų šios funkcijos naudojimą.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
