@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196404"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259854"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Duomenų eksportavimas į Azure Synapse Analytics (peržiūra)
 
@@ -24,7 +24,7 @@ ms.locfileid: "9196404"
 > [!NOTE]
 > Įsitikinkite, kad nustatėte visus **vaidmenų priskyrimus**, kaip aprašyta.
 
-- Programoje "Customer Insights" jūsų Azure Active Directory (AD) vartotojo paskyra turi turėti [administratoriaus vaidmenį](permissions.md#assign-roles-and-permissions).
+- Programoje "Customer Insights" jūsų Azure Active Directory (AD) vartotojo paskyra turi turėti [administratoriaus vaidmenį](permissions.md#add-users).
 
 „Azure“ tarnyboje:
 
@@ -39,6 +39,8 @@ ms.locfileid: "9196404"
 - Darbo *[Azure Synapse srities valdoma tapatybė](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* turi **saugyklos "Blob Data Contributor"** teises Gen2 paskyroje Azure Data Lake Storage, kurioje yra duomenys ir kuri Azure Synapse yra susieta su darbo sritimi. Sužinokite daugiau [„Azure” portalo naudojimas „Azure” vaidmens priskyrimui, kad būtų galima pasiekti didelį dvejetainį objektą ir duomenų eilę](/azure/storage/common/storage-auth-aad-rbac-portal) ir [Didelių dvejetainių objektų saugyklos bendraautoriaus teisės](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - Darbo srityje Azure Synapse"Customer Insights" aptarnavimo vykdytojas *turi priskirtą* **"Synapse" administratoriaus**[vaidmenį.](/azure/synapse-analytics/security/how-to-set-up-access-control)
+
+- Jei jūsų "Customer Insights" aplinka saugo duomenis jūsų [Azure Data Lake Storage](own-data-lake-storage.md) pačių, vartotojui, kuris nustato ryšį, Azure Synapse Analytics reikia bent jau įtaisytojo **Skaitytuvo** vaidmens duomenų ežero saugyklos paskyroje. Daugiau informacijos rasite [„Azure” vaidmenų priskyrimas naudojant „Azure” portalą](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Ryšio su Azure Synapse
 

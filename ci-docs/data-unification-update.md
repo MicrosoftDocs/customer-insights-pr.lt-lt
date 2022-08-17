@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139621"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245604"
 ---
 # <a name="update-the-unification-settings"></a>Suvienijimo parametrų naujinimas
 
@@ -42,7 +42,7 @@ Norėdami peržiūrėti arba pakeisti suvienijimo parametrus sukūrus vieningąj
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Puslapio Duomenys suvienodinti su paryškintomis parinktimis Suvienodinti ekrano kopija.":::
 
    - [Vykdykite atitikimo sąlygas](#run-matching-conditions), kad greitai įvertintumėte atitikimo sąlygų (dubliavimo ir atitikties taisyklių) kokybę neatnaujindami vieningo profilio. Parinktis **Vykdyti tik atitikimo sąlygas** nerodoma vienam objektui.
-   - [Suvienodinkite klientų profilius](#run-updates-to-the-unified-customer-profile), kad būtų vykdomos atitikties sąlygos, ir atnaujinkite vieningą kliento profilio objektą nedarydami įtakos priklausomybėms (pvz., papildymams, segmentams ar matams). Priklausomi procesai nevykdomi, bet bus atnaujinti, kaip [apibrėžta atnaujinimo grafike](system.md#schedule-tab).
+   - [Suvienodinkite klientų profilius](#run-updates-to-the-unified-customer-profile), kad būtų vykdomos atitikties sąlygos, ir atnaujinkite vieningą kliento profilio objektą nedarydami įtakos priklausomybėms (pvz., papildymams, segmentams ar matams). Priklausomi procesai nevykdomi, bet bus atnaujinti, kaip [apibrėžta atnaujinimo grafike](schedule-refresh.md).
    - [Suvienodinti klientų profilius ir priklausomybes](#run-updates-to-the-unified-customer-profile), kad būtų vykdomos atitikties sąlygos, ir atnaujinkite vieningą kliento profilio objektą bei visas priklausomybes (pvz., papildymus, segmentus ar matus). Visi procesai automatiškai paleidžiami iš naujo.
 
 ## <a name="edit-source-fields"></a>Šaltinio laukų redagavimas
@@ -69,7 +69,7 @@ Negalite pašalinti atributo arba objekto, jei jie jau buvo suvienodinti.
 
    Rastų pasikartojančių įrašų skaičius rodomas dalyje **Dublikatai**. Stulpelyje **Dubliuojami** įrašai rodoma, kurie objektai turėjo pasikartojančius įrašus ir pasikartojančių įrašų procentą.
 
-1. Jei įtraukėte papildytą objektą, pasirinkite **Naudoti papildytus objektus**. Daugiau informacijos ieškokite [Duomenų šaltinių papildymas](data-sources-enrichment.md).
+1. Jei įtraukėte papildytą objektą, pasirinkite **Naudoti papildytus objektus**. Daugiau informacijos ieškokite [Duomenų šaltinių](data-sources-enrichment.md) papildymas.
 
 1. Norėdami valdyti dubliavimo taisykles, pasirinkite bet kurią iš šių parinkčių:
    - **Naujos taisyklės** kūrimas: pasirinkite **Įtraukti taisyklę** po atitinkamu objektu. Daugiau informacijos ieškokite [Dubliavimo taisyklių apibrėžimas](remove-duplicates.md#define-deduplication-rules).
@@ -110,7 +110,7 @@ Galite konfigūruoti iš naujo ir tiksliai nustatyti daugumą atitikties paramet
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Grafinis nesuderintų ir suderintų įrašų atvaizdavimas, įskaitant duomenų sąrašą.":::
 
-1. Jei įtraukėte papildytą objektą, pasirinkite **Naudoti papildytus objektus**. Daugiau informacijos ieškokite [Duomenų šaltinių papildymas](data-sources-enrichment.md).
+1. Jei įtraukėte papildytą objektą, pasirinkite **Naudoti papildytus objektus**. Daugiau informacijos ieškokite [Duomenų šaltinių](data-sources-enrichment.md) papildymas.
 
 1. Norėdami valdyti taisykles, pasirinkite bet kurią iš šių parinkčių:
    - **Naujos taisyklės** kūrimas: pasirinkite **Įtraukti taisyklę** po atitinkamu objektu. Daugiau informacijos ieškokite [Atitikties porų taisyklių apibrėžimas](match-entities.md#define-rules-for-match-pairs).
@@ -154,7 +154,7 @@ Vykdyti atitikimo sąlygas vykdomos tik dubliavimo ir atitikties taisyklės ir a
 
 1. Puslapyje Duomenų **suvienodinimas** > **pasirinkite**:
 
-   - **Klientų profilių** suvienodinimas: vykdo atitikimo sąlygas ir naujina vieningą kliento profilio objektą, nedarydamas įtakos priklausomybėms (pvz., papildymams, segmentams ar matams). Priklausomi procesai nevykdomi, bet bus atnaujinti, kaip [apibrėžta atnaujinimo grafike](system.md#schedule-tab).
+   - **Klientų profilių** suvienodinimas: vykdo atitikimo sąlygas ir naujina vieningą kliento profilio objektą, nedarydamas įtakos priklausomybėms (pvz., papildymams, segmentams ar matams). Priklausomi procesai nevykdomi, bet bus atnaujinti, kaip [apibrėžta atnaujinimo grafike](schedule-refresh.md).
 
    - **Klientų profilių ir priklausomybių** suvienodinimas: vykdo atitikimo sąlygas ir atnaujina vieningąjį profilį bei visas priklausomybes. Visi procesai automatiškai paleidžiami iš naujo. Užbaigus visus tolesnius procesus, kliento profilis atspindi atnaujintus duomenis.
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207101"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245659"
 ---
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
@@ -67,7 +67,7 @@ Pasirinkite duomenų šaltinis, kad peržiūrėtumėte galimus veiksmus.
 
 Duomenų šaltiniai gali būti paleisti iš naujo automatiniu grafiku arba rankiniu būdu pagal poreikį. [Vietoje esantys duomenų šaltiniai](connect-power-query.md#add-data-from-on-premises-data-sources) atnaujinami pagal savo tvarkaraščius, kurie nustatomi duomenų įsisavinimo metu. Pridedamų duomenų šaltinių atveju duomenų nurijimas sunaudoja naujausius duomenis, gautus iš to duomenų šaltinis.
 
-Eikite į **administratoriaus** > **sistemos** > [**tvarkaraštį**](system.md#schedule-tab), kad sukonfigūruotumėte sistemos suplanuotus nurijusių duomenų šaltinių atnaujinimus.
+Eikite į **administratoriaus** > **sistemos** > [**tvarkaraštį**](schedule-refresh.md), kad sukonfigūruotumėte sistemos suplanuotus nurijusių duomenų šaltinių atnaujinimus.
 
 Norėdami atnaujinti duomenų šaltinis pagal poreikį:
 

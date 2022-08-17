@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
-ms.translationtype: MT
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053890"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245889"
 ---
 # <a name="data-enrichment-preview-overview"></a>Duomenų papildymo (peržiūros) apžvalga
 
@@ -76,7 +76,7 @@ Pasirinkite papildymą, kad peržiūrėtumėte galimus veiksmus.
 - **Peržiūrėkite** papildymo informaciją su papildytų klientų profilių skaičiumi.
 - **Redaguokite** papildymo konfigūraciją.
 - [**Vykdykite**](#run-or-refresh-enrichments) papildymą, kad atnaujintumėte klientų profilius naujausiais duomenimis. Vykdykite kelis papildymus vienu metu, pasirinkdami juos sąraše.
-- **Suaktyvinkite** arba **išjunkite** papildymą. Neaktyvus papildymas nebus atnaujintas per suplanuotą [atnaujinimą](system.md#schedule-tab).
+- **Suaktyvinkite** arba **išjunkite** papildymą. Neaktyvus papildymas nebus atnaujintas per suplanuotą [atnaujinimą](schedule-refresh.md).
 - **Panaikinkite** papildymą.
 
 Taip pat galite kurti [segmentus arba](segments.md) matus [iš](measures.md) sodrinimo.
@@ -85,7 +85,7 @@ Taip pat galite kurti [segmentus arba](segments.md) matus [iš](measures.md) sod
 
 Paleidus papildymus, juos galima atnaujinti automatiniu grafiku arba atnaujinti rankiniu būdu pagal poreikį.
 
-1. Norėdami rankiniu būdu atnaujinti vieną ar daugiau papildymų, pažymėkite juos ir pasirinkite **Vykdyti**. Norėdami [suplanuoti automatinį atnaujinimą](system.md#schedule-tab), eikite į **Administratoriaus** > **sistemos** > **tvarkaraštis**. Apdorojimo laikas priklauso nuo jūsų kliento duomenų dydžio.
+1. Norėdami rankiniu būdu atnaujinti vieną ar daugiau papildymų, pažymėkite juos ir pasirinkite **Vykdyti**. Norėdami [suplanuoti automatinį atnaujinimą](schedule-refresh.md), eikite į **Administratoriaus** > **sistemos** > **tvarkaraštis**. Apdorojimo laikas priklauso nuo jūsų kliento duomenų dydžio.
 
 1. Pasirinktinai [žiūrėkite sodrinimo proceso eigą](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Galite rasti informacijos apie papildymo apdorojimą, įskaitant jo būseną ir 
 1. Srityje **Išsami eigos informacija** išplėskite **Papildymų** skyrių.
 1. Po papildymu, kurio progresą norite peržiūrėti, pasirinkite **Žiūrėti išsamią informaciją**.
 1. Srityje **Išsami užduoties informacija** pasirinkite **Rodyti išsamią informaciją**, kad peržiūrėtumėte procesus, kurie susiję su papildymų atnaujinimu ir jų būsena.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Papildymo rezultatų peržiūra
 

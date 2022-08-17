@@ -1,19 +1,19 @@
 ---
 title: Praturtinkite klientų profilius naudodami SFTP pasirinktinį importavimą (peržiūra)
 description: Bendra informacija apie SFTP tinkinto importavimo papildymą.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 831d1d3d3045379bbc5bcdcd4b05b8a147221f31
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195806"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237776"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Praturtinkite klientų profilius naudodami SFTP pasirinktinį importavimą (peržiūra)
 
@@ -85,14 +85,9 @@ Turite būti ["Customer Insights" administratorius](permissions.md#admin) ir tur
 
 1. Įveskite galiojantį SFTP serverio, kuriame importuotini duomenys, vartotojo vardą, slaptažodį ir pagrindinio kompiuterio URL.
 
-1. Pasirinkdami Sutinku, peržiūrėkite [ir pateikite savo sutikimą dėl](#data-privacy-and-compliance) duomenų privatumo ir sąlygų **sutinku**.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
 1. Pasirinkite **Tikrinti**, kad patvirtintumėte konfigūraciją, tada pasirinkite **Įrašyti**.
-
-### <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Kai įgalinate Dynamics 365 Customer Insights perduoti duomenis naudodami pasirinktinį importavimą, leidžiate perduoti duomenis už atitikties ribos Dynamics 365 Customer Insights ribų, įskaitant galimai neskelbtinus duomenis, pvz., Asmens duomenis. "Microsoft" perduos tokius duomenis jūsų nurodymu, tačiau jūs esate atsakingi už tai, kad užtikrintumėte, jog duomenys atitiktų visus privatumo ar saugos įsipareigojimus, kuriuos galite turėti. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 ## <a name="configure-the-import"></a>Importavimo konfigūravimas
 

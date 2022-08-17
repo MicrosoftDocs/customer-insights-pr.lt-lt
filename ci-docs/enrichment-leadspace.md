@@ -1,19 +1,19 @@
 ---
 title: Praturtinkite įmonės profilius naudodami "Leadspace" (peržiūra)
 description: Bendra informacija apie „Leadspace“ trečiosios šalies praturtinimą.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: f45fabc036775e11fc439f69513678d0607729d0
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196220"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237960"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Praturtinkite įmonės profilius naudodami "Leadspace" (peržiūra)
 
@@ -35,14 +35,9 @@ Turite būti ["Customer Insights" administratorius](permissions.md#admin) ir tur
 
 1. Įveskite ryšio pavadinimą ir galiojantį "Leadspace" prieigos raktą.
 
-1. Pasirinkdami Sutinku, peržiūrėkite [ir pateikite savo sutikimą dėl](#data-privacy-and-compliance) duomenų privatumo ir sąlygų **sutinku**.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
 1. Pasirinkite **Tikrinti**, kad patvirtintumėte konfigūraciją, tada pasirinkite **Įrašyti**.
-
-### <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Jums įjungus „Dynamics 365 Customer Insights“ duomenų perdavimui į „Leadspace“, leidžiate perduoti duomenis ne atitikties ribose „Dynamics 365 Customer Insights, įskaitant galimai jautrius duomenis, tokius kaip asmeniniai duomenys. „Microsoft“ perduos tokius duomenis pagal jūsų nurodymą, bet jūs esate atsakingi už tai, kad „Leadspace“ atitiks visus jūsų galimai prisiimtus privatumo ir saugos įsipareigojimus. Dėl išsamesnės informacijos, žr. [„Microsoft“ pareiškimas dėl privatumo](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 

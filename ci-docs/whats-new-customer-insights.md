@@ -1,19 +1,19 @@
 ---
 title: Kas nauja programoje „Dynamics 365 Customer Insights“
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114256"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246021"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Kas nauja programoje „Dynamics 365 Customer Insights“
 
@@ -23,6 +23,28 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>2022 m. liepos mėn. naujinimai
+
+2022 m. liepos mėnesio atnaujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų pataisymus.
+
+### <a name="export-to-moengage"></a>Eksportas į "MoEngage"
+
+Eksportuokite vieningų klientų profilių segmentus į "MoEngage" ir naudokite juos el. pašto rinkodarai "MoEngage".
+
+Daugiau informacijos ieškokite [Segmentų eksportavimas į "MoEngage"](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>SSH palaikymas SFTP pagrįstam eksportui
+
+Pasirinkite, ar norite autentifikuoti naudodami SSH, ar vartotojo vardą / slaptažodį ryšiams su SFTP eksporto paskirties vietomis.
+
+Daugiau informacijos ieškokite [Duomenų eksportavimas į SFTP pagrindinius kompiuterius](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Suasmeninkite funkcijas naudodami duomenis apie žinomus ir nežinomus vartotojus
+
+Klientų duomenų tvarkymas nėra naujas iššūkis, tačiau jis tampa vis sudėtingesnis, nes vartotojai naršo įvairiuose prekių ženklų siūlomuose skaitmeniniuose kanaluose. Vartotojas, kuris yra žinomas (autentifikuotas) viename kanale, tampa nežinomas (neautentifikuotas) kitame kanale, jei jis nėra prisijungęs. Problema dažnai yra ta, kad neautentifikuoti (nežinomi) vartotojai neturi bendro ID. Jis gali būti naudojamas prasmingiems profilių atributams susieti ir vieningiems klientų profiliams generuoti. "Customer Insights" padeda išspręsti šią problemą, nurijus duomenis iš sekimo metodų šaltinio sistemose.
+
+Daugiau informacijos ieškokite [Funkcijų suasmeninimas naudojant duomenis apie žinomus ir nežinomus vartotojus](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>2022 m. birželio mėn. naujinimai
 
@@ -44,13 +66,13 @@ Daugiau informacijos ieškokite [Eksportavimas į "InMobi" (peržiūra)](export-
 
 "Customer Lockbox" suteikia sąsają, leidžiančią peržiūrėti ir patvirtinti (arba atmesti) prieigos prie duomenų užklausas. Šios užklausos atsiranda, kai norint išspręsti palaikymo atvejį, reikalinga prieiga prie klientų duomenų.
 
-Daugiau informacijos ieškokite [Saugiai pasiekite klientų duomenis naudodami "Customer Lockbox" (peržiūra)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+Norėdami gauti daugiau informacijos, žiūrėkite [Saugiai pasiekite klientų duomenis naudodami "Customer Lockbox" (peržiūra)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Prisijungimas prie savo duomenų naudojant "Azure Private Link"
 
 "Azure Private Link" leidžia "Customer Insights" prisijungti prie jūsų Azure Data Lake Storage paskyros per privatų virtualaus tinklo galinį punktą. Duomenims, esantiems saugojimo paskyroje, kuri nėra viešajame internete, "Private Link" įgalina ryšį su tuo apribotu tinklu.
 
-Daugiau informacijos ieškokite [Privataus saito naudojimas programoje "Customer Insights](security-overview.md#private-links-tab)".
+Daugiau informacijos ieškokite [Privataus saito naudojimas programoje "Customer Insights](security-overview.md#set-up-an-azure-private-link)".
 
 ## <a name="may-2022-updates"></a>2022 m. gegužės mėn. naujinimai
 
@@ -208,7 +230,7 @@ Tiesiogiai susisiekite su savo "Microsoft" paskyros komanda, jei turite klausim�
 
 "Customer Insights" suteikia naują dirbtiniu intelektu pagrįstą funkciją, leidžiančią sintezuoti klientų nuotaikas ir nustatyti konkrečius verslo aspektus kaip tikslinių patobulinimų galimybes. Analizuodami raštiškus klientų atsiliepimus, galite gauti tikslių įžvalgų už mažą kainą. Nuotaikų analizė, pagrįsta natūralios kalbos apdorojimo (NLP) modeliais, kurie generuoja dvi išvestines įžvalgas kiekvienam kliento ID. Nuotaikų balas (nuo –5 iki 5) ir taikomų verslo aspektų sąrašas. 
 
-Norėdami gauti daugiau informacijos, žiūrėkite [Nuotaikų analizė klientų atsiliepimuose (peržiūra)](sentiment-analysis.md).
+Daugiau informacijos ieškokite [Nuotaikų analizė klientų atsiliepimuose (Peržiūra)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

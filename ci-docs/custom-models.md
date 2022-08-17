@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800430"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245813"
 ---
 # <a name="custom-machine-learning-models"></a>Pasirinktiniai mašininio mokymo modeliai
 
 > [!NOTE]
-> "mašininis mokymas Studio" (klasikinis) palaikymas baigsis 2024 m. rugpjūčio 31 d. Rekomenduojame iki tos datos pereiti prie ["Azure mašininis mokymas](/azure/machine-learning/overview-what-is-azure-machine-learning)".
+> "mašininis mokymas Studio" (klasika) palaikymas baigsis 2024 m. rugpjūčio 31 d. Rekomenduojame pereiti prie ["Azure mašininis mokymas](/azure/machine-learning/overview-what-is-azure-machine-learning) iki tos datos.
 >
-> Nuo 1 gruodžio 2021 negalėsite sukurti naujų mašininis mokymas Studijos (klasikinių) išteklių. Iki rugpjūčio 31 d. 2024 m. galite toliau naudoti esamus "mašininis mokymas Studio" (klasikinius) išteklius. Daugiau informacijos ieškokite [Migrate to Azure mašininis mokymas](/azure/machine-learning/migrate-overview).
+> Nuo 2021 m. gruodžio 1 d. negalėsite kurti naujų mašininis mokymas studijos (klasikinių) išteklių. Iki 2024 m. rugpjūčio 31 d. galite toliau naudoti esamus "mašininis mokymas Studio" (klasikinius) išteklius. Daugiau informacijos ieškokite [Perkėlimas į "Azure" mašininis mokymas](/azure/machine-learning/migrate-overview).
 
 
 **Įžvalga** > **Tinkinti modeliai** leidžia jums valdyti darbo eigas pagrįstas „Azure“ mašininio mokymosi modeliais. Darbo eigos padeda jums pasirinkti duomenis, iš kurių norite sukurti įžvalgas ir padaryti žemėlapių rezultatus į jūsų suvienodinto kliento duomenis. Dėl išsamesnės informacijos apie tinkintų ML modelių kūrimą, žr. [Naudoti „Azure“ mašininiu mokymusi pagrįstus modelius](azure-machine-learning-experiments.md).
@@ -34,7 +34,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- Ši funkcija palaiko žiniatinklio tarnybas, paskelbtas naudojant ["Azure" mašininis mokymas paketinius vamzdynus](/azure/machine-learning/concept-ml-pipelines).
+- Ši funkcija palaiko žiniatinklio paslaugas, išleistas per ["Azure" mašininis mokymas paketinius vamzdynus](/azure/machine-learning/concept-ml-pipelines).
 
 - Jums reikia „Azure Data Lake Gen2“ talpinimo paskyros susietos su „Azure“ studijos elementu siekiant naudoti šią funkciją. Daugiau informacijos rasite [„Azure Data Lake Storage Gen2“ saugyklos abonemento kūrimas](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -60,7 +60,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
 1. Pasirinkite **Darbo aplinkas** susietas su jūsų žiniatinklio paslaugomis. 
 
-1. Žiniatinklio tarnyboje, kurioje yra jūsų modelio **išplečiamasis sąrašas, pasirinkite**"Azure" mašininis mokymas. Tada pasirinkite **Toliau**.    
+1. Pasirinkite "Azure mašininis mokymas" srautą žiniatinklio **tarnyboje, kurioje yra jūsų modelio** išskleidžiamasis meniu. Tada pasirinkite **Toliau**.    
    Sužinokite apie [„Azure“ mašininio mokymosi vamzdyno publikavimą naudojant kūrimo įrankį](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ar [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Jūsų vamzdynas turi būti publikuojamas skyriuje [vamzdyno galutinis taškas](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Kiekvienai **Žiniatinklio tarnybos įvesčiai** pasirinkite atitinkamą **Objektą** iš „Customer Insights“ ir pasirinkite **Pirmyn**.
@@ -84,7 +84,7 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
    > ![Susiekite rezultatus su kliento duomenų juosta.](media/intelligence-screen4-relatetocustomer.png "Susiekite rezultatus su kliento duomenų juosta")
 
 1. Matysite ekraną **Darbo eiga įrašyta** su informacija apie darbo eigą.    
-   Jei sukonfigūravote "Azure" mašininis mokymas vamzdyno darbo eigą, "Customer Insights" prideda prie darbo srities, kurioje yra vamzdynas. "Customer Insights" gaus **bendraautoriaus** vaidmenį "Azure" darbo srityje.
+   Jei sukonfigūravote "Azure mašininis mokymas" srauto darbo eigą, "Customer Insights" prideda prie darbo srities, kurioje yra srautas. "Customer Insights" gaus **bendraautorio** vaidmenį "Azure" darbo srityje.
 
 1. Pasirinkite **Atlikta**.
 
@@ -92,11 +92,11 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
 ## <a name="edit-a-workflow"></a>Darbo eigos redagavimas
 
-1. **Puslapyje Pasirinktiniai modeliai** pasirinkite vertikalią daugtaškį (&vellip;) **stulpelyje Veiksmai** šalia anksčiau sukurtos darbo eigos ir pasirinkite **Redaguoti**.
+1. **Puslapyje Pasirinktiniai modeliai** pasirinkite vertikalią daugtaškį (&vellip;) stulpelyje **Veiksmai** šalia anksčiau sukurtos darbo eigos ir pasirinkite **Redaguoti**.
 
 1. Galite naujinti jūsų darbo eigos atpažįstamą pavadinimą **Rodomo pavadinimo** laukelyje, bet jūs negalite keisti konfigūruoto žiniatinklio paslaugų ar vamzdyno. Pasirinkite **Toliau**.
 
-1. Kiekvienai **žiniatinklio tarnybos įvesčiai** galite atnaujinti atitinkamą **objektą** iš "Customer Insights". Tada pasirinkite **Toliau**.
+1. Kiekvienai **žiniatinklio tarnybos įvestijai** galite atnaujinti atitinkantį **objektą** iš "Customer Insights". Tada pasirinkite **Toliau**.
 
 1. **Modelio išvesties parametrų** žingsnyje nustatykite tolesnes ypatybes:
       1. Įveskite išvesties **Objekto pavadinimą**, į kurį norite įlieti vamzdyno išvestį.
@@ -108,15 +108,15 @@ Prognozės siūlo galimybes kurti geresnes kliento patirtis, pagerinti verslo ga
 
 ## <a name="run-a-workflow"></a>Darbo eigos vykdymas
 
-1. **Puslapyje Pasirinktiniai modeliai** pasirinkite &vellip; vertikalią daugtaškį (**) stulpelyje Veiksmai** šalia anksčiau sukurtos darbo eigos.
+1. **Puslapyje Pasirinktiniai modeliai** pasirinkite vertikalią daugtaškį (&vellip;) **stulpelyje Veiksmai** šalia anksčiau sukurtos darbo eigos.
 
 1. Pasirinkite **Vykdyti**.
 
-Jūsų darbo eiga taip pat vykdoma automatiškai kartu su visais suplanuotais atnaujinimais. Sužinokite daugiau apie [suplanuotų atnaujinimų nustatymą](system.md#schedule-tab).
+Jūsų darbo eiga taip pat vykdoma automatiškai kartu su visais suplanuotais atnaujinimais. Sužinokite daugiau apie [suplanuotų atnaujinimų nustatymą](schedule-refresh.md).
 
 ## <a name="delete-a-workflow"></a>Darbo eigos naikinimas
 
-1. **Puslapyje Pasirinktiniai modeliai** pasirinkite &vellip; vertikalią daugtaškį (**) stulpelyje Veiksmai** šalia anksčiau sukurtos darbo eigos.
+1. **Puslapyje Pasirinktiniai modeliai** pasirinkite vertikalią daugtaškį (&vellip;) **stulpelyje Veiksmai** šalia anksčiau sukurtos darbo eigos.
 
 1. Pasirinkite **Naikinti** ir patvirtinkite naikinimo veiksmą.
 

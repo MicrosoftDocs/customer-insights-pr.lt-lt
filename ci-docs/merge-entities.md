@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139667"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213592"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Kliento laukų suvienodinimas duomenų suvienijimui
 
@@ -58,6 +58,9 @@ Atlikdami šį suvienijimo proceso veiksmą, pasirinkite ir išskirkite atributu
 
 1. Nurodykite, kaip sujungti arba sulieti laukus viena iš trijų parinkčių:
     - **Svarba**: nustato laiminčią reikšmę pagal svarbos reitingą, nurodytą dalyvaujantiems laukams. Tai yra numatytoji suliejimo parinktis. Pasirinkite **Perkelti aukštyn/žemyn**, kad nustatytumėte svarbos vertinimą.
+
+      > [!NOTE]
+      > "Customer Insights" naudoja pirmąją ne nulinę reikšmę. Pavyzdžiui, nurodyti objektai A, B ir C reitinguojami ta tvarka, jei A.Name ir B.Name yra neapibrėžti, tada naudojama reikšmė iš C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Svarbos parinktis suliejimo laukų dialogo lange.":::
 

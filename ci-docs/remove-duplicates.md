@@ -2,7 +2,7 @@
 title: Dublikatų šalinimas prieš suvienodinant duomenis
 description: Antrasis suvienijimo proceso žingsnis yra pasirinkimas, kurį įrašą saugoti, kai randami dublikatai.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,20 +13,29 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139439"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213637"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Dublikatų šalinimas prieš suvienodinant duomenis
 
-Šis suvienijimo veiksmas pasirinktinai leidžia nustatyti objekte esančių įrašų besidubliuojančių įrašų tvarkymo taisykles. *Dublikatas* identifikuoja pasikartojančius įrašus ir sulieja juos į vieną įrašą. Šaltinio įrašai yra susiejami su sulietu įrašu su alternatyviais ID. Jei taisyklės nesukonfigūruotos, taikomos sistemos apibrėžtos taisyklės.
+Šis pasirinktinis suvienijimo veiksmas leidžia nustatyti taisykles, kaip pašalinti pasikartojančius įrašus **objekte**. Dubliavimas identifikuoja kelis kliento įrašus ir parenka geriausią saugotiną įrašą (pagal pagrindines suliejimo nuostatas) arba sulieja įrašus į vieną (pagal išplėstines suliejimo nuostatas). Šaltinio įrašai yra susiejami su sulietu įrašu su alternatyviais ID. Jei taisyklės nesukonfigūruotos, taikomos sistemos apibrėžtos taisyklės.
+
+## <a name="default-deduplication"></a>Numatytasis dubliavimas
+
+Sistemos nustatytos taisyklės taikomos, jei neįtraukiamos dubliavimo taisyklės.
+
+- Pirminis raktas yra dubliuojamas.
+  Visų įrašų, turinčių tą patį pirminį raktą **, nugalėtojas yra labiausiai užpildytas** įrašas (tas, kurio nulinės reikšmės yra mažiausios).
+- Ūkio subjektui taikomos visos kelių objektų atitikties taisyklės.
+  Pavyzdžiui: atitikties veiksme, jei objektas A yra suderinamas su objektu B *"FullName"* ir *"DateofBirth*", tada objektas A taip pat dubliuojamas pagal *"FullName" ir*"*DateofBirth*". Kadangi *"FullName" ir*"*DateofBirth*" yra galiojantys raktai, leidžiantys identifikuoti klientą objekte A, šie raktai taip pat galioja identifikuojant besidubliuojančius klientus objekte A.
 
 ## <a name="include-enriched-entities-preview"></a>Papildytųjų objektų įtraukimas (peržiūra)
 
-Jei praturtinote objektus duomenų šaltinis lygiu, kad pagerintumėte suvienijimo rezultatus, pasirinkite juos. Daugiau informacijos ieškokite [Duomenų šaltinių papildymas](data-sources-enrichment.md).
+Jei praturtinote objektus duomenų šaltinis lygiu, kad pagerintumėte suvienijimo rezultatus, pasirinkite juos. Daugiau informacijos ieškokite [Duomenų šaltinių](data-sources-enrichment.md) papildymas.
 
 1. **Puslapyje Dubliuoti įrašus** puslapio viršuje pasirinkite **Naudoti papildytus objektus**.
 

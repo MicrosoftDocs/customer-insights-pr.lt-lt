@@ -1,19 +1,19 @@
 ---
 title: Praturtinkite klientų profilius tapatybės duomenimis iš "LiveRamp" (peržiūra)
 description: Praturtinkite klientų profilius "LiveRamp" duomenimis.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196358"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237822"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Praturtinkite klientų profilius tapatybės duomenimis iš "LiveRamp" (peržiūra)
 
@@ -41,13 +41,9 @@ Turite būti ["Customer Insights" administratorius](permissions.md#admin) ir tur
 
 1. Įveskite ryšio pavadinimą ir galiojantį "LiveRamp" kliento ID bei paslaptį.
 
-1. Pasirinkdami Sutinku, peržiūrėkite [ir pateikite savo sutikimą dėl](#data-privacy-and-compliance) duomenų privatumo ir sąlygų **sutinku**.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
 1. Pasirinkite **Tikrinti**, kad patvirtintumėte konfigūraciją, tada pasirinkite **Įrašyti**.
-
-### <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Kai leidžiate Dynamics 365 Customer Insights perduoti duomenis į "LiveRamp", leidžiate perduoti duomenis už atitikties ribos Dynamics 365 Customer Insights ribų, įskaitant galimai neskelbtinus duomenis, pvz., Asmens duomenis. "Microsoft" perduos tokius duomenis jūsų nurodymu, bet jūs esate atsakingi už tai, kad užtikrintumėte, jog "LiveRamp" laikytųsi visų privatumo ar saugos įsipareigojimų, kuriuos galite turėti. Norėdami gauti daugiau informacijos, peržiūrėkite ["Microsoft" privatumo patvirtinimą](https://go.microsoft.com/fwlink/?linkid=396732). Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 

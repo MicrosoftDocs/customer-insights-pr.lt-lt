@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170691"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246303"
 ---
 # <a name="segments-overview"></a>Segmentų apžvalga
 
@@ -58,7 +58,7 @@ Pasirinkite segmentą, kad peržiūrėtumėte galimus veiksmus.
 - **Redaguoti** segmentą ir pakeisti jo ypatybes.
 - **Kurti dublikatą** segmentui. Galite iš karto pasirinkti redaguoti jo ypatybes arba išsaugoti dublikatą.
 - [**Atnaujinkite**](#refresh-segments) segmentą, kad įtrauktumėte naujausius duomenis.
-- **Aktyvinti** arba **Išjungti** segmentą. Neaktyvūs segmentai nebus atnaujinti suplanuoto atnaujinimo [metu](system.md#schedule-tab), o **būsena** bus nurodyta kaip **Praleista**, o tai rodo, kad atnaujinti net nebuvo bandyta. Aktyvūs segmentai atnaujinami atsižvelgiant į jų tipą: statinį arba dinaminį.
+- **Aktyvinti** arba **Išjungti** segmentą. Neaktyvūs segmentai nebus atnaujinti suplanuoto atnaujinimo [metu](schedule-refresh.md), o **būsena** bus nurodyta kaip **Praleista**, o tai rodo, kad atnaujinti net nebuvo bandyta. Aktyvūs segmentai atnaujinami atsižvelgiant į jų tipą: statinį arba dinaminį.
 - **Padarykite statinį** arba **Padarykite dinamišką** segmento tipą. Statiniai segmentai turi būti atnaujinami rankiniu būdu. Dinaminiai segmentai automatiškai atnaujinami atnaujinant sistemą.
 - [**Raskite panašių klientų**](find-similar-customer-segments.md) iš segmento.
 - **Pervardyti** segmentą.
@@ -88,7 +88,7 @@ Apatinėje dalyje yra segmento narių sąrašas.
 
 Segmentus galima atnaujinti automatiniu grafiku arba atnaujinti rankiniu būdu pagal poreikį. Norėdami rankiniu būdu atnaujinti vieną ar daugiau segmentų, pažymėkite juos ir pasirinkite **Atnaujinti**.
 
-Norėdami [suplanuoti automatinį atnaujinimą](system.md#schedule-tab), eikite į **Administratoriaus** > **sistemos** > **tvarkaraštis**. Taikomos šios taisyklės:
+Norėdami [suplanuoti automatinį atnaujinimą](schedule-refresh.md), eikite į **Administratoriaus** > **sistemos** > **tvarkaraštis**. Taikomos šios taisyklės:
 
 - Visi segmentai su dinaminio arba **išplėtimo** tipu **bus** automatiškai atnaujinti nustatytu dažniu. Kai atnaujinimas bus baigtas, būsena **nurodo,** ar buvo kokių nors problemų atnaujinant segmentą. Paskutinis **atnaujintas** rodo paskutinio sėkmingo atnaujinimo laiko žymą. Jei įvyksta klaida, pasirinkite klaidą, kad pamatytumėte išsamią informaciją apie tai, kas įvyko.
 - Segmentai, kurių tipas **Statinis** *, nebus* atnaujinami automatiškai. Paskutiniame **atnaujintame ekrane** rodoma paskutinio karto, kai statinis segmentas buvo paleistas arba atnaujintas rankiniu būdu, laiko žyma.

@@ -1,76 +1,75 @@
 ---
-title: "\"Customer Insights\" saugos parametrai"
+title: Saugos parametrų konfigūravimas
 description: Sužinokite apie saugos parametrus Dynamics 365 Customer Insights.
-ms.date: 06/08/2022
+ms.date: 08/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 163deb9bed4f82d742c46cace27dd128f0aca18b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947425"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246072"
 ---
-# <a name="security-settings-in-customer-insights"></a>"Customer Insights" saugos parametrai
+# <a name="configure-security-settings"></a>Saugos parametrų konfigūravimas
 
-**Saugos** puslapyje pateikiamos parinktys, skirtos konfigūruoti vartotojo teises ir funkcijas, kurios padeda užtikrinti Dynamics 365 Customer Insights saugesnį saugumą. Šį puslapį gali pasiekti tik administratoriai.
+Tvarkykite API raktus, pasiekite klientų duomenis ir nustatykite "Azure Private Link".
 
-Norėdami konfigūruoti parametrus, eikite į **Administratoriaus** > **sauga**.
+## <a name="manage-api-keys"></a>API raktų valdymas
 
-**Saugos** puslapyje yra šie skirtukai:
+Peržiūrėkite ir tvarkykite raktus, kad galėtumėte naudoti ["Customer Insights" API](apis.md) su duomenimis savo aplinkoje.
 
-- [Vartotojai](#users-tab)
-- [API](#apis-tab)
-- [Privatūs saitai](#private-links-tab)
-- [Key Vault](#key-vault-tab)
-- [Saugiai pasiekite klientų duomenis naudodami "Customer Lockbox" (peržiūra)](#securely-access-customer-data-with-customer-lockbox-preview)
+1. Eikite į **Sistemos** > **sauga** ir pasirinkite skirtuką **API**.
 
-## <a name="users-tab"></a>Skirtukas Vartotojai
+1. Jei API prieiga prie aplinkos nenustatyta, pasirinkite **Įgalinti**. Arba, norėdami užblokuoti API prieigą prie aplinkos, pasirinkite **Išjungti** ir patvirtinti.
 
-Prieiga prie "Customer Insights" suteikiama tik jūsų organizacijos vartotojams, kuriuos administratorius įtraukė į taikomąją programą. Skirtuke **Vartotojai** galite valdyti vartotojo prieigą ir jų teises. Daugiau informacijos ieškokite [User rightss](permissions.md).
+1. Tvarkykite pirminius ir antrinius API raktus:
 
-## <a name="apis-tab"></a>Skirtukas API
+   1. Norėdami rodyti pirminį arba antrinį API raktą **, pasirinkite Rodymo** simbolį.
 
-Peržiūrėkite ir tvarkykite raktus, kad "Customer Insights" API [būtų naudojamos](apis.md) su jūsų aplinkos duomenimis.
+   1. Norėdami nukopijuoti pirminį arba antrinį API raktą, pasirinkite simbolį **Kopijuoti**.
 
-Galite sukurti naujus pirminius ir antrinius raktus pasirinkdami **Regeneruoti pirminį** arba **Regeneruoti antrinį**. 
+   1. Norėdami sukurti naujus pirminius arba antrinius API raktus, pasirinkite **Atkurti pirminį** arba **Atkurti antrinį**.
 
-Norėdami blokuoti API prieigą prie aplinkos, pasirinkite **Išjungti**. Jei API yra išjungtos, galite pasirinkti **Įgalinti**, kad vėl suteiktumėte prieigą.
+## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Saugiai pasiekite klientų duomenis naudodami "Customer Lockbox" (peržiūra)
 
-## <a name="private-links-tab"></a>Skirtukas Privatūs saitai
+"Customer Insights Power Platform " naudoja "Customer Lockbox" galimybę. "Customer Lockbox" suteikia sąsają, leidžiančią peržiūrėti ir patvirtinti (arba atmesti) prieigos prie duomenų užklausas. Šios užklausos atsiranda, kai norint išspręsti palaikymo atvejį, reikalinga prieiga prie klientų duomenų. Norint naudoti šią funkciją, "Customer Insights" turi turėti esamą ryšį su nuomotojo Microsoft Dataverse aplinka.
 
-["Azure Private Link](/azure/private-link/private-link-overview) " leidžia "Customer Insights" prisijungti prie jūsų Azure Data Lake Storage abonemento per privatų galinį punktą virtualiame tinkle. Jei duomenys saugyklos paskyroje nėra veikiami viešojo interneto, "Private Link" įgalina ryšį su tuo apribotu tinklu.
+Daugiau informacijos apie "Customer Lockbox" rasite ["Customer Lockbox" suvestinėje](/power-platform/admin/about-lockbox#summary)Power Platform. Straipsnyje taip pat aprašoma [darbo eiga](/power-platform/admin/about-lockbox#workflow) ir reikiama [sąranka](/power-platform/admin/about-lockbox#enable-the-lockbox-policy), kad įgalintumėte kliento užraktą.
+
+> [!IMPORTANT]
+> Visuotiniai Power Platform administratoriai arba Power Platform administratoriai gali patvirtinti "Customer Lockbox" užklausas, pateiktas "Customer Insights".
+
+## <a name="set-up-an-azure-private-link"></a>"Azure Private Link" nustatymas
+
+["Azure Private Link"](/azure/private-link/private-link-overview) leidžia "Customer Insights" prisijungti prie jūsų Azure Data Lake Storage paskyros per privatų virtualaus tinklo galinį punktą. Duomenims, esantiems saugojimo paskyroje, kuri nėra viešajame internete, "Private Link" įgalina ryšį su tuo apribotu tinklu.
 
 > [!IMPORTANT]
 > Minimalus vaidmens reikalavimas norint nustatyti privataus saito ryšį:
 >
-> - "Customer Insights": administratorius
-> - "Azure" įtaisytasis vaidmuo: [saugyklos abonemento bendraautoris](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
+> - Klientų įžvalgos: administratorius
+> - "Azure" įtaisytasis vaidmuo: [saugyklos paskyros bendraautoris](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
 > - Pasirinktinio "Azure" vaidmens teisės: [Microsoft.Storage/storageAccounts/read ir Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
->
 
-"Private Link" nustatymas "Customer Insights" yra dviejų etapų procesas. Pirmiausia inicijuojate privačios nuorodos kūrimą iš **"Customer Insights" administratoriaus** > **saugos** > **asmeninių saitų**. Srityje **Įtraukti privatų saitą** išvardijami nuomotojo saugyklos abonementai, kuriuos turite teisę matyti. Pasirinkite saugyklos abonementą ir suteikite sutikimą sukurti privačią nuorodą.
+1. "Customer Insights" eikite į **Administratoriaus** > **sauga** ir pasirinkite skirtuką **Privatūs saitai**.
 
-Tada turite patvirtinti privačią nuorodą duomenų ežero saugyklos paskyros pusėje. Atidarykite ekrane pateiktą saitą, kad patvirtintumėte naują privačią nuorodą.
+1. Pasirinkite **Pridėti privačią nuorodą**.
 
-## <a name="key-vault-tab"></a>Skirtukas "Rakto skliautas"
+   Srityje Įtraukti **privatų saitą** išvardijami nuomotojo saugyklos abonementai, kuriuos turite teises matyti.
 
-Skirtuke " **Key Vault** " galite susieti ir valdyti savo ["Azure" raktų saugyklą](/azure/key-vault/general/basic-concepts) su aplinka.
-Skirta raktų saugykla gali būti naudojama organizacijos sienų etapų ir naudojimo slaptai vietai nustatyti. "Customer Insights" gali naudoti "Azure Key Vault" paslaptis, kad [nustatytų ryšius su](connections.md) trečiųjų šalių sistemomis.
+1. Pasirinkite prenumeratą, išteklių grupę ir saugyklos paskyrą.
 
-Daugiau informacijos žr. [„Azure” „key vault“ sukūrimas](use-azure-key-vault.md).
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
-## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Saugiai pasiekite klientų duomenis naudodami "Customer Lockbox" (peržiūra)
+1. Pasirinkite **Įrašyti**.
 
-"Customer Insights" naudoja Power Platform "Customer Lockbox" galimybę. Kliento užraktas suteikia sąsają, skirtą peržiūrėti ir patvirtinti (arba atmesti) duomenų prieigos užklausas. Šios užklausos atsiranda, kai norint išspręsti palaikymo atvejį reikia prieigos prie klientų duomenų. Kad galėtų naudoti šią funkciją, "Customer Insights" turi turėti esamą ryšį su nuomotojo Microsoft Dataverse aplinka.
+1. Eikite į savo "Data Lake Storage" paskyrą ir atidarykite ekrane pateiktą nuorodą.
 
-Daugiau informacijos apie "Customer Lockbox" ieškokite ["Customer Lockbox" suvestinėje](/power-platform/admin/about-lockbox#summary)Power Platform. Straipsnyje taip pat aprašoma [darbo eiga](/power-platform/admin/about-lockbox#workflow) ir reikalinga [sąranka](/power-platform/admin/about-lockbox#enable-the-lockbox-policy), kad būtų galima įjungti klientų užraktą.
+1. Patvirtinkite privatų saitą.
 
-> [!IMPORTANT]
-> Visuotiniai administratoriai arba Power Platform administratoriai Power Platform gali patvirtinti "Customer Lockbox" užklausas, išduotas "Customer Insights".
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

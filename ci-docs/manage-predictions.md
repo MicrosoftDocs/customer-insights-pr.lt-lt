@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082852"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245475"
 ---
 # <a name="manage-predictions"></a>Prognozių valdymas
 
@@ -58,7 +58,7 @@ Toliau pateiktuose ataskaitos stulpeliuose yra naudingos informacijos apie tai, 
 
 ## <a name="refresh-a-prediction"></a>Prognozės atnaujinimas
 
-Prognozės automatiškai atsinaujins tuo pačiu parametruose sukonfigūruotu [grafiku, kuriuo atnaujinami jūsų duomenys](system.md#schedule-tab). Galite juos paleisti iš naujo ir rankiniu būdu.
+Prognozės automatiškai atsinaujins tuo pačiu parametruose sukonfigūruotu [grafiku, kuriuo atnaujinami jūsų duomenys](schedule-refresh.md). Galite juos paleisti iš naujo ir rankiniu būdu.
 
 1. Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
 

@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173821"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224305"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Suasmeninkite savo patirtį naudodami duomenis apie žinomus ir nežinomus vartotojus
 
-Klientų duomenų tvarkymas nėra naujas iššūkis, tačiau jis tampa vis sudėtingesnis, nes vartotojai naršo įvairiuose prekių ženklų siūlomuose skaitmeniniuose kanaluose. Vartotojas, kuris yra žinomas (autentifikuotas) viename kanale, tampa nežinomas (neautentifikuotas) kitame kanale, jei jis nėra prisijungęs. Problema dažnai yra ta, kad neautentifikuoti (nežinomi) vartotojai neturi bendro ID. Jis gali būti naudojamas prasmingiems profilių atributams susieti ir vieningiems klientų profiliams generuoti. "Customer Insights" padeda išspręsti šią problemą, nurijus duomenis iš sekimo metodų šaltinio sistemose. Konsoliduoti nežinomi ir žinomi profiliai suteikia organizacijoms išsamų naujausių profilių ir jų istorinių operacijų, elgsenos ir demografinių rodiklių rodinį. Tai netgi žengia dar vieną žingsnį, pateikdama tapatybės sprendimą, leidžiantį suvienodinti klientų veiklą keliuose kanaluose, įskaitant svetainę, pirkimą parduotuvėje, lojalumo programas ir pan.
+Klientų duomenų tvarkymas nėra naujas iššūkis, tačiau jis tampa vis sudėtingesnis, nes vartotojai naršo įvairiuose prekių ženklų siūlomuose skaitmeniniuose kanaluose. Vartotojas, kuris yra žinomas (autentifikuotas) viename kanale, tampa nežinomas (neautentifikuotas) kitame kanale, jei jis nėra prisijungęs. Problema dažnai yra ta, kad neautentifikuoti (nežinomi) vartotojai neturi bendro ID. Jis gali būti naudojamas prasmingiems profilių atributams susieti ir vieningiems klientų profiliams generuoti. "Customer Insights" padeda išspręsti šią problemą, nurijus duomenis iš sekimo metodų šaltinio sistemose. Sukonfigūravus nežinomus ir žinomus profilius, organizacijoms pateikiamas išsamus naujausių profilių ir jų istorinių operacijų, elgsenos ir demografinių rodiklių rodinys. Tai netgi žengia dar vieną žingsnį, pateikdama tapatybės sprendimą, leidžiantį suvienodinti klientų veiklą keliuose kanaluose, įskaitant svetainę, pirkimą parduotuvėje, lojalumo programas ir pan.
 
 ## <a name="sample-scenario"></a>Scenarijaus pavyzdys
 

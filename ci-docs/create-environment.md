@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
-ms.translationtype: MT
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142829"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245567"
 ---
 # <a name="how-to-create-a-new-environment"></a>Kaip: sukurti naują aplinką
 
@@ -48,7 +48,7 @@ Pagrindinės **informacijos žingsnyje** pasirinkite, ar norite kurti aplinką n
 
 Nurodykite toliau pateiktą informaciją.
 
-- **Pavadinimas**: Šios aplinkos pavadinimas. Šis laukas jau užpildytas, jei kopijuojate esamą aplinką, tačiau jį galite keisti.
+- **Pavadinimas**: Šios aplinkos pavadinimas. Šis laukas jau užpildytas, jei kopijuojate esamą aplinką, tačiau jį galite keisti. Jei turite daugiau nei vieną darbo aplinką, kiekvienai suteikite lengvai atpažįstamą vardą ir pavardę.
 - **Pasirinkite savo verslą**: pasirinkite pagrindinę naujos aplinkos auditoriją. Galite dirbti su individualiais atsiliepimais (B 2 C) arba [verslo klientais](work-with-business-accounts.md) (B2B). Jei jūsų organizacija daugiausia užsiima verslu su asmenimis, pvz., mažmenininku ar kavine, rinkitės individualius vartotojus. Jei jūsų pagrindinė auditorija yra kitos įmonės, pvz., Automobilių gamintojas ar popieriaus įmonė, pasirinkite verslo sąskaitas.
 - **Tipas**: pasirinkite, ar norite sukurti gamybos, ar smėlio dėžės aplinką. Smėlio dėžės aplinkos neleidžia suplanuoto duomenų atnaujinimo ir yra skirtos išankstiniam diegimui ir testavimui. Smėlio dėžės aplinkos naudoja tą pačią pagrindinę auditoriją kaip ir dabar pažymėta gamybos aplinka.
 - **Sritis**: sritis, kurioje įdiegta ir teikiama ši paslauga. Norint [naudoti savo Azure Data Lake Storage paskyrą](own-data-lake-storage.md) arba [prisijungti prie esamos Microsoft Dataverse organizacijos](customer-insights-dataverse.md), "Customer Insights" aplinka turi būti tame pačiame regione.

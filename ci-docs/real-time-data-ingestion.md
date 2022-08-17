@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195668"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246118"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Duomenų įtraukimas realiuoju laiku (peržiūra)
 
 Beveik realiojo laiko funkcijos leidžia jums per kelias sekundes pamatyti naujausius klientų veiksmus su jūsų produktais ar paslaugomis.
 
-[Suplanuoti paleidimai iš naujo](system.md#schedule-tab) įtraukiant didelius įrašų skaičius ir keletą sudėtingų veiksmų. Pirmiausia, duomenys yra įtraukiami iš duomenų šaltinio. Tada duomenys sujungiami ir papildomi papildoma informacija. Kiekvieną kartą šis procesas gali trukti nuo kelių minučių iki kelių valandų.
+[Suplanuoti paleidimai iš naujo](schedule-refresh.md) įtraukiant didelius įrašų skaičius ir keletą sudėtingų veiksmų. Pirmiausia, duomenys yra įtraukiami iš duomenų šaltinio. Tada duomenys sujungiami ir papildomi papildoma informacija. Kiekvieną kartą šis procesas gali trukti nuo kelių minučių iki kelių valandų.
 
 Realaus laiko funkcijos pateikia duomenis nedelsiant suvartojimui, kol tolesnis grafikas iš naujo paleidžia šiuos duomenis iš duomenų šaltinio.
 
@@ -85,7 +85,7 @@ Veiklą galite skelbti savo šaltinio sistemos arba „UnifiedActivity“ format
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Telemetrijos naudojimo realiuoju laiku supratimas
 
-Gaukite užklausų apimties apžvalgą realaus laiko API ir informacijai apie problemas, su kuriomis gali susidurti sistema. Galite [prieiti prie telemetrijos realiuoju laiku](system.md#api-usage-tab). 
+Gaukite užklausų apimties apžvalgą realaus laiko API ir informacijai apie problemas, su kuriomis gali susidurti sistema. Galite [prieiti prie telemetrijos realiuoju laiku](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

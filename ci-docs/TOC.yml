@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Administracija
   items:
-    - name: Nustatykite sistemos konfigūraciją
-      href: system.md
-    - name: Saugos parametrų konfigūravimas
-      href: security-overview.md
     - name: Vartotojo teisių priskyrimas
       href: permissions.md
     - name: Papildykite patys „Key Vault“
       href: use-azure-key-vault.md
+    - name: Saugos parametrų konfigūravimas
+      href: security-overview.md
     - name: Diagnostikos žurnalų eksportavimas
       href: diagnostics.md
-    - name: Ryšių apžvalga
+    - name: Ryšių valdymas
       href: connections.md
+    - name: Suplanuokite sistemos atnaujinimą
+      href: schedule-refresh.md
+    - name: Peržiūrėti sistemos konfigūraciją
+      href: system.md
 - name: API
   items:
     - name: Dirbkite su API

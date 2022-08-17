@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207009"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245843"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Jungtis prie duomenų „Azure Data Lake Storage“
 
@@ -56,8 +56,8 @@ Prarykite duomenis, kad Dynamics 365 Customer Insights galėtumėte naudotis sav
 
 1. Pasirinkite vieną iš šių parinkčių Prijunkite **saugyklą naudodami**. Daugiau informacijos ieškokite ["Customer Insights" prijungimas Azure Data Lake Storage prie "Gen2" paskyros su "Azure" paslaugos vykdytoju](connect-service-principal.md).
 
-   - **Azure resource**: įveskite **išteklių ID**. Pasirinktinai, jei norite praryti duomenis iš saugyklos paskyros naudodami "Azure Private Link", pasirinkite **Įgalinti privatų saitą**. Daugiau informacijos ieškokite [Privačios nuorodos](security-overview.md#private-links-tab).
-   - **"Azure" prenumerata**: pasirinkite prenumeratą **,** tada **išteklių grupę** ir **saugyklos paskyrą**. Pasirinktinai, jei norite praryti duomenis iš saugyklos paskyros naudodami "Azure Private Link", pasirinkite **Įgalinti privatų saitą**. Daugiau informacijos ieškokite [Privačios nuorodos](security-overview.md#private-links-tab).
+   - **Azure resource**: įveskite **išteklių ID**. Pasirinktinai, jei norite praryti duomenis iš saugyklos paskyros naudodami "Azure Private Link", pasirinkite **Įgalinti privatų saitą**. Daugiau informacijos ieškokite [Privačios nuorodos](security-overview.md#set-up-an-azure-private-link).
+   - **"Azure" prenumerata**: pasirinkite prenumeratą **,** tada **išteklių grupę** ir **saugyklos paskyrą**. Pasirinktinai, jei norite praryti duomenis iš saugyklos paskyros naudodami "Azure Private Link", pasirinkite **Įgalinti privatų saitą**. Daugiau informacijos ieškokite [Privačios nuorodos](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Norint sukurti duomenų šaltinis, jums reikia vieno iš šių vaidmenų į konteinerį arba saugojimo paskyrą:
@@ -84,7 +84,7 @@ Prarykite duomenis, kad Dynamics 365 Customer Insights galėtumėte naudotis sav
    > [!TIP]
    > Norėdami redaguoti objektą JSON redagavimo sąsajoje, pasirinkite objektą ir tada **Redaguoti schemos failą**. Atlikite pakeitimus ir pasirinkite **Įrašyti**.
 
-1. Pasirinktiems objektams, kuriems reikalingas laipsniškas nurijimas, **būtina** rodyti dalyje **Laipsniškas atnaujinimas**. Apie kiekvieną iš šių objektų žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md).
+1. Pasirinktiems objektams, kuriems reikalingas laipsniškas nurijimas, **būtina rodyti dalyje** Laipsniškas **atnaujinimas**. Apie kiekvieną iš šių objektų žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md).
 
 1. Pasirinktuose objektuose, kurių pirminis raktas nebuvo apibrėžtas, **privalomas** rodomas dalyje **Pirminis raktas**. Kiekvienam iš šių objektų:
    1. Pasirinkite **Būtina**. Rodomas objekto **redagavimo** skydas.
@@ -142,7 +142,7 @@ Duomenų įkėlimas gali užtrukti. Sėkmingai atnaujinus, nurijusius duomenis g
 
    :::image type="content" source="media/ADLS_required.png" alt-text="Dialogo langas, kuriame rodomas būtinas pirminiam raktui":::
 
-1. Pasirinktiems objektams, kuriems reikalingas laipsniškas nurijimas, **būtina** rodyti dalyje **Laipsniškas atnaujinimas**. Apie kiekvieną iš šių objektų žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md).
+1. Pasirinktiems objektams, kuriems reikalingas laipsniškas nurijimas, **būtina rodyti dalyje** Laipsniškas **atnaujinimas**. Apie kiekvieną iš šių objektų žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md).
 
 1. Pasirinktuose objektuose, kurių pirminis raktas nebuvo apibrėžtas, **privalomas** rodomas dalyje **Pirminis raktas**. Kiekvienam iš šių objektų:
    1. Pasirinkite **Būtina**. Rodomas objekto **redagavimo** skydas.
@@ -176,7 +176,7 @@ Galite atnaujinti *parinktį Prisijungti prie saugyklos paskyros naudodami* pari
         > - „Storage Blob Data“ savininkas
         > - „Storage Blob Data“ pildytojas
 
-   - **Įgalinkite "Private Link"**, jei norite nuryti duomenis iš saugyklos paskyros naudodami "Azure Private Link". Daugiau informacijos ieškokite [Privačios nuorodos](security-overview.md#private-links-tab).
+   - **Įgalinkite "Private Link"**, jei norite nuryti duomenis iš saugyklos paskyros naudodami "Azure Private Link". Daugiau informacijos ieškokite [Privačios nuorodos](security-overview.md#set-up-an-azure-private-link).
 
 1. Pasirinkite **Toliau**.
 1. Pakeiskite bet kurį iš šių dalykų:

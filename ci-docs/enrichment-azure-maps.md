@@ -1,19 +1,19 @@
 ---
 title: Praturtinkite klientų profilius vietos duomenimis iš "Azure" žemėlapių (peržiūra)
 description: Bendroji informacija apie „Azure“ žemėlapių pirmosios šalies papildymą.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052617"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238052"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Praturtinkite klientų profilius vietos duomenimis iš "Azure" žemėlapių (peržiūra)
 
@@ -35,14 +35,9 @@ Turite būti ["Customer Insights" administratorius](permissions.md#admin) ir tur
 
 1. Įveskite ryšio pavadinimą ir galiojantį "Azure Maps" API raktą.
 
-1. Pasirinkdami Sutinku, peržiūrėkite [ir pateikite savo sutikimą dėl](#data-privacy-and-compliance) duomenų privatumo ir sąlygų **sutinku**.
+1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
 
 1. Pasirinkite **Tikrinti**, kad patvirtintumėte konfigūraciją, tada pasirinkite **Įrašyti**.
-
-### <a name="data-privacy-and-compliance"></a>Duomenų privatumas ir atitiktis
-
-Kai įgalinate „Dynamics 365 Customer Insights“ perduoti duomenis „Azure” žemėlapiams, leidžiate perduoti duomenis už „Dynamics 365 Customer Insights“ atitikties ribos, įskaitant galimai jautrius duomenis, pavyzdžiui, Asmens. "Microsoft" perduos tokius duomenis jūsų nurodymu, bet jūs esate atsakingi už tai, kad "Azure" žemėlapiai atitiktų visus privatumo ar saugos įsipareigojimus, kuriuos galite turėti. Daugiau informacijos pateikta [„Microsoft” privatumo nuostatose](https://go.microsoft.com/fwlink/?linkid=396732).
-Jūsų „Dynamics 365 Customer Insights“ administratorius gali pašalinti šį praturtinimą bet kuriuo metu siekiant nutraukti šios funkcijos naudojimą.
 
 ## <a name="configure-the-enrichment"></a>Papildymo konfigūravimas
 

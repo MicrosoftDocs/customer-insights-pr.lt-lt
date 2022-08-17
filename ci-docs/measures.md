@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170831"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245383"
 ---
 # <a name="measures-overview"></a>Priemonių apžvalga
 
@@ -53,7 +53,7 @@ Pasirinkite šalia priemonės, kad peržiūrėtumėte galimus veiksmus. Pasirink
 - **Redaguokite** priemonę, kad pakeistumėte jos ypatybes.
 - **Atnaujinkite** priemonę, kad įtrauktumėte naujausius duomenis.
 - **Pervardykite** matą.
-- **Suaktyvinkite** arba **išjunkite** priemonę. Neaktyvios priemonės nebus atnaujintos per suplanuotą [atnaujinimą](system.md#schedule-tab), o **būsena** bus nurodyta kaip **Praleista**, o tai reiškia, kad atnaujinti net nebuvo bandyta.
+- **Suaktyvinkite** arba **išjunkite** priemonę. Neaktyvios priemonės nebus atnaujintos per suplanuotą [atnaujinimą](schedule-refresh.md), o **būsena** bus nurodyta kaip **Praleista**, o tai reiškia, kad atnaujinti net nebuvo bandyta.
 - **Pažymėkite**, kad [galėtumėte tvarkyti priemonės žymas](work-with-tags-columns.md#manage-tags).
 - **Panaikinkite** matą.
 - **Stulpeliai**, skirti [tinkinti rodomus stulpelius](work-with-tags-columns.md#customize-columns).
@@ -62,7 +62,7 @@ Pasirinkite šalia priemonės, kad peržiūrėtumėte galimus veiksmus. Pasirink
 
 ## <a name="refresh-measures"></a>Atnaujinkite priemones
 
-Priemonės gali būti atnaujinamos automatiniu grafiku arba atnaujinamos rankiniu būdu pagal poreikį. Norėdami rankiniu būdu atnaujinti vieną ar daugiau priemonių, pažymėkite jas ir pasirinkite **Atnaujinti**. Norėdami [suplanuoti automatinį atnaujinimą](system.md#schedule-tab), eikite į **Administratoriaus** > **sistemos** > **tvarkaraštis**.
+Priemonės gali būti atnaujinamos automatiniu grafiku arba atnaujinamos rankiniu būdu pagal poreikį. Norėdami rankiniu būdu atnaujinti vieną ar daugiau priemonių, pažymėkite jas ir pasirinkite **Atnaujinti**. Norėdami [suplanuoti automatinį atnaujinimą](schedule-refresh.md), eikite į **Administratoriaus** > **sistemos** > **tvarkaraštis**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

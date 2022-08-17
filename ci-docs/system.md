@@ -1,7 +1,7 @@
 ---
-title: Sistemos konfigūracija
+title: Peržiūrėti sistemos konfigūraciją
 description: Sužinokite apie sistemos parametrus programoje „Dynamics 365 Customer Insights“.
-ms.date: 04/21/2022
+ms.date: 08/09/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -10,40 +10,78 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-system-status
-- ci-system-schedule
 - ci-system-about
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050681"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246257"
 ---
-# <a name="system-configuration"></a>Sistemos konfigūracija
+# <a name="view-system-configuration"></a>Peržiūrėti sistemos konfigūraciją
 
-Norėdami pasiekti sistemos konfigūracijas, eikite į **Administravimo** > **sistema** ir peržiūrėkite sistemos užduočių ir procesų sąrašą.
+Peržiūrėkite sistemos informaciją, sistemos būseną ir API naudojimą.
 
-**Sistemos** puslapyje yra šie skirtukai:
-- [Būsena](#status-tab)
-- [Tvarkaraštis](#schedule-tab)
-- [API naudojimas](#api-usage-tab)
-- [Apie](#about-tab)
-- [Bendroji informacija](#general-tab)
+## <a name="view-api-usage"></a>Peržiūrėkite API naudojimą
 
-:::image type="content" source="media/system-tabs.png" alt-text="Parametrų skirtukai sistemos puslapyje.":::
+Peržiūrėkite išsamią informaciją apie API naudojimą realiuoju laiku ir sužinokite, kurie įvykiai įvyko per tam tikrą laikotarpį.
 
-## <a name="status-tab"></a>Būsenos skirtukas
+1. Eikite į **"Admin** > **System"** ir pasirinkite skirtuką **API naudojimas**.
 
-Skirtuke **Būsena** galite sekti užduočių eigą, duomenų įsisavinimą, duomenų eksportavimą ir kelis kitus svarbius produkto procesus. Peržiūrėkite šiame skirtuke pateiktą informaciją, kad įsitikintumėte aktyvių užduočių ir procesų išsamumu.
+1. **Pasirinkite laiko tarpą**, kurį norite peržiūrėti.
 
-Šiame skirtuke yra lentelių su įvairių procesų būsena ir apdorojimo informacija. Kiekvienoje lentelėje sekamas užduoties **Pavadinimas** ir atitinkamas objektas, naujausio vykdymo **Būsena** ir kada ji buvo **Paskutinį kartą atnaujinta**. Galite peržiūrėti kelių paskutinių bėgimų informaciją pasirinkdami užduoties arba proceso pavadinimą. 
+   **API naudojimo** puslapyje yra trys skyriai:
 
-Pasirinkite būseną šalia užduoties arba proceso stulpelyje Būsena, **kad atidarytumėte** sritį Išsami eigos informacija **.**
+   - **API skambučiai** – diagrama, vaizduojama per pažymėtą laiko tarpą vizualizuojamas į API ėjusių skambučių agreguotas skaičius.
+   - **Duomenų perdavimas** – diagrama, kurioje rodomas per API per pasirinktą laiko tarpą perduotų duomenų kiekis.
+   - **Operacijos** – lentelė su kiekvienos galimos API operacijos eilutėmis ir išsami informacija apie operacijų naudojimą. Pasirinkite operacijos pavadinimą, kad pereitumėte į [API nuorodą](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operacijose, kuriose naudojamas [duomenų įsisavinimas](real-time-data-ingestion.md) realiuoju laiku, yra žiūrono simbolis, leidžiantis peržiūrėti API naudojimą realiuoju laiku.
+
+   1. Pasirinkite žiūroną, kad atidarytumėte realaus **laiko API naudojimo** sritį, kurioje pateikiama išsami operacijos naudojimo informacija.
+   1. **Pasirinkite laiko tarpą**, kurį norite peržiūrėti.
+   1. Naudokite laukelį **Grupuoti pagal**, kad pasirinktumėte, kaip geriausiai pristatyti sąveiką realiuoju laiku. Grupuokite duomenis pagal API **metodą**, **objekto sąlyginį pavadinimą** (nurijusį objektą), **sukurtą pagal** (įvykio šaltinį), **rezultatą** (sėkmę arba nesėkmę) arba **klaidų kodus**. Duomenys prieinami kaip retrospektyvos diagrama ir kaip lentelė.
+
+## <a name="view-system-information"></a>Peržiūrėkite sistemos informaciją
+
+Peržiūrėkite aplinkos rodomą pavadinimą, ID, regioną, tipą ir seanso ID.
+
+1. Eikite į **Administravimo** > **sistema** ir pasirinkite skirtuką **Apie**.
+
+1. Norėdami peržiūrėti kalbą ir šalį / regioną, pasirinkite skirtuką **Bendra**.
+
+### <a name="update-preferred-language-or-countryregion"></a>Pageidaujamos kalbos arba šalies / regiono naujinimas
+
+"Customer Insights" [palaiko daugelį kalbų](/dynamics365/get-started/availability). Programa naudoja jūsų kalbos ypatybes tam, kad parodytų tokius elementus kaip meniu, žymos tekstas ir sistemos pranešimai jūsų pasirinkta kalba.
+
+Importuoti duomenys ir informacija, kurią įvedėte rankiniu būdu, nėra išversti.
+
+1. Eikite į **Administravimo** > **sistema** ir pasirinkite skirtuką **Bendra**.
+
+1. Norėdami pakeisti pageidaujamą kalbą, išplečiamajame sąraše pasirinkite **Kalba**.
+
+1. Norėdami keisti pageidaujamą datų, laiko ir skaičių formatavimą, naudokite išplečiamąjį sąrašą **Šalies / regiono formatas**. Rodoma formatavimo peržiūra. Sistema automatiškai siūlo pasirinkimą, kai pasirenkate naują kalbą.
+
+1. Pasirinkite **Įrašyti**.
+
+## <a name="view-system-status"></a>Peržiūrėti sistemos būseną
+
+Stebėkite užduočių eigą, duomenų įsisavinimą, duomenų eksportavimą ir keletą kitų svarbių produktų procesų. Peržiūrėkite informaciją, kad užtikrintumėte aktyvių užduočių ir procesų išsamumą.
+
+1. Eikite į **Administravimo** > **sistema** ir pasirinkite skirtuką **Būsena**.
+
+   Įvairių procesų rodymo būsenos ir apdorojimo informacija. Peržiūrėkite **užduoties pavadinimą**, naujausio jos paleidimo būseną **ir** kada ji buvo **paskutinį kartą atnaujinta**.
+
+1. Norėdami peržiūrėti kelių paskutinių paleidimų informaciją, pasirinkite užduoties arba proceso pavadinimą.
+
+1. Norėdami peržiūrėti užduoties eigos informaciją, pasirinkite būseną. Rodoma sritis Išsami **eigos informacija**.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Sistemos eigos išsamios informacijos sritis":::
+
+1. Norėdami peržiūrėti išsamią visų užduočių eigos informaciją, pasirinkite **Visa darbo eiga**.
 
 ### <a name="status-definitions"></a>Būsenos apibrėžimai
 
@@ -51,19 +89,19 @@ Sistema užduotims ir procesams naudoja šias būsenas:
 
 |Būsena  |Apibrėžtis  |
 |---------|---------|
-|Atšauktos |Vartotojas atšaukė apdorojimą prieš jį užbaigdamas.   |
-|Atlikta nesėkmingai   |Apdorojant duomenis įvyko klaidų.         |
-|Triktis  |Apdorojimas nepavyko.  |
-|Nepradėta   |Duomenų šaltinis dar neturi jokių suvartotų duomenų arba jie dar yra šablono režime.         |
+|Atšauktos |Užduotį ar procesą vartotojas atšaukė dar nebaigęs.   |
+|Atlikta nesėkmingai   |Užduotis ar procesas susidūrė su klaidomis.         |
+|Triktis  |Užduotis ar procesas nepavyko.  |
+|Nepradėta   |Duomenų šaltinis dar nepraryti jokie duomenys arba užduotis vis dar veikia juodraščio režimu.         |
 |Apdorojimas  |Vyksta užduotis arba procesas.  |
-|Atnaujinama    |Vyksta duomenų apdorojimas. Galite atšaukti šią operaciją, stulpelyje **Veiksmai** pasirinkdami **Sustabdyti naujinimą**. Sustabdžius duomenų šaltinio naujinimą, jis bus grąžintas į paskutinio naujinimo būseną.       |
+|Atnaujinama    |Vyksta užduotis arba procesas. Norėdami atšaukti šią operaciją, pasirinkite **Atnaujinti** ir **Atšaukti užduotį**. Sustabdžius užduoties ar proceso atnaujinimą, jis bus grąžintas į paskutinę atnaujinimo būseną.       |
 |Praleista  |Užduotis ar procesas buvo praleistas. Vienas ar daugiau procesų, nuo kurių priklauso ši užduotis, nesėkmingi arba buvo praleisti.|
 |Sėkminga  |Užduotis arba procesas sėkmingai baigtas. Duomenų šaltinių atveju nurodo, kad duomenys buvo sėkmingai praryti, jei stulpelyje **Atnaujinta** paminėtas laikas.|
 |Įtraukta į eilę | Apdorojimas yra eilėje ir prasidės, kai bus baigtos visos pradinės užduotys ir procesai. Daugiau informacijos ieškokite [Procesų](#refresh-processes) atnaujinimas.|
 
 ### <a name="refresh-processes"></a>Atnaujinimo procesai
 
-Užduočių ir procesų atnaujinimas vykdomas pagal [sukonfigūruotą tvarkaraštį](#schedule-tab). 
+Užduočių ir procesų atnaujinimas vykdomas pagal [sukonfigūruotą tvarkaraštį](schedule-refresh.md).
 
 |Proceso  |Aprašą  |
 |---------|---------|
@@ -86,58 +124,6 @@ Užduočių ir procesų atnaujinimas vykdomas pagal [sukonfigūruotą tvarkaraš
 |User  |Vykdoma rankiniu būdu (atnaujinimas vieną kartą). Priklauso nuo objektų.  |
 
 Pasirinkite proceso būseną, kad pamatytumėte išsamią viso darbo, kuriame jis buvo, eigos informaciją. Anksčiau pateikti atnaujinimo procesai gali padėti suprasti, ką galite padaryti, kad išspręstumėte praleistą **arba** eilę nukreiptą **užduotį** ar procesą.
-
-## <a name="schedule-tab"></a>Grafiko skirtukas
-
-Naudokite **Tvarkaraščio** skirtuką tam, kad nustatytumėte automatinius visų jūsų [vartojamų duomenų šaltinių](data-sources.md) naujinimus. Automatinis atnaujinimas padeda užtikrinti, kad jūsų duomenų šaltinių naujinimai atsispindės jūsų vieninguose klientų profiliuose.
-
-> [!NOTE]
-> Jūsų valdomi duomenų šaltiniai atnaujinami pagal jų pačių tvarkaraščius. Norėdami suplanuoti jūsų valdomų duomenų šaltinių atnaujinimą, sukonfigūruokite tos konkrečios duomenų šaltinis atnaujinimo **parametrus puslapyje Duomenų šaltiniai**.
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Duomenų srauto atnaujinimo nustatymai.":::
-
-1. Eikite į **Administravimo** > **sistema** ir pasirinkite skirtuką **Tvarkaraštis**.
-
-2. Numatytoji suplanuoto atnaujinimo būsena yra **Išjungta**. Norėdami įjungti suplanuotus atnaujinimus, pakeiskite perjungimą ekrano viršuje į **Įjungta**.
-
-3. Pasirinkite tarp **Savaitinis** (numatytasis) arba **Kasdienis** atnaujinimų. Jei planuojate savaitinį atnaujinimą, pasirinkite vieną ar kelias dienas, kada norite vykdyti atnaujinimą.
-
-4. Nustatykite **Laiko juostą**, tada naudokite išplečiamąjį meniu **Laikas**, kad nustatytumėte atnaujinimo laiką. Baigę, pasirinkite **Nustatyti**. Jei norite suplanuoti kelis naujinimus per vieną dieną, pasirinkite **Įtraukti kitą laiką**.
-
-5. Pasirinkite **Įrašyti**, kad pritaikytumėte keitimus.
-
-## <a name="about-tab"></a>Skirtukas „Apie“
-
-Skirtuke **Apie** rodomas organizacijos **Rodomas pavadinimas**, aktyvus **Aplinkos ID**, **Sritis** ir **Seanso ID**. Jei turite daugiau nei vieną aplinką, turėtumėte suteikti kiekvieną paprastai atpažįstamą rodinio pavadinimą.
-
-## <a name="general-tab"></a>Bendros informacijos skirtukas
-
-Kalbą ir šalies / regiono formatą galite keisti skirtuke **Bendra**.
-
-"Customer Insights" [palaiko daugelį kalbų](/dynamics365/get-started/availability). Programa naudoja jūsų kalbos ypatybes tam, kad parodytų tokius elementus kaip meniu, žymos tekstas ir sistemos pranešimai jūsų pasirinkta kalba.
-
-Importuoti duomenys ir informacija, kurią įvedėte rankiniu būdu, nėra išversti.
-
-### <a name="update-the-settings"></a>Naujinti parametrus
-
-Norėdami pakeisti pageidaujamą kalbą, išplečiamajame sąraše pasirinkite **Kalba**.
-
-Norėdami keisti pageidaujamą datų, laiko ir skaičių formatavimą, naudokite išplečiamąjį sąrašą **Šalies / regiono formatas**. Po šiuo lauku rodoma formatavimo peržiūra. Sistema automatiškai siūlys pasirinkimą jums pasirinkus naują kalbą.
-
-Pasirinkite **išsaugoti**, norėdami patvirtinti savo pasirinkimus.
-
-## <a name="api-usage-tab"></a>API naudojimo skirtukas
-
-Raskite informacijos apie realiojo laiko API naudojimą ir sužinokite, kurie įvykiai įvyko per nurodytą laiką. Išskleidžiamajame meniu Pažymėkite **laiko tarpą pasirinkite** laiko tarpą. 
-
-**API naudojimas** apima tris skyrius: 
-- **API skambučiai** – diagrama, vaizduojama per pažymėtą laiko tarpą vizualizuojamas į API ėjusių skambučių agreguotas skaičius.
-
-- **Duomenų perdavimas** – diagrama, kurioje rodomas per API per pasirinktą laiko tarpą perduotų duomenų kiekis.
-
--  **Operacijos** – lentelė su kiekvienos galimos API operacijos eilutėmis ir išsami informacija apie operacijų naudojimą. Galite pažymėti operacijos pavadinimą, kurį [į norite eiti API ](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operacijose, kuriose naudojamas [duomenų įsisavinimas](real-time-data-ingestion.md) realiuoju laiku, yra mygtukas su žiūrono simboliu, leidžiantis peržiūrėti API naudojimą realiuoju laiku. Pasirinkite mygtuką siekiant atidaryti šoninę juostą turinčią suvartojimo informaciją realaus laiko API naudojimui ir esamai aplinkai.   
-   Naudokite lauką **Grupuoti** pagal **pateikiamą realiuoju** laiku naudojant API, ir pasirinkite, kaip geriausiai pateikti bendravimą realiuoju laiku. Duomenis galite grupuoti pagal API būdą, objekto apibrėžtą pavadinimą (įtrauktas objektas), kūrėją (įvykio šaltinis), rezultatą (sėkmė arba nesėkmė) arba klaidų kodus. Duomenys prieinami kaip retrospektyvos diagrama ir kaip lentelė.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
