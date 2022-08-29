@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245889"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304529"
 ---
 # <a name="data-enrichment-preview-overview"></a>Duomenų papildymo (peržiūros) apžvalga
 
@@ -95,7 +95,7 @@ Paleidus papildymus, juos galima atnaujinti automatiniu grafiku arba atnaujinti 
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Žiūrėti papildymo proceso eigą
 
-Galite rasti informacijos apie papildymo apdorojimą, įskaitant jo būseną ir galimas problemas jį atnaujinant arba pasibaigus atnaujinimui. Sužinokite, kurie procesai naudojami norint atnaujinti papildymą ir procesų vykdymo trukmes. Papildymo būseną palaiko „Experian”, „Leadspace”, HERE Technologijos, SFTP Importavimas ir „Azure” žemėlapiai.
+Išsamios informacijos apie papildymo apdorojimą, įskaitant jo būseną ir galimas problemas, galite rasti, kol jis atnaujinamas arba kai atnaujinimas baigtas. Sužinokite, kurie procesai naudojami norint atnaujinti papildymą ir procesų vykdymo trukmes. Papildymo būseną palaiko „Experian”, „Leadspace”, HERE Technologijos, SFTP Importavimas ir „Azure” žemėlapiai.
 
 1. Eikite į **Duomenys** > **Papildymas**.
 1. Skirtuke **Mano papildymai** pasirinkite papildymo būseną, kad atidarytumėte šoninę sritį.

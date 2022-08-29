@@ -1,7 +1,7 @@
 ---
 title: Sudėtingų segmentų kūrimas naudojant segmentų kūrimo priemonę
 description: Naudokite segmentų kūrimo priemonę, kad sukurtumėte sudėtingus klientų segmentus grupuodami juos pagal įvairius atributus.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170645"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304759"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Sudėtingų segmentų kūrimas naudojant segmentų kūrimo priemonę
 
-Apibrėžkite vieningojo kliento objekto ir su juo susijusių objektų sudėtinius filtrus. Apdorojus, kiekvienas segmentas sukuria klientų duomenų rinkinį, kurį galite eksportuoti, ir su kuriuo galite atlikti veiksmus.
+Apibrėžkite sudėtingus filtrus aplink vieningą klientą arba vieningąjį kontaktą ir su juo susijusius objektus. Kiekvienas segmentas po apdorojimo sukuria kliento arba kontakto įrašų rinkinį, kurį galite eksportuoti ir su kuriais galite imtis veiksmų.
 
 > [!TIP]
-> Segmentuose, pagrįstuose **atskirais klientais**, automatiškai įtraukiama prieinama segmento narių kontaktinė informacija. Verslo paskyrų **aplinkose segmentai** grindžiami klientais (įmonėmis arba antrinėmis įmonėmis). Norėdami į segmentą įtraukti kontaktinę informaciją, naudokite **projekto atributų** funkcijas segmento atributų atributuose. Užtikrinkite, kad kontaktų duomenų šaltiniai [būtų automatiškai susieti su „ContactProfile"](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) objektu.
+> Segmentuose, pagrįstuose **atskirais klientais**, automatiškai įtraukiama prieinama segmento narių kontaktinė informacija. Jei verslo paskyrose **suvienijote** [ir](data-unification.md) klientus, ir kontaktus, pasirinkite, ar segmentas pagrįstas klientais, ar verslo kontaktais. Norėdami eksportuoti į paskirties vietą, tikėdamiesi kontaktinės informacijos, naudokite kontaktų segmentą. Norėdami eksportuoti į paskirties vietą, tikėdamiesi paskyros informacijos, naudokite paskyrų segmentą.
 
 ## <a name="segment-builder"></a>Segmentų kūrimo priemonė
 
@@ -57,6 +57,11 @@ Aukščiau pateiktas pavyzdys iliustruoja segmentavimo galimybę. Sukūrėme seg
 
 1. Pažymėkite **Naujas** > **Sukurkite savo**. Segmento segmento apibrėžiate arba kuriate taisykles. Taisyklę sudaro viena ar daugiau sąlygų, apibrėžiaančių klientų rinkinį.
 
+   > [!NOTE]
+   > Jei naudojate verslo paskyras pagrįstas aplinkas, pasirinkite **Naujas** > **sąskaitų** segmentas arba **Kontaktų segmentas (peržiūra)** pagal segmento, kurį norite sukurti, tipą. [Jei buvo apibrėžta paskyros hierarchija](relationships.md#set-up-account-hierarchies) ir norite sukurti taisykles, pagal kurias būtų galima filtruoti duomenis pagal vaiko ir tėvų ryšį, pasirinkite **Naudoti hierarchiją? (peržiūra)**, pasirinkite hierarchiją, tada **Taikyti**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Segmentuoti pasirinkite paskyros hierarchijos sritį.":::
+
 1. Pasirinkite **Redaguoti išsamią informaciją** šalia Segmentas Be pavadinimo. Įveskite savo segmento pavadinimą ir atnaujinkite siūlomą **Išvesties objekto pavadinimą** segmentui. Pasirinktinai prie segmento pridėkite aprašą ir [žymes](work-with-tags-columns.md#manage-tags).
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Dialogo langas Redaguoti išsamią informaciją.":::
@@ -65,11 +70,11 @@ Aukščiau pateiktas pavyzdys iliustruoja segmentavimo galimybę. Sukūrėme seg
    - Peržiūrėkite galimų objektų ir atributų sąrašą srityje **Įtraukti į taisyklę** ir pažymėkite **„+”** piktogramą šalia atributo, kurį norite įtraukti. Pasirinkite, ar norite įtraukti atributą į esamą taisyklę, ar naudoti jį naujai taisyklei kurti.
    - Norėdami peržiūrėti sutampančius pasiūlymus, taisyklės skyriuje įveskite atributo pavadinimą.
 
-1. Pasirinkite operatorius, kad nurodytumėte sąlygos atitikmenų reikšmes. Atributas gali turėti vieną iš keturių duomenų tipų kaip reikšmę: skaitinę, eilutės, datos arba Bulio logikos. Priklausomai nuo atributo duomenų tipo, sąlygą galima nurodyti skirtingais operatoriais. Segmentuose su verslo klientais galimi du specialūs operatoriai, kad būtų galima įtraukti potencialias iki šiol suskirstytas paskyras. Norėdami įtraukti *susijusius* ir *pagrindinius* operatorius į susijusias paskyras.
+1. Pasirinkite operatorius, kad nurodytumėte sąlygos atitikmenų reikšmes. Atributas gali turėti vieną iš keturių duomenų tipų kaip reikšmę: skaitinę, eilutės, datos arba Bulio logikos. Priklausomai nuo atributo duomenų tipo, sąlygą galima nurodyti skirtingais operatoriais.
 
 1. Pasirinkite **Įtraukti sąlygą**, jei į taisyklę norite įtraukti daugiau sąlygų. Norėdami sukurti taisyklę pagal dabartinę taisyklę, pažymėkite **Įtraukti antrinę taisyklę**.
 
-1. Jei taisyklė naudoja kitus objektus nei *objektas Klientas*, pasirinkite **Nustatyti ryšio kelią**, kad susietumėte pasirinktą objektą su vieninguoju kliento objektu. Jei yra tik vienas galimas ryšio kelias, sistema jį pasirenka automatiškai. Skirtingi [santykių keliai](relationships.md#relationship-paths) gali duoti skirtingus rezultatus. Kiekviena taisyklė gali turėti savo ryšio kelią.
+1. Jei taisyklė naudoja kitus objektus nei *objektas Klientas* (arba *objektas ContactProfile*, skirtas B-to-B), pasirinkite **Nustatyti ryšių kelią**, kad susietas pasirinktas objektas būtų susietas su vieninguoju kliento objektu. Jei yra tik vienas galimas ryšio kelias, sistema jį pasirenka automatiškai. Skirtingi [santykių keliai](relationships.md#relationship-paths) gali duoti skirtingus rezultatus. Kiekviena taisyklė gali turėti savo ryšio kelią.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Galimas ryšio kelias kuriant taisyklę, pagrįstą objektu, susietu su vieninguoju kliento objektu.":::
 
@@ -92,24 +97,22 @@ Aukščiau pateiktas pavyzdys iliustruoja segmentavimo galimybę. Sukūrėme seg
       - **Susikirtimas** persidengia su dviem grupėmis. Vieningoje *grupėje* lieka tik duomenys, kurie dažnai pasitaiko abiejose grupėse.
       - **Išskyrus** sujungia dvi grupes. Saugomi tik A grupės *duomenys* kurie nėra įprasta B grupės duomenims.
 
-1. Pagal numatytuosius nustatymus išvesties objekte bus automatiškai visi klientų profilių atributai, atitinkantys apibrėžtus filtrus. Jei segmentas pagrįstas kitais objektais nei *klientas*, pasirinkite **Projekto atributai**, kad įtrauktumėte daugiau atributų iš šių objektų į išvesties objektą.
-
-   > [!IMPORTANT]
-   > Jei segmentai pagrįsti verslo klientais, į segmentą turi būti įtraukta išsami informacija apie vieną ar daugiau kiekvienos paskyros kontaktų iš *objekto "ContactProfile"*, kad tą segmentą būtų galima suaktyvinti arba eksportuoti į paskirties vietas, kurioms reikalinga kontaktinė informacija. Daugiau informacijos apie *ContactProfile* objektą ieškokite [Semantiniai susiejimai](semantic-mappings.md).
-   > Segmento, pagrįsto verslo klientais, su projektais kontaktų atributais, rezultatų pavyzdys gali atrodyti taip:
-   >
-   > |ID  |Paskyros pavadinimas  |Įplaukos  |Kontakto pavadinimas  | Kontakto vaidmuo|
-   > |---------|---------|---------|---------|---|
-   > |10021     | „Contoso“ | 100K (100K) | [Abbie Moss, Ruth Soto]  | [CEO, Tiekimo vadovas]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Projektuotų atributų, pasirinktų šoninėje srityje, kuriuos reikia įtraukti į išvesties objektą, pavyzdys.":::
-  
+1. Pagal numatytuosius nustatymus išvesties objekte bus automatiškai visi klientų profilių atributai, atitinkantys apibrėžtus filtrus. Naudojant objektą *"ContactProfile* " nuo B iki B, automatiškai įtraukiamas paskyros ID. Jei segmentas pagrįstas kitais objektais nei *kliento* objektas arba įtraukti daugiau atributų iš *ContactProfile*, pasirinkite **Projekto atributai**, kad įtrauktumėte daugiau atributų iš šių objektų į išvesties objektą.
+ 
    Pavyzdžiui: segmentas pagrįstas objektu, kuriame yra pirkimo duomenų, susijusių su *kliento* objektu. Segmentas ieško visų klientų iš Ispanijos, kurie per dabartinius metus įsigijo prekių. Galite pasirinkti pridėti atributus, pvz., prekių kainą arba pirkimo datą, prie visų sutampančių kliento įrašų išvesties objekte. Ši informacija gali būti naudinga analizuojant bendrų išlaidų sezonines sąsajas.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Projektuotų atributų, pasirinktų šoninėje srityje, kuriuos reikia įtraukti į išvesties objektą, pavyzdys.":::
+ 
+   Segmento, pagrįsto verslo klientais, su projektais kontaktų atributais, rezultatų pavyzdys gali atrodyti taip:
+
+   |ID  |Paskyros pavadinimas  |Įplaukos  |Kontakto pavadinimas  | Kontakto vaidmuo|
+   |---------|---------|---------|---------|---|
+   |10021     | „Contoso“ | 100K (100K) | [Abbie Moss, Ruth Soto]  | [CEO, Tiekimo vadovas]
+
    > [!NOTE]
-   > - **Projekto atributai** veikia tik objektams, kurie turi ryšį "vienas su daugeliu" su kliento objektu. Pavyzdžiui, vienas klientas gali turėti kelias prenumeratas.
-   > - Jei atributas, kurį norite įtraukti į projektą, yra daugiau nei vienas objekto klientas, kaip apibrėžta ryšio, šis atributas turi būti naudojamas kiekvienoje *kuriamos* segmento užklausos taisyklėje.
-   > - Jei atributas, kurį norite įtraukti į projektą, yra daugiau nei vienas objekto klientas, kaip apibrėžta ryšio, šis atributas neturi būti rodomas kiekvienoje *kuriamos* segmento užklausos taisyklėje.
+   > - **Projekto atributai** veikia tik objektuose, kurie turi ryšį "vienas su daugeliu" su *objektu Klientas* arba *ContactProfile*. Pavyzdžiui, vienas klientas gali turėti kelias prenumeratas.
+   > - Jei atributas, kurį norite projektuoti, yra daugiau nei vienas nukrypimas nuo *objekto Klientas* arba *ContactProfile*, kaip apibrėžta pagal ryšį, tas atributas turėtų būti naudojamas kiekvienoje kuriamos segmento užklausos taisyklėje.
+   > - Jei atributas, kurį norite projektuoti, yra tik vienas nukrypimas nuo *objekto Klientas* arba *ContactProfile*, to atributo nebūtinai turi būti kiekvienoje kuriamos segmento užklausos taisyklėje.
    > - **Suplanuoti atributai** yra įtraukiami naudojant rinkinio operatorius.
 
 1. Pasirinkite **Vykdyti**, kad sukurtumėte segmentą. Pasirinkite **Įrašyti**, jei norite išlaikyti dabartinę konfigūraciją ir vėliau paleisti segmentą. Rodomas puslapis **Segmentai**.

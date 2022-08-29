@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188103"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303793"
 ---
 # <a name="view-customer-profiles"></a>Peržiūrėti kliento profilius
 
@@ -78,7 +78,7 @@ Kliento išsami informacija apima:
 **Kliento profilio plytelė** rodo skirtingas reikšmes nei vieningasis *kliento* objektas. Jei laukas neturi pasirinkto kliento profilio reikšmės, jis nebus rodomas, išskyrus adreso lauką. Plytelę sudaro skyriai:
 
 - Pirmajame skyriuje rodomas iš anksto nustatytas laukų rinkinys, po kurio seka visi laukai, kurie yra ieškos &filtro rodyklės dalis. Visi su adresu susiję laukai sujungiami į vieną eilutę, kuri rodoma, net jei profilyje nėra adreso informacijos.
-- **Šio kliento** kontaktai rodomi verslo paskyrų aplinkose. Kiekvienas kontaktas rodomas su jų laukais. Tušti laukai paslėpti.
+- **Šio kliento** kontaktai rodomi verslo abonementų (nuo B iki B) aplinkose. Kiekvienas kontaktas rodomas su jų laukais. Tušti laukai paslėpti.
 - **Papildomuose laukuose** rodomi likę pasirinkto kliento laukai, išskyrus ID.
 - **ID išvardijami** visi ID pagal atitinkamą objekto pavadinimą. Laukai identifikuojami kaip ID pagal jų semantiką.
 

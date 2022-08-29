@@ -1,7 +1,7 @@
 ---
 title: Eksportavimų (peržiūros versija) apžvalga
 description: Tvarkykite duomenų bendrinimo eksportavimus.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245337"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304069"
 ---
 # <a name="exports-preview-overview"></a>Eksportavimų (peržiūros versija) apžvalga
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245337"
 
 Yra du pagrindiniai eksportuojami tipai:  
 
-- **Duomenų eksportavimas**: eksportuokite bet kokio tipo objektus, pasiekiamus "Customer Insights". Jūsų pažymėti eksportuoti objektai eksportuojami su visais duomenų laukais, metaduomenimis, schemomis ir susiejimo informacija.
-- **Segmento eksportavimas**: segmento objektų eksportavimas iš "Customer Insights". Segmentai atitinka klientų profilių sąrašą. Konfigūruodami eksportavimą, pasirenkate įtrauktus duomenų laukus, atsižvelgdami į tikslinę sistemą, į kurią eksportuojate duomenis.
+- **Duomenų eksportavimas** leidžia eksportuoti bet kokio tipo objektus, pasiekiamus "Customer Insights". Jūsų pažymėti eksportuoti objektai eksportuojami su visais duomenų laukais, metaduomenimis, schemomis ir susiejimo informacija.
+- **Segmentų eksportavimas** leidžia eksportuoti segmento objektus iš "Customer Insights". Individualiems vartotojams (nuo B iki C) segmentai yra klientų profilių sąrašas. Įmonėms (nuo B iki B) [segmentai gali reikšti abonementų arba kontaktų sąrašą](segment-builder.md#create-a-new-segment-with-segment-builder). Konfigūruodami eksportavimą, pasirenkate įtrauktus duomenų laukus, atsižvelgdami į tikslinę sistemą, į kurią eksportuojate duomenis.
 
 ### <a name="export-segments"></a>Eksportuokite segmentus
 
@@ -38,14 +38,15 @@ Dauguma eksportavimo parinkčių palaiko abiejų tipų aplinkas. Segmentų ekspo
 **Segmentų eksportuojama pavienių klientų aplinkose (B2C)**  
 - Segmentai verslo paskyrų aplinkose atskirtiems klientams, kurie yra pagrįsti *vieningu kliento profilio* objektu. Visi segmentai, kurie atitinka paskirties sistemos reikalavimus (pvz., el. pašto adresas), gali būti eksportuojami.
 
-**Segmentų eksporto aplinkos verslo klientams (B2B)**  
-- Segmentai verslo paskyrų aplinkose kuriami naudojant *kliento* objektą. Kad klientų segmentai būtų eksportuojami taip, kaip yra, paskirties sistema turi palaikyti klientų segmentus. Taip yra su [„LinkedIn"](export-linkedin-ads.md) kai **apibrėždami** eksportavimą pasirenkate įmonės parinktį.
-- Visose kitose paskirties sistemose reikia laukų iš kontakto objekto. Norint užtikrinti, kad klientų segmentai galės nuskaityti duomenis iš susijusių kontaktų, jūsų segmento apraše turi būti pateikti kontakto objekto atributai. Sužinokite daugiau, kaip [konfigūruoti segmentus ir projekto atributus](segment-builder.md).
+**Segmentuokite eksportą verslo sąskaitų aplinkoje (nuo B iki B)**  
+- Segmentai, susiję su verslo paskyrų aplinkomis, yra sukurti pagal kliento objektą *arba kontaktų* objektą *.* Kad klientų segmentai būtų eksportuojami taip, kaip yra, paskirties sistema turi palaikyti klientų segmentus. Taip yra su [„LinkedIn"](export-linkedin-ads.md) kai **apibrėždami** eksportavimą pasirenkate įmonės parinktį.
+- Visose kitose paskirties sistemose reikia laukų iš kontakto objekto.
+- Naudojant du segmentų tipus (kontaktus ir paskyras), "Customer Insights" automatiškai nustato, kokio tipo segmentus galima eksportuoti pagal tikslinę sistemą. Pavyzdžiui, į kontaktą orientuotoje tikslinėje sistemoje, pvz., "Mailchimp", "Customer Insights" leidžia pasirinkti tik eksportuotinus kontaktų segmentus.
 
 **Segmentų eksporto apribojimai**  
 - Trečiųjų šalių paskirties sistemos gali riboti klientų profilių, kuriuos galite eksportuoti, skaičių. 
-- Atskiriems klientams, pažymėdami eksportuoti norimą segmentą, matysite faktinį segmento narių skaičių. Jei segmentas yra per didelis, gausite įspėjimą. 
-- Verslo klientų segmente matysite klientų skaičių; tačiau kontaktų, kuriuos galima projektuoti, skaičius nerodo. Tam tikrais atvejais eksportuotas segmentas iš tiesų gali turėti daugiau klientų profilių nei tikslinė sistema. Jei viršijamos tikslinės sistemos ribos, eksportas praleidžiamas.
+- Atskiriems klientams, pažymėdami eksportuoti norimą segmentą, matysite faktinį segmento narių skaičių. Gausite įspėjimą, jei segmentas yra per didelis. 
+- Verslo paskyrose matysite paskyrų arba kontaktų skaičių, atsižvelgiant į segmentą. Gausite įspėjimą, jei segmentas yra per didelis. Jei viršysite tikslinių sistemų rezultatų apribojimus, eksportą praleisite.
 
 ## <a name="set-up-a-new-export"></a>Naujo eksportavimo sąranka
 
@@ -110,6 +111,20 @@ Jei duomenis norite eksportuoti nelaukdami planuojamo atnaujinimo, eikite į **D
 
 - Jei norite peržiūrėti visus eksportavimus, komandų juostoje pasirinkite **Vykdyti viską**. Vykdomi tik tie eksportavimai, kurie turi aktyvų tvarkaraštį. Norėdami vykdyti neaktyvų eksportavimą, vykdykite vieną eksportavimą.
 - Norėdami vykdyti vieną eksportavimą, pažymėkite jį sąraše ir pasirinkite **Vykdyti** komandų juostoje.
+
+## <a name="troubleshooting"></a>Trikčių šalinimas
+
+### <a name="segment-not-eligible-for-export"></a>Segmentas, neatitinkantis eksporto reikalavimų
+
+**Problema** Verslo paskyrų aplinkoje jūsų eksportas nepavyksta su klaidos pranešimu: "Šis segmentas neatitinka šios eksportavimo paskirties vietos reikalavimų: "{segmento} pavadinimas". Pasirinkite tik "ContactProfile" tipo segmentus ir bandykite dar kartą."
+
+**Pertvarkymo** "Customer Insights" aplinkos verslo paskyroms buvo atnaujintos, kad, be sąskaitų segmentų, būtų palaikomi kontaktų segmentai. Dėl šio pokyčio eksportas, kuriam reikia kontaktinės informacijos, veikia tik su segmentais pagal kontaktus.
+
+1. [Sukurkite segmentą pagal kontaktus](segment-builder.md), kuris atitinka anksčiau naudotą segmentą.
+
+1. Paleidę tą kontaktų segmentą, redaguokite atitinkamą eksportavimą ir pasirinkite naują segmentą.
+
+1. Pasirinkite **Įrašyti**, kad įrašytumėte konfigūraciją, arba **Įrašyti ir paleisti**, kad iš karto išbandytumėte šį eksportavimą.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

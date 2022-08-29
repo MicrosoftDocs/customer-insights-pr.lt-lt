@@ -1,7 +1,7 @@
 ---
 title: Segmentų apžvalga
 description: Segmentų apžvalga ir jų kūrimo bei valdymo informacija.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246303"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304805"
 ---
 # <a name="segments-overview"></a>Segmentų apžvalga
 
 Segmentai leidžia jums grupuoti jūsų klientus pagal demografiją, perlaidas ar elgesio savybes. Norėdami pasiekti verslo tikslus, galite naudoti segmentus, kad tikslingai vykdytumėte reklamines kampanijas, pardavimo veiklas ir klientų aptarnavimo veiksmus.
 
-Klientų profiliai, atitinkantys segmento aprašo filtrus, *vadinami segmento nariais*. Kai kurie [paslaugų apribojimai](/dynamics365/customer-insights/service-limits) yra taikomi.
+Klientų arba kontaktų profiliai, atitinkantys segmento aprašo filtrus, *vadinami segmento nariais*. Kai kurie [paslaugų apribojimai](/dynamics365/customer-insights/service-limits) yra taikomi.
 
 ## <a name="create-a-segment"></a>Kurti segmentą
 
@@ -41,13 +41,19 @@ Pasirinkite, kaip sukurti segmentą pagal tikslinę auditoriją.
 
 # <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
 
-- Paprasti arba sudėtingi segmentai su segmentų kūrimo priemone: [sukurkite savo](segment-builder.md)
+Paskyrų segmentas arba kontaktų segmentas (peržiūra) naudojant segmentų kūrimo priemonę: [sukurkite savo](segment-builder.md)
+
+> [!NOTE]
+> Daugumai eksportuojamų paskirties vietų rinkodaros tikslais reikalinga kontaktinė informacija. Todėl kurkite kontaktų segmentus, kuriuos naudosite tiems eksportavimams.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Esamų segmentų tvarkymas
 
-Eikite **į puslapį Segmentai** ir peržiūrėkite sukurtus segmentus, jų būseną ir būseną, narių skaičių ir paskutinį kartą, kai duomenys buvo atnaujinti. Galite rūšiuoti segmentų sąrašą pagal bet kurį stulpelį arba naudoti ieškos lauką, kad rastumėte segmentą, kurį norite tvarkyti.
+Eikite **į puslapį Segmentai**, kad peržiūrėtumėte sukurtus segmentus, jų būseną ir būseną bei paskutinį kartą, kai duomenys buvo atnaujinti. Galite rūšiuoti segmentų sąrašą pagal bet kurį stulpelį arba naudoti ieškos lauką, kad rastumėte segmentą, kurį norite tvarkyti.
+
+> [!TIP]
+> B–B aplinkose stulpelis Auditorijos tipas **identifikuoja,** ar segmentas pagrįstas klientais, ar kontaktais.
 
 Pasirinkite segmentą, kad peržiūrėtumėte galimus veiksmus.
 
@@ -82,7 +88,7 @@ Apatinėje dalyje yra segmento narių sąrašas.
 > [!NOTE]
 > Šiame sąraše pateikiami laukai grindžiami jūsų segmento objektų atributais.
 >
->Šiame sąraše rodomi sutampantys segmento nariai ir pirmieji 100 jūsų segmento įrašai, kad galėtumėte greitai jį įvertinti ir peržiūrėti apibrėžimus, jei to reikia. Norėdami peržiūrėti visus sutampančius įrašus, [eksportuokite segmentą](export-destinations.md).
+> Šiame sąraše rodomi sutampantys segmento nariai ir pirmieji 100 jūsų segmento įrašai, kad galėtumėte greitai jį įvertinti ir peržiūrėti apibrėžimus, jei to reikia. Norėdami peržiūrėti visus sutampančius įrašus, pasirinkite **Žiūrėti daugiau**, kas atidaro [**puslapį Objektai**](entities.md), arba [eksportuokite segmentą](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Segmentų atnaujinimas
 

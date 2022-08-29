@@ -2,7 +2,7 @@
 title: Duomenų suvienodinimo atitikties sąlygos
 description: Suderinkite objektus tam, kad sukurtumėte suvienytus kliento profilius.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139713"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304667"
 ---
 # <a name="match-conditions-for-data-unification"></a>Duomenų suvienodinimo atitikties sąlygos
 
@@ -27,6 +27,8 @@ ms.locfileid: "9139713"
 
 > [!NOTE]
 > Sukūrę atitikties sąlygas ir pasirinkę **Pirmyn**, negalite pašalinti pasirinkto objekto arba atributo. Jei reikia, prieš tęsdami pasirinkite **Atgal**, kad peržiūrėtumėte pasirinktus objektus ir atributus.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Papildytųjų objektų įtraukimas (peržiūra)
 
@@ -43,16 +45,16 @@ Jei praturtinote objektus duomenų šaltinis lygiu, kad pagerintumėte suvieniji
 Kiekvienas atitikmuo suvienodina du ar daugiau objektų į vieną konsoliduotą objektą. Tuo pačiu metu jis saugo unikaliuosius klientų įrašus. Atitikties tvarka nurodo tvarką, kuria sistema bando suderinti įrašus.
 
 > [!IMPORTANT]
-> Pirmasis sąrašo objektas vadinamas pirminiu objektu. Pagrindinis objektas yra jūsų vieningųjų profilių duomenų rinkinio pagrindas. Papildomi pasirinkti objektai bus įtraukti į šį objektą.
+> Pirmasis objektas vadinamas pirminiu objektu, kuris yra jūsų vieningųjų profilių pagrindas. Papildomi pasirinkti objektai bus įtraukti į šį objektą.
 >
 > Svarbios aplinkybės:
 >
 > - Pasirinkite objektą su išsamiausiais ir patikimiausiais profilio duomenimis apie klientus kaip pagrindinį objektą.
 > - Kaip pagrindinį objektą pasirinkite objektą, kurio keli bendrai naudojami atributai su kitais objektais (pvz., vardas, telefono numeris arba el. pašto adresas).
 
-1. Puslapyje Atitikimo **sąlygos** naudokite rodykles judėti aukštyn ir žemyn, kad perkeltumėte objektus norima tvarka, arba vilkite ir numeskite juos. Pavyzdžiui, pasirinkite **Kontaktai:el. prekyba** kaip pagrindinį objektą ir **CustomerLoyalty:Loyalty** kaip antrąjį objektą.
+1. Puslapyje Atitikimo **sąlygos** naudokite rodykles judėti aukštyn ir žemyn, kad perkeltumėte objektus norima tvarka, arba vilkite ir numeskite juos. Pavyzdžiui, kaip pagrindinį objektą pasirinkite **eCommerceCustomers**, o **kaip antrąjį objektą – loyCustomers**.
 
-1. Norėdami, kad kiekvienas objekto įrašas būtų unikalus klientas, neatsižvelgiant į tai, ar rasta atitiktis, pasirinkite **Įtraukti visus įrašus**. Visi šio objekto įrašai, neatitinkantys jokių kitų objektų įrašų, įtraukiami į vieningąjį profilį. Įrašai, kurie neturi atitikmens, vadinami singletonais.
+1. Norėdami, kad kiekvienas objekto įrašas būtų unikalus klientas, neatsižvelgiant į tai, ar rasta atitiktis, pasirinkite **Įtraukti visus įrašus**. Visi šio objekto įrašai, neatitinkantys jokio kito objekto įrašų, įtraukiami į vieningąjį profilį. Įrašai, kurie neturi atitikmens, vadinami singletonais.
   
 Pagrindinis objektas *Kontaktai:el. prekyba* yra suderinamas su kitu objektu *CustomerLoyalty:Loyalty*. Duomenų rinkinys, gautas atlikus pirmąjį atitikties veiksmą, suderinamas su toliau nurodytu objektu, jei turite daugiau nei du objektus.
 
@@ -70,7 +72,7 @@ Atitikties taisyklėse nurodoma logika, pagal kurią bus derinama konkreti objek
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Taisyklės įtraukimo srities ekrano nuotrauka.":::
 
-   - **Pasirinkite Objektas / laukas (pirmoji eilutė)**: pasirinkite susijusį objektą ir atributą, kad nurodytumėte įrašo ypatybę, kuri gali būti unikali klientui. Pavyzdžiui, telefono numeris ar el. pašto adresas. Venkite gretinti pagal veiklos tipo atributus. Pavyzdžiui, tikėtina, kad pirkimo ID neras atitikmens kituose įrašų tipuose.
+   - **Pasirinkite Objektas / laukas (pirma eilutė)**: pasirinkite objektą ir atributą, kurie gali būti unikalūs klientui. Pavyzdžiui, telefono numeris ar el. pašto adresas. Venkite gretinti pagal veiklos tipo atributus. Pavyzdžiui, tikėtina, kad pirkimo ID neras atitikmens kituose įrašų tipuose.
 
    - **Pasirinkite Objektas / laukas (antra eilutė)**: pasirinkite atributą, susijusį su pirmoje eilutėje nurodytu objekto atributu.
 
@@ -116,7 +118,7 @@ Gretinimo taisyklės reiškia sąlygų rinkinius. Norėdami suderinti objektus p
 
 ### <a name="add-exceptions-to-a-rule"></a>Išimčių įtraukimas į taisyklę
 
-Daugeliu atvejų objekto atitikimas veda prie unikalių klientų profilių su konsoliduotais duomenimis. Norėdami dinamiškai reaguoti į retus klaidingų teigiamų ir klaidingų negatyvų atvejus, galite apibrėžti atitikties taisyklės išimtis. Išimtys taikomos apdorojus atitikties taisykles ir vengiant visų įrašų, kurie atitinka išimties kriterijus, atitikimo.
+Daugeliu atvejų objekto atitikimas veda prie unikalių klientų profilių su konsoliduotais duomenimis. Norėdami spręsti retus klaidingų teigiamų ir klaidingų neigiamų rezultatų atvejus, apibrėžkite atitikties taisyklės išimtis. Išimtys taikomos apdorojus atitikties taisykles ir vengiant visų įrašų, kurie atitinka išimties kriterijus, atitikimo.
 
 Pavyzdžiui, jei atitikties taisyklė apjungia pavardė, miestą ir gimimo datą, sistema identifikuos dvynius, turinčius tą patį pavardė, kurie gyvena tame pačiame mieste kaip ir tas pats profilis. Galite nurodyti išimtį, kuri neatitinka profilių, jei sujungiamų objektų vardas nėra tas pats.
 
@@ -134,7 +136,7 @@ Galite nurodyti sąlygas, kurios perrašo numatytąją atitikties logiką. Galim
 |---------|---------|---------|
 |Visada atitikti     | Apibrėžia reikšmes, kurios visada sutampa.         |  Visada prilygti *Mike'ui* ir *Mike'uiR*.       |
 |Niekada neatitinka     | Apibrėžia reikšmes, kurios niekada nesutampa.        | Niekada neprilygti *Johnui* ir *Jonathanui*.        |
-|Pasirinktinis apėjimas     | Apibrėžia reikšmes, kurių sistema visada turėtų nepaisyti rungtynių etape. |  Rungtynių metu nepaisykite reikšmių *11111* ir *Nežinomos*.        |
+|Apėjimas            | Apibrėžia reikšmes, kurių sistema visada turėtų nepaisyti rungtynių etape. |  Rungtynių metu nepaisykite reikšmių *11111* ir *Nežinomos*.        |
 |Pseudonimo susiejimas    | Reikšmių, kurias sistema turėtų laikyti ta pačia verte, apibrėžimas.         | Laikykite Džo *lygiu* Džozefui *·*.        |
 
 1. Pasirinkti **Tinkinimas**.

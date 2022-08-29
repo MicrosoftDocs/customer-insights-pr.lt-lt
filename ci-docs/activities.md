@@ -1,9 +1,9 @@
 ---
-title: Kliento veiklos
-description: Apibrėžkite klientų veiklas ir peržiūrėkite jas klientų profilių laiko planavimo juostose.
-ms.date: 07/22/2022
+title: Klientų arba verslo kontaktinė veikla
+description: Apibrėžkite klientų arba verslo kontaktų veiklą ir peržiūrėkite jas klientų profilių laiko juostoje.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188149"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304115"
 ---
-# <a name="customer-activities"></a>Kliento veiklos
+# <a name="customer-or-business-contact-activities"></a>Klientų arba verslo kontaktinė veikla
 
-Klientų veikla yra klientų atliekami veiksmai ar įvykiai. Pavyzdžiui, operacijos, palaikymo skambučio trukmė, svetainių apžvalgos, pirkiniai ar grąžinimai. Ši veikla pateikiama viename ar keliuose duomenų šaltiniuose. Naudodami "Customer Insights" suaktyvinkite savo klientų veiklą iš šių [duomenų šaltinių](data-sources.md) ir susiekite jas su klientų profiliais. Šios veiklos rodomos chronologiškai kliento profilio laiko juostoje. Įtraukite laiko planavimo juostą į "Dynamics 365" programas naudodami ["Customer Card" papildinio](customer-card-add-in.md) sprendimą.
+Klientų veikla yra veiksmai ar įvykiai, kuriuos atlieka klientai arba verslo kontaktai. Pavyzdžiui, operacijos, palaikymo skambučio trukmė, svetainių apžvalgos, pirkiniai ar grąžinimai. Ši veikla pateikiama viename ar keliuose duomenų šaltiniuose. Naudodami "Customer Insights" suaktyvinkite savo klientų veiklą iš šių [duomenų šaltinių](data-sources.md) ir susiekite jas su klientų profiliais. Šios veiklos rodomos chronologiškai kliento profilio laiko juostoje. Įtraukite laiko planavimo juostą į "Dynamics 365" programas naudodami ["Customer Card" papildinio](customer-card-add-in.md) sprendimą.
 
-## <a name="define-an-activity"></a>Veiklos apibrėžimas
+## <a name="define-a-customer-activity"></a>Kliento veiklos apibrėžimas
 
 Objektas turi turėti bent vieną tipo **datos** atributą, kad būtų įtrauktas į kliento laiko planavimo juostą. Valdiklis **Įtraukti veiklą** yra išjungtas, jei nerastas toks objektas.
 
@@ -38,9 +38,9 @@ Objektas turi turėti bent vieną tipo **datos** atributą, kad būtų įtraukta
 
 1. Atlikdami veiksmą **Veiklos duomenys** įveskite šią informaciją:
 
-   - **Veiklos pavadinimas**: veiklos pavadinimas.
-   - **Veiklos objektas**: subjektas, apimantis operacijų arba veiklos duomenis.
-   - **Pirminis raktas**: laukas, kuris unikaliai identifikuoja įrašą. Jame neturėtų būti jokių pasikartojančių reikšmių, tuščių reikšmių arba trūkstamų reikšmių.
+   - **Veiklos pavadinimas**: pasirinkite savo veiklos pavadinimą.
+   - **Veiklos objektas**: pasirinkite objektą, į kurį įtraukti operacijų arba veiklos duomenys.
+   - **Pirminis raktas**: pasirinkite lauką, kuris identifikuoja unikalų įrašą. Jame neturėtų būti jokių pasikartojančių reikšmių, tuščių reikšmių arba trūkstamų reikšmių.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Nustatykite veiklos duomenis su pavadinimu, objektu ir pagrindiniu raktu.":::
 
@@ -48,9 +48,9 @@ Objektas turi turėti bent vieną tipo **datos** atributą, kad būtų įtraukta
 
 1. Atlikdami ryšio **veiksmą** pasirinkite Įtraukti ryšį **,** kad prijungtumėte savo veiklos duomenis prie atitinkamo kliento įrašo. Šiuo veiksmu vaizduojamas objektų ryšys.  
 
-   - **Išorinis raktas iš objekto**: laukas jūsų veiklos objekte, kuris bus naudojamas ryšiui su kitu objektu užmegzti.
+   - **Užsienio raktas**: užsienio laukas jūsų veiklos objekte, kuris bus naudojamas ryšiui su kitu objektu užmegzti.
    - **Objekto pavadinimas**: atitinkamas šaltinio kliento objektas, su kuriuo bus susijęs jūsų veiklos objektas. Ryšį galite nustatyti tik su tais šaltinio kliento objektais, kurie naudojami duomenų suvienodinimo procese.
-   - **Ryšio pavadinimas**: pavadinimas, identifikuojantis ryšį tarp objektų. Jei ryšys tarp šio veiklos objekto ir pasirinkto šaltinio kliento objekto jau yra, ryšio pavadinimas yra skirtas tik skaityti.
+   - **Ryšio pavadinimas**: jei ryšys tarp šio veiklos objekto ir pasirinkto šaltinio kliento objekto jau egzistuoja, ryšio pavadinimas veiks tik skaitymo režimu. Jei tokio ryšio nėra, bus sukurtas naujas ryšys tokiu pavadinimu, kurį pateikiate šiame lauke.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Objekto ryšio apibrėžimas.":::
 
@@ -90,7 +90,7 @@ Objektas turi turėti bent vieną tipo **datos** atributą, kad būtų įtraukta
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Esamos veiklos tvarkymas
+## <a name="manage-existing-customer-activities"></a>Esamos klientų veiklos valdymas
 
 Eikite į **Duomenų** > **veiklas**, kad peržiūrėtumėte įrašytą veiklą, šaltinio objektą, veiklos tipą ir, jei jos įtrauktos į kliento laiko planavimo juostą. Galite rūšiuoti veiklų sąrašą pagal bet kurį stulpelį arba naudoti ieškos lauką, kad rastumėte norimą valdyti veiklą.
 
@@ -116,9 +116,43 @@ Pasirinkite veiklą, kad peržiūrėtumėte galimus veiksmus.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Naudodami filtrų skydą konfigūruokite filtravimo sąlygas.":::
 
-1. Norėdami pašalinti filtrus, pasirinkite **Valyti filtrus** arba pasirinkite **Filtras** ir išvalykite žymimąjį laukelį Filtras.
-
 > [!NOTE]
 > Veiklos filtrai pašalinami išeidami iš kliento profilio. Turite juos taikyti kiekvieną kartą, kai atidarote kliento profilį.
+
+## <a name="define-a-contact-activity"></a>Kontakto veiklos apibrėžimas
+
+Jei naudojate verslo paskyras (nuo B iki B), naudokite "ContactProfile *" objektą*, kad užfiksuotumėte kontaktų veiklą. Paskyros veiklos laiko juostoje galite matyti, kuris kontaktas buvo atsakingas už kiekvieną veiklą. Dauguma veiksmų atliekami pagal klientų veiklos susiejimo konfigūraciją.
+
+   > [!NOTE]
+   > Norint apibrėžti kontakto lygio veiklą, *"ContactProfile* " objektas turi būti sukurtas kaip vieningas [kontakto profilis](data-unification-contacts.md) arba per [semantinį susiejimą](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Kiekvienam įrašui savo veiklos duomenyse turite turėti **ir kliento ID**, ir **contactID** atributus.
+  
+1. Eikite į **Duomenų** > **veikla**.
+
+1. Pasirinkite **Pridėti veiklos**.
+
+1. Pavadinkite veiklą, pasirinkite šaltinio veiklos objektą ir pasirinkite pirminį veiklos objekto raktą.
+
+1. Atlikdami veiksmą **Ryšiai** sukurkite netiesioginį ryšį tarp savo veiklos šaltinio duomenų su klientais, naudodami savo kontaktinius duomenis kaip tarpinį objektą. Norėdami gauti daugiau informacijos, žiūrėkite [tiesioginių ir netiesioginių ryšių kelius](relationships.md#relationship-paths).
+   - Veiklos, vadinamos *Pirkimais*, ryšio pavyzdys:
+      - **Pirkimai Šaltinio veiklos duomenys** > **Kontaktiniai duomenys** atribute **ContactID**
+      - **Kontaktiniai duomenų** > **paskyros duomenys** atribute **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Ryšio sąrankos pavyzdys.":::
+
+1. Nustatę ryšius, pasirinkite **Pirmyn** ir užbaikite veiklos susiejimo konfigūraciją. Išsamių veiklos kūrimo veiksmų ieškokite [kliento veiklos](#define-a-customer-activity) apibrėžime.
+
+1. Paleiskite veiklos susiejimas.
+
+1. Jūsų kontakto lygio veikla dabar bus matoma kliento laiko juostoje.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Galutinis rezultatas sukonfigūravus kontaktinę veiklą":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Kontakto lygio veiklos laiko planavimo juostos filtravimas
+
+Sukonfigūravus kontakto lygio veiklos susiejimą ir jį paleidus, jūsų klientų veiklos laiko juosta bus atnaujinta. Tai apima jų ID arba pavadinimus, atsižvelgiant į jūsų *"ContactProfile* " konfigūraciją, skirtą veiklai, kurią jie veikė. Laiko planavimo juostoje galite filtruoti veiklą pagal kontaktus, kad pamatytumėte konkrečius jus dominančius kontaktus. Be to, galite matyti visas veiklas, kurios nepriskirtos konkrečiam kontaktui, pasirinkdami **Veikla, nesusieta su kontaktu**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Galimos kontakto lygio veiklos filtravimo parinktys.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

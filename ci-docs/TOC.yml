@@ -76,6 +76,8 @@
       href: merge-entities.md
     - name: Duomenų suvienijimo peržiūra
       href: review-unification.md
+    - name: Vieningojo kontakto profilio kūrimas
+      href: data-unification-contacts.md
     - name: Suvienijimo parametrų naujinimas
       href: data-unification-update.md
 - name: Duomenų papildymas
