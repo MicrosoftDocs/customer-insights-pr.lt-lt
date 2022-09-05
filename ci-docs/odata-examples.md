@@ -1,27 +1,27 @@
 ---
 title: "\"OData\" užklausų pavyzdžiai, skirti \"Customer Insights\" API"
 description: Dažniausiai naudojami atvirųjų duomenų protokolo ("OData") pavyzdžiai, skirti užklausoms dėl "Customer Insights" API pateikti užklausą, kad būtų galima peržiūrėti duomenis.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121572"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387212"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>"OData" užklausų pavyzdžiai, skirti "Customer Insights" API
 
 Atvirųjų duomenų protokolas (OData) yra duomenų prieigos protokolas, sukurtas remiantis pagrindiniais protokolais, pvz., HTTP. Jis naudoja visuotinai pripažintas metodikas, pvz., REST žiniatinkliui. Yra įvairių tipų bibliotekų ir įrankių, kuriuos galima naudoti "OData" paslaugoms naudoti.
 
-Šiame straipsnyje pateikiami keli dažnai prašomi užklausų pavyzdžiai, kurie padės jums sukurti savo diegimus pagal ["Customer Insights" API](apis.md).
+Kad padėtumėte kurti savo diegimus pagal ["Customer Insights" API](apis.md), peržiūrėkite kelis dažnai prašomus užklausų pavyzdžius.
 
-Turite modifikuoti užklausos pavyzdžius, kad jie veiktų tikslinėse aplinkose: 
+Modifikuokite užklausos pavyzdžius, kad jie veiktų tikslinėse aplinkose:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` kur {instanceId} yra "Customer Insights" aplinkos GUID, dėl kurio norite pateikti užklausą. Operacija [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) leidžia rasti tą, {InstanceId} prie kurio turite prieigą.
 - {CID}: vieningo kliento įrašo GUID. Pavyzdys:`ce759201f786d590bf2134bff576c369`.
@@ -31,7 +31,7 @@ Turite modifikuoti užklausos pavyzdžius, kad jie veiktų tikslinėse aplinkose
 
 ## <a name="customer"></a>kliente
 
-Šioje lentelėje yra objekto Klientas *pavyzdinių užklausų* rinkinys.
+Objekto Klientas *užklausų* pavyzdžiai.
 
 |Užklausos tipas |Pavyzdžiui  | Pastaba.  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ Turite modifikuoti užklausos pavyzdžius, kad jie veiktų tikslinėse aplinkose
 
 ## <a name="unified-activity"></a>Vieninga veikla
 
-Šioje lentelėje pateikiamas "UnifiedActivity"*objekto* pavyzdinių užklausų rinkinys.
+"UnifiedActivity"*objekto užklausų* pavyzdžiai.
 
 |Užklausos tipas |Pavyzdžiui  | Pastaba.  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Turite modifikuoti užklausos pavyzdžius, kad jie veiktų tikslinėse aplinkose
 
 ## <a name="other-examples"></a>Kiti pavyzdžiai
 
-Šioje lentelėje pateikiamas kitų objektų užklausų pavyzdžių rinkinys.
+Kitų objektų užklausų pavyzdžiai.
 
 |Užklausos tipas |Pavyzdžiui  | Pastaba.  |
 |---------|---------|---------|

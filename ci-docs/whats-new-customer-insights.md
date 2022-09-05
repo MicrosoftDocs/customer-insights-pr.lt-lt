@@ -1,19 +1,19 @@
 ---
 title: Kas nauja programoje „Dynamics 365 Customer Insights“
 description: Informacija apie naujas funkcijas, pagerinimus ir klaidų ištaisymus.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246021"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387304"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Kas nauja programoje „Dynamics 365 Customer Insights“
 
@@ -23,6 +23,24 @@ Naujinimus atliekame pagal regionus. Taigi tam tikri regionai gali matyti funkci
 
 > [!TIP]
 > Norėdami teikti ir balsuoti už funkcijų užklausas bei produktų pasiūlymus, eikite į [„Dynamics 365“ programos idėjų portalą](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>2022 m. rugpjūčio mėn. naujinimai
+
+2022 m. rugpjūčio mėnesio atnaujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų pataisymus.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Kontaktų suvienijimas B-to-B aplinkoje
+
+"B-to-B" aplinkos "Customer Insights" dabar palaiko patobulintą duomenų suvienijimo patirtį.
+
+Dabar galite suvienodinti kontaktus, be abonementų, kad gautumėte išsamų verslo kontaktų vaizdą. Vieningieji kontaktai yra susieti su vieningomis paskyromis ir dabar pateikiami klientų kortelėse. 
+
+Daugiau informacijos ieškokite [Vieningojo kontakto profilio kūrimas](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Segmentų kūrimas ir eksportavimas pagal vieningus kontaktus
+
+Dėl naujo kontaktų suvienijimo galite kurti kontaktų segmentus naudodami kontaktų, abonementų arba abiejų kriterijus. Šiuos segmentus galima eksportuoti, kad juos būtų galima suaktyvinti kitose paslaugose.
+
+Daugiau informacijos ieškokite [Eksportavimo apžvalga](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>2022 m. liepos mėn. naujinimai
 
@@ -42,7 +60,7 @@ Daugiau informacijos ieškokite [Duomenų eksportavimas į SFTP pagrindinius kom
 
 ### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Suasmeninkite funkcijas naudodami duomenis apie žinomus ir nežinomus vartotojus
 
-Klientų duomenų tvarkymas nėra naujas iššūkis, tačiau jis tampa vis sudėtingesnis, nes vartotojai naršo įvairiuose prekių ženklų siūlomuose skaitmeniniuose kanaluose. Vartotojas, kuris yra žinomas (autentifikuotas) viename kanale, tampa nežinomas (neautentifikuotas) kitame kanale, jei jis nėra prisijungęs. Problema dažnai yra ta, kad neautentifikuoti (nežinomi) vartotojai neturi bendro ID. Jis gali būti naudojamas prasmingiems profilių atributams susieti ir vieningiems klientų profiliams generuoti. "Customer Insights" padeda išspręsti šią problemą, nurijus duomenis iš sekimo metodų šaltinio sistemose.
+Klientų duomenų tvarkymas nėra naujas iššūkis, tačiau jis tampa vis sudėtingesnis, nes vartotojai naršo įvairiuose prekių ženklų siūlomuose skaitmeniniuose kanaluose. Vartotojas, kuris yra žinomas (autentifikuotas) viename kanale, tampa nežinomas (neautentifikuotas) kitame kanale, jei jis neprisijungęs. Problema dažnai yra ta, kad neautentifikuoti (nežinomi) vartotojai neturi bendro ID. Jis gali būti naudojamas prasmingiems profilių atributams susieti ir vieningiems klientų profiliams generuoti. "Customer Insights" padeda išspręsti šią problemą, nurijus duomenis iš sekimo metodų šaltinio sistemose.
 
 Daugiau informacijos ieškokite [Funkcijų suasmeninimas naudojant duomenis apie žinomus ir nežinomus vartotojus](unknown-to-known.md).
 
@@ -70,7 +88,7 @@ Norėdami gauti daugiau informacijos, žiūrėkite [Saugiai pasiekite klientų d
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Prisijungimas prie savo duomenų naudojant "Azure Private Link"
 
-"Azure Private Link" leidžia "Customer Insights" prisijungti prie jūsų Azure Data Lake Storage paskyros per privatų virtualaus tinklo galinį punktą. Duomenims, esantiems saugojimo paskyroje, kuri nėra viešajame internete, "Private Link" įgalina ryšį su tuo apribotu tinklu.
+"Azure Private Link" leidžia "Customer Insights" prisijungti prie jūsų Azure Data Lake Storage paskyros per privatų galinį punktą virtualiame tinkle. Duomenims, esantiems saugojimo paskyroje, kuri nėra viešajame internete, "Private Link" įgalina ryšį su tuo apribotu tinklu.
 
 Daugiau informacijos ieškokite [Privataus saito naudojimas programoje "Customer Insights](security-overview.md#set-up-an-azure-private-link)".
 

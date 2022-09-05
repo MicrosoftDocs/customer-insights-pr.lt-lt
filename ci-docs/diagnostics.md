@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245935"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352811"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Diagnostikos žurnalų eksportavimas (peržiūra)
 
@@ -36,8 +36,8 @@ Persiųskite žurnalus iš "Customer Insights" naudodami "Azure Monitor". "Azure
 
 - Aktyvi " [Azure" prenumerata](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - [Administratoriaus](permissions.md#admin) teisės programoje "Customer Insights".
+- Galiojantis "Azure" išteklius, atitinkantis ["Azure" saugyklos, "Azure Event Hub" arba "Azure Log Analytics" paskirties reikalavimus](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements).
 - [Bendraautorio ir vartotojo prieigos administratoriaus vaidmuo](/azure/role-based-access-control/role-assignments-portal) "Azure" paskirties ištekliuje. Ištekliai gali būti Azure Data Lake Storage paskyra, "Azure" įvykių telkinys arba "Azure Log Analytics" darbo sritis. Šis leidimas būtinas konfigūruojant diagnostikos parametrus "Customer Insights", tačiau jį galima pakeisti sėkmingai atlikus sąranką.
-- [Tenkinami "Azure" saugyklos, "Azure Event Hub" arba "Azure Log Analytics" paskirties reikalavimai](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements).
 - Bent jau skaitytuvo **vaidmuo** išteklių grupėje, kuriai priklauso išteklius.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnostikos nustatymas naudojant "Azure Monitor"
@@ -78,7 +78,7 @@ Atsižvelgiant į jūsų pasirinktą išteklių tipą, automatiškai atliekami �
 
 ### <a name="log-analytics"></a>Žurnalo analizė
 
-"Customer Insights" paslaugos vykdytojas gauna ištekliaus žurnalo **"Analytics" bendraautorio** leidimą. Žurnalai pasiekiami pasirinktoje **"Log Analytics" darbo srities žurnalų skiltyje Žurnalų lentelių** > **·** > **žurnalo valdymas**. Išplėskite žurnalų **valdymo** sprendimą ir raskite lenteles bei `CIEventsAudit` lenteles `CIEventsOperational`.
+"Customer Insights" paslaugos vykdytojas gauna ištekliaus žurnalo **"Analytics" bendraautorio** leidimą. Žurnalai pasiekiami pasirinktoje **"Log Analytics" darbo srities žurnalų skiltyje Žurnalų lentelių** > **·** > **žurnalo valdymas**. Išplėskite žurnalų **valdymo** sprendimą ir raskite lenteles bei `CIEventsAudit` lenteles`CIEventsOperational`.
 
 - `CIEventsAudit` kuriame pateikiami **audito įvykiai,**
 - `CIEventsOperational` kuriuose vyksta **operatyviniai renginiai**
@@ -87,14 +87,14 @@ Po langu **Užklausos** išplėskite **Audito** sprendimas ir suraskite užklaus
 
 ## <a name="remove-a-diagnostics-destination"></a>Diagnostikos paskirties vietos šalinimas
 
-1. Eikite į **Administravimo** > **sistema** ir pasirinkite skirtuką **Diagnostika**.
+1. Eikite į **Administravimo** > **sistema** ir pasirinkite skirtuką **Diagnostika** .
 
 1. Sąraše pasirinkite diagnostikos paskirties vietą.
 
    > [!TIP]
    > Pašalinus paskirties vietą, žurnalo persiuntimas sustabdomas, bet nepanaikinamas "Azure" prenumeratos išteklius. Norėdami panaikinti "Azure" šaltinį, stulpelyje Veiksmai **pasirinkite saitą**, kad atidarytumėte pasirinkto ištekliaus "Azure" portalą ir panaikintumėte jį ten. Tada ištrinkite diagnostikos paskirties vietą.
 
-1. Stulpelyje **Veiksmai** pasirinkite piktogramą **Ištrinti**.
+1. Stulpelyje **Veiksmai** pasirinkite piktogramą **Ištrinti** .
 
 1. Patvirtinkite ištrynimą, kad pašalintumėte paskirties vietą ir sustabdytumėte žurnalo persiuntimą.
 
@@ -107,8 +107,8 @@ Po langu **Užklausos** išplėskite **Audito** sprendimas ir suraskite užklaus
 
 "Customer Insights" pateikia dvi kategorijas:
 
-- **Audito įvykiai**: [API įvykiai](#api-event-schema), skirti stebėti paslaugos konfigūracijos pakeitimus. `POST|PUT|DELETE|PATCH` operacijos patenka į šią kategoriją.
-- **Veiklos įvykiai**: [API įvykiai](#api-event-schema) arba [darbo eigos įvykiai](#workflow-event-schema), sugeneruoti naudojant paslaugą.  Pavyzdžiui, `GET` užklausos arba darbo eigos vykdymo įvykiai.
+- **Audito įvykiai**: [API įvykiai](#api-event-schema) , skirti stebėti paslaugos konfigūracijos pakeitimus. `POST|PUT|DELETE|PATCH` operacijos patenka į šią kategoriją.
+- **Veiklos įvykiai**: [API įvykiai](#api-event-schema) arba [darbo eigos įvykiai](#workflow-event-schema) , sugeneruoti naudojant paslaugą.  Pavyzdžiui, `GET` užklausos arba darbo eigos vykdymo įvykiai.
 
 ## <a name="event-schemas"></a>Įvykių schemos
 
@@ -121,13 +121,13 @@ API įvykiai ir darbo eigos įvykiai turi bendrą struktūrą, tačiau turi kele
 | `time`            | Laiko žyma | Privalomas          | Įvykio laiko žyma (UTC)       | `2020-09-08T09:48:14.8050869Z`         |
 | `resourceId`      | String    | Privalomas          | Įvykį išmetusio egzemplioriaus resourceId         | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX`  |
 | `operationName`   | String    | Privalomas          | Operacijos, kurią reprezentuoja šis įvykis, pavadinimas.                                                                                                                | `Workflows.GetWorkFlowStatusAsync`                                                                                                                                       |
-| `category`        | String    | Privalomas          | Įvykio žurnalo kategorija. Arba arba `Operational``Audit`. Visos POST/PUT/PATCH/DELETE HTTP Užklausos yra pažymėtos `Audit`, visa kita su`Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
+| `category`        | String    | Privalomas          | Įvykio žurnalo kategorija. Arba arba `Operational` `Audit`. Visos POST/PUT/PATCH/DELETE HTTP Užklausos yra pažymėtos `Audit`, visa kita su `Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resultType`      | String    | Privalomas          | Renginio statusas. `Success`, `ClientError`, `Failure`                                                                                                        |                                                                                                                                                                          |
 | `resultSignature` | String    | Pasirinktinai          | Įvykio rezultato būsena. Jei operacija atitinka REST API skambutį, tai yra HTTP būsenos kodas.        | `200`             |
 | `durationMs`      | Ilgas      | Pasirinktinai          | Operacijos trukmė milisekundėmis.     | `133`     |
 | `callerIpAddress` | String    | Pasirinktinai          | Skambintojo IP adresas, jei operacija atitinka API skambutį, gautą iš viešai prieinamo IP adreso.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Pasirinktinai          | JSON objektas, apibūdinantis operaciją atlikusio vartotojo ar programos tapatybę.       | Žiūrėkite [tapatybės](#identity-schema) skyrių.     |  
-| `properties`      | String    | Pasirinktinai          | JSON objektas, turintis daugiau savybių konkrečiai įvykių kategorijai.      | Žiūrėkite [skyrių Ypatybės](#api-properties-schema).    |
+| `identity`        | String    | Pasirinktinai          | JSON objektas, apibūdinantis operaciją atlikusio vartotojo ar programos tapatybę.       | Žiūrėkite [tapatybės](#identity-schema)  skyrių.     |  
+| `properties`      | String    | Pasirinktinai          | JSON objektas, turintis daugiau savybių konkrečiai įvykių kategorijai.      | Žiūrėkite [skyrių Ypatybės](#api-properties-schema) .    |
 | `level`           | String    | Privalomas          | Įvykio sunkumo lygis.    | `Informational`, `Warning`, `Error` arba `Critical`.           |
 | `uri`             | String    | Pasirinktinai          | Absoliutus prašymas URI.    |               |
 
@@ -165,14 +165,14 @@ API įvykiai ir darbo eigos įvykiai turi bendrą struktūrą, tačiau turi kele
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `properties.eventType`       | Visada `ApiEvent`, pažymėdami žurnalo įvykį kaip API įvykį.                                                                 |
 | `properties.userAgent`       | Naršyklės agentas, siunčiantis užklausą arba `unknown`.                                                                        |
-| `properties.method`          | HTTP metodas:`GET/POST/PUT/PATCH/HEAD`.                                                                                |
+| `properties.method`          | HTTP metodas: `GET/POST/PUT/PATCH/HEAD`.                                                                                |
 | `properties.path`            | Santykinis prašymo kelias.                                                                                          |
 | `properties.origin`          | URI, nurodantis, iš kur kilęs gavimas arba `unknown`.                                                                  |
 | `properties.operationStatus` | `Success` HTTP būsenos kodui < 400 <br> `ClientError` HTTP būsenos kodui < 500 <br> `Error` HTTP būsenai >= 500 |
 | `properties.tenantId`        | Organizacijos ID                                                                                                        |
 | `properties.tenantName`      | Organizacijos pavadinimas.                                                                                              |
 | `properties.callerObjectId`  | Azure Active Directory Skambinusiojo objektasId.                                                                         |
-| `properties.instanceId`      | Klientų įžvalgos`instanceId`                                                                                         |
+| `properties.instanceId`      | Klientų įžvalgos `instanceId`                                                                                         |
 
 ### <a name="workflow-event-schema"></a>Darbo eigos įvykio schema
 
@@ -208,8 +208,8 @@ Darbo eigoje yra keli veiksmai. [Nurykite duomenų šaltinius](data-sources.md),
 | --------------- | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `time`          | Laiko žyma | Privalomas          | Įvykio laiko žyma (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Privalomas          | Egzemplioriaus, kuris išskleidė įvykį, resourceId.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
-| `operationName` | String    | Privalomas          | Operacijos, kurią reprezentuoja šis įvykis, pavadinimas. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Žiūrėkite [Operacijų tipai](#operation-types), kad gautumėte nuorodą. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Privalomas          | Įvykio žurnalo kategorija. Darbo eigos įvykiams visada`Operational`                                                                                           | `Operational`                                                                                                                                                            |
+| `operationName` | String    | Privalomas          | Operacijos, kurią reprezentuoja šis įvykis, pavadinimas. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Žiūrėkite [Operacijų tipai](#operation-types) , kad gautumėte nuorodą. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
+| `category`      | String    | Privalomas          | Įvykio žurnalo kategorija. Darbo eigos įvykiams visada `Operational`                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Privalomas          | Renginio statusas. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Ilgas      | Pasirinktinai          | Operacijos trukmė milisekundėmis.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Pasirinktinai          | JSON objektas, turintis daugiau savybių konkrečiai įvykių kategorijai.                                                                                        | Žiūrėkite poskyrį [Darbo eigos ypatybės](#workflow-properties-schema)                                                                                                       |
@@ -228,17 +228,17 @@ Darbo eigos įvykiai turi šias ypatybes.
 | `properties.submittedBy`                     | Taip      | No   | Pasirenkama. Tik darbo eigos įvykiai. Vartotojo Azure Active Directory [...](/azure/marketplace/find-tenant-object-id#find-user-object-id), kuris suaktyvino darbo eigą, objektasId taip pat `properties.workflowSubmissionKind` žr.                                   |
 | `properties.workflowType`                    | Taip      | No   | `full` arba `incremental` atnaujinti.                                                                                                                                                                                                                            |
 | `properties.workflowSubmissionKind`          | Taip      | No   | `OnDemand` arba `Scheduled`.                                                                                                                                                                                                                                  |
-| `properties.workflowStatus`                  | Taip      | No   | `Running` arba `Successful`.                                                                                                                                                                                                                                 |
-| `properties.startTimestamp`                  | Taip      | Taip  | UTC laiko žyma`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.endTimestamp`                    | Taip      | Taip  | UTC laiko žyma`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.submittedTimestamp`              | Taip      | Taip  | UTC laiko žyma`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Taip      | Taip  | Klientų įžvalgos`instanceId`                                                                                                                                                                                                                              |  
+| `properties.workflowStatus`                  | Taip      | No   | `Running` arba  `Successful`.                                                                                                                                                                                                                                 |
+| `properties.startTimestamp`                  | Taip      | Taip  | UTC laiko žyma `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.endTimestamp`                    | Taip      | Taip  | UTC laiko žyma `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.submittedTimestamp`              | Taip      | Taip  | UTC laiko žyma `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.instanceId`                      | Taip      | Taip  | Klientų įžvalgos `instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Taip  | - OperationType = `Export`, identifikatorius yra eksportavimo konfigūracijos guidas. <br> - OperationType = `Enrichment`, tai sodrinimo gidas <br> - "OperationType" `Measures` ir `Segmentation`, identifikatorius yra objekto pavadinimas. |
 | `properties.friendlyName`                    | No       | Taip  | Patogus eksportuoti arba apdorojamo subjekto pavadinimas.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Taip  | Pasirenkama. Klaidos pranešimas su daugiau informacijos.                                                                                                                                                                                                                  |
-| `properties.additionalInfo.Kind`             | No       | Taip  | Pasirenkama. Tik "OperationType"`Export`. Nurodo eksportavimo tipą. Daugiau informacijos ieškokite [eksporto paskirties vietų](export-destinations.md) apžvalgoje.                                                                                          |
-| `properties.additionalInfo.AffectedEntities` | No       | Taip  | Pasirenkama. Tik "OperationType"`Export`. Yra eksportavimo sukonfigūruotų objektų sąrašas.                                                                                                                                                            |
-| `properties.additionalInfo.MessageCode`      | No       | Taip  | Pasirenkama. Tik "OperationType"`Export`. Išsamus pranešimas apie eksportą.                                                                                                                                                                                 |
-| `properties.additionalInfo.entityCount`      | No       | Taip  | Pasirenkama. Tik "OperationType"`Segmentation`. Nurodo bendrą segmento narių skaičių.                                                                                                                                                    |
+| `properties.additionalInfo.Kind`             | No       | Taip  | Pasirenkama. Tik "OperationType" `Export` . Nurodo eksportavimo tipą. Daugiau informacijos ieškokite [eksporto paskirties vietų](export-destinations.md) apžvalgoje.                                                                                          |
+| `properties.additionalInfo.AffectedEntities` | No       | Taip  | Pasirenkama. Tik "OperationType" `Export` . Yra eksportavimo sukonfigūruotų objektų sąrašas.                                                                                                                                                            |
+| `properties.additionalInfo.MessageCode`      | No       | Taip  | Pasirenkama. Tik "OperationType" `Export` . Išsamus pranešimas apie eksportą.                                                                                                                                                                                 |
+| `properties.additionalInfo.entityCount`      | No       | Taip  | Pasirenkama. Tik "OperationType" `Segmentation` . Nurodo bendrą segmento narių skaičių.                                                                                                                                                    |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
