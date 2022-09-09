@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083104"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411841"
 ---
 # <a name="predictions-overview"></a>Prognozių apžvalga
 
@@ -39,14 +39,11 @@ Lengviausias būdas pradėti prognozuoti duomenis yra iš anksto nustatyti model
 
 > [!TIP]
 > Rekomenduojame reguliariai atnaujinti parengtus naudoti modelius su atnaujintais duomenimis, kad įsitikintumėte, jog jie tiksliai informuoja jūsų verslo naudojimo atvejį. Duomenys atnaujinami ad hoc, kai sistema praryja naujus arba atnaujintus duomenų šaltinius. Tačiau modeliai tik šiuo atveju bus atšaukti ir toliau naudos esamus mokymo duomenis.
-> 
+>
 > Galite konfigūruoti **naujinimo tvarkaraštį** nustatydami modelio perkvalifikavimo tvarkaraštį konfigūravimo funkcijose. Modelis persikvalifikuos ir pakeis šį tvarkaraštį, kurį galėsite bet kada pakeisti.
-
 
 ## <a name="azure-machine-learning-integration"></a>„Azure“ mašininio mokymo integravimas
 
 Jei organizacija jau naudoja mašininio mokymo scenarijus, pagrįstus „Azure” mašininio mokymo eksperimentais, „Customer Insights” pasirinktinių modelių funkcija padeda susieti informaciją. Kurkite darbo eigas, padedančias pasirinkti duomenis, iš kurių norite generuoti įžvalgas, ir susieti rezultatus su jūsų vieningaisiais klientų profiliais. Daugiau informacijos rasite [Pasirinktiniai mašininio mokymo modeliai](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder prognozė
-
-Kartais duomenų rinkiniai yra neišsamūs ir trūksta tam tikrų reikšmių. „Customer Insights” gali padėti numatyti trūkstamas Kliento objekto ir segmentų reikšmes. Daugiau informacijos rasite [Užbaikite savo nepilnus duomenis naudodami prognozes](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

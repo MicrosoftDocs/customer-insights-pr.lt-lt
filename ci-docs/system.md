@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246257"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396011"
 ---
 # <a name="view-system-configuration"></a>Peržiūrėti sistemos konfigūraciją
 
@@ -38,12 +38,6 @@ Peržiūrėkite išsamią informaciją apie API naudojimą realiuoju laiku ir su
    - **API skambučiai** – diagrama, vaizduojama per pažymėtą laiko tarpą vizualizuojamas į API ėjusių skambučių agreguotas skaičius.
    - **Duomenų perdavimas** – diagrama, kurioje rodomas per API per pasirinktą laiko tarpą perduotų duomenų kiekis.
    - **Operacijos** – lentelė su kiekvienos galimos API operacijos eilutėmis ir išsami informacija apie operacijų naudojimą. Pasirinkite operacijos pavadinimą, kad pereitumėte į [API nuorodą](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operacijose, kuriose naudojamas [duomenų įsisavinimas](real-time-data-ingestion.md) realiuoju laiku, yra žiūrono simbolis, leidžiantis peržiūrėti API naudojimą realiuoju laiku.
-
-   1. Pasirinkite žiūroną, kad atidarytumėte realaus **laiko API naudojimo** sritį, kurioje pateikiama išsami operacijos naudojimo informacija.
-   1. **Pasirinkite laiko tarpą**, kurį norite peržiūrėti.
-   1. Naudokite laukelį **Grupuoti pagal**, kad pasirinktumėte, kaip geriausiai pristatyti sąveiką realiuoju laiku. Grupuokite duomenis pagal API **metodą**, **objekto sąlyginį pavadinimą** (nurijusį objektą), **sukurtą pagal** (įvykio šaltinį), **rezultatą** (sėkmę arba nesėkmę) arba **klaidų kodus**. Duomenys prieinami kaip retrospektyvos diagrama ir kaip lentelė.
 
 ## <a name="view-system-information"></a>Peržiūrėkite sistemos informaciją
 

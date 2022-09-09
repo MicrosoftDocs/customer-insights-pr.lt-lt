@@ -1,7 +1,7 @@
 ---
 title: Dirbkite su „Customer Insights“ duomenimis „Microsoft Dataverse” platformoje
 description: Sužinokite, kaip prijungti "Customer Insights" ir Microsoft Dataverse suprasti išvesties objektus, kurie eksportuojami į Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303839"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424319"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Dirbkite su „Customer Insights“ duomenimis „Microsoft Dataverse” platformoje
 
@@ -136,6 +136,7 @@ Jei ryšio pašalinimas nepavyksta dėl priklausomybių, turite pašalinti ir pr
 Kai kurie išvesties objektai iš "Customer Insights" pasiekiami kaip lentelės Dataverse. Toliau aprašomos numatomos šių lentelių schemos.
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [„AlternateKey”](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [„CustomerMeasure”](#customermeasure)
@@ -145,21 +146,46 @@ Kai kurie išvesties objektai iš "Customer Insights" pasiekiami kaip lentelės 
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Šioje lentelėje pateikiamas vieningasis kliento profilis iš „Customer Insights”. Vieningo kliento profilio schema priklauso nuo objektų ir atributų, naudojamų duomenų suvienijimo procese. Kliento profilio schemoje paprastai yra atributų antrinis rinkinys iš [Kliento profilio „Common Data Model” aprašo](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Šioje lentelėje pateikiamas vieningasis kliento profilis iš „Customer Insights”. Vieningo kliento profilio schema priklauso nuo objektų ir atributų, naudojamų duomenų suvienijimo procese. Kliento profilio schemoje paprastai yra atributų antrinis rinkinys iš [Kliento profilio „Common Data Model” aprašo](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Pagal scenarijų B–B kliento profilyje yra suvienodinti abonementai, o schemoje paprastai yra atributų pogrupis iš [abonemento](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account) bendrojo duomenų modelio aprašo.
+
+### <a name="contactprofile"></a>ContactProfile
+
+"ContactProfile" yra vieninga informacija apie kontaktą. Kontaktai yra [asmenys, susieti su abonementu](data-unification-contacts.md) pagal scenarijų nuo B iki B.
+
+| Column                       | Tipas                | Aprašą     |
+| ---------------------------- | ------------------- | --------------- |
+|  Gimimo_data            | Data ir laikas       |  Kontakto gimimo data               |
+|  Miestas                 | Tekstinė žinutė |  Kontaktinio adreso miestas               |
+|  ContactId            | Tekstinė žinutė |  Kontaktinio profilio ID               |
+|  ContactProfileId     | Unikalusis identifikatorius   |  GUID kontaktui               |
+|  CountryOrRegion      | Tekstinė žinutė |  Kontaktinio adreso šalis / regionas               |
+|  CustomerId           | Tekstinė žinutė |  Paskyros, su kuria kontaktas susietas, ID               |
+|  EntityName           | Tekstinė žinutė |  Subjektas, iš kurio gaunami duomenys                |
+|  FirstName            | Tekstinė žinutė |  Kontakto vardas               |
+|  Lytys               | Tekstinė žinutė |  Kontakto lytis               |
+|  Id                   | Tekstinė žinutė |  Deterministinis GUID, pagrįstas`Identifier`               |
+|  Identifikatorius           | Tekstinė žinutė |  Kontaktinio profilio vidinis ID: `ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | Tekstinė žinutė |  Kontaktinio asmens pareigų pavadinimas               |
+|  LastName             | Tekstinė žinutė |  Kontakto pavardė               |
+|  PostalCode           | Tekstinė žinutė |  Kontaktinio adreso pašto kodas               |
+|  PrimaryEmail         | Tekstinė žinutė |  Kontakto el. pašto adresas               |
+|  Pirminis telefonas         | Tekstinė žinutė |  Kontakto telefono numeris               |
+|  Valstija arba provincija      | Tekstinė žinutė |  Kontaktinio adreso valstija arba provincija               |
+|  GatvėAddress        | Tekstinė žinutė |  Kontaktinio adreso gatvė               |
 
 ### <a name="alternatekey"></a>„AlternateKey”
 
 Alternatyvaus rakto lentelėje yra suvienodinimo procese dalyvavusių objektų raktų rinkinys.
 
-|Stulpelis  |Tipas  |Aprašymas  |
+|Column  |Tipas  |Aprašą  |
 |---------|---------|---------|
-|„DataSourceName”    |Eilutė         | Duomenų šaltinio pavadinimas. Pavyzdžiui: `datasource5`.        |
-|EntityName        | String        | Objekto pavadinimas programoje "Customer Insights". Pavyzdžiui: `contact1`.        |
-|„AlternateValue”    |String         |Alternatyvusis ID, susietas su kliento ID. Pavyzdys: `cntid_1078`         |
-|„KeyRing”           | Kelių eilučių Tekstas        | JSON reikšmė  </br> Pavyzdys: [{„dataSourceName”:„ datasource5 ”,</br>„entityName”:„ contact1”,</br>„preferredKey”:„ cntid_1078”,</br>„keys”:[„ cntid_1078”]}]       |
-|CustomerId         | Eilutė        | Vieningojo kliento profilio ID.         |
-|„AlternateKeyId”     | GUID         |  Alternatyvų raktą nustatantis GUID pagal msdynci_identifier       |
-|„msdynci_identifier” |   Eilutė      |   `DataSourceName|EntityName|AlternateValue`  </br> Pavyzdys: `testdatasource|contact1|cntid_1078`    |
+|„DataSourceName”    |Tekstinė žinutė         | Duomenų šaltinio pavadinimas. Pavyzdžiui: `datasource5`.        |
+|EntityName        | Tekstinė žinutė        | Objekto pavadinimas programoje "Customer Insights". Pavyzdžiui: `contact1`.        |
+|„AlternateValue”    |Tekstinė žinutė         |Alternatyvusis ID, susietas su kliento ID. Pavyzdys: `cntid_1078`         |
+|„KeyRing”           | Tekstinė žinutė        | JSON reikšmė  </br> Pavyzdys: [{„dataSourceName”:„ datasource5 ”,</br>„entityName”:„ contact1”,</br>„preferredKey”:„ cntid_1078”,</br>„keys”:[„ cntid_1078”]}]       |
+|CustomerId         | Tekstinė žinutė        | Vieningojo kliento profilio ID.         |
+|„AlternateKeyId”     | Unikalusis identifikatorius        |  AlternateKey deterministinis GUID, pagrįstas`Identifier`      |
+|Identifikatorius |   Tekstinė žinutė      |   `DataSourceName|EntityName|AlternateValue`  </br> Pavyzdys: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ Alternatyvaus rakto lentelėje yra suvienodinimo procese dalyvavusių objektų r
 
 | Column            | Tipas        | Aprašą                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | Kliento profilio ID                                                                      |
-| „ActivityId”        | String      | Vidinis kliento veiklos ID (pirminis raktas)                                       |
-| „SourceEntityName”  | Eilutė      | Šaltinio objekto pavadinimas                                                                |
-| „SourceActivityId”  | Eilutė      | Pirminis raktas iš šaltinio objekto                                                       |
-| „ActivityType”      | Eilutė      | Pasirinktinės veiklos semantinis veiklos tipas arba pavadinimas                                        |
-| „ActivityTimeStamp” | „DATETIME”    | Veiklos laiko žyma                                                                      |
-| Antraštė             | String      | Veiklos antraštė arba pavadinimas                                                               |
-| Aprašą       | Eilutė      | Veiklos aprašas                                                                     |
-| URL               | Eilutė      | Nuoroda į išorinį URL, būdingą veiklai                                         |
-| „SemanticData”      | JSON Eilutė | Apima pagrindinių reikšmių porų sąrašą, skirtą semantinio susiejimo laukams, būdingiems veiklos tipui |
-| „RangeIndex”        | Eilutė      | „Unix” laiko žyma, naudojama veiklos laiko planavimo juostai ir efektyvioms diapazono užklausoms rikiuoti |
-| „mydynci_unifiedactivityid”   | GUID | Vidinis kliento veiklos ID („ActivityId”) |
+| CustomerId        | Tekstinė žinutė      | Kliento profilio ID                                                                      |
+| „ActivityId”        | Tekstinė žinutė      | Vidinis kliento veiklos ID (pirminis raktas)                                       |
+| „SourceEntityName”  | Tekstinė žinutė      | Šaltinio objekto pavadinimas                                                                |
+| „SourceActivityId”  | Tekstinė žinutė      | Pirminis raktas iš šaltinio objekto                                                       |
+| „ActivityType”      | Tekstinė žinutė      | Pasirinktinės veiklos semantinis veiklos tipas arba pavadinimas                                        |
+| „ActivityTimeStamp” | Data ir laikas    | Veiklos laiko žyma                                                                      |
+| Antraštė             | Tekstinė žinutė      | Veiklos antraštė arba pavadinimas                                                               |
+| Aprašą       | Tekstinė žinutė      | Veiklos aprašas                                                                     |
+| URL               | Tekstinė žinutė      | Nuoroda į išorinį URL, būdingą veiklai                                         |
+| „SemanticData”      | Tekstinė žinutė | Apima pagrindinių reikšmių porų sąrašą, skirtą semantinio susiejimo laukams, būdingiems veiklos tipui |
+| „RangeIndex”        | Tekstinė žinutė      | „Unix” laiko žyma, naudojama veiklos laiko planavimo juostai ir efektyvioms diapazono užklausoms rikiuoti |
+| UnifiedActivityId   | Unikalusis identifikatorius | Vidinis kliento veiklos ID („ActivityId”) |
 
 ### <a name="customermeasure"></a>„CustomerMeasure”
 
 Šioje lentelėje pateikiami kliento atributais pagrįstų matavimų išvesties duomenys.
 
-| Stulpelis             | Tipas             | Aprašymas                 |
+| Column             | Tipas             | Aprašą                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | Eilutė           | Kliento profilio ID        |
-| Matavimai           | JSON Eilutė      | Pateikiamas matavimų pavadinimų ir reikšmių pagrindinių reikšmių porų sąrašas nurodytam klientui | 
-| „msdynci_identifier” | Eilutė           | `Customer_Measure|CustomerId` |
-| „msdynci_customermeasureid” | GUID      | Kliento profilio ID |
-
+| CustomerId         | Tekstinė žinutė           | Kliento profilio ID        |
+| Matavimai           | Tekstinė žinutė      | Pateikiamas matavimų pavadinimų ir reikšmių pagrindinių reikšmių porų sąrašas nurodytam klientui |
+| Identifikatorius | Tekstinė žinutė           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Unikalusis identifikatorius     | Kliento profilio ID |
 
 ### <a name="enrichment"></a>Papildymas
 
 Šioje lentelėje pateikiami papildymo proceso rezultatai.
 
-| Stulpelis               | Tipas             |  Aprašymas                                          |
+| Column               | Tipas             |  Aprašą                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | Eilutė           | Kliento profilio ID                                 |
-| „EnrichmentProvider”   | Eilutė           | Papildymo tiekėjo pavadinimas                                  |
-| „EnrichmentType”       | Eilutė           | Papildymo tipas                                      |
-| Reikšmės               | JSON Eilutė      | Papildymo proceso metu sukurtų atributų sąrašas |
-| „msdynci_enrichmentid” | GUID             | Nustatantis GUID, sugeneruotas iš „msdynci_identifier” |
-| „msdynci_identifier”   | Eilutė           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Tekstinė žinutė           | Kliento profilio ID                                 |
+| „EnrichmentProvider”   | Tekstinė žinutė           | Papildymo tiekėjo pavadinimas                                  |
+| „EnrichmentType”       | Tekstinė žinutė           | Papildymo tipas                                      |
+| Reikšmės               | Tekstinė žinutė      | Papildymo proceso metu sukurtų atributų sąrašas |
+| SodrinimasId | Unikalusis identifikatorius            | Deterministinis GUID, sugeneruotas iš`Identifier` |
+| Identifikatorius   | Tekstinė žinutė           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Prognozė
 
@@ -211,12 +236,12 @@ Alternatyvaus rakto lentelėje yra suvienodinimo procese dalyvavusių objektų r
 
 | Column               | Tipas        | Aprašą                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | Kliento profilio ID                                  |
-| „ModelProvider”        | String      | Modelio tiekėjo pavadinimas                                      |
-| Modelis                | Eilutė      | Modelio pavadinimas                                                |
-| Reikšmės               | JSON Eilutė | Modelio sukurtų atributų sąrašas |
-| „msdynci_predictionid” | GUID        | Nustatantis GUID, sugeneruotas iš „msdynci_identifier” | 
-| „msdynci_identifier”   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Tekstinė žinutė      | Kliento profilio ID                                  |
+| „ModelProvider”        | Tekstinė žinutė      | Modelio tiekėjo pavadinimas                                      |
+| Modelis                | Tekstinė žinutė      | Modelio pavadinimas                                                |
+| Reikšmės               | Tekstinė žinutė | Modelio sukurtų atributų sąrašas |
+| PredictionId | Unikalusis identifikatorius       | Deterministinis GUID, sugeneruotas iš`Identifier` |
+| Identifikatorius   | Tekstinė žinutė      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Segmento narystė
 
@@ -224,12 +249,11 @@ Alternatyvaus rakto lentelėje yra suvienodinimo procese dalyvavusių objektų r
 
 | Column        | Tipas | Aprašą                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Kliento Profilio ID        |
-| Segmentprovider      | String       | Programa, skelbianti segmentus.      |
-| SegmentasMembershipType | String       | Šio segmento narystės įrašo kliento tipas. Palaiko kelių tipų, pvz., Klientas, Kontaktas arba Paskyra. Numatytasis nustatymas: klientas  |
-| Segmentai       | JSON Eilutė  | Unikalių segmentų, kurių narys yra kliento profilis, sąrašas      |
-| „msdynci_identifier”  | String   | Unikalus segmento narystės įrašo identifikatorius. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministinis GUID, sugeneruotas iš`msdynci_identifier`          |
-
+| CustomerId        | Tekstinė žinutė       | Kliento Profilio ID        |
+| Segmentprovider      | Tekstinė žinutė       | Programa, skelbianti segmentus.      |
+| SegmentasMembershipType | Tekstinė žinutė       | Šio segmento narystės įrašo kliento tipas. Palaiko kelių tipų, pvz., Klientas, Kontaktas arba Paskyra. Numatytasis nustatymas: klientas  |
+| Segmentai       | Tekstinė žinutė  | Unikalių segmentų, kurių narys yra kliento profilis, sąrašas      |
+| Identifikatorius  | Tekstinė žinutė   | Unikalus segmento narystės įrašo identifikatorius. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| Segmento narysId | Unikalusis identifikatorius      | Deterministinis GUID, sugeneruotas iš`Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246433"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395966"
 ---
 # <a name="schedule-system-refresh"></a>Suplanuokite sistemos atnaujinimą
 
@@ -36,7 +36,7 @@ Suplanuokite automatinį visų [nurijusių duomenų šaltinių atnaujinimą](dat
 
 1. Pasirinkite tarp **Savaitinis** (numatytasis) arba **Kasdienis** atnaujinimų. Jei planuojate savaitinį atnaujinimą, pasirinkite vieną ar kelias dienas, kada norite vykdyti atnaujinimą.
 
-1. Nustatykite **Laiko juostą**, tada naudokite išplečiamąjį meniu **Laikas**, kad nustatytumėte atnaujinimo laiką. Jei norite suplanuoti kelis naujinimus per vieną dieną, pasirinkite **Įtraukti kitą laiką**.
+1. Nustatykite **Laiko juostą**, tada naudokite išplečiamąjį meniu **Laikas**, kad nustatytumėte atnaujinimo laiką. Jei norite suplanuoti kelis naujinimus per vieną dieną, pasirinkite **Įtraukti kitą laiką**. Galite pridėti iki keturių atnaujinimų.
 
 1. Pasirinkite **Įrašyti**, kad pritaikytumėte keitimus.
 

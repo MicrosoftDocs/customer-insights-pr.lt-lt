@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387304"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409367"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Kas nauja programoje „Dynamics 365 Customer Insights“
 
@@ -42,6 +42,14 @@ Dėl naujo kontaktų suvienijimo galite kurti kontaktų segmentus naudodami kont
 
 Daugiau informacijos ieškokite [Eksportavimo apžvalga](export-destinations.md).
 
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Diegimo regionai suderinti su Microsoft Dataverse
+
+Kurdami naują "Customer Insights" aplinką, galite pasirinkti regioną, kuriame norite, kad paslauga būtų diegiama ir nuomojama. Atnaujinome regiono pasirinkimą, kad jis atitiktų Microsoft Dataverse ir Power Platform.
+
+Dabar galite lengvai pasirinkti tą patį regioną kaip esamą Microsoft Dataverse aplinką arba "Azure Data Lake" saugyklos paskyrą (jei pasirinksite šią parinktį), jei tame regione yra "Customer Insights" pasiekiamumo.
+
+Daugiau informacijos ieškokite [Naujos aplinkos](create-environment.md) kūrimas ir [Produkto pasiekiamumas pagal geografiją](https://dynamics.microsoft.com/availability-reports/).
+
 ## <a name="july-2022-updates"></a>2022 m. liepos mėn. naujinimai
 
 2022 m. liepos mėnesio atnaujinimai apima naujas funkcijas, našumo atnaujinimus ir klaidų pataisymus.
@@ -50,7 +58,7 @@ Daugiau informacijos ieškokite [Eksportavimo apžvalga](export-destinations.md)
 
 Eksportuokite vieningų klientų profilių segmentus į "MoEngage" ir naudokite juos el. pašto rinkodarai "MoEngage".
 
-Daugiau informacijos ieškokite [Segmentų eksportavimas į "MoEngage"](export-moengage.md).
+Daugiau informacijos ieškokite [Segmentų eksportavimas į "MoEngage](export-moengage.md)".
 
 ### <a name="ssh-support-for-sftp-based-exports"></a>SSH palaikymas SFTP pagrįstam eksportui
 
@@ -60,7 +68,7 @@ Daugiau informacijos ieškokite [Duomenų eksportavimas į SFTP pagrindinius kom
 
 ### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Suasmeninkite funkcijas naudodami duomenis apie žinomus ir nežinomus vartotojus
 
-Klientų duomenų tvarkymas nėra naujas iššūkis, tačiau jis tampa vis sudėtingesnis, nes vartotojai naršo įvairiuose prekių ženklų siūlomuose skaitmeniniuose kanaluose. Vartotojas, kuris yra žinomas (autentifikuotas) viename kanale, tampa nežinomas (neautentifikuotas) kitame kanale, jei jis neprisijungęs. Problema dažnai yra ta, kad neautentifikuoti (nežinomi) vartotojai neturi bendro ID. Jis gali būti naudojamas prasmingiems profilių atributams susieti ir vieningiems klientų profiliams generuoti. "Customer Insights" padeda išspręsti šią problemą, nurijus duomenis iš sekimo metodų šaltinio sistemose.
+Klientų duomenų tvarkymas nėra naujas iššūkis, tačiau jis tampa vis sudėtingesnis, nes vartotojai naršo įvairiuose prekių ženklų siūlomuose skaitmeniniuose kanaluose. Vartotojas, kuris yra žinomas (autentifikuotas) viename kanale, tampa nežinomas (neautentifikuotas) kitame kanale, jei jis nėra prisijungęs. Problema dažnai yra ta, kad neautentifikuoti (nežinomi) vartotojai neturi bendro ID. Jis gali būti naudojamas prasmingiems profilių atributams susieti ir vieningiems klientų profiliams generuoti. "Customer Insights" padeda išspręsti šią problemą, nurijus duomenis iš sekimo metodų šaltinio sistemose.
 
 Daugiau informacijos ieškokite [Funkcijų suasmeninimas naudojant duomenis apie žinomus ir nežinomus vartotojus](unknown-to-known.md).
 
@@ -88,7 +96,7 @@ Norėdami gauti daugiau informacijos, žiūrėkite [Saugiai pasiekite klientų d
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Prisijungimas prie savo duomenų naudojant "Azure Private Link"
 
-"Azure Private Link" leidžia "Customer Insights" prisijungti prie jūsų Azure Data Lake Storage paskyros per privatų galinį punktą virtualiame tinkle. Duomenims, esantiems saugojimo paskyroje, kuri nėra viešajame internete, "Private Link" įgalina ryšį su tuo apribotu tinklu.
+"Azure Private Link" leidžia "Customer Insights" prisijungti prie jūsų Azure Data Lake Storage paskyros per privatų virtualaus tinklo galinį punktą. Duomenims, esantiems saugojimo paskyroje, kuri nėra viešajame internete, "Private Link" įgalina ryšį su tuo apribotu tinklu.
 
 Daugiau informacijos ieškokite [Privataus saito naudojimas programoje "Customer Insights](security-overview.md#set-up-an-azure-private-link)".
 
@@ -132,7 +140,7 @@ Daugiau informacijos ieškokite [Kaip: sukurti naują aplinką](create-environme
 
 "Dun &Bradstreet" teikia komercinius duomenis, analizę ir įžvalgas įmonėms. Tai leidžia klientams su vieningais įmonių klientų profiliais papildyti savo duomenis. Papildymai apima tokius atributus kaip DUNS numeris, įmonės dydis, vieta, pramonė ir kt.
 
-Daugiau informacijos rasite [Įmonės profilių praturtinimas naudojant Dun & Bradstreet (Peržiūra)](enrichment-dnb.md).
+Norėdami gauti daugiau informacijos, žiūrėkite [Įmonės profilių praturtinimas naudojant Dun & Bradstreet (Peržiūra)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Priemonės tipo apibrėžimas kuriant naują priemonę
 
@@ -216,7 +224,7 @@ Daugiau informacijos ieškokite [Duomenų šaltinių papildymas (peržiūra)](da
 
 Nors keli vartotojai gali turėti administratoriaus teises programoje "Customer Insights", tik vienas vartotojas yra aplinkos savininkas. Patobulinta patirtis leidžia pakeisti aplinkos savininkus ir pretenduoti į nuosavybę, jei buvęs savininkas paliko organizaciją. 
 
-Daugiau informacijos ieškokite [Aplinkos](manage-environments.md#change-the-owner-of-an-environment) savininko keitimas.
+Daugiau informacijos ieškokite [Aplinkos savininko keitimas](manage-environments.md#change-the-owner-of-an-environment).
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Duomenų paruošimo procesas pateikia sugadintų įrašų sugadinimo priežasčių sąrašą
 
@@ -248,7 +256,7 @@ Tiesiogiai susisiekite su savo "Microsoft" paskyros komanda, jei turite klausim�
 
 "Customer Insights" suteikia naują dirbtiniu intelektu pagrįstą funkciją, leidžiančią sintezuoti klientų nuotaikas ir nustatyti konkrečius verslo aspektus kaip tikslinių patobulinimų galimybes. Analizuodami raštiškus klientų atsiliepimus, galite gauti tikslių įžvalgų už mažą kainą. Nuotaikų analizė, pagrįsta natūralios kalbos apdorojimo (NLP) modeliais, kurie generuoja dvi išvestines įžvalgas kiekvienam kliento ID. Nuotaikų balas (nuo –5 iki 5) ir taikomų verslo aspektų sąrašas. 
 
-Daugiau informacijos ieškokite [Nuotaikų analizė klientų atsiliepimuose (Peržiūra)](sentiment-analysis.md).
+Norėdami gauti daugiau informacijos, žiūrėkite [Nuotaikų analizė klientų atsiliepimuose (peržiūra)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

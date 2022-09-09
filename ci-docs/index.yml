@@ -6,12 +6,12 @@ metadata:
   ms.author: mhart
   ms.date: 05/18/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e8134fa66ce47cdf8aeab144b8405104fb257f6c
-  ms.sourcegitcommit: 6108152b3d28a2ec140eae32a61dbf4317baa37b
+  ms.openlocfilehash: 209d635f8b548559ba035a5803c360d26dea8bab
+  ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
   ms.translationtype: MT
   ms.contentlocale: lt-LT
-  ms.lasthandoff: 05/19/2022
-  ms.locfileid: "8781374"
+  ms.lasthandoff: 09/07/2022
+  ms.locfileid: "9411788"
 title: „Dynamics 365 Customer Insights“ dokumentacija
 summary: Raskite naudingų išteklių kad pradėtumėte ir sužinokite apie "Customer Insights" funkcijas ir galimybes.
 landingContent:
@@ -35,7 +35,7 @@ landingContent:
     links:
     - text: Prisiregistruokite nemokamai bandomajai versijai gauti
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Pradėkite nuo teismo proceso
+    - text: Pradėkite nuo bandomojo laikotarpio
       url: trial-signup.md
     - text: Pradėkite darbą su „Customer Insights”
       url: get-started.md
@@ -49,13 +49,13 @@ landingContent:
     links:
     - text: Duomenų šaltinių apžvalga
       url: data-sources.md
-    - text: Prisijungti naudojant Power Query
+    - text: Prisijunkite naudodami Power Query
       url: connect-power-query.md
     - text: Prisijungti prie „Microsoft Dataverse“
       url: connect-dataverse-managed-lake.md
   - linkListType: learn
     links:
-    - text: Duomenų įterpimas į "Customer Insights"
+    - text: Duomenų nurijimas iš "Customer Insights"
       url: /learn/modules/ingest-data-customer-insights/
 - title: Sujungti duomenis
   linkLists:
@@ -65,11 +65,11 @@ landingContent:
       url: data-unification.md
     - text: Suprasti objektus
       url: entities.md
-    - text: Peržiūrėti vieningus profilius
+    - text: Vieningųjų profilių peržiūra
       url: customer-profiles.md
   - linkListType: learn
     links:
-    - text: Vieningo profilio kūrimas
+    - text: Vieningojo profilio kūrimas
       url: /learn/modules/unified-customer-profile/
 - title: Gauti įžvalgų
   linkLists:
@@ -79,13 +79,13 @@ landingContent:
       url: enrichment-hub.md
     - text: Konfigūruoti ryšius
       url: relationships.md
-    - text: Išsamūs duomenys naudojant prognozes
-      url: predictions.md
+    - text: Prognozuoti duomenis
+      url: predictions-overview.md
   - linkListType: learn
     links:
-    - text: Duomenų praturtinimas ir prognozavimas
+    - text: Praturtinkite ir numatykite duomenis
       url: /learn/modules/enrich-data/
-- title: Remkitės savo duomenimis
+- title: Sukurkite savo duomenis
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -93,7 +93,7 @@ landingContent:
       url: segments.md
     - text: Kurti priemones
       url: measures.md
-    - text: Apibrėžti kliento veiklą
+    - text: Apibrėžkite klientų veiklą
       url: activities.md
   - linkListType: learn
     links:

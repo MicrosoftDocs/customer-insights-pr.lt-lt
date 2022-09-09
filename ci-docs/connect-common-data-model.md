@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245843"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396097"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Jungtis prie duomenų „Azure Data Lake Storage“
 
@@ -39,6 +39,8 @@ Prarykite duomenis, kad Dynamics 365 Customer Insights galėtumėte naudotis sav
   - „Storage Blob Data“ skaitytojas
   - „Storage Blob Data“ savininkas
   - „Storage Blob Data“ pildytojas
+
+- Vartotojui, kuris nustato duomenų šaltinis ryšį, saugojimo paskyroje reikia mažiausiai saugyklos "Blob Data Contributor" leidimų.
 
 - Jūsų duomenų ežero saugykloje esantys duomenys turėtų atitikti "Common Data Model" standartą, skirtą jūsų duomenims saugoti, ir turėti bendrą duomenų modelio manifestą, kuris atspindėtų duomenų failų schemą (*.csv arba *.parketas). Manifeste turi būti pateikta išsami informacija apie objektus, pvz., objekto stulpelius ir duomenų tipus, duomenų failo vieta ir failo tipas. Daugiau informacijos ieškokite ["Common Data Model" manifeste](/common-data-model/sdk/manifest). Jei aprašo nėra, administratoriaus vartotojai, turintys "Storage Blob Data Owner" arba "Storage Blob Data Contributor" prieigą, gali apibrėžti schemą prarydami duomenis.
 
@@ -62,7 +64,7 @@ Prarykite duomenis, kad Dynamics 365 Customer Insights galėtumėte naudotis sav
    > [!NOTE]
    > Norint sukurti duomenų šaltinis, jums reikia vieno iš šių vaidmenų į konteinerį arba saugojimo paskyrą:
    >
-   >  - "Storage Blob Data Reader" pakanka, kad galėtumėte skaityti iš saugyklos paskyros ir nuryti duomenis į "Customer Insights". 
+   >  - "Storage Blob Data Reader" pakanka, kad galėtumėte skaityti iš saugyklos paskyros ir nuryti duomenis į "Customer Insights".
    >  - Saugyklos "Blob" duomenų bendraautoris arba savininkas yra būtinas, jei norite redaguoti manifesto failus tiesiogiai "Customer Insights".  
   
 1. Pasirinkite **konteinerio**, kuriame yra duomenys ir schema (model.json arba manifest.json failas), iš kurio norite importuoti duomenis, pavadinimą ir pasirinkite **Pirmyn**.

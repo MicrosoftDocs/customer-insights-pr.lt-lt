@@ -1,7 +1,7 @@
 ---
 title: Kliento, abonemento arba kontaktų suvienijimo parametrų naujinimas
 description: Atnaujinkite pasikartojančias taisykles, atitikties taisykles arba vieningus laukus kliento arba abonemento suvienijimo parametruose.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304345"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392481"
 ---
 # <a name="update-unification-settings"></a>Suvienijimo parametrų naujinimas
 
@@ -38,7 +38,7 @@ Norėdami peržiūrėti arba pakeisti suvienijimo parametrus sukūrus vieningąj
    > Plytelė Atitikimo **sąlygos** rodoma tik tada, jei buvo pasirinkti keli objektai.
 
 1. Pasirinkite, ką norite atnaujinti:
-   - [Šaltinio laukai](#edit-source-fields), skirti objektams ar atributams įtraukti arba atributų tipams keisti.
+   - [Šaltinio laukai](#edit-source-fields), skirti atributams ar objektams įtraukti arba atributų tipams keisti. Norėdami pašalinti atributą, žiūrėkite [Pašalinti vieningą lauką](#remove-a-unified-field). Norėdami pašalinti objektą, žiūrėkite [Vieningojo objekto](#remove-a-unified-entity) šalinimas.
    - [Pasikartojantys įrašai](#manage-deduplication-rules), skirti tvarkyti dubliavimo taisykles arba suliejimo nuostatas.
    - [Atitikimo sąlygos](#manage-match-rules), kad būtų galima atnaujinti dviejų ar daugiau objektų atitikties taisykles.
    - [Vieningi klientų laukai](#manage-unified-fields), skirti laukams sujungti arba neįtraukti. Taip pat galite sugrupuoti susijusius profilius į grupes.
@@ -53,8 +53,6 @@ Norėdami peržiūrėti arba pakeisti suvienijimo parametrus sukūrus vieningąj
 
 ## <a name="edit-source-fields"></a>Šaltinio laukų redagavimas
 
-Negalite pašalinti atributo arba objekto, jei jie jau buvo suvienodinti.
-
 1. Pasirinkite **Redaguoti** plytelėje Šaltinio **laukai**.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Šaltinio laukų puslapio, kuriame rodomas pirminių raktų, susietų ir neuždarytų laukų skaičius, ekrano kopija":::
@@ -67,6 +65,80 @@ Negalite pašalinti atributo arba objekto, jei jie jau buvo suvienodinti.
 
 1. Pasirinkite **Pirmyn**, kad pakeistumėte dubliavimo taisykles, arba pasirinkite **Įrašyti ir uždaryti** ir grįžkite į [Naujinti suvienijimo parametrus](#update-unification-settings).
 
+### <a name="remove-a-unified-field"></a>Vieningojo lauko šalinimas
+
+Norint pašalinti suvienodintą lauką, laukas turi būti pašalintas iš visų priklausomybių, pvz., segmentų, matų, papildymų ar ryšių.
+
+1. Pašalinę visas lauko priklausomybes, eikite į **Duomenų** > **suvienodinimas**.
+
+1. Pasirinkite **Redaguoti** vieningųjų **klientų laukų** plytelėje.
+
+1. Pažymėkite visus lauko pasikartojimus, tada pasirinkite **Išskirti**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Vieningųjų laukų puslapio, kuriame rodomi pasirinkti laukai ir mygtukas Išskirti, ekrano nuotrauka":::
+
+1. Pasirinkite **Atlikta**, kad patvirtintumėte, tada pasirinkite **Įrašyti ir uždaryti**.
+
+   > [!TIP]
+   > Jei matote pranešimą "Nepavyko išsaugoti suvienodinimo. Nurodyto ištekliaus negalima modifikuoti ar ištrinti dėl pasroviui esančių priklausomybių", tada laukas vis tiek naudojamas tolesnėje priklausomybėje.
+
+1. Jei laukas naudojamas pasikartojančių įrašų arba atitikimo sąlygų taisyklėje, atlikite šiuos veiksmus. Priešingu atveju pereikite prie kito žingsnio.
+   1. Pasirinkite **Redaguoti** plytelėje **Pasikartojantys įrašai**.
+   1. Pašalinkite lauką iš visų taisyklių, kuriose jis naudojamas, jei tokių yra, tada pasirinkite **Pirmyn**.
+   1. **Puslapyje Atitikties sąlygos** pašalinkite lauką iš visų taisyklių, kuriose jis naudojamas, jei tokių yra, tada pasirinkite **Įrašyti ir uždaryti**.
+   1. Pasirinkite **Suvienodinti** > **suvienodinti klientų profilius ir priklausomybes**. Palaukite, kol suvienijimas bus baigtas, prieš pereidami prie kito veiksmo.
+
+1. Pasirinkite **Redaguoti** plytelėje Šaltinio **laukai**.
+
+1. Pasirinkite **Pasirinkti objektus ir laukus** ir išvalykite žymimąjį laukelį šalia kiekvieno lauko pasikartojimo.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Dialogo lango Žymėti objektus ir laukus, kuriame rodomi išvalyti žymimieji laukeliai, ekrano nuotrauka":::
+
+1. Pasirinkite **Taikyti**.
+
+1. Pasirinkite **Įrašyti ir uždaryti**.
+
+1. Pasirinkite **Suvienodinti** > **suvienodinti klientų profilius ir priklausomybes**, kad atnaujintumėte vieningąjį profilį.
+
+### <a name="remove-a-unified-entity"></a>Vieningojo objekto šalinimas
+
+Norint pašalinti suvienodintą objektą, objektas turi būti pašalintas iš visų priklausomybių, pvz., segmentų, matų, papildymų ar ryšių.
+
+1. Pašalinę visas objekto priklausomybes, eikite į **Duomenų** > **suvienodinimas**.
+
+1. Pasirinkite **Redaguoti** vieningųjų **klientų laukų** plytelėje.
+
+1. Pažymėkite visus objekto laukus, tada pasirinkite **Išskirti**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Vieningųjų laukų su visais pasirinktais objekto laukais ir mygtuku Išskirti ekrano nuotrauka":::
+
+1. Pasirinkite **Atlikta**, kad patvirtintumėte, tada pasirinkite **Įrašyti ir uždaryti**.
+
+   > [!TIP]
+   > Jei matote pranešimą "Nepavyko išsaugoti suvienodinimo. Nurodyto ištekliaus negalima modifikuoti ar ištrinti dėl pasroviui esančių priklausomybių", tada objektas vis tiek naudojamas tolesnėje priklausomybėje.
+
+1. Pasirinkite **Redaguoti** plytelėje **Pasikartojantys įrašai**.
+
+1. Iš objekto pašalinkite visas taisykles, jei tokių yra, tada pasirinkite **Pirmyn**.
+
+1. Puslapyje Atitikimo **sąlygos** pasirinkite objektą, tada pasirinkite **Naikinti**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Atitikties sąlygų su pasirinktu objektu ir mygtuko Naikinti ekrano nuotrauka":::
+
+1. Pasirinkite **Įrašyti ir uždaryti**.
+
+1. Pasirinkite **Redaguoti** plytelėje Šaltinio **laukai**.
+
+1. Pasirinkite **Pasirinkti objektus ir laukus** ir išvalykite žymės langelį šalia objekto.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Dialogo lango Objektų ir laukų pasirinkimas su išvalytu objekto žymimuoju laukeliu ekrano nuotrauka":::
+
+1. Pasirinkite **Taikyti**.
+
+1. Pasirinkite **Įrašyti ir uždaryti**.
+
+1. Pasirinkite **Suvienodinti** > **suvienodinti klientų profilius ir priklausomybes**, kad atnaujintumėte vieningąjį profilį.
+
 ## <a name="manage-deduplication-rules"></a>Kopijavimo taisyklių valdymas
 
 1. Pasirinkite **Redaguoti** plytelėje **Pasikartojantys įrašai**.
@@ -75,7 +147,7 @@ Negalite pašalinti atributo arba objekto, jei jie jau buvo suvienodinti.
 
    Rastų pasikartojančių įrašų skaičius rodomas dalyje **Dublikatai**. Stulpelyje **Dubliuojami** įrašai rodoma, kurie objektai turėjo pasikartojančius įrašus ir pasikartojančių įrašų procentą.
 
-1. Norėdami naudoti papildytąjį objektą, pasirinkite **Naudoti papildytuosius objektus**. Daugiau informacijos ieškokite [Duomenų šaltinių papildymas](data-sources-enrichment.md).
+1. Norėdami naudoti papildytąjį objektą, pasirinkite **Naudoti papildytuosius objektus**. Daugiau informacijos ieškokite [Duomenų šaltinių](data-sources-enrichment.md) papildymas.
 
 1. Norėdami valdyti dubliavimo taisykles, pasirinkite bet kurią iš šių parinkčių:
    - **Naujos taisyklės** kūrimas: pasirinkite **Įtraukti taisyklę** po atitinkamu objektu. Daugiau informacijos ieškokite [Dubliavimo taisyklių apibrėžimas](remove-duplicates.md#define-deduplication-rules).
@@ -114,7 +186,7 @@ Galite konfigūruoti iš naujo ir tiksliai nustatyti daugumą atitikties paramet
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Grafinis nesuderintų ir suderintų įrašų atvaizdavimas, įskaitant duomenų sąrašą.":::
 
-1. Jei įtraukėte papildytą objektą, pasirinkite **Naudoti papildytus objektus**. Daugiau informacijos ieškokite [Duomenų šaltinių papildymas](data-sources-enrichment.md).
+1. Jei įtraukėte papildytą objektą, pasirinkite **Naudoti papildytus objektus**. Daugiau informacijos ieškokite [Duomenų šaltinių](data-sources-enrichment.md) papildymas.
 
 1. Norėdami valdyti taisykles, pasirinkite bet kurią iš šių parinkčių:
    - **Naujos taisyklės** kūrimas: pasirinkite **Įtraukti taisyklę** po atitinkamu objektu. Daugiau informacijos ieškokite [Atitikties porų taisyklių apibrėžimas](match-entities.md#define-rules-for-match-pairs).

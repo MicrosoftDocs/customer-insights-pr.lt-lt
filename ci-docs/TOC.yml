@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Naudoti „Azure“ mašininio mokymo pasirinktinius modelius
           href: custom-models.md
-        - name: Užbaigti iš dalies trūkstamus duomenis
-          href: predictions.md
     - name: Pavyzdiniai vedliai
       items:
         - name: CLV prognozės pavyzdinis vedlys
