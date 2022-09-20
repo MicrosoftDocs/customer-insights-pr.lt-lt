@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207055"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463275"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Prisijungimas Power Query prie duomenų šaltinis
 
@@ -63,7 +63,9 @@ Duomenų šaltinių pridėjimas pagal Power Query jungtis paprastai atliekamas �
 Duomenų įkėlimas gali užtrukti. Sėkmingai atnaujinus, nurijusius duomenis galima peržiūrėti puslapyje [**Objektai**](entities.md).
 
 > [!CAUTION]
-> Duomenų šaltinis, pagrįstas Power Query, sukuria duomenų srautą [Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Nekeiskite duomenų srauto Power Platform pavadinimo administravimo centre, kuris naudojamas "Customer Insights". Pervardijus duomenų srautą, kyla problemų dėl nuorodų tarp "Customer Insights" duomenų šaltinis ir duomenų srauto Dataverse.
+>
+> - Duomenų šaltinis, pagrįstas Power Query, sukuria duomenų srautą [Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Nekeiskite duomenų srauto Power Platform pavadinimo administravimo centre, kuris naudojamas "Customer Insights". Pervardijus duomenų srautą, kyla problemų dėl nuorodų tarp "Customer Insights" duomenų šaltinis ir duomenų srauto Dataverse.
+> - Vienu metu atliekami duomenų šaltinių įvertinimai Power Query "Customer Insights" turi tuos pačius [atnaujinimo apribojimus, kaip ir "Dataflows" PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Jei nepavyksta atnaujinti duomenų, nes jis pasiekė vertinimo ribą, rekomenduojame pakoreguoti kiekvieno duomenų srauto atnaujinimo tvarkaraštį, kad duomenų šaltiniai nebūtų apdorojami tuo pačiu metu.
 
 ### <a name="available-power-query-data-sources"></a>Galimi Power Query duomenų šaltiniai
 
@@ -75,14 +77,14 @@ Jungtys su varnele stulpelyje **"Customer Insights" (duomenų srautai)** yra gal
 
 Duomenų nurijimas iš vietinis duomenų šaltinių palaikomas remiantis Microsoft Power Platform duomenų srautais (PPDF). Galite įgalinti duomenų srautus "Customer Insights [" pateikdami Microsoft Dataverse aplinkos URL](create-environment.md) nustatydami aplinką.
 
-Duomenų šaltiniai, sukurti susiejus Dataverse aplinką su "Customer Insights", pagal numatytuosius nustatymus naudoja [Power Platform duomenų srautus](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Galite pašalinti ir atkurti duomenų šaltinius, buvusius prieš Dataverse susiejant [aplinką, naudodami vietinis duomenų šliuzus](/data-integration/gateway/service-gateway-app).
+Duomenų šaltiniai, sukurti susiejus Dataverse aplinką su "Customer Insights", pagal numatytuosius nustatymus naudoja [Power Platform duomenų srautus](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Duomenų srautai palaiko vietinį ryšį, naudodami duomenų šliuzus. Naudodami vietinis duomenų šliuzus galite pašalinti ir atkurti duomenų šaltinius, buvusius prieš Dataverse susiejant [aplinką](/data-integration/gateway/service-gateway-app).
 
-Duomenų šliuzai iš esamos Power BI arba Power Apps aplinkos bus matomi ir galėsite juos pakartotinai naudoti "Customer Insights". Duomenų šaltinių puslapyje rodomi saitai, kuriuos naudojant galima peržiūrėti ir konfigūruoti duomenų „Microsoft Power Platform“ vietinis aplinką.
+Duomenų šliuzai iš esamos Power BI arba Power Apps aplinkos bus matomi ir galėsite juos pakartotinai naudoti "Customer Insights", jei duomenų šliuzas ir "Customer Insights" aplinka yra tame pačiame "Azure" regione. Duomenų šaltinių puslapyje rodomi saitai, kuriuos naudojant galima peržiūrėti ir konfigūruoti duomenų „Microsoft Power Platform“ vietinis aplinką.
 
 > [!IMPORTANT]
 > Įsitikinkite, kad šliuzai atnaujinti į naujausią versiją. Galite įdiegti naujinimą ir iš naujo sukonfigūruoti šliuzą iš raginimo, rodomo šliuzo ekrane, tiesiogiai arba [atsisiųsti naujausią versiją](https://powerapps.microsoft.com/downloads/). Jei nenaudojate naujausios šliuzo versijos, duomenų srauto atnaujinimas nepavyksta su klaidų pranešimais, pvz. **, Raktinis žodis nepalaikomas: konfigūracijos ypatybės. Parametro pavadinimas: raktinis žodis**.
 >
-> Klaidas, susijusias su vietinis duomenų šliuzais "Customer Insights", dažnai sukelia konfigūracijos problemos. Daugiau informacijos apie duomenų šliuzų trikčių diagnostiką rasite [vietinis duomenų šliuzo trikčių šalinimas](/data-integration/gateway/service-gateway-tshoot).
+> Klaidas, susijusias su vietinis duomenų šliuzais "Customer Insights", dažnai sukelia konfigūracijos problemos. Daugiau informacijos apie duomenų šliuzų trikčių diagnostiką rasite [vietinis duomenų šliuzo](/data-integration/gateway/service-gateway-tshoot) trikčių diagnostika.
 
 ## <a name="edit-power-query-data-sources"></a>Duomenų šaltinių redagavimas Power Query
 

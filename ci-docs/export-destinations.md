@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304069"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460200"
 ---
 # <a name="exports-preview-overview"></a>Eksportavimų (peržiūros versija) apžvalga
 
@@ -81,6 +81,11 @@ Pasirinkite eksportavimą, kad peržiūrėtumėte galimus veiksmus.
 ## <a name="schedule-and-run-exports"></a>Eksportavimų planavimas ir vykdymas
 
 Kiekvienas jūsų konfigūruojamas eksportavimas turi atnaujinimo grafiką. Atnaujinimo metu sistema ieško naujų arba atnaujintų duomenų, kuriuos reikia įtraukti į eksportavimą. Pagal numatytuosius nustatymus, eksportavimai yra vykdomi kaip kiekvieno [suplanuoto sistemos atnaujinimo](schedule-refresh.md) dalis. Galite tinkinti atnaujinimo grafiką arba išjungti jį, kad eksportavimus vykdytumėte rankiniu būdu.
+
+> [!TIP]
+> Sumažinkite segmento eksporto apdorojimo laiką taikydami šiuos geriausios praktikos pavyzdžius:
+> - Paskirstykite segmento objektus visuose suluošintuose eksportavimuose.
+> - Venkite planuoti visą eksportą vienu metu. Palikite 30 minučių arba vieną valandą tarp kiekvieno eksporto numatyto laiko.
 
 Eksportavimo grafikai priklauso nuo jūsų aplinkos būsenos. Jei yra vykdomas [priklausomybių](system.md#refresh-processes) naujinimas, kai reikia pradėti suplanuotą eksportavimą, sistema iš pradžių užbaigs naujinimus, o tada paleist eksportavimą. Stulpelyje **Atnaujinta** rodoma, kada eksportavimas buvo paskutinį kartą atnaujintas.
 

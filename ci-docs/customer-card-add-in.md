@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194933"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473652"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Kliento kortelės papildinys, skirtas "Dynamics 365" programoms (peržiūra)
 
@@ -32,7 +32,8 @@ Gaukite 360 laipsnių jūsų klientų rodinį tiesiogiai „Dynamics 365“ prog
 - Kad jūsų "Dynamics 365" duomenys būtų susieti su "Customer Insights" klientų profiliais, rekomenduojame juos [nuryti iš "Dynamics 365" programos naudojant jungtį Microsoft Dataverse](connect-power-query.md). Jei naudojate kitą metodą, kad nurytumėte "Dynamics 365" kontaktus (arba abonementus), įsitikinkite, kad `contactid` laukas (arba `accountid`) nustatytas kaip [pagrindinis tos duomenų šaltinis raktas duomenų suvienijimo proceso metu](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Visi "Dynamics 365" kliento kortelės papildinio vartotojai turi būti [įtraukti kaip "Customer Insights" vartotojai](permissions.md), kad matytų duomenis.
 - [Sukonfigūruotos ieškos ir filtro galimybės](search-filter-index.md) „Customer Insights“.
-- Kiekvienas papildinio valdiklis priklauso nuo konkrečių "Customer Insights" duomenų. Kai kuriuos duomenis ir valdiklius galima naudoti tik konkrečių tipų aplinkose. Papildinio konfigūracija informuos jus, jei valdiklis nepasiekiamas dėl pasirinkto aplinkos tipo. Sužinokite daugiau apie [aplinkos naudojimo atvejus](work-with-business-accounts.md).
+- Kai kuriuos duomenis ir valdiklius galima naudoti tik konkrečių tipų aplinkose. Papildinio konfigūracija informuos jus, jei valdiklis nepasiekiamas dėl pasirinkto aplinkos tipo. Ši klaida bus rodoma valdiklyje ją pateikiant. Sužinokite daugiau apie [aplinkos naudojimo atvejus](work-with-business-accounts.md).
+- Kiekvienas papildinio valdiklis priklauso nuo konkrečių "Customer Insights" duomenų.
   - **Matų kontrolei** reikia [sukonfigūruotų kliento atributų matų](measures.md).
   - **Intelekto valdiklis** reikalauja duomenų, sugeneruotų naudojant [prognozes arba pasirinktinius modelius](predictions-overview.md).
   - **Kliento išsamios informacijos valdiklis** rodo visus laukus iš profilio, pasiekiamo vieningame kliento profilyje.
