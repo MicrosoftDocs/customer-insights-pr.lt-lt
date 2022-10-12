@@ -1,7 +1,7 @@
 ---
 title: Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
 description: Duomenų importavimas iš „Microsoft Dataverse“ valdomo duomenų telkinio.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206963"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609805"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Prisijungimas prie „Microsoft Dataverse“ valdomo duomenų telkinio
 
@@ -70,5 +70,93 @@ Norėdami prisijungti prie kito „Dataverse data lake”, [sukurkite naują duo
 1. Spustelėkite **Įrašyti**, kad pritaikytumėte pakeitimus ir grįžtumėte į **puslapį Duomenų šaltiniai**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Dažniausios nurijimo klaidų arba sugadintų duomenų priežastys
+
+Toliau nurodyti įtrauktų duomenų patikrinimai, skirti pažeistiems įrašams aptikti:
+
+- Lauko reikšmė neatitinka jo stulpelio duomenų tipo.
+- Laukuose yra simbolių, dėl kurių stulpeliai neatitinka numatytos schemos. Pavyzdžiui: neteisingai suformatuotos citatos, nepakeistos citatos arba naujų eilučių simboliai.
+- Jei yra stulpelių datetime/date/datetimeoffset, jų formatas turi būti nurodytas modelyje, jei jis neatitinka standartinio ISO formato.
+
+### <a name="schema-or-data-type-mismatch"></a>Schemos arba duomenų tipo neatitikimas
+
+Jei duomenys neatitinka schemos, įrašai klasifikuojami kaip sugadinti. Pataisykite šaltinio duomenis arba schemą ir iš naujo prarykite duomenis.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Datos laiko laukai netinkamu formatu
+
+Objekto datos laukai nėra ISO arba en-US formatais. Numatytasis datos laiko formatas programoje "Customer Insights" yra en-US formatas. Visi objekto datos laukai turi būti to paties formato. "Customer Insights" palaiko kitus formatus, jei komentarai ar bruožai yra sukurti šaltinio arba objekto lygiu modelyje arba manifest.json. Pavyzdžiui:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Manifest.json datetime formatą galima nurodyti objekto lygiu arba atributo lygiu. Objekto lygiu naudokite "exhibitsTraits" objekte, esančiame *.manifest.cdm.json, kad apibrėžtumėte duomenų laiko formatą. Atributo lygiu naudokite "appliedTraits" atribute, esančiameentityname.cdm.json.
+
+**Manifest.json objekto lygiu**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json atributo lygiu**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

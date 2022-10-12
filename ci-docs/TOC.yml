@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Naudoti „Azure“ mašininio mokymo pasirinktinius modelius
           href: custom-models.md
+        - name: Segmentų kūrimas prognozių pagrindu
+          href: prediction-based-segment.md
     - name: Pavyzdiniai vedliai
       items:
         - name: CLV prognozės pavyzdinis vedlys
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Eksperimentai naudojant „Azure“ mašininį mokymą
           href: azure-machine-learning-experiments.md
-    - name: Prognozių valdymas
-      href: manage-predictions.md
-    - name: Segmentų kūrimas prognozių pagrindu
-      href: prediction-based-segment.md
 - name: Eksportuokite parinktis
   items:
     - name: Eksportavimai

@@ -1,7 +1,7 @@
 ---
 title: Prisijungimas Power Query prie duomenų šaltinis (yra vaizdo įrašas)
 description: Nurykite duomenis per jungtį Power Query (yra vaizdo įrašas).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463275"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609900"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Prisijungimas Power Query prie duomenų šaltinis
 
@@ -43,16 +43,17 @@ Duomenų šaltinių pridėjimas pagal Power Query jungtis paprastai atliekamas �
 
 1. Pasirinkite **Transformuoti duomenis**.
 
-1. Dialogo **Power Query lange – redaguoti užklausas** galite peržiūrėti ir patikslinti duomenis. Objektai, kuriuos sistema nustatė jūsų pasirinktame duomenų šaltinyje, rodomi kairiosios srities dalyje.
+1. Peržiūrėkite ir patikslinkite duomenis **Power Query puslapyje - Redaguoti užklausas**. Objektai, kuriuos sistema nustatė jūsų pasirinktame duomenų šaltinyje, rodomi kairiosios srities dalyje.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Užklausų redagavimo dialogo langas":::
 
-1. Taip pat galite pertvarkyti savo duomenis. Pažymėkite objektą, kurį norite redaguoti arba pertvarkyti. Naudokite lango parinktis, Power Query kad pritaikytumėte transformacijas. Kiekviena transformacija yra nurodyta dalyje **Taikomi veiksmai**. Power Query suteikia daugybę [iš anksto sukurtų transformacijos](/power-query/power-query-what-is-power-query#transformations) galimybių.
+1. Transformuokite savo duomenis. Pažymėkite objektą, kurį norite redaguoti arba pertvarkyti. Naudokite lango parinktis, Power Query kad pritaikytumėte transformacijas. Kiekviena transformacija yra nurodyta dalyje **Taikomi veiksmai**. Power Query suteikia daugybę [iš anksto sukurtų transformacijos](/power-query/power-query-what-is-power-query#transformations) galimybių.
 
-   Rekomenduojame naudoti šias transformacijas:
-
-   - Jei duomenis įtraukiate iš CSV failo, pirmojoje eilutėje dažnai pateikiamos antraštės. Eikite į **Transformavimas** ir pasirinkite **Naudoti pirmąją eilutę kaip antraštes**.
-   - Užtikrinkite, kad tinkamai nustatytas duomenų tipas. Pavyzdžiui, datos laukuose pasirinkite datos tipą.
+   > [!IMPORTANT]
+   > Rekomenduojame naudoti šias transformacijas:
+   >
+   > - Jei duomenis įtraukiate iš CSV failo, pirmojoje eilutėje dažnai pateikiamos antraštės. Eikite į **Transformavimas** ir pasirinkite **Naudoti pirmąją eilutę kaip antraštes**.
+   > - Įsitikinkite, kad duomenų tipas yra tinkamai nustatytas ir atitinka duomenis. Pavyzdžiui, datos laukuose pasirinkite datos tipą.
 
 1. Norėdami į duomenų šaltinis įtraukti papildomų objektų dialogo lange Redaguoti **užklausas**, eikite į **Pagrindinis** ir pasirinkite **Gauti duomenis**. Kartokite 5–10 veiksmus, kol įtrauksite visus šio duomenų šaltinis objektus. Jei turite duomenų bazę, kurioje yra keletas duomenų rinkinių, kiekvienas duomenų rinkinys yra savo paties objektas.
 
@@ -102,5 +103,51 @@ Duomenų šliuzai iš esamos Power BI arba Power Apps aplinkos bus matomi ir gal
 1. Pasirinkite **Įrašyti**, kad pritaikytumėte keitimus ir grįžtumėte į **puslapį Duomenų šaltiniai**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Dažniausios nurijimo klaidų arba sugadintų duomenų priežastys
+
+### <a name="data-type-does-not-match-data"></a>Duomenų tipas nesutampa su duomenimis
+
+Dažniausias duomenų tipo neatitikimas įvyksta, kai datos laukas nenustatytas kaip tinkamas datos formatas.
+
+Duomenys gali būti fiksuoti šaltinyje ir vėl praryti. Arba pataisykite transformaciją "Customer Insights". Norėdami pataisyti transformaciją:
+
+1. Eikite į **Duomenys** > **Duomenų šaltiniai**.
+
+1. Šalia duomenų šaltinis su sugadintais duomenimis pasirinkite **Redaguoti**.
+
+1. Pasirinkite **Toliau**.
+
+1. Pasirinkite kiekvieną užklausą ir ieškokite transformacijų, taikomų skiltyje "Taikomi veiksmai", kurios yra neteisingos, arba datos stulpelių, kurie nebuvo pakeisti datos formatu.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query- Redaguoti, rodant neteisingą datos formatą":::
+
+1. Pakeiskite duomenų tipą, kad jis teisingai atitiktų duomenis.
+
+1. Pasirinkite **Įrašyti**. Tas duomenų šaltinis yra atnaujintas.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>PPDF Power Query pagrįstų duomenų šaltinis atnaujinimo problemų šalinimas
+
+Jei duomenys pasenę arba po duomenų šaltinis atnaujinimo gaunate klaidų, atlikite šiuos veiksmus:
+
+1. Eikite į [Power Platform](https://make.powerapps.com).
+
+1. **Pasirinkite "Customer Insights" egzemplioriaus aplinką**.
+
+1. Eikite į **Dataflows**.
+
+1. Duomenų srautui, atitinkančiam "Customer Insights" duomenų šaltinis, pasirinkite vertikalią daugtaškį (&vellip;), tada pasirinkite **Rodyti atnaujinimo retrospektyvą**.
+
+1. **Jei duomenų srauto būsena** yra **Sėkmė**, galėjo pasikeisti Power Query duomenų šaltinis pagrįsto duomenų šaltinis nuosavybė:
+
+   1. Peržiūrėkite atnaujinimo tvarkaraštį iš atnaujinimo retrospektyvos.
+   1. Nustatykite naujo savininko tvarkaraštį ir išsaugokite nustatymus.
+
+1. **Jei duomenų srauto būsena** yra **Nepavyko**:
+
+   1. Atsisiųskite atnaujinimo istorijos failą.
+   1. Peržiūrėkite atsisiųstą failą dėl gedimo priežasties.
+   1. Jei klaidos negalima išspręsti, pasirinkite **?** , kad atidarytumėte palaikymo bilietą. Įtraukite atsisiųstą atnaujinimo istorijos failą.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

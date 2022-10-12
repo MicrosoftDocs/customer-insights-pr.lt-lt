@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
-ms.translationtype: MT
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.translationtype: HT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409367"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609602"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Kas nauja programoje „Dynamics 365 Customer Insights“
 
@@ -228,9 +228,9 @@ Daugiau informacijos ieškokite [Aplinkos savininko keitimas](manage-environment
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Duomenų paruošimo procesas pateikia sugadintų įrašų sugadinimo priežasčių sąrašą
 
-Duomenų rengimas dabar rodo visų laukų, kuriuose yra sugadintų duomenų, sugadinimo priežastį. Informacija pateikiama individualiu įrašų lygiu, kad būtų lengviau identifikuoti. 
+Duomenų rengimas dabar rodo visų laukų, kuriuose yra sugadintų duomenų, sugadinimo priežastį. Informacija pateikiama individualiu įrašų lygiu, kad būtų lengviau identifikuoti.
 
-Daugiau informacijos ieškokite [Sugadinti duomenų šaltiniai](entities.md#corrupted-data-sources).
+Daugiau informacijos ieškokite [Sugadinti duomenų šaltiniai](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Įtraukimo įžvalgų galimybės ataskaitų teikimo funkcijų peržiūros pabaiga
 

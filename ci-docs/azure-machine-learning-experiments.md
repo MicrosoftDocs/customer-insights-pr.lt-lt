@@ -1,19 +1,19 @@
 ---
 title: Naudokite „Azure Machine Learning“ pagrįstus modelius
 description: Naudokite „Azure Machine Learning“ pagrįstus modelius „Dynamics 365 Customer Insights“.
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082285"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609835"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Naudokite „Azure Machine Learning“ pagrįstus modelius
 
@@ -35,26 +35,25 @@ Suvienodinti duomenys „Dynamics 365 Customer Insights“ yra šaltinis skirtas
 ## <a name="work-with-azure-machine-learning-designer"></a>Dirbkite su „Azure Machine Learning“ kūrėju
 
 "Azure mašininis mokymas" dizaino įrankis suteikia vaizdinę drobę, kurioje galite vilkti ir mesti duomenų rinkinius ir modulius. Bendras vamzdynas sukurtas iš kūrėjo gali būti integruojamas į „Customer Insights“, jei jos yra atitinkamai sukonfigūruotos. 
-   
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Darbas su „Azure Machine Learning“ SDK
 
 Duomenų mokslininkai ir AI kūrėjai naudoja [„Azure Machine Learning“ SDK](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) tam, kad sukurtų mašininio mokymosi darbo eigas. Šiuo metu modeliai ištreniruoti naudoti SDK negali būti integruoti tiesiogiai su „Customer Insights“. Bendros išvesties vamzdynas vartoja modelį, kuris turi būti integruotas su „Customer Insights“.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Bendri vamzdyno reikalavimai integravimui su „Customer Insights“
 
-### <a name="dataset-configuration"></a>Duomenų rinkinio konfigūravimas
+### <a name="dataset-configuration"></a>Duomenų rinkinio konfigūracija
 
-Jums reikia kurti duomenų rinkinius tam, kad naudotumėte objekto duomenis iš „Customer Insights“ į savo bendrą išvesties vamzdyną. Šie duomenų rinkiniai turi būti registruoti darbo aplinkoje. Šiuo metu palaikome tik [lentelės duomenų rinkinius](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) .csv formatu. Duomenų rinkiniai atitinka objekto duomenis turi būti su nustatytais parametrais kaip vamzdyno parametrai.
-   
-* Duomenų rinkinio parametrai kūrimo įrankyje
-   
-     Kūrimo įrankyje atverkite **Pasirinkti stulpelius duomenų rinkinyje** ir pasirinkite **Nustatyti kaip vamzdyno parametrą**, kai pateikiate parametrui pavadinimą.
+Kurkite duomenų rinkinius, kad galėtumėte naudoti objekto duomenis iš "Customer Insights" paketinio išvadų srauto. Užregistruokite šiuos duomenų rinkinius darbo srityje. Šiuo metu palaikome tik [lentelės duomenų rinkinius](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) .csv formatu. Parametrizuokite duomenų rinkinius, atitinkančius objekto duomenis, kaip vamzdyno parametrą.
 
-     > [!div class="mx-imgBorder"]
-     > ![Duomenų rinkinio parametrai kūrimo įrankyje.](media/intelligence-designer-dataset-parameters.png "Duomenų rinkinio parametrai kūrimo įrankyje")
-   
-* Duomenų rinkinio parametrai SDK („Python“)
-   
+- Duomenų rinkinio parametrai kūrimo įrankyje
+
+  Kūrimo įrankyje atverkite **Pasirinkti stulpelius duomenų rinkinyje** ir pasirinkite **Nustatyti kaip vamzdyno parametrą**, kai pateikiate parametrui pavadinimą.
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="Duomenų rinkinio parametrai kūrimo įrankyje.":::
+
+- Duomenų rinkinio parametrai SDK („Python“)
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Jums reikia kurti duomenų rinkinius tam, kad naudotumėte objekto duomenis iš 
 
 ### <a name="batch-inference-pipeline"></a>Bendros išvesties vamzdynas
   
-* Kūrimo įrankyje mokymo vamzdynas gali būti naudojamas siekiant sukurti ar atnaujinti išvesties vamzdyną. Šiuo metu tik bendri išvesties vamzdynai yra palaikomi.
+- Dizaino įrankyje naudokite mokymo srautą, kad sukurtumėte arba atnaujintumėte išvadų srautą. Šiuo metu tik bendri išvesties vamzdynai yra palaikomi.
 
-* Naudojant SDK galite publikuoti vamzdyną į galutinį tašką. Šiuo metu „Customer Insights“ integruojamos su nustatytu vamzdynu bendro vamzdyno galutiniame taške mašininio mokymosi darbo aplinkoje.
-   
+- Naudodami SDK publikuokite dujotiekį iki galinio taško. Šiuo metu „Customer Insights“ integruojamos su nustatytu vamzdynu bendro vamzdyno galutiniame taške mašininio mokymosi darbo aplinkoje.
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Jums reikia kurti duomenų rinkinius tam, kad naudotumėte objekto duomenis iš 
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importuokite vamzdyno duomenis į „Customer Insights“
 
-* Kūrimo įrankis pateikia [Duomenų eksportavimo modulį](/azure/machine-learning/algorithm-module-reference/export-data) leidžiantį vamzdyno išvesčiai būti eksportuotai į „Azure“ talpinimą. Šiuo metu modulis turi naudoti duomenų talpinimo tipą **„Azure Blob Storage“** ir nustatyti parametrus **Duomenų talpinime** ir atitinkamą **Kelią**. „Customer Insights“ perrašo abu šiuos parametrus vamzdyno vykdymo metu su duomenų talpinimu ir keliu, kuris prieinamas produktui.
-   > [!div class="mx-imgBorder"]
-   > ![Eksportuoti duomenų modulio konfigūravimą.](media/intelligence-designer-importdata.png "Eksportuoti duomenų modulio konfigūravimą")
-   
-* Rašant išvesties išvestį su kodu, galite įkelti išvestį į kelią su *registruotu duomenų talpinimu* darbo aplinkoje. Jei keliui ir duomenų talpinimui vamzdyne yra nustatomi parametrai, tinkintos „Customer Insights“ galės nuskaityti ir importuoti išvesties išvestį. Šiuo metu yra palaikoma atskira lentelės išvestis csv formatu. Kelias turi apimti katalogą ir failo pavadinimą.
+- Kūrimo įrankis pateikia [Duomenų eksportavimo modulį](/azure/machine-learning/algorithm-module-reference/export-data) leidžiantį vamzdyno išvesčiai būti eksportuotai į „Azure“ talpinimą. Šiuo metu modulis turi naudoti duomenų talpinimo tipą **„Azure Blob Storage“** ir nustatyti parametrus **Duomenų talpinime** ir atitinkamą **Kelią**. „Customer Insights“ perrašo abu šiuos parametrus vamzdyno vykdymo metu su duomenų talpinimu ir keliu, kuris prieinamas produktui.
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="Eksportuoti duomenų modulio konfigūravimą.":::
+
+- Rašydami išvados išvestį naudodami kodą, įkelkite išvestį į kelią, esantį *darbo srityje registruotoje* duomenų saugykloje. Jei keliui ir duomenų talpinimui vamzdyne yra nustatomi parametrai, tinkintos „Customer Insights“ galės nuskaityti ir importuoti išvesties išvestį. Šiuo metu yra palaikoma atskira lentelės išvestis csv formatu. Kelias turi apimti katalogą ir failo pavadinimą.
 
    ```python
    # In Pipeline setup script

@@ -1,7 +1,7 @@
 ---
 title: Objektai programoje „Customer Insights“.
 description: Peržiūrėkite duomenis objektų puslapyje.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183577"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610108"
 ---
 # <a name="entities-in-customer-insights"></a>Objektai programoje „Customer Insights“.
 
@@ -61,27 +61,5 @@ Eikite į **Duomenų** > **objektai** ir peržiūrėkite objektų sąrašą. Tol
   - **Sukurta**: objekto sukūrimo data ir laikas.
   - **Redagavo**: subjektą modifikavusio asmens vardas ir pavardė.
   - **Redaguota**: objekto modifikavimo data ir laikas.
-
-## <a name="entity-specific-information"></a>Konkretaus objekto informacija
-
-Šiame skyriuje pateikiama informacija apie kai kuriuos sistemos sukurtus objektus.
-
-### <a name="corrupted-data-sources"></a>Pažeisti duomenų šaltiniai
-
-Pažeisto duomenų šaltinio laukuose gali būti pažeistų duomenų. Įrašai su pažeistais laukais yra rodomi sistemos sukurtuose objektuose. Žinodami apie pažeistus įrašus galite identifikuoti, kuriuos duomenis reikia peržiūrėti ir atnaujinti šaltinio sistemoje. Kitą kartą atnaujinus duomenų šaltinį, pataisyti įrašai įtraukiami į „Customer Insights” ir perduodami tolesniems procesams. 
-
-Pavyzdžiui, stulpelyje „gimimo diena” nustatytas duomenų tipas „data”. Kliento įraše jo gimimo diena įvesta kaip „01/01/19777”. Sistema pažymės šį įrašą kaip pažeistą. Dabar kas nors galės pakeisti gimimo datą šaltinio sistemoje į „1977”. Automatiškai atnaujinus duomenų šaltinius laukas turi galiojantį formatą, o įrašas bus pašalintas iš pažeisto objekto.
-
-Eikite į **Duomenys** > **Objektai** ir ieškokite pažeistų objektų **Sistemos** skyriuje. Pažeistų objektų pavadinimų suteikimo schema: „DataSourceName_EntityName_corrupt”. Pasirinkite sugadintą objektą, kad identifikuotumėte sugadintus laukus ir priežastį atskiro įrašo lygiu.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Korupcijos priežastis.":::
-
-„Customer Insights” vis tiek apdoroja pažeistus įrašus. Tačiau jie gali sukelti problemų dirbant su vieningais duomenimis.
-
-Toliau nurodyti įtrauktų duomenų patikrinimai, skirti pažeistiems įrašams aptikti:
-
-- Lauko reikšmė neatitinka jo stulpelio duomenų tipo.
-- Laukuose yra simbolių, dėl kurių stulpeliai neatitinka numatytos schemos. Pavyzdžiui: neteisingai suformatuotos citatos, nepakeistos citatos arba naujų eilučių simboliai.
-- Jei yra datos / datos / datos nustatymo stulpelių, jų formatas turi būti nurodytas modelyje, jei jis neatitinka standartinio ISO formato.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

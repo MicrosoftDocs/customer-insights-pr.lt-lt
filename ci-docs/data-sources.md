@@ -1,7 +1,7 @@
 ---
 title: Duomenų šaltinių apžvalga
 description: Sužinokite, kaip importuoti arba nuryti duomenis iš įvairių šaltinių.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245659"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610062"
 ---
 # <a name="data-sources-overview"></a>Duomenų šaltinių apžvalga
 
@@ -65,7 +65,9 @@ Pasirinkite duomenų šaltinis, kad peržiūrėtumėte galimus veiksmus.
 
 ## <a name="refresh-data-sources"></a>Duomenų šaltinių atnaujinimas
 
-Duomenų šaltiniai gali būti paleisti iš naujo automatiniu grafiku arba rankiniu būdu pagal poreikį. [Vietoje esantys duomenų šaltiniai](connect-power-query.md#add-data-from-on-premises-data-sources) atnaujinami pagal savo tvarkaraščius, kurie nustatomi duomenų įsisavinimo metu. Pridedamų duomenų šaltinių atveju duomenų nurijimas sunaudoja naujausius duomenis, gautus iš to duomenų šaltinis.
+Duomenų šaltiniai gali būti paleisti iš naujo automatiniu grafiku arba rankiniu būdu pagal poreikį. [Vietoje esantys duomenų šaltiniai](connect-power-query.md#add-data-from-on-premises-data-sources) atnaujinami pagal savo tvarkaraščius, kurie nustatomi duomenų įsisavinimo metu. Trikčių šalinimo patarimų ieškokite [PPDF Power Query pagrįstų duomenų šaltinis atnaujinimo problemų](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues) trikčių šalinimas.
+
+Pridedamų duomenų šaltinių atveju duomenų nurijimas sunaudoja naujausius duomenis, gautus iš to duomenų šaltinis.
 
 Eikite į **administratoriaus** > **sistemos** > [**tvarkaraštį**](schedule-refresh.md), kad sukonfigūruotumėte sistemos suplanuotus nurijusių duomenų šaltinių atnaujinimus.
 
@@ -76,5 +78,37 @@ Norėdami atnaujinti duomenų šaltinis pagal poreikį:
 1. Pasirinkite duomenų šaltinis norite atnaujinti, ir pasirinkite **Atnaujinti**. Šis duomenų šaltinis dabar yra įjungtas rankiniam paleidimui iš naujo. Atnaujinus duomenų šaltinį bus atnaujinta ir objekto schema, ir duomenys, skirti visiems duomenų šaltinyje nurodytiems objektams.
 
 1. Pasirinkite būseną, kad atidarytumėte **sritį Išsami informacija apie** pažangą, ir peržiūrėkite eigą. Norėdami atšaukti užduotį, srities apačioje pasirinkite **Atšaukti užduotį**.
+
+## <a name="corrupt-data-sources"></a>Sugadinti duomenų šaltiniai
+
+Praryjami duomenys gali turėti sugadintų įrašų, dėl kurių duomenų nurijimo procesas gali būti baigtas klaidomis ar įspėjimais.
+
+> [!NOTE]
+> Jei duomenų nurijimas baigiasi klaidomis, tolesnis apdorojimas (pvz., suvienijimas ar veiklos kūrimas), kuris išnaudoja šį duomenų šaltinis, bus praleistas. Jei nurijimas užbaigiamas įspėjimais, tolesnis apdorojimas tęsiamas, tačiau kai kurie įrašai gali būti neįtraukti.
+
+Šias klaidas galima pamatyti išsamioje užduoties informacijoje.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Užduoties informacija, rodanti sugadintų duomenų klaidą.":::
+
+Sugadinti įrašai rodomi sistemos sukurtuose objektuose.
+
+### <a name="fix-corrupt-data"></a>Sugadintų duomenų taisymas
+
+1. Norėdami peržiūrėti sugadintus duomenis, eikite į **Duomenų** > **objektai** ir ieškokite sugadintų objektų **skyriuje Sistema**. Korumpuotų subjektų pavadinimo schema: "DataSourceName_EntityName_corrupt".
+
+1. Pasirinkite sugadintą objektą, tada skirtuką **Duomenys**.
+
+1. Nustatykite sugadintus įrašo laukus ir priežastį.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Korupcijos priežastis." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Duomenų** > **objektai** rodo tik dalį sugadintų įrašų. Norėdami peržiūrėti visus sugadintus įrašus, eksportuokite failus į saugyklos abonemento konteinerį naudodami eksportavimo [procesą](export-destinations.md) "Customer Insights". Jei naudojote savo saugyklos paskyrą, taip pat galite peržiūrėti saugyklos abonemento aplanką "Customer Insights".
+
+1. Pataisykite sugadintus duomenis. Pavyzdžiui, "Azure Data Lake" duomenų šaltiniuose [pataisykite duomenis duomenų ežero saugykloje arba atnaujinkite manifest/model.json failo](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data) duomenų tipus. Jei naudojate Power Query duomenų šaltinius, pataisykite šaltinio failo duomenis ir [pataisykite duomenų tipą transformacijos veiksmas](connect-power-query.md#data-type-does-not-match-data)**Power Query puslapyje - Redaguoti užklausas**.
+
+Kitą kartą atnaujinus duomenų šaltinį, pataisyti įrašai įtraukiami į „Customer Insights” ir perduodami tolesniems procesams.
+
+Pavyzdžiui, stulpelyje „gimimo diena” nustatytas duomenų tipas „data”. Kliento įraše jo gimimo diena įvesta kaip „01/01/19777”. Sistema pažymi šį įrašą kaip sugadintą. Pakeiskite gimtadienį šaltinio sistemoje į "1977". Po automatinio duomenų šaltinių atnaujinimo laukas dabar turi galiojantį formatą ir įrašas pašalinamas iš sugadinto objekto.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

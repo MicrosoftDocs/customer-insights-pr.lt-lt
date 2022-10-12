@@ -1,7 +1,7 @@
 ---
 title: Jungimasis prie „Common Data Model” aplanko naudojant „Azure Data Lake” klientą
 description: Dirbkite su „Common Data Model“ duomenimis naudodami „Azure Data Lake Storage“.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396097"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609952"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Jungtis prie duomenų „Azure Data Lake Storage“
 
@@ -43,6 +43,10 @@ Prarykite duomenis, kad Dynamics 365 Customer Insights galėtumėte naudotis sav
 - Vartotojui, kuris nustato duomenų šaltinis ryšį, saugojimo paskyroje reikia mažiausiai saugyklos "Blob Data Contributor" leidimų.
 
 - Jūsų duomenų ežero saugykloje esantys duomenys turėtų atitikti "Common Data Model" standartą, skirtą jūsų duomenims saugoti, ir turėti bendrą duomenų modelio manifestą, kuris atspindėtų duomenų failų schemą (*.csv arba *.parketas). Manifeste turi būti pateikta išsami informacija apie objektus, pvz., objekto stulpelius ir duomenų tipus, duomenų failo vieta ir failo tipas. Daugiau informacijos ieškokite ["Common Data Model" manifeste](/common-data-model/sdk/manifest). Jei aprašo nėra, administratoriaus vartotojai, turintys "Storage Blob Data Owner" arba "Storage Blob Data Contributor" prieigą, gali apibrėžti schemą prarydami duomenis.
+
+## <a name="recommendations"></a>Rekomendacijos
+
+Siekiant optimalaus veikimo, "Customer Insights" rekomenduoja, kad skaidinio dydis būtų 1 GB ar mažesnis, o skaidinio failų skaičius aplanke neturi viršyti 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Prisijungimas prie „Azure Data Lake Storage“
 
@@ -86,7 +90,7 @@ Prarykite duomenis, kad Dynamics 365 Customer Insights galėtumėte naudotis sav
    > [!TIP]
    > Norėdami redaguoti objektą JSON redagavimo sąsajoje, pasirinkite objektą ir tada **Redaguoti schemos failą**. Atlikite pakeitimus ir pasirinkite **Įrašyti**.
 
-1. Pasirinktiems objektams, kuriems reikalingas laipsniškas nurijimas, **būtina rodyti dalyje** Laipsniškas **atnaujinimas**. Apie kiekvieną iš šių objektų žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md).
+1. Pasirinktiems objektams, kuriems reikalingas laipsniškas nurijimas, **būtina** rodyti dalyje **Laipsniškas atnaujinimas**. Apie kiekvieną iš šių objektų žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md).
 
 1. Pasirinktuose objektuose, kurių pirminis raktas nebuvo apibrėžtas, **privalomas** rodomas dalyje **Pirminis raktas**. Kiekvienam iš šių objektų:
    1. Pasirinkite **Būtina**. Rodomas objekto **redagavimo** skydas.
@@ -144,7 +148,7 @@ Duomenų įkėlimas gali užtrukti. Sėkmingai atnaujinus, nurijusius duomenis g
 
    :::image type="content" source="media/ADLS_required.png" alt-text="Dialogo langas, kuriame rodomas būtinas pirminiam raktui":::
 
-1. Pasirinktiems objektams, kuriems reikalingas laipsniškas nurijimas, **būtina rodyti dalyje** Laipsniškas **atnaujinimas**. Apie kiekvieną iš šių objektų žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md).
+1. Pasirinktiems objektams, kuriems reikalingas laipsniškas nurijimas, **būtina** rodyti dalyje **Laipsniškas atnaujinimas**. Apie kiekvieną iš šių objektų žiūrėkite ["Azure Data Lake" duomenų šaltinių laipsniško atnaujinimo konfigūravimas](incremental-refresh-data-sources.md).
 
 1. Pasirinktuose objektuose, kurių pirminis raktas nebuvo apibrėžtas, **privalomas** rodomas dalyje **Pirminis raktas**. Kiekvienam iš šių objektų:
    1. Pasirinkite **Būtina**. Rodomas objekto **redagavimo** skydas.
@@ -199,5 +203,101 @@ Galite atnaujinti *parinktį Prisijungti prie saugyklos paskyros naudodami* pari
 1. Spustelėkite **Įrašyti**, kad pritaikytumėte pakeitimus ir grįžtumėte į **puslapį Duomenų šaltiniai**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Dažniausios nurijimo klaidų arba sugadintų duomenų priežastys
+
+Duomenų nurijimo metu kai kurios dažniausios priežastys, dėl kurių įrašas gali būti laikomas sugadintu, yra šios:
+
+- Duomenų tipai ir laukų reikšmės nesutampa tarp šaltinio failo ir schemos
+- Šaltinio failo stulpelių skaičius neatitinka schemos
+- Laukuose yra simbolių, dėl kurių stulpeliai pasvirsta, palyginti su numatoma schema. Pavyzdžiui: neteisingai suformatuotos kabutės, neapribotos kabutės, naujos eilutės simboliai arba simboliai su skirtukais.
+- Trūksta skaidinio failų
+- Jei yra stulpelių datetime/date/datetimeoffset, jų formatas turi būti nurodytas schemoje, jei ji neatitinka standartinio formato.
+
+### <a name="schema-or-data-type-mismatch"></a>Schemos arba duomenų tipo neatitikimas
+
+Jei duomenys neatitinka schemos, nurijimo procesas baigiamas klaidomis. Pataisykite šaltinio duomenis arba schemą ir iš naujo prarykite duomenis.
+
+### <a name="partition-files-are-missing"></a>Trūksta skaidinio failų
+
+- Jei nurijimas buvo sėkmingas be sugadintų įrašų, bet nematote jokių duomenų, redaguokite model.json arba manifest.json failą, kad įsitikintumėte, jog nurodyti skaidiniai. Tada atnaujinkite [duomenų šaltinis](data-sources.md#refresh-data-sources).
+
+- Jei duomenų nurijimas įvyksta tuo pačiu metu, kai automatinio grafiko atnaujinimo metu atnaujinami duomenų šaltiniai, skaidinio failai gali būti tušti arba jų negalima apdoroti "Customer Insights". Norėdami suderinti su atnaujinimo grafiku prieš srovę, pakeiskite sistemos atnaujinimo [tvarkaraštį](schedule-refresh.md) arba duomenų šaltinis atnaujinimo tvarkaraštį. Sulygiuokite laiką taip, kad atnaujinimai vyktų ne visi iš karto, ir pateikite naujausius duomenis, kurie bus apdorojami "Customer Insights".
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Datos laiko laukai netinkamu formatu
+
+Objekto datos laukai nėra ISO 8601 arba en-US formatais. Numatytasis datos laiko formatas programoje "Customer Insights" yra en-US formatas. Visi objekto datos laukai turi būti to paties formato. "Customer Insights" palaiko kitus formatus, jei komentarai ar bruožai yra sukurti šaltinio arba objekto lygiu modelyje arba manifest.json. Pavyzdžiui:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Manifest.json datetime formatą galima nurodyti objekto lygiu arba atributo lygiu. Objekto lygiu naudokite "exhibitsTraits" objekte, esančiame *.manifest.cdm.json, kad apibrėžtumėte datos laiko formatą. Atributo lygiu naudokite "appliedTraits" atribute, esančiameentityname.cdm.json.
+
+**Manifest.json objekto lygiu**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json atributo lygiu**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

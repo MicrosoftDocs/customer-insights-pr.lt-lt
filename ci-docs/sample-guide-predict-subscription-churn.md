@@ -1,7 +1,7 @@
 ---
 title: Prenumeratos atsisakymo prognozės pavyzdžio vedlys
 description: Naudokite šį pavyzdžio vedlį tam, kad bandytumėte nestandartinį prenumeravimo atsisakymo prognozės modelį.
-ms.date: 03/31/2022
+ms.date: 09/19/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,77 +11,73 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 7e754be9a2cb9450949c6b3667bbd37aa39cf0bf
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741421"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610016"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Prenumeratos atsisakymo prognozės pavyzdžio vedlys
 
-Praeisime kartu pro prenumeravimo nutraukimo prognozės pavyzdį nuo pradžios iki galo naudodami toliau pateiktus pavyzdžio duomenis. 
+Šiame vadove jums bus paaiškintas nuo galo iki galo pateiktas prenumeratos atsisakymo prognozė naudojant duomenų pavyzdžius pavyzdys. Rekomenduojame išbandyti šį prognozė [naujoje aplinkoje](manage-environments.md).
 
 ## <a name="scenario"></a>Scenarijus
 
-„Contoso“ yra bendrovė gaminanti aukštos kokybės kavą ir kavos aparatus, kuriuos parduoda per „Contoso Coffee“ interneto svetainę. Jie neseniai pradėjo prenumeravimo verslą savo klientams tam, kad jie reguliariai gautų kavos. Jų tikslas yra suprasti, kurie prenumeruojantys klientai gali atšaukti savo prenumeratą per kelis ateinančius mėnesius. Žinojimas, kurie jų klientai **greičiausiai nutrauks paslaugas** gali padėti įmonei sutaupyti reklamos pastangas susikoncentruojant į klientų išlaikymą.
+Contoso yra įmonė, gaminanti aukštos kokybės kavos ir kavos aparatus. Jie parduoda produktus per savo Contoso Coffee" svetainę. Jie neseniai pradėjo prenumeravimo verslą savo klientams tam, kad jie reguliariai gautų kavos. Jų tikslas yra suprasti, kurie užsiprenumeravę klientai gali atšaukti savo prenumeratą per ateinančius kelis mėnesius. Žinojimas, kuris iš jų klientų **gali nukentėti**, gali padėti jiems sutaupyti rinkodaros pastangų, sutelkiant dėmesį į jų išlaikymą.
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
 - Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.
-- Rekomenduojame jums atlikti šiuos žingsnius [naujoje aplinkoje](manage-environments.md).
 
 ## <a name="task-1---ingest-data"></a>Užduotis 1 - Duomenų vartojimas
 
-Peržiūrėkite straipsnius [apie duomenų nurijimą](data-sources.md) ir [duomenų šaltinių Power Query importavimą naudojant specialiai jungtis](connect-power-query.md). Tolesnė informacija pateikiama su sąlyga, kad susipažinote su naudojamais duomenimis iš esmės. 
+Peržiūrėkite straipsnius [apie duomenų įsisavinimą](data-sources.md) ir [prisijungimą Power Query prie duomenų šaltinis](connect-power-query.md). Toliau pateiktoje informacijoje daroma prielaida, kad esate susipažinę su duomenų nurijimu apskritai.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Kliento duomenų naudojimas iš e-komercijos platformos
 
-1. Sukurkite duomenų šaltinį pavadinimu **e-komercija**, pasirinkite importavimo parinktį ir pasirinkite **Tekstas/CSV** jungtį.
+1. Sukurkite "Power Query" duomenų šaltinis, pavadintą **el**. prekyba, ir pasirinkite **teksto / CSV** jungtį.
 
 1. Įveskite URL e-komercijos kontaktams https://aka.ms/ciadclasscontacts.
 
-1. Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.
+1. Redaguodami duomenis pasirinkite Transformuoti **, tada** Naudokite pirmąją eilutę kaip antraštes **.**
 
 1. Naujinti duomenų tipą toliau išvardytiems stulpeliams:
-
    - **Gimimo data**: Data
    - **Sukurta**: Data/Laikas/Zona
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformuoti gimimo datą į datą.":::
 
-1. Lauke **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **e-komercijos kontaktai**
+1. Dešinėje **srityje esančiame lauke Pavadinimas** pervardykite duomenų šaltinis į **El. prekyboskontaktai**
 
 1. Įrašykite duomenų šaltinį.
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Kliento duomenų naudojimas iš lojalumo schemos
 
-1. Sukurkite duomenų šaltinį pavadinimu **Lojalumo schema**, pasirinkite importavimo parinktį ir pasirinkite **Tekstas/CSV** jungtį.
+1. Sukurkite duomenų šaltinis pavadinimu **LoyaltyScheme** ir pasirinkite teksto / CSV **jungtį**.
 
-1. Įveskite URL e-komercijos kontaktams https://aka.ms/ciadclasscustomerloyalty.
+1. Įveskite lojalumo klientų https://aka.ms/ciadclasscustomerloyalty URL.
 
-1. Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.
+1. Redaguodami duomenis pasirinkite Transformuoti **, tada** Naudokite pirmąją eilutę kaip antraštes **.**
 
 1. Naujinti duomenų tipą toliau išvardytiems stulpeliams:
-
    - **Gimimo data**: Data
    - **Uždirbtitaškai**: Visas skaičius
    - **Sukurta**: Data/Laikas
 
-1. Laukelyje **Pavadinimas** dešinėje juostoje pervardykite savo duomenų šaltinį iš **Laukimas** į **lojalūs klientai**.
+1. Dešinėje **srityje esančiame lauke Pavadinimas** pervardykite duomenų šaltinis į **loyCustomers**.
 
 1. Įrašykite duomenų šaltinį.
 
 ### <a name="ingest-subscription-information"></a>Suvartojama prenumeratos informacija
 
-1. Sukurti duomenų šaltinį pavadinimus **Prenumeravimo istorija**, pasirinkite importavimo parinktį ir pasirinkite **Teksto/CSV** jungtis.
+1. Sukurkite duomenų šaltinis pavadinimu **"SubscriptionHistory"** ir pasirinkite **teksto / CSV** jungtį.
 
-1. Įveskite URL e-komercijos kontaktams https://aka.ms/ciadchurnsubscriptionhistory.
+1. Įveskite prenumeratų URL https://aka.ms/ciadchurnsubscriptionhistory.
 
-1. Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.
+1. Redaguodami duomenis pasirinkite Transformuoti **, tada** Naudokite pirmąją eilutę kaip antraštes **.**
 
 1. Naujinti duomenų tipą toliau išvardytiems stulpeliams:
-
    - **Prenumeravimo ID**: Visas numeris
    - **Prenumeravimo suma**: Valiuta
    - **Prenumeravimo galutinė data**: Data/Laikas
@@ -91,92 +87,107 @@ Peržiūrėkite straipsnius [apie duomenų nurijimą](data-sources.md) ir [duome
    - **Yra_automatiškai_atnaujinama**: Tiesa/Netiesa
    - **Atnaujinimo dažnis mėnesiai**: Visas numeris
 
-1. Laukelyje **Pavadinimas** dešinėje juostoje, pervardykite savo duomenų šaltinį iš **Laukiama** į **Prenumeravimo istorija**.
+1. Dešinėje **srityje esančiame lauke Pavadinimas** pervardykite duomenų šaltinis į **SubscriptionHistory**.
 
 1. Įrašykite duomenų šaltinį.
 
 ### <a name="ingest-customer-data-from-website-reviews"></a>Suvartokite kliento duomenis iš svetainės peržiūrų
 
-1. Norėdami sukurti duomenų šaltinį pavadinimu **Interneto svetainė**, pasirinkite importavimo parinktį ir pasirinkite **Teksto/CSV** jungtis.
+1. Sukurkite duomenų šaltinis pavadinimu **Svetainė ir pasirinkite** teksto / CSV **jungtį**.
 
-1. Įveskite URL e-komercijos kontaktams https://aka.ms/ciadclasswebsite.
+1. Įveskite svetainių apžvalgų https://aka.ms/ciadclasswebsite URL.
 
-1. Redaguodami duomenis pasirinkite **Transformuoti** ir tuomet **Naudoti pirmą eilutę kaip antraštes**.
+1. Redaguodami duomenis pasirinkite Transformuoti **, tada** Naudokite pirmąją eilutę kaip antraštes **.**
 
 1. Naujinti duomenų tipą toliau išvardytiems stulpeliams:
-
    - **Peržiūros reitingas**: Visas numeris
-   - **Peržiūros data**: Data
+   - **Apžvalgos data**: Data
 
-1. „Pavadinimas“ laukelyje dešinėje juostoje, pervardykite savo duomenų šaltinį iš **Laukiama** į **Žiniatinklio peržiūros**.
+1. Dešinėje **srityje esančiame lauke Pavadinimas** pervardykite duomenų šaltinis į **webReviews**.
 
 ## <a name="task-2---data-unification"></a>Užduotis 2 - Duomenų suvienodinimas
 
+Peržiūrėkite straipsnį [apie duomenų suvienijimą](data-unification.md). Toliau pateiktoje informacijoje daroma prielaida, kad esate susipažinę su duomenų suvienijimu apskritai.
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-the-subscription-churn-prediction"></a>Užduotis 3 - Konfigūruoti prenumeravimo nutraukimo prognozę
+## <a name="task-3---create-transaction-history-activity"></a>3 užduotis – sukurkite operacijų istorijos veiklą
 
-Su suvienodinto kliento profiliais savo vietoje galite dabar vykdyti prenumeravimo nutraukimo prognozę. Išsamių veiksmų ieškokite [straipsnyje Prenumerata prognozė](predict-subscription-churn.md). 
+Peržiūrėkite straipsnį [apie klientų veiklą](activities.md). Toliau pateiktoje informacijoje daroma prielaida, kad esate susipažinęs su veiklos kūrimu apskritai.
 
-1. Eikite į **Įžvalga** > **Atrasti** ir pasirinkite norėdami naudoti **Kliento nutraukimo modelį**.
+1. Sukurkite veiklą, vadinamą SubscriptionHistory **, naudodami prenumeratos objektą** *ir jo pirminį raktą* CustomerId **.**
 
-1. Pasirinkite **Pernumeravimo** parinktį ir pasirinkite **Pradėti**.
+1. Sukurkite ryšį tarp *SubscriptionHistory:Subscription* ir *eCommerceContacts:eCommerce* su **CustomerID** kaip išoriniu raktu, kad sujungtumėte du objektus.
+
+1. Pasirinkite **"EventActivity" ir**"SubscriptionEndDate **", skirtą**"TimeStamp **"**, "SubscriptionType"**·**.
+
+1. Pasirinkite **Veiklos tipo** prenumerata **ir** semantiškai susiekite veiklos duomenis.
+
+1. Vykdykite veiklą.
+
+1. Įtraukite kitą veiklą ir susiekite jos laukų pavadinimus su atitinkamais laukais:
+   - Kliento veiklos objektas: Atsiliepimai:Žiniatinklio svetainė
+   - Pirminis raktas: Žiniatinklis.Apžvalgos.ApžvalgosId
+   - Laiko žyma: Svetainė.Apžvalgos.ApžvalgosData
+   - Įvykis (veiklos pavadinimas): Svetainė.Apžvalgos.RodomasVeiklosTipas
+   - Išsami informacija (suma arba reikšmė): Svetainė.Apžvalgos.ApžvalgųĮvertinimas
+
+1. Vykdykite veiklą.
+
+## <a name="task-4---configure-the-subscription-churn-prediction"></a>Užduotis 4 - Konfigūruoti prenumeravimo nutraukimo prognozę
+
+Įdiegę vieningus klientų profilius ir sukūrę veiklą, paleiskite prenumeratos praradimo prognozė. Išsamių veiksmų ieškokite [prenumeratos atsisakymo prognozė](predict-subscription-churn.md).
+
+1. Eikite į **"Intelligence Predictions"** > **·**.
+
+1. Skirtuke **Kurti** pasirinkite **Naudoti modelį** plytelėje Kliento klientų pasitraukimo **modelis**.
+
+1. Pasirinkite **Prenumeratos** pagal praradimo tipą, tada **Pradėkite**.
 
 1. Pavadinkite modelį **OOB prenumeravimo nutraukimo prognozė** ir išvesties objektą **OOBprenumeravimonutraukimoprognozė**.
 
-1. Nustatykite dvi sąlygas nutraukimo modeliui:
+1. Apibrėžkite modelio nuostatas:
+   - **Dienos nuo prenumeratos pasibaigimo**: **60** dienų, nurodančių, kad klientas laikomas prarastu, jei jis neatnaujina prenumeratos per šį laikotarpį pasibaigus prenumeratai.
+   - **Dienos, kurias reikia ištirti ateityje, kad būtų galima prognozuoti praradimą**: **93** dienos, kuri yra trukmė, kurią modelis prognozuoja, kurie klientai gali prarasti. Kuo toliau žvelgiate į ateitį, tuo rezultatai bus netikslesni.
 
-   * **Dienos iki pasibaigs prenumerata**: **mažiausiai 60** dienų. Jei klientas neatnaujina prenumeratos per šį laikotarpį po to, kai baigsis prenumerata, laikoma, kad jis atsisakė paslaugų. 
+   :::image type="content" source="media/model-subs-levers.PNG" alt-text="Pasirinkite modelio nuostatas ir praradimo apibrėžimą.":::
 
-   * **Atsisakymo sąvoka**: **mažiausiai 93** dienų. Modelio nuspėjama trukmė, per kurį klientai gali atsisakyti. Kuo toliau žvelgiate į ateitį, tuo rezultatai bus netikslesni.
+1. Pasirinkite **Toliau**.
 
-     :::image type="content" source="media/model-subs-levers.PNG" alt-text="Pasirinkite modelio išlyginimo prognozės langą ir nutraukimo sąvoką.":::
+1. Atlikdami veiksmą **Privalomieji duomenys** pasirinkite **Įtraukti duomenis**, kad pateiktumėte prenumeratų istoriją.
 
-1. Pasirinkite **Įtraukti būtinus duomenis** ir pasirinkite **Įtraukite duomenis** prenumeratos istorijai.
+1. Pasirinkite **Prenumeratą** ir objektą SubscriptionHistory ir pasirinkite **Pirmyn**. Reikalingi duomenys automatiškai užpildomi iš veiklos. Pasirinkite **Įrašyti**.
 
-1. Įtraukite **Prenumeratą : prenumeravimo istorija** objektą ir sudarykite laukelių žemėlapį iš e-komercijos pagal atitinkamus modeliui būtinus laukelius.
+1. Dalyje Kliento veikla pasirinkite **Įtraukti duomenis**.
 
-1. Prisijunkite prie **Prenumerata : Prenumeravimo istorija** objekto su **E-komercijos kontaktų : e-komercija**, pavadinkite ryšius **e-komercijos prenumerata**.
+1. Šiame pavyzdyje pridėkite žiniatinklio peržiūros veiklą.
 
-   :::image type="content" source="media/model-subscription-join.PNG" alt-text="Sujunkite e-komercijos objektus.":::
+1. Pasirinkite **Toliau**.
 
-1. Kliento veiklos skyriuje įtraukite **Žiniatinklio peržiūros: interneto svetainės** objektą ir sudarykite laukelių žemėlapį iš žiniatinklio peržiūros pagal atitinkamus modeliui būtinus laukelius. 
-   - Pirminis raktas: Peržiūros ID
-   - Laiko juostos antspaudas: Peržiūros data
-   - Įvykis: Peržiūros reitingavimas
-
-1. Konfigūruokite veiklą interneto svetainės peržiūroms. Pasirinkite veiklą **Peržiūrėti** ir prisijungti prie **Žiniatinklio peržiūrų : interneto svetainės** objektą su **e-komercijos kontaktų : e-komercija**.
-
-1. Pasirinkite **Kitas** tam, kad nustatytumėte modelio grafiką.
-
-   Modelis turi būti reguliariai bandomas siekiant išmokti naujas iškarpas, kai esama naujų vartojamų duomenų. Šiam pavyzdžiui, rinkitės **Kas mėnesį**.
+1. Atlikdami duomenų atnaujinimo veiksmą **, modelio grafike pasirinkite** Kas mėnesį **.**
 
 1. Peržiūrėję visą išsamią informaciją pasirinkite **Įrašyti ir vykdyti**.
 
-## <a name="task-4---review-model-results-and-explanations"></a>4 užduotis – Peržiūrėti modelio rezultatus ir paaiškinimus
+## <a name="task-5---review-model-results-and-explanations"></a>5 užduotis – Peržiūrėti modelio rezultatus ir paaiškinimus
 
-Leisti modeliui užbaigti mokymąsi ir duomenų vertinimą. Galite dabar peržiūrėti prenumeravimo atsisakymo modelio paaiškinimus. Dėl išsamesnės informacijos, žr. [Peržiūrėti prognozės būseną ir rezultatus](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Leisti modeliui užbaigti mokymąsi ir duomenų vertinimą. Peržiūrėkite prenumeratos praradimo modelio paaiškinimus. Daugiau informacijos ieškokite [prognozė rezultatų](predict-subscription-churn.md#view-prediction-results) peržiūra.
 
-## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Užduotis 5 - Sukurti didelės atsisakymo rizikos klientų segmentą
+## <a name="task-6---create-a-segment-of-high-churn-risk-customers"></a>Užduotis 6 - Sukurti didelės atsisakymo rizikos klientų segmentą
 
-Gamybos modelio vykdymas sukurią naują objektą, kurį galite matyti **Duomenys** > **Objektai**.   
+Paleidus modelį sukuriamas naujas objektas, kuris pateikiamas skiltyje **Duomenys** > **Objektai**. Galite sukurti naują segmentą pagal modelio sukurtą objektą.
 
-Galite sukurti naują segmentą pagal modelio sukurtą objektą.
+1. Rezultatų puslapyje pasirinkite **Kurti segmentą**.
 
-1.  Eikite į **Segmentai**. Pasirinkite **Naujas** ir rinkitės **Sukurtas iš** > **Įžvalgos**. 
+1. Sukurkite taisyklę naudodami objektą **OOBSubscriptionChurnPrediction** ir apibrėžkite segmentą:
+   - **Laukas**: ChurnScore
+   - **Operatorius**: didesnis nei
+   - **Vertė**: 0,6
 
-   :::image type="content" source="media/segment-intelligence.PNG" alt-text="Sukurkite segmentą su modelio išvestimi.":::
+1. Pasirinkite **Įrašyti** ir **paleisti** segmentą.
 
-1. Pasirinkite **„OOBSubscriptionChurnPrediction“** galutinį tašką ir nustatykite segmentą: 
-   - Laukelis: Nutraukimo balas
-   - Operatorius: didesnis nei
-   - Vertė: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Nustatykite prenumeravimo atsisakymo segmentą.":::
+Dabar turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui. Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).
 
-Dabar turite segmentą, kuris dinamiškai naujinamas ir nustato didelės rizikos klientų atsisakymą šiam prenumeratos verslui.
-
-Daugiau informacijos rasite [Segmentų kūrimas ir valdymas](segments.md).
-
+> [!TIP]
+> Taip pat galite sukurti prognozė modelio **segmentą puslapyje Segmentai**, pasirinkdami Naujas **ir pasirinkdami** **Kurti iš** > **"Intelligence"**. Norėdami gauti daugiau informacijos, žiūrėkite [Naujo segmento su greitais segmentais](segment-quick.md) kūrimas.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

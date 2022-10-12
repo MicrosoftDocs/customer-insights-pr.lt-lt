@@ -1,7 +1,7 @@
 ---
-title: Kliento gyvavimo ciklo (CLV) vertės prognozė
+title: Nuspėkite kliento gyvavimo ciklo reikšmę (CLV)
 description: Prognozuojamas aktyvių klientų pajamų potencialas ateityje.
-ms.date: 07/21/2022
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,74 +13,63 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
-ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
+ms.openlocfilehash: f27462ac327027e50e23387ac9f75a671db9a86d
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9186450"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610384"
 ---
-# <a name="customer-lifetime-value-clv-prediction"></a>Kliento gyvavimo ciklo (CLV) vertės prognozė
+# <a name="predict-customer-lifetime-value-clv"></a>Nuspėkite kliento gyvavimo ciklo reikšmę (CLV)
 
-Prognozuojama potenciali reikšmė (pajamos), kurią atskiri aktyvūs klientai įves į jūsų verslą per apibrėžtą būsimą laikotarpį. Ši funkcija gali padėti pasiekti įvairius tikslus:
+Prognozuojama potenciali reikšmė (pajamos), kurią atskiri aktyvūs klientai įves į jūsų verslą per apibrėžtą būsimą laikotarpį. Šis prognozė padeda:
 
-- Nustatykite didelės vertės klientus ir apdorokite šią įžvalgą
-- Kurti strategines klientų segmentus, atsižvelgiant į jų potencialią vertę, kad suasmenintas kampanijas būtų galima vykdyti naudojant tikslinius pardavimo, rinkodaros ir palaikymo veiksmus
-- Vadovo produktų kūrimas susitelkus į funkcijas, kurios padidinti klientų vertę
-- Pardavimo arba rinkodaros strategijos optimizavimas ir biudžeto skirstymas tiksliau klientų kampanijai
-- Vertingų klientų atpažinimas ir apdovanokite juos pasitelkdami apdovanodami arba pristatę apdovanojimų programas
+- Nustatykite didelės vertės klientus ir apdorokite šią įžvalgą.
+- Kurkite strateginius klientų segmentus pagal jų galimą vertę, kad galėtumėte vykdyti suasmenintas kampanijas su tiksliniais pardavimais, rinkodara ir palaikymo pastangomis.
+- Vadovaukite produktų kūrimui sutelkdami dėmesį į funkcijas, kurios padidina kliento vertę.
+- Optimizuokite pardavimų ar rinkodaros strategiją ir tiksliau paskirstykite biudžetą klientų informavimui.
+- Atpažinkite ir apdovanokite didelės vertės klientus per lojalumo ar atlygio programas.
+
+Nustatykite, ką CLV reiškia jūsų verslui. Mes palaikome sandoriais pagrįstus CLV prognozė. Numatoma kliento vertė grindžiama verslo sandorių istorija. Apsvarstykite galimybę sukurti kelis modelius su skirtingomis įvesties nuostatomis ir palyginkite modelio rezultatus, kad sužinotumėte, kuris modelio scenarijus geriausiai atitinka jūsų verslo poreikius.
+
+> [!TIP]
+> Išbandykite CLV prognozė naudodami duomenų pavyzdžius: [kliento gyvavimo ciklo vertė (CLV) prognozė pavyzdinis vadovas](sample-guide-predict-clv.md).
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-Prieš pradėdami nurodykite, ką jūsų verslui reiškia CLV. Šiuo metu palaikome transakcija paremtą CLV prognozę. Prognozuojama kliento reikšmė pagrįsta verslo operacijų retrospektyva. Kad sukurtumėte prognozę, jums reikia bent [Prisidėjusio asmens](permissions.md) teisių.
-
-Konfigūruodami ir paleisdami CLV modelį, galite sukurti kelis modelius su skirtingomis įvesties nuostatas ir palyginti modelio rezultatus, kad pamatytumėte, kuris modelio scenarijus geriausiai atitinka jūsų verslo reikmes.
-
-### <a name="data-requirements"></a>Duomenų reikalavimai
-
-Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomenduojama norint padidinti modelio efektyvumą. Kuo daugiau duomenų gali apdoroti modelis, tuo tikslesnė prognozė bus. Todėl raginame, jei įmanoma, suvartoti daugiau klientų veiklos duomenų.
-
-- Kliento identifikatorius: unikalusis identifikatorius, kuris gretina operacijas su individualiu klientu
-
-- Operacijų retrospektyva: istoriniai operacijų žurnalai su šia semantinių duomenų schema
-    - **Operacijos ID**: kiekvienos operacijos unikalusis identifikatorius
-    - **Operacijos data**: kiekvienos operacijos data, pageidautina laiko žyma
-    - **Operacijos suma** kiekvienos operacijos piniginė vertė (pavyzdžiui, pajamos arba pelno marža)
-    - **Prie grąžinimų priskirta žyma** (pasirinktinis): Bulio logikos reikšmė, nurodanti, ar operacija yra grąžinimas 
-    - **Produkto ID** (pasirinktinis): su operacija susijusio produkto ID
-
-- Papildomi duomenys (pasirinktinai), pavyzdžiui
-    - Žiniatinklio veiklos: svetainės lankytojų retrospektyva, el. laiškų retrospektyva
-    - Lojalumo veiksmai: lojalumo atsilyginimo taškų apskaičiavimas ir panaudojimo istorija
-    - Klientų aptarnavimas žurnalas, aptarnavimo skambutis, skundai ar grąžinimo istorija
-    - Kliento profilio informacija
-- Duomenys apie klientų veiklas (pasirinktiniai):
-    - Veiklos identifikatoriai, padedantys atskirti to paties tipo veiklas
-    - Klientų identifikatoriai, siejantys veiklas su klientais
-    - Veiklos informacija, apimanti veiklos pavadinimą ir datą
-    - Semantinė veiklų duomenų schema yra:
-        - **Pirminis raktas**: unikalusis veiklos identifikatorius
-        - **Laiko žyma**: pirminio rakto identifikuoto įvykio data ir laikas
-        - **Įvykis (veiklos pavadinimas)**: norimo naudoti įvykio pavadinimas
-        - **Išsami informacija (suma arba reikšmė)**: išsami informacija apie kliento veiklą
-
-- Siūlomos duomenų charakteristikos:
-    - Pakankami istoriniai duomenys: mažiausiai vieneri operacijų duomenų metai. Pageidautina nuo dvejų iki trijų metų senumo operacijų duomenų, kad būtų galima prognozuoti CLV vieneriems metams.
-    - Keli pirkiniai vienam klientui: idealiu atveju, bent dvi ar trys operacijos vienam klientui, pageidautina atliktos per skirtingas datas.
-    - Klientų skaičius: bent 100 unikalių klientų, geriausia daugiau nei 10 000 klientų. Modelis neveiks su mažiau nei 100 klientų ir nepakankamais istoriniais duomenimis
-    - Duomenų išbaigtumas: mažiau nei 20 % trūkstamų reikšmių privalomuose įvesties duomenų laukuose
+- Bent jau [bendraautorių](permissions.md) leidimai
+- Mažiausiai 100 unikalių klientų, pageidautina daugiau nei 10 000 klientų
+- Kliento identifikatorius – unikalus identifikatorius, skirtas suderinti operacijas su atskiru klientu
+- Bent vienerių metų sandorių istorija, pageidautina nuo dvejų iki trejų metų. Idealiu atveju bent nuo dviejų iki trijų operacijų vienam kliento ID, pageidautina per kelias datas. Operacijų istorijoje turi būti:
+  - **Operacijos ID**: kiekvienos operacijos unikalusis identifikatorius
+  - **Operacijos data**: kiekvienos operacijos data arba laiko žyma
+  - **Operacijos suma** kiekvienos operacijos piniginė vertė (pavyzdžiui, pajamos arba pelno marža)
+  - **Grąžinimams** priskirta etiketė: Bulio loginė tikroji / klaidinga reikšmė, nurodanti, ar operacija yra grąža
+  - **Produkto ID**: operacijoje dalyvaujančio produkto ID
+- Duomenys apie kliento veiklą:
+  - **Pirminis raktas**: unikalus veiklos identifikatorius
+  - **Laiko žyma**: įvykio, identifikuojamo pagal pirminį raktą, data ir laikas
+  - **Įvykis (veiklos pavadinimas)**: įvykio, kurį norite naudoti, pavadinimas
+  - **Išsami informacija (suma arba reikšmė)**: išsami informacija apie kliento veiklą
+- Papildomi duomenys, tokie kaip:
+  - Veikla žiniatinklyje: apsilankymų svetainėje istorija arba el. pašto istorija
+  - Lojalumo veikla: lojalumo atlygio taškų kaupimo ir išpirkimo istorija
+  - Klientų aptarnavimas žurnalas: slaptų skambučių, skundų ar grąžinimo istorija
+  - Kliento profilio informacija
+- Mažiau nei 20 % trūkstamų reikšmių privalomuose laukuose
 
 > [!NOTE]
-> - Modeliui reikia jūsų klientų sandorių istorijos. Vienu metu galima sukonfigūruoti tik vieną sandorio istorijos objektą. Jei yra keli pirkimo / operacijų objektai, galite juos sujungti prieš pradėdami Power Query naudoti duomenis.
-> - Tačiau papildomiems kliento duomenims (pasirinktiniems) galite įtraukti tiek kliento veiklos objektų, kiek norite, atsižvelgdami į modelį.
+> Galima konfigūruoti tik vieną operacijų istorijos objektą. Jei yra keli pirkimo ar operacijų objektai, sujunkite juos Power Query prieš gaudami duomenis.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kurti kliento gyvavimo ciklo vertės prognozę
 
+Pasirinkite **Įrašyti juodraštį** bet kuriuo metu, kad išsaugotumėte prognozė kaip juodraštį. Juodraštis prognozė rodomas skirtuke **Mano numatymai**.
+
 1. Eikite į **"Intelligence Predictions"** > **·**.
 
-1. Rinkitės **Kliento gyvavimo ciklo vertės** plytelę ir rinkitės **Naudoti modelį**. 
+1. Skirtuke **Kurti** pasirinkite **Naudoti modelį**, esantį plytelėje **Kliento gyvenimo trukmės reikšmė**.
 
-1. **Srityje Kliento gyvenimo trukmės reikšmė** pasirinkite **Darbo pradžia**.
+1. Pasirinkite **Pradėti**.
 
 1. **Pavadinkite šį modelį** ir **išvesties objekto pavadinimą** tam, kad kad atskirtumėte juos nuo kitų modelių ar objektų.
 
@@ -88,66 +77,56 @@ Toliau nurodyti duomenys yra būtini ir, jei pažymėti pasirinktiniai, rekomend
 
 ### <a name="define-model-preferences"></a>Nustatyti modelio nuostatas
 
-1. Nustatykite **Prognozė laikotarpį** norėdami apibrėžti, kiek ateityje norėsite numatyti CLV.    
-   Pagal numatytuosius nustatymus vienetas nustatomas kaip mėnesiai. Galite pakeisti jį į metus ir ieškoti toliau ateityje.
+1. Nustatykite **Prognozė laikotarpį** norėdami apibrėžti, kiek ateityje norėsite numatyti CLV. Pagal numatytuosius nustatymus vienetas nustatomas kaip mėnesiai.
 
    > [!TIP]
-   > Norint tiksliai prognozuoti jūsų nustatytą laikotarpį CLV, reikalingas palyginamasis istorinių duomenų laikotarpis. Pavyzdžiui, jei norite prognozuoti CLV kitiems 12 mėnesių, rekomenduojama turėti mažiausiai 18-24 mėnesių senumo istorinius duomenis.
+   > Norint tiksliai numatyti CLV nustatytam laikotarpiui, reikalingas palyginamas istorinių duomenų laikotarpis. Pavyzdžiui, jei norite prognozuoti CLV ateinantiems 12 mėnesių, turėkite bent 18–24 mėnesių istorinius duomenis.
 
-1. Nurodykite, ką **Aktyvūs klientai** reiškia jūsų įmonei. Nustatykite laiką, per kurį klientas turi turėti bent vieną operaciją, kuri bus laikoma aktyvia. Modelis nuspės tik aktyvių klientų CLV. 
-   - **Leiskite modeliui apskaičiuoti pirkimo intervalą (rekomenduojama)**: modelis analizuoja jūsų duomenis ir nustato laikotarpį, pagrįstą istoriniais pirkiniais.
-   - **Intervalą nustatykite rankiniu būdu**: jei turite konkretų aktyvaus kliento verslo aprašą, pasirinkite šią parinktį ir atitinkamai nustatykite laikotarpį.
+1. Nustatykite laiką, per kurį klientas turi turėti bent vieną operaciją, kuri bus laikoma aktyvia. Modelis prognozuoja CLV tik aktyviems **klientams**.
+   - **Leisti modeliui apskaičiuoti pirkimo intervalą (rekomenduojama)**: modelis analizuoja jūsų duomenis ir nustato laikotarpį pagal istorinius pirkinius.
+   - **Nustatyti intervalą rankiniu būdu**: aktyvaus kliento apibrėžimo laikotarpis.
 
-1. Apibrėžkite didelės **vertės kliento procentus,** kad modelis pateiktų jūsų verslo aprašą atitinkantį rezultatą.
-    - **Modelio skaičiavimas (rekomenduojama)**: modelis analizuoja jūsų duomenis ir nustato, koks gali būti jūsų įmonės didelės vertės klientas pagal klientų operacijų retrospektyvą. Kad būtų galima rasti itin vertingų klientų dalį, modelis naudoja heur vienareikšmę taisyklę (o tai yra 80/20 taisyklė arba pareto principai). Klientų, kurie per istorinį laikotarpį sudaro 80 % sukauptų pajamų, procentinė dalis laikoma didelės vertės klientais. Paprastai mažiau nei 30–40 % klientų sudaro 80 % sukauptų pajamų. Tačiau šis skaičius gali skirtis atsižvelgiant į jūsų verslą ir pramonės šaką.    
-    - **Geriausių aktyvių klientų procentinė dalis**: apibrėžkite savo įmonės didelės vertės klientus kaip aktyvių klientų procentą. Pavyzdžiui, šią parinktį galite naudoti didelės vertės klientams apibrėžti kaip geriausius 20 % būsimų klientų.
+1. Apibrėžkite didelės vertės kliento **procentilį**.
+    - **Modelio skaičiavimas (rekomenduojama)**: modelis naudoja taisyklę 80/20. Klientų, kurie per istorinį laikotarpį sudaro 80 % sukauptų pajamų, procentinė dalis laikoma didelės vertės klientais. Paprastai mažiau nei 30–40 % klientų sudaro 80 % sukauptų pajamų. Tačiau šis skaičius gali skirtis atsižvelgiant į jūsų verslą ir pramonės šaką.
+    - **Didžiausių aktyvių klientų** procentas: specifinis procentilis didelės vertės klientui. Pavyzdžiui, įveskite **25**, kad apibrėžtumėte didelės vertės klientus kaip 25% geriausių būsimų mokėjimų klientų.
 
     Jei jūsų verslas apibrėžia didelės vertės klientus skirtingu būdu, [praneškite mums, kaip norėtume prasčiau naudoti](https://go.microsoft.com/fwlink/?linkid=2074172).
 
-1. Pasirinkdami **Toliau** eikite prie kito veiksmo.
+1. Pasirinkite **Toliau**.
 
 ### <a name="add-required-data"></a>Įtraukti būtinus duomenis
 
-1. Veiksme **Būtini duomenys** rinkitės **Įtraukti duomenis** į **Kliento operacijų istoriją** ir pasirinkite objektą, kuris pateikia operacijų istorijos informaciją kaip aprašyta [būtinose sąlygose](#prerequisites).
+1. Pasirinkite **Įtraukti duomenis** į **Kliento operacijų istoriją**.
 
-1. Sudarykite semantinių laukelių žemėlapį į atributus per jūsų įsigijimo istorijos objektą ir pasirinkite **Kitas**.
+1. Pasirinkite semantinį veiklos tipą **SalesOrder** arba **SalesOrderLine**, kuriame yra operacijų istorija. Jei veikla nenustatyta, pasirinkite **čia** ir sukurkite ją.
 
-   :::image type="content" source="media/clv-add-customer-data-mapping.png" alt-text="Konfigūravimo žingsnio, per kuriuos galima susieti reikalingų duomenų atributus, vaizdas.":::
- 
-1. Jei toliau laukų neįrašote, konfigūruokite ryšį iš pirkimo retrospektyvos objekto į *Kliento* objektą ir pasirinkite **Įrašyti**.
-    1. Pasirinkite transakcijos istorijos objektą.
-    1. Pažymėkite lauką, kuris pirkimo retrospektyvos objektu nustato klientą. Ji turi būti susijęs su kliento objekto pirminiu kliento ID.
-    1. Pasirinkite darbo eigos objektą, kuris sutampa su pagrindiniu kliento objektu.
-    1. Įveskite pavadinimą, apibūdinantį ryšį.
+1. Dalyje **Veikla**, jei kuriant veiklą veiklos atributai buvo semantiškai susieti, pasirinkite konkrečius atributus arba objektą, į kurį norite sutelkti dėmesį skaičiuojant. Jei semantinis susiejimas neįvyko, pasirinkite **Redaguoti** ir susieti duomenis.
+  
+   :::image type="content" source="media/CLV-add-required.PNG" alt-text="Pridėkite privalomus CLV modelio duomenis":::
 
-      :::image type="content" source="media/clv-add-customer-data-relationship.png" alt-text="Konfigūravimo žingsnio vaizdas, nurodantis ryšį su kliento objektu.":::
+1. Pasirinkite **Pirmyn** ir peržiūrėkite šiam modeliui reikalingus atributus.
 
-1. Pasirinkite **Toliau**.
+1. Pasirinkite **Įrašyti**.
+
+1. Įtraukite daugiau veiklų arba pasirinkite **Pirmyn**.
 
 ### <a name="add-optional-activity-data"></a>Pasirinktinių veiklos duomenų įtraukimas
 
 Pagrindiniai duomenų sąveikos su klientais veiksmai (pvz., žiniatinklis, klientų aptarnavimas ir įvykių žurnalai) įtraukia kontekstą į operacijų įrašus. Daugiau klientų veiklos duomenų modelių gali padidinti prognozių tikslumą.
 
-1. Atlikdami veiksmą **Papildomi duomenys (pasirinktinai)** pasirinkite **Pridėti duomenų** dalyje **Padidinti modelio įžvalgas su papildomais veiklos duomenimis**. Pasirinkite kliento veiklos objektą, kuris pateikia kliento veiklos informaciją, kaip nurodyta [būtinose sąlygose](#prerequisites).
+1. Pasirinkite **Pridėti duomenų** dalyje **Padidinti modelio įžvalgas su papildomais veiklos duomenimis**.
 
-1. Sudarykite semantinių laukelių žemėlapį į atributus per jūsų kliento veiklos objektą ir pasirinkite **Kitas**.
+1. Pažymėkite veiklos tipą, atitinkantį kliento veiklos, kurią pridedate, tipą. Jei veikla nenustatyta, pasirinkite **čia** ir sukurkite ją.
 
-   :::image type="content" source="media/clv-additional-data-mapping.png" alt-text="Konfigūravimo žingsnio, per kuriuos galima susieti laukelius papildomiems duomenims.":::
+1. Dalyje **Veikla**, jei kuriant veiklą veiklos atributai buvo susieti, pasirinkite konkrečius atributus arba objektą, į kurį norite sutelkti dėmesį skaičiuojant. Jei susiejimas neįvyko, pasirinkite **Redaguoti** ir susieti duomenis.
 
-1. Pažymėkite veiklos tipą, atitinkantį kliento veiklos, kurią pridedate, tipą. Pasirinkite iš esamų veiklos tipų arba įtraukite naują veiklos tipą.
-
-1. Sukonfigūruokite ryšį iš savo kliento veiklos objekto *Kliento* objektą.
-
-    1. Pasirinkite laukelį, kuris nustato klientą kliento veiklos lentelėje. Jis gali būti tiesiogiai susietas su pagrindiniu jūsų kliento objekto ID jūsų *Kliento* objekte.
-    1. Pasirinkite *kliento* atitinkantį pirminį *kliento* objektą.
-    1. Įveskite pavadinimą, apibūdinantį ryšį.
-
-   :::image type="content" source="media/clv-additional-data.png" alt-text="Konfigūracijos srauto žingsnio vaizdas, norint įtraukti papildomų duomenų ir sukonfigūruoti veiklą su užpildomais pavyzdžiais.":::
+1. Pasirinkite **Pirmyn** ir peržiūrėkite šiam modeliui reikalingus atributus.
 
 1. Pasirinkite **Įrašyti**.
-    Jei norite įtraukti kitas klientų veiklas, įtraukite daugiau duomenų.
 
-1. Įtraukite pasirinktinius kliento duomenis arba pasirinkite **Pirmyn**.
+1. Pasirinkite **Toliau**.
+
+1. [Pridėkite pasirinktinių klientų duomenų](#add-optional-customer-data) arba pasirinkite **Pirmyn** ir eikite į [Nustatyti naujinimo tvarkaraštį](#set-update-schedule).
 
 ### <a name="add-optional-customer-data"></a>Pasirinktinių kliento duomenų įtraukimas
 
@@ -156,91 +135,79 @@ Pasirinkite iš 18 dažniausiai naudojamų kliento profilio atributų, kuriuos n
 Pavyzdžiui: "Contoso Coffee" nori numatyti kliento viso gyvenimo vertę, kad nukreiptų į didelės vertės klientus su individualizuotu pasiūlymu, susijusiu su jų naujo espreso aparato pristatymu. Contoso naudoja CLV modelį ir prideda visus 18 klientų profilio atributų, kad sužinotų, kurie veiksniai daro įtaką jų didžiausios vertės klientams. Jie mano, kad kliento vieta yra įtakingiausias veiksnys šiems klientams.
 Turėdami šią informaciją, jie organizuoja vietinį renginį espreso aparato paleidimui ir bendradarbiauja su vietiniais pardavėjais dėl suasmenintų pasiūlymų ir ypatingos patirties renginyje. Neturėdami šios informacijos, Contoso galėjo siųsti tik bendruosius rinkodaros el. laiškus ir praleido galimybę suasmeninti šį vietinį savo didelės vertės klientų segmentą.
 
-1. Atlikdami veiksmą **Papildomi duomenys (pasirinktinai)** pasirinkite **Pridėti duomenų** dalyje **Dar labiau padidinti modelio įžvalgas su papildomais klientų duomenimis**.
+1. Pasirinkite **Pridėti duomenų** dalyje **Padidinti modelio įžvalgas dar labiau su papildomais klientų duomenimis**.
 
-1. Objekte **pasirinkite** **Klientas: CustomerInsights**, kad pasirinktumėte vieningą kliento profilio lentelę, susiejančią su kliento atributų duomenimis. Norėdami gauti **kliento ID**, pasirinkite **System.Customer.CustomerId**.
+1. Objekte **pasirinkite** **Klientas: Kliento tyrimai,** kad pasirinktumėte vieningą kliento profilį, susiejantį su kliento atributų duomenimis. Norėdami gauti **kliento ID**, pasirinkite **System.Customer.CustomerId**.
 
 1. Susiekite daugiau laukų, jei duomenys pasiekiami jūsų vieninguose klientų profiliuose.
 
    :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Kliento profilio duomenų susietų laukų pavyzdys.":::
 
-1. Pasirinkite **Įrašyti** susieję atributus, kuriuos modelis turėtų naudoti, kad padėtų numatyti kliento gyvavimo ciklo vertę.
+1. Pasirinkite **Įrašyti**.
 
 1. Pasirinkite **Toliau**.
 
 ### <a name="set-update-schedule"></a>Nustatyti grafiko naujinimą
 
-1. **Duomenų naujinimo grafiko** žingsnyje pasirinkite dažnumą, kurį pagal naujausius duomenis norite perkvalifikuoti. Šis parametras yra svarbus norint atnaujinti prognozių tikslumą, kai programoje "Customer Insights" praryjami nauji duomenys. Dauguma įmonių gali apmokyti iš naujo kartą per mėnesį, kad prognozių tikslumas būtų geras.
+1. Pasirinkite dažnį, kad perkvalifikuotumėte modelį, remdamiesi naujausiais duomenimis. Šis parametras yra svarbus norint atnaujinti prognozių tikslumą, kai nauji duomenys patenka į "Customer Insights". Dauguma įmonių gali apmokyti iš naujo kartą per mėnesį, kad prognozių tikslumas būtų geras.
 
 1. Pasirinkite **Toliau**.
 
 ### <a name="review-and-run-the-model-configuration"></a>Modelio konfigūracijos peržiūra ir paleidimas
 
-1. Atlikdami savo **modelio išsamios informacijos peržiūros** veiksmą, patikrinkite jų prognozę. Prie bet kurios prognozės konfigūracijos dalies galite sugrįžti pažymėdami **Redaguoti** po rodoma reikšme. Taip pat galite pasirinkti konfigūracijos žingsnį iš eigos indikatoriaus.
+Peržiūros **ir vykdymo** veiksme rodoma konfigūracijos suvestinė ir suteikiama galimybė atlikti keitimus prieš kuriant prognozė.
 
-1. Jei visos reikšmės yra teisingai sukonfigūruotos, pasirinkite **Įrašyti ir vykdyti** , kad būtų paleistas modelis. Skirtuke **Mano prognozės** galite matyti proceso prognozė būseną. Atsižvelgiant į prognozavimui naudojamų duomenų kiekį, procesas gali užtrukti kelias valandas.
+1. Pasirinkite **Redaguoti** atlikdami bet kurį iš veiksmų, kad peržiūrėtumėte ir atliktumėte bet kokius pakeitimus.
 
-## <a name="review-prediction-status-and-results"></a>Peržiūrėti prognozė būseną ir rezultatus
+1. Jei esate patenkinti savo pasirinkimais, pasirinkite **Įrašyti ir paleisti**, kad pradėtumėte vykdyti modelį. Pasirinkite **Atlikta**. Skirtukas **Mano numatymai** rodomi, kol kuriamas prognozė. Atsižvelgiant į prognozavimui naudojamų duomenų kiekį, procesas gali užtrukti kelias valandas.
 
-### <a name="review-prediction-status"></a>Peržiūrėti prognozė būseną
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
 
-1.  Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
-2.  Pasirinkite prognozę, kurią norite peržiūrėti.
+## <a name="view-prediction-results"></a>Prognozė rezultatų peržiūra
 
-- **Prognozės pavadinimas**: Įvardykite prognozę jos kūrimo metu.
-- **Prognozės tipas**: Prognozei naudojamo modelio tipas
-- **Išvesties objektas**: objekto, kuriame saugoma prognozės išvestis, pavadinimas. Eikite į **Duomenys** > **Objektai** norėdami rasti objektą su šiuo pavadinimu.
-- **Prognozuojamas laukas**: šis laukas užpildomas tik kai kurių tipų prognozėms ir nėra naudojamas klientų pasitenkinimo reikšmėje prognozė.
-- **Būsena:**: Prognozės vykdymo būsena.
-    - **Eilė**: prognozė laukia, kol bus užbaigti kiti procesai.
-    - **Atnaujinimas**: prognozė vykdomas, kad būtų kuriami rezultatai, kurie bus įtraukti į išvesties objektą.
-    - **Nepavyko** : Prognozės vykdymas nepavyko. [Peržiūrėkite įrašus](manage-predictions.md#troubleshoot-a-failed-prediction) dėl išsamesnės informacijos.
-    - **Pavyko**: Prognozė pavyko. Pasirinkite **Peržiūrėti** po vertikaliomis elipsėmis prognozavimo rezultatų peržiūrai.
-- **Redaguota**: data, kai buvo pakeista prognozės konfigūracija.
-- **Paskutinį kartą atnaujinta** : data, kai prognozė atnaujino rezultatus išvesties objekte.
+1. Eikite į **"Intelligence Predictions"** > **·**.
 
-### <a name="review-prediction-results"></a>Peržiūrėti prognozės rezultatus
-
-1. Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
-
-1. Pažymėkite prognozė, kurio rezultatus norite peržiūrėti.
+1. Skirtuke **Mano numatymai** pasirinkite norimą peržiūrėti prognozė.
 
 Rezultatų puslapyje yra trys pagrindinės duomenų dalys.
 
-- **Mokymo modelio** efektyvumas: A, B ar C yra galimos kategorijos. Šis įvertinimas nurodo objekto prognozė ir gali padėti jums priimti sprendimą naudoti rezultatus, saugomus išvesties objektu. Pasirinkite **Sužinokite apie šį įvertinimą** , kad geriau suprastumėte pagrindines modelio efektyvumo metrikas ir kaip buvo išvesta galutinė modelio efektyvumo klasė.
+- **Mokymo modelio našumas**: A, B arba C klasės nurodo prognozė našumą ir gali padėti priimti sprendimą naudoti išvesties objekte saugomus rezultatus.
   
   :::image type="content" source="media/clv-model-score.png" alt-text="Modelio balo informacijos lauko vaizdas su A laipsniu":::
 
-  Naudojant didelės vertės klientų apibrėžimą, pateiktą konfigūruojant prognozė, sistema nustato, kaip AI modelis atliktas prognozuojamų didelės vertės klientų lyginant su pradiniu modeliu.    
+  "Customer Insights" įvertina, kaip di modeliui sekėsi prognozuoti didelės vertės klientus, palyginti su baziniu modeliu.
 
   Laipsniai nustatomi pagal šias taisykles:
   - **„A”**, kai modelis tiksliai prognozavo bent 5 % daugiau labai svarbių klientų, palyginus su pradiniu modeliu.
   - **„B”**, kai modelis tiksliai prognozavo nuo 0 iki 5 % labai svarbių vertės klientų, palyginus su pradiniu modeliu.
   - **„C”**, kai modelis tiksliai prognozavo mažiau labai svarbių klientų, palyginus su pradiniu modeliu.
-
-  Modelio **įvertinimo** srityje rodoma daugiau informacijos apie AI modelio efektyvumą ir pradinį modelį. Pagal pradinį modelį ne AI pagrįstas metodas klientų pasverti vertei apskaičiuoti, visų pirma remiantis klientų įsigytais istoriniais tikslais.     
-  Standartinė formulė, naudojama CLV apskaičiuoti pagal pradinį modelį:    
-
-  _**Kiekvieno kliento CLV** = vidutinis mėnesinis kliento pirkimas aktyviame kliento lange *CLV prognozės laikotarpio mėnesių skaičius* Bendra visų klientų saugojimo sparta*_
-
-  AI modelis lyginamas su pradiniu modeliu pagal dvi modelio efektyvumo metrikas.
   
-  - **Sėkmės koeficientas prognozuojant labai vertingus klientus**
+  Pasirinkite [**Sužinoti apie šį balą**](#learn-about-the-score), kad atidarytumėte **modelio įvertinimo** sritį, kurioje rodoma daugiau informacijos apie AI modelio našumą ir bazinį modelį. Tai padės geriau suprasti pagrindinę modelio našumo metriką ir tai, kaip buvo išvestas galutinis modelio našumo įvertinimas. Pagal pradinį modelį ne AI pagrįstas metodas klientų pasverti vertei apskaičiuoti, visų pirma remiantis klientų įsigytais istoriniais tikslais.
 
-    Žr. skirtumą tarp prognozuojamų didelės vertės klientų, kurie naudoja AI modelį, palyginti su pradiniu modeliu. Pavyzdžiui, 84 % sėkmingų klientų skaičius reiškia, kad iš visų vertingų klientų mokymo duomenyse AI modelis galėjo tiksliai užfiksuoti 84 %. Tada palyginsime šį sėkmės koeficientą su pradinio modelio sėkmingų duomenų koeficientu ir pranešame apie santykinį pakeitimą. Ši reikšmė naudojama modeliui priskirti.
+- **Klientų vertė pagal procentilį**: mažos vertės ir didelės vertės klientai rodomi diagramoje. Užveskite pelės žymeklį virš histogramos juostų, kad pamatytumėte klientų skaičių kiekvienoje grupėje ir tos grupės vidutinį CLV. Pasirinktinai kurkite [klientų](prediction-based-segment.md) segmentus pagal jų CLV prognozes.
+  
+   :::image type="content" source="media/CLV-value-percent.png" alt-text="Klientų vertė pagal procentilį CLV modeliui":::
 
-  - **Klaidų metrika**
-    
-    Naudodami kitą metriką galite peržiūrėti bendrą modelio našumą, atsižvelgiant į klaidas ir prognozuoti būsimas reikšmes. Šią klaidą įvertinti naudojame bendrą šakninio vidurkio kvadratinės klaidos (RMSE) metriką. RMSE yra standartinis būdas įvertinti modelio klaidą prognozuojant kiekybinius duomenis. AI modelio RMSE lyginamas su pradinės linijos modelio RMSE ir pranešama apie santykinį skirtumą.
+- **Daugelis ne vienu metu lemiamų veiksnių**: kuriant CLV prognozė remiantis AI modeliui pateikiamais įvesties duomenimis. Kiekvienas iš veiksnių turi savo svarbą, apskaičiuojamą bendroms modelio prognozėms. Naudokite šiuos veiksnius, kad patikrintumėte prognozė rezultatus. Šie faktoriai taip pat suteikia daugiau įžvalgų apie svarbiausius faktorius, kurie labiausiai pranašesni visiems jūsų klientams prognozuojant CLV.
+  
+   :::image type="content" source="media/CLV-influence-factors.png" alt-text="Įtakingiausi CLV modelio veiksniai":::
 
-  AI modelis pagal prioritetus suteikia tikslaus klientų rango pagal vertę, kuri juos suteikia jūsų verslui. Todėl galutinis modelio įvertinimas susekimas naudojamas tik prognozuojamų didelės vertės klientų sėkmės koeficientui. RMSE metrika yra opi prie išorinių objektų. Scenarijų, kai klientų, kurių pirkimo vertės yra itin didelės, procentinė dalis, bendra RMSE metrika gali ne visiškai pavaizduoti modelio efektyvumą.   
+### <a name="learn-about-the-score"></a>Sužinokite apie balą
 
-- **Klientų reikšmė pagal procentus**: naudojant jūsų didelės vertės klientų apibrėžimą klientai grupuojami į žemos ir didelės vertės klientus pagal CLV prognozes ir rodomi diagramoje. Užvesdami pelės žymiklį virš histogramos juostų, galite matyti kiekvienos grupės klientų skaičių ir tos grupės vidutinę CLV. Šie duomenys gali padėti, jei [norite kurti klientų segmentus pagal jų](segments.md) CLV prognozes.
+Standartinė formulė, naudojama CLV apskaičiuoti pagal pradinį modelį:
 
-- **Daugelis ne vienu metu lemiamų veiksnių**: kuriant CLV prognozė remiantis AI modeliui pateikiamais įvesties duomenimis. Kiekvienas iš veiksnių turi savo svarbą, apskaičiuojamą bendroms modelio prognozėms. Šiuos veiksnius galite naudoti prognozės rezultatams patvirtinti. Šie faktoriai taip pat suteikia daugiau įžvalgų apie svarbiausius faktorius, kurie labiausiai pranašesni visiems jūsų klientams prognozuojant CLV.
+ _**CLV kiekvienam klientui** = vidutinis kliento mėnesio pirkimas aktyviame kliento lange * CLV prognozė laikotarpio mėnesių skaičius * Bendras visų klientų išlaikymo lygis_
 
-## <a name="manage-predictions"></a>Prognozių valdymas
+AI modelis lyginamas su pradiniu modeliu pagal dvi modelio efektyvumo metrikas.
+  
+- **Sėkmės koeficientas prognozuojant labai vertingus klientus**
 
-Prognozes galima optimizuoti, šalinti jų triktis, atnaujinti arba panaikinti. Peržiūrėkite įvesties duomenų naudojimo ataskaitą ir sužinokite, kaip greičiau sukurti patikimesnę prognozę. Daugiau informacijos rasite [Prognozių valdymas](manage-predictions.md).
+  Žr. skirtumą tarp prognozuojamų didelės vertės klientų, kurie naudoja AI modelį, palyginti su pradiniu modeliu. Pavyzdžiui, 84 % sėkmingų klientų skaičius reiškia, kad iš visų vertingų klientų mokymo duomenyse AI modelis galėjo tiksliai užfiksuoti 84 %. Tada palyginsime šį sėkmės koeficientą su pradinio modelio sėkmingų duomenų koeficientu ir pranešame apie santykinį pakeitimą. Ši reikšmė naudojama modeliui priskirti.
+
+- **Klaidų metrika**
+
+  Peržiūrėkite bendrą modelio našumą pagal klaidas prognozuojant būsimas reikšmes. Šią klaidą įvertinti naudojame bendrą šakninio vidurkio kvadratinės klaidos (RMSE) metriką. RMSE yra standartinis būdas įvertinti modelio klaidą prognozuojant kiekybinius duomenis. AI modelio RMSE lyginamas su pradinės linijos modelio RMSE ir pranešama apie santykinį skirtumą.
+
+AI modelis pagal prioritetus suteikia tikslaus klientų rango pagal vertę, kuri juos suteikia jūsų verslui. Todėl galutinis modelio įvertinimas susekimas naudojamas tik prognozuojamų didelės vertės klientų sėkmės koeficientui. RMSE metrika yra opi prie išorinių objektų. Scenarijų, kai klientų, kurių pirkimo vertės yra itin didelės, procentinė dalis, bendra RMSE metrika gali ne visiškai pavaizduoti modelio efektyvumą.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,175 +1,124 @@
 ---
 title: Operacijos nutraukimo prognozė (yra vaizdo įrašas)
 description: Prognozuokite, ar klientas yra rizikingas taip, kad daugiau nebepirks jūsų produktų ar paslaugų.
-ms.date: 01/13/2022
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: fd8df0f0a168ddfab9e8ad3af9e1f1fc0bc1b7a2
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9171105"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610522"
 ---
-# <a name="transaction-churn-prediction"></a>Operacijos praradimo nuspėjimas
+# <a name="predict-transaction-churn"></a>Nuspėti perdavimo praradimą
 
-Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepirks jūsų produktų ar paslaugų per tam tikrą laiko langą. Galite sukurti naują nutraukimo prognozę **Įžvalga** > **Prognozės**. Norėdami pamatyti kitas jūsų sukurtas prognozes pasirinkite **Mano prognozės**. 
+Perdavimo nutraukimo prognozė padeda nuprognozuoti, ar klientas daugiau nebepirks jūsų produktų ar paslaugų per tam tikrą laiko langą.
+
+Turite turėti verslo žinių, kad suprastumėte, ką jūsų verslui reiškia churn. Palaikome laiku pagrįstas nutraukimo sąvokas reiškiančias, kad klientas nutraukė po tam tikro nepirkimo laikotarpio.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6Eg]
 
-Aplinkose, pagrįstose verslo klientais, galime prognozuoti kliento transakcijos chroną ir kliento derinį bei kitą informaciją, pvz., produktų kategoriją. Įtraukus sudėčių galima išsiaiškinti, kokia tikimybė, kad klientas „Contoso" nebesipirks produktų kategorijos „stacionarus biuras." Be to, verslo klientams galime naudoti AI ir sugeneruoti galimų priežasčių, kodėl klientas tikriausiai bus antrinės informacijos kategorijos klientas, sąrašą.
+Aplinkose, pagrįstose verslo klientais, galime prognozuoti kliento transakcijos chroną ir kliento derinį bei kitą informaciją, pvz., produktų kategoriją. Pavyzdžiui, pridėjus aspektą galima nustatyti, kokia tikimybė, kad paskyra "Contoso" nustos pirkti produkto kategoriją "biuro kanceliarinės prekės". Be to, verslo klientams galime naudoti AI ir sugeneruoti galimų priežasčių, kodėl klientas tikriausiai bus antrinės informacijos kategorijos klientas, sąrašą.
 
 > [!TIP]
-> Išbandykite operacijos nutraukimo prognozė mokymo programą naudodami duomenų pavyzdžius: [operacijų atsisakymas prognozė pavyzdinis vadovas](sample-guide-predict-transactional-churn.md).
+> Išbandykite operacijos nutraukimo prognozė naudodami duomenų pavyzdžius: [operacijų atsisakymas prognozė pavyzdinis vadovas](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-# <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
+- Mažiausiai [Prisidėjusiojo leidimai](permissions.md).
+- Bent 10 klientų profilių, pageidautina daugiau nei 1 000 unikalių klientų.
+- Kliento identifikatorius – unikalus identifikatorius, atitinkantis operacijas su klientais.
+- Operacijų duomenys bent dvigubai viršija pasirinktą laiko tarpą, pvz., nuo dvejų iki trejų metų operacijų istorijos. Idealiu atveju bent dvi operacijos vienam klientui. Operacijų istorijoje turi būti:
+  - **Operacijos ID** : unikalus pirkimo arba operacijos identifikatorius.
+  - **Operacijos data**: pirkimo arba sandorio data.
+  - **Sandorio** vertė: operacijos valiuta arba skaitinės vertės suma.
+  - **Unikalus produkto ID**: įsigyto produkto ar paslaugos ID, jei jūsų duomenys yra eilutės prekės lygio.
+  - **Ar ši operacija buvo grąža**: teisingas / klaidingas laukas, nurodantis, ar operacija buvo grąža, ar ne. **Jei operacijos** vertė yra neigiama, mes darome išvadą apie grąžą.
+- Klientų veiklos duomenys:
+  - Kliento identifikatorius – unikalus identifikatorius, skirtas susieti veiklą su klientais.
+  - **Pirminis raktas:** unikalus veiklos identifikatorius. Pavyzdžiui, interneto svetainės lankymas ar įrašo naudojimas rodo, kad klientas išbandė jūsų produkto pavyzdį.
+  - **Laiko žyma:** įvykio, identifikuojamo pagal pirminį raktą, data ir laikas.
+  - **Įvykis:** įvykio, kurį norite naudoti, pavadinimas. Pavyzdžiui, laukelis pavadintas „Naudotojo veiksmas“ prekių parduotuvėje gali būti kliento naudojamas kuponas.
+  - **Informacija:** išsami informacija apie įvykį. Pavyzdžiui, laukelis pavadintas „Kupono vertė“ prekių parduotuvėje gali būti kupono valiutos vertė.
+- Mažiau nei 20 % trūkstamų reikšmių pateikto objekto duomenų lauke
 
-- Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.
-- Verslo žinios, kad suprastumėte, ką praradimas reiškia verslui. Palaikome laiku pagrįstas nutraukimo sąvokas reiškiančias, kad klientas nutraukė po tam tikro nepirkimo laikotarpio.
-- Duomenys apie jūsų operacijas/pirkimus ir jų istorija:
-    - Perlaidos identifikatoriai skirti atskirti įsigijimus/perlaidas.
-    - Kliento identifikatoriai atitinka perlaidas jūsų klientams.
-    - Perlaidos įvykio datos, kurios nustato perlaidos datą.
-    - Semantinei duomenų schemai įsigijimui/perlaidoms būtina tolesnė informacija:
-        - **Perlaidos ID**: Unikalusis įsigijimo ar perlaidos identifikatorius.
-        - **Sandorio data**: sandorio arba įsigijimo data.
-        - **Perlaidos vertė**: Elemento/perlaidos kiekio skaitmeninė vertė/valiuta.
-        - (Pasirenkama) **Unikalus gaminio ID**: Gaminio ID ar paslaugos įsigytos, jei jūsų duomenys yra elemento lygmens linijoje.
-        - (Pasirenkama) **Ar ši perlaida buvo grįžtamoji**: Tiesos/netiesos laukelis nurodo, ar perlaida buvo grąžinta ar ne. Jei **Perlaidos vertė** yra neigiama, mes taip pat naudosime šią informaciją grįžimo numatymui.
-- (Pasirenkamas) Duomenys apie kliento veiklas:
-    - Veiklos identifikatoriai, padedantys atskirti to paties tipo veiklas.
-    - Klientų identifikatoriai, siejantys veiklas su klientais.
-    - Veiklos informacija, apimanti veiklos pavadinimą ir datą.
-    - Kliento veiklų semantinė duomenų schema apima:
-        - **Pirminis raktas:** unikalusis veiklos identifikatorius. Pavyzdžiui, interneto svetainės lankymas ar įrašo naudojimas rodo, kad klientas išbandė jūsų produkto pavyzdį.
-        - **Laiko žymė:** pirminio rakto identifikuoto įvykio data ir laikas.
-        - **Įvykis:** įvykio, kurį norite naudoti, pavadinimas. Pavyzdžiui, laukelis pavadintas „Naudotojo veiksmas“ prekių parduotuvėje gali būti kliento naudojamas kuponas.
-        - **Informacija:** išsami informacija apie įvykį. Pavyzdžiui, laukelis pavadintas „Kupono vertė“ prekių parduotuvėje gali būti kupono valiutos vertė.
-
-# <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
-
-- Bent [bendraautoriaus teisės](permissions.md) „Customer Insights“.
-- Verslo žinios, kad suprastumėte, ką praradimas reiškia verslui. Palaikome laiku pagrįstas nutraukimo sąvokas reiškiančias, kad klientas nutraukė po tam tikro nepirkimo laikotarpio.
-- Duomenys apie jūsų operacijas/pirkimus ir jų istorija:
-    - Perlaidos identifikatoriai skirti atskirti įsigijimus/perlaidas.
-    - Kliento identifikatoriai atitinka perlaidas jūsų klientams.
-    - Perlaidos įvykio datos, kurios nustato perlaidos datą.
-    - Semantinei duomenų schemai įsigijimui/perlaidoms būtina tolesnė informacija:
-        - **Perlaidos ID**: Unikalusis įsigijimo ar perlaidos identifikatorius.
-        - **Sandorio data**: sandorio arba įsigijimo data.
-        - **Perlaidos vertė**: Elemento/perlaidos kiekio skaitmeninė vertė/valiuta.
-        - (Pasirenkama) **Unikalus gaminio ID**: Gaminio ID ar paslaugos įsigytos, jei jūsų duomenys yra elemento lygmens linijoje.
-        - (Pasirenkama) **Ar ši perlaida buvo grįžtamoji**: Tiesos/netiesos laukelis nurodo, ar perlaida buvo grąžinta ar ne. Jei **Perlaidos vertė** yra neigiama, mes taip pat naudosime šią informaciją grįžimo numatymui.
-- (Pasirenkamas) Duomenys apie kliento veiklas:
-    - Veiklos identifikatoriai, padedantys atskirti to paties tipo veiklas.
-    - Klientų identifikatoriai, siejantys veiklas su klientais.
-    - Veiklos informacija, apimanti veiklos pavadinimą ir datą.
-    - Kliento veiklų semantinė duomenų schema apima:
-        - **Pirminis raktas:** unikalusis veiklos identifikatorius. Pavyzdžiui, interneto svetainės lankymas ar įrašo naudojimas rodo, kad klientas išbandė jūsų produkto pavyzdį.
-        - **Laiko žymė:** pirminio rakto identifikuoto įvykio data ir laikas.
-        - **Įvykis:** įvykio, kurį norite naudoti, pavadinimas. Pavyzdžiui, laukelis pavadintas „Naudotojo veiksmas“ prekių parduotuvėje gali būti kliento naudojamas kuponas.
-        - **Informacija:** išsami informacija apie įvykį. Pavyzdžiui, laukelis pavadintas „Kupono vertė“ prekių parduotuvėje gali būti kupono valiutos vertė.
-- (pasirinktinis) Duomenys apie klientus:
-    - Šie duomenys turėtų būti sutapti su daugiau statinių atributų tam, kad modelis būtų geriausias.
-    - Kliento duomenų semantinė duomenų schema apima:
-        - **CustomerID:** Unikalus kliento identifikatorius.
-        - **Sukurta data:** data, kai klientas buvo įtrauktas iš pradžių.
-        - **Valstija arba provincija:** kliento valstija arba provincija.
-        - **Šalis:** kliento šalis.
-        - **Pramonės šaka:** kliento pramonės šakos tipas. Pavyzdžiui, laukas pramonės šaka, esančio pramonės šakoje, gali nurodyti, ar klientas buvo mažmeninis.
-        - **Kvalifikavimas:** jūsų verslo kliento skirstymas į kategorijas. Pvz., laukas pavadinimu „ValueSegment", esantis medyje, gali būti kliento pakopa pagal kliento dydį.
-
----
-
-- Siūlomos duomenų charakteristikos:
-    - Pakankami istoriniai duomenys: sandorio duomenys bent dvigubam pasirinkto laiko tarpui. Pageidautina nuo dviejų iki trijų operacijų retrospektyvos metų. 
-    - Keli pirkimai vienam klientui: geriausia bent du sandoriai kiekvienam klientui.
-    - Klientų skaičius: bent 10 klientų profilių, geriausia daugiau nei 1 000 klientų. Modelis neveiks su mažiau nei 10 klientų, o istoriniai duomenys bus nepakankami.
-    - Duomenų užbaigtumas: mažiau nei 20 % trūkstamų reikšmių pateiktame objekto duomenų laukelyje.
+Jei naudojate verslo paskyras (nuo B iki B), įtraukite klientų duomenis, sulygiuotus su statiniais atributais, kad užtikrintumėte, jog modelis veikia geriausiai:
+- **Kliento ID:** unikalus kliento identifikatorius.
+- **Sukūrimo data:** data, kada klientas buvo iš pradžių įtrauktas.
+- **Valstija arba provincija:** kliento valstija arba provincija.
+- **Šalis:** kliento šalis.
+- **Pramonė:** pramonės tipas klientas. Pavyzdžiui, laukas pramonės šaka, esančio pramonės šakoje, gali nurodyti, ar klientas buvo mažmeninis.
+- **Klasifikavimas:** kliento skirstymas į kategorijas jūsų verslui. Pvz., laukas pavadinimu „ValueSegment", esantis medyje, gali būti kliento pakopa pagal kliento dydį.
 
 > [!NOTE]
 > Įmonėms su didesniu klientų pirkimo dažniu (kas kelias savaites) rekomenduojama rinktis trumpesnį prognozės laikotarpį su perkėlimo apibrėžimu. Esant mažam pirkimo dažniui (kas keletą mėnesių arba kartą per metus) pasirinkite ilgesnį prognozės laikotarpį ir perkėlimo apibrėžimą.
 
 ## <a name="create-a-transaction-churn-prediction"></a>Kurti perdavimo praradimo nuspėjimą
 
-1. Programoje „Customer Insights” eikite į **Įžvalga** > **Prognozės**.
+1. Eikite į **"Intelligence Predictions"** > **·**.
 
-1. **Pasirinkite plytelę Kliento churn modelis** ir pasirinkite **Naudoti šį modelį**.
+1. Skirtuke **Kurti** pasirinkite **Naudoti modelį** plytelėje Kliento klientų pasitraukimo **modelis**.
 
-1. Srityje **Kliento praradimo modelis** pasirinkite **Operacija** ir rinkitės **Pradėti**.
+1. Pasirinkite **Operacija** pagal praradimo tipą, tada **Pradėkite**.
 
-:::image type="content" source="media/select-transaction-churn.PNG" alt-text="Momentinė ekrano nuotrauka su pasirinkta transakcijos parinktimi, esančioje srityje Kliento modelis juosta.":::
- 
-### <a name="name-model"></a>Pavadinimo modelis
-
-1. Suteikite modeliui pavadinimą, kad atskirtumėte jį nuo kitų modelių.
-
-1. Išvesties objekto pavadinimui nurodyti galite naudoti tik raides ir skaičius be tarpų. Tai pavadinimas, kurį naudos modelio objektas. 
+1. **Pavadinkite šį modelį** ir **išvesties objekto pavadinimą** tam, kad kad atskirtumėte juos nuo kitų modelių ar objektų.
 
 1. Pasirinkite **Toliau**.
 
 ### <a name="define-customer-churn"></a>Apibrėžkite kliento praradimą
 
+Pasirinkite **Įrašyti juodraštį** bet kuriuo metu, kad išsaugotumėte prognozė kaip juodraštį. Juodraštis prognozė rodomas skirtuke **Mano numatymai**.
+
 1. Nustatykite **prognozė langą**. Pavyzdžiui, prognozuoti jūsų klientų nutraukimo riziką kitoms 90 dienų siekiant suderinti su jūsų reklamos laikymo pastangomis. Nutraukimo rizikos prognozavimas ilgesniam ar trumpesniam laikotarpiui gali apsunkinti faktorių nustatymą jūsų atsisakymo rizikos profilyje, bet jis priklauso nuo konkrečių verslo reikalavimų.
-   >[!TIP]
-   > Galite bet kada pasirinkti **Išsaugoti juodraštį**, kad išsaugotumėte prognozė kaip juodraštį. Norėdami tęsti, prognozės juodraštį galite rasti skirtuke **Mano prognozė**.
 
-1. Įveskite dienų skaičių, kad apibrėžtumėte praradimą **lauke Churn apibrėžimas**. Pavyzdžiui, jei klientas nieko nenupirko per paskutines 30 dienų, jis gali būti laikomas atsisakęs jūsų verslo paslaugų. 
+1. Įveskite dienų skaičių, kad apibrėžtumėte praradimą **lauke Churn apibrėžimas**. Pavyzdžiui, jei klientas per pastarąsias 30 dienų nepirko, jis gali būti laikomas jūsų įmonės nebepirktuoju.
 
-1. Norėdami tęsti, spustelėkite **Pirmyn**.
+1. Pasirinkite **Toliau**.
 
-### <a name="add-required-data"></a>Įtraukti būtinus duomenis
+### <a name="add-purchase-history"></a>Įtraukti pirkimų retrospektyvą
 
-1. Pasirinkite **Įtraukti duomenis** ir pasirinkite veiklos tipą šoninėje srityje, kurioje yra reikiama operacijos arba pirkimo retrospektyvos informacija.
+1. Pasirinkite **Įtraukti duomenis** į **Kliento operacijų istoriją**.
 
-1. Dalyje **Pasirinkti veiklą** pasirinkite konkrečias veiklas iš pasirinkto veiklos tipo, į kurį norite sutelkti dėmesį atlikdami skaičiavimus.
+1. Pasirinkite semantinį veiklos tipą **SalesOrder** arba **SalesOrderLine**, kuriame yra operacijų retrospektyvos informacija. Jei veikla nenustatyta, pasirinkite **čia** ir sukurkite ją.
+
+1. Dalyje **Veikla**, jei kuriant veiklą veiklos atributai buvo semantiškai susieti, pasirinkite konkrečius atributus arba objektą, į kurį norite sutelkti dėmesį skaičiuojant. Jei semantinis susiejimas neįvyko, pasirinkite **Redaguoti** ir susieti duomenis.
 
    :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Šoninė sritis, vaizduojanti semantikos tipo konkrečių veiklų pasirinkimą.":::
 
-   Jeigu dar nesusiejote veiklos su semantiniu tipu, pasirinkite **Redaguoti**, kad tai atliktumėte. Atidaroma interaktyvioji semantinių veiklų susiejimo parinktis. Susiekite savo duomenis su atitinkamais pasirinkto veiklos tipo laukais.
+1. Pasirinkite **Pirmyn** ir peržiūrėkite šiam modeliui reikalingus atributus.
 
-1. Susiekite semantinius atributus su laukais, kurių reikia modeliui paleisti. Jei laukeliai nėra užpildyti, konfigūruokite ryšius iš jūsų įsigijimo istorijos laukelio į *kliento* laukelį. Pasirinkite **Įrašyti**.
+1. Pasirinkite **Įrašyti**.
 
-1. Atlikdami veiksmą Pridėti reikiamus **duomenis**, pasirinkite **Pirmyn**, kad tęstumėte, jei nenorite įtraukti daugiau veiklų.
-
+1. Įtraukite daugiau veiklų arba pasirinkite **Pirmyn**.
 
 # <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
 
 ### <a name="add-additional-data-optional"></a>Įtraukti papildomus duomenis (pasirinktinai)
 
-Sukonfigūruokite ryšį iš savo kliento veiklos objekto *Kliento* objektą.
+1. Pasirinkite **Įtraukti klientų veiklos** duomenis **·**.
 
-1. Pasirinkite laukelį, kuris nustato klientą kliento veiklos lentelėje. Jis gali būti tiesiogiai susietas su pagrindiniu jūsų kliento objekto ID jūsų *Kliento* objekte.
+1. Pasirinkite semantinės veiklos tipą, kuriame yra norimi naudoti duomenys. Jei veikla nenustatyta, pasirinkite **čia** ir sukurkite ją.
 
-1. Pažymėkite objektą, kuris yra jūsų pagrindinis *kliento* objektas.
+1. Dalyje **Veikla**, jei kuriant veiklą veiklos atributai buvo semantiškai susieti, pasirinkite konkrečius atributus arba objektą, į kurį norite sutelkti dėmesį skaičiuojant. Jei semantinis susiejimas neįvyko, pasirinkite **Redaguoti** ir susieti duomenis.
 
-1. Įveskite pavadinimą, apibūdinantį ryšį.
+1. Pasirinkite **Pirmyn** ir peržiūrėkite šiam modeliui reikalingus atributus.
 
-#### <a name="customer-activities"></a>Kliento veiklos
+1. Pasirinkite **Įrašyti**.
 
-1. Pasirinktinai, pasirinkite **Įtraukti duomenis** skirtus **Kliento veikloms**.
-
-1. Pažymėkite semantinio veiklos tipą, kuriame yra norimi naudoti duomenys, tada skyriuje Veiklos pažymėkite vieną ar daugiau **veiklų**.
-
-1. Pasirinkite veiklos tipą, kuris atitinka konfigūruojamos kliento veiklos tipą. Pasirinkite **Sukurti naują** ir pasirinkite esamą veiklos tipą ar sukurkite naują tipą.
-
-1. Pasirinkite **Kitas**, tada **Įrašyti**.
-
-1. Jei turite bet kurias kitas kliento veiklas, kurias norite įtraukti, pakartokite ankstesnius žingsnius.
+1. Pasirinkti **Toliau**
 
 # <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
 
 ### <a name="select-prediction-level"></a>Rinkitės nuspėjimo lygį
 
-Dauguma prognozių kuriami kliento lygiu. Kai kuriose situacijose, kurios gali būti nepakankami, kad būtų patenkinti jūsų verslo poreikiai. Šią funkciją galite naudoti, jei norite numatyti, pvz., kliento šaką, o ne visą klientą.
+Dauguma prognozių kuriami kliento lygiu. Kai kuriose situacijose, kurios gali būti nepakankami, kad būtų patenkinti jūsų verslo poreikiai. Naudokite šią funkciją, kad numatytumėte, pavyzdžiui, kliento filialo, o ne viso kliento praradimą.
 
-1. Norėdami sukurti prognozė lygį, o ne klientą, pažymėkite **Pažymėti antrinio lygio objektą**. Jei parinkties nėra, patikrinkite, ar baigėte ankstesnį skyrių.
+1. Pasirinkite **Pasirinkti antrinio lygio** objektą. Jei parinkties nėra, patikrinkite, ar baigėte ankstesnį skyrių.
 
 1. Išplėskite objektus, iš kurių norite pasirinkti antrinį lygį, arba naudokite ieškos filtro lauką pasirinktoms parinktims filtruoti.
 
@@ -182,27 +131,17 @@ Dauguma prognozių kuriami kliento lygiu. Kai kuriose situacijose, kurios gali b
 
 ### <a name="add-additional-data-optional"></a>Įtraukti papildomus duomenis (pasirinktinai)
 
-Sukonfigūruokite ryšį iš savo kliento veiklos objekto *Kliento* objektą.
+1. Pasirinkite **Įtraukti klientų veiklos** duomenis **·**.
 
-1. Pasirinkite laukelį, kuris nustato klientą kliento veiklos lentelėje. Jis gali būti tiesiogiai susietas su pagrindiniu jūsų kliento objekto ID jūsų *Kliento* objekte.
+1. Pasirinkite semantinės veiklos tipą, kuriame yra norimi naudoti duomenys. Jei veikla nenustatyta, pasirinkite **čia** ir sukurkite ją.
 
-1. Pažymėkite objektą, kuris yra jūsų pagrindinis *kliento* objektas.
+1. Dalyje **Veikla**, jei kuriant veiklą veiklos atributai buvo semantiškai susieti, pasirinkite konkrečius atributus arba objektą, į kurį norite sutelkti dėmesį skaičiuojant. Jei semantinis susiejimas neįvyko, pasirinkite **Redaguoti** ir susieti duomenis.
 
-1. Įveskite pavadinimą, apibūdinantį ryšį.
+1. Pasirinkite **Pirmyn** ir peržiūrėkite šiam modeliui reikalingus atributus.
 
-#### <a name="customer-activities"></a>Kliento veiklos
+1. Pasirinkite **Įrašyti**.
 
-1. Pasirinktinai, pasirinkite **Įtraukti duomenis** skirtus **Kliento veikloms**.
-
-1. Pažymėkite semantinio veiklos tipą, kuriame yra norimi naudoti duomenys, tada skyriuje Veiklos pažymėkite vieną ar daugiau **veiklų**.
-
-1. Pasirinkite veiklos tipą, kuris atitinka konfigūruojamos kliento veiklos tipą. Pasirinkite **Sukurti naują** ir pasirinkite esamą veiklos tipą ar sukurkite naują tipą.
-
-1. Pasirinkite **Kitas**, tada **Įrašyti**.
-
-1. Jei turite bet kurias kitas kliento veiklas, kurias norite įtraukti, pakartokite ankstesnius žingsnius.
-
-#### <a name="customers-data"></a>Klientų duomenys
+1. Pasirinkti **Toliau**
 
 1. Galite pažymėti **Įtraukti duomenis** skirtus **Klientų duomenims**.
 
@@ -212,111 +151,78 @@ Sukonfigūruokite ryšį iš savo kliento veiklos objekto *Kliento* objektą.
 
 ### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Teikia pasirinktinį abonementų su lyginamaisiais indeksais sąrašą
 
-Įtraukite verslo klientų ir klientų, kuriuos norite naudoti kaip kaitvardį, sąrašą. Gausite išsamią informaciją apie šiuos santykinius abonementus, įskaitant jų kologloginį įvertinimą ir [daugelį neloginių funkcijų](#review-a-prediction-status-and-results) darančių įtaką jų "prognozė."
+Įtraukite verslo klientų ir klientų, kuriuos norite naudoti kaip kaitvardį, sąrašą. Išsami [informacija apie šias lyginamąsias sąskaitas](#view-prediction-results) apima jų praradimo balą ir įtakingiausias savybes, kurios paveikė jų praradimo prognozė.
 
 1. Pasirinkite **+ Įtraukti klientą**.
 
 1. Pasirinkite klientus, kurie veikia kaip palyginami.
 
-1. Norėdami tęsti, spustelėkite **Pirmyn**.
+1. Pasirinkite **Toliau**.
 
 ---
 
-### <a name="set-schedule-and-review-configuration"></a>Grafiko ir peržiūros konfigūravimo nustatymas
+### <a name="set-update-schedule"></a>Nustatyti grafiko naujinimą
 
-1. Nustatykite modelio apmokymo iš naujo dažnumą. Šie nustatymai yra svarbūs siekiant atnaujinti prognozių tikslumą, kaip naujų duomenų naudojimą. Dauguma įmonių gali apmokyti iš naujo kartą per mėnesį, kad prognozių tikslumas būtų geras.
+1. Veiksmui **Duomenų atnaujinimai** pasirinkite modelio perkvalifikavimo dažnį. Šis parametras yra svarbus norint atnaujinti prognozių tikslumą, kai nauji duomenys patenka į "Customer Insights". Dauguma įmonių gali apmokyti iš naujo kartą per mėnesį, kad prognozių tikslumas būtų geras.
 
 1. Pasirinkite **Toliau**.
 
-1. Peržiūrėti prognozės konfigūravimą. Galite eiti atgal keletą žingsnių pasirinkę **Redaguoti** po rodoma verte. Arba galite pažymėti konfigūravimo veiksmą eigos indikatoriuje.
+### <a name="review-and-run-the-model-configuration"></a>Modelio konfigūracijos peržiūra ir paleidimas
 
-1. Jei visos reikšmės sukonfigūruotos teisingai, pasirinkite **Įrašyti ir paleisti**, kad pradėtumėte prognozavimo procesą. Skirtuke **Mano prognozės** galite matyti savo prognozių būseną. Atsižvelgiant į prognozavimui naudojamų duomenų kiekį, procesas gali užtrukti kelias valandas.
+Peržiūros **ir vykdymo** veiksme rodoma konfigūracijos suvestinė ir suteikiama galimybė atlikti keitimus prieš kuriant prognozė.
 
-## <a name="review-a-prediction-status-and-results"></a>Prognozės būsenos ir rezultatų peržiūra
+1. Pasirinkite **Redaguoti** atlikdami bet kurį iš veiksmų, kad peržiūrėtumėte ir atliktumėte bet kokius pakeitimus.
 
-1. Eikite į **Įžvalga** > **Prognozės** ir pasirinkite **Mano prognozės** skirtuką.
+1. Jei esate patenkinti savo pasirinkimais, pasirinkite **Įrašyti ir paleisti**, kad pradėtumėte vykdyti modelį. Pasirinkite **Atlikta**. Skirtukas **Mano numatymai** rodomi, kol kuriamas prognozė. Atsižvelgiant į prognozavimui naudojamų duomenų kiekį, procesas gali užtrukti kelias valandas.
 
-1. Pasirinkite prognozę, kurią norite peržiūrėti.
-   - **Prognozės pavadinimas**: Įvardykite prognozę jos kūrimo metu.
-   - **Prognozės tipas**: Prognozei naudojamo modelio tipas
-   - **Išvesties objektas**: objekto, kuriame saugoma prognozės išvestis, pavadinimas. Objektą šiuo pavadinimu galite rasti **Duomenys** > **Objektai**.
-     Resultato objekte *„ChurnScore“* yra prognozuojama netekimo tikimybė, o *„IsChurn“* yra dvejetainė žyma, pagrįsta *„ChurnScore“* su 0,5 ribine verte. Numatytoji ribinė vertė jūsų scenarijui gali neveikti. [Sukurkite naują segmentą](segments.md#create-a-segment) su jūsų pageidaujama ribine verte.
-     Ne visi klientai būtinai yra aktyvūs klientai. Kai kurie ilgą laiką gali būti neturėję jokios veiklos ir jau yra laikomi perkeltais pagal perkėlimo apibrėžimą. Klientams, kurie jau yra susidomę, nėra naudinga prognozuoti riziką, nes jie nėra dominančios auditorijos.
-   - **Prognozuotas laukelis**: Šis laukelis užpildomas keliems prognozių tipams ir nėra naudojamas nutraukimo prognozėje.
-   - **Būsena:**: Prognozės vykdymo būsena.
-        - **Laukiama**: Prognozė laukia kitų procesų vykdymo.
-        - **Paleidimas iš naujo**: Prognozė šiuo metu vykdoma siekiant sukurti rezultatus, kurie susilies į išvesties objektą.
-        - **Nepavyko** : Prognozės vykdymas nepavyko. [Peržiūrėkite įrašus](manage-predictions.md#troubleshoot-a-failed-prediction) dėl išsamesnės informacijos.
-        - **Pavyko**: Prognozė pavyko. Norėdami peržiūrėti prognozę, po vertikaliu daugtaškiu pasirinkite  **Rodyti**
-   - **Redaguota**: data, kai buvo pakeista prognozės konfigūracija.
-   - **Paskutinį kartą atnaujinta** : data, kai prognozė atnaujino rezultatus išvesties objekte.
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
 
-1. Pažymėkite vertikalius daugtaškius šalia prognozės, kurios rezultatus norite peržiūrėti, ir pasirinkite **Rodyti**.
+## <a name="view-prediction-results"></a>Prognozė rezultatų peržiūra
 
-   :::image type="content" source="media/model-subs-view.PNG" alt-text="Peržiūrėkite valdiklį tam, kad pamatytumėte prognozės rezultatus.":::
+1. Eikite į **"Intelligence Predictions"** > **·**.
+
+1. Skirtuke **Mano numatymai** pasirinkite norimą peržiūrėti prognozė.
 
 # <a name="individual-consumers-b-to-c"></a>[Atskiri vartotojai (B2C)](#tab/b2c)
 
-1. Rezultatų puslapyje yra trys pagrindinės duomenų dalys:
-   - **Mokymo modelio efektyvumas**: galimi balai yra A, B arba C. Šis rezultatas nurodo prognozės efektyvumą ir gali padėti apsispręsti naudoti išvesties objekte saugomus rezultatus. Balai nustatomi pagal šias taisykles: 
-        - **A** kai prognozės modelio tikslumas yra mažiausiai 50% visų prognozių ir kai prognozių tikslumo procentas klientams, kurie nutraukė, yra didesnis nei slenksčio lygis mažiausiai 10%.
-            
-        - **B** kai prognozės modelio tikslumas yra mažiausiai 50 % visų prognozių ir kai prognozių tikslumo procentas klientams, kurie nutraukė, yra iki 10% didesnis nei slenksčio lygis.
-            
-        - **C** kai prognozės modelio tikslumas yra mažesnis 50% visų prognozių ar kai prognozių tikslumo procentas nutraukusiems klientams yra mažesnis nei slenksčio lygis.
-               
-        - **Slenkstis** užima prognozės laiko lango įvestį modeliui (pavyzdžiui, vieneri metai), o modelis sukuria kitus laiko tarpus dalydamas juos iš 2 iki tol, kol pasiekia vieną mėnesį ar mažiau. Jis naudoja šiuos tarpus, kad sukurtų verslo taisykles klientams, kurie neįsigijo jų šiuo laikotarpiu. Šie klientai laikomi atsisakę. Laiko pagrįsta veiklos taisyklė su didesniu pajėgumu nuspėti, kas greičiausiai atsisakys yra pasirenkamas kaip slenksčio modelis.
-            
-    - **Praradimo tikimybė (klientų skaičius)**: Klientų grupės pagal prognozuojamą praradimo riziką. Šie duomenys gali būti naudingi vėliau, jei norite sukurti klientų segmentą su didele praradimo rizika. Tokie segmentai padeda suprasti, kokios turėtų būti priklausymo segmentui ribinės reikšmės.
-       
-    - **Svarbiausi veiksniai**: Kuriant prognozę, atsižvelgiama į daugelį veiksnių. Visi faktoriai turi savo apskaičiuotą svarbą sujungtoms prognozėms, kurias sukuria modelis. Naudodami šiuos faktorius galite patikrinti savo prognozė rezultatus, arba naudodami šią informaciją vėliau kurkite segmentus, kurie galėtų [turėti įtakos](segments.md) kliento riziką.
+Rezultatų puslapyje yra trys pagrindinės duomenų dalys:
 
+[!INCLUDE [predict-transaction-results](includes/predict-transaction-results.md)]
 
 # <a name="business-accounts-b-to-b"></a>[Verslo klientai (B2B)](#tab/b2b)
 
-1. Rezultatų puslapyje yra trys pagrindinės duomenų dalys:
-   - **Mokymo modelio efektyvumas**: galimi balai yra A, B arba C. Šis rezultatas nurodo prognozės efektyvumą ir gali padėti apsispręsti naudoti išvesties objekte saugomus rezultatus. Balai nustatomi pagal šias taisykles: 
-        - **A** kai prognozės modelio tikslumas yra mažiausiai 50% visų prognozių ir kai prognozių tikslumo procentas klientams, kurie nutraukė, yra didesnis nei slenksčio lygis mažiausiai 10%.
-            
-        - **B** kai prognozės modelio tikslumas yra mažiausiai 50 % visų prognozių ir kai prognozių tikslumo procentas klientams, kurie nutraukė, yra iki 10% didesnis nei slenksčio lygis.
-            
-        - **C** kai prognozės modelio tikslumas yra mažesnis 50% visų prognozių ar kai prognozių tikslumo procentas nutraukusiems klientams yra mažesnis nei slenksčio lygis.
-               
-        - **Slenkstis** užima prognozės laiko lango įvestį modeliui (pavyzdžiui, vieneri metai), o modelis sukuria kitus laiko tarpus dalydamas juos iš 2 iki tol, kol pasiekia vieną mėnesį ar mažiau. Jis naudoja šiuos tarpus, kad sukurtų verslo taisykles klientams, kurie neįsigijo jų šiuo laikotarpiu. Šie klientai laikomi atsisakę. Laiko pagrįsta veiklos taisyklė su didesniu pajėgumu nuspėti, kas greičiausiai atsisakys yra pasirenkamas kaip slenksčio modelis.
-            
-    - **Praradimo tikimybė (klientų skaičius)**: Klientų grupės pagal prognozuojamą praradimo riziką. Šie duomenys gali būti naudingi vėliau, jei norite sukurti klientų segmentą su didele praradimo rizika. Tokie segmentai padeda suprasti, kokios turėtų būti priklausymo segmentui ribinės reikšmės.
-       
-    - **Svarbiausi veiksniai**: Kuriant prognozę, atsižvelgiama į daugelį veiksnių. Visi faktoriai turi savo apskaičiuotą svarbą sujungtoms prognozėms, kurias sukuria modelis. Naudodami šiuos faktorius galite patikrinti savo prognozė rezultatus, arba naudodami šią informaciją vėliau kurkite segmentus, kurie galėtų [turėti įtakos](segments.md) kliento riziką.
+Rezultatų puslapyje yra trys pagrindinės duomenų dalys:
 
+[!INCLUDE [predict-transaction-results](includes/predict-transaction-results.md)]
 
-1. Verslo klientams rasite papildomos **funkcijų analizės informacijos** puslapį. Joje yra keturios duomenų sekcijos:
+Įtakingų **funkcijų analizės** informacijos puslapyje yra keturios duomenų dalys:
 
-    - Dešinioje srityje pažymėtas elementas apibrėžia šio puslapio turinį. Pažymėkite elementą iš **geriausių klientų** arba **Slenksties klientų**. Abu sąrašus užsakyti pagal mažėjanti jo reikšmė, neatsižvelgiant į tai, ar balas yra tik klientas, ar bendras klientų balas, ir antrinis lygis, pvz., produktų kategorija.
-        
-        - **Populiariausi klientai**: 10 klientų, kuriems pagal savo balus kyla didžiausia auksčiausios ir mažiausios aukščiausios auksinės grėsmės, sąrašas. 
-        - **Klientų vertinimas**: konfigūruojant modelį pasirinktų iki 10 klientų sąrašas.
- 
-    - **Praradimo balas:** Dešinioje srityje rodomas pasirinkto elemento duotuvas.
-    
-    - **Praradimo rizikos paskirstymas:** rodomas chroniškų riziką skirstinį klientams ir procentu, kuriame yra parinktas klientas. 
-    
-    - **Viršutinės funkcijos, didėjančios ir mažėjančios chronkų grėsmės:** pažymėtam elementui dešinioje srityje išvardytos penkios viršutinės funkcijos, dėl kurių didėjo ir sumažino riziką. Galite rasti kiekvienos inu viena nuo kitos funkcijos elemento reikšmę ir jo įtaką praradimo balui. Taip pat rodoma vidutinė kiekvienos funkcijos reikšmė įvairiuose žemuose, vidutinio ir aukšto verslo klientų segmentuose. Ji padeda geriau kontekstizuoti pažymėto elemento viršutinių funkcijų reikšmes ir palyginti jas su mažais, vidutiniu ir aukštu praradimo klientų segmentais.
+- Dešinėje srityje pasirinkite elementą iš **Geriausių klientų** arba **Lyginamieji klientai**. Abu sąrašus užsakyti pagal mažėjanti jo reikšmė, neatsižvelgiant į tai, ar balas yra tik klientas, ar bendras klientų balas, ir antrinis lygis, pvz., produktų kategorija. Pasirinktas elementas nustato šio puslapio turinį.
 
-       - Žemas: klientai arba kliento ir antrinio lygio kombinacijos su 0–0,33 balo praradimo balu
-       - Vidutinis: klientai arba kliento ir antrinio lygio paskyros su 0,33–0,66 lygio praradimo balu
-       - Aukštas: klientai arba kliento ir antrinio lygio paskyros su didesniu nei 0,66 lygio praradimo balu
-    
-       Kai jūs prognozuojame, kad jis yra kliento lygyje, visi klientai atsižvelgia į tai, kad susietus vidutinius hiteronų segmentų funkcijų reikšmes. Jei numatoma, kad pirmame kiekvieno kliento lygyje bus prognozės segmentų suvedimas priklauso nuo antrinės pusės srityje pasirinkto elemento lygio. Pavyzdžiui, jei elementas turi antrinį produktų kategorijos lygį = biuro uždėjimo funkcija, tuomet šalutiniais elementais, kurių rašymo funkcija yra viena iš produktų kategorijos, atsižvelgiama tik tada, kai išskaidymo metu išskaidymo vidutinė elemento reikšmėje yra šie segmentai. Ši logika taikoma tam, kad būtų galima užtikrinti sąžiningą elemento funkcijų reikšmių palyginimą su vidutinėmis reikšmėmis žemuose, vidutinio ir aukštoje stulpelių segmentuose.
+  - **Populiariausi klientai**: 10 klientų, kuriems pagal savo balus kyla didžiausia auksčiausios ir mažiausios aukščiausios auksinės grėsmės, sąrašas.
+  - **Klientų vertinimas**: konfigūruojant modelį pasirinktų iki 10 klientų sąrašas.
 
-       Kai kuriais atvejais vidutinė žemos, vidutinio arba aukšto dangoraižų segmentų reikšmės yra tuščios arba negalima, nes nėra elementų, kurie pagal aukščiau pateiktą apibrėžimą priklausytų atitinkamims segmentams.
-       
-       > [!NOTE]
-       > Reikšmių pagal vidutinius žemus, vidutinius ir didelius stulpelius skirstymas į kategorijas, pvz., šalį ar pramonės šaką, skiriasi. Kadangi „vidurkio" funkcijos reikšmės reikšmė nėra taikoma klasifikuotiems elementams, šių stulpelių reikšmės yra klientų dalis, esanti žemuose, vidutinio ir aukšto turinio segmentuose, kurių reikšminė reikšmė tokia pat kaip ir šoniniame skyde pažymėto elemento.
+- **Praradimo balas:** Dešinioje srityje rodomas pasirinkto elemento duotuvas.
+
+- **Praradimo rizikos pasiskirstymas:** rodo klientų praradimo rizikos pasiskirstymą ir procentilį, kuriame yra pasirinktas klientas.
+
+- **Populiariausios funkcijos, didinančios ir mažinančios praradimo riziką:** pateikia penkias svarbiausias funkcijas, kurios padidino ir sumažino pasirinkto elemento praradimo riziką dešinėje srityje. Rodo to elemento funkcijos vertę ir jos įtaką kiekvienos įtakingos funkcijos praradimo balui. Taip pat rodoma vidutinė kiekvienos funkcijos reikšmė įvairiuose žemuose, vidutinio ir aukšto verslo klientų segmentuose. Ji padeda geriau kontekstizuoti pažymėto elemento viršutinių funkcijų reikšmes ir palyginti jas su mažais, vidutiniu ir aukštu praradimo klientų segmentais.
+
+  - Žemas: sąskaitos arba paskyros ir antrinio lygio deriniai, kurių praradimo balas yra nuo 0 iki 0,33.
+  - Vidutinis: sąskaitos arba sąskaitų ir antrinių lygių deriniai, kurių praradimo balas yra nuo 0,33 iki 0,66.
+  - Aukštas: sąskaitos arba sąskaitų ir antrinių lygių deriniai, kurių praradimo balas didesnis nei 0,66.
+
+  Kai jūs prognozuojame, kad jis yra kliento lygyje, visi klientai atsižvelgia į tai, kad susietus vidutinius hiteronų segmentų funkcijų reikšmes. Jei numatoma, kad pirmame kiekvieno kliento lygyje bus prognozės segmentų suvedimas priklauso nuo antrinės pusės srityje pasirinkto elemento lygio. Pavyzdžiui, jei prekė turi antrinį produktų kategorijos (biuro reikmenų) lygį, nustatant vidutines praradimo segmentų funkcijų reikšmes atsižvelgiama tik į tas prekes, kurių produkto kategorija yra biuro reikmenys. Ši logika taikoma tam, kad būtų galima užtikrinti sąžiningą elemento funkcijų reikšmių palyginimą su vidutinėmis reikšmėmis žemuose, vidutinio ir aukštoje stulpelių segmentuose.
+
+  Kai kuriais atvejais vidutinė žemos, vidutinio arba aukšto dangoraižų segmentų reikšmės yra tuščios arba negalima, nes nėra elementų, kurie pagal aukščiau pateiktą apibrėžimą priklausytų atitinkamims segmentams.
+
+  Reikšmių pagal vidutinius žemus, vidutinius ir didelius stulpelius skirstymas į kategorijas, pvz., šalį ar pramonės šaką, skiriasi. Kadangi „vidurkio" funkcijos reikšmės reikšmė nėra taikoma klasifikuotiems elementams, šių stulpelių reikšmės yra klientų dalis, esanti žemuose, vidutinio ir aukšto turinio segmentuose, kurių reikšminė reikšmė tokia pat kaip ir šoniniame skyde pažymėto elemento.
 
 ---
 
-## <a name="manage-predictions"></a>Prognozių valdymas
-
-Prognozes galima optimizuoti, šalinti jų triktis, atnaujinti arba panaikinti. Peržiūrėkite įvesties duomenų naudojimo ataskaitą ir sužinokite, kaip greičiau sukurti patikimesnę prognozę. Norėdami gauti daugiau informacijos, eikite į [Valdyti prognozes](manage-predictions.md).
+ > [!NOTE]
+ > Šio modelio išvesties objekte ChurnScore *rodo prognozuojamą praradimo tikimybę, o* IsChurn *yra dvejetainė etiketė,* pagrįsta *ChurnScore* su 0,5 riba. Jei šis numatytasis slenkstis neveikia jūsų scenarijuje, [sukurkite naują segmentą](segments.md#create-a-segment) su pageidaujamu slenksčiu. Ne visi klientai būtinai yra aktyvūs klientai. Kai kurie ilgą laiką gali būti neturėję jokios veiklos ir jau yra laikomi perkeltais pagal perkėlimo apibrėžimą. Klientams, kurie jau yra susidomę, nėra naudinga prognozuoti riziką, nes jie nėra dominančios auditorijos.
+>
+> Norėdami peržiūrėti praradimo balą, eikite į **Duomenų** > **objektai** ir peržiūrėkite išvesties objekto, kurį nustatėte šiam modeliui, duomenų skirtuką.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

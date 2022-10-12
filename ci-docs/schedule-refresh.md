@@ -1,7 +1,7 @@
 ---
 title: Suplanuokite sistemos atnaujinimą
 description: Suplanuokite laiką, kada sistema turėtų būti atnaujinta
-ms.date: 08/09/2022
+ms.date: 09/27/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: 4aac02b570357d2086f7a9d7340b0e4837157a0b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9395966"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610338"
 ---
 # <a name="schedule-system-refresh"></a>Suplanuokite sistemos atnaujinimą
 
 Suplanuokite automatinį visų [nurijusių duomenų šaltinių atnaujinimą](data-sources.md). Automatinis atnaujinimas padeda užtikrinti, kad jūsų duomenų šaltinių naujinimai atsispindės jūsų vieninguose klientų profiliuose.
 
 > [!NOTE]
-> Power Query duomenų šaltinius, kuriuos tvarkote, atnaujinate pagal savo tvarkaraščius. Norėdami suplanuoti šių Power Query duomenų šaltinių atnaujinimą, sukonfigūruokite tos konkrečios duomenų šaltinis atnaujinimo **parametrus puslapyje Duomenų šaltiniai**.
+> Power Query duomenų šaltinius, kuriuos tvarkote, atnaujinate pagal savo tvarkaraščius. Norėdami suplanuoti šių Power Query duomenų šaltinių atnaujinimą, sukonfigūruokite tos konkrečios duomenų šaltinis atnaujinimo **parametrus puslapyje Duomenų šaltiniai**. Suderinkite laiką su duomenų atnaujinimo grafiku prieš srovę, kad atnaujinimai vyktų ne visi iš karto.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Duomenų srauto atnaujinimo nustatymai.":::
 
 ## <a name="set-system-refresh-schedule"></a>Nustatykite sistemos atnaujinimo tvarkaraštį
