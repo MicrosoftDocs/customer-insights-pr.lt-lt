@@ -1,19 +1,19 @@
 ---
 title: Segmentų eksportavimas į "Braze" (peržiūra)
 description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į "Braze".
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195117"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655301"
 ---
 # <a name="export-segments-to-braze-preview"></a>Segmentų eksportavimas į "Braze" (peržiūra)
 
@@ -21,17 +21,19 @@ Eksportuokite vieningų klientų profilių segmentus į "Braze" ir naudokite juo
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- " [Braze" paskyra](https://www.braze.com/) ir atitinkami administratoriaus kredencialai.
-- " [Braze" API raktas](https://www.braze.com/docs/api/basics/)
-- [Sukonfigūruoti segmentai](segments.md) "Customer Insights".
-- Eksportuotuose segmentuose esančiuose vieninguose klientų profiliuose yra laukas, nurodantis el. pašto adresą ir "Braze" kliento ID.
+- Braze [paskyra](https://www.braze.com/) ir atitinkami administratoriaus kredencialai.
+- [Braze API raktas](https://www.braze.com/docs/api/basics/)
+- Jūsų ["Braze REST" galinis punktas](https://www.braze.com/docs/api/basics/#api-definitions) 
+- [Sukonfigūruoti segmentai](segments.md) programoje "Customer Insights".
+- Eksportuotų segmentų vieninguose klientų profiliuose yra laukas, nurodantis el. pašto adresą ir "Braze" kliento ID.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki "Braze" iki 1 milijono klientų profilių, kurių užbaigimas gali užtrukti iki 40 minučių. Klientų profilių, kuriuos galite eksportuoti į "Braze", skaičius priklauso nuo jūsų sutarties su "Braze".
+- Iki 1 milijono klientų profilių iki "Braze", o tai gali užtrukti iki 40 minučių. Klientų profilių, kuriuos galite eksportuoti į "Braze", skaičius priklauso nuo jūsų sutarties su "Braze".
 - Tik segmentai.
+- "Azure Private Link" nepalaikomas "Braze" eksportavimui.
 
-## <a name="set-up-connection-to-braze"></a>Ryšio su "Braze" nustatymas
+## <a name="set-up-connection-to-braze"></a>Nustatykite ryšį su Braze
 
 [!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
@@ -43,11 +45,11 @@ Eksportuokite vieningų klientų profilių segmentus į "Braze" ir naudokite juo
 
 1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Pateikite "Braze" API raktą, kad galėtumėte toliau prisijungti.
+1. Pateikite savo Braze API raktą, kad galėtumėte toliau prisijungti.
 
-1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą ir atitiktį [ir](connections.md#data-privacy-and-compliance) pasirinkite **Sutinku**.
 
-1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
+1. Pasirinkite **Prisijungti**, kad inicijuotumėte ryšį.
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
@@ -59,13 +61,15 @@ Eksportuokite vieningų klientų profilių segmentus į "Braze" ir naudokite juo
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Pasirinkite **Pridėti eksportavimą**.
+1. Pasirinkite **Įtraukti eksportavimą**.
 
-1. **Lauke Ryšys eksportui** pasirinkite ryšį iš braze skyriaus. Jei ryšio nėra, kreipkitės į administratorių.
+1. **Lauke Ryšys eksportui** pasirinkite ryšį iš skyriaus Braze. Jei ryšio nėra, kreipkitės į administratorių.
+
+1. Įveskite savo REST galinį punktą į **lauką Hostname** tokiu formatu:`rest.iad-03.braze.com`.
 
 1. Įveskite eksportavimo pavadinimą.
 
-1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. **Lauke Kliento ID** pasirinkite lauką, kuris nurodo kliento Braze ID. "Braze" segmentai bus sukurti tuo pačiu segmento pavadinimu, kaip ir .Dynamics 365 Customer Insights Galite pasirinkti daugiau pasirenkamų laukų duomenims sugretinti.
+1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. **Lauke Kliento ID pasirinkite lauką, kuris atitinka kliento Braze ID**. "Braze" segmentai bus sukurti tuo pačiu segmento pavadinimu kaip ir Dynamics 365 Customer Insights. Galite pasirinkti daugiau pasirinktinių laukų, kad atitiktumėte duomenis.
 
 1. Pasirinkite objektus arba segmentus, kuriuos norite eksportuoti.
 
