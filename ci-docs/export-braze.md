@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655301"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725226"
 ---
 # <a name="export-segments-to-braze-preview"></a>Segmentų eksportavimas į "Braze" (peržiūra)
 
@@ -29,6 +29,7 @@ Eksportuokite vieningų klientų profilių segmentus į "Braze" ir naudokite juo
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
+- Privati nuoroda kartu su "Bring your own storage" (BYOS) nepalaikoma.
 - Iki 1 milijono klientų profilių iki "Braze", o tai gali užtrukti iki 40 minučių. Klientų profilių, kuriuos galite eksportuoti į "Braze", skaičius priklauso nuo jūsų sutarties su "Braze".
 - Tik segmentai.
 - "Azure Private Link" nepalaikomas "Braze" eksportavimui.

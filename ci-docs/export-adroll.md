@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195760"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724722"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmentų eksportavimas į „AdRoll“ (peržiūros versija)
 
@@ -21,13 +21,14 @@ Eksportuokite vieningųjų klientų profilių segmentus į „AdRoll” ir naudo
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- " [AdRoll" paskyra](https://www.adroll.com/) ir atitinkami administratoriaus kredencialai.
+- " [AdRoll" paskyrą](https://www.adroll.com/) ir atitinkamus administratoriaus kredencialus.
 - " [AdRoll" reklamuotojo ID](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
-- [Sukonfigūruoti segmentai](segments.md) "Customer Insights".
+- [Sukonfigūruoti segmentai](segments.md) programoje "Customer Insights".
 - Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
+- Privati nuoroda kartu su "Bring your own storage" (BYOS) nepalaikoma.
 - Iki 250 000 klientų profilių vienam eksportavimui į "AdRoll", o tai gali užtrukti iki 10 minučių. Klientų profilių, kuriuos galite eksportuoti į "AdRoll", skaičius priklauso nuo sutarties su "AdRoll".
 - Tik segmentai. Segmente turi būti bent 100 klientų profilių.
 
@@ -37,15 +38,15 @@ Eksportuokite vieningųjų klientų profilių segmentus į „AdRoll” ir naudo
 
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **"AdRoll"**.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **AdRoll**.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
 1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą ir atitiktį [ir](connections.md#data-privacy-and-compliance) pasirinkite **Sutinku**.
 
-1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
+1. Pasirinkite **Prisijungti**, kad inicijuotumėte ryšį.
 
 1. Pasirinkite **Autentifikuoti su „AdRoll”** ir pateikite savo administratoriaus kredencialus, skirtus „AdRoll”.
 
@@ -59,7 +60,7 @@ Eksportuokite vieningųjų klientų profilių segmentus į „AdRoll” ir naudo
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Pasirinkite **Pridėti eksportavimą**.
+1. Pasirinkite **Įtraukti eksportavimą**.
 
 1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „AdRoll“. Jei ryšio nėra, kreipkitės į administratorių.
 

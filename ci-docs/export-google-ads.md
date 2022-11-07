@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196588"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725088"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentų eksportavimas į „Google Ads“ (peržiūra)
 
@@ -21,16 +21,17 @@ Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditor
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- ["Google Ads" paskyra](https://ads.google.com/) ir atitinkami administratoriaus kredencialai.
-- ["Google Ads" kliento ID](https://support.google.com/google-ads/answer/1704344).
-- Tenkinami Klientų atitikties politikos [reikalavimai](https://support.google.com/adspolicy/answer/6299717).
-- Pakartotinės rinkodaros sąrašo [dydžių](https://support.google.com/google-ads/answer/7558048) reikalavimai yra įvykdyti.
+- " [Google Ads" paskyros](https://ads.google.com/) ir atitinkamų administratoriaus kredencialų.
+- " [Google Ads" kliento ID](https://support.google.com/google-ads/answer/1704344).
+- Klientų atitikties politikos [reikalavimai](https://support.google.com/adspolicy/answer/6299717) yra įvykdyti.
+- Tenkinami pakartotinės rinkodaros sąrašų dydžių [reikalavimai](https://support.google.com/google-ads/answer/7558048).
 - [Sukonfigūruoti segmentai](segments.md).
-- Eksportuotuose segmentuose esančiuose vieninguose klientų profiliuose yra laukai, nurodantys el. pašto adresą, telefoną, reklamuotojo mobiliesiems ID, trečiosios šalies vartotojo ID arba adresą.
+- Suvienodintuose klientų profiliuose eksportuotuose segmentuose yra laukų, nurodančių el. pašto adresą, telefoną, reklamuotojo mobiliesiems ID, trečiosios šalies naudotojo ID arba adresą.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Eksportuokite iki 1 milijono klientų profilių vienam eksportui į "Google Ads", o tai gali užtrukti iki 30 minučių, nes paslaugų teikėjas turi apribojimų.
+- Privati nuoroda kartu su "Bring your own storage" (BYOS) nepalaikoma.
+- Eksportuokite iki 1 milijono klientų profilių vienam eksportavimui į "Google Ads", o tai gali užtrukti iki 30 minučių dėl teikėjo apribojimų.
 - Tik segmentai.
 - Atitiktis sistemoje "Google Ads" gali trukti iki 48 valandų.
 
@@ -40,7 +41,7 @@ Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditor
 
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **Google Ads**.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **"Google Ads**".
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
@@ -48,7 +49,7 @@ Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditor
 
 1. Įveskite "Google Ads" kliento ID.
 
-1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą ir atitiktį [ir](connections.md#data-privacy-and-compliance) pasirinkite **Sutinku**.
 
 1. Pasirinkite **Autentifikuoti su „Google Ads“** ir pateikti savo „Google Ads“ prisijungimo duomenis.
 
@@ -62,17 +63,17 @@ Eksportuokite unifikuotų klientų profilių segmentus į „Google Ads" auditor
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Pasirinkite **Pridėti eksportavimą**.
+1. Pasirinkite **Įtraukti eksportavimą**.
 
 1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Google Ads“. Jei ryšio nėra, kreipkitės į administratorių.
 
 1. Įveskite eksportavimo pavadinimą.
 
 1. Pasirinkite, ar naudoti esamą auditoriją, ar kurti naują:
-   - Jei norite atnaujinti esamą "Google Ads" auditoriją, įveskite ["Google Ads" auditorijos ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns).
-   - Jei norite sukurti naują auditoriją, lauką "Google Audience ID" palikite tuščią. "Customer Insights" automatiškai sukurs naują auditoriją "Google Ads" paskyroje ir naudos eksportuoto segmento pavadinimą.
+   - Jei norite atnaujinti esamą "Google Ads" auditoriją, įveskite ["Google Ads" auditorijos ID.](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns)
+   - Jei norite sukurti naują auditoriją, palikite "Google" auditorijos ID lauką tuščią. "Customer Insights" automatiškai sukurs naują auditoriją jūsų "Google Ads" paskyroje ir naudos eksportuoto segmento pavadinimą.
 
-1. Sekcijoje **Duomenų atitikimas** pasirinkite vieną ar daugiau duomenų laukų, kuriuos norite eksportuoti, ir pasirinkite lauką, kuris nurodo atitinkamus duomenų laukus "Customer Insights".
+1. Sekcijoje **Duomenų atitikimas** pasirinkite vieną ar daugiau duomenų laukų, kuriuos norite eksportuoti, ir pasirinkite lauką, kuris atitinka atitinkamus "Customer Insights" duomenų laukus.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti.
 

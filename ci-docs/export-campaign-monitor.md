@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 82303c7bcb269ee68419c9639ee743e13451f273
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196312"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724694"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Segmentų eksportavimas į „Campaign Monitor“ (peržiūros versija)
 
@@ -21,15 +21,16 @@ Eksportuokite vieningų klientų profilių segmentus į „Campaign Monitor“ i
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- " [Campaign Monitor" paskyrą](https://www.campaignmonitor.com/) ir atitinkamus administratoriaus kredencialus.
-- Kampanijos [stebėjimo sąrašo ID](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
-- Sugeneruotas [API raktas](https://www.campaignmonitor.com/api/getting-started/) iš **"Campaign Monitor" paskyros nustatymų**, kad gautumėte API sąrašo ID.
-- [Sukonfigūruoti segmentai](segments.md) "Customer Insights".
+- " [Campaign Monitor" paskyra](https://www.campaignmonitor.com/) ir atitinkami administratoriaus kredencialai.
+- [Kampanijos monitoriaus sąrašo ID](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
+- Sugeneruotas [API raktas](https://www.campaignmonitor.com/api/getting-started/) iš **paskyros nustatymų** kampanijos monitoriuje, kad gautumėte API sąrašo ID.
+- [Sukonfigūruoti segmentai](segments.md) programoje "Customer Insights".
 - Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono klientų profilių vienam eksportui į "Campaign Monitor", o tai gali užtrukti iki 20 minučių. Klientų profilių, kuriuos galite eksportuoti į "Campaign Monitor", skaičius priklauso nuo sutarties su "Campaign Monitor".
+- Privati nuoroda kartu su "Bring your own storage" (BYOS) nepalaikoma.
+- Iki 1 milijono klientų profilių vienam eksportavimui į "Campaign Monitor", o tai gali užtrukti iki 20 minučių. Klientų profilių, kuriuos galite eksportuoti į "Campaign Monitor", skaičius priklauso nuo jūsų sutarties su "Campaign Monitor".
 - Tik segmentai.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Ryšio su „Campaign Monitor“ nustatymas
@@ -44,7 +45,7 @@ Eksportuokite vieningų klientų profilių segmentus į „Campaign Monitor“ i
 
 1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą ir atitiktį [ir](connections.md#data-privacy-and-compliance) pasirinkite **Sutinku**.
 
 1. Pasirinkite **Prisijungti** ir inicijuokite ryšį su „Campaign Monitor“.
 
@@ -66,7 +67,7 @@ Eksportuokite vieningų klientų profilių segmentus į „Campaign Monitor“ i
 
 1. Įveskite eksportavimo pavadinimą.
 
-1. Įveskite kampanijos **stebėjimo sąrašo ID**.
+1. Įveskite **kampanijos monitoriaus sąrašo ID.**
 
 1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą. To reikia norint segmentus eksportuoti į „Campaign Monitor“.
 

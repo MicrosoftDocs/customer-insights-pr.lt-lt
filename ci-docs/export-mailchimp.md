@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 54aec10e24b6356e2e4317cf33e740a1a086a2dd
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d74672768afec94e899ff0aec8c118c2afcde368
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196864"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725042"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmentų eksportavimas į „Mailchimp“ (peržiūros versija)
 
@@ -21,14 +21,15 @@ Eksportuoti suvienodintų kliento profilių segmentus į „Mailchimp“ siekian
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- " [Mailchimp" abonementą](https://mailchimp.com/) ir atitinkamus administratoriaus kredencialus.
-- [Esamos auditorijos "Mailchimp](https://mailchimp.com/help/create-audience/) " ir atitinkamos [auditorijos ID](https://mailchimp.com/help/find-audience-id/).
+- " [Mailchimp" paskyra](https://mailchimp.com/) ir atitinkami administratoriaus kredencialai.
+- [Esamos auditorijos "Mailchimp](https://mailchimp.com/help/create-audience/) " ir atitinkami [auditorijos ID](https://mailchimp.com/help/find-audience-id/).
 - [Sukonfigūruoti segmentai](segments.md).
 - Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono klientų profilių vienam eksportui į "Mailchimp", o tai gali užtrukti iki trijų valandų. Klientų profilių, kuriuos galite eksportuoti į "Mailchimp", skaičius priklauso nuo jūsų sutarties su "Mailchimp".
+- Privati nuoroda kartu su "Bring your own storage" (BYOS) nepalaikoma.
+- Iki 1 milijono klientų profilių vienam eksportui į "Mailchimp", kuris gali užtrukti iki trijų valandų. Klientų profilių, kuriuos galite eksportuoti į "Mailchimp", skaičius priklauso nuo jūsų sutarties su "Mailchimp".
 - Tik segmentai.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Ryšio su „Mailchimp“ nustatymas
@@ -43,9 +44,9 @@ Eksportuoti suvienodintų kliento profilių segmentus į „Mailchimp“ siekian
 
 1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą ir atitiktį [ir](connections.md#data-privacy-and-compliance) pasirinkite **Sutinku**.
 
-1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
+1. Pasirinkite **Prisijungti**, kad inicijuotumėte ryšį.
 
 1. Pasirinkite **Autentifikuoti su „Mailchimp“** ir pateikti savo „Mailchimp“ prisijungimo duomenis.
 
@@ -59,13 +60,13 @@ Eksportuoti suvienodintų kliento profilių segmentus į „Mailchimp“ siekian
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Pasirinkite **Pridėti eksportavimą**.
+1. Pasirinkite **Įtraukti eksportavimą**.
 
 1. Laukelyje **Ryšys eksportavimui** pasirinkite ryšį dalyje „Mailchimp“. Jei ryšio nėra, kreipkitės į administratorių.
 
 1. Įveskite eksportavimo pavadinimą.
 
-1. Įveskite savo **"Mailchimp" auditorijos ID**.
+1. Įveskite savo **Mailchimp auditorijos ID.**
 
 1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą.
 

@@ -1,6 +1,6 @@
 ---
-title: Segmentų eksportavimas į Criteo (peržiūra)
-description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į Criteo.
+title: Segmentų eksportavimas į "Criteo" (peržiūra)
+description: Sužinokite, kaip sukonfigūruoti ryšį ir eksportuoti į "Criteo".
 ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,29 +8,30 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195346"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724799"
 ---
-# <a name="export-segments-to-criteo-preview"></a>Segmentų eksportavimas į Criteo (peržiūra)
+# <a name="export-segments-to-criteo-preview"></a>Segmentų eksportavimas į "Criteo" (peržiūra)
 
 Eksportuokite vieningų klientų profilių segmentus, kad sukurtumėte kampanijas, teiktumėte rinkodarą el. paštu ir naudotumėte konkrečias klientų grupes naudodami "Criteo".
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- " [Criteo Dynamics Retargeting" paskyra](https://www.criteo.com/login/) ir atitinkami administratoriaus kredencialai.
+- "Criteo Dynamics Retargeting" [paskyra](https://www.criteo.com/login/) ir atitinkami administratoriaus kredencialai.
 - [Sukonfigūruoti segmentai](segments.md).
 - Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono klientų profilių vienam eksportui į Criteo, o tai gali užtrukti iki 30 minučių. Klientų profilių, kuriuos galite eksportuoti į Criteo, skaičius priklauso nuo jūsų sutarties su Criteo.
+- Privati nuoroda kartu su "Bring your own storage" (BYOS) nepalaikoma.
+- Iki 1 milijono klientų profilių vienam eksportui į "Criteo", o tai gali užtrukti iki 30 minučių. Klientų profilių, kuriuos galite eksportuoti į "Criteo", skaičius priklauso nuo jūsų sutarties su "Criteo".
 - Tik segmentai.
 
-## <a name="set-up-connection-to-criteo"></a>Ryšio su Criteo nustatymas
+## <a name="set-up-connection-to-criteo"></a>Ryšio su "Criteo" nustatymas
 
 [!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
@@ -42,11 +43,11 @@ Eksportuokite vieningų klientų profilių segmentus, kad sukurtumėte kampanija
 
 1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą ir atitiktį [ir](connections.md#data-privacy-and-compliance) pasirinkite **Sutinku**.
 
-1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
+1. Pasirinkite **Prisijungti**, kad inicijuotumėte ryšį.
 
-1. Pasirinkite **Autentifikuoti naudojant Criteo** ir pateikite savo administratoriaus vartotojo vardą bei "Criteo" kredencialus.
+1. Pasirinkite **Autentifikuoti naudojant "Criteo" ir pateikite savo administratoriaus vartotojo vardą ir "Criteo** " kredencialus.
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
@@ -58,15 +59,13 @@ Eksportuokite vieningų klientų profilių segmentus, kad sukurtumėte kampanija
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Pasirinkite **Pridėti eksportavimą**.
+1. Pasirinkite **Įtraukti eksportavimą**.
 
-1. **Lauke Ryšys eksportavimui** pasirinkite ryšį iš skyriaus Criteo. Jei ryšio nėra, kreipkitės į administratorių.
+1. **Lauke Ryšys eksportui** pasirinkite ryšį iš skyriaus Criteo. Jei ryšio nėra, kreipkitės į administratorių.
 
 1. Įveskite eksportavimo pavadinimą.
 
 1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą.
-
-1. Pasirinktinai eksportuokite **reklamuotojo ID** ir **vardą**.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti.
 

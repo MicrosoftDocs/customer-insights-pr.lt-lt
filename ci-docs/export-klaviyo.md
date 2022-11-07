@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 075e6758f2c6992a1185756f9beecf852fdd0a96
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196772"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724608"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Segmentų eksportavimas į "Klaviyo" (peržiūra)
 
@@ -21,14 +21,15 @@ Eksportuokite vieningų klientų profilių segmentus į „Klaviyo" ir naudokite
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- " [Klaviyo" paskyra](https://www.klaviyo.com/) ir atitinkami administratoriaus kredencialai.
-- [Klaviyo API raktas](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys).
-- " [Klaviyo" sąrašo ID](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).
-- [Sukonfigūruoti segmentai](segments.md) "Customer Insights".
+- ["Klaviyo" paskyra](https://www.klaviyo.com/) ir atitinkami administratoriaus kredencialai.
+- Klaviyo [API raktas](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys).
+- Klaviyo [sąrašo ID](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).
+- [Sukonfigūruoti segmentai](segments.md) programoje "Customer Insights".
 - Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
+- Privati nuoroda kartu su "Bring your own storage" (BYOS) nepalaikoma.
 - Iki 1 milijono klientų profilių vienam eksportui į "Klaviyo", o tai gali užtrukti iki 20 minučių. Klientų profilių, kuriuos galite eksportuoti į "Klaviyo", skaičius priklauso nuo jūsų sutarties su "Klaviyo".
 - Tik segmentai.
 
@@ -46,9 +47,9 @@ Eksportuokite vieningų klientų profilių segmentus į „Klaviyo" ir naudokite
 
 1. Pateikite savo "Klaviyo" API raktą kad tęstumėte prisijungimą.
 
-1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą ir atitiktį [ir](connections.md#data-privacy-and-compliance) pasirinkite **Sutinku**.
 
-1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
+1. Pasirinkite **Prisijungti**, kad inicijuotumėte ryšį.
 
 1. Pasirinkite **Autentifikuoti su „Klaviyo”** ir pateikite savo „Klaviyo” administratoriaus kredencialus.
 
@@ -62,13 +63,13 @@ Eksportuokite vieningų klientų profilių segmentus į „Klaviyo" ir naudokite
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Pasirinkite **Pridėti eksportavimą**.
+1. Pasirinkite **Įtraukti eksportavimą**.
 
 1. Lauke **Ryšys eksportavimui** pasirinkite ryšį iš skyriaus „Klaviyo“. Jei ryšio nėra, kreipkitės į administratorių.
 
 1. Įveskite eksportavimo pavadinimą.
 
-1. Įveskite savo **"Klaviyo" sąrašo ID**.
+1. Įveskite savo **Klaviyo sąrašo ID.**
 
 1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą.
 

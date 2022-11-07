@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196174"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725180"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Segmentų eksportavimas į „Omnisend“ (peržiūra)
 
@@ -21,14 +21,15 @@ Eksportuokite vieningųjų klientų profilių segmentus į „Omnisend“ ir nau
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- " [Omnisend" paskyrą](https://www.omnisend.com/) ir atitinkamus administratoriaus kredencialus.
+- "Omnisend" abonementas [ir](https://www.omnisend.com/) atitinkami administratoriaus kredencialai.
 - " [Omnisend" API raktas](https://support.omnisend.com/en/articles/1061890-generating-api-key).
-- [Sukonfigūruoti segmentai](segments.md) "Customer Insights".
+- [Sukonfigūruoti segmentai](segments.md) programoje "Customer Insights".
 - Suvienodinti klientų profiliai eksportuotuose segmentuose turi laukelį rodančius el. pašto adresą, vardą ir pavardę.
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 1 milijono klientų profilių vienam eksportui į "Omnisend", o tai gali užtrukti iki keturių valandų. Klientų profilių, kuriuos galite eksportuoti į „Omnisend", skaičius priklauso nuo sutarties su „Omnisend".
+- Privati nuoroda kartu su "Bring your own storage" (BYOS) nepalaikoma.
+- Iki 1 milijono klientų profilių vienam eksportavimui į "Omnisend", o tai gali užtrukti iki keturių valandų. Klientų profilių, kuriuos galite eksportuoti į „Omnisend", skaičius priklauso nuo sutarties su „Omnisend".
 - Tik segmentai.
 
 ## <a name="set-up-connection-to-omnisend"></a>Ryšio su „Omnisend“ nustatymas
@@ -45,9 +46,9 @@ Eksportuokite vieningųjų klientų profilių segmentus į „Omnisend“ ir nau
 
 1. Įveskite savo „Omnisend“ API raktą.
 
-1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą ir atitiktį [ir](connections.md#data-privacy-and-compliance) pasirinkite **Sutinku**.
 
-1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
+1. Pasirinkite **Prisijungti**, kad inicijuotumėte ryšį.
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
@@ -59,7 +60,7 @@ Eksportuokite vieningųjų klientų profilių segmentus į „Omnisend“ ir nau
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Pasirinkite **Pridėti eksportavimą**.
+1. Pasirinkite **Įtraukti eksportavimą**.
 
 1. Lauke **Ryšys eksportavimui** pasirinkite ryšį iš „Omnisend“ skyriaus. Jei ryšio nėra, kreipkitės į administratorių.
 
@@ -67,7 +68,7 @@ Eksportuokite vieningųjų klientų profilių segmentus į „Omnisend“ ir nau
 
 1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą.
 
-1. Pasirinktinai eksportuokite vardas, pavardė, adresą **,** šalį / regioną **,** **valstiją**, miestą **ir** pašto kodą **,** kad sukurtumėte labiau suasmenintus el. laiškus.**·** **·** Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
+1. Pasirinktinai eksportuokite **vardas**, pavardė **,** adresą **, šalį / regioną**, valstiją **,** **·** **miestą** ir **pašto kodą**, kad sukurtumėte labiau suasmenintus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti.
 

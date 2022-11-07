@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304713"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725318"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentų eksportavimas į „LinkedIn Ads” (peržiūra)
 
@@ -23,12 +23,13 @@ Eksportuokite vieningųjų klientų profilius į „LinkedIn Ads”, kad sukurtu
 
 - Paskyra [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) ir atitinkami administratoriaus kredencialai.
 - Paskyros [LinkedIn Campaign Manager ID](https://www.linkedin.com/help/lms/answer/a424270).
-- [Sukonfigūruoti segmentai](segments.md) "Customer Insights".
-- Eksportuojamiems segmentams reikia bent vieno konkretaus lauko, atsižvelgiant į tai, ar pasirinksite [taikymą pagal](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) kontaktą, ar [taikymą pagal](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) įmonę "LinkedIn". Galimi laukai yra išvardyti duomenų atitikimo **veiksme konfigūruojant**[eksportavimą](#configure-an-export).
+- [Sukonfigūruoti segmentai](segments.md) programoje "Customer Insights".
+- Eksportuojamiems segmentams reikia bent vieno konkretaus lauko, atsižvelgiant į tai, ar "LinkedIn" pasirenkate [taikymą pagal](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) kontaktą, ar [pagal įmonę](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). Galimi laukai išvardyti **atliekant duomenų atitikimo** veiksmą konfigūruojant [eksportavimą](#configure-an-export).
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
-- Iki 100 000 klientų profilių vienam eksportui į "LinkedIn Ads", o tai gali užtrukti iki 10 minučių.
+- Privati nuoroda kartu su "Bring your own storage" (BYOS) nepalaikoma.
+- Iki 100 000 klientų profilių vienam eksportavimui į "LinkedIn Ads", o tai gali užtrukti iki 10 minučių.
 - Tik segmentai. Segmente turi būti bent 300 unikalių profilių.
 
 ## <a name="set-up-connection-to-linkedin-ads"></a>Ryšio su "LinkedIn Ads" nustatymas
@@ -37,7 +38,7 @@ Eksportuokite vieningųjų klientų profilius į „LinkedIn Ads”, kad sukurtu
 
 1. Eikite į **Administravimas** > **Ryšiai**.
 
-1. Pasirinkite **Pridėti ryšį** ir pasirinkite **"LinkedIn Ads"**.
+1. Pasirinkite **Pridėti ryšį** ir pasirinkite **LinkedIn Ads**.
 
 1. Nurodykite atpažįstamą ryšio pavadinimą laukelyje **Rodyti pavadinimą**. Rodomas pavadinimas ir ryšio tipas apibūdina šį ryšį. Rekomenduojame pasirinkti pavadinimą, kuriame būtų paaiškintas ryšio tikslas ir paskirtis.
 
@@ -45,9 +46,9 @@ Eksportuokite vieningųjų klientų profilius į „LinkedIn Ads”, kad sukurtu
 
 1. Pateikite savo LinkedIn Campaign Manager paskyros ID.
 
-1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą ir atitiktį [ir](connections.md#data-privacy-and-compliance) pasirinkite **Sutinku**.
 
-1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
+1. Pasirinkite **Prisijungti**, kad inicijuotumėte ryšį.
 
 1. Pažymėkite **Autentifikuoti naudojant „LinkedIn“** ir pateikite savo „LinkedIn Campaign Manager“ administratoriaus kredencialus.
 
@@ -61,7 +62,7 @@ Eksportuokite vieningųjų klientų profilius į „LinkedIn Ads”, kad sukurtu
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Pasirinkite **Pridėti eksportavimą**.
+1. Pasirinkite **Įtraukti eksportavimą**.
 
 1. Lauke **Ryšys eksportavimui** pasirinkite ryšį iš „LinkedIn Ads“ skyriaus. Jei ryšio nėra, kreipkitės į administratorių.
 
@@ -71,7 +72,7 @@ Eksportuokite vieningųjų klientų profilius į „LinkedIn Ads”, kad sukurtu
 
 1. Jei tai kontaktas, skyriuje **Duomenų gretinimas** pažymėkite bent vieną lauką, kuriame pateikiamas kliento el. pašto adresas „Apple Ad ID", „Google Ad ID", „Google" vartotojo ID arba pirmasis pavardė. Jei pasirinksite taiką pagal įmonę, pažymėkite bent vieną lauką, kuriame pateikiamas įmonės pavadinimas, el. pašto domenas, „LinkedIn" puslapio URL, akcijų simbolis arba svetainė.
 
-1. Pasirinktinai įtraukite laukų, kad dar labiau apibrėžtumėte eksportavimą. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
+1. Pasirinktinai įtraukite laukų, kad toliau apibrėžtumėte eksportą. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti. „Matched Audiences” bus automatiškai sukurtos „LinkedIn Campaign Manager” platformoje su eksportavimui pasirinktų segmentų pavadinimu. Kiekviename segmente bus sukurta atskira „matched audience”.
 

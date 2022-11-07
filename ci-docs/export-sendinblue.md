@@ -8,12 +8,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fc4ac34c1de096e25ba6c374fe17b1da6b2f745f
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: lt-LT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196956"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724904"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Segmentų eksportavimas į „Sendinblue“ (peržiūra)
 
@@ -21,7 +21,7 @@ Eksportuoti vieningųjų kliento profilių segmentus siekiant kurti kampanijas, 
 
 ## <a name="prerequisites"></a>Būtinosios sąlygos
 
-- " [Sendinblue" abonementas](https://www.sendinblue.com/) ir atitinkami administratoriaus kredencialai.
+- " [Sendinblue" paskyra](https://www.sendinblue.com/) ir atitinkami administratoriaus kredencialai.
 - SendinBlue [API raktas](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key).
 - Esami "Sendinblue" sąrašai ir atitinkami ID.
 - [Sukonfigūruoti segmentai](segments.md).
@@ -29,6 +29,7 @@ Eksportuoti vieningųjų kliento profilių segmentus siekiant kurti kampanijas, 
 
 ## <a name="known-limitations"></a>Žinomi apribojimai
 
+- Privati nuoroda kartu su "Bring your own storage" (BYOS) nepalaikoma.
 - Iki 1 milijono klientų profilių vienam eksportui į "Sendinblue", o tai gali užtrukti iki 90 minučių. Klientų profilių, kuriuos galite eksportuoti į "Sendinblue", skaičius priklauso nuo jūsų sutarties su "Sendinblue".
 - Tik segmentai.
 
@@ -44,11 +45,11 @@ Eksportuoti vieningųjų kliento profilių segmentus siekiant kurti kampanijas, 
 
 1. Pasirinkite, kas gali naudoti šį ryšį. Pagal numatytuosius nustatymus, tik administratoriai. Daugiau informacijos ieškokite skyriuje [Leisti bendradarbiams naudoti ryšį eksportuojant](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Įveskite " **SendinBlue" API raktą**.
+1. Įveskite savo **SendinBlue API raktą**.
 
-1. Peržiūrėkite duomenų privatumą [ir atitiktį](connections.md#data-privacy-and-compliance) ir pasirinkite **Sutinku**.
+1. Peržiūrėkite duomenų privatumą ir atitiktį [ir](connections.md#data-privacy-and-compliance) pasirinkite **Sutinku**.
 
-1. Pasirinkite **Prisijungti**, kad pradėtumėte ryšį.
+1. Pasirinkite **Prisijungti**, kad inicijuotumėte ryšį.
 
 1. Pasirinkite **Įtraukti save kaip eksportavimo vartotoją** ir suteikite jūsų „Customer Insights“ prisijungimo duomenis.
 
@@ -60,17 +61,17 @@ Eksportuoti vieningųjų kliento profilių segmentus siekiant kurti kampanijas, 
 
 1. Eikite į **Duomenys** > **Eksportavimas**.
 
-1. Pasirinkite **Pridėti eksportavimą**.
+1. Pasirinkite **Įtraukti eksportavimą**.
 
 1. Lauke **Ryšys eksportavimui** pasirinkite ryšį iš skyriaus „Sendinblue“. Jei ryšio nėra, kreipkitės į administratorių.
 
 1. Įveskite eksportavimo pavadinimą.
 
-1. Įveskite savo **Sendinblue sąrašo ID**.
+1. Įveskite savo **Sendinblue sąrašo ID.**
 
 1. Skyriaus **Duomenų atitikimas** lauke El. paštas pažymėkite **lauką** kuris rodo kliento el. pašto adresą.
 
-1. Pasirinktinai eksportuokite **vardas**, **pavardė** ir **telefoną**, kad sukurtumėte labiau suasmenintus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
+1. Pasirinktinai eksportuokite **vardas**, pavardė **ir** telefoną **,** kad sukurtumėte labiau suasmenintus el. laiškus. Pasirinkite **Įtraukti atributą** siekiant sukurti šių laukelių žemėlapį.
 
 1. Pasirinkite segmentus, kuriuos norite eksportuoti.
 
